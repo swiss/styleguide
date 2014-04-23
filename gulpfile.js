@@ -62,7 +62,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('hologram', function () {
-  gulp.src('./styleguide')
+  gulp.src('./build')
     .pipe(shell('hologram'));
 });
 
@@ -71,5 +71,6 @@ gulp.task('default', ['scripts', 'styles', 'css_vendors', 'js_vendors', 'watch',
 gulp.task('watch', function() {
   gulp.watch('./assets/sass/*.scss', ['styles']);
   gulp.watch('./assets/js/*.js', ['scripts']);
-  gulp.watch('./build/**/*.{html,css}', ['hologram']);
+  gulp.watch('./build/**/*.{js,css}', ['hologram']);
+  gulp.watch('./assets/**/*.md', ['hologram']);
 });
