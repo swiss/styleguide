@@ -1,0 +1,21 @@
+{
+  "name": "admin2.0",
+  "version": "0.0.1",
+  "homepage": "https://github.com/antistatique/Swiss-Admin-web-guidelines",
+  "authors": "Antistatique.net",
+  "description": "Swiss Admin web guidelines",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.1.1",
+    "cortana-swiss-admin": "master"
+  },
+  "devDependencies": {}
+}

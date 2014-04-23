@@ -1,0 +1,24 @@
+{
+  "name": "cortana-swiss-admin",
+  "ignore": [
+    "**/.*",
+    "gulpfile.js",
+    "assets",
+    "package.js"
+  ],
+  "devDependencies": {
+    "jquery": "1.11.*",
+    "Slidebars": "~0.9.4",
+    "sticky-kit": "~1.0.4"
+  },
+  "homepage": "https://github.com/antistatique/Cortana-Swiss-Admin",
+  "_release": "41407da75f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "41407da75f882663a3f48a0315452057d7efee7d"
+  },
+  "_source": "git://github.com/antistatique/Cortana-Swiss-Admin.git",
+  "_target": "master",
+  "_originalSource": "cortana-swiss-admin"
+}

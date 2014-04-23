@@ -1,0 +1,6 @@
+source: ./assets
+destination: ./styleguide
+documentation_assets: ./bower_components/cortana-swiss-admin
+
+# To have a custom index page build with your README.md
+index: README
