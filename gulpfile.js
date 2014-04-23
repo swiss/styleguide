@@ -57,7 +57,8 @@ gulp.task('css_vendors', function() {
 
 gulp.task('browser-sync', function() {
     browserSync.init(['./build/css/*.css', './styleguide/**/*.*'], {
-      proxy: 'localhost'
+      proxy: 'localhost',
+      open: false
     });
 });
 

@@ -15,7 +15,7 @@
     "gulp-util": "~2.2.14",
     "gulp": "~3.6.0",
     "gulp-jshint": "~1.4.2",
-    "browser-sync": "~0.7.3",
+    "browser-sync": "~0.8.2",
     "gulp-rename": "~1.1.0",
     "gulp-uglify": "~0.2.1",
     "gulp-concat": "~2.1.7",
