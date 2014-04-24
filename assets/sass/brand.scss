@@ -7,10 +7,27 @@ category: Base Layout > Visual
 
 
 ```html_example
-<a href="#" id="logo" class="hidden-phone">
+<a href="#" class="brand hidden-xs">
   <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
   <h1>Department of the Environment<br>, Transport, Energy and Communications </h1>
 </a>
 ```
 
 */
+
+.brand {
+  img {
+    max-width: 235px;
+    margin: 0;
+    padding-right: 2em;
+    border-right: 1px solid $gainsboro;
+  }
+  h1 {
+    font-size: 1em;
+    color: $black;
+    display: inline;
+    margin: 0;
+    margin-left: 2.5em;
+  }
+  &:hover {text-decoration: none;}
+}
