@@ -76,11 +76,19 @@
           <ul>
              
               
-                <li><a href="#paragraphs">Paragraphs</a></li>
+                <li><a href="#a-titles">Titles</a></li>
               
              
               
-                <li><a href="#titles">Titles</a></li>
+                <li><a href="#b-paragraphs">Paragraphs</a></li>
+              
+             
+              
+                <li><a href="#c-text-elements">Text elements</a></li>
+              
+             
+              
+                <li><a href="#d-blockquote">Blockquote</a></li>
               
             
           </ul>
@@ -89,17 +97,7 @@
         <div class="cortana-content-wrapper">
 
 
-<h1 id="paragraphs">Paragraphs</h1>
-
-<h2>Lead</h2>
-
-<p>A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text. <br>A lead of this sort is formatted bold.</p>
-<div class="codeExample"><div class="exampleOutput"><p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.</p>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;lead&quot;</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.<span class="nt">&lt;/p&gt;</span>
-</pre></div></div></div>
-<h1 id="titles">Titles</h1>
-
-<h2>Section headings</h2>
+<h1 id="a-titles">Titles</h1>
 
 <p>Headings serve to structure the content of a page. The higher the heading is in the structural hierarchy (e.g. H1), the more important it is, and the more weight is given to it by search engines such as Google. Generally speaking, not too many hierarchical levels should be used, as this has a negative impact on the clarity of the structure. Heading levels H1 through H4 are therefore clearly differentiated in their formatting (while levels H5 and H6 are merely defined pro forma).</p>
 
@@ -110,12 +108,118 @@
 <h4>Heading 4</h4>
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
+
+<h2><a href="#">Heading 2 link</a></h2>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>Heading 1<span class="nt">&lt;/h1&gt;</span>
 <span class="nt">&lt;h2&gt;</span>Heading 2<span class="nt">&lt;/h2&gt;</span>
 <span class="nt">&lt;h3&gt;</span>Heading 3<span class="nt">&lt;/h3&gt;</span>
 <span class="nt">&lt;h4&gt;</span>Heading 4<span class="nt">&lt;/h4&gt;</span>
 <span class="nt">&lt;h5&gt;</span>Heading 5<span class="nt">&lt;/h5&gt;</span>
 <span class="nt">&lt;h6&gt;</span>Heading 6<span class="nt">&lt;/h6&gt;</span>
+
+<span class="nt">&lt;h2&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Heading 2 link<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span>
+</pre></div></div></div>
+<h1 id="b-paragraphs">Paragraphs</h1>
+
+<h2>Lead</h2>
+
+<p>A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text. <br>A lead of this sort is formatted bold.</p>
+
+<table><thead>
+<tr>
+<th align="right">element</th>
+<th>Effect</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right"><code>&lt;p class=&quot;lead&quot;&gt;&lt;/p&gt;</code></td>
+<td>Leading emphasized paragraph</td>
+</tr>
+<tr>
+<td align="right"><code>&lt;strong&gt;&lt;/strong&gt;</code></td>
+<td>Emphasized bold element in the text</td>
+</tr>
+<tr>
+<td align="right"><code>&lt;em&gt;&lt;/em&gt;</code></td>
+<td>Emphasized italic element in the text</td>
+</tr>
+</tbody></table>
+<div class="codeExample"><div class="exampleOutput"><p class="lead">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.
+</p>
+
+<p>
+  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Quam, <em>sapiente</em>, fuga provident illum adipisci tenetur nisi vero minima. Id, molestias, assumenda hic minima perspiciatis dolorem repellendus vero maiores beatae enim?
+</p>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;lead&quot;</span><span class="nt">&gt;</span>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.
+<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>
+  Lorem ipsum dolor sit amet, <span class="nt">&lt;strong&gt;</span>consectetur<span class="nt">&lt;/strong&gt;</span> adipisicing elit. Quam, <span class="nt">&lt;em&gt;</span>sapiente<span class="nt">&lt;/em&gt;</span>, fuga provident illum adipisci tenetur nisi vero minima. Id, molestias, assumenda hic minima perspiciatis dolorem repellendus vero maiores beatae enim?
+<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div>
+<h1 id="c-text-elements">Text elements</h1>
+
+<p>The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.</p>
+<div class="codeExample"><div class="exampleOutput"><p>
+   The <a href="#">a element</a> example<br>
+   The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
+   The <b>b element</b> example<br>
+   The <cite>cite element</cite> example<br>
+   The <code>code element</code> example<br>
+   The <del>del element</del> example<br>
+   The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
+   The <em>em element</em> example<br>
+   The <i>i element</i> example<br>
+   The img element <img src="assets/images/ffffff.gif" alt="placeholder" /> example<br>
+   The <ins>ins element</ins> example<br>
+   The <kbd>kbd element</kbd> example<br>
+   The <mark>mark element</mark> example<br>
+   The <q>q element <q>inside</q> a q element</q> example<br>
+   The <s>s element</s> example<br>
+   The <samp>samp element</samp> example<br>
+   The <small>small element</small> example<br>
+   The <span>span element</span> example<br>
+   The <strong>strong element</strong> example<br>
+   The <sub>sub element</sub> example<br>
+   The <sup>sup element</sup> example<br>
+   The <var>var element</var> example<br>
+   The <u>u element</u> example
+ </p>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;p&gt;</span>
+   The <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>a element<span class="nt">&lt;/a&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;abbr&gt;</span>abbr element<span class="nt">&lt;/abbr&gt;</span> and <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">&quot;Title text&quot;</span><span class="nt">&gt;</span>abbr element with title<span class="nt">&lt;/abbr&gt;</span> examples<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;b&gt;</span>b element<span class="nt">&lt;/b&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;cite&gt;</span>cite element<span class="nt">&lt;/cite&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;code&gt;</span>code element<span class="nt">&lt;/code&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;del&gt;</span>del element<span class="nt">&lt;/del&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;dfn&gt;</span>dfn element<span class="nt">&lt;/dfn&gt;</span> and <span class="nt">&lt;dfn</span> <span class="na">title=</span><span class="s">&quot;Title text&quot;</span><span class="nt">&gt;</span>dfn element with title<span class="nt">&lt;/dfn&gt;</span> examples<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;em&gt;</span>em element<span class="nt">&lt;/em&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;i&gt;</span>i element<span class="nt">&lt;/i&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The img element <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;assets/images/ffffff.gif&quot;</span> <span class="na">alt=</span><span class="s">&quot;placeholder&quot;</span> <span class="nt">/&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;ins&gt;</span>ins element<span class="nt">&lt;/ins&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;kbd&gt;</span>kbd element<span class="nt">&lt;/kbd&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;mark&gt;</span>mark element<span class="nt">&lt;/mark&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;q&gt;</span>q element <span class="nt">&lt;q&gt;</span>inside<span class="nt">&lt;/q&gt;</span> a q element<span class="nt">&lt;/q&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;s&gt;</span>s element<span class="nt">&lt;/s&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;samp&gt;</span>samp element<span class="nt">&lt;/samp&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;small&gt;</span>small element<span class="nt">&lt;/small&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;span&gt;</span>span element<span class="nt">&lt;/span&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;strong&gt;</span>strong element<span class="nt">&lt;/strong&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;sub&gt;</span>sub element<span class="nt">&lt;/sub&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;sup&gt;</span>sup element<span class="nt">&lt;/sup&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;var&gt;</span>var element<span class="nt">&lt;/var&gt;</span> example<span class="nt">&lt;br&gt;</span>
+   The <span class="nt">&lt;u&gt;</span>u element<span class="nt">&lt;/u&gt;</span> example
+ <span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div>
+<h1 id="d-blockquote">Blockquote</h1>
+<div class="codeExample"><div class="exampleOutput"><blockquote>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</blockquote>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;blockquote&gt;</span>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+<span class="nt">&lt;/blockquote&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>

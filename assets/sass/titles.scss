@@ -1,11 +1,10 @@
 /*doc
 ---
 title: Titles
-name: titles
+name: a-titles
 category: Base Layout > Typography
 ---
 
-## Section headings
 Headings serve to structure the content of a page. The higher the heading is in the structural hierarchy (e.g. H1), the more important it is, and the more weight is given to it by search engines such as Google. Generally speaking, not too many hierarchical levels should be used, as this has a negative impact on the clarity of the structure. Heading levels H1 through H4 are therefore clearly differentiated in their formatting (while levels H5 and H6 are merely defined pro forma).
 
 Headings can also have links and are then formatted in blue.
@@ -17,6 +16,8 @@ Headings can also have links and are then formatted in blue.
 <h4>Heading 4</h4>
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
+
+<h2><a href="#">Heading 2 link</a></h2>
 ```
 
 */
@@ -48,4 +49,13 @@ h4, h5 {
 h6 {
   line-height: 1.4;
   margin: 1.25em 0 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+    line-height: 1;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
 }
