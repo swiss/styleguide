@@ -41,14 +41,14 @@
             
               
               
-                <li><a href="base_layout_>_typography.html">Typography</a></li>
+                <li><a class="active" href="base_layout_>_visual.html">Visual</a></li>
               
             
           
             
               
               
-                <li><a class="active" href="base_layout_>_visual.html">Visual</a></li>
+                <li><a href="base_layout_>_typography.html">Typography</a></li>
               
             
           
@@ -75,15 +75,17 @@
         <nav id="cortana-inside-nav" class="cortana-inside-nav">
           <ul>
              
-              <li><a href="#background">Background</a></li>
+              <li><a href="#a-logo">Logo</a></li>
              
-              <li><a href="#colors">Colors</a></li>
+              <li><a href="#b-colors">Colors</a></li>
              
-              <li><a href="#images">Images</a></li>
+              <li><a href="#c-background">Background</a></li>
              
-              <li><a href="#standard-image">Standard image</a></li>
+              <li><a href="#e-images">Images</a></li>
              
-              <li><a href="#logo">Logo</a></li>
+              <li><a href="#captioned-image">Captioned image</a></li>
+             
+              <li><a href="#figure-image">Figure image</a></li>
             
           </ul>
         </nav>
@@ -91,15 +93,33 @@
         <div class="cortana-content-wrapper">
 
 
-<h1 id="background">Background</h1>
-<div class="codeExample"><div class="exampleOutput"><body>
-  <!-- your page content -->
-</body>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;body&gt;</span>
-  <span class="c">&lt;!-- your page content --&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
+<h1 id="a-logo">Logo</h1>
+
+<p>The designation of a website allows the user to recognize at a glance who the originator of the site is together with the website’s content and purpose.</p>
+
+<p>The designation consists of the Confederation logo (coat of arms and the four-language wordmark) and the name of the organizational unit, including its abbreviation (e.g. EDA), or as a short form (e.g. MeteoSchweiz).</p>
+
+<p>These two components are separated from one another by a vertical line. For smartphones only the coat of arms from the Confederation logo is used in the header. The name of the organizational unit can be abbreviated. The appropriate HTML code for this is provided together with the Globalnavigation.</p>
+
+<p>The full form of the Confederation logo is given in the Footer.</p>
+
+<p>The logo is a CD element. Its use is mandatory, and its representation may not be changed in any way.</p>
+<div class="codeExample"><div class="exampleOutput"><a href="#" class="brand hidden-xs">
+  <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+  <h1>Department of the Environment<br>, Transport, Energy and Communications </h1>
+</a>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;brand hidden-xs&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;img/logo-CH.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;The Federal Authorities of the Swiss Confederation, www.admin.ch&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Department of the Environment<span class="nt">&lt;br&gt;</span>, Transport, Energy and Communications <span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
 </pre></div></div></div>
-<h1 id="colors">Colors</h1>
+<h1 id="b-colors">Colors</h1>
+
+<p>The predefined color range is intended to make the family of Confederation websites instantly recognizable, to emphasize individual elements and interactions, and is also used for orientation purposes. The color range employed is a CD element, and its use is mandatory.</p>
+
+<p>Three colors are used: the red shade of the Confederation logo, which is complemented by a lighter shade of red, a blue tone, and a range of gray shades.</p>
+
+<p>The red color is used in the red line which marks the bottom of the header, and it is also used to indicate a selection in the navigation as well as for mouseovers on links. Otherwise, various shades of gray are used. For instance, the headlines and the body copy are presented in a dark shade of gray.</p>
 
 <div class="container-fluid">
   <div class="row">
@@ -122,25 +142,32 @@
   </div>
 </div>
 
-<h1 id="images">Images</h1>
+<h1 id="c-background">Background</h1>
+
+<p>The background color is a light shade of gray.</p>
+<div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;body&gt;</span>
+  <span class="c">&lt;!-- your page content --&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre></div></div>
+<h1 id="e-images">Images</h1>
 
 <p>Images in landscape format have an aspect ratio of 16:10 (full-sized landscape format – golden section) or 16:5 (half-sized landscape format). Portrait format images do not have a specific aspect ratio. However, we recommend a ratio of 2:3.</p>
 
-<h2 id="standard-image">Standard image</h2>
-<div class="codeExample"><div class="exampleOutput"><img src="http://placeimg.com/900/500/arch/grayscale">
-<img src="http://placeimg.com/900/200/arch/grayscale">
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placeimg.com/900/500/arch/grayscale&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placeimg.com/900/200/arch/grayscale&quot;</span><span class="nt">&gt;</span>
+<h2 id="captioned-image">Captioned image</h2>
+<div class="codeExample"><div class="exampleOutput"><img src="http://placeimg.com/900/500/arch/grayscale" alt="architectural picture in black and white">
+<img src="http://placeimg.com/900/200/arch/grayscale" alt="architectural picture in black and white">
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placeimg.com/900/500/arch/grayscale&quot;</span> <span class="na">alt=</span><span class="s">&quot;architectural picture in black and white&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placeimg.com/900/200/arch/grayscale&quot;</span> <span class="na">alt=</span><span class="s">&quot;architectural picture in black and white&quot;</span><span class="nt">&gt;</span>
 </pre></div></div></div>
-<h1 id="logo">Logo</h1>
-<div class="codeExample"><div class="exampleOutput"><a href="#" class="brand hidden-xs">
-  <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
-  <h1>Department of the Environment<br>, Transport, Energy and Communications </h1>
-</a>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;brand hidden-xs&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;img/logo-CH.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;The Federal Authorities of the Swiss Confederation, www.admin.ch&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;h1&gt;</span>Department of the Environment<span class="nt">&lt;br&gt;</span>, Transport, Energy and Communications <span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;/a&gt;</span>
+<h2 id="figure-image">Figure image</h2>
+<div class="codeExample"><div class="exampleOutput"><figure>
+  <img src="http://placeimg.com/900/400/arch/grayscale" alt="architectural picture in black and white">
+  <figcaption>Caption content</figcaption>
+</figure>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;figure&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placeimg.com/900/400/arch/grayscale&quot;</span> <span class="na">alt=</span><span class="s">&quot;architectural picture in black and white&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;figcaption&gt;</span>Caption content<span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>
