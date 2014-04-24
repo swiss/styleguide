@@ -1,5 +1,12 @@
 @charset "UTF-8";
 @font-face {
+  font-family: 'Admin Icons';
+  src: url("../fonts/AdminCH_Symbols.eot?v2");
+  src: url("../fonts/AdminCH_Symbols.eot?#iefix") format("embedded-opentype"), url("../fonts/AdminCH_Symbols.woff?v2") format("woff"), url("../fonts/AdminCH_Symbols.ttf?v2") format("truetype"), url("../fonts/AdminCH_Symbols.svg#fnb") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: 'Frutiger Neue Bold';
   src: url("../fonts/FrutigerNeueW02-Bd.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Bd.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Bd.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Bd.svg#fnb") format("svg");
@@ -951,7 +958,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
-  font-family: "Frutiger Neue Regular", Arial, sans-serif;
+  font-family: "Frutiger Neue Regular", sans-serif, Arial, sans-serif;
   font-size: 12px;
   line-height: 1.6;
   color: #454545;
@@ -5391,7 +5398,7 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 .brand h1 {
   color: black;
   display: inline;
-  font-family: "Frutiger Neue Bold";
+  font-family: "Frutiger Neue Bold", sans-serif;
   font-weight: normal;
   font-size: 1em;
   line-height: 1.3;
@@ -5425,7 +5432,7 @@ Headings can also have links and are then formatted in blue.
 
 */
 h1 {
-  font-family: "Frutiger Neue Light", Arial, sans-serif;
+  font-family: "Frutiger Neue Light", sans-serif, Arial, sans-serif;
   margin: 0.5em 0 0 0; }
 
 h2 {
@@ -5437,7 +5444,7 @@ h3 {
   margin: 0.938em 0 0 0; }
 
 h4 {
-  font-family: "Frutiger Neue Bold", Arial, sans-serif; }
+  font-family: "Frutiger Neue Bold", sans-serif, Arial, sans-serif; }
 
 h4, h5 {
   line-height: 1.5;
@@ -5488,7 +5495,7 @@ p {
   line-height: 1.5; }
 
 strong, .lead, b, mark, samp {
-  font-family: "Frutiger Neue Bold", Arial, sans-serif;
+  font-family: "Frutiger Neue Bold", sans-serif, Arial, sans-serif;
   font-weight: normal; }
 
 .lead {
@@ -5497,7 +5504,7 @@ strong, .lead, b, mark, samp {
   font-size: 12px; }
 
 em, cite, i, dfn, q, var {
-  font-family: "Frutiger Neue Italic", Arial, sans-serif;
+  font-family: "Frutiger Neue Italic", sans-serif, Arial, sans-serif;
   font-style: normal; }
 
 /*doc
@@ -5560,7 +5567,7 @@ pre, code {
   color: #800; }
 
 q q {
-  font-family: "Frutiger Neue Regular", Arial, sans-serif;
+  font-family: "Frutiger Neue Regular", sans-serif, Arial, sans-serif;
   font-style: normal; }
 
 ins {
@@ -5599,3 +5606,179 @@ blockquote {
     content: "\00ab"; }
   blockquote::after {
     content: "\00bb"; }
+
+/*doc
+---
+title: Icons
+name: f-icons
+category: Base Layout > Visual
+---
+
+The icons used are one-color and two-dimensional. They are provided as a web font which is to be found in the resources as a TrueType font.
+
+```html_example
+<span class="icon icon-google"></span>
+```
+
+*/
+.icon {
+  font-family: "Admin Icons"; }
+
+.icon-exclam:after {
+  content: '!'; }
+
+.icon-arrow-right :after {
+  content: '$'; }
+
+.icon-google:after {
+  content: '+'; }
+
+.icon-bottom:after {
+  content: ','; }
+
+.icon-left:after {
+  content: '.'; }
+
+.icon-disc:after {
+  content: '0'; }
+
+.icon-screen:after {
+  content: '1'; }
+
+.icon-notebook:after {
+  content: '2'; }
+
+.icon-smartphone-portrait:after {
+  content: '3'; }
+
+.icon-smartphone-landscape:after {
+  content: '4'; }
+
+.icon-tablet-portrait:after {
+  content: '5'; }
+
+.icon-tablet-landscape:after {
+  content: '6'; }
+
+.icon-right:after {
+  content: ':'; }
+
+.icon-top:after {
+  content: ';'; }
+
+.icon-less:after {
+  content: '<'; }
+
+.icon-greater:after {
+  content: '>'; }
+
+.icon-eye:after {
+  content: '?'; }
+
+.icon-pdf:after {
+  content: 'A'; }
+
+.icon-trash:after {
+  content: 'B'; }
+
+.icon-cart:after {
+  content: 'C'; }
+
+.icon-star:after {
+  content: 'F'; }
+
+.icon-list:after {
+  content: 'I'; }
+
+.icon-message:after {
+  content: 'M'; }
+
+.icon-print:after {
+  content: 'P'; }
+
+.icon-rss:after {
+  content: 'R'; }
+
+.icon-search:after {
+  content: 'S'; }
+
+.icon-word:after {
+  content: 'W'; }
+
+.icon-excel:after {
+  content: 'X'; }
+
+.icon-power:after {
+  content: '^'; }
+
+.icon-calendar:after {
+  content: 'c'; }
+
+.icon-doc:after {
+  content: 'd'; }
+
+.icon-pause:after {
+  content: 'e'; }
+
+.icon-facebook:after {
+  content: 'f'; }
+
+.icon-step-backward:after {
+  content: 'g'; }
+
+.icon-step-forward:after {
+  content: 'h'; }
+
+.icon-list-alt:after {
+  content: 'i'; }
+
+.icon-backward:after {
+  content: 'j'; }
+
+.icon-forward:after {
+  content: 'k'; }
+
+.icon-share:after {
+  content: 'l'; }
+
+.icon-menu:after {
+  content: 'm'; }
+
+.icon-corner:after {
+  content: 'o'; }
+
+.icon-tools:after {
+  content: 'p'; }
+
+.icon-play:after {
+  content: 'q'; }
+
+.icon-settings:after {
+  content: 's'; }
+
+.icon-twitter:after {
+  content: 't'; }
+
+.icon-fast-backward:after {
+  content: 'z'; }
+
+.icon-fast-forward:after {
+  content: 'u'; }
+
+.icon-root:after {
+  content: 'v'; }
+
+.icon-square:after {
+  content: 'w'; }
+
+.icon-close:after {
+  content: 'x'; }
+
+.icon-arrow-bottom:after {
+  content: 'ä'; }
+
+.icon-arrow-left:after {
+  content: 'ö'; }
+
+.icon-arrow-top:after {
+  content: 'ü'; }

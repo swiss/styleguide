@@ -1,4 +1,15 @@
 @font-face {
+    font-family: 'Admin Icons';
+    src: url('../fonts/AdminCH_Symbols.eot?v2');
+    src: url('../fonts/AdminCH_Symbols.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AdminCH_Symbols.woff?v2') format('woff'),
+        url('../fonts/AdminCH_Symbols.ttf?v2') format('truetype'),
+        url('../fonts/AdminCH_Symbols.svg#fnb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Frutiger Neue Bold';
     src: url('../fonts/FrutigerNeueW02-Bd.eot?v2');
     src: url('../fonts/FrutigerNeueW02-Bd.eot?#iefix') format('embedded-opentype'),
@@ -52,6 +63,7 @@
 @import 'images';
 @import 'brand';
 
-//== Typography
+// Typography
 @import 'titles';
 @import 'type';
+@import 'icons';

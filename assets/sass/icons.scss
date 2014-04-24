@@ -1,0 +1,70 @@
+/*doc
+---
+title: Icons
+name: f-icons
+category: Base Layout > Visual
+---
+
+The icons used are one-color and two-dimensional. They are provided as a web font which is to be found in the resources as a TrueType font.
+
+```html_example
+<span class="icon icon-google"></span>
+```
+
+*/
+
+.icon {font-family: $admin-icons;}
+.icon-exclam:after {content: '!';}
+.icon-arrow-right :after {content: '$';}
+.icon-google:after {content: '+';}
+.icon-bottom:after {content: ',';}
+.icon-left:after {content: '.';}
+.icon-disc:after {content: '0';}
+.icon-screen:after {content: '1';}
+.icon-notebook:after {content: '2';}
+.icon-smartphone-portrait:after {content: '3';}
+.icon-smartphone-landscape:after {content: '4';}
+.icon-tablet-portrait:after {content: '5';}
+.icon-tablet-landscape:after {content: '6';}
+.icon-right:after {content: ':';}
+.icon-top:after {content: ';';}
+.icon-less:after {content: '<';}
+.icon-greater:after {content: '>';}
+.icon-eye:after {content: '?';}
+.icon-pdf:after {content: 'A';}
+.icon-trash:after {content: 'B';}
+.icon-cart:after {content: 'C';}
+.icon-star:after {content: 'F';}
+.icon-list:after {content: 'I';}
+.icon-message:after {content: 'M';}
+.icon-print:after {content: 'P';}
+.icon-rss:after {content: 'R';}
+.icon-search:after {content: 'S';}
+.icon-word:after {content: 'W';}
+.icon-excel:after {content: 'X';}
+.icon-power:after {content: '^';}
+.icon-calendar:after {content: 'c';}
+.icon-doc:after {content: 'd';}
+.icon-pause:after {content: 'e';}
+.icon-facebook:after {content: 'f';}
+.icon-step-backward:after {content: 'g';}
+.icon-step-forward:after {content: 'h';}
+.icon-list-alt:after {content: 'i';}
+.icon-backward:after {content: 'j';}
+.icon-forward:after {content: 'k';}
+.icon-share:after {content: 'l';}
+.icon-menu:after {content: 'm';}
+.icon-corner:after {content: 'o';}
+.icon-tools:after {content: 'p';}
+.icon-play:after {content: 'q';}
+.icon-settings:after {content: 's';}
+.icon-twitter:after {content: 't';}
+.icon-fast-backward:after {content: 'z';}
+.icon-fast-forward:after {content: 'u';}
+.icon-root:after {content: 'v';}
+.icon-square:after {content: 'w';}
+.icon-close:after {content: 'x';}
+.icon-arrow-bottom:after {content: 'ä';}
+.icon-arrow-left:after {content: 'ö';}
+.icon-arrow-top:after {content: 'ü';}
+
