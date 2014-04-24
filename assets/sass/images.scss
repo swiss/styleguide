@@ -10,16 +10,15 @@ Images in landscape format have an aspect ratio of 16:10 (full-sized landscape f
 
 /*doc
 ---
-title: Captioned image
-name: captioned-image
+title: Standard image
+name: a-standard-image
 parent: e-images
 category: Base Layout > Visual
 ---
 
 
 ```html_example
-<img src="http://placeimg.com/900/500/arch/grayscale" alt="architectural picture in black and white">
-<img src="http://placeimg.com/900/200/arch/grayscale" alt="architectural picture in black and white">
+<img src="http://placehold.it/588x368" alt="image description">
 ```
 
 */
@@ -30,8 +29,8 @@ img {
 
 /*doc
 ---
-title: Figure image
-name: figure-image
+title: Captioned image
+name: b-captioned-image
 parent: e-images
 category: Base Layout > Visual
 ---
@@ -39,7 +38,7 @@ category: Base Layout > Visual
 
 ```html_example
 <figure>
-  <img src="http://placeimg.com/900/400/arch/grayscale" alt="architectural picture in black and white">
+  <img src="http://placehold.it/588x368" alt="image description">
   <figcaption>Caption content</figcaption>
 </figure>
 ```
@@ -47,8 +46,34 @@ category: Base Layout > Visual
 */
 
 figcaption {
-  font-size: 0.9em;
+  font-size: 13px;
   line-height: 1.3em;
   margin-top: 0.7em;
   margin-bottom: 0.8em;
 }
+
+/*doc
+---
+title: Image format
+name: c-image-format
+parent: e-images
+category: Base Layout > Visual
+---
+
+|  Example                                                          |  Usage                                                                |
+|-------------------------------------------------------------------|-----------------------------------------------------------------------|
+|  <img src="http://placehold.it/588x368" alt="image description">  |  <figcaption>Title + Image (16:10)</figcaption>                       |
+|  <img src="http://placehold.it/588x184" alt="image description">  |  <figcaption>Title + Image ½ (16:5)</figcaption>                      |
+|  <img src="http://placehold.it/588x331" alt="image description">  |  <figcaption>Video (16:9)</figcaption>                                |
+|  <img src="http://placehold.it/588x368" alt="image description">  |  <figcaption>Teaser 2/4 (16:10)</figcaption>                          |
+|  <img src="http://placehold.it/384x240" alt="image description">  |  <figcaption>Teaser ⅓ (16:10)</figcaption>                            |
+|  <img src="http://placehold.it/282x176" alt="image description">  |  <figcaption>Teaser ¼ (16:10)</figcaption>                            |
+|  <img src="http://placehold.it/258x161" alt="image description">  |  <figcaption>Teaser Aside</figcaption>                                |
+|  <img src="http://placehold.it/258x387" alt="image description">  |  <figcaption>Teaser Aside</figcaption>                                |
+|  <img src="http://placehold.it/180x113" alt="image description">  |  <figcaption>Standard image + text / Standard infobox</figcaption>    |
+|  <img src="http://placehold.it/180x270" alt="image description">  |  <figcaption>Standard image + text / Standard infobox</figcaption>    |
+|  <img src="http://placehold.it/156x98" alt="image description">   |  <figcaption>Navigation teaser (16:10)</figcaption>                   |
+|  <img src="http://placehold.it/78x117" alt="image description">   |  <figcaption>Teaser list</figcaption>                                 |
+
+*/
+

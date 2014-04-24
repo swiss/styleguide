@@ -94,6 +94,8 @@
               
              
               
+             
+              
             
           </ul>
         </nav>
@@ -161,22 +163,78 @@
 
 <p>Images in landscape format have an aspect ratio of 16:10 (full-sized landscape format – golden section) or 16:5 (half-sized landscape format). Portrait format images do not have a specific aspect ratio. However, we recommend a ratio of 2:3.</p>
 
-<h2 id="captioned-image">Captioned image</h2>
-<div class="codeExample"><div class="exampleOutput"><img src="http://placeimg.com/900/500/arch/grayscale" alt="architectural picture in black and white">
-<img src="http://placeimg.com/900/200/arch/grayscale" alt="architectural picture in black and white">
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placeimg.com/900/500/arch/grayscale&quot;</span> <span class="na">alt=</span><span class="s">&quot;architectural picture in black and white&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placeimg.com/900/200/arch/grayscale&quot;</span> <span class="na">alt=</span><span class="s">&quot;architectural picture in black and white&quot;</span><span class="nt">&gt;</span>
+<h2 id="a-standard-image">Standard image</h2>
+<div class="codeExample"><div class="exampleOutput"><img src="http://placehold.it/588x368" alt="image description">
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/588x368&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
 </pre></div></div></div>
-<h2 id="figure-image">Figure image</h2>
+<h2 id="b-captioned-image">Captioned image</h2>
 <div class="codeExample"><div class="exampleOutput"><figure>
-  <img src="http://placeimg.com/900/400/arch/grayscale" alt="architectural picture in black and white">
+  <img src="http://placehold.it/588x368" alt="image description">
   <figcaption>Caption content</figcaption>
 </figure>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;figure&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placeimg.com/900/400/arch/grayscale&quot;</span> <span class="na">alt=</span><span class="s">&quot;architectural picture in black and white&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/588x368&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;figcaption&gt;</span>Caption content<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span>
-</pre></div></div></div>      </div>
+</pre></div></div></div>
+<h2 id="c-image-format">Image format</h2>
+
+<table><thead>
+<tr>
+<th>Example</th>
+<th>Usage</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><img src="http://placehold.it/588x368" alt="image description"></td>
+<td><figcaption>Title + Image (16:10)</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/588x184" alt="image description"></td>
+<td><figcaption>Title + Image ½ (16:5)</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/588x331" alt="image description"></td>
+<td><figcaption>Video (16:9)</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/588x368" alt="image description"></td>
+<td><figcaption>Teaser 2/4 (16:10)</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/384x240" alt="image description"></td>
+<td><figcaption>Teaser ⅓ (16:10)</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/282x176" alt="image description"></td>
+<td><figcaption>Teaser ¼ (16:10)</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/258x161" alt="image description"></td>
+<td><figcaption>Teaser Aside</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/258x387" alt="image description"></td>
+<td><figcaption>Teaser Aside</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/180x113" alt="image description"></td>
+<td><figcaption>Standard image + text / Standard infobox</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/180x270" alt="image description"></td>
+<td><figcaption>Standard image + text / Standard infobox</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/156x98" alt="image description"></td>
+<td><figcaption>Navigation teaser (16:10)</figcaption></td>
+</tr>
+<tr>
+<td><img src="http://placehold.it/78x117" alt="image description"></td>
+<td><figcaption>Teaser list</figcaption></td>
+</tr>
+</tbody></table>
+      </div>
     </div>
   </div>
 
