@@ -1,10 +1,19 @@
 /*doc
 ---
 title: Logo
-name: logo
+name: a-logo
 category: Base Layout > Visual
 ---
 
+The designation of a website allows the user to recognize at a glance who the originator of the site is together with the website’s content and purpose.
+
+The designation consists of the Confederation logo (coat of arms and the four-language wordmark) and the name of the organizational unit, including its abbreviation (e.g. EDA), or as a short form (e.g. MeteoSchweiz).
+
+These two components are separated from one another by a vertical line. For smartphones only the coat of arms from the Confederation logo is used in the header. The name of the organizational unit can be abbreviated. The appropriate HTML code for this is provided together with the Globalnavigation.
+
+The full form of the Confederation logo is given in the Footer.
+
+The logo is a CD element. Its use is mandatory, and its representation may not be changed in any way.
 
 ```html_example
 <a href="#" class="brand hidden-xs">

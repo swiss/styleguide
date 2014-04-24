@@ -1,7 +1,7 @@
 /*doc
 ---
 title: Images
-name: images
+name: e-images
 category: Base Layout > Visual
 ---
 
@@ -10,20 +10,45 @@ Images in landscape format have an aspect ratio of 16:10 (full-sized landscape f
 
 /*doc
 ---
-title: Standard image
-name: standard-image
-parent: images
+title: Captioned image
+name: captioned-image
+parent: e-images
 category: Base Layout > Visual
 ---
 
 
 ```html_example
-<img src="http://placeimg.com/900/500/arch/grayscale">
-<img src="http://placeimg.com/900/200/arch/grayscale">
+<img src="http://placeimg.com/900/500/arch/grayscale" alt="architectural picture in black and white">
+<img src="http://placeimg.com/900/200/arch/grayscale" alt="architectural picture in black and white">
 ```
 
 */
 
 img {
   max-width: 100%;
+}
+
+/*doc
+---
+title: Figure image
+name: figure-image
+parent: e-images
+category: Base Layout > Visual
+---
+
+
+```html_example
+<figure>
+  <img src="http://placeimg.com/900/400/arch/grayscale" alt="architectural picture in black and white">
+  <figcaption>Caption content</figcaption>
+</figure>
+```
+
+*/
+
+figcaption {
+  font-size: 0.9em;
+  line-height: 1.3em;
+  margin-top: 0.7em;
+  margin-bottom: 0.8em;
 }
