@@ -1,3 +1,12 @@
 //=============================================================================
-// COLORS
+// TYPOGRAPHY
 //=============================================================================
+
+//** Fonts variables
+$frutiger-regular:    'Frutiger Neue Regular';
+$frutiger-bold:       'Frutiger Neue Bold';
+$frutiger-italic:     'Frutiger Neue Italic';
+$frutiger-light:      'Frutiger Neue Light';
+
+$font-family-sans-serif-light:  $frutiger-light, Arial, sans-serif !default;
+$font-family-sans-serif-bold:  $frutiger-bold, Arial, sans-serif !default;
