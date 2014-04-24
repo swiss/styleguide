@@ -57,9 +57,10 @@ gulp.task('css_vendors', function() {
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(['./build/css/*.css', './styleguide/**/*.*'], {
+    browserSync.init(['./styleguide/**/*.html'], {
       proxy: 'localhost',
-      open: false
+      open: false,
+      debounce: 200
     });
 });
 
@@ -86,5 +87,5 @@ gulp.task('watch', function() {
   gulp.watch('./build/**/*.{js,css}', ['hologram']);
   gulp.watch('./assets/**/*.md', ['hologram']);
   gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], ['build']);
-  gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], ['buildFonts']);
+  // gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], ['buildFonts']);
 });
