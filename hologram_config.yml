@@ -2,5 +2,10 @@ source: ./assets
 destination: ./styleguide
 documentation_assets: ./bower_components/cortana-swiss-admin
 
+dependencies:
+  - ./build/img
+  - ./build/js
+  - ./build/fonts
+
 # To have a custom index page build with your README.md
 index: README
