@@ -1,0 +1,25 @@
+/*doc
+---
+title: Paragraphs
+name: paragraphs
+category: Base Layout > Typography
+---
+
+## Lead
+A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text. <br>A lead of this sort is formatted bold.
+
+```html_example
+<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.</p>
+```
+
+*/
+
+strong {
+  font-family: $font-family-sans-serif-bold;
+}
+
+.lead {
+  @extend strong;
+  font-weight: normal;
+  font-size: ceil(($font-size-base * 1));
+}

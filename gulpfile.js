@@ -37,13 +37,13 @@ gulp.task('js_vendors', function() {
 
 // SASS compile, autoprefix and minify task
 gulp.task('styles', function() {
-  return gulp.src('./assets/sass/admin.scss')
+  return gulp.src('assets/sass/admin.scss')
     .pipe(sass())
       .on('error', gutil.beep)
       .on('error', notify.onError("Error: <%= error.message %>"))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-    .pipe(minifycss())
-    .pipe(gulp.dest('./build/css'));
+    // .pipe(minifycss())
+    .pipe(gulp.dest('build/css'));
 });
 
 // CSS vendors concat and minify

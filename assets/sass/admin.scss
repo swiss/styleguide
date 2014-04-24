@@ -1,10 +1,57 @@
+@font-face {
+    font-family: 'Frutiger Neue Bold';
+    src: url('../fonts/FrutigerNeueW02-Bd.eot?v2');
+    src: url('../fonts/FrutigerNeueW02-Bd.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FrutigerNeueW02-Bd.woff?v2') format('woff'),
+        url('../fonts/FrutigerNeueW02-Bd.ttf?v2') format('truetype'),
+        url('../fonts/FrutigerNeueW02-Bd.svg#fnb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frutiger Neue Italic';
+    src: url('../fonts/FrutigerNeueW02-It.eot?v2');
+    src: url('../fonts/FrutigerNeueW02-It.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FrutigerNeueW02-It.woff?v2') format('woff'),
+        url('../fonts/FrutigerNeueW02-It.ttf?v2') format('truetype'),
+        url('../fonts/FrutigerNeueW02-It.svg#fnb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frutiger Neue Regular';
+    src: url('../fonts/FrutigerNeueW02-Regular.eot?v2');
+    src: url('../fonts/FrutigerNeueW02-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FrutigerNeueW02-Regular.woff?v2') format('woff'),
+        url('../fonts/FrutigerNeueW02-Regular.ttf?v2') format('truetype'),
+        url('../fonts/FrutigerNeueW02-Regular.svg#fnb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Frutiger Neue Light';
+    src: url('../fonts/FrutigerNeueW02-Light.eot?v2');
+    src: url('../fonts/FrutigerNeueW02-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FrutigerNeueW02-Light.woff?v2') format('woff'),
+        url('../fonts/FrutigerNeueW02-Light.ttf?v2') format('truetype'),
+        url('../fonts/FrutigerNeueW02-Light.svg#fnb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import 'admin-variables';
+
 // import Bootstrap SASS
 @import 'bootstrap_variables';
 @import 'bootstrap';
 
 // Import all SASS files used in the project
-@import 'admin-variables';
 @import 'layout';
 @import 'images';
-@import 'typography';
 @import 'brand';
+
+//== Typography
+@import 'titles';
+@import 'type';
