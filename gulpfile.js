@@ -60,7 +60,7 @@ gulp.task('browser-sync', function() {
     browserSync.init(['./styleguide/**/*.html'], {
       proxy: 'localhost',
       open: false,
-      debounce: 200
+      debounce: 400
     });
 });
 

@@ -1,25 +1,177 @@
 /*doc
 ---
 title: Paragraphs
-name: paragraphs
+name: b-paragraphs
 category: Base Layout > Typography
 ---
 
 ## Lead
 A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text. <br>A lead of this sort is formatted bold.
 
+element                          | Effect
+--------------------------------:| -----------------
+`<p class="lead"></p>`           | Leading emphasized paragraph
+`<strong></strong>`              | Emphasized bold element in the text
+`<em></em>`                      | Emphasized italic element in the text
+
 ```html_example
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.</p>
+<p class="lead">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.
+</p>
+
+<p>
+  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Quam, <em>sapiente</em>, fuga provident illum adipisci tenetur nisi vero minima. Id, molestias, assumenda hic minima perspiciatis dolorem repellendus vero maiores beatae enim?
+</p>
 ```
 
 */
+*
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
 
 strong {
   font-family: $font-family-sans-serif-bold;
+  font-weight: normal;
 }
 
 .lead {
   @extend strong;
   font-weight: normal;
+  line-height: $line-height-base;
   font-size: ceil(($font-size-base * 1));
+}
+
+em {
+  font-family: $font-family-sans-serif-italic;
+  font-style: normal;
+}
+
+/*doc
+---
+title: Text elements
+name: c-text-elements
+category: Base Layout > Typography
+---
+
+The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.
+
+```html_example
+<p>
+   The <a href="#">a element</a> example<br>
+   The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
+   The <b>b element</b> example<br>
+   The <cite>cite element</cite> example<br>
+   The <code>code element</code> example<br>
+   The <del>del element</del> example<br>
+   The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
+   The <em>em element</em> example<br>
+   The <i>i element</i> example<br>
+   The img element <img src="assets/images/ffffff.gif" alt="placeholder" /> example<br>
+   The <ins>ins element</ins> example<br>
+   The <kbd>kbd element</kbd> example<br>
+   The <mark>mark element</mark> example<br>
+   The <q>q element <q>inside</q> a q element</q> example<br>
+   The <s>s element</s> example<br>
+   The <samp>samp element</samp> example<br>
+   The <small>small element</small> example<br>
+   The <span>span element</span> example<br>
+   The <strong>strong element</strong> example<br>
+   The <sub>sub element</sub> example<br>
+   The <sup>sup element</sup> example<br>
+   The <var>var element</var> example<br>
+   The <u>u element</u> example
+ </p>
+```
+
+*/
+
+ a {
+  color: $cerulean;
+  line-height: 1.5;
+  &:hover {
+    color: $venetian-red;
+    text-decoration: none;
+  }
+  p & {
+    line-height: 1;
+    text-decoration: underline;
+  }
+  p &:hover {
+    text-decoration: underline;
+  }
+ }
+
+ abbr {
+  border-bottom: 1px #aaa dotted;
+  letter-spacing: .07em;
+  &[title] {
+    border-bottom: 1px dotted;
+  }
+ }
+
+ b {
+  @extend strong;
+ }
+
+ pre, code {
+  color: #800;
+ }
+
+ cite, i, dfn, q {
+  @extend em;
+ }
+
+ q q {
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+ }
+
+ ins {
+  background: #ff9;
+  color: $black;
+  text-decoration: none;
+ }
+
+ mark {
+  @extend strong;
+  background: #FE57A1;
+  padding: 0;
+ }
+
+samp {
+  @extend strong;
+  color: $gray;
+}
+
+var {
+  @extend em;
+  color: gray;
+}
+
+/*doc
+---
+title: Blockquote
+name: d-blockquote
+category: Base Layout > Typography
+---
+
+```html_example
+<blockquote>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</blockquote>
+```
+
+*/
+
+blockquote {
+  margin: 1.5em 0 0 1.6em;
+  color: $empress;
+  &::before {
+    content: "\00ab";
+  }
+  &::after {
+    content: "\00bb";
+  }
 }
