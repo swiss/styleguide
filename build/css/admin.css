@@ -5461,7 +5461,9 @@ category: Base Layout > Typography
 ---
 
 ## Lead
-A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text. <br>A lead of this sort is formatted bold.
+A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text.
+
+A lead of this sort is formatted bold.
 
 element                          | Effect
 --------------------------------:| -----------------
@@ -5518,7 +5520,7 @@ The font size, line length, and line spacing for the copy body have been selecte
    The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
    The <em>em element</em> example<br>
    The <i>i element</i> example<br>
-   The img element <img src="assets/images/ffffff.gif" alt="placeholder" /> example<br>
+   The img element <img src="http://placehold.it/120x25" alt="image description"> example<br>
    The <ins>ins element</ins> example<br>
    The <kbd>kbd element</kbd> example<br>
    The <mark>mark element</mark> example<br>
