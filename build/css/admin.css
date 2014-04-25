@@ -5670,229 +5670,664 @@ category: Base Layout > Visual
 
 The icons used are one-color and two-dimensional. They are provided as a web font which is to be found in the resources as a TrueType font.
 
-Use the global `.icon` class followed by the more specific class
+For **only-icon** element, use a `<span>` with the global `.icon` class followed by the more specific class.
+
+For **inside-icon** element, use the global `.icon` and `.icon--before` or `.icon--after` class followed by the more specific class.
 
 ```html_example
-<span class="icon icon--pdf"></span> My document
+<!-- only-icon element -->
+<span class="icon icon--pdf"></span> My document <br>
+
+<!-- inside-icon element -->
+<a href="doc.pdf" class="icon icon--before icon--pdf">My document</a>
 ```
 
 |  Icon                                                    |  Class                                       |
 |----------------------------------------------------------|----------------------------------------------|
-|  <span class="icon icon--exclam"></span>                 |  <pre>icon icon--exclam</pre>                |
-|  <span class="icon icon--arrow-right"></span>            |  <pre>icon icon--arrow-right</pre>           |
-|  <span class="icon icon--arrow-left"></span>             |  <pre>icon icon--arrow-left</pre>            |
-|  <span class="icon icon--arrow-top"></span>              |  <pre>icon icon--arrow-top</pre>             |
-|  <span class="icon icon--arrow-bottom"></span>           |  <pre>icon icon--arrow-bottom</pre>          |
-|  <span class="icon icon--left"></span>                   |  <pre>icon icon--left</pre>                  |
-|  <span class="icon icon--right"></span>                  |  <pre>icon icon--right</pre>                 |
-|  <span class="icon icon--top"></span>                    |  <pre>icon icon--top</pre>                   |
-|  <span class="icon icon--bottom"></span>                 |  <pre>icon icon--bottom</pre>                |
-|  <span class="icon icon--screen"></span>                 |  <pre>icon icon--screen</pre>                |
-|  <span class="icon icon--notebook"></span>               |  <pre>icon icon--notebook</pre>              |
-|  <span class="icon icon--tablet-portrait"></span>        |  <pre>icon icon--tablet-portrait</pre>       |
-|  <span class="icon icon--tablet-landscape"></span>       |  <pre>icon icon--tablet-landscape</pre>      |
-|  <span class="icon icon--smartphone-portrait"></span>    |  <pre>icon icon--smartphone-portrait</pre>   |
-|  <span class="icon icon--smartphone-landscape"></span>   |  <pre>icon icon--smartphone-landscape</pre>  |
-|  <span class="icon icon--eye"></span>                    |  <pre>icon icon--eye</pre>                   |
-|  <span class="icon icon--trash"></span>                  |  <pre>icon icon--trash</pre>                 |
-|  <span class="icon icon--cart"></span>                   |  <pre>icon icon--cart</pre>                  |
-|  <span class="icon icon--star"></span>                   |  <pre>icon icon--star</pre>                  |
-|  <span class="icon icon--tools"></span>                  |  <pre>icon icon--tools</pre>                 |
-|  <span class="icon icon--settings"></span>               |  <pre>icon icon--settings</pre>              |
-|  <span class="icon icon--list"></span>                   |  <pre>icon icon--list</pre>                  |
-|  <span class="icon icon--list-alt"></span>               |  <pre>icon icon--list-alt</pre>              |
-|  <span class="icon icon--menu"></span>                   |  <pre>icon icon--menu</pre>                  |
-|  <span class="icon icon--print"></span>                  |  <pre>icon icon--print</pre>                 |
-|  <span class="icon icon--search"></span>                 |  <pre>icon icon--search</pre>                |
-|  <span class="icon icon--doc"></span>                    |  <pre>icon icon--doc</pre>                   |
-|  <span class="icon icon--pdf"></span>                    |  <pre>icon icon--pdf</pre>                   |
-|  <span class="icon icon--word"></span>                   |  <pre>icon icon--word</pre>                  |
-|  <span class="icon icon--excel"></span>                  |  <pre>icon icon--excel</pre>                 |
-|  <span class="icon icon--calendar"></span>               |  <pre>icon icon--calendar</pre>              |
-|  <span class="icon icon--rss"></span>                    |  <pre>icon icon--rss</pre>                   |
-|  <span class="icon icon--share"></span>                  |  <pre>icon icon--share</pre>                 |
-|  <span class="icon icon--facebook"></span>               |  <pre>icon icon--facebook</pre>              |
-|  <span class="icon icon--twitter"></span>                |  <pre>icon icon--twitter</pre>               |
-|  <span class="icon icon--google"></span>                 |  <pre>icon icon--google</pre>                |
-|  <span class="icon icon--play"></span>                   |  <pre>icon icon--play</pre>                  |
-|  <span class="icon icon--pause"></span>                  |  <pre>icon icon--pause</pre>                 |
-|  <span class="icon icon--backward"></span>               |  <pre>icon icon--backward</pre>              |
-|  <span class="icon icon--forward"></span>                |  <pre>icon icon--forward</pre>               |
-|  <span class="icon icon--step-backward"></span>          |  <pre>icon icon--step-backward</pre>         |
-|  <span class="icon icon--step-forward"></span>           |  <pre>icon icon--step-forward</pre>          |
-|  <span class="icon icon--fast-backward"></span>          |  <pre>icon icon--fast-backward</pre>         |
-|  <span class="icon icon--fast-forward"></span>           |  <pre>icon icon--fast-forward</pre>          |
-|  <span class="icon icon--corner"></span>                 |  <pre>icon icon--corner</pre>                |
-|  <span class="icon icon--square"></span>                 |  <pre>icon icon--square</pre>                |
-|  <span class="icon icon--disc"></span>                   |  <pre>icon icon--disc</pre>                  |
-|  <span class="icon icon--less"></span>                   |  <pre>icon icon--less</pre>                  |
-|  <span class="icon icon--greater"></span>                |  <pre>icon icon--greater</pre>               |
-|  <span class="icon icon--power"></span>                  |  <pre>icon icon--power</pre>                 |
-|  <span class="icon icon--root"></span>                   |  <pre>icon icon--root</pre>                  |
-|  <span class="icon icon--close"></span>                  |  <pre>icon icon--close</pre>                 |
+|  <span class="icon icon--exclam"></span>                 |  <pre>icon--exclam</pre>                     |
+|  <span class="icon icon--arrow-right"></span>            |  <pre>icon--arrow-right</pre>                |
+|  <span class="icon icon--arrow-left"></span>             |  <pre>icon--arrow-left</pre>                 |
+|  <span class="icon icon--arrow-top"></span>              |  <pre>icon--arrow-top</pre>                  |
+|  <span class="icon icon--arrow-bottom"></span>           |  <pre>icon--arrow-bottom</pre>               |
+|  <span class="icon icon--left"></span>                   |  <pre>icon--left</pre>                       |
+|  <span class="icon icon--right"></span>                  |  <pre>icon--right</pre>                      |
+|  <span class="icon icon--top"></span>                    |  <pre>icon--top</pre>                        |
+|  <span class="icon icon--bottom"></span>                 |  <pre>icon--bottom</pre>                     |
+|  <span class="icon icon--screen"></span>                 |  <pre>icon--screen</pre>                     |
+|  <span class="icon icon--notebook"></span>               |  <pre>icon--notebook</pre>                   |
+|  <span class="icon icon--tablet-portrait"></span>        |  <pre>icon--tablet-portrait</pre>            |
+|  <span class="icon icon--tablet-landscape"></span>       |  <pre>icon--tablet-landscape</pre>           |
+|  <span class="icon icon--smartphone-portrait"></span>    |  <pre>icon--smartphone-portrait</pre>        |
+|  <span class="icon icon--smartphone-landscape"></span>   |  <pre>icon--smartphone-landscape</pre>       |
+|  <span class="icon icon--eye"></span>                    |  <pre>icon--eye</pre>                        |
+|  <span class="icon icon--trash"></span>                  |  <pre>icon--trash</pre>                      |
+|  <span class="icon icon--cart"></span>                   |  <pre>icon--cart</pre>                       |
+|  <span class="icon icon--star"></span>                   |  <pre>icon--star</pre>                       |
+|  <span class="icon icon--tools"></span>                  |  <pre>icon--tools</pre>                      |
+|  <span class="icon icon--settings"></span>               |  <pre>icon--settings</pre>                   |
+|  <span class="icon icon--list"></span>                   |  <pre>icon--list</pre>                       |
+|  <span class="icon icon--list-alt"></span>               |  <pre>icon--list-alt</pre>                   |
+|  <span class="icon icon--menu"></span>                   |  <pre>icon--menu</pre>                       |
+|  <span class="icon icon--print"></span>                  |  <pre>icon--print</pre>                      |
+|  <span class="icon icon--search"></span>                 |  <pre>icon--search</pre>                     |
+|  <span class="icon icon--doc"></span>                    |  <pre>icon--doc</pre>                        |
+|  <span class="icon icon--pdf"></span>                    |  <pre>icon--pdf</pre>                        |
+|  <span class="icon icon--word"></span>                   |  <pre>icon--word</pre>                       |
+|  <span class="icon icon--excel"></span>                  |  <pre>icon--excel</pre>                      |
+|  <span class="icon icon--calendar"></span>               |  <pre>icon--calendar</pre>                   |
+|  <span class="icon icon--rss"></span>                    |  <pre>icon--rss</pre>                        |
+|  <span class="icon icon--external"></span>               |  <pre>icon--external</pre>                   |
+|  <span class="icon icon--facebook"></span>               |  <pre>icon--facebook</pre>                   |
+|  <span class="icon icon--twitter"></span>                |  <pre>icon--twitter</pre>                    |
+|  <span class="icon icon--google"></span>                 |  <pre>icon--google</pre>                     |
+|  <span class="icon icon--play"></span>                   |  <pre>icon--play</pre>                       |
+|  <span class="icon icon--pause"></span>                  |  <pre>icon--pause</pre>                      |
+|  <span class="icon icon--backward"></span>               |  <pre>icon--backward</pre>                   |
+|  <span class="icon icon--forward"></span>                |  <pre>icon--forward</pre>                    |
+|  <span class="icon icon--step-backward"></span>          |  <pre>icon--step-backward</pre>              |
+|  <span class="icon icon--step-forward"></span>           |  <pre>icon--step-forward</pre>               |
+|  <span class="icon icon--fast-backward"></span>          |  <pre>icon--fast-backward</pre>              |
+|  <span class="icon icon--fast-forward"></span>           |  <pre>icon--fast-forward</pre>               |
+|  <span class="icon icon--corner"></span>                 |  <pre>icon--corner</pre>                     |
+|  <span class="icon icon--square"></span>                 |  <pre>icon--square</pre>                     |
+|  <span class="icon icon--disc"></span>                   |  <pre>icon--disc</pre>                       |
+|  <span class="icon icon--less"></span>                   |  <pre>icon--less</pre>                       |
+|  <span class="icon icon--greater"></span>                |  <pre>icon--greater</pre>                    |
+|  <span class="icon icon--power"></span>                  |  <pre>icon--power</pre>                      |
+|  <span class="icon icon--root"></span>                   |  <pre>icon--root</pre>                       |
+|  <span class="icon icon--close"></span>                  |  <pre>icon--close</pre>                      |
 
 */
-.icon {
+.icon.icon--before:before {
+  font-family: "Admin Icons"; }
+.icon.icon--after:after {
   font-family: "Admin Icons"; }
 
-.icon--exclam:after {
-  content: '!'; }
+span.icon {
+  font-family: "Admin Icons"; }
 
-.icon--arrow-right:after {
-  content: '$'; }
+span.icon.icon--exclam:after {
+  content: "!"; }
 
-.icon--google:after {
-  content: '+'; }
+.icon--before.icon--exclam:before {
+  content: "!";
+  padding-right: 3px; }
 
-.icon--bottom:after {
-  content: ','; }
+.icon--after.icon--exclam:after {
+  content: "!";
+  padding-left: 3px; }
 
-.icon--left:after {
-  content: '.'; }
+span.icon.icon--arrow-right:after {
+  content: "$"; }
 
-.icon--disc:after {
-  content: '0'; }
+.icon--before.icon--arrow-right:before {
+  content: "$";
+  padding-right: 3px; }
 
-.icon--screen:after {
-  content: '1'; }
+.icon--after.icon--arrow-right:after {
+  content: "$";
+  padding-left: 3px; }
 
-.icon--notebook:after {
-  content: '2'; }
+span.icon.icon--google:after {
+  content: "+"; }
 
-.icon--smartphone-portrait:after {
-  content: '3'; }
+.icon--before.icon--google:before {
+  content: "+";
+  padding-right: 3px; }
 
-.icon--smartphone-landscape:after {
-  content: '4'; }
+.icon--after.icon--google:after {
+  content: "+";
+  padding-left: 3px; }
 
-.icon--tablet-portrait:after {
-  content: '5'; }
+span.icon.icon--bottom:after {
+  content: ","; }
 
-.icon--tablet-landscape:after {
-  content: '6'; }
+.icon--before.icon--bottom:before {
+  content: ",";
+  padding-right: 3px; }
 
-.icon--right:after {
-  content: ':'; }
+.icon--after.icon--bottom:after {
+  content: ",";
+  padding-left: 3px; }
 
-.icon--top:after {
-  content: ';'; }
+span.icon.icon--left:after {
+  content: "."; }
 
-.icon--less:after {
-  content: '<'; }
+.icon--before.icon--left:before {
+  content: ".";
+  padding-right: 3px; }
 
-.icon--greater:after {
-  content: '>'; }
+.icon--after.icon--left:after {
+  content: ".";
+  padding-left: 3px; }
 
-.icon--eye:after {
-  content: '?'; }
+span.icon.icon--disc:after {
+  content: "0"; }
 
-.icon--pdf:after {
-  content: 'A'; }
+.icon--before.icon--disc:before {
+  content: "0";
+  padding-right: 3px; }
 
-.icon--trash:after {
-  content: 'B'; }
+.icon--after.icon--disc:after {
+  content: "0";
+  padding-left: 3px; }
 
-.icon--cart:after {
-  content: 'C'; }
+span.icon.icon--screen:after {
+  content: "1"; }
 
-.icon--star:after {
-  content: 'F'; }
+.icon--before.icon--screen:before {
+  content: "1";
+  padding-right: 3px; }
 
-.icon--list:after {
-  content: 'I'; }
+.icon--after.icon--screen:after {
+  content: "1";
+  padding-left: 3px; }
 
-.icon--message:after {
-  content: 'M'; }
+span.icon.icon--notebook:after {
+  content: "2"; }
 
-.icon--print:after {
-  content: 'P'; }
+.icon--before.icon--notebook:before {
+  content: "2";
+  padding-right: 3px; }
 
-.icon--rss:after {
-  content: 'R'; }
+.icon--after.icon--notebook:after {
+  content: "2";
+  padding-left: 3px; }
 
-.icon--search:after {
-  content: 'S'; }
+span.icon.icon--smartphone-portrait:after {
+  content: "3"; }
 
-.icon--word:after {
-  content: 'W'; }
+.icon--before.icon--smartphone-portrait:before {
+  content: "3";
+  padding-right: 3px; }
 
-.icon--excel:after {
-  content: 'X'; }
+.icon--after.icon--smartphone-portrait:after {
+  content: "3";
+  padding-left: 3px; }
 
-.icon--power:after {
-  content: '^'; }
+span.icon.icon--smartphone-landscape:after {
+  content: "4"; }
 
-.icon--calendar:after {
-  content: 'c'; }
+.icon--before.icon--smartphone-landscape:before {
+  content: "4";
+  padding-right: 3px; }
 
-.icon--doc:after {
-  content: 'd'; }
+.icon--after.icon--smartphone-landscape:after {
+  content: "4";
+  padding-left: 3px; }
 
-.icon--pause:after {
-  content: 'e'; }
+span.icon.icon--tablet-portrait:after {
+  content: "5"; }
 
-.icon--facebook:after {
-  content: 'f'; }
+.icon--before.icon--tablet-portrait:before {
+  content: "5";
+  padding-right: 3px; }
 
-.icon--step-backward:after {
-  content: 'g'; }
+.icon--after.icon--tablet-portrait:after {
+  content: "5";
+  padding-left: 3px; }
 
-.icon--step-forward:after {
-  content: 'h'; }
+span.icon.icon--tablet-landscape:after {
+  content: "6"; }
 
-.icon--list-alt:after {
-  content: 'i'; }
+.icon--before.icon--tablet-landscape:before {
+  content: "6";
+  padding-right: 3px; }
 
-.icon--backward:after {
-  content: 'j'; }
+.icon--after.icon--tablet-landscape:after {
+  content: "6";
+  padding-left: 3px; }
 
-.icon--forward:after {
-  content: 'k'; }
+span.icon.icon--right:after {
+  content: ":"; }
 
-.icon--share:after {
-  content: 'l'; }
+.icon--before.icon--right:before {
+  content: ":";
+  padding-right: 3px; }
 
-.icon--menu:after {
-  content: 'm'; }
+.icon--after.icon--right:after {
+  content: ":";
+  padding-left: 3px; }
 
-.icon--corner:after {
-  content: 'o'; }
+span.icon.icon--top:after {
+  content: ";"; }
 
-.icon--tools:after {
-  content: 'p'; }
+.icon--before.icon--top:before {
+  content: ";";
+  padding-right: 3px; }
 
-.icon--play:after {
-  content: 'q'; }
+.icon--after.icon--top:after {
+  content: ";";
+  padding-left: 3px; }
 
-.icon--settings:after {
-  content: 's'; }
+span.icon.icon--less:after {
+  content: "<"; }
 
-.icon--twitter:after {
-  content: 't'; }
+.icon--before.icon--less:before {
+  content: "<";
+  padding-right: 3px; }
 
-.icon--fast-backward:after {
-  content: 'z'; }
+.icon--after.icon--less:after {
+  content: "<";
+  padding-left: 3px; }
 
-.icon--fast-forward:after {
-  content: 'u'; }
+span.icon.icon--greater:after {
+  content: ">"; }
 
-.icon--root:after {
-  content: 'v'; }
+.icon--before.icon--greater:before {
+  content: ">";
+  padding-right: 3px; }
 
-.icon--square:after {
-  content: 'w'; }
+.icon--after.icon--greater:after {
+  content: ">";
+  padding-left: 3px; }
 
-.icon--close:after {
-  content: 'x'; }
+span.icon.icon--eye:after {
+  content: "?"; }
 
-.icon--arrow-bottom:after {
-  content: 'ä'; }
+.icon--before.icon--eye:before {
+  content: "?";
+  padding-right: 3px; }
 
-.icon--arrow-left:after {
-  content: 'ö'; }
+.icon--after.icon--eye:after {
+  content: "?";
+  padding-left: 3px; }
 
-.icon--arrow-top:after {
-  content: 'ü'; }
+span.icon.icon--pdf:after {
+  content: "A"; }
+
+.icon--before.icon--pdf:before {
+  content: "A";
+  padding-right: 3px; }
+
+.icon--after.icon--pdf:after {
+  content: "A";
+  padding-left: 3px; }
+
+span.icon.icon--trash:after {
+  content: "B"; }
+
+.icon--before.icon--trash:before {
+  content: "B";
+  padding-right: 3px; }
+
+.icon--after.icon--trash:after {
+  content: "B";
+  padding-left: 3px; }
+
+span.icon.icon--cart:after {
+  content: "C"; }
+
+.icon--before.icon--cart:before {
+  content: "C";
+  padding-right: 3px; }
+
+.icon--after.icon--cart:after {
+  content: "C";
+  padding-left: 3px; }
+
+span.icon.icon--star:after {
+  content: "F"; }
+
+.icon--before.icon--star:before {
+  content: "F";
+  padding-right: 3px; }
+
+.icon--after.icon--star:after {
+  content: "F";
+  padding-left: 3px; }
+
+span.icon.icon--list:after {
+  content: "I"; }
+
+.icon--before.icon--list:before {
+  content: "I";
+  padding-right: 3px; }
+
+.icon--after.icon--list:after {
+  content: "I";
+  padding-left: 3px; }
+
+span.icon.icon--message:after {
+  content: "M"; }
+
+.icon--before.icon--message:before {
+  content: "M";
+  padding-right: 3px; }
+
+.icon--after.icon--message:after {
+  content: "M";
+  padding-left: 3px; }
+
+span.icon.icon--print:after {
+  content: "P"; }
+
+.icon--before.icon--print:before {
+  content: "P";
+  padding-right: 3px; }
+
+.icon--after.icon--print:after {
+  content: "P";
+  padding-left: 3px; }
+
+span.icon.icon--rss:after {
+  content: "R"; }
+
+.icon--before.icon--rss:before {
+  content: "R";
+  padding-right: 3px; }
+
+.icon--after.icon--rss:after {
+  content: "R";
+  padding-left: 3px; }
+
+span.icon.icon--search:after {
+  content: "S"; }
+
+.icon--before.icon--search:before {
+  content: "S";
+  padding-right: 3px; }
+
+.icon--after.icon--search:after {
+  content: "S";
+  padding-left: 3px; }
+
+span.icon.icon--word:after {
+  content: "W"; }
+
+.icon--before.icon--word:before {
+  content: "W";
+  padding-right: 3px; }
+
+.icon--after.icon--word:after {
+  content: "W";
+  padding-left: 3px; }
+
+span.icon.icon--excel:after {
+  content: "X"; }
+
+.icon--before.icon--excel:before {
+  content: "X";
+  padding-right: 3px; }
+
+.icon--after.icon--excel:after {
+  content: "X";
+  padding-left: 3px; }
+
+span.icon.icon--power:after {
+  content: "^"; }
+
+.icon--before.icon--power:before {
+  content: "^";
+  padding-right: 3px; }
+
+.icon--after.icon--power:after {
+  content: "^";
+  padding-left: 3px; }
+
+span.icon.icon--calendar:after {
+  content: "c"; }
+
+.icon--before.icon--calendar:before {
+  content: "c";
+  padding-right: 3px; }
+
+.icon--after.icon--calendar:after {
+  content: "c";
+  padding-left: 3px; }
+
+span.icon.icon--doc:after {
+  content: "d"; }
+
+.icon--before.icon--doc:before {
+  content: "d";
+  padding-right: 3px; }
+
+.icon--after.icon--doc:after {
+  content: "d";
+  padding-left: 3px; }
+
+span.icon.icon--pause:after {
+  content: "e"; }
+
+.icon--before.icon--pause:before {
+  content: "e";
+  padding-right: 3px; }
+
+.icon--after.icon--pause:after {
+  content: "e";
+  padding-left: 3px; }
+
+span.icon.icon--facebook:after {
+  content: "f"; }
+
+.icon--before.icon--facebook:before {
+  content: "f";
+  padding-right: 3px; }
+
+.icon--after.icon--facebook:after {
+  content: "f";
+  padding-left: 3px; }
+
+span.icon.icon--step-backward:after {
+  content: "g"; }
+
+.icon--before.icon--step-backward:before {
+  content: "g";
+  padding-right: 3px; }
+
+.icon--after.icon--step-backward:after {
+  content: "g";
+  padding-left: 3px; }
+
+span.icon.icon--step-forward:after {
+  content: "h"; }
+
+.icon--before.icon--step-forward:before {
+  content: "h";
+  padding-right: 3px; }
+
+.icon--after.icon--step-forward:after {
+  content: "h";
+  padding-left: 3px; }
+
+span.icon.icon--list-alt:after {
+  content: "i"; }
+
+.icon--before.icon--list-alt:before {
+  content: "i";
+  padding-right: 3px; }
+
+.icon--after.icon--list-alt:after {
+  content: "i";
+  padding-left: 3px; }
+
+span.icon.icon--backward:after {
+  content: "j"; }
+
+.icon--before.icon--backward:before {
+  content: "j";
+  padding-right: 3px; }
+
+.icon--after.icon--backward:after {
+  content: "j";
+  padding-left: 3px; }
+
+span.icon.icon--forward:after {
+  content: "k"; }
+
+.icon--before.icon--forward:before {
+  content: "k";
+  padding-right: 3px; }
+
+.icon--after.icon--forward:after {
+  content: "k";
+  padding-left: 3px; }
+
+span.icon.icon--external:after {
+  content: "l"; }
+
+.icon--before.icon--external:before {
+  content: "l";
+  padding-right: 3px; }
+
+.icon--after.icon--external:after {
+  content: "l";
+  padding-left: 3px; }
+
+span.icon.icon--menu:after {
+  content: "m"; }
+
+.icon--before.icon--menu:before {
+  content: "m";
+  padding-right: 3px; }
+
+.icon--after.icon--menu:after {
+  content: "m";
+  padding-left: 3px; }
+
+span.icon.icon--corner:after {
+  content: "o"; }
+
+.icon--before.icon--corner:before {
+  content: "o";
+  padding-right: 3px; }
+
+.icon--after.icon--corner:after {
+  content: "o";
+  padding-left: 3px; }
+
+span.icon.icon--tools:after {
+  content: "p"; }
+
+.icon--before.icon--tools:before {
+  content: "p";
+  padding-right: 3px; }
+
+.icon--after.icon--tools:after {
+  content: "p";
+  padding-left: 3px; }
+
+span.icon.icon--play:after {
+  content: "q"; }
+
+.icon--before.icon--play:before {
+  content: "q";
+  padding-right: 3px; }
+
+.icon--after.icon--play:after {
+  content: "q";
+  padding-left: 3px; }
+
+span.icon.icon--settings:after {
+  content: "s"; }
+
+.icon--before.icon--settings:before {
+  content: "s";
+  padding-right: 3px; }
+
+.icon--after.icon--settings:after {
+  content: "s";
+  padding-left: 3px; }
+
+span.icon.icon--twitter:after {
+  content: "t"; }
+
+.icon--before.icon--twitter:before {
+  content: "t";
+  padding-right: 3px; }
+
+.icon--after.icon--twitter:after {
+  content: "t";
+  padding-left: 3px; }
+
+span.icon.icon--fast-backward:after {
+  content: "z"; }
+
+.icon--before.icon--fast-backward:before {
+  content: "z";
+  padding-right: 3px; }
+
+.icon--after.icon--fast-backward:after {
+  content: "z";
+  padding-left: 3px; }
+
+span.icon.icon--fast-forward:after {
+  content: "u"; }
+
+.icon--before.icon--fast-forward:before {
+  content: "u";
+  padding-right: 3px; }
+
+.icon--after.icon--fast-forward:after {
+  content: "u";
+  padding-left: 3px; }
+
+span.icon.icon--root:after {
+  content: "v"; }
+
+.icon--before.icon--root:before {
+  content: "v";
+  padding-right: 3px; }
+
+.icon--after.icon--root:after {
+  content: "v";
+  padding-left: 3px; }
+
+span.icon.icon--square:after {
+  content: "w"; }
+
+.icon--before.icon--square:before {
+  content: "w";
+  padding-right: 3px; }
+
+.icon--after.icon--square:after {
+  content: "w";
+  padding-left: 3px; }
+
+span.icon.icon--close:after {
+  content: "x"; }
+
+.icon--before.icon--close:before {
+  content: "x";
+  padding-right: 3px; }
+
+.icon--after.icon--close:after {
+  content: "x";
+  padding-left: 3px; }
+
+span.icon.icon--arrow-bottom:after {
+  content: "ä"; }
+
+.icon--before.icon--arrow-bottom:before {
+  content: "ä";
+  padding-right: 3px; }
+
+.icon--after.icon--arrow-bottom:after {
+  content: "ä";
+  padding-left: 3px; }
+
+span.icon.icon--arrow-left:after {
+  content: "ö"; }
+
+.icon--before.icon--arrow-left:before {
+  content: "ö";
+  padding-right: 3px; }
+
+.icon--after.icon--arrow-left:after {
+  content: "ö";
+  padding-left: 3px; }
+
+span.icon.icon--arrow-top:after {
+  content: "ü"; }
+
+.icon--before.icon--arrow-top:before {
+  content: "ü";
+  padding-right: 3px; }
+
+.icon--after.icon--arrow-top:after {
+  content: "ü";
+  padding-left: 3px; }
 
 /*doc
 ---
@@ -5911,7 +6346,7 @@ Use the global `.form-icon` class followed by the more specific class
 |  Form icon                                                               |                                                              |
 |--------------------------------------------------------------------------|--------------------------------------------------------------|
 |  <span class="form-icon form-icon--checkbox-checked"></span>             |  <pre>form-icon form-icon--checkbox-checked</pre>            |
-|  <span class="form-icon form-icon--checkbox-checked-focus"></span>        |  <pre>form-icon form-icon--checkbox-checked-focus</pre>       |
+|  <span class="form-icon form-icon--checkbox-checked-focus"></span>       |  <pre>form-icon form-icon--checkbox-checked-focus</pre>      |
 |  <span class="form-icon form-icon--checkbox-checked-inactive"></span>    |  <pre>form-icon form-icon--checkbox-checked-inactive</pre>   |
 |  <span class="form-icon form-icon--checkbox-unchecked"></span>           |  <pre>form-icon form-icon--checkbox-unchecked</pre>          |
 |  <span class="form-icon form-icon--checkbox-unchecked-focus"></span>     |  <pre>form-icon form-icon--checkbox-unchecked-focus</pre>    |
