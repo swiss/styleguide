@@ -90,6 +90,14 @@
               
                 <li><a href="#d-blockquote">Blockquote</a></li>
               
+             
+              
+                <li><a href="#e-lists">Lists</a></li>
+              
+             
+              
+                <li><a href="#f-links">Links</a></li>
+              
             
           </ul>
         </nav>
@@ -222,6 +230,107 @@
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;blockquote&gt;</span>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 <span class="nt">&lt;/blockquote&gt;</span>
+</pre></div></div></div>
+<h1 id="e-lists">Lists</h1>
+
+<p>Lists are used to structure contents and to provide the user with a quick overview of a topic.</p>
+
+<p>The following types of lists are used:</p>
+
+<p>Ordered and unordered lists
+Definition lists
+Link lists (with internal and external links, which can also be mixed)
+Anchor lists
+Download lists</p>
+
+<h3>Unordered lists</h3>
+<div class="codeExample"><div class="exampleOutput"><ul>
+  <li><a href="#">Lorem ipsum</a>
+    <ul>
+      <li><a href="#">Lorem ipsum</a></li>
+      <li>Lorem ipsum
+        <ul>
+          <li><a href="#">Lorem ipsum</a></li>
+          <li>Lorem ipsum</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Lorem ipsum</li>
+  <li>Lorem ipsum</li>
+</ul>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Lorem ipsum
+        <span class="nt">&lt;ul&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div></div></div>
+<h3> Ordered lists</h3>
+<div class="codeExample"><div class="exampleOutput"><ol>
+  <li><a href="#">Lorem ipsum</a></li>
+  <li>Lorem ipsum</li>
+  <li>Lorem ipsum
+    <ol>
+      <li><a href="#">Lorem ipsum</a></li>
+    </ol>
+  </li>
+  <li>Lorem ipsum</li>
+</ol>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum
+    <span class="nt">&lt;ol&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</pre></div></div></div>
+<h3>Definition lists</h3>
+<div class="codeExample"><div class="exampleOutput"><dl>
+  <dt>Lorem ipsum</dt>
+  <dd>Lorem ipsum</dd>
+  <dt>Lorem ipsum</dt>
+  <dd>Lorem ipsum</dd>
+  <dd>Lorem ipsum</dd>
+</dl>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>Lorem ipsum<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Lorem ipsum<span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>Lorem ipsum<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Lorem ipsum<span class="nt">&lt;/dd&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>Lorem ipsum<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</pre></div></div></div>
+<h1 id="f-links">Links</h1>
+
+<p>Links are formatted blue by default and are not underlined. When a mouseover is used, they become red.</p>
+
+<p>There are two exceptions to this rule:
+If there is a link in the running text, the linked text is underlined. Links in a navigation element (e.g. in the global navigation) are gray, and not blue. There are separate descriptions of how these special links are presented and how they behave at the appropriate places in these Web Guidelines.</p>
+
+<p>You can  use the <code>.icon</code> classes to add some icons after or before the link. Use <code>.icon--external</code> if the link is external.</p>
+<div class="codeExample"><div class="exampleOutput"><p>An <a href="#">internal link</a> in a paragraph.</p>
+
+<p>An <a href="#" class="icon icon--after icon--external">external link</a> in a paragraph.</p>
+<p><a href="#" class="icon icon--before icon--cart">link with icon</a></p>
+<p><a href="#" class="icon icon--before icon--pdf">link with icon lorem <span>(PDF, 43 pages, 2Mb, English)</span></a></p>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;p&gt;</span>An <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>internal link<span class="nt">&lt;/a&gt;</span> in a paragraph.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>An <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>external link<span class="nt">&lt;/a&gt;</span> in a paragraph.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--cart&quot;</span><span class="nt">&gt;</span>link with icon<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--pdf&quot;</span><span class="nt">&gt;</span>link with icon lorem <span class="nt">&lt;span&gt;</span>(PDF, 43 pages, 2Mb, English)<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>

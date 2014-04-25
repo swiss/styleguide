@@ -5,35 +5,30 @@
   src: url("../fonts/AdminCH_Symbols.eot?#iefix") format("embedded-opentype"), url("../fonts/AdminCH_Symbols.woff?v2") format("woff"), url("../fonts/AdminCH_Symbols.ttf?v2") format("truetype"), url("../fonts/AdminCH_Symbols.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Bold';
   src: url("../fonts/FrutigerNeueW02-Bd.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Bd.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Bd.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Bd.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Italic';
   src: url("../fonts/FrutigerNeueW02-It.eot?v2");
   src: url("../fonts/FrutigerNeueW02-It.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-It.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-It.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-It.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Regular';
   src: url("../fonts/FrutigerNeueW02-Regular.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Regular.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Regular.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Regular.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Light';
   src: url("../fonts/FrutigerNeueW02-Light.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Light.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Light.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Light.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /*doc
 ---
 title: Colors
@@ -122,7 +117,8 @@ strong,
 .lead,
 b,
 mark,
-samp {
+samp,
+dt {
   font-weight: bold; }
 
 dfn {
@@ -330,7 +326,6 @@ th {
   font-family: 'Glyphicons Halflings';
   src: url("bootstrap/glyphicons-halflings-regular.eot");
   src: url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
-
 .glyphicon {
   position: relative;
   top: 1px;
@@ -955,10 +950,10 @@ th {
 
 html {
   font-size: 62.5%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Frutiger Neue Regular", sans-serif, Arial, sans-serif;
+  font-family: "Frutiger Neue Regular", Arial, sans-serif;
   font-size: 12px;
   line-height: 1.6;
   color: #454545;
@@ -4071,7 +4066,6 @@ a.thumbnail.active {
 
   to {
     background-position: 0 0; } }
-
 .progress {
   overflow: hidden;
   height: 19px;
@@ -5020,7 +5014,7 @@ button.close {
     border-radius: 10px;
     cursor: pointer;
     background-color: #000 \9;
-    background-color: rgba(0, 0, 0, 0); }
+    background-color: transparent; }
   .carousel-indicators .active {
     margin: 0;
     width: 12px;
@@ -5106,7 +5100,6 @@ button.close {
 
 @-ms-viewport {
   width: device-width; }
-
 .visible-xs, .visible-sm, .visible-md, .visible-lg {
   display: none !important; }
 
@@ -5398,7 +5391,7 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 .brand h1 {
   color: black;
   display: inline;
-  font-family: "Frutiger Neue Bold", sans-serif;
+  font-family: "Frutiger Neue Bold";
   font-weight: normal;
   font-size: 1em;
   line-height: 1.3;
@@ -5432,7 +5425,7 @@ Headings can also have links and are then formatted in blue.
 
 */
 h1 {
-  font-family: "Frutiger Neue Light", sans-serif, Arial, sans-serif;
+  font-family: "Frutiger Neue Light", Arial, sans-serif;
   margin: 0.5em 0 0 0; }
 
 h2 {
@@ -5444,7 +5437,7 @@ h3 {
   margin: 0.938em 0 0 0; }
 
 h4 {
-  font-family: "Frutiger Neue Bold", sans-serif, Arial, sans-serif; }
+  font-family: "Frutiger Neue Bold", Arial, sans-serif; }
 
 h4, h5 {
   line-height: 1.5;
@@ -5459,6 +5452,47 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-size: 1em;
   padding: 0;
   margin: 0; }
+
+/*doc
+---
+title: Links
+name: f-links
+category: Base Layout > Typography
+---
+
+Links are formatted blue by default and are not underlined. When a mouseover is used, they become red.
+
+There are two exceptions to this rule:
+If there is a link in the running text, the linked text is underlined. Links in a navigation element (e.g. in the global navigation) are gray, and not blue. There are separate descriptions of how these special links are presented and how they behave at the appropriate places in these Web Guidelines.
+
+You can  use the `.icon` classes to add some icons after or before the link. Use `.icon--external` if the link is external.
+
+```html_example
+<p>An <a href="#">internal link</a> in a paragraph.</p>
+
+<p>An <a href="#" class="icon icon--after icon--external">external link</a> in a paragraph.</p>
+<p><a href="#" class="icon icon--before icon--cart">link with icon</a></p>
+<p><a href="#" class="icon icon--before icon--pdf">link with icon lorem <span>(PDF, 43 pages, 2Mb, English)</span></a></p>
+```
+
+*/
+a {
+  color: #006699;
+  line-height: 1.5; }
+  a:hover {
+    color: #dc0018;
+    text-decoration: none; }
+  p a {
+    line-height: 1;
+    text-decoration: underline; }
+  p a:hover {
+    text-decoration: underline; }
+  a.icon {
+    text-decoration: none; }
+    a.icon:hover {
+      text-decoration: none; }
+  a span {
+    color: #757575; }
 
 /*doc
 ---
@@ -5489,13 +5523,12 @@ element                          | Effect
 ```
 
 */
-*
 p {
   font-size: 1.1em;
   line-height: 1.5; }
 
-strong, .lead, b, mark, samp {
-  font-family: "Frutiger Neue Bold", sans-serif, Arial, sans-serif;
+strong, .lead, b, mark, samp, dt {
+  font-family: "Frutiger Neue Bold", Arial, sans-serif;
   font-weight: normal; }
 
 .lead {
@@ -5504,7 +5537,7 @@ strong, .lead, b, mark, samp {
   font-size: 12px; }
 
 em, cite, i, dfn, q, var {
-  font-family: "Frutiger Neue Italic", sans-serif, Arial, sans-serif;
+  font-family: "Frutiger Neue Italic", Arial, sans-serif;
   font-style: normal; }
 
 /*doc
@@ -5545,18 +5578,6 @@ The font size, line length, and line spacing for the copy body have been selecte
 ```
 
 */
-a {
-  color: #006699;
-  line-height: 1.5; }
-  a:hover {
-    color: #dc0018;
-    text-decoration: none; }
-  p a {
-    line-height: 1;
-    text-decoration: underline; }
-  p a:hover {
-    text-decoration: underline; }
-
 abbr {
   border-bottom: 1px #aaa dotted;
   letter-spacing: .07em; }
@@ -5567,7 +5588,7 @@ pre, code {
   color: #800; }
 
 q q {
-  font-family: "Frutiger Neue Regular", sans-serif, Arial, sans-serif;
+  font-family: "Frutiger Neue Regular", Arial, sans-serif;
   font-style: normal; }
 
 ins {
@@ -5609,6 +5630,108 @@ blockquote {
 
 /*doc
 ---
+title: Lists
+name: e-lists
+category: Base Layout > Typography
+---
+
+Lists are used to structure contents and to provide the user with a quick overview of a topic.
+
+The following types of lists are used:
+
+Ordered and unordered lists
+Definition lists
+Link lists (with internal and external links, which can also be mixed)
+Anchor lists
+Download lists
+
+### Unordered lists
+
+```html_example
+<ul>
+  <li><a href="#">Lorem ipsum</a>
+    <ul>
+      <li><a href="#">Lorem ipsum</a></li>
+      <li>Lorem ipsum
+        <ul>
+          <li><a href="#">Lorem ipsum</a></li>
+          <li>Lorem ipsum</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Lorem ipsum</li>
+  <li>Lorem ipsum</li>
+</ul>
+```
+
+### Ordered lists
+
+```html_example
+<ol>
+  <li><a href="#">Lorem ipsum</a></li>
+  <li>Lorem ipsum</li>
+  <li>Lorem ipsum
+    <ol>
+      <li><a href="#">Lorem ipsum</a></li>
+    </ol>
+  </li>
+  <li>Lorem ipsum</li>
+</ol>
+```
+
+### Definition lists
+
+```html_example
+<dl>
+  <dt>Lorem ipsum</dt>
+  <dd>Lorem ipsum</dd>
+  <dt>Lorem ipsum</dt>
+  <dd>Lorem ipsum</dd>
+  <dd>Lorem ipsum</dd>
+</dl>
+```
+
+*/
+ul, ol, dl {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 1.5em 0 0 0;
+  padding: 0 0 0 0.8em; }
+
+ul {
+  list-style-type: square;
+  padding: 0 0 0 0.4em; }
+  ul ul {
+    margin-top: 0;
+    list-style-type: none; }
+
+li {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-left: 0.8em; }
+  li li {
+    font-size: 1em; }
+
+ol {
+  list-style-type: decimal; }
+  ol ol {
+    margin-top: 0; }
+
+dl {
+  margin: 1.5em 0 0 0;
+  padding: 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+dt, dd {
+  font-size: 1.1em; }
+  dt dt, dt dd, dd dt, dd dd {
+    font-size: 1em; }
+
+/*doc
+---
 title: Icons
 name: f-icons
 category: Base Layout > Visual
@@ -5620,6 +5743,7 @@ Use the global `.icon` class followed by the more specific class
 
 ```html_example
 <span class="icon icon--pdf"></span> My document
+<span class="icon icon--before icon--exclam">CONTENT</span>
 ```
 
 |  Icon                                                    |  Class                                       |
@@ -5656,7 +5780,7 @@ Use the global `.icon` class followed by the more specific class
 |  <span class="icon icon--excel"></span>                  |  <pre>icon icon--excel</pre>                 |
 |  <span class="icon icon--calendar"></span>               |  <pre>icon icon--calendar</pre>              |
 |  <span class="icon icon--rss"></span>                    |  <pre>icon icon--rss</pre>                   |
-|  <span class="icon icon--share"></span>                  |  <pre>icon icon--share</pre>                 |
+|  <span class="icon icon--external"></span>               |  <pre>icon icon--external</pre>              |
 |  <span class="icon icon--facebook"></span>               |  <pre>icon icon--facebook</pre>              |
 |  <span class="icon icon--twitter"></span>                |  <pre>icon icon--twitter</pre>               |
 |  <span class="icon icon--google"></span>                 |  <pre>icon icon--google</pre>                |
@@ -5678,10 +5802,18 @@ Use the global `.icon` class followed by the more specific class
 |  <span class="icon icon--close"></span>                  |  <pre>icon icon--close</pre>                 |
 
 */
-.icon {
-  font-family: "Admin Icons"; }
+.icon--after:after {
+  font-family: "Admin Icons";
+  padding-left: 3px; }
 
-.icon--exclam:after {
+.icon--before:before {
+  font-family: "Admin Icons";
+  padding-right: 3px; }
+
+.icon--before.icon--exclam:before {
+  content: '!'; }
+
+.icon--after.icon--exclam:after {
   content: '!'; }
 
 .icon--arrow-right:after {
@@ -5732,13 +5864,13 @@ Use the global `.icon` class followed by the more specific class
 .icon--eye:after {
   content: '?'; }
 
-.icon--pdf:after {
+.icon--before.icon--pdf:before {
   content: 'A'; }
 
 .icon--trash:after {
   content: 'B'; }
 
-.icon--cart:after {
+.icon--before.icon--cart:before {
   content: 'C'; }
 
 .icon--star:after {
@@ -5795,7 +5927,7 @@ Use the global `.icon` class followed by the more specific class
 .icon--forward:after {
   content: 'k'; }
 
-.icon--share:after {
+.icon--external:after {
   content: 'l'; }
 
 .icon--menu:after {
