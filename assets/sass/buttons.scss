@@ -1,0 +1,96 @@
+/*doc
+---
+title: Buttons
+name: a-buttons
+category: Base Layout > Forms
+---
+
+A differentiation is made between primary and secondary buttons. The primary button is used for the main action (e.g. send), which can also be activated via the Enter key. The secondary button is used for less important actions, such as “Cancel”.
+
+The standard button can be used for a variety of actions. Buttons can also be grouped in a button group. As with the radio button groups, only one element can be selected within such a group.
+
+Use the class `.btn` to create a styled button. You can use it on a `<input>`, `<button>` or `<a>` element. There are 4 button themes:
+
+Buttons                                                                       |  Markup
+------------------------------------------------------------------------------|-----------------------------------------------------------------
+<button type="button" class="btn">Unstyled</button><br>                       |  `<button type="button" class="btn">Unstyled</button>`
+<button type="button" class="btn btn-primary">Primary</button><br>            |  `<button type="button" class="btn btn-primary">Primary</button>`
+<button type="button" class="btn btn-secondary">Secondary</button><br>        |  `<button type="button" class="btn btn-secondary">Secondary</button>`
+<button type="button" class="btn" disabled>Disabled</button><br>              |  `<button type="button" class="btn" disabled>Disabled</button>`
+
+*/
+
+.btn {
+  padding: 0.3em 0.666666666em;
+  border: none;
+  border-radius: 3px;
+  line-height: 1.2;
+  margin: 0 0 0 0.8em;
+  background-color: $smoke;
+  border: 1px solid $empress;
+  &:hover {
+    background-color: $gainsboro;
+  }
+  &:focus, &:active {
+    outline: none !important;
+  }
+
+  &.btn-primary {
+    background-color: $cerulean;
+    border-color: $cerulean;
+    &:hover {
+      background-color: darken($cerulean, 15%);
+    }
+    &.active {
+      color: $white;
+      background-color: darken($cerulean, 15%);
+      box-shadow: none;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $empress;
+    color: $white;
+    &:hover {
+      background-color: $coal;
+    }
+    &.active {
+      color: $white;
+      background-color: $coal;
+      box-shadow: none;
+    }
+  }
+
+  &.active {
+    color: $venetian-red;
+    background-color: $white;
+    box-shadow: none;
+  }
+}
+
+a.btn {
+  color: inherit;
+}
+
+/*doc
+---
+title: Button groups
+name: b-buttongroups
+category: Base Layout > Forms
+---
+
+A differentiation is made between primary and secondary buttons. The primary button is used for the main action (e.g. send), which can also be activated via the Enter key. The secondary button is used for less important actions, such as “Cancel”.
+
+The standard button can be used for a variety of actions. Buttons can also be grouped in a button group. As with the radio button groups, only one element can be selected within such a group.
+
+Use the class `.btn` to create a styled button. You can use it on a `<input>`, `<button>` or `<a>` element. There are 4 button themes:
+
+```html_example
+<div class="btn-group">
+  <button type="button" class="btn">Left</button>
+  <button type="button" class="btn">Middle</button>
+  <button type="button" class="btn active">Right</button>
+</div>
+```
+
+*/
