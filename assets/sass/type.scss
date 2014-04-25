@@ -27,7 +27,7 @@ element                          | Effect
 ```
 
 */
-*
+
 p {
   font-size: 1.1em;
   line-height: 1.5;
@@ -88,22 +88,6 @@ The font size, line length, and line spacing for the copy body have been selecte
 ```
 
 */
-
- a {
-  color: $cerulean;
-  line-height: 1.5;
-  &:hover {
-    color: $venetian-red;
-    text-decoration: none;
-  }
-  p & {
-    line-height: 1;
-    text-decoration: underline;
-  }
-  p &:hover {
-    text-decoration: underline;
-  }
- }
 
  abbr {
   border-bottom: 1px #aaa dotted;
