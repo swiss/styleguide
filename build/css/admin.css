@@ -5415,13 +5415,16 @@ name: a-standard-table
 category: Base Layout > Tables
 ---
 
-The standard table consists of the table title `<caption>`, the table head `<thead>`, the table body `<tbody>`, and the table foot `<tfoot>`. The standard table can be extended to allow zebra striping and/or column or line formatting.
+The standard table consists of the table title `<caption>`, the table head `<thead>`, the table body `<tbody>`, and the table foot `<tfoot>`. 
+
+Add `.table-bordered` for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.
 
 ```html_example
-<table class="table table-bordered">
+<table class="table table-bordered text-right">
   <caption>Game animals shot in Switzerland</caption>
   <thead>
-    <tr class="text-right">
+    <tr>
+      <!-- In <thead> : td => $white / th => $smoke -->
       <td></td>
       <th>2000</th>
       <th>2010</th>
@@ -5431,37 +5434,132 @@ The standard table consists of the table title `<caption>`, the table head `<the
   </thead>
   <tbody>
     <tr>
-      <th>Boars</th>
+      <th class="text-left">Boars</th>
       <td>4'160</td>
       <td>7'647</td>
       <td>4'726</td>
       <td>10'650</td>
     </tr>
     <tr>
-      <th>Chamois</th>
+      <th class="text-left">Chamois</th>
       <td>16'625</td>
       <td>13'427</td>
       <td>13'413</td>
       <td>13'350</td>
     </tr>
     <tr>
-      <th>Fox</th>
+      <th class="text-left">Fox</th>
       <td>42'221</td>
       <td>31'044</td>
       <td>27'094</td>
       <td>35'616</td>
     </tr>
   </tbody>
+  <tfoot>
+    <tr>
+      <!-- In <tfoot> : td => $smoke / th => $white -->
+      <th></th>
+      <td>63'006</td>
+      <td>52'118</td>
+      <td>45'233</td>
+      <td>59'616</td>
+    </tr>
+  </tfoot>
 </table>
 ```
 
 */
 table {
   font-size: 1em; }
+  table caption {
+    font-family: "Frutiger Neue Bold", sans-serif, Arial, sans-serif;
+    text-align: left;
+    padding-bottom: 0.5em; }
+  table thead th, table tfoot td {
+    background: whitesmoke; }
+  table tbody td {
+    color: #333333; }
+  table th {
+    color: black; }
 
 .table-bordered thead tr td, .table-bordered thead tr th {
   border-bottom-width: 1px; }
 
+.text-right tr, .text-right td, .text-right th {
+  text-align: right; }
+
+tr.text-right, td.text-right, th.text-right {
+  text-align: right; }
+
+.text-center tr, .text-center td, .text-center th {
+  text-align: center; }
+
+tr.text-center, td.text-center, th.text-center {
+  text-align: center; }
+
+.text-left tr, .text-left td, .text-left th {
+  text-align: left; }
+
+tr.text-left, td.text-left, th.text-left {
+  text-align: left; }
+
+/*doc
+---
+title: Table with Zebra Striping
+name: b-zebra-table
+category: Base Layout > Tables
+---
+
+The zebra stripes are shown when the `table-striped` class is added to the `<table>`.
+
+```html_example
+<table class="table table-bordered text-right table-striped">
+  <caption>Game animals shot in Switzerland</caption>
+  <thead>
+    <tr>
+      <th></th>
+      <th>2000</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-left">Boars</th>
+      <td>4'160</td>
+      <td>7'647</td>
+      <td>4'726</td>
+      <td>10'650</td>
+    </tr>
+    <tr>
+      <th class="text-left">Chamois</th>
+      <td>16'625</td>
+      <td>13'427</td>
+      <td>13'413</td>
+      <td>13'350</td>
+    </tr>
+    <tr>
+      <th class="text-left">Fox</th>
+      <td>42'221</td>
+      <td>31'044</td>
+      <td>27'094</td>
+      <td>35'616</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td>63'006</td>
+      <td>52'118</td>
+      <td>45'233</td>
+      <td>59'616</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+*/
 /*doc
 ---
 title: Titles

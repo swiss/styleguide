@@ -88,6 +88,10 @@
               
                 <li><a href="#a-standard-table">Standard table</a></li>
               
+             
+              
+                <li><a href="#b-zebra-table">Table with Zebra Striping</a></li>
+              
             
           </ul>
         </nav>
@@ -97,11 +101,14 @@
 
 <h1 id="a-standard-table">Standard table</h1>
 
-<p>The standard table consists of the table title <code>&lt;caption&gt;</code>, the table head <code>&lt;thead&gt;</code>, the table body <code>&lt;tbody&gt;</code>, and the table foot <code>&lt;tfoot&gt;</code>. The standard table can be extended to allow zebra striping and/or column or line formatting.</p>
-<div class="codeExample"><div class="exampleOutput"><table class="table table-bordered">
+<p>The standard table consists of the table title <code>&lt;caption&gt;</code>, the table head <code>&lt;thead&gt;</code>, the table body <code>&lt;tbody&gt;</code>, and the table foot <code>&lt;tfoot&gt;</code>. </p>
+
+<p>Add <code>.table-bordered</code> for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.</p>
+<div class="codeExample"><div class="exampleOutput"><table class="table table-bordered text-right">
   <caption>Game animals shot in Switzerland</caption>
   <thead>
-    <tr class="text-right">
+    <tr>
+      <!-- In <thead> : td => $white / th => $smoke -->
       <td></td>
       <th>2000</th>
       <th>2010</th>
@@ -111,32 +118,43 @@
   </thead>
   <tbody>
     <tr>
-      <th>Boars</th>
+      <th class="text-left">Boars</th>
       <td>4'160</td>
       <td>7'647</td>
       <td>4'726</td>
       <td>10'650</td>
     </tr>
     <tr>
-      <th>Chamois</th>
+      <th class="text-left">Chamois</th>
       <td>16'625</td>
       <td>13'427</td>
       <td>13'413</td>
       <td>13'350</td>
     </tr>
     <tr>
-      <th>Fox</th>
+      <th class="text-left">Fox</th>
       <td>42'221</td>
       <td>31'044</td>
       <td>27'094</td>
       <td>35'616</td>
     </tr>
   </tbody>
+  <tfoot>
+    <tr>
+      <!-- In <tfoot> : td => $smoke / th => $white -->
+      <th></th>
+      <td>63'006</td>
+      <td>52'118</td>
+      <td>45'233</td>
+      <td>59'616</td>
+    </tr>
+  </tfoot>
 </table>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;table table-bordered&quot;</span><span class="nt">&gt;</span>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;table table-bordered text-right&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;caption&gt;</span>Game animals shot in Switzerland<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
-    <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">&quot;text-right&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="c">&lt;!-- In &lt;thead&gt; : td =&gt; $white / th =&gt; $smoke --&gt;</span>
       <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;th&gt;</span>2000<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th&gt;</span>2010<span class="nt">&lt;/th&gt;</span>
@@ -146,27 +164,129 @@
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Boars<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Boars<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;td&gt;</span>4&#39;160<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>7&#39;647<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>4&#39;726<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>10&#39;650<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Chamois<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Chamois<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;td&gt;</span>16&#39;625<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>13&#39;427<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>13&#39;413<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>13&#39;350<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;</span>Fox<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Fox<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;td&gt;</span>42&#39;221<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>31&#39;044<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>27&#39;094<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>35&#39;616<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;tfoot&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="c">&lt;!-- In &lt;tfoot&gt; : td =&gt; $smoke / th =&gt; $white --&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>63&#39;006<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>52&#39;118<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>45&#39;233<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>59&#39;616<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tfoot&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div></div></div>
+<h1 id="b-zebra-table">Table with Zebra Striping</h1>
+
+<p>The zebra stripes are shown when the <code>table-striped</code> class is added to the <code>&lt;table&gt;</code>.</p>
+<div class="codeExample"><div class="exampleOutput"><table class="table table-bordered text-right table-striped">
+  <caption>Game animals shot in Switzerland</caption>
+  <thead>
+    <tr>
+      <th></th>
+      <th>2000</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-left">Boars</th>
+      <td>4'160</td>
+      <td>7'647</td>
+      <td>4'726</td>
+      <td>10'650</td>
+    </tr>
+    <tr>
+      <th class="text-left">Chamois</th>
+      <td>16'625</td>
+      <td>13'427</td>
+      <td>13'413</td>
+      <td>13'350</td>
+    </tr>
+    <tr>
+      <th class="text-left">Fox</th>
+      <td>42'221</td>
+      <td>31'044</td>
+      <td>27'094</td>
+      <td>35'616</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td>63'006</td>
+      <td>52'118</td>
+      <td>45'233</td>
+      <td>59'616</td>
+    </tr>
+  </tfoot>
+</table>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;table table-bordered text-right table-striped&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>Game animals shot in Switzerland<span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>2000<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>2010<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>2011<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>2012<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Boars<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>4&#39;160<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>7&#39;647<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>4&#39;726<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>10&#39;650<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Chamois<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16&#39;625<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>13&#39;427<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>13&#39;413<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>13&#39;350<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Fox<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>42&#39;221<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>31&#39;044<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>27&#39;094<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>35&#39;616<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;tfoot&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>63&#39;006<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>52&#39;118<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>45&#39;233<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>59&#39;616<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tfoot&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
 </pre></div></div></div>      </div>
     </div>
