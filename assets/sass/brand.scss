@@ -44,4 +44,11 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
     float: left;
   }
   &:hover {text-decoration: none;}
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
 }
