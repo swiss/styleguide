@@ -1,4 +1,12 @@
-.main-nav {
+nav {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {display: inline;}
+}
+
+.nav-main {
   min-height: 70px;
   background: #e4e4e4; /* Old browsers */
   background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
@@ -8,4 +16,45 @@
   background: -ms-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* IE10+ */
   background: linear-gradient(to bottom, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 ); /* IE6-9 */
+}
+
+/*doc
+---
+title: Service Navigation
+name: b-servie-navigation
+category: Page element > Header
+---
+
+The service navigation is positioned at the top right of the header next to the language selection. It contains links that are of overriding importance (e.g. Contact, Jobs, Media and Contact). Ideally, there should be three, but in no case should there be more than five links in the service navigation.
+
+On mobile devices the links in the service navigation are moved to the footer.
+
+```html_example
+<div class="container-fluide">
+
+  <header>
+    <nav class="nav-service">
+      <ul>
+        <li><a href="#">Emergencies</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+```
+
+*/
+
+.nav-service {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  a {
+    font-size: 0.85em;
+    color: $coal;
+  }
 }

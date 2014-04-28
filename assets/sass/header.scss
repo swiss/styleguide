@@ -1,7 +1,7 @@
 /*doc
 ---
 title: Logo with Link to Home Page
-name: header-logo
+name: a-header-logo
 category: Page element > Header
 ---
 
@@ -16,7 +16,7 @@ The Confederation logo with the coat of arms and the four-language wordmark as w
       <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
     </a>
   </header>
-  <nav class="main-nav"></nav>
+  <nav class="nav-main"></nav>
 
 </div>
 ```
@@ -34,4 +34,5 @@ header {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F5F5F5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
   padding: 60px 20px 35px 20px;
   border-bottom: 5px solid $venetian-red;
+  position: relative;
 }
