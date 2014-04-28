@@ -67,7 +67,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('hologram', function () {
   gulp.src('./build')
-    .pipe(shell('hologram'));
+    .pipe(shell('LC_ALL="en_US.UTF-8" hologram'));
 });
 
 gulp.task('build', function() {
