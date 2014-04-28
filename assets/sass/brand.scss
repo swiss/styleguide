@@ -25,6 +25,7 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 */
 
 .brand {
+  display: inline-block;
   img {
     max-width: 235px;
     margin: 0;
@@ -51,4 +52,5 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
     clear: both;
     visibility: hidden;
   }
+  header & {margin-top: 40px;}
 }

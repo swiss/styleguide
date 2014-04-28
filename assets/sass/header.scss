@@ -32,7 +32,14 @@ header {
   background: -ms-linear-gradient(top, $smoke 0%,$white 7%,$white 100%); /* IE10+ */
   background: linear-gradient(to bottom, $smoke 0%,$white 7%,$white 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F5F5F5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-  padding: 60px 20px 35px 20px;
+  padding: 20px 20px 35px 20px;
   border-bottom: 5px solid $venetian-red;
   position: relative;
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
 }
