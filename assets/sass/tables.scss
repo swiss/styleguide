@@ -159,4 +159,74 @@ The zebra stripes are shown when the `table-striped` class is added to the `<tab
 
 */
 
+/*doc
+---
+title: Table with Highlighting
+name: c-highlight-table
+category: Base Layout > Tables
+---
+
+This table is based on the standard table but with `active` class on cells or on row.
+
+```html_example
+<table class="table table-bordered text-right">
+  <caption>Game animals shot in Switzerland</caption>
+  <thead>
+    <tr>
+      <!-- In <thead> : td => $white / th => $smoke -->
+      <td></td>
+      <th>2000</th>
+      <th>2010</th>
+      <th class="active">2011</th>
+      <th>2012</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-left">Boars</th>
+      <td>4'160</td>
+      <td>7'647</td>
+      <td class="active">4'726</td>
+      <td>10'650</td>
+    </tr>
+    <tr>
+      <th class="text-left">Chamois</th>
+      <td>16'625</td>
+      <td>13'427</td>
+      <td class="active">13'413</td>
+      <td>13'350</td>
+    </tr>
+    <tr class="active">
+      <th class="text-left">Fox</th>
+      <td>42'221</td>
+      <td>31'044</td>
+      <td class="active">27'094</td>
+      <td>35'616</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <!-- In <tfoot> : td => $smoke / th => $white -->
+      <th></th>
+      <td>63'006</td>
+      <td>52'118</td>
+      <td class="active">45'233</td>
+      <td>59'616</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+*/
+
+tr.active {
+  th {background: $solitude !important;}
+  tbody & th {background: $clear-day !important;}
+  td {background: $clear-day !important;}
+}
+
+th.active {background: $solitude !important;}
+tbody th.active {background: $clear-day !important;}
+td.active {background: $clear-day !important;}
+tfoot td.active {background: $solitude !important;}
 
