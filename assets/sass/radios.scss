@@ -1,0 +1,52 @@
+/*doc
+---
+title: Radios
+name: c-radios
+category: Base Layout > Forms
+---
+
+Radio buttons allow the user to make an unequivocal choice from a predefined list. Radio buttons can also be structured in groups. Only one element in a group may be selected.
+
+```html_example
+<div class="radio radio--left">
+  <input type="radio" name ="radios" id="radio" value="radio1" checked>
+  <label for="radio">Option 1</label>
+</div>
+
+<div class="radio radio--left">
+  <input type="radio" name ="radios" id="radio2" value="radio2">
+  <label for="radio2">Option 2</label>
+</div>
+```
+
+*/
+
+.radio {
+  @extend .checkbox;
+}
+
+.radio--left {
+  input {
+    &:focus + label:before {background-position: 0 -315px;}
+    &:checked + label:before {background-position: 0 -225px;}
+    &:checked:focus + label:before {background-position: 0 -180px;}
+    &:disabled + label:before {background-position: 0 -405px;}
+    &:checked:disabled + label:before {background-position: 0 -495px;}
+  }
+  label:before {
+    @include form-button(radio, left);
+  }
+}
+
+.radio--right {
+  input {
+    &:focus + label:after {background-position: 0 -315px;}
+    &:checked + label:after {background-position: 0 -225px;}
+    &:checked:focus + label:after {background-position: 0 -180px;}
+    &:disabled + label:after {background-position: 0 -405px;}
+    &:checked:disabled + label:after {background-position: 0 -495px;}
+  }
+  label:after {
+    @include form-button(radio, right);
+  }
+}
