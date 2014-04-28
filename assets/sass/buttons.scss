@@ -21,15 +21,16 @@ Buttons                                                                       | 
 */
 
 .btn {
-  padding: 0.3em 0.666666666em;
-  border: none;
+  padding: 0.45em 0.9em;
   border-radius: 3px;
   line-height: 1.2;
   margin: 0 0 0 0.8em;
   background-color: $smoke;
   border: 1px solid $empress;
   &:hover {
-    background-color: $gainsboro;
+    border-color: $venetian-red;
+    color: $empress;
+    z-index: 100;
   }
   &:focus, &:active {
     outline: none !important;
@@ -39,7 +40,8 @@ Buttons                                                                       | 
     background-color: $cerulean;
     border-color: $cerulean;
     &:hover {
-      background-color: darken($cerulean, 15%);
+      color: $white;
+      border-color: $venetian-red;
     }
     &.active {
       color: $white;
@@ -51,9 +53,6 @@ Buttons                                                                       | 
   &.btn-secondary {
     background-color: $empress;
     color: $white;
-    &:hover {
-      background-color: $coal;
-    }
     &.active {
       color: $white;
       background-color: $coal;
@@ -70,6 +69,11 @@ Buttons                                                                       | 
 
 a.btn {
   color: inherit;
+}
+
+//
+.btn-group>.btn:hover {
+  z-index: 3;
 }
 
 /*doc
@@ -89,7 +93,9 @@ Use the class `.btn` to create a styled button. You can use it on a `<input>`, `
 <div class="btn-group">
   <button type="button" class="btn">Left</button>
   <button type="button" class="btn">Middle</button>
-  <button type="button" class="btn active">Right</button>
+  <button type="button" class="btn active">Middle</button>
+  <button type="button" class="btn">Middle</button>
+  <button type="button" class="btn">Right</button>
 </div>
 ```
 
