@@ -28,7 +28,8 @@ gulp.task('scripts', function() {
 // JS vendors concat and minify
 gulp.task('js_vendors', function() {
   gulp.src([
-      ''
+      './bower_components/jquery/jquery.js',
+      './bower_components/jquery.tablesorter/js/jquery.tablesorter.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
@@ -79,7 +80,7 @@ gulp.task('buildFonts', function() {
           .pipe(gulp.dest('build/fonts'));
 });
 
-gulp.task('default', ['styles', 'watch', 'browser-sync', 'build']);
+gulp.task('default', ['styles', 'watch', 'browser-sync', 'build', 'js_vendors']);
 
 gulp.task('watch', function() {
   gulp.watch('./assets/sass/*.scss', ['styles']);
