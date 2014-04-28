@@ -110,6 +110,18 @@
               
                 <li><a href="#d-sortable-table">Sortable table</a></li>
               
+             
+              
+                <li><a href="#e-expandable-table">Table with Expandable Rows</a></li>
+              
+             
+              
+                <li><a href="#f-ruled-table">Ruled Table</a></li>
+              
+             
+              
+                <li><a href="#g-unruled-table">Unruled Table</a></li>
+              
             
           </ul>
         </nav>
@@ -490,6 +502,106 @@
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tfoot&gt;</span>
 <span class="nt">&lt;/table&gt;</span>
+</pre></div></div></div>
+<h1 id="e-expandable-table">Table with Expandable Rows</h1>
+
+<p>Some tables can be expanded to show details of a data set</p>
+
+<p><strong>@TODO : Add functionnal example !</strong></p>
+
+<h1 id="f-ruled-table">Ruled Table</h1>
+
+<p>Ruled tables are particularly suitable for presenting simple 1:1 relationships. The ruled format is set by adding the <code>table-simple</code> to the table tag.</p>
+<div class="codeExample"><div class="exampleOutput"><table class="table table-simple">
+  <caption>Contact</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hans Muster</td>
+      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+    </tr>
+    <tr>
+      <td>Hans Muster</td>
+      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+    </tr>
+    <tr>
+      <td>Hans Muster</td>
+      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+    </tr>
+  </tbody>
+</table>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;table table-simple&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>Contact<span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>Name<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>E-mail<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Hans Muster<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;mailto:hans.muster@mail.com&quot;</span><span class="nt">&gt;</span>hans.muster@mail.com<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Hans Muster<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;mailto:hans.muster@mail.com&quot;</span><span class="nt">&gt;</span>hans.muster@mail.com<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;</span>Hans Muster<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;mailto:hans.muster@mail.com&quot;</span><span class="nt">&gt;</span>hans.muster@mail.com<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div></div></div>
+<h1 id="g-unruled-table">Unruled Table</h1>
+
+<p>Unruled tables are suitable for presenting properties, e.g. of a publication. A simple unruled table is formatted with the class <code>table-naked</code>.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="container-fluide">
+  <div class="row">
+    <div class="col-sm-5">
+
+      <table class="table table-naked">
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <td>Hans Muster</td>
+          </tr>
+          <tr>
+            <th>E-mail</th>
+            <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluide&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-5&quot;</span><span class="nt">&gt;</span>
+
+      <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;table table-naked&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;tbody&gt;</span>
+          <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Name<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Hans Muster<span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;/tr&gt;</span>
+          <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;th&gt;</span>E-mail<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;mailto:hans.muster@mail.com&quot;</span><span class="nt">&gt;</span>hans.muster@mail.com<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+          <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/tbody&gt;</span>
+      <span class="nt">&lt;/table&gt;</span>
+
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>

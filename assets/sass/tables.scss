@@ -60,22 +60,22 @@ Add `.table-bordered` for borders on all sides of the table and cells. The stand
 
 */
 
+table caption {
+  font-family: $font-family-sans-serif-bold;
+  text-align: left;
+  padding-bottom: 0.5em;
+}
 
-table {
+table.table-bordered {
   font-size: 1em;
-  caption {
-    font-family: $font-family-sans-serif-bold;
-    text-align: left;
-    padding-bottom: 0.5em;
-  }
   thead th, tfoot td {background: $smoke;}
   tbody td {color: $night-rider;}
   th {color: $black;}
 }
 
-.table-bordered thead tr {
+table.table thead tr {
   td, th {
-    border-bottom-width: 1px;
+    border-bottom-width: 1px !important;
   }
 }
 
@@ -297,4 +297,118 @@ The sortable table automatically formats the column in which the data has been s
 .tablesorter thead th.headerSortUp a:after {
   content: "v";
 }
+
+
+/*doc
+---
+title: Table with Expandable Rows
+name: e-expandable-table
+category: Base Layout > Tables
+---
+
+Some tables can be expanded to show details of a data set
+
+**@TODO : Add functionnal example !**
+
+*/
+
+
+/*doc
+---
+title: Ruled Table
+name: f-ruled-table
+category: Base Layout > Tables
+---
+
+Ruled tables are particularly suitable for presenting simple 1:1 relationships. The ruled format is set by adding the `table-simple` to the table tag.
+
+```html_example
+<table class="table table-simple">
+  <caption>Contact</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hans Muster</td>
+      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+    </tr>
+    <tr>
+      <td>Hans Muster</td>
+      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+    </tr>
+    <tr>
+      <td>Hans Muster</td>
+      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
+
+.table-simple thead tr {
+  th, td {border: none;}
+}
+
+.table-simple {
+  border-collapse: separate;
+  border-spacing: 10px 0px;
+  caption {
+    padding-left: 10px;
+  }
+  tbody tr th, tbody tr td, thead tr td, thead tr th {
+    padding-left: 0;
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+
+/*doc
+---
+title: Unruled Table
+name: g-unruled-table
+category: Base Layout > Tables
+---
+
+Unruled tables are suitable for presenting properties, e.g. of a publication. A simple unruled table is formatted with the class `table-naked`.
+
+```html_example
+<div class="container-fluide">
+  <div class="row">
+    <div class="col-sm-5">
+
+      <table class="table table-naked">
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <td>Hans Muster</td>
+          </tr>
+          <tr>
+            <th>E-mail</th>
+            <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+```
+
+*/
+
+.table-naked {
+  border-collapse: separate;
+  border-spacing: 10px 0px;
+  tbody tr th, tbody tr td, thead tr td, thead tr th {
+    padding-left: 0;
+    border: none;
+  }
+}
+
 
