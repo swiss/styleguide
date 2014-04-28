@@ -173,7 +173,6 @@ This table is based on the standard table but with `active` class on cells or on
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr>
-      <!-- In <thead> : td => $white / th => $smoke -->
       <td></td>
       <th>2000</th>
       <th>2010</th>
@@ -206,7 +205,6 @@ This table is based on the standard table but with `active` class on cells or on
   </tbody>
   <tfoot>
     <tr>
-      <!-- In <tfoot> : td => $smoke / th => $white -->
       <th></th>
       <td>63'006</td>
       <td>52'118</td>
@@ -231,4 +229,72 @@ td.active {background: $clear-day !important;}
 tfoot td.active {background: $solitude !important;}
 
 
+/*doc
+---
+title: Sortable table
+name: d-sortable-table
+category: Base Layout > Tables
+---
+
+The sortable table automatically formats the column in which the data has been sorted. You just have to use the `tablesorter` class
+
+```html_example
+<table class="table table-bordered tablesorter text-right">
+  <caption>Game animals shot in Switzerland</caption>
+  <thead>
+    <tr>
+      <td></td>
+      <th><a href="#">2000</a></th>
+      <th><a href="#">2010</a></th>
+      <th><a href="#">2011</a></th>
+      <th><a href="#">2012</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-left">Boars</th>
+      <td>4'160</td>
+      <td>7'647</td>
+      <td>4'726</td>
+      <td>10'650</td>
+    </tr>
+    <tr>
+      <th class="text-left">Chamois</th>
+      <td>16'625</td>
+      <td>13'427</td>
+      <td>13'413</td>
+      <td>13'350</td>
+    </tr>
+    <tr>
+      <th class="text-left">Fox</th>
+      <td>42'221</td>
+      <td>31'044</td>
+      <td>27'094</td>
+      <td>35'616</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th></th>
+      <td>63'006</td>
+      <td>52'118</td>
+      <td>45'233</td>
+      <td>59'616</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+*/
+
+.tablesorter thead th a:after {
+  content: "\5E";
+  margin-left: .4em;
+  color: $empress;
+  font-family: $admin-icons;
+}
+
+.tablesorter thead th.headerSortUp a:after {
+  content: "v";
+}
 
