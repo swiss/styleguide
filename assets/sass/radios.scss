@@ -13,7 +13,7 @@ Radio buttons allow the user to make an unequivocal choice from a predefined lis
   <label for="radio">Option 1</label>
 </div>
 
-<div class="radio radio--left">
+<div class="radio radio--right">
   <input type="radio" name ="radios" id="radio2" value="radio2">
   <label for="radio2">Option 2</label>
 </div>
@@ -46,7 +46,11 @@ Radio buttons allow the user to make an unequivocal choice from a predefined lis
     &:disabled + label:after {background-position: 0 -405px;}
     &:checked:disabled + label:after {background-position: 0 -495px;}
   }
-  label:after {
-    @include form-button(radio, right);
+  label {
+    padding-right: 20px;
+    padding-left: 0;
+    &:after {
+      @include form-button(radio, right);
+    }
   }
 }
