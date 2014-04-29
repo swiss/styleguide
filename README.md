@@ -17,18 +17,18 @@ The design specifications described for use on the Internet or in intranets can 
 
 ## Styleguide
 
-The styleguide is located in the `/styleguide` directory. Use it locally and everything should work!
+The styleguide is located in the `/styleguide` directory. You can open `/styleguide/index.html` directly in your browser.
 
-## Usage
+## How to use it in your project
 
 There are several ways to get started:
 
-  - Download the [latest release](https://github.com/antistatique/Swiss-Admin-web-guidelines/archive/master.zip) and use the `/build` directory
+  - Use the provided build. Download the [latest release](https://github.com/antistatique/Swiss-Admin-web-guidelines/archive/master.zip) and include `/build` directory in your project.
   - Clone the repo `git clone https://github.com/antistatique/Swiss-Admin-web-guidelines.git`
   - Install with bower `bower install Swiss-Admin-web-guidelines` (soon)
-  
 
-## Installation
+
+## Installation (to contribute)
 
   > We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [Hologram](https://github.com/trulia/hologram).
   

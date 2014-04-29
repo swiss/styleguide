@@ -62,8 +62,28 @@ On mobile devices the links in the service navigation are moved to the footer.
 
 /*doc
 ---
+title: Language Selection via a Dropdown List
+name: c-lang-select
+category: Page element > Header
+---
+
+The language selection can be presented in the form of a space-saving dropdown menu. The two-digit abbreviations as per ISO 639-2/3 are used for this purpose (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, etc.). If the selected is changed, the content of the current web page is also altered. The following rules apply:
+
+* The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian.
+* Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.
+
+On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
+
+```html_example
+<strong>@TODO : Add example</strong>
+```
+
+*/
+
+/*doc
+---
 title: Language Selection via a Link List
-name: c-lang-navigation-list
+name: d-lang-navigation-list
 category: Page element > Header
 ---
 

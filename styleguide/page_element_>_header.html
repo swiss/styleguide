@@ -160,7 +160,15 @@
               
              
               
-                <li><a href="#c-lang-navigation-list">Language Selection via a Link List</a></li>
+                <li><a href="#c-lang-select">Language Selection via a Dropdown List</a></li>
+              
+             
+              
+                <li><a href="#d-lang-navigation-list">Language Selection via a Link List</a></li>
+              
+             
+              
+                <li><a href="#z-treecrumb-federal-administration">Treecrumb Federal Administration</a></li>
               
             
           </ul>
@@ -231,7 +239,20 @@
 
 <span class="nt">&lt;/div&gt;</span>
 </pre></div></div></div>
-<h1 id="c-lang-navigation-list">Language Selection via a Link List</h1>
+<h1 id="c-lang-select">Language Selection via a Dropdown List</h1>
+
+<p>The language selection can be presented in the form of a space-saving dropdown menu. The two-digit abbreviations as per ISO 639-2/3 are used for this purpose (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, etc.). If the selected is changed, the content of the current web page is also altered. The following rules apply:</p>
+
+<ul>
+<li>The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian.</li>
+<li>Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.</li>
+</ul>
+
+<p>On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.</p>
+<div class="codeExample"><div class="exampleOutput"><strong>@TODO : Add example</strong>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;strong&gt;</span>@TODO : Add example<span class="nt">&lt;/strong&gt;</span>
+</pre></div></div></div>
+<h1 id="d-lang-navigation-list">Language Selection via a Link List</h1>
 
 <p>The languages available are shown as links at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.). The following rules apply:</p>
 
@@ -293,6 +314,38 @@ Romansh and English are only shown if the content is available in these language
   <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
 
 <span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="z-treecrumb-federal-administration">Treecrumb Federal Administration</h1>
+
+<p>The treecrumb navigation shows the position of the current website within the context of all the websites of the Federal Administration. It also serves as an efficient means of accessing information across departments.</p>
+
+<p>When closed, the treecrumb navigation presents the hierarchical organization of the Federal Administration as a path. When a hierarchical level is clicked on, a menu opens with a collection of links pertinent to the selected hierarchical level.</p>
+
+<p>On smartphones, the treecrumb navigation is omitted.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="container-fluide">
+
+  <header>
+    <ol class="breadcrumb">
+      <li><a href="#">Federal Administration</a></li>
+      <li><a href="#">Department: EDI</a></li>
+    </ol>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+<b>@TODO : Finish it with js !</b>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluide&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">&quot;breadcrumb&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Federal Administration<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Department: EDI<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;b&gt;</span>@TODO : Finish it with js !<span class="nt">&lt;/b&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>

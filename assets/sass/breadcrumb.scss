@@ -1,0 +1,36 @@
+/*doc
+---
+title: Treecrumb Federal Administration
+name: z-treecrumb-federal-administration
+category: Page element > Header
+---
+
+The treecrumb navigation shows the position of the current website within the context of all the websites of the Federal Administration. It also serves as an efficient means of accessing information across departments.
+
+When closed, the treecrumb navigation presents the hierarchical organization of the Federal Administration as a path. When a hierarchical level is clicked on, a menu opens with a collection of links pertinent to the selected hierarchical level.
+
+On smartphones, the treecrumb navigation is omitted.
+
+```html_example
+<div class="container-fluide">
+
+  <header>
+    <ol class="breadcrumb">
+      <li><a href="#">Federal Administration</a></li>
+      <li><a href="#">Department: EDI</a></li>
+    </ol>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+<b>@TODO : Finish it with js !</b>
+```
+
+*/
+
+.breadcrumb {
+  a {
+    color: $coal;
+    font-size: 0.85em
+  }
+}
