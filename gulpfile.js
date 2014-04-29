@@ -7,7 +7,6 @@
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  **/
-
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     notify = require('gulp-notify'),

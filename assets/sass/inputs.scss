@@ -1,0 +1,134 @@
+/*doc
+---
+title: Inputs
+name: f-inputs
+category: Base Layout > Forms
+---
+
+Input boxes allow the user to input content (e.g. name).
+For inputting dates, an HTML5 solution is available. With browsers that do not support HTML5 the date has to be input manually.
+The following has to be taken into account for barrier-free accessibility:
+The name of the form and the form box must be linked to a label. A label ID may only appear once on a page. Required fields must have sensible names or, preferably, use WAI.
+
+You can use the `.has-error`, `.has-warning` or `.has-success` classes to make the form easier to fill for the user.
+
+```html_example
+<form class="form-horizontal" role="form">
+
+    <div class="form-group">
+      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+    </div>
+
+    <div class="form-group has-warning">
+      <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        <span class="help-block">Warning, this is not a correct info!</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputURL" class="col-sm-2 control-label">Website</label>
+      <div class="col-sm-10">
+        <input type="url" class="form-control" id="inputURL" placeholder="URL">
+        <span class="help-block">Use format "http://www.example.com"</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputURL" class="col-sm-2 control-label">Website</label>
+      <div class="col-sm-10">
+        <input type="file" class="form-control" id="inputURL" placeholder="URL">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox checkbox--left">
+          <input id="checkboxform" type="checkbox">
+          <label for="checkboxform">Remember me</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Sign in</button>
+      </div>
+    </div>
+
+</form>
+```
+
+*/
+
+legend {
+  font-size: 1.1em;
+}
+
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-control {
+  border: 1px solid $empress;
+  &:hover {
+    border-color: $venetian-red;
+  }
+  &:focus {
+    border-color: $venetian-red !important;
+    box-shadow: none !important;
+  }
+}
+
+label {
+  font-weight: normal;
+}
+
+.help-block {
+  font-size: 0.9em;
+  color: $coal;
+}
+
+.has-warning {
+  background: $state-warning-bg;
+  padding: 6px 0;
+  .control-label {
+    color: $coal;
+  }
+  .form-control {
+    border-color: $coal;
+    @extend .form-control;
+  }
+  .help-block {
+    color: $venetian-red;
+  }
+}
+
+.has-success {
+  background: $state-success-bg;
+  padding: 6px 0;
+  .control-label {
+    color: $coal;
+  }
+  .form-control {
+    border-color: $coal;
+    @extend .form-control;
+  }
+}
+
+.has-error {
+  background: $state-danger-bg;
+  padding: 6px 0;
+  .control-label {
+    color: $coal;
+  }
+  .form-control {
+    border-color: $coal;
+    @extend .form-control;
+  }
+}
