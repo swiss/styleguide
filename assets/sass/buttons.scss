@@ -20,6 +20,10 @@ Buttons                                                                       | 
 <button type="button" class="btn btn-secondary">Secondary</button><br>        |  `<button type="button" class="btn btn-secondary">Secondary</button>`
 <button type="button" class="btn" disabled>Disabled</button><br>              |  `<button type="button" class="btn" disabled>Disabled</button>`
 
+## Print button
+
+<button type="button" class="btn btn-link"><span class="icon icon--print"></span></button> `<button type="button" class="btn btn-link"><span class="icon icon--print"></span></button>`
+
 */
 
 .btn {
@@ -29,6 +33,7 @@ Buttons                                                                       | 
   margin: 0 0 0 0.8em;
   background-color: $smoke;
   border: 1px solid $empress;
+  float: right;
   &:hover {
     border-color: $venetian-red;
     color: $empress;
@@ -67,13 +72,23 @@ Buttons                                                                       | 
     background-color: $white;
     box-shadow: none;
   }
+
+  &.btn-link {
+    border: none;
+    background-color: transparent;
+    float: none;
+    &:hover {
+      color: $venetian-red;
+      text-decoration: none;
+    }
+  }
 }
 
 a.btn {
   color: inherit;
 }
 
-//
+// Fix bootstrap
 .btn-group>.btn:hover {
   z-index: 3;
 }

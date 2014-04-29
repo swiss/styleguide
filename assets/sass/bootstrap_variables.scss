@@ -22,7 +22,7 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 $brand-primary:         $cerulean !default;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
+$brand-warning:         $mocassin !default;
 $brand-danger:          #d9534f !default;
 
 
@@ -490,7 +490,7 @@ $state-info-bg:                  #d9edf7 !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
 $state-warning-text:             #8a6d3b !default;
-$state-warning-bg:               #fcf8e3 !default;
+$state-warning-bg:               $brand-warning !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
 $state-danger-text:              #a94442 !default;
@@ -617,7 +617,7 @@ $alert-info-bg:               $state-info-bg !default;
 $alert-info-text:             $state-info-text !default;
 $alert-info-border:           $state-info-border !default;
 
-$alert-warning-bg:            $state-warning-bg !default;
+$alert-warning-bg:            $brand-warning !default;
 $alert-warning-text:          $state-warning-text !default;
 $alert-warning-border:        $state-warning-border !default;
 
