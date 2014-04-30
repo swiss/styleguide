@@ -31,7 +31,7 @@ body {
   background: $white;
 }
 
-body:after {
+body.overlay:after {
   content: ' ';
   display: block;
   position: fixed;

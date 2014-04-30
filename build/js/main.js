@@ -42,9 +42,9 @@
   });
 
   // Disable dropdown-menu closing click
-  $yamm.find($dropddownMenu).click(function(e) {
-      e.stopPropagation();
-  });
+  $(document).on('click', '.yamm .dropdown-menu', function(e) {
+    e.stopPropagation()
+  })
 
   // Trigger close yamm menu
   $yamm.each(function () {

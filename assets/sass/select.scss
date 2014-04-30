@@ -60,7 +60,17 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
             <li>
               <div class="yamm-content container-fluide">
                 <a href="#" class="yamm-close icon icon--after icon--close">Close</a>
-                <img src="http://lorempixel.com/400/200/sports" alt="">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="home">tab 1</div>
+                  <div class="tab-pane" id="profile">tab 2</div>
+                </div>
               </div>
             </li>
           </ul>
@@ -88,10 +98,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 */
 
 .yamm--select {
-  display: block;
-  min-height: 0;
   &.pull-right .dropdown-menu {right: 0;}
-  .dropdown {margin-left: 0;}
   .dropdown-toggle {
     color: $coal;
     padding: 0 10px;
@@ -125,21 +132,6 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     position: relative;
     z-index: 1000;
   }
-  .dropdown-menu {
-    width: 100%;
-    border-radius: 0;
-    border: none;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    top: 80%
-  }
-}
-
-.yamm-close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  &:after {
-    font-size: 11px;
-  }
+  .dropdown-menu {top: 80%}
 }
 

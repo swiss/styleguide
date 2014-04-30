@@ -1,0 +1,32 @@
+/* ==========================================================
+ * mega-menu.scss
+ * Description
+ * 
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-30 15:34:07
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+ 
+.yamm {
+  display: block;
+  min-height: 0;
+  .yamm-content {padding: 15px 20px;}
+  .dropdown {margin-left: 0;}
+  .dropdown-menu {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.yamm-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  &:after {
+    font-size: 11px;
+  }
+}
