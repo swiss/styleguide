@@ -58,7 +58,6 @@
 
   });
 }) (jQuery_no_conflict);
-/*global  jQuery */
 
 (function($) {
   $(document).ready(function() {

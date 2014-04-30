@@ -9,7 +9,7 @@
  * Licensed under MIT
  * 
  * Last Modified by:   Yann Gouffon
- * Last Modified time: 2014-04-30 10:29:41
+ * Last Modified time: 2014-04-30 13:57:33
  =========================================================== */
  
  @charset "UTF-8";
@@ -32,4 +32,16 @@ The background color is a light shade of gray.
 
 body {
   background: $white;
+}
+
+body.overlay:after {
+  content: ' ';
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('../img/overlay.png') repeat;
+  z-index: 999;
 }

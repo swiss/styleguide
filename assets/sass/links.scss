@@ -9,7 +9,7 @@
  * Licensed under MIT
  * 
  * Last Modified by:   Yann Gouffon
- * Last Modified time: 2014-04-30 10:29:32
+ * Last Modified time: 2014-04-30 11:31:10
  =========================================================== */
  
  @charset "UTF-8";
@@ -48,6 +48,7 @@ a {
    color: $venetian-red;
    text-decoration: none;
  }
+ &:active, &:visited {text-decoration: none;}
  p & {
    line-height: 1;
    text-decoration: underline;
