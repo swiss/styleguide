@@ -18,7 +18,8 @@
     "bootstrap-sass-official": "~3.1.1",
     "cortana-swiss-admin": "1.1.*",
     "jquery.tablesorter": "2.16.2",
-    "yamm3": "1.0.*"
+    "yamm3": "1.0.*",
+    "chosen_v1.1.0": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip"
   },
   "devDependencies": {}
 }
