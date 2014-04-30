@@ -7,9 +7,6 @@
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
- * 
- * Last Modified by:   Yann Gouffon
- * Last Modified time: 2014-04-30 10:32:37
  =========================================================== */
  
  @charset "UTF-8";
@@ -72,7 +69,7 @@
 @import 'admin-mixins';
 
 // import Bootstrap SASS
-@import 'bootstrap_variables';
+@import 'bootstrap-variables';
 @import 'bootstrap';
 
 // Import all SASS files used in the project
@@ -92,12 +89,15 @@
 @import 'icons';
 
 // Forms
+@import 'forms';
 @import 'buttons';
 @import 'checkboxes';
 @import 'radios';
 @import 'select';
-@import 'inputs';
 @import 'fieldsets';
 
 // Widgets
 @import 'alerts';
+
+// Plugins
+@import 'chosen-theme';

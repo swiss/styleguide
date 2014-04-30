@@ -7,9 +7,6 @@
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
- * 
- * Last Modified by:   Yann Gouffon
- * Last Modified time: 2014-04-30 14:42:39
  =========================================================== */
 
 (function($) {

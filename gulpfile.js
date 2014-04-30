@@ -8,8 +8,8 @@
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  *
- * Last Modified by:   Yann Gouffon
- * Last Modified time: 2014-04-30 10:55:42
+ * Last Modified by:   Toni Fisler
+ * Last Modified time: 2014-04-30 14:33:12
  ========================================================== */
 
  var gulp = require('gulp'),
@@ -44,6 +44,7 @@ gulp.task('js-vendors', function() {
   gulp.src([
       './bower_components/jquery/jquery.js',
       './bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
+      './bower_components/chosen_v1.1.0/chosen.jquery.min.js',
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js'
     ])
     .pipe(concat('vendors.min.js'))
