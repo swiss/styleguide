@@ -632,7 +632,17 @@
     </div>
   </div>
 
+  <!-- Styleguide JS -->
   <script src="build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+      // avoid conflict with potential other jQuery loaded on the styleguide
+      var jQuery_no_conflict = $.noConflict(true);
+  </script>
   <script src="build/js/main.js"></script>
+
+  <!-- Source JS -->
+  <script src="js/vendors.min.js"></script>
+  <script src="js/main.min.js"></script>
+
 </body>
 </html>
