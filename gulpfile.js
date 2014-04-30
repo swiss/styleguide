@@ -9,7 +9,7 @@
  * Licensed under MIT
  *
  * Last Modified by:   Toni Fisler
- * Last Modified time: 2014-04-30 09:46:41
+ * Last Modified time: 2014-04-30 10:50:58
  ========================================================== */
  var gulp = require('gulp'),
     gutil = require('gulp-util'),
@@ -42,7 +42,8 @@ gulp.task('scripts', function() {
 gulp.task('js-vendors', function() {
   gulp.src([
       './bower_components/jquery/jquery.js',
-      './bower_components/jquery.tablesorter/js/jquery.tablesorter.js'
+      './bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
+      './bower_components/chosen_v1.1.0/chosen.jquery.min.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())

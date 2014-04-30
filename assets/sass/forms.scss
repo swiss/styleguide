@@ -1,20 +1,39 @@
-/*doc
+/* ==========================================================
+ * forms.scss
+ * Description
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-04-29 09:44:02
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ *
+ * Last Modified by:   Toni Fisler
+ * Last Modified time: 2014-04-30 14:18:03
+ ========================================================== */
+
+ /*doc
 ---
-title: Inputs
-name: f-inputs
+title: Forms
+name: f-forms
 category: Base Layout > Forms
 ---
+
+You can use `.form-horizontal` on `<form>` to display the label aligned at the left of the input. `.form-group` then behaves like a `.row`.
 
 Input boxes allow the user to input content (e.g. name).
 For inputting dates, an HTML5 solution is available. With browsers that do not support HTML5 the date has to be input manually.
 The following has to be taken into account for barrier-free accessibility:
 The name of the form and the form box must be linked to a label. A label ID may only appear once on a page. Required fields must have sensible names or, preferably, use WAI.
 
-You can use the `.has-error`, `.has-warning` or `.has-success` classes to make the form easier to fill for the user.
+You can use the `.has-error`, `.has-warning` or `.has-success` classes to send feedback to the user.
+
+HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, and `color`
 
 ```html_example
 <form class="form-horizontal" role="form">
 
+    <!-- email input -->
     <div class="form-group">
       <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
       <div class="col-sm-10">
@@ -22,6 +41,7 @@ You can use the `.has-error`, `.has-warning` or `.has-success` classes to make t
       </div>
     </div>
 
+    <!-- password input -->
     <div class="form-group has-warning">
       <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
       <div class="col-sm-10">
@@ -30,6 +50,7 @@ You can use the `.has-error`, `.has-warning` or `.has-success` classes to make t
       </div>
     </div>
 
+    <!-- URL input -->
     <div class="form-group">
       <label for="inputURL" class="col-sm-2 control-label">Website</label>
       <div class="col-sm-10">
@@ -38,19 +59,36 @@ You can use the `.has-error`, `.has-warning` or `.has-success` classes to make t
       </div>
     </div>
 
+    <!-- file input -->
     <div class="form-group">
-      <label for="inputURL" class="col-sm-2 control-label">Website</label>
+      <label for="file" class="col-sm-2 control-label">Document</label>
       <div class="col-sm-10">
-        <input type="file" class="form-control" id="inputURL" placeholder="URL">
+        <input type="file" class="form-control" id="file" placeholder="URL">
       </div>
     </div>
 
+    <!-- checkboxes -->
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox checkbox--left">
           <input id="checkboxform" type="checkbox">
           <label for="checkboxform">Remember me</label>
         </div>
+        <div class="checkbox checkbox--left">
+          <input id="checkboxform2" type="checkbox">
+          <label for="checkboxform2">Accept terms</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="dropdown">Dropdown</label>
+      <div class="col-sm-10">
+        <select id="dropdown" class="form-control">
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
       </div>
     </div>
 

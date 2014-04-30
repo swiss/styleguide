@@ -1,3 +1,17 @@
+/* ==========================================================
+ * select.scss
+ * Description
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-04-28 17:26:57
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ *
+ * Last Modified by:   Toni Fisler
+ * Last Modified time: 2014-04-30 14:07:11
+ ========================================================== */
+
 /*doc
 ---
 title: Selects
@@ -7,19 +21,17 @@ category: Base Layout > Forms
 
 A drop down list box allows the user to select an item from a predefined list. This list appears in a menu after the element has been clicked on. After the selection has been made, the result is displayed.
 
+With more than 10 options in the select, a search field is setup at the top of the dropdown list.
+
+You can also add the `multiple` attribute to `<select>` and allow the user to select more than one option at a time, displaying them as tags in the input field.
+
 ```html_example
-<select class="form-control">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
+<select id="dropdown" class="form-control">
+  <option>Option 1</option>
+  <option>Option 2</option>
 </select>
 ```
 
 */
 
-select.form-control {
-  position: absolute;
-  left: -999999999%;
-}
+// everything is handled by the chosen plugin (cf admin-chosen-scss)

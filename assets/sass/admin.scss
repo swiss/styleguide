@@ -78,12 +78,15 @@
 @import 'icons';
 
 // Forms
+@import 'forms';
 @import 'buttons';
 @import 'checkboxes';
 @import 'radios';
 @import 'select';
-@import 'inputs';
 @import 'fieldsets';
 
 // Widgets
 @import 'alerts';
+
+// Plugins
+@import 'admin-chosen';
