@@ -20,11 +20,11 @@
     border-top: 1px solid $silver;
     border-bottom: 1px solid $silver;
     margin: 0;
-    padding-top: 12px;
+    padding-top: 10px;
   }
   &:hover a {
     background: $smoke;
-    padding-top: 10px;
+    padding-top: 8px;
   }
   &.active a, &.active:hover a {
     background: $white;
@@ -33,10 +33,21 @@
   }
   &.active a, &.active:hover a,  &:hover a {
     border-top: 3px solid $venetian-red;
-    padding-top: 10px;
+    padding-top: 8px;
   }
 }
 
-.nav-tabs li:first-child a {
-  border-left: 1px solid $silver;
+.nav-tabs li:first-child, .nav-tabs li:first-child:hover {
+  a {
+    border-left: 1px solid $silver;
+  }
+}
+
+.nav-tabs-alphabet li {
+  width: 3.5% !important;
+  a {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
 }

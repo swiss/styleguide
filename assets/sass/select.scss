@@ -60,18 +60,75 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
             <li>
               <div class="yamm-content container-fluide">
                 <a href="#" class="yamm-close icon icon--after icon--close">Close</a>
-                <!-- Nav tabs -->
+
                 <ul class="nav nav-tabs">
-                  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-                  <li><a href="#profile" data-toggle="tab">Profile</a></li>
-                  <li><a href="#profile2" data-toggle="tab">Profile</a></li>
+                  <li class="active"><a href="#eda" data-toggle="tab">EDA</a></li>
+                  <li><a href="#deza" data-toggle="tab">DEZA</a></li>
                 </ul>
 
-                <!-- Tab panes -->
                 <div class="tab-content">
-                  <div class="tab-pane active" id="home">tab 1</div>
-                  <div class="tab-pane" id="profile">tab 2</div>
-                  <div class="tab-pane" id="profile2">tab 3</div>
+                  <div class="tab-pane active" id="eda">
+                    <br>
+                    <ul class="nav nav-tabs nav-tabs-alphabet">
+                      <li class="active"><a href="#eda-tab-a">A</a></li>
+                      <li><a href="#eda-tab-b">B</a></li>
+                      <li><a href="#eda-tab-c">C</a></li>
+                      <li><a href="#eda-tab-d">D</a></li>
+                      <li><a href="#eda-tab-e">E</a></li>
+                      <li><a href="#eda-tab-f">F</a></li>
+                      <li><a href="#eda-tab-g">G</a></li>
+                      <li><a href="#eda-tab-h">H</a></li>
+                      <li><a href="#eda-tab-i">I</a></li>
+                      <li><a href="#eda-tab-j">J</a></li>
+                      <li><a href="#eda-tab-k">K</a></li>
+                      <li><a href="#eda-tab-l">L</a></li>
+                      <li><a href="#eda-tab-m">M</a></li>
+                      <li><a href="#eda-tab-n">N</a></li>
+                      <li><a href="#eda-tab-o">O</a></li>
+                      <li><a href="#eda-tab-p">P</a></li>
+                      <li><a href="#eda-tab-q">Q</a></li>
+                      <li><a href="#eda-tab-r">R</a></li>
+                      <li><a href="#eda-tab-s">S</a></li>
+                      <li><a href="#eda-tab-t">T</a></li>
+                      <li><a href="#eda-tab-u">U</a></li>
+                      <li><a href="#eda-tab-v">V</a></li>
+                      <li><a href="#eda-tab-w">W</a></li>
+                      <li><a href="#eda-tab-x">X</a></li>
+                      <li><a href="#eda-tab-y">Y</a></li>
+                      <li><a href="#eda-tab-z">Z</a></li>
+                    </ul>
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="eda-tab-a">a. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-b">b. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-c">c. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-d">d. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-e">e. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-f">f. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-g">g. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-h">h. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-i">i. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-j">j. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-k">k. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-l">l. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-m">m. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-n">n. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-o">o. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-p">p. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-q">q. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-r">r. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-s">s. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-t">t. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-u">u. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-v">v. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-w">w. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-x">x. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-y">y. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-z">z. Some content...</div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="deza">
+                    
+                  </div>
                 </div>
               </div>
             </li>
