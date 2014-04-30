@@ -1,6 +1,6 @@
 /* ==========================================================
  * gulpfile.js
- * Description
+ * List of Gulp.js task to build and run the project
  *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-29 17:53:14
@@ -9,8 +9,9 @@
  * Licensed under MIT
  *
  * Last Modified by:   Toni Fisler
- * Last Modified time: 2014-04-30 10:50:58
+ * Last Modified time: 2014-04-30 14:33:12
  ========================================================== */
+
  var gulp = require('gulp'),
     gutil = require('gulp-util'),
     notify = require('gulp-notify'),
@@ -43,7 +44,8 @@ gulp.task('js-vendors', function() {
   gulp.src([
       './bower_components/jquery/jquery.js',
       './bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
-      './bower_components/chosen_v1.1.0/chosen.jquery.min.js'
+      './bower_components/chosen_v1.1.0/chosen.jquery.min.js',
+      './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
@@ -64,7 +66,7 @@ gulp.task('styles', function() {
 // CSS vendors concat and minify
 gulp.task('css-vendors', function() {
   gulp.src([
-      ''
+      './bower_components/yamm3/yamm/yamm.css'
     ])
     .pipe(concat('vendors.css'))
     .pipe(minifycss())
