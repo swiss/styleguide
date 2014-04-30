@@ -1,13 +1,17 @@
-/**
- * gulfpile.js
- * Used to build the project
+/* ==========================================================
+ * gulpfile.js
+ * Description
  *
- * Author: Yann Gouffon yann@antistatique.net
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-29 17:53:14
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
- **/
-var gulp = require('gulp'),
+ *
+ * Last Modified by:   Toni Fisler
+ * Last Modified time: 2014-04-30 09:46:41
+ ========================================================== */
+ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     notify = require('gulp-notify'),
     jshint = require('gulp-jshint'),
@@ -35,7 +39,7 @@ gulp.task('scripts', function() {
 });
 
 // JS vendors concat and minify
-gulp.task('js_vendors', function() {
+gulp.task('js-vendors', function() {
   gulp.src([
       './bower_components/jquery/jquery.js',
       './bower_components/jquery.tablesorter/js/jquery.tablesorter.js'
@@ -57,7 +61,7 @@ gulp.task('styles', function() {
 });
 
 // CSS vendors concat and minify
-gulp.task('css_vendors', function() {
+gulp.task('css-vendors', function() {
   gulp.src([
       ''
     ])
@@ -79,23 +83,24 @@ gulp.task('hologram', function () {
     .pipe(shell('LC_ALL="en_US.UTF-8" hologram'));
 });
 
-gulp.task('build', function() {
+gulp.task('build-images', function() {
   return gulp.src(['assets/img/**'])
           .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('buildFonts', function() {
+gulp.task('build-fonts', function() {
   return gulp.src(['assets/fonts/**'])
           .pipe(gulp.dest('build/fonts'));
 });
 
-gulp.task('default', ['styles', 'watch', 'browser-sync', 'build', 'js_vendors']);
+gulp.task('default', ['styles', 'watch', 'css-vendors', 'browser-sync', 'scripts', 'build-images', 'build-fonts', 'js-vendors']);
+gulp.task('build', ['styles', 'scripts', 'css-vendors', 'build-images', 'build-fonts', 'js-vendors']);
 
 gulp.task('watch', function() {
-  gulp.watch('./assets/sass/*.scss', ['styles']);
-  gulp.watch('./assets/js/*.js', ['scripts']);
-  gulp.watch('./build/**/*.{js,css}', ['hologram']);
-  gulp.watch('./assets/**/*.md', ['hologram']);
-  gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], ['build']);
-  // gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], ['buildFonts']);
+  gulp.watch('assets/sass/*.scss', ['styles']);
+  gulp.watch('assets/js/*.js', ['scripts']);
+  gulp.watch('build/**/*.{js,css}', ['hologram']);
+  gulp.watch('assets/**/*.md', ['hologram']);
+  gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], ['build-images']);
+  gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], ['build-fonts']);
 });
