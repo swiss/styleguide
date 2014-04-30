@@ -1,4 +1,18 @@
-@charset "UTF-8";
+/* ==========================================================
+ * icons.scss
+ * Icons elements styles
+ * 
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ * 
+ * Last Modified by:   Yann Gouffon
+ * Last Modified time: 2014-04-30 10:30:22
+ =========================================================== */
+ 
+ @charset "UTF-8";
 
 /*doc
 ---
@@ -9,7 +23,7 @@ category: Base Layout > Visual
 
 The icons used are one-color and two-dimensional. They are provided as a web font which is to be found in the resources as a TrueType font.
 
-For **only-icon** element, use a `<span>` with the global `.icon` class followed by the more specific class.
+For * icons.scss
 
 For **inside-icon** element, use the global `.icon` and `.icon--before` or `.icon--after` class followed by the more specific class.
 

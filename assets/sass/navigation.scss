@@ -1,4 +1,18 @@
-@charset "UTF-8";
+/* ==========================================================
+ * navigation.scss
+ * Navgiation element styles
+ * 
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ * 
+ * Last Modified by:   Yann Gouffon
+ * Last Modified time: 2014-04-30 10:29:16
+ =========================================================== */
+ 
+ @charset "UTF-8";
 
 nav {
   ul {
@@ -10,7 +24,7 @@ nav {
 
 .nav-main {
   min-height: 70px;
-  background: #e4e4e4; /* Old browsers */
+  background: #e4e4e4; /* Old browsers * navigation.scss
   background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(39%,#e2e2e2), color-stop(79%,#dddddd), color-stop(91%,#d5d5d5), color-stop(95%,#cfcfcf), color-stop(99%,#bebebe)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Chrome10+,Safari5.1+ */
@@ -23,7 +37,7 @@ nav {
 /*doc
 ---
 title: Service Navigation
-name: b-servie-navigation
+name: b-service-navigation
 category: Page element > Header
 ---
 

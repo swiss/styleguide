@@ -9,7 +9,7 @@
  * Licensed under MIT
  *
  * Last Modified by:   Yann Gouffon
- * Last Modified time: 2014-04-30 10:00:02
+ * Last Modified time: 2014-04-30 10:55:42
  ========================================================== */
 
  var gulp = require('gulp'),
@@ -43,7 +43,8 @@ gulp.task('scripts', function() {
 gulp.task('js-vendors', function() {
   gulp.src([
       './bower_components/jquery/jquery.js',
-      './bower_components/jquery.tablesorter/js/jquery.tablesorter.js'
+      './bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
+      './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())

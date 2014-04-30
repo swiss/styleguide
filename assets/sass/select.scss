@@ -1,4 +1,18 @@
-/*doc
+/* ==========================================================
+ * select.scss
+ * Select styles
+ * 
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-30 09:38:36
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ * 
+ * Last Modified by:   Yann Gouffon
+ * Last Modified time: 2014-04-30 10:49:27
+ =========================================================== */
+ 
+ /*doc
 ---
 title: Selects
 name: e-selects
@@ -23,3 +37,155 @@ select.form-control {
   position: absolute;
   left: -999999999%;
 }
+
+/*doc
+---
+title: Topics A-Z
+name: a-topics
+category: Page element > Header
+---
+
+The topics A-Z search function is an alternative means of accessing the contents of the website. The sub-topics of website can be selected from an alphabetical catalog.
+
+The topics A-Z section is positioned on the right-hand side of the header. When it is clicked on, a flyout opens which contains an A-Z tab navigation. The topics can also be grouped in other tabs, e.g. according to organizational unit.
+
+On smartphones, the A-Z navigation is accessed via an icon together with the search function.
+
+```html_example
+<div class="container-fluide">
+
+  <header>
+    <div id="navbar-collapse-1" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <!-- Classic list -->
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">List<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <!-- Content container to add padding -->
+                  <div class="yamm-content">
+                    <div class="row">
+                      <ul class="col-sm-2 list-unstyled">
+                        <li>
+                          <p><strong>Section Title</strong></p>
+                        </li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                      </ul>
+                      <ul class="col-sm-2 list-unstyled">
+                        <li>
+                          <p><strong>Links Title</strong></p>
+                        </li>
+                        <li><a href="#"> Link Item </a></li>
+                        <li><a href="#"> Link Item </a></li>
+                        <li><a href="#"> Link Item </a></li>
+                        <li><a href="#"> Link Item </a></li>
+                        <li><a href="#"> Link Item </a></li>
+                        <li><a href="#"> Link Item </a></li>
+                      </ul>
+                      <ul class="col-sm-2 list-unstyled">
+                        <li>
+                          <p><strong>Section Title</strong></p>
+                        </li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                      </ul>
+                      <ul class="col-sm-2 list-unstyled">
+                        <li>
+                          <p><strong>Section Title</strong></p>
+                        </li>
+                        <li>List Item</li>
+                        <li>List Item</li>
+                        <li>
+                          <ul>
+                            <li><a href="#"> Link Item </a></li>
+                            <li><a href="#"> Link Item </a></li>
+                            <li><a href="#"> Link Item </a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- Accordion demo -->
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Accordion<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="yamm-content">
+                    <div class="row">
+                      <div id="accordion" class="panel-group">
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Collapsible Group Item #1</a></h4>
+                          </div>
+                          <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">Ut consectetur ullamcorper purus a rutrum. Etiam dui nisi, hendrerit feugiat scelerisque et, cursus eu magna. </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collapsible Group Item #2</a></h4>
+                          </div>
+                          <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">Nullam pretium fermentum sapien ut convallis. Suspendisse vehicula, magna non tristique tincidunt, massa nisi luctus tellus, vel laoreet sem lectus ut nibh. </div>
+                          </div>
+                        </div>
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Collapsible Group Item #3</a></h4>
+                          </div>
+                          <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">Praesent leo quam, faucibus at facilisis id, rhoncus sit amet metus. Sed vitae ipsum non nibh mattis congue eget id augue. </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- Classic dropdown -->
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Classic<b class="caret"></b></a>
+              <ul role="menu" class="dropdown-menu">
+                <li><a tabindex="-1" href="#"> Action </a></li>
+                <li><a tabindex="-1" href="#"> Another action </a></li>
+                <li><a tabindex="-1" href="#"> Something else here </a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="#"> Separated link </a></li>
+              </ul>
+            </li>
+            <!-- Pictures -->
+            <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Pictures<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <div class="yamm-content">
+                    <div class="row">
+                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190"></a></div>
+                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190"></a></div>
+                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190"></a></div>
+                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190"></a></div>
+                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190"></a></div>
+                      <div class="col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190"></a></div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+```
+
+*/
