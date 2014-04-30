@@ -1,6 +1,6 @@
 /* ==========================================================
  * gulpfile.js
- * Description
+ * List of Gulp.js task to build and run the project
  *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-29 17:53:14
@@ -8,9 +8,10 @@
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  *
- * Last Modified by:   Toni Fisler
- * Last Modified time: 2014-04-30 09:46:41
+ * Last Modified by:   Yann Gouffon
+ * Last Modified time: 2014-04-30 10:00:02
  ========================================================== */
+
  var gulp = require('gulp'),
     gutil = require('gulp-util'),
     notify = require('gulp-notify'),
@@ -63,7 +64,7 @@ gulp.task('styles', function() {
 // CSS vendors concat and minify
 gulp.task('css-vendors', function() {
   gulp.src([
-      ''
+      './bower_components/yamm3/yamm/yamm.css'
     ])
     .pipe(concat('vendors.css'))
     .pipe(minifycss())
