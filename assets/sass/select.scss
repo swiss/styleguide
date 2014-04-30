@@ -64,12 +64,14 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
                 <ul class="nav nav-tabs">
                   <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
                   <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                  <li><a href="#profile2" data-toggle="tab">Profile</a></li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
                   <div class="tab-pane active" id="home">tab 1</div>
                   <div class="tab-pane" id="profile">tab 2</div>
+                  <div class="tab-pane" id="profile2">tab 3</div>
                 </div>
               </div>
             </li>

@@ -9,8 +9,34 @@
  * Licensed under MIT
  =========================================================== */
  
-.nav-tabs {
-  li {
-    margin-left: 0;
+.nav-tabs li {
+  margin-left: 0;
+  a {
+    border-radius: 0;
+    box-sizing: border-box;
+    background: $smoke;
+    color: $empress;
+    border-right: 1px solid $silver;
+    border-top: 1px solid $silver;
+    border-bottom: 1px solid $silver;
+    margin: 0;
+    padding-top: 12px;
   }
+  &:hover a {
+    background: $smoke;
+    padding-top: 10px;
+  }
+  &.active a, &.active:hover a {
+    background: $white;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  &.active a, &.active:hover a,  &:hover a {
+    border-top: 3px solid $venetian-red;
+    padding-top: 10px;
+  }
+}
+
+.nav-tabs li:first-child a {
+  border-left: 1px solid $silver;
 }
