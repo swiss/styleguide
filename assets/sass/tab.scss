@@ -37,6 +37,15 @@
   }
 }
 
+.tab-content {
+  padding: 20px 0;
+  .tab-content {
+    border: 1px solid $silver;
+    border-top-color: transparent;
+    padding: 20px;
+  }
+}
+
 .nav-tabs li:first-child, .nav-tabs li:first-child:hover {
   a {
     border-left: 1px solid $silver;

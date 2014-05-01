@@ -14,14 +14,14 @@
 /*doc
 ---
 title: Logo with Link to Home Page
-name: z-header-logo
+name: a-header-logo
 category: Page element > Header
 ---
 
 The Confederation logo with the coat of arms and the four-language wordmark as well as the name of the organizational unit (department, public office, agency, or mission, or, alternatively, the title of the website) together form the designation of the website. The complete designation contains a link which takes the user back to the home page from any page of the website.
 
 ```html_example
-<div class="container-fluide">
+<div class="container-fluid">
 
   <header>
     <a href="#" class="brand hidden-xs">
