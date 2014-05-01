@@ -15,7 +15,7 @@
 ---
 title: Site Search
 name: -site-search
-category: Page element > Header
+category: Navigation Elements > Header
 ---
 
 The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
@@ -61,9 +61,8 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
   }
   .icon--search {left: 10px;}
   .icon--close {
-    opacity: 0;
-    transition: opacity 0.3s;
-    display: none;
+    color: $white;
+    transition: color 0.3s;
     right: 10px;
   }
 }
@@ -88,10 +87,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
   }
 }
 
-.search-field:focus + .icon--close {
-  opacity: 1;
-  display: inline-block;
-}
+.search-field:focus + .icon--close {color: $black;}
 
 .tt-dropdown-menu {
   background: $white;

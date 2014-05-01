@@ -34,7 +34,7 @@
   });
 
   // Insert the icons
-  $('<span class="icon icon--search"></span>').insertAfter($searchField);
-  $('<span class="icon icon--close" onclick="$(\'#search-field\').val(\'\').focus();"></span>').insertAfter($searchField);
+  $('<span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>').insertAfter($searchField);
+  $('.form-search').append('<span class="icon icon--search"></span>');
 
 }) (jQuery, searchData);
