@@ -48,6 +48,11 @@
         
         
       
+        
+        
+          
+        
+      
 
       <nav class="cortana-nav">
         <ul>
@@ -64,6 +69,8 @@
               
                 <li><a class="active" href="content_components_>_widgets.html">Widgets</a></li>
               
+            
+          
             
           
             
@@ -117,6 +124,8 @@
           
             
           
+            
+          
           </ul>
         
           <h3>Navigation Elements</h3>
@@ -143,6 +152,34 @@
               
               
                 <li><a href="navigation_elements_>_content_navigation.html">Content Navigation</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Page element</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="page_element_>_header.html">Header</a></li>
               
             
           
@@ -175,6 +212,10 @@
              
               
                 <li><a href="#b-emergency">Emergency</a></li>
+              
+             
+              
+                <li><a href="#b-timeline">Timeline</a></li>
               
             
           </ul>
@@ -220,6 +261,56 @@
     <span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="b-timeline">Timeline</h1>
+
+<p>The timeline is an interactive module with which the contents can be presented in the form of a chronological timeframe.</p>
+
+<p>It is based on Knight Lab’s timeline.js Library.</p>
+
+<p>Because this element is heavy, it&#39;s not loaded by default and you will have to include the library manually.</p>
+<div class="codeExample"><div class="exampleOutput"> <div id="timeline-embed"></div>
+ <script type="text/javascript">
+ var timeline_config = {
+ width:              '100%',
+ height:             '600',
+ css:                '/js/TimelineJS/css/timeline.css',     // PATH TO CSS
+ js:                 '/js/TimelineJS/js//timeline-min.js',    // PATH TO JS
+ source:             'https://docs.google.com/spreadsheet/pub?key=0AjrEl7i8pmEpdE8zWkliV2pjS2pYYlpqWG9ZcG5nSkE&output=html',
+ embed_id:           'timeline-embed',               //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED
+ start_at_end:       false,                          //OPTIONAL START AT LATEST DATE
+ start_at_slide:     '4',                            //OPTIONAL START AT SPECIFIC SLIDE
+ start_zoom_adjust:  '3',                            //OPTIONAL TWEAK THE DEFAULT ZOOM LEVEL
+ hash_bookmark:      true,                           //OPTIONAL LOCATION BAR HASHES
+ font:               'Bevan-PotanoSans',             //OPTIONAL FONT
+ debug:              true,                           //OPTIONAL DEBUG TO CONSOLE
+ lang:               'fr',                           //OPTIONAL LANGUAGE
+ maptype:            'watercolor'                   //OPTIONAL MAP STYLE
+
+ }
+ </script>
+ <script type="text/javascript" src="/js/TimelineJS/js/storyjs-embed.js"></script>
+</div><div class="codeBlock"><div class="highlight"><pre> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;timeline-embed&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+ <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+ <span class="kd">var</span> <span class="nx">timeline_config</span> <span class="o">=</span> <span class="p">{</span>
+ <span class="nx">width</span><span class="o">:</span>              <span class="s1">&#39;100%&#39;</span><span class="p">,</span>
+ <span class="nx">height</span><span class="o">:</span>             <span class="s1">&#39;600&#39;</span><span class="p">,</span>
+ <span class="nx">css</span><span class="o">:</span>                <span class="s1">&#39;/js/TimelineJS/css/timeline.css&#39;</span><span class="p">,</span>     <span class="c1">// PATH TO CSS</span>
+ <span class="nx">js</span><span class="o">:</span>                 <span class="s1">&#39;/js/TimelineJS/js//timeline-min.js&#39;</span><span class="p">,</span>    <span class="c1">// PATH TO JS</span>
+ <span class="nx">source</span><span class="o">:</span>             <span class="s1">&#39;https://docs.google.com/spreadsheet/pub?key=0AjrEl7i8pmEpdE8zWkliV2pjS2pYYlpqWG9ZcG5nSkE&amp;output=html&#39;</span><span class="p">,</span>
+ <span class="nx">embed_id</span><span class="o">:</span>           <span class="s1">&#39;timeline-embed&#39;</span><span class="p">,</span>               <span class="c1">//OPTIONAL USE A DIFFERENT DIV ID FOR EMBED</span>
+ <span class="nx">start_at_end</span><span class="o">:</span>       <span class="kc">false</span><span class="p">,</span>                          <span class="c1">//OPTIONAL START AT LATEST DATE</span>
+ <span class="nx">start_at_slide</span><span class="o">:</span>     <span class="s1">&#39;4&#39;</span><span class="p">,</span>                            <span class="c1">//OPTIONAL START AT SPECIFIC SLIDE</span>
+ <span class="nx">start_zoom_adjust</span><span class="o">:</span>  <span class="s1">&#39;3&#39;</span><span class="p">,</span>                            <span class="c1">//OPTIONAL TWEAK THE DEFAULT ZOOM LEVEL</span>
+ <span class="nx">hash_bookmark</span><span class="o">:</span>      <span class="kc">true</span><span class="p">,</span>                           <span class="c1">//OPTIONAL LOCATION BAR HASHES</span>
+ <span class="nx">font</span><span class="o">:</span>               <span class="s1">&#39;Bevan-PotanoSans&#39;</span><span class="p">,</span>             <span class="c1">//OPTIONAL FONT</span>
+ <span class="nx">debug</span><span class="o">:</span>              <span class="kc">true</span><span class="p">,</span>                           <span class="c1">//OPTIONAL DEBUG TO CONSOLE</span>
+ <span class="nx">lang</span><span class="o">:</span>               <span class="s1">&#39;fr&#39;</span><span class="p">,</span>                           <span class="c1">//OPTIONAL LANGUAGE</span>
+ <span class="nx">maptype</span><span class="o">:</span>            <span class="s1">&#39;watercolor&#39;</span>                   <span class="c1">//OPTIONAL MAP STYLE</span>
+
+ <span class="p">}</span>
+ <span class="nt">&lt;/script&gt;</span>
+ <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/js/TimelineJS/js/storyjs-embed.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>
