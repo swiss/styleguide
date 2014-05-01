@@ -111,7 +111,7 @@ gulp.task('default', ['styles', 'watch', 'css-vendors', 'browser-sync', 'scripts
 gulp.task('build', ['styles', 'scripts', 'css-vendors', 'build-images', 'build-fonts', 'js-vendors']);
 
 gulp.task('watch', function() {
-  gulp.watch('assets/sass/*.scss', ['styles']);
+  gulp.watch('assets/sass/**/*.scss', ['styles']);
   gulp.watch('assets/js/*.js', ['scripts']);
   gulp.watch('build/**/*.{js,css}', ['hologram']);
   gulp.watch('assets/**/*.md', ['hologram']);
