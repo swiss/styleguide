@@ -1,0 +1,39 @@
+/* ==========================================================
+ * search.scss
+ * Search field styles
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-01 11:57:02
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+ 
+ @charset "UTF-8";
+
+/*doc
+---
+title: Site Search
+name: f-site-search
+category: Page element > Header
+---
+
+The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
+
+On smartphones, the search function can be accessed via an icon in the Header.
+
+```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+    
+    
+
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+```
+
+*/

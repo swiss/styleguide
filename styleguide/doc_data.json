@@ -126,6 +126,15 @@
 		]
 	},
 	{
+		"title": "Site Search",
+		"breadcrumb": "Page element > Header > Site Search",
+		"path": "page_element_>_header.html#f-site-search",
+		"tokens": [
+			"Page element > Header",
+			"Site Search"
+		]
+	},
+	{
 		"title": "Treecrumb Federal Administration",
 		"breadcrumb": "Page element > Header > Treecrumb Federal Administration",
 		"path": "page_element_>_header.html#g-treecrumb-federal-administration",
