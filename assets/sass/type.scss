@@ -1,14 +1,14 @@
 /* ==========================================================
  * type.scss
  * Global typographic styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
@@ -147,6 +147,10 @@ samp {
 var {
   @extend em;
   color: gray;
+}
+
+.text-dimmed {
+  color: $empress;
 }
 
 /*doc

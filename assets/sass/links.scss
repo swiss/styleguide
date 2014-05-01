@@ -1,14 +1,14 @@
 /* ==========================================================
  * links.scss
  * Links element styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 09:38:36
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
@@ -30,7 +30,7 @@ You can  use the `.icon` classes to add some icons after or before the link. Use
 
 <p>An <a href="#" class="icon icon--after icon--external">external link</a> in a paragraph.</p>
 <p><a href="#" class="icon icon--before icon--cart">link with icon</a></p>
-<p><a href="#" class="icon icon--before icon--pdf">link with icon lorem <span>(PDF, 43 pages, 2Mb, English)</span></a></p>
+<p><a href="#" class="icon icon--before icon--pdf">link with icon lorem <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></a></p>
 ```
 
 For a print button, check the [buttons section](base_layout_%3E_forms.html#a-buttons).
@@ -59,9 +59,5 @@ a {
   &:hover {
     text-decoration: none;
   }
- }
-
- span {
-  color: $empress;
  }
 }

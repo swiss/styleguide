@@ -100,7 +100,11 @@
 // Widgets
 @import 'widgets/alerts';
 @import 'widgets/emergency';
+@import 'widgets/pagination';
 @import 'tab';
 
 // Plugins
 @import 'chosen-theme';
+
+// Helpers
+@import 'helpers';

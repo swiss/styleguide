@@ -1,14 +1,14 @@
 /* ==========================================================
  * admin-mixins.scss
  * Our project mixins
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /**
@@ -30,3 +30,13 @@
   background-image: url(../img/form-icons.png)\9 // IE6, IE7 and IE8
 }
 
+/**
+ * Mixin to add a separator at the right of element. Can pass left or both as argument.
+ * $color:      #ffffff;
+ * $where:      left/right/both
+ */
+@mixin separator($color, $where:right) {
+  $style: 1px solid $color;
+  @if $where == 'both' {border-left: $style; border-right: $style;}
+  @else {border-#{$where}: $style;}
+}
