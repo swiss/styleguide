@@ -11,15 +11,18 @@
 
 (function($, data) {
 
+  var $searchField = $('#search-field');
+
+  // Init the Bloodhound suggestion engine
   var bloodhound = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     local: $.map(data, function(state) { return { value: state }; })
   });
-
   bloodhound.initialize();
 
-  $('#search-field').typeahead({
+  // Init Typeahead on search-fields
+  $searchField.typeahead({
     hint: true,
     highlight: true,
     minLength: 1,
@@ -29,6 +32,10 @@
     displayKey: 'value',
     source: bloodhound.ttAdapter()
   });
+
+  // Insert the icons
+  $('<span class="icon icon--search"></span>').insertAfter($searchField);
+  $('<span class="icon icon--close" onclick="$(\'#search-field\').val(\'\').focus();"></span>').insertAfter($searchField);
 
 }) (jQuery, searchData);
 /* ==========================================================
