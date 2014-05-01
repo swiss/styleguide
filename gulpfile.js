@@ -58,6 +58,7 @@ gulp.task('vendors', function() {
       './bower_components/jquery/jquery.js',
       './bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
       './bower_components/chosen_v1.1.0/chosen.jquery.min.js',
+      './bower_components/typeahead.js/dist/typeahead.bundle.js',
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js',
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js',
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js',
