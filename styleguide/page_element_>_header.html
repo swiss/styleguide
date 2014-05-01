@@ -53,16 +53,38 @@
           
         </ul>
         
+          <h3>Page element</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a class="active" href="page_element_>_header.html">Header</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
           <h3>Content Components</h3>
           <ul>
+          
+            
           
             
               
               
                 <li><a href="content_components_>_widgets.html">Widgets</a></li>
               
-            
-          
             
           
             
@@ -81,12 +103,12 @@
             
           
             
+          
+            
               
               
                 <li><a href="base_layout_>_forms.html">Forms</a></li>
               
-            
-          
             
           
             
@@ -108,28 +130,6 @@
               
                 <li><a href="base_layout_>_typography.html">Typography</a></li>
               
-            
-          
-          </ul>
-        
-          <h3>Page element</h3>
-          <ul>
-          
-            
-          
-            
-          
-            
-              
-              
-                <li><a class="active" href="page_element_>_header.html">Header</a></li>
-              
-            
-          
-            
-          
-            
-          
             
           
           </ul>
@@ -156,6 +156,10 @@
           <ul>
              
               
+                <li><a href="#-treecrumb-federal-administration">Treecrumb Federal Administration</a></li>
+              
+             
+              
                 <li><a href="#a-header-logo">Logo with Link to Home Page</a></li>
               
              
@@ -174,10 +178,6 @@
               
                 <li><a href="#e-topics">Topics A-Z</a></li>
               
-             
-              
-                <li><a href="#z-treecrumb-federal-administration">Treecrumb Federal Administration</a></li>
-              
             
           </ul>
         </nav>
@@ -185,6 +185,120 @@
         <div class="cortana-content-wrapper">
 
 
+<h1 id="-treecrumb-federal-administration">Treecrumb Federal Administration</h1>
+
+<p>The treecrumb navigation shows the position of the current website within the context of all the websites of the Federal Administration. It also serves as an efficient means of accessing information across departments.</p>
+
+<p>When closed, the treecrumb navigation presents the hierarchical organization of the Federal Administration as a path. When a hierarchical level is clicked on, a menu opens with a collection of links pertinent to the selected hierarchical level.</p>
+
+<p>On smartphones, the treecrumb navigation is omitted.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="container-fluid">
+
+  <header>
+
+    <nav class="navbar treecrumb" role="navigation">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+          <a id="admin-dropdown" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Federal Administration</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
+              <li class="dropdown-header">Federal Administration admin.ch</li>
+              <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
+              <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
+              <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
+              <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
+              <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
+              <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
+              <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+          <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Dropdown 2</a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;header&gt;</span>
+
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar treecrumb&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">&quot;admin-dropdown&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> Federal Administration<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span> <span class="na">aria-labelledby=</span><span class="s">&quot;admin-dropdown&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown-header&quot;</span><span class="nt">&gt;</span>Federal Administration admin.ch<span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>BK: Schweizerische Bundeskanzlei<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>EDA: Eidgenössisches Departement für auswärtige Angelegenheiten<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>EDI: Eidgenössisches Department des Innern<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;strong&gt;</span>EJPD: Eidgenössisches Justiz- und Polizeidepartment<span class="nt">&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>EVD: Eidgenössisches Volkswirtschaftsdepartement<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">id=</span><span class="s">&quot;drop2&quot;</span> <span class="na">role=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span> Dropdown 2<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span> <span class="na">aria-labelledby=</span><span class="s">&quot;drop2&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span> <span class="na">href=</span><span class="s">&quot;http://twitter.com/fat&quot;</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span> <span class="na">href=</span><span class="s">&quot;http://twitter.com/fat&quot;</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span> <span class="na">href=</span><span class="s">&quot;http://twitter.com/fat&quot;</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span> <span class="na">class=</span><span class="s">&quot;divider&quot;</span><span class="nt">&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">&quot;presentation&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">&quot;menuitem&quot;</span> <span class="na">tabindex=</span><span class="s">&quot;-1&quot;</span> <span class="na">href=</span><span class="s">&quot;http://twitter.com/fat&quot;</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.container-fluid --&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+</pre></div></div></div>
 <h1 id="a-header-logo">Logo with Link to Home Page</h1>
 
 <p>The Confederation logo with the coat of arms and the four-language wordmark as well as the name of the organizational unit (department, public office, agency, or mission, or, alternatively, the title of the website) together form the designation of the website. The complete designation contains a link which takes the user back to the home page from any page of the website.</p>
@@ -580,38 +694,6 @@ Romansh and English are only shown if the content is available in these language
   <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
 
 <span class="nt">&lt;/div&gt;</span>
-</pre></div></div></div>
-<h1 id="z-treecrumb-federal-administration">Treecrumb Federal Administration</h1>
-
-<p>The treecrumb navigation shows the position of the current website within the context of all the websites of the Federal Administration. It also serves as an efficient means of accessing information across departments.</p>
-
-<p>When closed, the treecrumb navigation presents the hierarchical organization of the Federal Administration as a path. When a hierarchical level is clicked on, a menu opens with a collection of links pertinent to the selected hierarchical level.</p>
-
-<p>On smartphones, the treecrumb navigation is omitted.</p>
-<div class="codeExample"><div class="exampleOutput"><div class="container-fluid">
-
-  <header>
-    <ol class="breadcrumb">
-      <li><a href="#">Federal Administration</a></li>
-      <li><a href="#">Department: EDI</a></li>
-    </ol>
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-<b>@TODO : Finish it with js !</b>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
-
-  <span class="nt">&lt;header&gt;</span>
-    <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">&quot;breadcrumb&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Federal Administration<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Department: EDI<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;/ol&gt;</span>
-  <span class="nt">&lt;/header&gt;</span>
-  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
-
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;b&gt;</span>@TODO : Finish it with js !<span class="nt">&lt;/b&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>
