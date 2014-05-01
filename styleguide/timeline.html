@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Content Components > Widgets</title>
+    <title></title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./build/css/vendors.css">
@@ -53,16 +53,38 @@
           
         </ul>
         
-          <h3>Content Components</h3>
+          <h3>Page element</h3>
           <ul>
           
             
               
               
-                <li><a class="active" href="content_components_>_widgets.html">Widgets</a></li>
+                <li><a href="page_element_>_header.html">Header</a></li>
               
             
           
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Content Components</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="content_components_>_widgets.html">Widgets</a></li>
+              
             
           
             
@@ -81,12 +103,12 @@
             
           
             
+          
+            
               
               
                 <li><a href="base_layout_>_forms.html">Forms</a></li>
               
-            
-          
             
           
             
@@ -112,34 +134,10 @@
           
           </ul>
         
-          <h3>Page element</h3>
-          <ul>
-          
-            
-          
-            
-          
-            
-              
-              
-                <li><a href="page_element_>_header.html">Header</a></li>
-              
-            
-          
-            
-          
-            
-          
-            
-          
-          </ul>
-        
       </nav>
     </div>
 
     <header class="cortana-header sb-slide">
-      
-        <h1><img src="build/img/ch.jpg">Widgets</h1>
       
       <div id="open-left" class="cortana-menu-btn">
         <span></span>
@@ -154,18 +152,6 @@
 
         <nav id="cortana-inside-nav" class="cortana-inside-nav">
           <ul>
-             
-              
-                <li><a href="#a-alerts">Alerts</a></li>
-              
-             
-              
-                <li><a href="#b-emergency">Emergency</a></li>
-              
-             
-              
-                <li><a href="#b-timeline">Timeline</a></li>
-              
             
           </ul>
         </nav>
@@ -173,45 +159,23 @@
         <div class="cortana-content-wrapper">
 
 
-<h1 id="a-alerts">Alerts</h1>
+<p>/* ==========================================================
+ * timeline.scss
+ * Styles for timeline
+ *
+ * Author: Simon Perdrisat, simon@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */</p>
 
-<p>Alerts are shown when you need to get the attention of the user with something important.</p>
+<h2>/*doc</h2>
 
-<p>Variants: <code>.alert-success</code> <code>.alert-info</code> <code>.alert-warning</code> <code>.alert-danger</code></p>
-<div class="codeExample"><div class="exampleOutput"><div class="alert alert-warning">
-  Alert info!
-</div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-warning&quot;</span><span class="nt">&gt;</span>
-  Alert info!
-<span class="nt">&lt;/div&gt;</span>
-</pre></div></div></div>
-<h1 id="b-emergency">Emergency</h1>
+<p>title: Timeline
+name: b-timeline</p>
 
-<p>The emergency banner is only ever shown on the home page in cases of extreme urgency. It is always placed at the very top of the home page.</p>
-
-<p>It is vital that this element should only be used in cases of emergency – i.e. extremely sparingly.</p>
-<div class="codeExample"><div class="exampleOutput"><div class="alert alert--emergency clearfix">
-  <div class="col-sm-3">
-    <h3>Lorem ipsum</h3>
-  </div>
-  <div class="col-sm-9">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, placeat, recusandae, amet, modi hic accusamus cumque id nesciunt debitis nihil neque quaerat reprehenderit iste mollitia laborum natus culpa laboriosam labore.
-    </p>
-  </div>
-</div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert--emergency clearfix&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-3&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h3&gt;</span>Lorem ipsum<span class="nt">&lt;/h3&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-9&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, placeat, recusandae, amet, modi hic accusamus cumque id nesciunt debitis nihil neque quaerat reprehenderit iste mollitia laborum natus culpa laboriosam labore.
-    <span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div></div></div>
-<h1 id="b-timeline">Timeline</h1>
+<h2>category: Content Components &gt; Widgets</h2>
 
 <p>The timeline is an interactive module with which the contents can be presented in the form of a chronological timeframe.</p>
 
@@ -223,8 +187,6 @@
  var timeline_config = {
  width:              '100%',
  height:             '600',
- css:                '/js/TimelineJS/css/timeline.css',     // PATH TO CSS
- js:                 '/js/TimelineJS/js//timeline-min.js',    // PATH TO JS
  source:             'https://docs.google.com/spreadsheet/pub?key=0AjrEl7i8pmEpdE8zWkliV2pjS2pYYlpqWG9ZcG5nSkE&output=html',
  embed_id:           'timeline-embed',               //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED
  start_at_end:       false,                          //OPTIONAL START AT LATEST DATE
@@ -234,18 +196,15 @@
  font:               'Bevan-PotanoSans',             //OPTIONAL FONT
  debug:              true,                           //OPTIONAL DEBUG TO CONSOLE
  lang:               'fr',                           //OPTIONAL LANGUAGE
- maptype:            'watercolor'                   //OPTIONAL MAP STYLE
-
+ maptype:            'watercolor',                   //OPTIONAL MAP STYLE
  }
  </script>
- <script type="text/javascript" src="/js/TimelineJS/js/storyjs-embed.js"></script>
+ <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
 </div><div class="codeBlock"><div class="highlight"><pre> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;timeline-embed&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
  <span class="kd">var</span> <span class="nx">timeline_config</span> <span class="o">=</span> <span class="p">{</span>
  <span class="nx">width</span><span class="o">:</span>              <span class="s1">&#39;100%&#39;</span><span class="p">,</span>
  <span class="nx">height</span><span class="o">:</span>             <span class="s1">&#39;600&#39;</span><span class="p">,</span>
- <span class="nx">css</span><span class="o">:</span>                <span class="s1">&#39;/js/TimelineJS/css/timeline.css&#39;</span><span class="p">,</span>     <span class="c1">// PATH TO CSS</span>
- <span class="nx">js</span><span class="o">:</span>                 <span class="s1">&#39;/js/TimelineJS/js//timeline-min.js&#39;</span><span class="p">,</span>    <span class="c1">// PATH TO JS</span>
  <span class="nx">source</span><span class="o">:</span>             <span class="s1">&#39;https://docs.google.com/spreadsheet/pub?key=0AjrEl7i8pmEpdE8zWkliV2pjS2pYYlpqWG9ZcG5nSkE&amp;output=html&#39;</span><span class="p">,</span>
  <span class="nx">embed_id</span><span class="o">:</span>           <span class="s1">&#39;timeline-embed&#39;</span><span class="p">,</span>               <span class="c1">//OPTIONAL USE A DIFFERENT DIV ID FOR EMBED</span>
  <span class="nx">start_at_end</span><span class="o">:</span>       <span class="kc">false</span><span class="p">,</span>                          <span class="c1">//OPTIONAL START AT LATEST DATE</span>
@@ -255,12 +214,13 @@
  <span class="nx">font</span><span class="o">:</span>               <span class="s1">&#39;Bevan-PotanoSans&#39;</span><span class="p">,</span>             <span class="c1">//OPTIONAL FONT</span>
  <span class="nx">debug</span><span class="o">:</span>              <span class="kc">true</span><span class="p">,</span>                           <span class="c1">//OPTIONAL DEBUG TO CONSOLE</span>
  <span class="nx">lang</span><span class="o">:</span>               <span class="s1">&#39;fr&#39;</span><span class="p">,</span>                           <span class="c1">//OPTIONAL LANGUAGE</span>
- <span class="nx">maptype</span><span class="o">:</span>            <span class="s1">&#39;watercolor&#39;</span>                   <span class="c1">//OPTIONAL MAP STYLE</span>
-
+ <span class="nx">maptype</span><span class="o">:</span>            <span class="s1">&#39;watercolor&#39;</span><span class="p">,</span>                   <span class="c1">//OPTIONAL MAP STYLE</span>
  <span class="p">}</span>
  <span class="nt">&lt;/script&gt;</span>
- <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/js/TimelineJS/js/storyjs-embed.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></div></div></div>      </div>
+ <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div></div></div>
+<p>*/</p>
+      </div>
     </div>
   </div>
 
