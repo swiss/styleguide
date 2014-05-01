@@ -81,6 +81,15 @@
 		]
 	},
 	{
+		"title": "Timeline",
+		"breadcrumb": "Content Components > Widgets > Timeline",
+		"path": "content_components_>_widgets.html#b-timeline",
+		"tokens": [
+			"Content Components > Widgets",
+			"Timeline"
+		]
+	},
+	{
 		"title": "Buttons",
 		"breadcrumb": "Base Layout > Forms > Buttons",
 		"path": "base_layout_>_forms.html#a-buttons",

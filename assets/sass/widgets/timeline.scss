@@ -1,0 +1,137 @@
+/* ==========================================================
+ * timeline.scss
+ * Theme for timelineJS
+ *
+ * Author: Simon Perdrisat, yann@antistatique.net
+ * Date:   2014-05-01 09:38:36
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+.vco-storyjs {
+  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif;
+}
+.vco-storyjs .twitter,
+.vco-storyjs .vcard,
+.vco-storyjs .messege,
+.vco-storyjs .credit,
+.vco-storyjs .caption,
+.vco-storyjs .zoom-in,
+.vco-storyjs .zoom-out,
+.vco-storyjs .back-home,
+.vco-storyjs .time-interval div,
+.vco-storyjs .time-interval-major div,
+.vco-storyjs .nav-container {
+  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif;
+}
+.vco-storyjs .vco-feature h1.date, .vco-storyjs .vco-feature h2.date, .vco-storyjs .vco-feature h3.date, .vco-storyjs .vco-feature h4.date, .vco-storyjs .vco-feature h5.date, .vco-storyjs .vco-feature h6.date {
+  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif;
+}
+.vco-storyjs .timenav h1, .vco-storyjs .flag-content h1, .vco-storyjs .era h1, .vco-storyjs .timenav h2, .vco-storyjs .flag-content h2, .vco-storyjs .era h2, .vco-storyjs .timenav h3, .vco-storyjs .flag-content h3, .vco-storyjs .era h3, .vco-storyjs .timenav h4, .vco-storyjs .flag-content h4, .vco-storyjs .era h4, .vco-storyjs .timenav h5, .vco-storyjs .flag-content h5, .vco-storyjs .era h5, .vco-storyjs .timenav h6, .vco-storyjs .flag-content h6, .vco-storyjs .era h6 {
+  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif;
+}
+.vco-storyjs p, .vco-storyjs blockquote, .vco-storyjs blockquote p, .vco-storyjs .twitter blockquote p {
+  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif !important;
+}
+.vco-storyjs blockquote, .vco-storyjs blockquote p, .vco-storyjs .twitter blockquote p {
+  font-style: normal;
+}
+.vco-storyjs .vco-feature h1, .vco-storyjs .vco-feature h2, .vco-storyjs .vco-feature h3, .vco-storyjs .vco-feature h4, .vco-storyjs .vco-feature h5, .vco-storyjs .vco-feature h6 {
+  font-family: 'Frutiger Neue W02 Light', Arial, sans-serif;
+}
+.timeline-tooltip {
+  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif;
+}
+
+.vco-slider .slider-item .content .pad-top .text .container {
+  padding: 0;
+  margin: 0;
+}
+.vco-slider .slider-item .content .content-container.layout-media .text .container,
+.vco-skinny .vco-slider .slider-item .content .layout-text-media .text .container,
+.vco-skinny .vco-slider .slider-item .content .layout-text-media h2,
+.vco-skinny .vco-slider .slider-item .content .layout-text-media h3 {
+  text-align: left !important;
+}
+
+.vco-storyjs a:hover,
+.vco-notouch .vco-navigation .timenav .content .marker:hover .flag .flag-content h3,
+.vco-notouch .vco-navigation .timenav .content .marker:hover .flag-small .flag-content h3,
+.vco-notouch .vco-navigation .timenav .content .marker.active:hover .flag .flag-content h3,
+.vco-notouch .vco-navigation .timenav .content .marker.active:hover .flag-small .flag-content h3 {
+  color: #CC0000 !important;
+}
+
+.vco-timeline .vco-navigation .timenav .content .marker.active .dot,
+.vco-timeline .vco-navigation .timenav-background .timenav-line {
+  background-color: #CC0000 !important;
+}
+
+.vco-storyjs a,.vco-timeline .vco-navigation .timenav .content .marker.active .flag .flag-content h3, .vco-timeline .vco-navigation .timenav .content .marker.active .flag-small .flag-content h3 {
+  color: #006699;
+}
+
+.vco-timeline .vco-navigation .timenav .content .marker .line .event-line {
+  background-color: #000000;
+}
+.vco-timeline .vco-navigation .timenav .content .marker.active .line,
+.vco-timeline .vco-navigation .timenav .content .marker.active .line .event-line {
+  background-color: #CC0000;
+}
+
+.vco-skinny.vco-notouch .vco-slider .nav-previous:hover,
+.vco-skinny.vco-notouch .vco-slider .nav-next:hover {
+  background-color: rgba(0,0,0,0.05);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.vco-slider .slider-item .content .content-container.layout-media .twitter, .vco-slider .slider-item .content .content-container.layout-media .wikipedia, .vco-slider .slider-item .content .content-container.layout-media .googleplus {
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+.vco-storyjs .vcard {
+  /* float: left; */
+}
+
+.vco-timeline .vco-navigation .vco-toolbar .back-home .icon {
+  background: none;
+  font-family: 'AdminCH_Symbols';
+  width: 1.5em;
+}
+.vco-timeline .vco-navigation .vco-toolbar .back-home .icon:hover {
+  color: #000000;
+}
+
+.vco-timeline .vco-navigation .vco-toolbar .back-home .icon:before {
+  content: '<';
+  font-family: 'AdminCH_Symbols';
+  font-size: 2em;
+}
+
+.vco-skinny.vco-notouch .vco-slider .nav-next .icon,
+.vco-skinny.vco-notouch .vco-slider .nav-previous .icon {
+  background: none;
+  font-family: 'AdminCH_Symbols';
+  height: 36px;
+}
+.vco-skinny.vco-notouch .vco-slider .nav-next .icon:before {
+  content: '>';
+  font-family: 'AdminCH_Symbols';
+  font-size: 4em;
+  color: #BBBBBB;
+}
+.vco-skinny.vco-notouch .vco-slider .nav-previous .icon:before {
+  content: '<';
+  font-family: 'AdminCH_Symbols';
+  font-size: 4em;
+  color: #BBBBBB;
+}
+
+.vco-skinny.vco-notouch .vco-slider .nav-previous .nav-container .icon, .vco-skinny.vco-notouch .vco-slider .nav-next .nav-container .icon {
+  /* opacity: 0.01; */
+}
+
