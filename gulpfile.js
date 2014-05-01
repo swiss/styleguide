@@ -91,10 +91,11 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('hologram', function () {
-  gulp.src('./build')
-    .pipe(shell('LC_ALL="en_US.UTF-8" hologram'));
-});
+
+gulp.task('hologram', shell.task([
+  'LC_ALL="en_US.UTF-8"',
+  'hologram'
+]))
 
 gulp.task('build-images', function() {
   return gulp.src(['assets/img/**'])
@@ -109,11 +110,12 @@ gulp.task('build-fonts', function() {
 gulp.task('default', ['styles', 'watch', 'vendors', 'browser-sync', 'scripts', 'build-images', 'build-fonts']);
 gulp.task('build', ['styles', 'scripts', 'vendors', 'build-images', 'build-fonts']);
 
-gulp.task('watch', function() {
+gulp.task('watch',['styles', 'scripts', 'vendors', 'build-images', 'build-fonts'], function() {
   gulp.watch('assets/sass/**/*.scss', ['styles']);
   gulp.watch('assets/js/*.js', ['scripts']);
   gulp.watch('build/**/*.{js,css}', ['hologram']);
   gulp.watch('assets/**/*.md', ['hologram']);
+  gulp.watch('assets/**/*.js', ['hologram']);
   gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], ['build-images']);
   gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], ['build-fonts']);
 });
