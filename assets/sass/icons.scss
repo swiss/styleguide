@@ -94,7 +94,10 @@ For **inside-icon** element, use the global `.icon` and `.icon--before` or `.ico
   &.icon--after:after {font-family: $admin-icons;}
 }
 
-span.icon {font-family: $admin-icons;}
+span.icon {
+  font-family: $admin-icons;
+  position: relative;
+}
 
 $icon-list: (
   exclam                  '!',

@@ -27,7 +27,7 @@ On smartphones, the search function can be accessed via an icon in the Header.
 <div class="container-fluid">
 
   <header>
-    <form class="form-horizontal" role="form">
+    <form class="form-horizontal form-search pull-right" role="form">
       <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
     </form>
   </header>
@@ -47,9 +47,34 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 ```
 */
 
-.search-field {
-  padding-left: 30px;
+.form-search {
+  display: inline-block;
   position: relative;
+  .icon {
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    z-index: 999;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .icon--search {left: 10px;}
+  .icon--close {
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: none;
+    right: 10px;
+  }
+}
+
+.search-field {
+  padding: 0px 30px;
+  position: relative;
+  height: 25px;
+  width: 160px;
+  transition: width 0.4s;
+  &:focus {width: 250px;}
   &:before {
     display: block;
     position: absolute;
@@ -61,6 +86,11 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
     content: 'S';
     font-family: $admin-icons;
   }
+}
+
+.search-field:focus + .icon--close {
+  opacity: 1;
+  display: inline-block;
 }
 
 .tt-dropdown-menu {
