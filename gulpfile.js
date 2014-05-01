@@ -39,8 +39,16 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('build/js'));
 });
 
-// JS vendors concat and minify
-gulp.task('js-vendors', function() {
+// Build vendors
+gulp.task('vendors', function() {
+
+  gulp.src([
+          './bower_components/yamm3/yamm/yamm.css'
+      ])
+      .pipe(concat('vendors.css'))
+      .pipe(minifycss())
+      .pipe(gulp.dest('./build/css'));
+
   gulp.src([
       './bower_components/jquery/jquery.js',
       './bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
@@ -74,15 +82,6 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('build/css'));
 });
 
-// CSS vendors concat and minify
-gulp.task('css-vendors', function() {
-  gulp.src([
-      './bower_components/yamm3/yamm/yamm.css'
-    ])
-    .pipe(concat('vendors.css'))
-    .pipe(minifycss())
-    .pipe(gulp.dest('./build/css'));
-});
 
 gulp.task('browser-sync', function() {
     browserSync.init(['./styleguide/**/*.html'], {
@@ -107,8 +106,8 @@ gulp.task('build-fonts', function() {
           .pipe(gulp.dest('build/fonts'));
 });
 
-gulp.task('default', ['styles', 'watch', 'css-vendors', 'browser-sync', 'scripts', 'build-images', 'build-fonts', 'js-vendors']);
-gulp.task('build', ['styles', 'scripts', 'css-vendors', 'build-images', 'build-fonts', 'js-vendors']);
+gulp.task('default', ['styles', 'watch', 'vendors', 'browser-sync', 'scripts', 'build-images', 'build-fonts']);
+gulp.task('build', ['styles', 'scripts', 'vendors', 'build-images', 'build-fonts']);
 
 gulp.task('watch', function() {
   gulp.watch('assets/sass/**/*.scss', ['styles']);
