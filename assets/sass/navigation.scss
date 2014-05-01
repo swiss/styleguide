@@ -208,9 +208,9 @@ On smartphones, the treecrumb navigation is omitted.
 .treecrumb {
   .dropdown {margin: 0;}
   .nav .open a.dropdown-toggle {
-    background: transparent;
+    background: $white;
     border: 1px solid $silver;
-    border-left-color: transparent;
+    border-left-color: $silver;
     border-bottom: none;
     position: relative;
     z-index: 1001;
@@ -228,12 +228,13 @@ On smartphones, the treecrumb navigation is omitted.
       background: transparent;
       color: $venetian-red;
     }
+    &:focus {background: transparent;}
     &:before, &:after {
       content: '';
       display: block;
       position: absolute;
       top: -1px;
-      right: -2.7em;
+      right: -2.65em;
       width: 0;
       height: 0;
       border-color: transparent transparent transparent $silver;
@@ -241,7 +242,7 @@ On smartphones, the treecrumb navigation is omitted.
       border-width: 1.35em;
     }
     &:after {
-      right: -2.6em;
+      right: -2.55em;
       border-color: transparent transparent transparent $white;
     }
   }
@@ -249,11 +250,13 @@ On smartphones, the treecrumb navigation is omitted.
     border-left-color: $silver;
     padding-left: 10px;
   }
-  .nav .dropdown.open:first-child a.dropdown-toggle {border-left-color: $silver;}
+  .nav .dropdown.open:first-child a.dropdown-toggle {
+    border-left-color: $silver;
+  }
   .dropdown-menu {
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     border-radius: 0;
-    top: 98%;
+    top: 97%;
     li {display: inline-block;}
     a {
       padding: 5px 15px;

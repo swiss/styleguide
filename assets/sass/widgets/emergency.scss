@@ -1,0 +1,56 @@
+/* ==========================================================
+ * emergency.scss
+ * Emergency alert styles
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-01 09:23:36
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+ /*doc
+---
+title: Emergency
+name: b-emergency
+category: Content Components > Widgets
+---
+
+The emergency banner is only ever shown on the home page in cases of extreme urgency. It is always placed at the very top of the home page.
+
+It is vital that this element should only be used in cases of emergency – i.e. extremely sparingly.
+
+```html_example
+<div class="alert alert--emergency clearfix">
+  <div class="col-sm-3">
+    <h3>Lorem ipsum</h3>
+  </div>
+  <div class="col-sm-9">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, placeat, recusandae, amet, modi hic accusamus cumque id nesciunt debitis nihil neque quaerat reprehenderit iste mollitia laborum natus culpa laboriosam labore.
+    </p>
+  </div>
+</div>
+```
+
+*/
+
+.alert--emergency {
+  background-color: $mocassin;
+  border-left: 20px solid $venetian-red;
+  padding-left: 15px;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    color: $white;
+    content: '!';
+    font-size: 2em;
+    padding-left: 5px;
+  }
+  h3 {
+    margin-top: 0;
+  }
+}

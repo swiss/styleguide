@@ -8,6 +8,11 @@
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
-$(document).ready(function(){
-  $('select').chosen({disable_search_threshold: 10});
-});
+
+(function($) {
+
+  $(document).ready(function(){
+    $('select').chosen({disable_search_threshold: 10});
+  });
+
+}) (jQuery);

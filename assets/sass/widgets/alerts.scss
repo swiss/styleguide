@@ -1,14 +1,14 @@
 /* ==========================================================
  * alerts.scss
  * Alert element styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 09:38:36
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  /*doc
 ---
 title: Alerts
@@ -16,7 +16,7 @@ name: a-alerts
 category: Content Components > Widgets
 ---
 
-Alerts shwon when you need to get the attention of the user with something important.
+Alerts are shown when you need to get the attention of the user with something important.
 
 Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
 
@@ -34,7 +34,8 @@ Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
   padding-left: 35px;
   position: relative;
 
-  &:before {
+  &.alert-warning:before,
+  &.alert-danger:before {
     font-family: $admin-icons;
     content: '!';
     position: absolute;

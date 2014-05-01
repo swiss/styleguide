@@ -63,6 +63,15 @@
 		]
 	},
 	{
+		"title": "Emergency",
+		"breadcrumb": "Content Components > Widgets > Emergency",
+		"path": "content_components_>_widgets.html#b-emergency",
+		"tokens": [
+			"Content Components > Widgets",
+			"Emergency"
+		]
+	},
+	{
 		"title": "Buttons",
 		"breadcrumb": "Base Layout > Forms > Buttons",
 		"path": "base_layout_>_forms.html#a-buttons",
