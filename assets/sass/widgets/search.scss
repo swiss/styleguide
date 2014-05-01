@@ -8,13 +8,13 @@
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
 ---
 title: Site Search
-name: f-site-search
+name: -site-search
 category: Page element > Header
 ---
 
@@ -27,13 +27,63 @@ On smartphones, the search function can be accessed via an icon in the Header.
 <div class="container-fluid">
 
   <header>
-    
-    
-
+    <form class="form-horizontal" role="form">
+      <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+    </form>
   </header>
   <nav class="nav-main"></nav>
 
 </div>
 ```
 
+```js_example
+// You have to store all your data inside `searchData` and define it globaly
+var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
+  "Basel-Landschaft", "Basel-Stadt", "Bern", "Fribourg", "Genève",
+  "Glarus", "Graubünden", "Jura", "Lucerne", "Neuchâtel", "Nidwalden",
+  "Obwalden", "Schaffhausen", "Schwyz", "Solothurn", "St. Gallen",
+  "Thurgau", "Ticino", "Uri", "Valais", "Vaud", "Zug", "Zurich"
+];
+```
 */
+
+.search-field {
+  padding-left: 30px;
+  position: relative;
+  &:before {
+    display: block;
+    position: absolute;
+    z-index: 99999;
+    background: green;
+    left: 10px;
+    top: 3px;
+    color: $black;
+    content: 'S';
+    font-family: $admin-icons;
+  }
+}
+
+.tt-dropdown-menu {
+  background: $white;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  padding: 0;
+  font-size: 13px;
+  border: 1px solid $silver;
+  width: 100%;
+}
+
+.tt-suggestion {
+  font-size: 13px;
+  line-height: 16px;
+  padding: 3px 10px 1px 10px;
+  margin: 0;
+}
+
+.tt-suggestion.tt-cursor {
+  background-color: $smoke;
+}
+
+
+
+
