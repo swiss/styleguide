@@ -1,14 +1,45 @@
 /* ==========================================================
  * breadcrumb.scss
  * Breadcrumb styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-29 14:21:47
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
+
+ /*doc
+---
+title: Treecrumb Federal Administration
+name: z-treecrumb-federal-administration
+category: Navigation Elements > Header
+---
+
+The treecrumb navigation shows the position of the current website within the context of all the websites of the Federal Administration. It also serves as an efficient means of accessing information across departments.
+
+When closed, the treecrumb navigation presents the hierarchical organization of the Federal Administration as a path. When a hierarchical level is clicked on, a menu opens with a collection of links pertinent to the selected hierarchical level.
+
+On smartphones, the treecrumb navigation is omitted.
+
+```html_example
+<div class="container-fluid">
+
+  <header>
+    <ol class="breadcrumb">
+      <li><a href="#">Federal Administration</a></li>
+      <li><a href="#">Department: EDI</a></li>
+    </ol>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+<b>@TODO : Finish it with js !</b>
+```
+
+*/
+
 .breadcrumb {
   a {
     color: $coal;

@@ -1,14 +1,14 @@
 /* ==========================================================
  * navigation.scss
  * Navgiation element styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 nav {
@@ -35,7 +35,7 @@ nav {
 ---
 title: Service Navigation
 name: b-service-navigation
-category: Page element > Header
+category: Navigation Elements > Header
 ---
 
 The service navigation is positioned at the top right of the header next to the language selection. It contains links that are of overriding importance (e.g. Contact, Jobs, Media and Contact). Ideally, there should be three, but in no case should there be more than five links in the service navigation.
@@ -76,7 +76,7 @@ On mobile devices the links in the service navigation are moved to the footer.
 ---
 title: Language Selection via a Link List
 name: d-lang-navigation-list
-category: Page element > Header
+category: Navigation Elements > Header
 ---
 
 The languages available are shown as links at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.). The following rules apply:

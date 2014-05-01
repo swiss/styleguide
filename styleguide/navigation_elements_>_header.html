@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Navigation Elements > Header</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./build/css/vendors.css">
+    <link rel="stylesheet" href="./build/css/cortana.css">
+
+    <!-- Source CSS -->
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./css/vendors.css">
+</head>
+
+  <body class="cortana-body">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Page element</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a class="active" href="page_element_>_header.html">Header</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Content Components</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="content_components_>_widgets.html">Widgets</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Base Layout</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_layout_>_forms.html">Forms</a></li>
+              
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_layout_>_visual.html">Visual</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_layout_>_tables.html">Tables</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_layout_>_typography.html">Typography</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Navigation Elements</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="navigation_elements_>_header.html">Header</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="navigation_elements_>_content_navigation.html">Content Navigation</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1><img src="build/img/ch.jpg">Header</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav">
+          <ul>
+             
+              
+                <li><a href="#a-header-logo">Logo with Link to Home Page</a></li>
+              
+             
+              
+                <li><a href="#b-service-navigation">Service Navigation</a></li>
+              
+             
+              
+                <li><a href="#c-lang-select">Language Selection via a Dropdown List</a></li>
+              
+             
+              
+                <li><a href="#d-lang-navigation-list">Language Selection via a Link List</a></li>
+              
+             
+              
+                <li><a href="#e-topics">Topics A-Z</a></li>
+              
+             
+              
+                <li><a href="#z-treecrumb-federal-administration">Treecrumb Federal Administration</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper">
+
+
+<h1 id="a-header-logo">Logo with Link to Home Page</h1>
+
+<p>The Confederation logo with the coat of arms and the four-language wordmark as well as the name of the organizational unit (department, public office, agency, or mission, or, alternatively, the title of the website) together form the designation of the website. The complete designation contains a link which takes the user back to the home page from any page of the website.</p>
+<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+    <a href="#" class="brand hidden-xs">
+      <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+      <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
+    </a>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;brand hidden-xs&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;img/logo-CH.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;The Federal Authorities of the Swiss Confederation, www.admin.ch&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;h1&gt;</span>Department of the Environment,<span class="nt">&lt;br&gt;</span> Transport, Energy and Communications<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="b-service-navigation">Service Navigation</h1>
+
+<p>The service navigation is positioned at the top right of the header next to the language selection. It contains links that are of overriding importance (e.g. Contact, Jobs, Media and Contact). Ideally, there should be three, but in no case should there be more than five links in the service navigation.</p>
+
+<p>On mobile devices the links in the service navigation are moved to the footer.</p>
+<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+    <nav class="nav-service">
+      <ul>
+        <li><a href="#">Emergencies</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-service&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Emergencies<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Jobs<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Media<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="c-lang-select">Language Selection via a Dropdown List</h1>
+
+<p>The language selection can be presented in the form of a space-saving dropdown menu. The two-digit abbreviations as per ISO 639-2/3 are used for this purpose (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, etc.). If the selected is changed, the content of the current web page is also altered. The following rules apply:</p>
+
+<ul>
+<li>The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian.</li>
+<li>Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.</li>
+</ul>
+
+<p>On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.</p>
+<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+
+    <nav class="select-lang pull-right">
+      <select class="form-control select-lang">
+        <option>DE</option>
+        <option>FR</option>
+        <option>IT</option>
+        <option>RM</option>
+        <option>EN</option>
+      </select>
+    </nav>
+
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;header&gt;</span>
+
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;select-lang pull-right&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;form-control select-lang&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option&gt;</span>DE<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>FR<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>IT<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>RM<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>EN<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="d-lang-navigation-list">Language Selection via a Link List</h1>
+
+<p>The languages available are shown as links at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.). The following rules apply:</p>
+
+<p>The language selection can be presented in the form of a space-saving dropdown list box. This solution must be chosen if more than four languages have to be supported.</p>
+
+<p>The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian. It is also possible to show the four official languages as links next to one another. There are as yet no finalized design guidelines for this.
+Romansh and English are only shown if the content is available in these languages.</p>
+
+<p>Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.</p>
+
+<p>If no content in one of the languages is available on only some of the pages, the language link is shown as `disabled. In the navigation the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).</p>
+
+<p>On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.</p>
+<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+    <nav class="nav-lang">
+      <ul>
+        <li><a class="active" href="#">DE</a></li>
+        <li><a href="#">FR</a></li>
+        <li><a href="#">IT</a></li>
+        <li><a class="disabled" href="#">RM</a></li>
+        <li><a href="#">EN</a></li>
+      </ul>
+    </nav>
+    <nav class="nav-service">
+      <ul>
+        <li><a href="#">Emergencies</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-lang&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>DE<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>FR<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>IT<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;disabled&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>RM<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>EN<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-service&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Emergencies<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Jobs<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Media<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="e-topics">Topics A-Z</h1>
+
+<p>The topics A-Z search function is an alternative means of accessing the contents of the website. The sub-topics of website can be selected from an alphabetical catalog.</p>
+
+<p>The topics A-Z section is positioned on the right-hand side of the header. When it is clicked on, a flyout opens which contains an A-Z tab navigation. The topics can also be grouped in other tabs, e.g. according to organizational unit.</p>
+
+<p>On smartphones, the A-Z navigation is accessed via an icon together with the search function.</p>
+<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+  <header>
+
+    <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
+    <nav class="navbar yamm yamm--select" role="navigation">
+      <ul>
+        <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
+        <li class="dropdown pull-right">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themen A-Z <span class="icon icon--bottom"></span></a>
+          <ul class="dropdown-menu">
+            <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+            <li>
+              <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+              <div class="yamm-content container-fluid">
+
+                <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+                <a href="#" class="yamm-close icon icon--after icon--close">Close</a>
+
+                <!-- The tab navigation -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#eda" data-toggle="tab">EDA</a></li>
+                  <li><a href="#deza" data-toggle="tab">DEZA</a></li>
+                </ul>
+
+                <!-- The tab content -->
+                <div class="tab-content">
+
+                  <div class="tab-pane active" id="eda">
+
+                    <!-- The inside-tab navigation -->
+                    <ul class="nav nav-tabs nav-tabs-alphabet">
+                      <li class="active"><a href="#eda-tab-a" data-toggle="tab">A</a></li>
+                      <li><a href="#eda-tab-b" data-toggle="tab">B</a></li>
+                      <li><a href="#eda-tab-c" data-toggle="tab">C</a></li>
+                      <li><a href="#eda-tab-d" data-toggle="tab">D</a></li>
+                      <li><a href="#eda-tab-e" data-toggle="tab">E</a></li>
+                      <li><a href="#eda-tab-f" data-toggle="tab">F</a></li>
+                      <li><a href="#eda-tab-g" data-toggle="tab">G</a></li>
+                      <li><a href="#eda-tab-h" data-toggle="tab">H</a></li>
+                      <li><a href="#eda-tab-i" data-toggle="tab">I</a></li>
+                      <li><a href="#eda-tab-j" data-toggle="tab">J</a></li>
+                      <li><a href="#eda-tab-k" data-toggle="tab">K</a></li>
+                      <li><a href="#eda-tab-l" data-toggle="tab">L</a></li>
+                      <li><a href="#eda-tab-m" data-toggle="tab">M</a></li>
+                      <li><a href="#eda-tab-n" data-toggle="tab">N</a></li>
+                      <li><a href="#eda-tab-o" data-toggle="tab">O</a></li>
+                      <li><a href="#eda-tab-p" data-toggle="tab">P</a></li>
+                      <li><a href="#eda-tab-q" data-toggle="tab">Q</a></li>
+                      <li><a href="#eda-tab-r" data-toggle="tab">R</a></li>
+                      <li><a href="#eda-tab-s" data-toggle="tab">S</a></li>
+                      <li><a href="#eda-tab-t" data-toggle="tab">T</a></li>
+                      <li><a href="#eda-tab-u" data-toggle="tab">U</a></li>
+                      <li><a href="#eda-tab-v" data-toggle="tab">V</a></li>
+                      <li><a href="#eda-tab-w" data-toggle="tab">W</a></li>
+                      <li><a href="#eda-tab-x" data-toggle="tab">X</a></li>
+                      <li><a href="#eda-tab-y" data-toggle="tab">Y</a></li>
+                      <li><a href="#eda-tab-z" data-toggle="tab">Z</a></li>
+                    </ul>
+
+                    <!-- The inside-tab content -->
+                    <div class="tab-content">
+                      <!-- All `tab-pane` can contain any kind of content like table, list, article... -->
+                      <div class="tab-pane active" id="eda-tab-a">a. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-b">b. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-c">c. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-d">d. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-e">e. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-f">f. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-g">g. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-h">h. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-i">i. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-j">j. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-k">k. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-l">l. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-m">m. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-n">n. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-o">o. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-p">p. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-q">q. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-r">r. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-s">s. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-t">t. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-u">u. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-v">v. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-w">w. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-x">x. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-y">y. Some content...</div>
+                      <div class="tab-pane" id="eda-tab-z">z. Some content...</div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="deza">
+                    <p>Same as previous</p>
+                  </div>
+
+                </div><!-- Main tab content end -->
+
+              </div><!-- `yamm-content` end -->
+            </li><!-- Dropdown `li` end -->
+          </ul><!-- Dropdown `ul` end -->
+        </li><!-- Navbar item end -->
+      </ul><!-- Navbar list end -->
+    </nav><!-- Navbar end -->
+
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header&gt;</span>
+
+    <span class="c">&lt;!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library --&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar yamm yamm--select&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="c">&lt;!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right --&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown pull-right&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Themen A-Z <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--bottom&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- The `li` presence heritated from the classic dropdown structure, only one in that case --&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="c">&lt;!-- The `yamm-content` can contain any kind of content like tab, table, list, article... --&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;yamm-content container-fluid&quot;</span><span class="nt">&gt;</span>
+
+                <span class="c">&lt;!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu --&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;yamm-close icon icon--after icon--close&quot;</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/a&gt;</span>
+
+                <span class="c">&lt;!-- The tab navigation --&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav nav-tabs&quot;</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>EDA<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#deza&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>DEZA<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+
+                <span class="c">&lt;!-- The tab content --&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-content&quot;</span><span class="nt">&gt;</span>
+
+                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane active&quot;</span> <span class="na">id=</span><span class="s">&quot;eda&quot;</span><span class="nt">&gt;</span>
+
+                    <span class="c">&lt;!-- The inside-tab navigation --&gt;</span>
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav nav-tabs nav-tabs-alphabet&quot;</span><span class="nt">&gt;</span>
+                      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-a&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>A<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-b&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>B<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-c&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>C<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-d&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>D<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-e&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>E<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-f&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>F<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-g&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>G<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-h&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>H<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-i&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>I<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-j&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>J<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-k&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>K<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-l&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>L<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-m&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>M<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-n&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>N<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-o&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>O<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-p&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>P<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-q&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Q<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-r&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>R<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-s&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>S<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-t&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>T<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-u&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>U<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-v&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>V<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-w&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>W<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-x&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>X<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-y&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Y<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#eda-tab-z&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Z<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;/ul&gt;</span>
+
+                    <span class="c">&lt;!-- The inside-tab content --&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-content&quot;</span><span class="nt">&gt;</span>
+                      <span class="c">&lt;!-- All `tab-pane` can contain any kind of content like table, list, article... --&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane active&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-a&quot;</span><span class="nt">&gt;</span>a. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-b&quot;</span><span class="nt">&gt;</span>b. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-c&quot;</span><span class="nt">&gt;</span>c. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-d&quot;</span><span class="nt">&gt;</span>d. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-e&quot;</span><span class="nt">&gt;</span>e. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-f&quot;</span><span class="nt">&gt;</span>f. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-g&quot;</span><span class="nt">&gt;</span>g. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-h&quot;</span><span class="nt">&gt;</span>h. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-i&quot;</span><span class="nt">&gt;</span>i. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-j&quot;</span><span class="nt">&gt;</span>j. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-k&quot;</span><span class="nt">&gt;</span>k. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-l&quot;</span><span class="nt">&gt;</span>l. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-m&quot;</span><span class="nt">&gt;</span>m. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-n&quot;</span><span class="nt">&gt;</span>n. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-o&quot;</span><span class="nt">&gt;</span>o. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-p&quot;</span><span class="nt">&gt;</span>p. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-q&quot;</span><span class="nt">&gt;</span>q. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-r&quot;</span><span class="nt">&gt;</span>r. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-s&quot;</span><span class="nt">&gt;</span>s. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-t&quot;</span><span class="nt">&gt;</span>t. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-u&quot;</span><span class="nt">&gt;</span>u. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-v&quot;</span><span class="nt">&gt;</span>v. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-w&quot;</span><span class="nt">&gt;</span>w. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-x&quot;</span><span class="nt">&gt;</span>x. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-y&quot;</span><span class="nt">&gt;</span>y. Some content...<span class="nt">&lt;/div&gt;</span>
+                      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;eda-tab-z&quot;</span><span class="nt">&gt;</span>z. Some content...<span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                  <span class="nt">&lt;/div&gt;</span>
+
+                  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;deza&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;p&gt;</span>Same as previous<span class="nt">&lt;/p&gt;</span>
+                  <span class="nt">&lt;/div&gt;</span>
+
+                <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- Main tab content end --&gt;</span>
+
+              <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- `yamm-content` end --&gt;</span>
+            <span class="nt">&lt;/li&gt;</span><span class="c">&lt;!-- Dropdown `li` end --&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span><span class="c">&lt;!-- Dropdown `ul` end --&gt;</span>
+        <span class="nt">&lt;/li&gt;</span><span class="c">&lt;!-- Navbar item end --&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span><span class="c">&lt;!-- Navbar list end --&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span><span class="c">&lt;!-- Navbar end --&gt;</span>
+
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="z-treecrumb-federal-administration">Treecrumb Federal Administration</h1>
+
+<p>The treecrumb navigation shows the position of the current website within the context of all the websites of the Federal Administration. It also serves as an efficient means of accessing information across departments.</p>
+
+<p>When closed, the treecrumb navigation presents the hierarchical organization of the Federal Administration as a path. When a hierarchical level is clicked on, a menu opens with a collection of links pertinent to the selected hierarchical level.</p>
+
+<p>On smartphones, the treecrumb navigation is omitted.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="container-fluid">
+
+  <header>
+    <ol class="breadcrumb">
+      <li><a href="#">Federal Administration</a></li>
+      <li><a href="#">Department: EDI</a></li>
+    </ol>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+<b>@TODO : Finish it with js !</b>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">&quot;breadcrumb&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Federal Administration<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Department: EDI<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;b&gt;</span>@TODO : Finish it with js !<span class="nt">&lt;/b&gt;</span>
+</pre></div></div></div>      </div>
+    </div>
+  </div>
+
+  <!-- Styleguide JS -->
+  <script src="build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+      // avoid conflict with potential other jQuery loaded on the styleguide
+      var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="build/js/main.js"></script>
+
+  <!-- Source JS -->
+  <script src="js/vendors.min.js"></script>
+  <script src="js/main.min.js"></script>
+
+</body>
+</html>

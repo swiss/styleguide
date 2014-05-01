@@ -1,0 +1,27 @@
+/* ==========================================================
+ * helpers.scss
+ * Different helpers classes that add various tweaks to other modules
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-01 15:30:10
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
+// Right separator
+.separator {
+  @include separator($light-grey);
+}
+
+// Left separator
+.separator-left {
+  @include separator($light-grey, left);
+}
+
+// Separator with both borders
+.separator-both {
+  @include separator($light-grey, both);
+}

@@ -100,9 +100,13 @@
 // Widgets
 @import 'widgets/alerts';
 @import 'widgets/emergency';
+@import 'widgets/pagination';
 @import 'tab';
 @import 'widgets/search';
 @import 'widgets/timeline';
 
 // Plugins
 @import 'chosen-theme';
+
+// Helpers
+@import 'helpers';
