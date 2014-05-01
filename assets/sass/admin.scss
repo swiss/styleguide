@@ -1,15 +1,15 @@
 /* ==========================================================
  * admin.scss
  * Project sass files and font files import
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 09:38:36
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
- @charset "UTF-8";
+
+@charset "UTF-8";
 
 @font-face {
     font-family: 'Admin Icons';
@@ -98,7 +98,7 @@
 @import 'fieldsets';
 
 // Widgets
-@import 'alerts';
+@import 'widgets/alerts';
 @import 'tab';
 
 // Plugins
