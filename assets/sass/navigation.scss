@@ -43,6 +43,7 @@ The service navigation is positioned at the top right of the header next to the 
 On mobile devices the links in the service navigation are moved to the footer.
 
 ```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
   <header>
@@ -92,6 +93,7 @@ If no content in one of the languages is available on only some of the pages, th
 On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
 
 ```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
   <header>
@@ -137,7 +139,7 @@ On smartphones the language selection is always included in a drawer section abo
 /*doc
 ---
 title: Treecrumb Federal Administration
-name: -treecrumb-federal-administration
+name: g-treecrumb-federal-administration
 category: Page element > Header
 ---
 
@@ -148,59 +150,51 @@ When closed, the treecrumb navigation presents the hierarchical organization of 
 On smartphones, the treecrumb navigation is omitted.
 
 ```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
   <header>
     
+    <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
     <nav class="navbar treecrumb" role="navigation">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-          <a id="admin-dropdown" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Federal Administration</a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
-              <li class="dropdown-header">Federal Administration admin.ch</li>
-              <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
-              <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
-              <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
-              <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
-              <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
-              <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
-              <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-          <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Dropdown 2</a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
-              <li role="presentation" class="divider"></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!-- /.container-fluid -->
+      <ul class="nav navbar-nav">
+
+        <!-- Treecrumb dropdown element -->
+        <li class="dropdown">
+          <!-- Dropdown label -->
+          <a id="admin-dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Federal Administration</a>
+          <!-- Dropdown list element -->
+          <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
+            <!-- Dropdown title, can ben place anywhere in the list -->
+            <li class="dropdown-header">Federal Administration admin.ch</li>
+            <!-- Dropdown element link -->
+            <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
+            <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
+            <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
+            <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
+            <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
+            <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
+            <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" id="service-dropdown" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Departement: EDI</a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="service-dropdown">
+            <li class="dropdown-header">Departement: EDI</li>
+            <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
+            <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
+            <li><a href="#">Integrationsbüros</a></li>
+          </ul>
+        </li>
+
+      </ul>
     </nav>
 
   </header>
   <nav class="nav-main"></nav>
 
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 ```
 
 */

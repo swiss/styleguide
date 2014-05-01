@@ -49,6 +49,7 @@ The topics A-Z section is positioned on the right-hand side of the header. When 
 On smartphones, the A-Z navigation is accessed via an icon together with the search function.
 
 ```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
   <header>
     
@@ -215,6 +216,7 @@ The language selection can be presented in the form of a space-saving dropdown m
 On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
 
 ```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
   <header>
