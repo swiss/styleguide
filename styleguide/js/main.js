@@ -43,8 +43,8 @@
 
   // Disable dropdown-menu closing click
   $(document).on('click', '.yamm .dropdown-menu', function(e) {
-    e.stopPropagation()
-  })
+    e.stopPropagation();
+  });
 
   // Trigger close yamm menu
   $yamm.each(function () {
