@@ -68,7 +68,9 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
               <div class="yamm-content container-fluid">
 
                 <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
-                <a href="#" class="yamm-close icon icon--after icon--close">Close</a>
+                <div class="row">
+                  <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+                </div>
 
                 <!-- The tab navigation -->
                 <ul class="nav nav-tabs">

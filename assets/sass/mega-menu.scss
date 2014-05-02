@@ -1,7 +1,7 @@
 /* ==========================================================
  * mega-menu.scss
  * Description
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 15:34:07
  *
@@ -12,7 +12,7 @@
 .yamm {
   display: block;
   min-height: 0;
-  .yamm-content {padding: 20px 20px !important;}
+  .yamm-content {padding: 5px 20px 20px 20px !important;}
   .dropdown {margin-left: 0;}
   .dropdown-menu {
     width: 100%;
@@ -23,11 +23,19 @@
   }
 }
 
-.yamm-close {
+.yamm-close-bottom {
   position: absolute;
-  top: 15px;
-  right: 20px;
-  &:after {
-    font-size: 11px;
+  bottom: 0;
+  width: 100px;
+  left: 50%;
+  margin-left: -50px;
+  background: $smoke;
+  border-top: 1px solid $silver !important;
+  border-left: 1px solid $silver;
+  border-right: 1px solid $silver;
+  text-align: center;
+  color: $empress;
+  &:hover {
+    color: $venetian-red;
   }
 }

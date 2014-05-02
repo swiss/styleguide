@@ -33,6 +33,210 @@ nav {
 
 /*doc
 ---
+title: Global Navigation
+name: aa-globalnavigation
+category: Navigation Elements > Header
+---
+
+The global navigation shows the main points of access to a website as tabs. It is separated from the header above by a red line. The terminology used for the tabs should be chosen carefully, as this is what gives the user the first impression of the purpose of the website.
+
+Behavior:
+Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The background is darkened.
+
+There are two obligatory flyout types: the teaser and the list flyout. In the teaser flyout, the second navigation level, and in the list flyout the second and third navigation levels can be selected directly. This makes it possible to skip navigation nodes for which there are no contents.
+
+It is also possible to develop and use new flyout types. For instance, a country selection flyout was developed for the EDA.
+
+The flyout can be closed again by clicking on the “close” function at the top right, the tab at the bottom edge, by clicking on the background, or by clicking on the active tab again.
+
+Only on the home page are all the tabs closed. If the user navigates in the area below a tab, this tab remains actively selected.
+
+A flyout can contain a teaser, which consists of a linked heading, an image, and a descriptive text (max. 70 characters including spaces).
+
+```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+  <header>
+
+  </header>
+  <nav class="nav-main yamm navbar" role="navigation">
+    <!-- The tab navigation -->
+    <ul class="nav navbar-nav">
+      <li class="dropdown yamm-fw">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+        <ul class="dropdown-menu" role="menu">
+          <li class="grid-demo">
+            <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+            <div class="yamm-content container-fluid">
+              <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+              <div class="row">
+                <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">.col-sm-12</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">.col-sm-6</div>
+                <div class="col-sm-6">.col-sm-6</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">.col-sm-4</div>
+                <div class="col-sm-4">.col-sm-4</div>
+                <div class="col-sm-4">.col-sm-4</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">.col-sm-3</div>
+                <div class="col-sm-3">.col-sm-3</div>
+                <div class="col-sm-3">.col-sm-3</div>
+                <div class="col-sm-3">.col-sm-3</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">.col-sm-2</div>
+                <div class="col-sm-2">.col-sm-2</div>
+                <div class="col-sm-2">.col-sm-2</div>
+                <div class="col-sm-2">.col-sm-2</div>
+                <div class="col-sm-2">.col-sm-2</div>
+                <div class="col-sm-2">.col-sm-2</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+              </div>
+
+              <!-- The `yamm-close-bottom` should always be at the end of the `yamm-content` to close the mega-menu -->
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+
+            </div>
+          </li>
+        </ul><!-- Dropdown `ul` end -->
+      </li>
+      <li class="dropdown yamm-fw">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+        <ul class="dropdown-menu" role="menu">
+          <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+          <li>
+            <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+            <div class="yamm-content container-fluid">
+
+              <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+              <div class="row">
+                <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+              </div>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, quae, ut, numquam tempora facilis mollitia temporibus error dolorem vel ea debitis perspiciatis doloremque necessitatibus dignissimos pariatur minima molestiae aliquid voluptatibus.</p>
+
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+
+            </div><!-- `yamm-content` end -->
+          </li><!-- Dropdown `li` end -->
+        </ul><!-- Dropdown `ul` end -->
+      </li>
+    </ul>
+  </nav>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+```
+
+*/
+
+.navbar {
+  border-radius: 0;
+}
+
+.nav-main.yamm .nav {
+  margin: 0 1.6em;
+  border-left: 1px solid $menu-border-dark;
+  > li {
+    border-right: 1px solid $menu-border-dark;
+    border-left: 1px solid $menu-border-light;
+    > a {
+      height: 70px;
+      background: $menu-gradient;
+      color: $coal;
+      font-size: 0.9em;
+      &:after {
+        content: ',';
+        font-family: $admin-icons;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: $empress;
+        font-size: 0.9em;
+      }
+      &:hover {
+        background: $menu-gradient;
+        color: $venetian-red;
+      }
+    }
+  }
+  & + .tab-content {
+    padding: 0;
+  }
+  .dropdown-menu li {
+    margin-left: 0;
+    &:hover a {border-top: none; padding-bottom: 0;}
+  }
+  .dropdown.open > a {
+    z-index: 9999;
+    background: $white;
+    border-top: 5px solid $venetian-red;
+    margin-top: -6px;
+    height: 77px;
+    &:after {
+      content: ';';
+    }
+  }
+}
+
+.grid-demo {
+  .col-sm-1,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12 {
+    background: $silver;
+    text-align: center;
+    margin-bottom: 5px;
+    border-right: 1px solid $white;
+    border-left: 1px solid $white;
+  }
+}
+
+/*doc
+---
 title: Service Navigation
 name: b-service-navigation
 category: Navigation Elements > Header
@@ -154,7 +358,7 @@ On smartphones, the treecrumb navigation is omitted.
 <div class="container-fluid">
 
   <header>
-    
+
     <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
     <nav class="navbar treecrumb" role="navigation">
       <ul class="nav navbar-nav">

@@ -1,7 +1,7 @@
 /* ==========================================================
  * rich-menu.js
  * Add overlay when openning a rich yamm menu and define open/close events
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 11:48:48
  *
@@ -13,11 +13,11 @@
 
   // Keep jQuery object in variables
   var $yamm = $('.yamm'),
-      $yammClose = $('.yamm-close'),
+      $yammClose = $('.yamm-close, .yamm-close-bottom'),
       $body = $('body'),
       $dropdown = $('.dropdown'),
       $dropdownToggle = $('.dropdown-toggle'),
-      $dropddownMenu = $('.dropdown-menu');
+      $dropdownMenu = $('.dropdown-menu');
 
   // Toggle overlay
   $yamm.find($dropdownToggle).click(function () {
@@ -32,7 +32,7 @@
   $yamm.find($dropdown).on({
       "shown.bs.dropdown": function() {
           $(this).data('closable', false);
-      },
+       },
       "click": function() {
           $(this).data('closable', true);
       },
@@ -42,15 +42,15 @@
   });
 
   // Disable dropdown-menu closing click
-  $(document).on('click', '.yamm .dropdown-menu', function(e) {
+  $(document).on('click', '.yamm .dropdown-menu', function (e) {
     e.stopPropagation();
   });
 
   // Trigger close yamm menu
-  $yamm.each(function () {
+  $dropdown.each(function () {
     var $that = $(this);
-    $that.find($yammClose).click( function (event) {
-      event.preventDefault();
+    $that.find($yammClose).click( function (e) {
+      e.preventDefault();
       $that.find($dropdownToggle).trigger("click");
     });
   });
