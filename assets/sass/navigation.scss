@@ -205,7 +205,7 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
   .dropdown.open > a {
     z-index: 9999;
     background: $white;
-    border-top: 5px solid $venetian-red;
+    border-top: 7px solid $venetian-red;
     margin-top: -6px;
     height: 77px;
     &:after {

@@ -1,14 +1,51 @@
 /* ==========================================================
  * tab.scss
  * Tab styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 15:31:37
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
+ @charset "UTF-8";
+
+ /*doc
+ ---
+ title: Tabs
+ name: c-tabs
+ category: Content Components > Widgets
+ ---
+
+ Tab navigation is used to group related contents locally within the same page. By way of exception, the font color of the tabs is dark gray (rather than blue) here. The active tab is highlighted with the red bar and the white background color.
+
+ Please note that the contents in the tabs are only used for presentation purposes here. The actual contents are contingent on the purpose of their use (e.g. search results or “further information”).
+
+ Reference in detailed specification: Chapter **2.5.4**
+
+ ```html_example
+ <div class="col-sm-10 col-sm-offset-1">
+   <!-- Nav tabs -->
+   <ul class="nav nav-tabs">
+     <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+     <li><a href="#profile" data-toggle="tab">Profile</a></li>
+     <li><a href="#messages" data-toggle="tab">Messages</a></li>
+     <li><a href="#settings" data-toggle="tab">Settings</a></li>
+   </ul>
+
+   <!-- Tab panes -->
+   <div class="tab-content tab-border">
+     <div class="tab-pane active" id="home">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, voluptas, repudiandae, sequi, aliquam eveniet laborum sunt accusantium quisquam esse obcaecati similique iure voluptates nobis provident totam autem odit quos eligendi!</div>
+     <div class="tab-pane" id="profile">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, et nam molestiae repellat voluptas. Praesentium, earum reprehenderit quam voluptatem qui minus neque? Libero, minima magni ab dolor nemo reiciendis aperiam.</div>
+     <div class="tab-pane" id="messages">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, qui, eligendi veritatis tenetur magnam aut voluptates nam optio eveniet ad quisquam est blanditiis cumque error illum sapiente consectetur tempora impedit?</div>
+     <div class="tab-pane" id="settings">4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, libero, alias veniam a eveniet dolores necessitatibus nam officiis blanditiis ea expedita vitae minima et inventore dolorum quibusdam natus commodi rerum.</div>
+   </div>
+ </div>
+ ```
+
+ */
+
 .nav-tabs li {
   margin-left: 0;
   a {
@@ -24,7 +61,9 @@
   }
   &:hover a {
     background: $smoke;
-    padding-top: 8px;
+    color: $venetian-red;
+    border-right-color: $silver;
+    border-bottom-color: transparent;
   }
   &.active a, &.active:hover a {
     background: $white;
@@ -35,6 +74,10 @@
     border-top: 3px solid $venetian-red;
     padding-top: 8px;
   }
+  > a:hover {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
 }
 
 .tab-content {
@@ -44,6 +87,13 @@
     border-top-color: transparent;
     padding: 20px;
   }
+  &.tab-border {
+     border-right: 1px solid $silver;
+     border-left: 1px solid $silver;
+     border-bottom: 1px solid $silver;
+     padding-left: 1em;
+     padding-right: 1em;
+   }
 }
 
 .nav-tabs li:first-child, .nav-tabs li:first-child:hover {
