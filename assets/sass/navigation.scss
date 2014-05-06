@@ -500,7 +500,7 @@ Navigation below the content level on a smartphone with links to the home page, 
 ```html_example
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-4">
       
       <nav class="nav-page-list">
         <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
@@ -545,12 +545,17 @@ Navigation below the content level on a smartphone with links to the home page, 
     display: block;
     margin: 0;
   }
-  ul a {
+  li:first-child a {
+    color: $black;
+    font-weight: bold;
+  }
+  ul a, ul ul li:first-child a {
     color: $empress;
     border-bottom: 1px solid $silver;
     padding: 10px 0;
     margin-left: 20px;
     position: relative;
+    font-weight: normal;
     &:active {color: $black;}
     &:before {
       content: '';
@@ -563,10 +568,170 @@ Navigation below the content level on a smartphone with links to the home page, 
       background: $white;
     }
   }
-  li:first-child a {
-    color: $black;
-    font-weight: bold;
-  }
   li.active a:before, li a:hover:before {background: $venetian-red;}
 }
 
+
+/*doc
+---
+title: Faceted Page Navigation
+name: e-facete-page-nav
+category: Navigation Elements > Hierarchy navigation
+---
+
+Faceted navigation serves the purpose of filtering elements (e.g. in a product catalog) on the basis of predefined criteria, so-called facets. These facets are grouped by facet types. A facet which contains subfacets is marked with a triangle.
+
+## Behavior:
+
+After a page with faceted navigation has been loaded, a list containing the facets of the highest level of facet types remains open. The user can open or close any number of other facet types.
+
+For every facet type, the user can only open one facet; the other facets are hidden. The selected facet type can then no longer be closed.
+
+If a facet has subfacets, these subfacets are shown after the facet has been selected. The user can then further limit the selection with the help of the subfacets. A selection can be undone with a delete button.
+
+The contents of the page are adapted to show the selection made in the faceted navigation, and are constantly updated.
+
+## Implementation for Smartphones:
+
+On smartphones, the navigation is accessed via a filter link, and it behaves in the same way as the faceted navigation for desktop computers. Unlike in the desktop version, the contents of the page are only updated when the user closes the faceted navigation.
+
+```html_example
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      
+      <nav class="nav-page-list nav-page-list--facette">
+        <a href="#" class="icon icon--before icon--less">Home page swisstopo</a>
+        <ul>
+          <li><a href="#">Products <span class="badge">4245</span></a></li>
+          <li>
+            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#geodata">Geodata</button>
+            <ul id="geodata" class="collapse in">
+              <li>
+                <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#images">Images <span class="badge">1285</span></button>
+                <ul id="images" class="collapse in">
+                  <li class="active"><a href="#">Aerial image</a> <span class="icon icon--close"></span></li>
+                </ul>
+              </li>
+              <li><a href="#">Landscape models</a> <span class="badge">245</span></li>
+              <li><a href="#">Elevation models</a> <span class="badge">45</span></li>
+              <li><a href="#">Map data</a> <span class="badge">27</span></li>
+              <li><a href="#">Geological models</a> <span class="badge">238</span></li>
+            </ul>
+          </li>
+          <li>
+            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#content-1">Use</button>
+            <ul id="content-1" class="collapse">
+              <li><a href="">Some content <span class="badge">12</span></a></li>
+              <li><a href="">Some content <span class="badge">56</span></a></li>
+              <li><a href="">Some content <span class="badge">89</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#content-2">Online Services & Software</button>
+            <ul id="content-2" class="collapse">
+              <li><a href="">Some content <span class="badge">358</span></a></li>
+              <li><a href="">Some content <span class="badge">658</span></a></li>
+              <li><a href="">Some content <span class="badge">74</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#content-3">Publications & Tools</button>
+            <ul id="content-3" class="collapse">
+              <li><a href="">Some content <span class="badge">52</span></a></li>
+              <li><a href="">Some content <span class="badge">8961</span></a></li>
+              <li><a href="">Some content <span class="badge">462</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#content-4">Themes</button>
+            <ul id="content-4" class="collapse">
+              <li><a href="">Some content <span class="badge">596</span></a></li>
+              <li><a href="">Some content <span class="badge">45</span></a></li>
+              <li><a href="">Some content <span class="badge">85</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</div>
+```
+*/
+
+
+.nav-page-list--facette {
+  button {
+    background: $white;
+    border: none;
+    width: 100%;
+    text-align: left;
+    border: 1px solid $silver;
+    margin-left: 20px;
+    padding: 10px;
+    margin-top: 5px;
+    &.active {background: $smoke;}
+  }
+  ul ul {
+    border: 1px solid $silver;
+    border-top: none;
+    margin-left: 20px;
+    width: 100%;
+    a {
+      margin: 0;
+      padding: 10px 20px;
+      &:before {
+        left: 0px;
+      }
+    }
+    button {
+      margin-left: 0;
+      padding-left: 20px;
+      border: none;
+      border-bottom: 1px solid $silver;
+      margin-top: 0;
+    }
+    li .badge {right: 10px;}
+  }
+  ul ul ul {
+    border: none;
+    border-bottom: 1px solid $silver;
+    margin-left: 0;
+  }
+  li {
+    position: relative;
+    .badge {
+      display: block;
+      position: absolute;
+      right: 0px;
+      top: 10px;
+      background: $light-grey;
+      color: $empress;
+      font-weight: normal;
+      font-size: 15px;
+      border-radius: 3px;
+    }
+    .icon--close {
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      &:after {
+        color: $light-grey;
+        font-size: 11px;
+      }
+      &:after:hover {cursor: click;}
+    }
+  }
+  li.active, ul ul li.active {
+    a {
+      border: none;
+      padding: 10px 20px;
+    }
+    a:before {
+      background: $venetian-red;
+      left: -20px;
+    }
+  }
+}
