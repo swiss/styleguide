@@ -461,3 +461,112 @@ On smartphones, the treecrumb navigation is omitted.
     padding: 10px 5px;
   }
 }
+
+
+/*doc
+---
+title: Page Navigation List (Left Sidebar Navigation)
+name: d-page-nav-list
+category: Navigation Elements > Hierarchy navigation
+---
+
+The sub-navigation on the left sidebar of the content section is a so-called dynamic navigation. It always only shows the page that has currently been selected and the navigation options that page has to offer:
+
+* Navigation header: the name of the active page has a color bar and is highlighted typographically
+* “Back” link: above the navigation header, there is a link leading back to the previous navigation level
+* Sub-pages: below the navigation header, all of the lower navigation levels are listed as links
+* Sister pages: pages located on the same navigation level as the active page are not listed here. They are accessed via the global navigation or the “back” link. Only on the lowest navigation level, where there are no other sub-pages, are sister pages shown – if there are any.
+
+## Behavior
+
+If a link to a sub-page is clicked on, a new page is loaded. On this page, the selected page is shown as the navigation header. The “back” link leads to the navigation level above, i.e. to the page on which the user has just been. Below the navigation header there are links to the lower navigation levels.
+
+If a page on the same navigation level as the active page (a sister page) is to be accessed, this is either done via back-linking to the page above or via the global navigation.
+
+If a page on the lowest navigation level is clicked on (i.e. the selected page has no sub-pages), the navigation is not replaced. Instead, the page currently selected is marked with a red line and the other pages on the same level (sister pages) remain visible.
+
+![example](styleguide-img/navigation_supermarkt.png)
+
+As long as a page has sub-pages, the navigation head changes dynamically during the navigation (drilling down) process (Step 1). When the lowest level of the navigation tree has been reached, and the pages no longer have sub-pages, only the display changes (Step 2).
+
+## Implementation for Smartphones
+
+On smartphones, the navigation is shown at the end of the page above the footer The name of the active page is hidden.
+
+![Left nav on mobile](styleguide-img/mobile_navi_3.png)
+
+Navigation below the content level on a smartphone with links to the home page, the navigation level above, and to further pages.
+
+```html_example
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3">
+      
+      <nav class="nav-page-list">
+        <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+        <ul>
+          <li><a href="#">Drinks</a></li>
+          <li><a href="#">Mineral water</a></li>
+          <li class="active"><a href="#">Wine</a></li>
+          <li><a href="#">Beer</a></li>
+          <li><a href="#">Spirits</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</div>
+```
+*/
+
+.nav-page-list {
+  a {
+    display: block;
+    width: 100%;
+  }
+  .icon--less {
+    background: $smoke;
+    color: $black;
+    padding: 0px 10px 5px 10px;
+    font-size: 11px;
+    border-bottom: 1px solid $silver;
+    margin-left: 20px;
+    &:before {
+      font-size: 20px;
+      position: relative;
+      top: 5px;
+      left: -3px;
+    }
+    &:hover, &:hover:before {
+      color: $venetian-red;
+    }
+  }
+  li {
+    display: block;
+    margin: 0;
+  }
+  ul a {
+    color: $empress;
+    border-bottom: 1px solid $silver;
+    padding: 10px 0;
+    margin-left: 20px;
+    position: relative;
+    &:active {color: $black;}
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -25px;
+      width: 5px;
+      background: $white;
+    }
+  }
+  li:first-child a {
+    color: $black;
+    font-weight: bold;
+  }
+  li.active a:before, li a:hover:before {background: $venetian-red;}
+}
+
