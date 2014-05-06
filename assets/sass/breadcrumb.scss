@@ -9,9 +9,66 @@
  * Licensed under MIT
  =========================================================== */
 
+@charset "UTF-8";
+
 .breadcrumb {
+  li {
+    margin: 0 10px;
+    &:first-child {margin-left: 0;}
+  }
   a {
+    color: $cerulean;
+    font-size: 0.85em;
+    margin-top: 0;
+  }
+  span.icon {
+    position: relative;
+    top: 2px;
+  }
+  li.active {
     color: $coal;
     font-size: 0.85em
   }
 }
+
+/*doc
+---
+title: Breadcrumb
+name: b-breadcrumb
+category: Navigation Elements > Hierarchy navigation
+---
+
+The breadcrumb is a line of text below the header which shows the user the path, i.e. the position of the web page currently being used within the information architecture of the website. If there is no global navigation feature, the breadcrumb navigation is placed immediately below the red line which closes the header section.
+
+Thanks to the breadcrumb, users can see at a glance where they are on the site map.
+
+When the user clicks on a navigation point in the path, the appropriate page opens. When the user clicks on a link on the first or second navigation level (pages which do not have content of their own), an overview page without a navigation pane is opened.
+
+On smartphones there is always a link at the end of the page to the home page and to the level above. There is no complete breadcrumb on the smartphone version.
+
+```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+    <ol class="breadcrumb">
+      <li><a href="#">Home page EDA</a></li>
+      <span class="icon icon--greater"></span>
+      <li><a href="#">Country & Travel Information</a></li>
+      <span class="icon icon--greater"></span>
+      <li><a href="#">Country Selection</a></li>
+      <span class="icon icon--greater"></span>
+      <li><a href="#">Democratic Republic of the Congo</a></li>
+      <span class="icon icon--greater"></span>
+      <li><a href="#">Some text to create a line break</a></li>
+      <span class="icon icon--greater"></span>
+      <li><a href="#">Bilateral Relations</a></li>
+      <span class="icon icon--greater"></span>
+      <li class="active">Title of the active page</li>
+    </ol>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+```
+*/
