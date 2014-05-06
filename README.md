@@ -46,10 +46,10 @@ There are several ways to get started:
   $ bower install
   ```
   
-  Install Hologram:
+  Install Hologram from the Gemfile:
   
   ```
-  $ gem install hologram
+  $ bundle
   ```
   
   Run gulp
