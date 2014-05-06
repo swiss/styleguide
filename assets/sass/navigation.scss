@@ -676,6 +676,7 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
   ul ul {
     border: 1px solid $silver;
     border-top: none;
+    border-bottom: none;
     margin-left: 20px;
     width: 100%;
     a {
@@ -693,6 +694,10 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
       margin-top: 0;
     }
     li .badge {right: 10px;}
+    li:first-child a {
+      margin-left: 0;
+      padding-left: 20px;
+    }
   }
   ul ul ul {
     border: none;
