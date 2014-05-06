@@ -1,0 +1,156 @@
+/*doc
+---
+title: Site Map and Partners
+name: a-site-map
+category: Navigation Elements > Footer
+---
+
+Links are placed in the footer to make them equally accessible on all pages. These can take the form of a site map linking to pages within the website currently being used, or they can refer to external contents, such as partner websites. If required, the footer can be divided into various sections.
+
+## Implementation for Smartphones:
+
+On smartphones, some of the functions from the header, e.g. service navigation or the full form of the Confederation logo, are moved to the footer.
+
+```html_example
+<footer>
+  
+  <div class="site-map">
+
+    <!-- Use normal `container` instead of `container-fluid` -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <h3>Einreise & Aufenthalt in der Schweiz</h3>
+          <a href="#">Einreise in die Schweiz</a>
+          <a href="#">Visabestimmungen</a>
+          <a href="#">Aufenthalt in der Schweiz</a>
+          <a href="#">Geschäftstätigkeit in der Schweiz</a>
+          <a href="#">Ausländische Vertretungen in der Schweiz</a>
+          <a href="#">Informationen zur Schweiz</a>
+        </div>
+        <div class="col-sm-3">
+          <h3>Einreise & Aufenthalt in der Schweiz</h3>
+          <a href="#">Einreise in die Schweiz</a>
+          <a href="#">Visabestimmungen</a>
+          <a href="#">Aufenthalt in der Schweiz</a>
+          <a href="#">Geschäftstätigkeit in der Schweiz</a>
+          <a href="#">Ausländische Vertretungen in der Schweiz</a>
+          <a href="#">Informationen zur Schweiz</a>
+        </div>
+        <div class="col-sm-3">
+          <h3>Einreise & Aufenthalt in der Schweiz</h3>
+          <a href="#">Einreise in die Schweiz</a>
+          <a href="#">Visabestimmungen</a>
+          <a href="#">Aufenthalt in der Schweiz</a>
+          <a href="#">Geschäftstätigkeit in der Schweiz</a>
+          <a href="#">Ausländische Vertretungen in der Schweiz</a>
+          <a href="#">Informationen zur Schweiz</a>
+        </div>
+        <div class="col-sm-3">
+          <h3>Einreise & Aufenthalt in der Schweiz</h3>
+          <a href="#">Einreise in die Schweiz</a>
+          <a href="#">Visabestimmungen</a>
+          <a href="#">Aufenthalt in der Schweiz</a>
+          <a href="#">Geschäftstätigkeit in der Schweiz</a>
+          <a href="#">Ausländische Vertretungen in der Schweiz</a>
+          <a href="#">Informationen zur Schweiz</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <h3>Einreise & Aufenthalt in der Schweiz</h3>
+          <a href="#">Einreise in die Schweiz</a>
+          <a href="#">Visabestimmungen</a>
+          <a href="#">Aufenthalt in der Schweiz</a>
+          <a href="#">Geschäftstätigkeit in der Schweiz</a>
+          <a href="#">Ausländische Vertretungen in der Schweiz</a>
+          <a href="#">Informationen zur Schweiz</a>
+        </div>
+        <div class="col-sm-3">
+          <h3>Einreise & Aufenthalt in der Schweiz</h3>
+          <a href="#">Einreise in die Schweiz</a>
+          <a href="#">Visabestimmungen</a>
+          <a href="#">Aufenthalt in der Schweiz</a>
+          <a href="#">Geschäftstätigkeit in der Schweiz</a>
+          <a href="#">Ausländische Vertretungen in der Schweiz</a>
+          <a href="#">Informationen zur Schweiz</a>
+        </div>
+        <div class="col-sm-3">
+          <h3>Einreise & Aufenthalt in der Schweiz</h3>
+          <a href="#">Einreise in die Schweiz</a>
+          <a href="#">Visabestimmungen</a>
+          <a href="#">Aufenthalt in der Schweiz</a>
+          <a href="#">Geschäftstätigkeit in der Schweiz</a>
+          <a href="#">Ausländische Vertretungen in der Schweiz</a>
+          <a href="#">Informationen zur Schweiz</a>
+        </div>
+        <div class="col-sm-3">
+          <h3>Einreise & Aufenthalt in der Schweiz</h3>
+          <a href="#">Einreise in die Schweiz</a>
+          <a href="#">Visabestimmungen</a>
+          <a href="#">Aufenthalt in der Schweiz</a>
+          <a href="#">Geschäftstätigkeit in der Schweiz</a>
+          <a href="#">Ausländische Vertretungen in der Schweiz</a>
+          <a href="#">Informationen zur Schweiz</a>
+        </div>
+      </div>
+    </div>
+  </div><!-- End of Site-map -->
+
+  <!-- Use normal `container` instead of `container-fluid` -->
+  <div class="container-fluid">
+    <h3>Informiert bleiben</h3>
+    <br>
+    <nav>
+      <ul>
+        <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
+        <li><a class="icon icon--before icon--facebook" href="#">Facebook</a></li>
+        <li><a class="icon icon--before icon--rss" href="#">RSS</a></li>
+        <li><a class="icon icon--before icon--message" href="#">feed</a></li>
+      </ul>
+    </nav>
+
+    <h3>DEZA – Weltweit vor Ort</h3>
+    <p>
+      Besuchen Sie die Websites der Schweizer Kooperationsbüros.
+    </p>
+    <select name="country">
+      <option value="Switzerland">Switzerland</option>
+      <option value="France">France</option>
+      <option value="Deutchland">Deutchland</option>
+      <option value="...">...</option>
+    </select>
+  </div>
+
+</footer>
+```
+*/
+
+
+footer {
+  border-top: 1px solid $light-grey;
+  background: $smoke;
+  padding-bottom: 30px;
+  select {
+    min-width: 200px;
+  }
+}
+
+.site-map {
+  background: $smoke;
+  background: -moz-linear-gradient(top, $smoke 0%, $white 6%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$smoke), color-stop(6%,$white));
+  background: -webkit-linear-gradient(top, $smoke 0%,$white 6%);
+  background: -o-linear-gradient(top, $smoke 0%,$white 6%);
+  background: -ms-linear-gradient(top, $smoke 0%,$white 6%);
+  background: linear-gradient(to bottom, $smoke 0%,$white 6%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#fcfcfc',GradientType=0 );
+  border-bottom: 1px solid $silver;
+  border-top: 1px solid $white;
+  padding-bottom: 30px;
+  a {
+    font-size: 13px;
+    display: inline-block;
+    padding: 3px 0;
+  }
+}
