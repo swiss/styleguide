@@ -17,6 +17,7 @@ nav {
     margin: 0;
   }
   li {display: inline;}
+  li:first-child {margin-left: 0;}
 }
 
 .nav-main {
