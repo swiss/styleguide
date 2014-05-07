@@ -18,7 +18,7 @@ name: a-page-title
 category: Content Components > Standard elements
 ---
 
-Each page with the exception of the home page must have its own page title. This is always positioned as the first element on the content page. Only in unattached detail pages (such as publications) is it preceded by the “back to overview” link.
+Each page with the exception of the home page must have its own page title. This is always positioned as the first element on the content page. Only in unattached detail pages (such as publications) is it preceded by the "back to overview" link.
 
 The text used in the page title is of relevance for rankings in search engines (e.g. Google).
 
@@ -26,3 +26,117 @@ The text used in the page title is of relevance for rankings in search engines (
 <h1>This is the page title, and it can be really quite long.</h1>
 ```
 */
+
+
+
+/*doc
+---
+title: Image & Text
+name: b-image-text
+category: Content Components > Standard elements
+---
+
+This element comprises running text body, which can be complemented by a title and a subtitle. An image and a caption can also be added. If required, the caption can be right-ragged below the text. Various standard image sizes (mainly in golden section proportions) are possible.
+
+For little images, simply use `pull-left` or `pull-right` class on the `<figure>`.
+
+```html_example
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+      <h2>Big image</h2>
+      <br>
+      <figure>
+        <img src="http://placehold.it/588x368" alt="image description">
+        <figcaption>Caption content</figcaption>
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      </p>
+      <a href="#" class="icon icon--after icon--external">External link</a>
+
+      <h2>Little image</h2>
+      <br>
+      <figure class="pull-left">
+        <img src="http://placehold.it/180x113" alt="image description">
+        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      </p>
+      <br>
+      <figure class="pull-right">
+        <img src="http://placehold.it/180x113" alt="image description">
+        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
+      </figure>
+      <p>
+        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      </p>
+      <a href="#" class="icon icon--after icon--external">External link</a>
+
+    </div>
+  </div>
+</div>
+```
+*/
+
+
+/*doc
+---
+title: Info box
+name: c-info-box
+category: Content Components > Standard elements
+---
+
+The info box is a "text and image" element that has a gray background. It can be integrated into the running text body in order highlight additional information.
+
+To have this grey background, add a `well` wrapper around your content.
+
+```html_example
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      
+      <div class="well">
+        <h2>Big image</h2>
+        <br>
+        <figure>
+          <img src="http://placehold.it/588x368" alt="image description">
+          <figcaption>Caption content</figcaption>
+        </figure>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        </p>
+        <a href="#" class="icon icon--after icon--external">External link</a>
+      </div>
+
+      <br>
+
+      <div class="well">
+        <h2>Little image</h2>
+        <br>
+        <figure class="pull-left">
+          <img src="http://placehold.it/180x113" alt="image description">
+          <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
+        </figure>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        </p>
+        <br>
+        <figure class="pull-right">
+          <img src="http://placehold.it/180x113" alt="image description">
+          <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
+        </figure>
+        <p>
+          In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        </p>
+        <a href="#" class="icon icon--after icon--external">External link</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+```
+*/
+

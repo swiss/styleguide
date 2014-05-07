@@ -120,8 +120,7 @@ gulp.task('watch',['styles', 'scripts', 'vendors', 'build-images', 'build-fonts'
   gulp.watch('assets/sass/**/*.scss', ['styles']);
   gulp.watch('assets/js/*.js', ['scripts']);
   gulp.watch('build/**/*.{js,css}', ['hologram']);
-  gulp.watch('assets/**/*.md', ['hologram']);
-  gulp.watch('assets/**/*.js', ['hologram']);
+  gulp.watch('assets/**/*.{js,scss}', ['hologram']);
   gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], ['build-images']);
   gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], ['build-fonts']);
 });

@@ -58,6 +58,26 @@ category: Base Layout > Visual
 
 */
 
+figure {
+  &.pull-left {
+    padding-right: 10px;
+    display: table;
+    figcaption {
+      display: table-caption;
+      caption-side: bottom;
+    }
+  }
+  &.pull-right {
+    padding-left: 10px;
+    display: table;
+    figcaption {
+      display: table-caption;
+      caption-side: bottom;
+      padding-left: 10px;
+    }
+  }
+}
+
 figcaption {
   font-size: 13px;
   line-height: 1.3em;

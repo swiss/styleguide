@@ -223,6 +223,14 @@
               
                 <li><a href="#a-page-title">Page Title</a></li>
               
+             
+              
+                <li><a href="#b-image-text">Image & Text</a></li>
+              
+             
+              
+                <li><a href="#c-info-box">Info box</a></li>
+              
             
           </ul>
         </nav>
@@ -232,11 +240,183 @@
 
 <h1 id="a-page-title">Page Title</h1>
 
-<p>Each page with the exception of the home page must have its own page title. This is always positioned as the first element on the content page. Only in unattached detail pages (such as publications) is it preceded by the “back to overview” link.</p>
+<p>Each page with the exception of the home page must have its own page title. This is always positioned as the first element on the content page. Only in unattached detail pages (such as publications) is it preceded by the &quot;back to overview&quot; link.</p>
 
 <p>The text used in the page title is of relevance for rankings in search engines (e.g. Google).</p>
 <div class="codeExample"><div class="exampleOutput"><h1>This is the page title, and it can be really quite long.</h1>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>This is the page title, and it can be really quite long.<span class="nt">&lt;/h1&gt;</span>
+</pre></div></div></div>
+<h1 id="b-image-text">Image & Text</h1>
+
+<p>This element comprises running text body, which can be complemented by a title and a subtitle. An image and a caption can also be added. If required, the caption can be right-ragged below the text. Various standard image sizes (mainly in golden section proportions) are possible.</p>
+
+<p>For little images, simply use <code>pull-left</code> or <code>pull-right</code> class on the <code>&lt;figure&gt;</code>.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+      <h2>Big image</h2>
+      <br>
+      <figure>
+        <img src="http://placehold.it/588x368" alt="image description">
+        <figcaption>Caption content</figcaption>
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      </p>
+      <a href="#" class="icon icon--after icon--external">External link</a>
+
+      <h2>Little image</h2>
+      <br>
+      <figure class="pull-left">
+        <img src="http://placehold.it/180x113" alt="image description">
+        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      </p>
+      <br>
+      <figure class="pull-right">
+        <img src="http://placehold.it/180x113" alt="image description">
+        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
+      </figure>
+      <p>
+        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      </p>
+      <a href="#" class="icon icon--after icon--external">External link</a>
+
+    </div>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-8 col-sm-offset-2&quot;</span><span class="nt">&gt;</span>
+
+      <span class="nt">&lt;h2&gt;</span>Big image<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;figure&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/588x368&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;figcaption&gt;</span>Caption content<span class="nt">&lt;/figcaption&gt;</span>
+      <span class="nt">&lt;/figure&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Donec pede justo<span class="nt">&lt;/a&gt;</span>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>External link<span class="nt">&lt;/a&gt;</span>
+
+      <span class="nt">&lt;h2&gt;</span>Little image<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/180x113&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;figcaption&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.<span class="nt">&lt;/figcaption&gt;</span>
+      <span class="nt">&lt;/figure&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Donec pede justo<span class="nt">&lt;/a&gt;</span>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-right&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/180x113&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;figcaption&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.<span class="nt">&lt;/figcaption&gt;</span>
+      <span class="nt">&lt;/figure&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>External link<span class="nt">&lt;/a&gt;</span>
+
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="c-info-box">Info box</h1>
+
+<p>The info box is a &quot;text and image&quot; element that has a gray background. It can be integrated into the running text body in order highlight additional information.</p>
+
+<p>To have this grey background, add a <code>well</code> wrapper around your content.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+      <div class="well">
+        <h2>Big image</h2>
+        <br>
+        <figure>
+          <img src="http://placehold.it/588x368" alt="image description">
+          <figcaption>Caption content</figcaption>
+        </figure>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        </p>
+        <a href="#" class="icon icon--after icon--external">External link</a>
+      </div>
+
+      <br>
+
+      <div class="well">
+        <h2>Little image</h2>
+        <br>
+        <figure class="pull-left">
+          <img src="http://placehold.it/180x113" alt="image description">
+          <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
+        </figure>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        </p>
+        <br>
+        <figure class="pull-right">
+          <img src="http://placehold.it/180x113" alt="image description">
+          <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
+        </figure>
+        <p>
+          In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        </p>
+        <a href="#" class="icon icon--after icon--external">External link</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-8 col-sm-offset-2&quot;</span><span class="nt">&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2&gt;</span>Big image<span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;br&gt;</span>
+        <span class="nt">&lt;figure&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/588x368&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figcaption&gt;</span>Caption content<span class="nt">&lt;/figcaption&gt;</span>
+        <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Donec pede justo<span class="nt">&lt;/a&gt;</span>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>External link<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+      <span class="nt">&lt;br&gt;</span>
+
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2&gt;</span>Little image<span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;br&gt;</span>
+        <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/180x113&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figcaption&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.<span class="nt">&lt;/figcaption&gt;</span>
+        <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Donec pede justo<span class="nt">&lt;/a&gt;</span>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;br&gt;</span>
+        <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-right&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/180x113&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;figcaption&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.<span class="nt">&lt;/figcaption&gt;</span>
+        <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+          In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>External link<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>
@@ -571,6 +751,24 @@
             "breadcrumb": "Content Components > Standard elements > Page Title",
             "path": "content_components_>_standard_elements.html#a-page-title",
             "tokens": ["Content Components > Standard elements","Page Title"]
+            },
+          
+            
+            
+            {
+            "title": "Image & Text",
+            "breadcrumb": "Content Components > Standard elements > Image & Text",
+            "path": "content_components_>_standard_elements.html#b-image-text",
+            "tokens": ["Content Components > Standard elements","Image & Text"]
+            },
+          
+            
+            
+            {
+            "title": "Info box",
+            "breadcrumb": "Content Components > Standard elements > Info box",
+            "path": "content_components_>_standard_elements.html#c-info-box",
+            "tokens": ["Content Components > Standard elements","Info box"]
             },
           
         
