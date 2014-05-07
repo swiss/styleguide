@@ -153,6 +153,25 @@ if (typeof searchData != "undefined") {
 
 }) (jQuery);
 /* ==========================================================
+ * tablesorter.js
+ * Control tablesort from markup
+ *
+ * Author: Simon Perdrisat, simon@antistatique.net
+ * Date:   2014-05-01 11:11:33
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+
+(function($) {
+
+  var $tables = $('.table-sort');
+
+  $tables.tablesorter();
+
+}) (jQuery);
+/* ==========================================================
  * treecrumb.js
  * Change icon class to change the caret direction
  *

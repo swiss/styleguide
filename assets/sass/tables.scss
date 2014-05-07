@@ -249,18 +249,18 @@ name: d-sortable-table
 category: Base Layout > Tables
 ---
 
-The sortable table automatically formats the column in which the data has been sorted. You just have to use the `tablesorter` class
+The sortable table automatically formats the column in which the data has been sorted. You just have to use the `table-sort` class
 
 ```html_example
-<table class="table table-bordered tablesorter text-right">
+<table class="table table-bordered table-sort text-right">
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr>
       <td></td>
-      <th><a href="#">2000</a></th>
-      <th><a href="#">2010</a></th>
-      <th><a href="#">2011</a></th>
-      <th><a href="#">2012</a></th>
+      <th>2000</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
     </tr>
   </thead>
   <tbody>
@@ -300,16 +300,16 @@ The sortable table automatically formats the column in which the data has been s
 
 */
 
-.tablesorter thead th a:after {
+/*.table-sort thead th span:after {
   content: "\5E";
   margin-left: .4em;
   color: $empress;
   font-family: $admin-icons;
 }
 
-.tablesorter thead th.headerSortUp a:after {
+.table-sort thead th.headerSortUp span:after {
   content: "v";
-}
+}*/
 
 
 /*doc
