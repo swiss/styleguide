@@ -70,7 +70,8 @@ gulp.task('vendors', function() {
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js',
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js',
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js',
-      './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js'
+      './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js',
+      './bower_components/jquery.tablesorter/js/jquery.tablesorter.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
@@ -100,7 +101,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('hologram', shell.task([
   'LC_ALL="en_US.UTF-8"',
-  'bower_components/hologram/bin/hologram'
+  'hologram'
 ]));
 
 gulp.task('build-images', function() {
