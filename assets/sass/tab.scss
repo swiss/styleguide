@@ -64,6 +64,7 @@
     color: $venetian-red;
     border-right-color: $silver;
     border-bottom-color: transparent;
+    padding-top: 0px !important;
   }
   &.active a, &.active:hover a {
     background: $white;
