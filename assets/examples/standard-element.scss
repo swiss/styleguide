@@ -1,0 +1,28 @@
+/* ==========================================================
+ * standard-element.scss
+ * Esamples of standard elements
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-06 17:09:44
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
+/*doc
+---
+title: Page Title
+name: a-page-title
+category: Content Components > Standard elements
+---
+
+Each page with the exception of the home page must have its own page title. This is always positioned as the first element on the content page. Only in unattached detail pages (such as publications) is it preceded by the “back to overview” link.
+
+The text used in the page title is of relevance for rankings in search engines (e.g. Google).
+
+```html_example
+<h1>This is the page title, and it can be really quite long.</h1>
+```
+*/
