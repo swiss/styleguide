@@ -123,3 +123,133 @@ dt, dd {
   font-size: 1.1em;
   dt, dd {font-size: 1em;}
 }
+
+
+/*doc
+---
+title: Elements List
+name: d-elements-list
+category: Content Components > Widgets
+---
+
+The elements list is a very generic element that groups content elements in a list. The elements shown here are merely examples.
+
+```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-2">
+
+      <!-- News list example -->
+      <div class="list-group">
+        <div class="list-group-header">
+          <h3 class="pull-left">News</h3>
+          <a href="#" class="pull-right icon icon--after icon--list">All News</a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 1
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 2
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 3
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-4">
+      
+      <!-- Publications list example -->
+      <div class="list-group">
+        <div class="list-group-header">
+          <h3>Publications</h3>
+          <a href="#" class="icon icon--before icon--list">All Publications</a>
+        </div>
+        <div class="list-group-item">
+          <a href="#">
+            Publication's title : Lorem ipsum dolor sit amet
+          </a>
+          <br><br>
+          <figure class="pull-left">
+            <img src="http://placehold.it/78x117" alt="image description">
+          </figure>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+          </p>
+        </div>
+        <div class="list-group-item">
+          <a href="#">
+            Publication's title : Lorem ipsum dolor sit amet
+          </a>
+          <br><br>
+          <figure class="pull-left">
+            <img src="http://placehold.it/78x117" alt="image description">
+          </figure>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+          </p>
+        </div>
+        <div class="list-group-item">
+          <a href="#">
+            Publication's title : Lorem ipsum dolor sit amet
+          </a>
+          <br><br>
+          <figure class="pull-left">
+            <img src="http://placehold.it/78x117" alt="image description">
+          </figure>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+```
+*/
+
+.list-group-header {
+  min-height: 50px;
+  border-bottom: 2px solid $silver;
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  .pull-right {
+    padding-top: 3px;
+  }
+  &:after {
+    content: ' ';
+    clear: both;
+    display: block;
+  }
+}
+
+.list-group-item, .list-group-item:last-child {
+  border: none;
+  border-bottom: 1px solid $silver;
+  border-radius: 0px;
+  padding: 10px 0;
+  font-size: 14px;
+  margin-bottom: 0;
+  a, p {font-size: 14px;}
+}

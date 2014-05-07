@@ -41,6 +41,7 @@ This element comprises running text body, which can be complemented by a title a
 For little images, simply use `pull-left` or `pull-right` class on the `<figure>`.
 
 ```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
@@ -94,6 +95,7 @@ The info box is a "text and image" element that has a gray background. It can be
 To have this grey background, add a `well` wrapper around your content.
 
 ```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
