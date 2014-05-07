@@ -11,3 +11,16 @@ dependencies:
 
 # To have a custom index page build with your README.md
 index: README
+
+# List all css to include for the styleguide render examples
+css_include:
+  - 'css/vendors.css'
+  - 'css/admin.css'
+
+# List all js to include for the styleguide render examples
+js_include:
+  - 'js/vendors.min.js'
+  - 'js/main.min.js'
+
+# String who is used to split the category name and create category wrapper
+name_scope: ' > '

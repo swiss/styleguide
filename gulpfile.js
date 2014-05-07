@@ -100,7 +100,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('hologram', shell.task([
   'LC_ALL="en_US.UTF-8"',
-  'hologram'
+  'bower_components/hologram/bin/hologram'
 ]));
 
 gulp.task('build-images', function() {
