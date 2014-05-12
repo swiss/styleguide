@@ -226,8 +226,10 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
 ---
 title: Service Navigation
 name: b-service-navigation
-category: Navigation Elements > Header
+category: Navigation modules - Header
 ---
+
+<span class="label label-default">CD</span>
 
 The service navigation is positioned at the top right of the header next to the language selection. It contains links that are of overriding importance (e.g. Contact, Jobs, Media and Contact). Ideally, there should be three, but in no case should there be more than five links in the service navigation.
 
@@ -267,8 +269,10 @@ On mobile devices the links in the service navigation are moved to the footer.
 ---
 title: Language Selection via a Link List
 name: d-lang-navigation-list
-category: Navigation Elements > Header
+category: Navigation modules - Header
 ---
+
+<span class="label label-default">CD</span>
 
 The languages available are shown as links at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.). The following rules apply:
 
@@ -317,6 +321,7 @@ On smartphones the language selection is always included in a drawer section abo
   float: right;
   border-left: 1px solid $gainsboro;
   margin-left: 15px;
+  padding-left: 15px;
   li {padding: 0;}
   a {
     color: $coal;
@@ -331,8 +336,10 @@ On smartphones the language selection is always included in a drawer section abo
 ---
 title: Treecrumb Federal Administration
 name: g-treecrumb-federal-administration
-category: Navigation Elements > Header
+category: Navigation modules - Header
 ---
+
+<span class="label label-default">CD</span>
 
 The treecrumb navigation shows the position of the current website within the context of all the websites of the Federal Administration. It also serves as an efficient means of accessing information across departments.
 
