@@ -1,0 +1,40 @@
+/*doc
+---
+title: Guidelines
+name: a-guidelines
+category: Design Principles - Guidelines
+---
+
+## Structure of the Confederation Web Guidelines
+
+Navigation to the individual chapters within the Confederation Web Guidelines is via the tabs in the main menu.
+
+The chapter entitled “Design Principles” summarizes the fundamental principles of the Confederation Web Guidelines.
+
+The tabs “Basic Elements”, “Navigation Modules”, and “Content Modules” contain detailed descriptions of the individual elements.
+
+On the individual pages, the element is presented first of all in a scalable frame. When the frame is enlarged or reduced in size, the presentation of the element can be tested for responsiveness on various output devices. Below the representation of the element there is a brief description as well as the HTML code for implementation by the development team.
+
+Abbildung für die Reiter mit Info und Code
+The code given in the HTML tab can be copied and reused.
+In the section “Sample Pages”, various types of web page are presented. These are opened in a new browser window or tab. They can therefore be scaled directly and the presentation tested on various screen sizes. For the Chrome browser, we recommend the use of the browser extension “Responsive Site View”.
+
+## Examples Used
+
+The Confederation Web Guidelines were the outcome of pilot projects initiated by the EDA (Federal Department of Foreign Affairs) and the VBS (Federal Department of Defence, Civil Protection and Sport). This explains some of the examples and terms used in the visualizations (e.g. the terminology in the global navigation). These Web Guidelines primarily contain definitions pertaining to the functional and creative design of the website. They make no reference to the information architecture, nor do they prescribe the terminology to be used.
+
+## Downloads
+
+All the files that are necessary to build a website can be downloaded as ZIP files. After these have been downloaded and unzipped, all of the required files are to be found in the subfolders of the folder titled “app”:
+
+- “snippets” contains the HTML code for all the elements introduced in the Web Guidelines
+- “assets/fonts” contains the icon font “AdminCH_Symbols”
+- “assets/styles” contains the CSS framework (in LESS format)
+- “assets/scripts” contains the JavaScript framework
+- “assets/images” contains graphics and sample images
+
+## Web Browsers Supported
+
+The presentation of the elements has been optimized for the “Internet Explorer 9 and 10” as well as “Google Chrome” web browsers.
+
+*/

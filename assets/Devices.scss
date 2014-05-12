@@ -1,0 +1,34 @@
+/*doc
+---
+title: Output across a Range of End Devices
+name: f-devices
+category: Design Principles - Output across a Range of End Devices
+---
+
+The Confederation Web Guidelines facilitate optimized output of all the content on a website on various end devices such as desktop computers, laptops, tablets, and smartphones. The layout of the individual web pages and the individual elements adapts on the fly to the viewing environment of the output device.
+
+In the Confederation Web Guidelines, the target output viewing environments are shown at the bottom left-hand corner of the preview box of the element/module, and in the window of the sample pages. For use in production, the display of this message must be deactivated in the responsive.less file (lines 15-16).
+
+![image](styleguide-img/responsive_indicator.png)
+
+*The “tablet” output format in the bottom left-hand corner of the preview box*
+ 
+![image](styleguide-img/responsive_production.png)
+
+For use in productive systems, line 15 (production) of the LESS code file responsive.less must be activated. Line 16 (development) can be commented out.
+
+## Desktop Computers, Laptops, and Tablets
+
+For desktop computers, laptops, and tablets held in landscape mode, the original layout is retained. As soon as a tablet is held in portrait mode, the content of the right-hand column (the context pane) is shown below the content.
+
+![image](styleguide-img/responsive.png)
+
+*The contents are arranged and displayed differently on different end devices*
+
+## Mobile Devices / Smartphones
+
+If the page is displayed on a smartphone, only the content is shown. The navigation function in the left sidebar disappears, as does the context pane. Instead, the user can navigate via links in the footer and a special menu for mobile devices.
+
+Usability tests have shown that many smartphone users ignore the navigation menu in the header and navigate via links in the footer. It is therefore important to reproduce the navigation in the footer.
+
+*/

@@ -1,0 +1,57 @@
+/*doc
+---
+title: Header and Footer
+name: e-header-footer
+category: Design Principles - Header and Footer
+---
+
+The header and footer appear on all pages and have a predefined design. Their presentation is modified for use on mobile devices.
+
+## Header
+
+The header is the defining element of a website. It consists of the treecrumb navigation of the Federal Administration, the service navigation including language selection, the designation (Confederation logo plus name of the organizational unit or the title of the website), the search box and the topics A-Z box. This section is always separated from the rest of the page by a red line at the bottom of it.
+
+These elements are either CD elements or fixed elements. They may not be amended in any way.
+
+![image](styleguide-img/header.png)
+
+*The header with its key elements*
+
+The **Treecrumb** shows the position of the website within the hierarchical organization of the Federal Administration. It allows the user to access directly the websites of higher-level organizational units. The treecrumb navigation is not used on mobile devices.
+
+The **Service Navigation** provides links to topics of overriding importance (e.g. Contact, Jobs, Media and Contact) and also contains the language navigation. Ideally, there should be three, but in no case should there be more than five links in the service navigation. At the very least there must be the Contact link and the Language selection link. On mobile devices the links in the service navigation are moved to the footer.
+
+To the right of the service navigation is the **language selection**. The languages available are represented by their abbreviations as per ISO-Norm ISO 639-1 in the following order: German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc. It is mandatory to offer the choice of one of the official languages DE, FR, and IT on every Federal Administration website. If there is no content available in one of these languages, the relevant link is not active. A tooltip shows that the content is not available in the language selected. The RM and EN language choices are only shown when the relevant content is actually available in these languages. Sites which use more than 5 languages can use a dropdown menu for the other languages in place of the fifth language. However, DE, FR, IT and RM are all always given in their short form as links. 
+The language navigation is aligned flush left with the search box and the topics A-Z box. 
+The language selection on mobile devices follows the regulations set out above. The concrete implementation will be described in release 1.2 of the Guidelines.
+
+The designation, comprising the Confederation logo (coat of arms and wordmark) and the name of the organizational unit, is the most important CD element. In websites that cover several organizations or in theme portals, the name of the organizational unit is replaced by the title of the website. On mobile devices the wordmark in the Confederation logo in the header may be omitted, and the name of the organizational unit abbreviated or shortened. If the name is abbreviated, its full form is given in a section above the header. This section disappears when the user starts to scroll.
+
+The **search function** is placed as a text box on the right-hand side of the header opposite the designation. When the user clicks on the text box, the box is enlarged. 
+On mobile devices the search function can be accessed via an icon in the header.
+
+The **topics A-Z** is positioned under the search box. This is an alternative means of access to the contents of the website, which can be selected from an alphabetical catalog of topics. On mobile devices the A-Z navigation is offered together with the search function.
+
+The bottom of the header is always indicated by a red line If a global navigation function is used below the header, this line can also highlight a selected section via a colored marking.
+
+## Global Navigation
+
+Most websites have a global navigation function comprising a series of tabs in a section positioned below the red line closing the header. This global navigation represents the highest navigation level. Its purpose is to show the topics covered on the website in order to give an overview of the website’s content and purpose.
+
+If the following topics are included in the website, they must have the names used here and be placed in the position given in parentheses after their names: “Latest News” (first), “Publications and Services” (second-last), and “About Us” (last). All other terms for the global navigation section have not been defined by the Confederation Web Guidelines, but should be as brief and to the point as possible. They are dependent on the specific communications requirements of the individual department or public office.
+
+Websites which do not contain a lot of content can do without the global navigation function and limit navigation to the left sidebar in the content section (for details, see Sample Pages, “Home Page without Global Navigation”).
+
+## Footer
+
+The footer contains important links, making them thereby immediately accessible on all the pages of a website. These links can refer to pages in the website itself but also to external content (such as the authority’s social media platform). If required, the footer can be divided into various sections.
+
+The footbar below the footer contains the copyright notice, and links to the “legal notice” and “further legal information”. The footbar is a CD element. Its use is mandatory.
+
+![image](styleguide-img/footer.png)
+
+*The footer with its various sections*
+
+On mobile devices, many of the functions from the header (e.g. navigation, service navigation, and the full form of the Confederation logo) are moved to the footer.
+
+*/
