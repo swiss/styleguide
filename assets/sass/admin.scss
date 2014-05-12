@@ -65,51 +65,41 @@
     font-style: normal;
 }
 
-@import 'admin-variables';
 @import 'admin-mixins';
-
-// import Bootstrap SASS
-@import 'bootstrap-variables';
+@import 'admin-variables';
 @import 'bootstrap';
-
-// Import all SASS files used in the project
-@import 'layout';
-@import 'header';
-@import 'navigation';
-@import 'mega-menu';
-@import 'breadcrumb';
-@import 'images';
-@import 'brand';
-@import 'tables';
-@import 'well';
-@import 'footer';
-
-// Typography
-@import 'titles';
-@import 'links';
-@import 'type';
-@import 'lists';
-@import 'icons';
-
-// Forms
-@import 'forms';
-@import 'buttons';
-@import 'checkboxes';
-@import 'radios';
-@import 'select';
-@import 'fieldsets';
-
-// Widgets
-@import 'widgets/alerts';
-@import 'widgets/emergency';
-@import 'widgets/pagination';
-@import 'tab';
-@import 'widgets/search';
-@import 'widgets/timeline';
-@import 'widgets/anchor-links';
-
-// Plugins
 @import 'chosen-theme';
 
-// Helpers
-@import 'helpers';
+// Layout
+@import 'layout/brand.scss';
+@import 'layout/buttons.scss';
+@import 'layout/checkboxes.scss';
+@import 'layout/fieldsets.scss';
+@import 'layout/footer.scss';
+@import 'layout/forms.scss';
+@import 'layout/header.scss';
+@import 'layout/icons.scss';
+@import 'layout/images.scss';
+@import 'layout/layout.scss';
+@import 'layout/links.scss';
+@import 'layout/lists.scss';
+@import 'layout/radios.scss';
+@import 'layout/tables.scss';
+@import 'layout/titles.scss';
+@import 'layout/type.scss';
+
+// Components
+@import 'components/alerts.scss';
+@import 'components/anchor-links.scss';
+@import 'components/breadcrumb.scss';
+@import 'components/emergency.scss';
+@import 'components/helpers.scss';
+@import 'components/list-group.scss';
+@import 'components/mega-menu.scss';
+@import 'components/navigation.scss';
+@import 'components/pagination.scss';
+@import 'components/search.scss';
+@import 'components/select.scss';
+@import 'components/tab.scss';
+@import 'components/timeline.scss';
+@import 'components/well.scss';
