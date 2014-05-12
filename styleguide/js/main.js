@@ -53,6 +53,8 @@ if (typeof searchData != "undefined") {
 
 (function($) {
 
+  // Normal Collapse
+
   var $toggleButton = $('button[data-toggle="collapse"]');
 
   checkCollapseStatus();
@@ -70,6 +72,29 @@ if (typeof searchData != "undefined") {
       $(this).removeClass('active').removeClass('icon--root').addClass('icon--greater');
       if($($collapseTarget).hasClass('in')){
         $(this).addClass('active').addClass('icon--root').removeClass('icon--greater');
+      }
+    });
+  }
+
+  // Table Collapse
+
+  var $tableToggle = $('th[data-toggle="collapse"], td[data-toggle="collapse"]');
+
+  checkCollapseTableStatus();
+
+  $tableToggle.click(function () {
+    console.log('hello');
+    setTimeout(function(){
+      checkCollapseTableStatus();
+    }, 360);
+  });
+
+  function checkCollapseTableStatus() {
+    $tableToggle.each(function () {
+      var $collapseTarget = $(this).data('target');
+      $(this).removeClass('icon--bottom').addClass('icon--right');
+      if($($collapseTarget).hasClass('in')){
+        $(this).addClass('icon--bottom').removeClass('icon--right');
       }
     });
   }

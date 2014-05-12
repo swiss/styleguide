@@ -51,8 +51,6 @@
       
         
         
-          
-        
       
         
         
@@ -113,7 +111,7 @@
           
           </ul>
         
-          <h3>Base Layout > Forms</h3>
+          <h3>Base Layout</h3>
           <ul>
           
             
@@ -121,7 +119,7 @@
             
               
               
-                <li><a href="base_layout_>_forms.html">Base Layout > Forms</a></li>
+                <li><a href="base_layout_-_forms_elements.html">Forms Elements</a></li>
               
             
           
@@ -130,13 +128,28 @@
             
           
             
-          
+              
+              
+                <li><a href="base_layout_-_general.html">General</a></li>
+              
             
           
             
           
             
           
+            
+              
+              
+                <li><a class="active" href="base_layout_-_tables.html">Tables</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_layout_-_typography.html">Typography</a></li>
+              
             
           
             
@@ -197,51 +210,6 @@
           
             
           
-            
-          
-            
-          
-          </ul>
-        
-          <h3>Base Layout</h3>
-          <ul>
-          
-            
-          
-            
-              
-              
-                <li><a href="base_layout_>_forms.html">Base Layout > Forms</a></li>
-              
-            
-          
-            
-          
-            
-          
-            
-              
-              
-                <li><a href="base_layout_-_general.html">General</a></li>
-              
-            
-          
-            
-          
-            
-          
-            
-              
-              
-                <li><a class="active" href="base_layout_-_tables.html">Tables</a></li>
-              
-            
-          
-            
-              
-              
-                <li><a href="base_layout_-_typography.html">Typography</a></li>
-              
             
           
             
@@ -2243,9 +2211,115 @@
 <p><span class="label label-default">FLEX</span></p>
 
 <p>Some tables can be expanded to show details of a data set</p>
+<div class="codeExample"><div class="exampleOutput">
+<table class="table table-bordered text-right">
+  <caption>Game animals shot in Switzerland</caption>
+  <thead>
+    <tr>
+      <td></td>
+      <th>2000</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-left icon icon--before icon--right" data-toggle="collapse" data-target="#animals">Animals</th>
+      <td>63'006</td>
+      <td>52'118</td>
+      <td>45'233</td>
+      <td>59'616</td>
+    </tr>
+    <tbody id="animals" class="collapse">
+      <tr>
+        <th class="text-left">Boars</th>
+        <td>4'160</td>
+        <td>7'647</td>
+        <td>4'726</td>
+        <td>10'650</td>
+      </tr>
+      <tr>
+        <th class="text-left">Chamois</th>
+        <td>16'625</td>
+        <td>13'427</td>
+        <td>13'413</td>
+        <td>13'350</td>
+      </tr>
+      <tr>
+        <th class="text-left">Fox</th>
+        <td>42'221</td>
+        <td>31'044</td>
+        <td>27'094</td>
+        <td>35'616</td>
+      </tr>
+    </tbody>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th></th>
+      <td>63'006</td>
+      <td>52'118</td>
+      <td>45'233</td>
+      <td>59'616</td>
+    </tr>
+  </tfoot>
+</table>
 
-<p><strong>@TODO : Add functionnal example !</strong></p>
-
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">&quot;table table-bordered text-right&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;caption&gt;</span>Game animals shot in Switzerland<span class="nt">&lt;/caption&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;</span>2000<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>2010<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>2011<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>2012<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">&quot;text-left icon icon--before icon--right&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#animals&quot;</span><span class="nt">&gt;</span>Animals<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>63&#39;006<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>52&#39;118<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>45&#39;233<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>59&#39;616<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tbody</span> <span class="na">id=</span><span class="s">&quot;animals&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Boars<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;td&gt;</span>4&#39;160<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>7&#39;647<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>4&#39;726<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>10&#39;650<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Chamois<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;td&gt;</span>16&#39;625<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>13&#39;427<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>13&#39;413<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>13&#39;350<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">&quot;text-left&quot;</span><span class="nt">&gt;</span>Fox<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;td&gt;</span>42&#39;221<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>31&#39;044<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>27&#39;094<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>35&#39;616<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;tfoot&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>63&#39;006<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>52&#39;118<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>45&#39;233<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>59&#39;616<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tfoot&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</pre></div></div></div>
 <h1 id="f-ruled-table">Ruled Table</h1>
 
 <p><span class="label label-default">FLEX</span></p>
@@ -2423,64 +2497,64 @@
             
             
             {
-            "title": "Buttons",
-            "breadcrumb": "Base Layout > Forms > Buttons",
-            "path": "base_layout_>_forms.html#a-buttons",
-            "tokens": ["Base Layout > Forms","Buttons"]
-            },
-          
-            
-            
-            {
-            "title": "Button groups",
-            "breadcrumb": "Base Layout > Forms > Button groups",
-            "path": "base_layout_>_forms.html#b-buttongroups",
-            "tokens": ["Base Layout > Forms","Button groups"]
-            },
-          
-            
-            
-            {
-            "title": "Radios",
-            "breadcrumb": "Base Layout > Forms > Radios",
-            "path": "base_layout_>_forms.html#c-radios",
-            "tokens": ["Base Layout > Forms","Radios"]
-            },
-          
-            
-            
-            {
-            "title": "Checkboxes",
-            "breadcrumb": "Base Layout > Forms > Checkboxes",
-            "path": "base_layout_>_forms.html#d-checkboxes",
-            "tokens": ["Base Layout > Forms","Checkboxes"]
-            },
-          
-            
-            
-            {
-            "title": "Selects",
-            "breadcrumb": "Base Layout > Forms > Selects",
-            "path": "base_layout_>_forms.html#e-selects",
-            "tokens": ["Base Layout > Forms","Selects"]
+            "title": "Fieldsets",
+            "breadcrumb": "Base Layout - Forms Elements > Fieldsets",
+            "path": "base_layout_-_forms_elements.html#a-fieldsets",
+            "tokens": ["Base Layout - Forms Elements","Fieldsets"]
             },
           
             
             
             {
             "title": "Forms",
-            "breadcrumb": "Base Layout > Forms > Forms",
-            "path": "base_layout_>_forms.html#f-forms",
-            "tokens": ["Base Layout > Forms","Forms"]
+            "breadcrumb": "Base Layout - Forms Elements > Forms",
+            "path": "base_layout_-_forms_elements.html#b-forms",
+            "tokens": ["Base Layout - Forms Elements","Forms"]
             },
           
             
             
             {
-            "title": "Fieldsets",
-            "breadcrumb": "Base Layout > Forms > Fieldsets",
-            "path": "base_layout_>_forms.html#g-fieldsets",
-            "tokens": ["Base Layout > Forms","Fieldsets"]
+            "title": "Selects",
+            "breadcrumb": "Base Layout - Forms Elements > Selects",
+            "path": "base_layout_-_forms_elements.html#c-selects",
+            "tokens": ["Base Layout - Forms Elements","Selects"]
+            },
+          
+            
+            
+            {
+            "title": "Checkboxes",
+            "breadcrumb": "Base Layout - Forms Elements > Checkboxes",
+            "path": "base_layout_-_forms_elements.html#d-checkboxes",
+            "tokens": ["Base Layout - Forms Elements","Checkboxes"]
+            },
+          
+            
+            
+            {
+            "title": "Radios",
+            "breadcrumb": "Base Layout - Forms Elements > Radios",
+            "path": "base_layout_-_forms_elements.html#e-radios",
+            "tokens": ["Base Layout - Forms Elements","Radios"]
+            },
+          
+            
+            
+            {
+            "title": "Buttons",
+            "breadcrumb": "Base Layout - Forms Elements > Buttons",
+            "path": "base_layout_-_forms_elements.html#f-buttons",
+            "tokens": ["Base Layout - Forms Elements","Buttons"]
+            },
+          
+            
+            
+            {
+            "title": "Button groups",
+            "breadcrumb": "Base Layout - Forms Elements > Button groups",
+            "path": "base_layout_-_forms_elements.html#g-buttongroups",
+            "tokens": ["Base Layout - Forms Elements","Button groups"]
             },
           
         
