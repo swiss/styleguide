@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Content Components > Standard elements</title>
+    <title>Design Principles - Header and Footer</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.css">
@@ -301,7 +301,7 @@
             
               
               
-                <li><a href="design_principles_-_header_and_footer.html">Header and Footer</a></li>
+                <li><a class="active" href="design_principles_-_header_and_footer.html">Header and Footer</a></li>
               
             
           
@@ -453,7 +453,7 @@
             
               
               
-                <li><a class="active" href="content_components_>_standard_elements.html">Content Components > Standard elements</a></li>
+                <li><a href="content_components_>_standard_elements.html">Content Components > Standard elements</a></li>
               
             
           
@@ -578,7 +578,7 @@
 
     <header class="cortana-header sb-slide">
       
-        <h1><img src="theme-build/img/ch.jpg">Content Components > Standard elements</h1>
+        <h1><img src="theme-build/img/ch.jpg">Header and Footer</h1>
       
       <div id="open-left" class="cortana-menu-btn">
         <span></span>
@@ -596,15 +596,7 @@
           <ul>
              
               
-                <li><a href="#a-page-title">Page Title</a></li>
-              
-             
-              
-                <li><a href="#b-image-text">Image & Text</a></li>
-              
-             
-              
-                <li><a href="#c-info-box">Info box</a></li>
+                <li><a href="#e-header-footer">Header and Footer</a></li>
               
             
           </ul>
@@ -613,190 +605,57 @@
         <div class="cortana-content-wrapper">
 
 
-<h1 id="a-page-title">Page Title</h1>
+<h1 id="e-header-footer">Header and Footer</h1>
 
-<p>Each page with the exception of the home page must have its own page title. This is always positioned as the first element on the content page. Only in unattached detail pages (such as publications) is it preceded by the &quot;back to overview&quot; link.</p>
+<p>The header and footer appear on all pages and have a predefined design. Their presentation is modified for use on mobile devices.</p>
 
-<p>The text used in the page title is of relevance for rankings in search engines (e.g. Google).</p>
-<div class="codeExample"><div class="exampleOutput"><h1>This is the page title, and it can be really quite long.</h1>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>This is the page title, and it can be really quite long.<span class="nt">&lt;/h1&gt;</span>
-</pre></div></div></div>
-<h1 id="b-image-text">Image & Text</h1>
+<h2> Header</h2>
 
-<p>This element comprises running text body, which can be complemented by a title and a subtitle. An image and a caption can also be added. If required, the caption can be right-ragged below the text. Various standard image sizes (mainly in golden section proportions) are possible.</p>
+<p>The header is the defining element of a website. It consists of the treecrumb navigation of the Federal Administration, the service navigation including language selection, the designation (Confederation logo plus name of the organizational unit or the title of the website), the search box and the topics A-Z box. This section is always separated from the rest of the page by a red line at the bottom of it.</p>
 
-<p>For little images, simply use <code>pull-left</code> or <code>pull-right</code> class on the <code>&lt;figure&gt;</code>.</p>
-<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
+<p>These elements are either CD elements or fixed elements. They may not be amended in any way.</p>
 
-      <h2>Big image</h2>
-      <br>
-      <figure>
-        <img src="http://placehold.it/588x368" alt="image description">
-        <figcaption>Caption content</figcaption>
-      </figure>
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-      </p>
-      <a href="#" class="icon icon--after icon--external">External link</a>
+<p><img src="styleguide-img/header.png" alt="image"></p>
 
-      <h2>Little image</h2>
-      <br>
-      <figure class="pull-left">
-        <img src="http://placehold.it/180x113" alt="image description">
-        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
-      </figure>
-      <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-      </p>
-      <br>
-      <figure class="pull-right">
-        <img src="http://placehold.it/180x113" alt="image description">
-        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
-      </figure>
-      <p>
-        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-      </p>
-      <a href="#" class="icon icon--after icon--external">External link</a>
+<p><em>The header with its key elements</em></p>
 
-    </div>
-  </div>
-</div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-8 col-sm-offset-2&quot;</span><span class="nt">&gt;</span>
+<p>The <strong>Treecrumb</strong> shows the position of the website within the hierarchical organization of the Federal Administration. It allows the user to access directly the websites of higher-level organizational units. The treecrumb navigation is not used on mobile devices.</p>
 
-      <span class="nt">&lt;h2&gt;</span>Big image<span class="nt">&lt;/h2&gt;</span>
-      <span class="nt">&lt;br&gt;</span>
-      <span class="nt">&lt;figure&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/588x368&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;figcaption&gt;</span>Caption content<span class="nt">&lt;/figcaption&gt;</span>
-      <span class="nt">&lt;/figure&gt;</span>
-      <span class="nt">&lt;p&gt;</span>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Donec pede justo<span class="nt">&lt;/a&gt;</span>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-      <span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>External link<span class="nt">&lt;/a&gt;</span>
+<p>The <strong>Service Navigation</strong> provides links to topics of overriding importance (e.g. Contact, Jobs, Media and Contact) and also contains the language navigation. Ideally, there should be three, but in no case should there be more than five links in the service navigation. At the very least there must be the Contact link and the Language selection link. On mobile devices the links in the service navigation are moved to the footer.</p>
 
-      <span class="nt">&lt;h2&gt;</span>Little image<span class="nt">&lt;/h2&gt;</span>
-      <span class="nt">&lt;br&gt;</span>
-      <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/180x113&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;figcaption&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.<span class="nt">&lt;/figcaption&gt;</span>
-      <span class="nt">&lt;/figure&gt;</span>
-      <span class="nt">&lt;p&gt;</span>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Donec pede justo<span class="nt">&lt;/a&gt;</span>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-      <span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;br&gt;</span>
-      <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-right&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/180x113&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;figcaption&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.<span class="nt">&lt;/figcaption&gt;</span>
-      <span class="nt">&lt;/figure&gt;</span>
-      <span class="nt">&lt;p&gt;</span>
-        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-      <span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>External link<span class="nt">&lt;/a&gt;</span>
+<p>To the right of the service navigation is the <strong>language selection</strong>. The languages available are represented by their abbreviations as per ISO-Norm ISO 639-1 in the following order: German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc. It is mandatory to offer the choice of one of the official languages DE, FR, and IT on every Federal Administration website. If there is no content available in one of these languages, the relevant link is not active. A tooltip shows that the content is not available in the language selected. The RM and EN language choices are only shown when the relevant content is actually available in these languages. Sites which use more than 5 languages can use a dropdown menu for the other languages in place of the fifth language. However, DE, FR, IT and RM are all always given in their short form as links. 
+The language navigation is aligned flush left with the search box and the topics A-Z box. 
+The language selection on mobile devices follows the regulations set out above. The concrete implementation will be described in release 1.2 of the Guidelines.</p>
 
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div></div></div>
-<h1 id="c-info-box">Info box</h1>
+<p>The designation, comprising the Confederation logo (coat of arms and wordmark) and the name of the organizational unit, is the most important CD element. In websites that cover several organizations or in theme portals, the name of the organizational unit is replaced by the title of the website. On mobile devices the wordmark in the Confederation logo in the header may be omitted, and the name of the organizational unit abbreviated or shortened. If the name is abbreviated, its full form is given in a section above the header. This section disappears when the user starts to scroll.</p>
 
-<p>The info box is a &quot;text and image&quot; element that has a gray background. It can be integrated into the running text body in order highlight additional information.</p>
+<p>The <strong>search function</strong> is placed as a text box on the right-hand side of the header opposite the designation. When the user clicks on the text box, the box is enlarged. 
+On mobile devices the search function can be accessed via an icon in the header.</p>
 
-<p>To have this grey background, add a <code>well</code> wrapper around your content.</p>
-<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
+<p>The <strong>topics A-Z</strong> is positioned under the search box. This is an alternative means of access to the contents of the website, which can be selected from an alphabetical catalog of topics. On mobile devices the A-Z navigation is offered together with the search function.</p>
 
-      <div class="well">
-        <h2>Big image</h2>
-        <br>
-        <figure>
-          <img src="http://placehold.it/588x368" alt="image description">
-          <figcaption>Caption content</figcaption>
-        </figure>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-        </p>
-        <a href="#" class="icon icon--after icon--external">External link</a>
+<p>The bottom of the header is always indicated by a red line If a global navigation function is used below the header, this line can also highlight a selected section via a colored marking.</p>
+
+<h2> Global Navigation</h2>
+
+<p>Most websites have a global navigation function comprising a series of tabs in a section positioned below the red line closing the header. This global navigation represents the highest navigation level. Its purpose is to show the topics covered on the website in order to give an overview of the website’s content and purpose.</p>
+
+<p>If the following topics are included in the website, they must have the names used here and be placed in the position given in parentheses after their names: “Latest News” (first), “Publications and Services” (second-last), and “About Us” (last). All other terms for the global navigation section have not been defined by the Confederation Web Guidelines, but should be as brief and to the point as possible. They are dependent on the specific communications requirements of the individual department or public office.</p>
+
+<p>Websites which do not contain a lot of content can do without the global navigation function and limit navigation to the left sidebar in the content section (for details, see Sample Pages, “Home Page without Global Navigation”).</p>
+
+<h2> Footer</h2>
+
+<p>The footer contains important links, making them thereby immediately accessible on all the pages of a website. These links can refer to pages in the website itself but also to external content (such as the authority’s social media platform). If required, the footer can be divided into various sections.</p>
+
+<p>The footbar below the footer contains the copyright notice, and links to the “legal notice” and “further legal information”. The footbar is a CD element. Its use is mandatory.</p>
+
+<p><img src="styleguide-img/footer.png" alt="image"></p>
+
+<p><em>The footer with its various sections</em></p>
+
+<p>On mobile devices, many of the functions from the header (e.g. navigation, service navigation, and the full form of the Confederation logo) are moved to the footer.</p>
       </div>
-
-      <br>
-
-      <div class="well">
-        <h2>Little image</h2>
-        <br>
-        <figure class="pull-left">
-          <img src="http://placehold.it/180x113" alt="image description">
-          <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
-        </figure>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-        </p>
-        <br>
-        <figure class="pull-right">
-          <img src="http://placehold.it/180x113" alt="image description">
-          <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
-        </figure>
-        <p>
-          In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-        </p>
-        <a href="#" class="icon icon--after icon--external">External link</a>
-      </div>
-
-    </div>
-  </div>
-</div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-8 col-sm-offset-2&quot;</span><span class="nt">&gt;</span>
-
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h2&gt;</span>Big image<span class="nt">&lt;/h2&gt;</span>
-        <span class="nt">&lt;br&gt;</span>
-        <span class="nt">&lt;figure&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/588x368&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;figcaption&gt;</span>Caption content<span class="nt">&lt;/figcaption&gt;</span>
-        <span class="nt">&lt;/figure&gt;</span>
-        <span class="nt">&lt;p&gt;</span>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Donec pede justo<span class="nt">&lt;/a&gt;</span>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-        <span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>External link<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-
-      <span class="nt">&lt;br&gt;</span>
-
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h2&gt;</span>Little image<span class="nt">&lt;/h2&gt;</span>
-        <span class="nt">&lt;br&gt;</span>
-        <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/180x113&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;figcaption&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.<span class="nt">&lt;/figcaption&gt;</span>
-        <span class="nt">&lt;/figure&gt;</span>
-        <span class="nt">&lt;p&gt;</span>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Donec pede justo<span class="nt">&lt;/a&gt;</span>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-        <span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;br&gt;</span>
-        <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-right&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/180x113&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;figcaption&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.<span class="nt">&lt;/figcaption&gt;</span>
-        <span class="nt">&lt;/figure&gt;</span>
-        <span class="nt">&lt;p&gt;</span>
-          In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
-        <span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>External link<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div></div></div>      </div>
     </div>
   </div>
 
