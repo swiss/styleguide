@@ -36,7 +36,7 @@ nav {
 ---
 title: Global Navigation
 name: a-globalnavigation
-category: Navigation Elements > Hierarchy navigation
+category: Navigation modules - Hierarchy navigation
 ---
 
 The global navigation shows the main points of access to a website as tabs. It is separated from the header above by a red line. The terminology used for the tabs should be chosen carefully, as this is what gives the user the first impression of the purpose of the website.
@@ -146,12 +146,18 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
   </nav>
 
 </div>
+
+<br><br><br><br><br><br><br><br>
 ```
 
 */
 
 .navbar {
   border-radius: 0;
+}
+
+.nav-main {
+  border-top: 5px solid $venetian-red;
 }
 
 .nav-main.yamm .nav {
@@ -192,9 +198,9 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
   .dropdown.open > a {
     z-index: 9999;
     background: $white;
-    border-top: 7px solid $venetian-red;
-    margin-top: -6px;
-    height: 77px;
+    border-top: 5px solid $red;
+    margin-top: -5px;
+    height: 75px;
     &:after {
       content: ';';
     }
@@ -475,7 +481,7 @@ On smartphones, the treecrumb navigation is omitted.
 ---
 title: Page Navigation List (Left Sidebar Navigation)
 name: d-page-nav-list
-category: Navigation Elements > Hierarchy navigation
+category: Navigation modules - Hierarchy navigation
 ---
 
 The sub-navigation on the left sidebar of the content section is a so-called dynamic navigation. It always only shows the page that has currently been selected and the navigation options that page has to offer:
@@ -584,7 +590,7 @@ Navigation below the content level on a smartphone with links to the home page, 
 ---
 title: Faceted Page Navigation
 name: e-facete-page-nav
-category: Navigation Elements > Hierarchy navigation
+category: Navigation modules - Hierarchy navigation
 ---
 
 Faceted navigation serves the purpose of filtering elements (e.g. in a product catalog) on the basis of predefined criteria, so-called facets. These facets are grouped by facet types. A facet which contains subfacets is marked with a triangle.

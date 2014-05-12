@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Base Layout - Forms Elements</title>
+    <title>Navigation modules - Content Navigation</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.css">
@@ -113,7 +113,7 @@
             
               
               
-                <li><a class="active" href="base_layout_-_forms_elements.html">Forms Elements</a></li>
+                <li><a href="base_layout_-_forms_elements.html">Forms Elements</a></li>
               
             
           
@@ -189,7 +189,7 @@
             
               
               
-                <li><a href="navigation_modules_-_content_navigation.html">Content Navigation</a></li>
+                <li><a class="active" href="navigation_modules_-_content_navigation.html">Content Navigation</a></li>
               
             
           
@@ -230,7 +230,7 @@
 
     <header class="cortana-header sb-slide">
       
-        <h1><img src="theme-build/img/ch.jpg">Forms Elements</h1>
+        <h1><img src="theme-build/img/ch.jpg">Content Navigation</h1>
       
       <div id="open-left" class="cortana-menu-btn">
         <span></span>
@@ -248,31 +248,11 @@
           <ul>
              
               
-                <li><a href="#a-fieldsets">Fieldsets</a></li>
+                <li><a href="#b-anchorlinks">Anchor links</a></li>
               
              
               
-                <li><a href="#b-forms">Forms</a></li>
-              
-             
-              
-                <li><a href="#c-selects">Selects</a></li>
-              
-             
-              
-                <li><a href="#d-checkboxes">Checkboxes</a></li>
-              
-             
-              
-                <li><a href="#e-radios">Radios</a></li>
-              
-             
-              
-                <li><a href="#f-buttons">Buttons</a></li>
-              
-             
-              
-                <li><a href="#g-buttongroups">Button groups</a></li>
+                <li><a href="#c-pagination">Pagination</a></li>
               
             
           </ul>
@@ -281,316 +261,47 @@
         <div class="cortana-content-wrapper">
 
 
-<h1 id="a-fieldsets">Fieldsets</h1>
+<h1 id="b-anchorlinks">Anchor links</h1>
 
-<p><span class="label label-default">FLEX</span></p>
-
-<p>Fieldsets are used to separate content in a form.</p>
-<div class="codeExample"><div class="exampleOutput"><form action="" role="form">
-  <fieldset>
-    <legend>Legend of fieldset</legend>
-
-    <div class="form-group">
-      <label for="inputText" class="col-sm-2 control-label">Name</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="inputText" placeholder="Name">
-      </div>
-    </div>
-
-  </fieldset>
-</form>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;&quot;</span> <span class="na">role=</span><span class="s">&quot;form&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;fieldset&gt;</span>
-    <span class="nt">&lt;legend&gt;</span>Legend of fieldset<span class="nt">&lt;/legend&gt;</span>
-
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;inputText&quot;</span> <span class="na">class=</span><span class="s">&quot;col-sm-2 control-label&quot;</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;inputText&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Name&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-  <span class="nt">&lt;/fieldset&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
+<p>An anchor link is a jump label which allows the user to navigate to a particular position within the page currently in use.</p>
+<div class="codeExample"><div class="exampleOutput"><ul>
+  <li class="anchor"><a class=" icon icon--before icon--root" href="#">Link 1</a></li>
+  <li class="anchor"><a class=" icon icon--before icon--root" href="#">Link 2</a></li>
+  <li class="anchor"><a class=" icon icon--before icon--root" href="#">Link 3</a></li>
+</ul>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;anchor&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot; icon icon--before icon--root&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link 1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;anchor&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot; icon icon--before icon--root&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link 2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;anchor&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot; icon icon--before icon--root&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link 3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
 </pre></div></div></div>
-<h1 id="b-forms">Forms</h1>
+<h1 id="c-pagination">Pagination</h1>
 
-<p><span class="label label-default">FLEX</span></p>
-
-<p>You can use <code>.form-horizontal</code> on <code>&lt;form&gt;</code> to display the label aligned at the left of the input. <code>.form-group</code> then behaves like a <code>.row</code>.</p>
-
-<p>Input boxes allow the user to input content (e.g. name).
-For inputting dates, an HTML5 solution is available. With browsers that do not support HTML5 the date has to be input manually.
-The following has to be taken into account for barrier-free accessibility:
-The name of the form and the form box must be linked to a label. A label ID may only appear once on a page. Required fields must have sensible names or, preferably, use WAI.</p>
-
-<p>You can use the <code>.has-error</code>, <code>.has-warning</code> or <code>.has-success</code> classes to send feedback to the user.</p>
-
-<p>HTML5 input types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code></p>
-<div class="codeExample"><div class="exampleOutput"><form class="form-horizontal" role="form">
-
-    <!-- email input -->
-    <div class="form-group">
-      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-      <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-      </div>
-    </div>
-
-    <!-- password input -->
-    <div class="form-group has-warning">
-      <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-      <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-        <span class="help-block">Warning, this is not a correct info!</span>
-      </div>
-    </div>
-
-    <!-- URL input -->
-    <div class="form-group">
-      <label for="inputURL" class="col-sm-2 control-label">Website</label>
-      <div class="col-sm-10">
-        <input type="url" class="form-control" id="inputURL" placeholder="URL">
-        <span class="help-block">Use format "http://www.example.com"</span>
-      </div>
-    </div>
-
-    <!-- file input -->
-    <div class="form-group">
-      <label for="file" class="col-sm-2 control-label">Document</label>
-      <div class="col-sm-10">
-        <input type="file" class="form-control" id="file" placeholder="URL">
-      </div>
-    </div>
-
-    <!-- checkboxes -->
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <div class="checkbox checkbox--left">
-          <input id="checkboxform" type="checkbox">
-          <label for="checkboxform">Remember me</label>
-        </div>
-        <div class="checkbox checkbox--left">
-          <input id="checkboxform2" type="checkbox">
-          <label for="checkboxform2">Accept terms</label>
-        </div>
-      </div>
-    </div>
-
-    <!-- Dropdown -->
-    <div class="form-group">
-      <label class="col-sm-2 control-label" for="dropdown">Dropdown</label>
-      <div class="col-sm-10">
-        <select id="dropdown" class="form-control">
-          <option>Option 1</option>
-          <option>Option 2</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Sign in</button>
-      </div>
-    </div>
-
-</form>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-horizontal&quot;</span> <span class="na">role=</span><span class="s">&quot;form&quot;</span><span class="nt">&gt;</span>
-
-    <span class="c">&lt;!-- email input --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;inputEmail3&quot;</span> <span class="na">class=</span><span class="s">&quot;col-sm-2 control-label&quot;</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;email&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;inputEmail3&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Email&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="c">&lt;!-- password input --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group has-warning&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;inputPassword3&quot;</span> <span class="na">class=</span><span class="s">&quot;col-sm-2 control-label&quot;</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;password&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;inputPassword3&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Password&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;help-block&quot;</span><span class="nt">&gt;</span>Warning, this is not a correct info!<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="c">&lt;!-- URL input --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;inputURL&quot;</span> <span class="na">class=</span><span class="s">&quot;col-sm-2 control-label&quot;</span><span class="nt">&gt;</span>Website<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;url&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;inputURL&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;URL&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;help-block&quot;</span><span class="nt">&gt;</span>Use format &quot;http://www.example.com&quot;<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="c">&lt;!-- file input --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;file&quot;</span> <span class="na">class=</span><span class="s">&quot;col-sm-2 control-label&quot;</span><span class="nt">&gt;</span>Document<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;file&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;URL&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="c">&lt;!-- checkboxes --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-offset-2 col-sm-10&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox checkbox--left&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;checkboxform&quot;</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkboxform&quot;</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox checkbox--left&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;checkboxform2&quot;</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkboxform2&quot;</span><span class="nt">&gt;</span>Accept terms<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="c">&lt;!-- Dropdown --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;col-sm-2 control-label&quot;</span> <span class="na">for=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown<span class="nt">&lt;/label&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;option&gt;</span>Option 1<span class="nt">&lt;/option&gt;</span>
-          <span class="nt">&lt;option&gt;</span>Option 2<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;/select&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-offset-2 col-sm-10&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;/form&gt;</span>
-</pre></div></div></div>
-<h1 id="c-selects">Selects</h1>
-
-<p><span class="label label-default">FLEX</span></p>
-
-<p>A drop down list box allows the user to select an item from a predefined list. This list appears in a menu after the element has been clicked on. After the selection has been made, the result is displayed.</p>
-
-<p>With more than 10 options in the select, a search field is setup at the top of the dropdown list.</p>
-
-<p>You can also add the <code>multiple</code> attribute to <code>&lt;select&gt;</code> and allow the user to select more than one option at a time, displaying them as tags in the input field.</p>
-<div class="codeExample"><div class="exampleOutput"><select class="form-control">
-  <option>Option 1</option>
-  <option>Option 2</option>
-</select>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Option 1<span class="nt">&lt;/option&gt;</span>
-  <span class="nt">&lt;option&gt;</span>Option 2<span class="nt">&lt;/option&gt;</span>
-<span class="nt">&lt;/select&gt;</span>
-</pre></div></div></div>
-<h1 id="d-checkboxes">Checkboxes</h1>
-
-<p><span class="label label-default">FLEX</span></p>
-
-<p>Checkboxes are used when one or more elements are to be selected from a predefined list of items.</p>
-<div class="codeExample"><div class="exampleOutput"><div class="checkbox checkbox--right">
-  <input type="checkbox" id="checkbox" value="checkbox1">
-  <label for="checkbox">Remember me</label>
-</div>
-
-<div class="checkbox checkbox--left">
-  <input type="checkbox" id="checkbox2" value="checkbox2">
-  <label for="checkbox2">Remember me</label>
-</div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox checkbox--right&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">value=</span><span class="s">&quot;checkbox1&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox checkbox--left&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id=</span><span class="s">&quot;checkbox2&quot;</span> <span class="na">value=</span><span class="s">&quot;checkbox2&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkbox2&quot;</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div></div></div>
-<h1 id="e-radios">Radios</h1>
-
-<p><span class="label label-default">FLEX</span></p>
-
-<p>Radio buttons allow the user to make an unequivocal choice from a predefined list. Radio buttons can also be structured in groups. Only one element in a group may be selected.</p>
-<div class="codeExample"><div class="exampleOutput"><div class="radio radio--left">
-  <input type="radio" name ="radios" id="radio" value="radio1" checked>
-  <label for="radio">Option 1</label>
-</div>
-
-<div class="radio radio--right">
-  <input type="radio" name ="radios" id="radio2" value="radio2">
-  <label for="radio2">Option 2</label>
-</div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;radio radio--left&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name =</span><span class="s">&quot;radios&quot;</span> <span class="na">id=</span><span class="s">&quot;radio&quot;</span> <span class="na">value=</span><span class="s">&quot;radio1&quot;</span> <span class="na">checked</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;radio&quot;</span><span class="nt">&gt;</span>Option 1<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;radio radio--right&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name =</span><span class="s">&quot;radios&quot;</span> <span class="na">id=</span><span class="s">&quot;radio2&quot;</span> <span class="na">value=</span><span class="s">&quot;radio2&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;radio2&quot;</span><span class="nt">&gt;</span>Option 2<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div></div></div>
-<h1 id="f-buttons">Buttons</h1>
-
-<p><span class="label label-default">FIX</span></p>
-
-<p>A differentiation is made between primary and secondary buttons. The primary button is used for the main action (e.g. send), which can also be activated via the Enter key. The secondary button is used for less important actions, such as &quot;Cancel&quot;.</p>
-
-<p>The standard button can be used for a variety of actions. Buttons can also be grouped in a button group. As with the radio button groups, only one element can be selected within such a group.</p>
-
-<p>Use the class <code>.btn</code> to create a styled button. You can use it on a <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element. There are 4 button themes:</p>
-
-<table><thead>
-<tr>
-<th>Buttons</th>
-<th>Markup</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><button type="button" class="btn">Unstyled</button><br></td>
-<td><code>&lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Unstyled&lt;/button&gt;</code></td>
-</tr>
-<tr>
-<td><button type="button" class="btn btn-primary">Primary</button><br></td>
-<td><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;</code></td>
-</tr>
-<tr>
-<td><button type="button" class="btn btn-secondary">Secondary</button><br></td>
-<td><code>&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;</code></td>
-</tr>
-<tr>
-<td><button type="button" class="btn" disabled>Disabled</button><br></td>
-<td><code>&lt;button type=&quot;button&quot; class=&quot;btn&quot; disabled&gt;Disabled&lt;/button&gt;</code></td>
-</tr>
-</tbody></table>
-
-<h2>Print button</h2>
-
-<p><button type="button" class="btn btn-link"><span class="icon icon--print"></span></button> <code>&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;&lt;span class=&quot;icon icon--print&quot;&gt;&lt;/span&gt;&lt;/button&gt;</code></p>
-
-<h1 id="g-buttongroups">Button groups</h1>
-
-<p><span class="label label-default">FIX</span></p>
-
-<p>A differentiation is made between primary and secondary buttons. The primary button is used for the main action (e.g. send), which can also be activated via the Enter key. The secondary button is used for less important actions, such as &quot;Cancel&quot;.</p>
-
-<p>The standard button can be used for a variety of actions. Buttons can also be grouped in a button group. As with the radio button groups, only one element can be selected within such a group.</p>
-
-<p>Use the class <code>.btn</code> to create a styled button. You can use it on a <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element. There are 4 button themes:</p>
-<div class="codeExample"><div class="exampleOutput"><div class="btn-group">
-  <button type="button" class="btn">Left</button>
-  <button type="button" class="btn">Middle</button>
-  <button type="button" class="btn active">Middle</button>
-  <button type="button" class="btn">Middle</button>
-  <button type="button" class="btn">Right</button>
-</div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Left<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Middle<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn active&quot;</span><span class="nt">&gt;</span>Middle<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Middle<span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;btn&quot;</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<p>The paging function allows the user to browse through a large number of elements which are arranged into pages. The element appears above and below the elements list.</p>
+<div class="codeExample"><div class="exampleOutput"><nav class="pagination-container">
+  <span>Object - 2 of 3</span>
+  <ul class="pull-right pagination">
+    <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
+    <li class="separator"><a href="#">Previous</a></li>
+    <li><a href="#">1</a></li>
+    <li class="active"><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li class="separator-left"><a href="#">Next</a></li>
+    <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
+  </ul>
+</nav>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;pagination-container&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span&gt;</span>Object - 2 of 3<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;pull-right pagination&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;separator&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--step-backward&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;separator&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;separator-left&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;separator-left&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--step-forward&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>

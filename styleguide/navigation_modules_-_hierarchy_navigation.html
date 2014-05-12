@@ -1,0 +1,1387 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Navigation modules - Hierarchy navigation</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      <link rel="stylesheet" href="css/vendors.css">
+    
+      <link rel="stylesheet" href="css/admin.css">
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Content Components > Widgets</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="content_components_>_widgets.html">Content Components > Widgets</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Base Layout</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="base_layout_-_forms_elements.html">Forms Elements</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_layout_-_general.html">General</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="base_layout_-_tables.html">Tables</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="base_layout_-_typography.html">Typography</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Navigation modules</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="navigation_modules_-_hierarchy_navigation.html">Hierarchy navigation</a></li>
+              
+            
+          
+            
+              
+              
+                <li><a href="navigation_modules_-_header.html">Header</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="navigation_modules_-_footer.html">Footer</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="navigation_modules_-_content_navigation.html">Content Navigation</a></li>
+              
+            
+          
+          </ul>
+        
+          <h3>Content Components > Standard elements</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="content_components_>_standard_elements.html">Content Components > Standard elements</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1><img src="theme-build/img/ch.jpg">Hierarchy navigation</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <input id="cortana-search" class="cortana-search" type="text" placeholder="Search">
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav">
+          <ul>
+             
+              
+                <li><a href="#a-globalnavigation">Global Navigation</a></li>
+              
+             
+              
+                <li><a href="#b-breadcrumb">Breadcrumb</a></li>
+              
+             
+              
+                <li><a href="#c-back-to-overview">Back to Overview</a></li>
+              
+             
+              
+                <li><a href="#d-page-nav-list">Page Navigation List (Left Sidebar Navigation)</a></li>
+              
+             
+              
+                <li><a href="#e-facete-page-nav">Faceted Page Navigation</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper">
+
+
+<h1 id="a-globalnavigation">Global Navigation</h1>
+
+<p>The global navigation shows the main points of access to a website as tabs. It is separated from the header above by a red line. The terminology used for the tabs should be chosen carefully, as this is what gives the user the first impression of the purpose of the website.</p>
+
+<p>Behavior:
+Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The background is darkened.</p>
+
+<p>There are two obligatory flyout types: the teaser and the list flyout. In the teaser flyout, the second navigation level, and in the list flyout the second and third navigation levels can be selected directly. This makes it possible to skip navigation nodes for which there are no contents.</p>
+
+<p>It is also possible to develop and use new flyout types. For instance, a country selection flyout was developed for the EDA.</p>
+
+<p>The flyout can be closed again by clicking on the “close” function at the top right, the tab at the bottom edge, by clicking on the background, or by clicking on the active tab again.</p>
+
+<p>Only on the home page are all the tabs closed. If the user navigates in the area below a tab, this tab remains actively selected.</p>
+
+<p>A flyout can contain a teaser, which consists of a linked heading, an image, and a descriptive text (max. 70 characters including spaces).</p>
+<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+  <header>
+
+  </header>
+  <nav class="nav-main yamm navbar" role="navigation">
+    <!-- The tab navigation -->
+    <ul class="nav navbar-nav">
+      <li class="dropdown yamm-fw">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+        <ul class="dropdown-menu" role="menu">
+          <li class="grid-demo">
+            <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+            <div class="yamm-content container-fluid">
+              <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+              <div class="row">
+                <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">.col-sm-12</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">.col-sm-6</div>
+                <div class="col-sm-6">.col-sm-6</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4">.col-sm-4</div>
+                <div class="col-sm-4">.col-sm-4</div>
+                <div class="col-sm-4">.col-sm-4</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">.col-sm-3</div>
+                <div class="col-sm-3">.col-sm-3</div>
+                <div class="col-sm-3">.col-sm-3</div>
+                <div class="col-sm-3">.col-sm-3</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2">.col-sm-2</div>
+                <div class="col-sm-2">.col-sm-2</div>
+                <div class="col-sm-2">.col-sm-2</div>
+                <div class="col-sm-2">.col-sm-2</div>
+                <div class="col-sm-2">.col-sm-2</div>
+                <div class="col-sm-2">.col-sm-2</div>
+              </div>
+              <div class="row">
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+                <div class="col-sm-1">.col-sm-1</div>
+              </div>
+
+              <!-- The `yamm-close-bottom` should always be at the end of the `yamm-content` to close the mega-menu -->
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+
+            </div>
+          </li>
+        </ul><!-- Dropdown `ul` end -->
+      </li>
+      <li class="dropdown yamm-fw">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+        <ul class="dropdown-menu" role="menu">
+          <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+          <li>
+            <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+            <div class="yamm-content container-fluid">
+
+              <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+              <div class="row">
+                <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+              </div>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, quae, ut, numquam tempora facilis mollitia temporibus error dolorem vel ea debitis perspiciatis doloremque necessitatibus dignissimos pariatur minima molestiae aliquid voluptatibus.</p>
+
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+
+            </div><!-- `yamm-content` end -->
+          </li><!-- Dropdown `li` end -->
+        </ul><!-- Dropdown `ul` end -->
+      </li>
+    </ul>
+  </nav>
+
+</div>
+
+<br><br><br><br><br><br><br><br>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header&gt;</span>
+
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main yamm navbar&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- The tab navigation --&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown yamm-fw&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>News<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;grid-demo&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- The `yamm-content` can contain any kind of content like tab, table, list, article... --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;yamm-content container-fluid&quot;</span><span class="nt">&gt;</span>
+              <span class="c">&lt;!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu --&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;yamm-close icon icon--after icon--close pull-right&quot;</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span><span class="nt">&gt;</span>.col-sm-12<span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-6&quot;</span><span class="nt">&gt;</span>.col-sm-6<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-6&quot;</span><span class="nt">&gt;</span>.col-sm-6<span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4&quot;</span><span class="nt">&gt;</span>.col-sm-4<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4&quot;</span><span class="nt">&gt;</span>.col-sm-4<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4&quot;</span><span class="nt">&gt;</span>.col-sm-4<span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-3&quot;</span><span class="nt">&gt;</span>.col-sm-3<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-3&quot;</span><span class="nt">&gt;</span>.col-sm-3<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-3&quot;</span><span class="nt">&gt;</span>.col-sm-3<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-3&quot;</span><span class="nt">&gt;</span>.col-sm-3<span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-2&quot;</span><span class="nt">&gt;</span>.col-sm-2<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-2&quot;</span><span class="nt">&gt;</span>.col-sm-2<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-2&quot;</span><span class="nt">&gt;</span>.col-sm-2<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-2&quot;</span><span class="nt">&gt;</span>.col-sm-2<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-2&quot;</span><span class="nt">&gt;</span>.col-sm-2<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-2&quot;</span><span class="nt">&gt;</span>.col-sm-2<span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-1&quot;</span><span class="nt">&gt;</span>.col-sm-1<span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+
+              <span class="c">&lt;!-- The `yamm-close-bottom` should always be at the end of the `yamm-content` to close the mega-menu --&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;yamm-close-bottom&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--top&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span><span class="c">&lt;!-- Dropdown `ul` end --&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown yamm-fw&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>News<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+          <span class="c">&lt;!-- The `li` presence heritated from the classic dropdown structure, only one in that case --&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="c">&lt;!-- The `yamm-content` can contain any kind of content like tab, table, list, article... --&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;yamm-content container-fluid&quot;</span><span class="nt">&gt;</span>
+
+              <span class="c">&lt;!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu --&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;yamm-close icon icon--after icon--close pull-right&quot;</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+
+              <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, quae, ut, numquam tempora facilis mollitia temporibus error dolorem vel ea debitis perspiciatis doloremque necessitatibus dignissimos pariatur minima molestiae aliquid voluptatibus.<span class="nt">&lt;/p&gt;</span>
+
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;yamm-close-bottom&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--top&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+
+            <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- `yamm-content` end --&gt;</span>
+          <span class="nt">&lt;/li&gt;</span><span class="c">&lt;!-- Dropdown `li` end --&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span><span class="c">&lt;!-- Dropdown `ul` end --&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</span>
+</pre></div></div></div>
+<h1 id="b-breadcrumb">Breadcrumb</h1>
+
+<p>The breadcrumb is a line of text below the header which shows the user the path, i.e. the position of the web page currently being used within the information architecture of the website. If there is no global navigation feature, the breadcrumb navigation is placed immediately below the red line which closes the header section.</p>
+
+<p>Thanks to the breadcrumb, users can see at a glance where they are on the site map.</p>
+
+<p>When the user clicks on a navigation point in the path, the appropriate page opens. When the user clicks on a link on the first or second navigation level (pages which do not have content of their own), an overview page without a navigation pane is opened.</p>
+
+<p>On smartphones there is always a link at the end of the page to the home page and to the level above. There is no complete breadcrumb on the smartphone version.</p>
+<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+    <ol class="breadcrumb">
+      <li><a href="#">Home page EDA</a></li>
+      <span class="icon icon--greater"></span>
+      <li><a href="#">Country & Travel Information</a></li>
+      <span class="icon icon--greater"></span>
+      <li><a href="#">Country Selection</a></li>
+      <span class="icon icon--greater"></span>
+      <li><a href="#">Democratic Republic of the Congo</a></li>
+      <span class="icon icon--greater"></span>
+      <li><a href="#">Some text to create a line break</a></li>
+      <span class="icon icon--greater"></span>
+      <li><a href="#">Bilateral Relations</a></li>
+      <span class="icon icon--greater"></span>
+      <li class="active">Title of the active page</li>
+    </ol>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">&quot;breadcrumb&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Home page EDA<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--greater&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Country <span class="err">&amp;</span> Travel Information<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--greater&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Country Selection<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--greater&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Democratic Republic of the Congo<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--greater&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Some text to create a line break<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--greater&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Bilateral Relations<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--greater&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;</span>Title of the active page<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="c-back-to-overview">Back to Overview</h1>
+
+<p>The “back to overview” navigation links pages that do not appear in the navigation to their “parent page”. An example of this can be found in the details page of the publications section.</p>
+
+<p>The “back to overview” link appears before the page title at the top of the content pane, and at the end of the page before the page-end navigation.</p>
+<div class="codeExample"><div class="exampleOutput"><a href="#" class="icon icon--before icon--less">Back to Overview</a>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--less&quot;</span><span class="nt">&gt;</span>Back to Overview<span class="nt">&lt;/a&gt;</span>
+</pre></div></div></div>
+<h1 id="d-page-nav-list">Page Navigation List (Left Sidebar Navigation)</h1>
+
+<p>The sub-navigation on the left sidebar of the content section is a so-called dynamic navigation. It always only shows the page that has currently been selected and the navigation options that page has to offer:</p>
+
+<ul>
+<li>Navigation header: the name of the active page has a color bar and is highlighted typographically</li>
+<li>“Back” link: above the navigation header, there is a link leading back to the previous navigation level</li>
+<li>Sub-pages: below the navigation header, all of the lower navigation levels are listed as links</li>
+<li>Sister pages: pages located on the same navigation level as the active page are not listed here. They are accessed via the global navigation or the “back” link. Only on the lowest navigation level, where there are no other sub-pages, are sister pages shown – if there are any.</li>
+</ul>
+
+<h2>Behavior</h2>
+
+<p>If a link to a sub-page is clicked on, a new page is loaded. On this page, the selected page is shown as the navigation header. The “back” link leads to the navigation level above, i.e. to the page on which the user has just been. Below the navigation header there are links to the lower navigation levels.</p>
+
+<p>If a page on the same navigation level as the active page (a sister page) is to be accessed, this is either done via back-linking to the page above or via the global navigation.</p>
+
+<p>If a page on the lowest navigation level is clicked on (i.e. the selected page has no sub-pages), the navigation is not replaced. Instead, the page currently selected is marked with a red line and the other pages on the same level (sister pages) remain visible.</p>
+
+<p><img src="styleguide-img/navigation_supermarkt.png" alt="example"></p>
+
+<p>As long as a page has sub-pages, the navigation head changes dynamically during the navigation (drilling down) process (Step 1). When the lowest level of the navigation tree has been reached, and the pages no longer have sub-pages, only the display changes (Step 2).</p>
+
+<h2>Implementation for Smartphones</h2>
+
+<p>On smartphones, the navigation is shown at the end of the page above the footer The name of the active page is hidden.</p>
+
+<p><img src="styleguide-img/mobile_navi_3.png" alt="Left nav on mobile"></p>
+
+<p>Navigation below the content level on a smartphone with links to the home page, the navigation level above, and to further pages.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+
+      <nav class="nav-page-list">
+        <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+        <ul>
+          <li><a href="#">Drinks</a></li>
+          <li><a href="#">Mineral water</a></li>
+          <li class="active"><a href="#">Wine</a></li>
+          <li><a href="#">Beer</a></li>
+          <li><a href="#">Spirits</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4&quot;</span><span class="nt">&gt;</span>
+
+      <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-page-list&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--less&quot;</span><span class="nt">&gt;</span>Comestible Goods<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Drinks<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Mineral water<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Wine<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Beer<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Spirits<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/nav&gt;</span>
+
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="e-facete-page-nav">Faceted Page Navigation</h1>
+
+<p>Faceted navigation serves the purpose of filtering elements (e.g. in a product catalog) on the basis of predefined criteria, so-called facets. These facets are grouped by facet types. A facet which contains subfacets is marked with a triangle.</p>
+
+<h2>Behavior:</h2>
+
+<p>After a page with faceted navigation has been loaded, a list containing the facets of the highest level of facet types remains open. The user can open or close any number of other facet types.</p>
+
+<p>For every facet type, the user can only open one facet; the other facets are hidden. The selected facet type can then no longer be closed.</p>
+
+<p>If a facet has subfacets, these subfacets are shown after the facet has been selected. The user can then further limit the selection with the help of the subfacets. A selection can be undone with a delete button.</p>
+
+<p>The contents of the page are adapted to show the selection made in the faceted navigation, and are constantly updated.</p>
+
+<h2>Implementation for Smartphones:</h2>
+
+<p>On smartphones, the navigation is accessed via a filter link, and it behaves in the same way as the faceted navigation for desktop computers. Unlike in the desktop version, the contents of the page are only updated when the user closes the faceted navigation.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+
+      <nav class="nav-page-list nav-page-list--facette">
+        <a href="#" class="icon icon--before icon--less">Home page swisstopo</a>
+        <ul>
+          <li class="active"><a href="#">Products <span class="badge">4245</span></a></li>
+          <li>
+            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#geodata">Geodata</button>
+            <ul id="geodata" class="collapse in">
+              <li>
+                <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#images">Images <span class="badge">1285</span></button>
+                <ul id="images" class="collapse in">
+                  <li class="active"><a href="#">Aerial image</a>  <button type="button" class="close">&times;</button></li>
+                </ul>
+              </li>
+              <li><a href="#">Landscape models</a> <span class="badge">245</span></li>
+              <li><a href="#">Elevation models</a> <span class="badge">45</span></li>
+              <li><a href="#">Map data</a> <span class="badge">27</span></li>
+              <li><a href="#">Geological models</a> <span class="badge">238</span></li>
+            </ul>
+          </li>
+          <li>
+            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#content-1">Use</button>
+            <ul id="content-1" class="collapse">
+              <li><a href="">Some content <span class="badge">12</span></a></li>
+              <li><a href="">Some content <span class="badge">56</span></a></li>
+              <li><a href="">Some content <span class="badge">89</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#content-2">Online Services & Software</button>
+            <ul id="content-2" class="collapse">
+              <li><a href="">Some content <span class="badge">358</span></a></li>
+              <li><a href="">Some content <span class="badge">658</span></a></li>
+              <li><a href="">Some content <span class="badge">74</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#content-3">Publications & Tools</button>
+            <ul id="content-3" class="collapse">
+              <li><a href="">Some content <span class="badge">52</span></a></li>
+              <li><a href="">Some content <span class="badge">8961</span></a></li>
+              <li><a href="">Some content <span class="badge">462</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#content-4">Themes</button>
+            <ul id="content-4" class="collapse">
+              <li><a href="">Some content <span class="badge">596</span></a></li>
+              <li><a href="">Some content <span class="badge">45</span></a></li>
+              <li><a href="">Some content <span class="badge">85</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4&quot;</span><span class="nt">&gt;</span>
+
+      <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-page-list nav-page-list--facette&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--less&quot;</span><span class="nt">&gt;</span>Home page swisstopo<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Products <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>4245<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--greater&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#geodata&quot;</span><span class="nt">&gt;</span>Geodata<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;geodata&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse in&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--greater&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#images&quot;</span><span class="nt">&gt;</span>Images <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>1285<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;images&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse in&quot;</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Aerial image<span class="nt">&lt;/a&gt;</span>  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;close&quot;</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Landscape models<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>245<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Elevation models<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>45<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Map data<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>27<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Geological models<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>238<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--greater&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#content-1&quot;</span><span class="nt">&gt;</span>Use<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;content-1&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>12<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>56<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>89<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--greater&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#content-2&quot;</span><span class="nt">&gt;</span>Online Services <span class="err">&amp;</span> Software<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;content-2&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>358<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>658<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>74<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--greater&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#content-3&quot;</span><span class="nt">&gt;</span>Publications <span class="err">&amp;</span> Tools<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;content-3&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>52<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>8961<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>462<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--greater&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#content-4&quot;</span><span class="nt">&gt;</span>Themes<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">&quot;content-4&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>596<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>45<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Some content <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;badge&quot;</span><span class="nt">&gt;</span>85<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/nav&gt;</span>
+
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>      </div>
+    </div>
+  </div>
+
+  <!-- Styleguide JS -->
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+      // avoid conflict with potential other jQuery loaded on the styleguide
+      var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script>
+    var cortanaSearchData = 
+    [
+      
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Alerts",
+            "breadcrumb": "Content Components > Widgets > Alerts",
+            "path": "content_components_>_widgets.html#a-alerts",
+            "tokens": ["Content Components > Widgets","Alerts"]
+            },
+          
+            
+            
+            {
+            "title": "Emergency",
+            "breadcrumb": "Content Components > Widgets > Emergency",
+            "path": "content_components_>_widgets.html#b-emergency",
+            "tokens": ["Content Components > Widgets","Emergency"]
+            },
+          
+            
+            
+            {
+            "title": "Timeline",
+            "breadcrumb": "Content Components > Widgets > Timeline",
+            "path": "content_components_>_widgets.html#b-timeline",
+            "tokens": ["Content Components > Widgets","Timeline"]
+            },
+          
+            
+            
+            {
+            "title": "Tabs",
+            "breadcrumb": "Content Components > Widgets > Tabs",
+            "path": "content_components_>_widgets.html#c-tabs",
+            "tokens": ["Content Components > Widgets","Tabs"]
+            },
+          
+            
+            
+            {
+            "title": "Elements List",
+            "breadcrumb": "Content Components > Widgets > Elements List",
+            "path": "content_components_>_widgets.html#d-elements-list",
+            "tokens": ["Content Components > Widgets","Elements List"]
+            },
+          
+            
+            
+            {
+            "title": "Further Information",
+            "breadcrumb": "Content Components > Widgets > Further Information",
+            "path": "content_components_>_widgets.html#e-further-info",
+            "tokens": ["Content Components > Widgets","Further Information"]
+            },
+          
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Fieldsets",
+            "breadcrumb": "Base Layout - Forms Elements > Fieldsets",
+            "path": "base_layout_-_forms_elements.html#a-fieldsets",
+            "tokens": ["Base Layout - Forms Elements","Fieldsets"]
+            },
+          
+            
+            
+            {
+            "title": "Forms",
+            "breadcrumb": "Base Layout - Forms Elements > Forms",
+            "path": "base_layout_-_forms_elements.html#b-forms",
+            "tokens": ["Base Layout - Forms Elements","Forms"]
+            },
+          
+            
+            
+            {
+            "title": "Selects",
+            "breadcrumb": "Base Layout - Forms Elements > Selects",
+            "path": "base_layout_-_forms_elements.html#c-selects",
+            "tokens": ["Base Layout - Forms Elements","Selects"]
+            },
+          
+            
+            
+            {
+            "title": "Checkboxes",
+            "breadcrumb": "Base Layout - Forms Elements > Checkboxes",
+            "path": "base_layout_-_forms_elements.html#d-checkboxes",
+            "tokens": ["Base Layout - Forms Elements","Checkboxes"]
+            },
+          
+            
+            
+            {
+            "title": "Radios",
+            "breadcrumb": "Base Layout - Forms Elements > Radios",
+            "path": "base_layout_-_forms_elements.html#e-radios",
+            "tokens": ["Base Layout - Forms Elements","Radios"]
+            },
+          
+            
+            
+            {
+            "title": "Buttons",
+            "breadcrumb": "Base Layout - Forms Elements > Buttons",
+            "path": "base_layout_-_forms_elements.html#f-buttons",
+            "tokens": ["Base Layout - Forms Elements","Buttons"]
+            },
+          
+            
+            
+            {
+            "title": "Button groups",
+            "breadcrumb": "Base Layout - Forms Elements > Button groups",
+            "path": "base_layout_-_forms_elements.html#g-buttongroups",
+            "tokens": ["Base Layout - Forms Elements","Button groups"]
+            },
+          
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Global Navigation",
+            "breadcrumb": "Navigation modules - Hierarchy navigation > Global Navigation",
+            "path": "navigation_modules_-_hierarchy_navigation.html#a-globalnavigation",
+            "tokens": ["Navigation modules - Hierarchy navigation","Global Navigation"]
+            },
+          
+            
+            
+            {
+            "title": "Breadcrumb",
+            "breadcrumb": "Navigation modules - Hierarchy navigation > Breadcrumb",
+            "path": "navigation_modules_-_hierarchy_navigation.html#b-breadcrumb",
+            "tokens": ["Navigation modules - Hierarchy navigation","Breadcrumb"]
+            },
+          
+            
+            
+            {
+            "title": "Back to Overview",
+            "breadcrumb": "Navigation modules - Hierarchy navigation > Back to Overview",
+            "path": "navigation_modules_-_hierarchy_navigation.html#c-back-to-overview",
+            "tokens": ["Navigation modules - Hierarchy navigation","Back to Overview"]
+            },
+          
+            
+            
+            {
+            "title": "Page Navigation List (Left Sidebar Navigation)",
+            "breadcrumb": "Navigation modules - Hierarchy navigation > Page Navigation List (Left Sidebar Navigation)",
+            "path": "navigation_modules_-_hierarchy_navigation.html#d-page-nav-list",
+            "tokens": ["Navigation modules - Hierarchy navigation","Page Navigation List (Left Sidebar Navigation)"]
+            },
+          
+            
+            
+            {
+            "title": "Faceted Page Navigation",
+            "breadcrumb": "Navigation modules - Hierarchy navigation > Faceted Page Navigation",
+            "path": "navigation_modules_-_hierarchy_navigation.html#e-facete-page-nav",
+            "tokens": ["Navigation modules - Hierarchy navigation","Faceted Page Navigation"]
+            },
+          
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Logo with Link to Home Page",
+            "breadcrumb": "Navigation modules - Header > Logo with Link to Home Page",
+            "path": "navigation_modules_-_header.html#a-header-logo",
+            "tokens": ["Navigation modules - Header","Logo with Link to Home Page"]
+            },
+          
+            
+            
+            {
+            "title": "Service Navigation",
+            "breadcrumb": "Navigation modules - Header > Service Navigation",
+            "path": "navigation_modules_-_header.html#b-service-navigation",
+            "tokens": ["Navigation modules - Header","Service Navigation"]
+            },
+          
+            
+            
+            {
+            "title": "Language Selection via a Dropdown List",
+            "breadcrumb": "Navigation modules - Header > Language Selection via a Dropdown List",
+            "path": "navigation_modules_-_header.html#c-lang-select",
+            "tokens": ["Navigation modules - Header","Language Selection via a Dropdown List"]
+            },
+          
+            
+            
+            {
+            "title": "Language Selection via a Link List",
+            "breadcrumb": "Navigation modules - Header > Language Selection via a Link List",
+            "path": "navigation_modules_-_header.html#d-lang-navigation-list",
+            "tokens": ["Navigation modules - Header","Language Selection via a Link List"]
+            },
+          
+            
+            
+            {
+            "title": "Topics A-Z",
+            "breadcrumb": "Navigation modules - Header > Topics A-Z",
+            "path": "navigation_modules_-_header.html#e-topics",
+            "tokens": ["Navigation modules - Header","Topics A-Z"]
+            },
+          
+            
+            
+            {
+            "title": "Site Search",
+            "breadcrumb": "Navigation modules - Header > Site Search",
+            "path": "navigation_modules_-_header.html#f-site-search",
+            "tokens": ["Navigation modules - Header","Site Search"]
+            },
+          
+            
+            
+            {
+            "title": "Treecrumb Federal Administration",
+            "breadcrumb": "Navigation modules - Header > Treecrumb Federal Administration",
+            "path": "navigation_modules_-_header.html#g-treecrumb-federal-administration",
+            "tokens": ["Navigation modules - Header","Treecrumb Federal Administration"]
+            },
+          
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Logo",
+            "breadcrumb": "Base Layout - General > Logo",
+            "path": "base_layout_-_general.html#a-logo",
+            "tokens": ["Base Layout - General","Logo"]
+            },
+          
+            
+            
+            {
+            "title": "Colors",
+            "breadcrumb": "Base Layout - General > Colors",
+            "path": "base_layout_-_general.html#b-colors",
+            "tokens": ["Base Layout - General","Colors"]
+            },
+          
+            
+            
+            {
+            "title": "Background",
+            "breadcrumb": "Base Layout - General > Background",
+            "path": "base_layout_-_general.html#c-background",
+            "tokens": ["Base Layout - General","Background"]
+            },
+          
+            
+            
+            {
+            "title": "Images",
+            "breadcrumb": "Base Layout - General > Images",
+            "path": "base_layout_-_general.html#d-images",
+            "tokens": ["Base Layout - General","Images"]
+            },
+          
+            
+            
+            {
+            "title": "Standard image",
+            "breadcrumb": "Base Layout - General > Standard image",
+            "path": "base_layout_-_general.html#a-standard-image",
+            "tokens": ["Base Layout - General","Standard image"]
+            },
+          
+            
+            
+            {
+            "title": "Captioned image",
+            "breadcrumb": "Base Layout - General > Captioned image",
+            "path": "base_layout_-_general.html#b-captioned-image",
+            "tokens": ["Base Layout - General","Captioned image"]
+            },
+          
+            
+            
+            {
+            "title": "Image format",
+            "breadcrumb": "Base Layout - General > Image format",
+            "path": "base_layout_-_general.html#c-image-format",
+            "tokens": ["Base Layout - General","Image format"]
+            },
+          
+            
+            
+            {
+            "title": "Icons",
+            "breadcrumb": "Base Layout - General > Icons",
+            "path": "base_layout_-_general.html#e-icons",
+            "tokens": ["Base Layout - General","Icons"]
+            },
+          
+            
+            
+            {
+            "title": "Form icons",
+            "breadcrumb": "Base Layout - General > Form icons",
+            "path": "base_layout_-_general.html#form-icons",
+            "tokens": ["Base Layout - General","Form icons"]
+            },
+          
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Page Title",
+            "breadcrumb": "Content Components > Standard elements > Page Title",
+            "path": "content_components_>_standard_elements.html#a-page-title",
+            "tokens": ["Content Components > Standard elements","Page Title"]
+            },
+          
+            
+            
+            {
+            "title": "Image & Text",
+            "breadcrumb": "Content Components > Standard elements > Image & Text",
+            "path": "content_components_>_standard_elements.html#b-image-text",
+            "tokens": ["Content Components > Standard elements","Image & Text"]
+            },
+          
+            
+            
+            {
+            "title": "Info box",
+            "breadcrumb": "Content Components > Standard elements > Info box",
+            "path": "content_components_>_standard_elements.html#c-info-box",
+            "tokens": ["Content Components > Standard elements","Info box"]
+            },
+          
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Site Map and Partners",
+            "breadcrumb": "Navigation modules - Footer > Site Map and Partners",
+            "path": "navigation_modules_-_footer.html#a-site-map",
+            "tokens": ["Navigation modules - Footer","Site Map and Partners"]
+            },
+          
+            
+            
+            {
+            "title": "Social Media",
+            "breadcrumb": "Navigation modules - Footer > Social Media",
+            "path": "navigation_modules_-_footer.html#b-social-media",
+            "tokens": ["Navigation modules - Footer","Social Media"]
+            },
+          
+            
+            
+            {
+            "title": "Footbar",
+            "breadcrumb": "Navigation modules - Footer > Footbar",
+            "path": "navigation_modules_-_footer.html#c-footbar",
+            "tokens": ["Navigation modules - Footer","Footbar"]
+            },
+          
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Standard table",
+            "breadcrumb": "Base Layout - Tables > Standard table",
+            "path": "base_layout_-_tables.html#a-standard-table",
+            "tokens": ["Base Layout - Tables","Standard table"]
+            },
+          
+            
+            
+            {
+            "title": "Table with Zebra Striping",
+            "breadcrumb": "Base Layout - Tables > Table with Zebra Striping",
+            "path": "base_layout_-_tables.html#b-zebra-table",
+            "tokens": ["Base Layout - Tables","Table with Zebra Striping"]
+            },
+          
+            
+            
+            {
+            "title": "Cycle table (single)",
+            "breadcrumb": "Base Layout - Tables > Cycle table (single)",
+            "path": "base_layout_-_tables.html#a-zebra-cycle-table-single",
+            "tokens": ["Base Layout - Tables","Cycle table (single)"]
+            },
+          
+            
+            
+            {
+            "title": "Cycle table (pairs)",
+            "breadcrumb": "Base Layout - Tables > Cycle table (pairs)",
+            "path": "base_layout_-_tables.html#b-zebra-cycle-table-pairs",
+            "tokens": ["Base Layout - Tables","Cycle table (pairs)"]
+            },
+          
+            
+            
+            {
+            "title": "Table with Caption",
+            "breadcrumb": "Base Layout - Tables > Table with Caption",
+            "path": "base_layout_-_tables.html#c-zebra-table-with-caption",
+            "tokens": ["Base Layout - Tables","Table with Caption"]
+            },
+          
+            
+            
+            {
+            "title": "Table with Highlighting",
+            "breadcrumb": "Base Layout - Tables > Table with Highlighting",
+            "path": "base_layout_-_tables.html#c-highlight-table",
+            "tokens": ["Base Layout - Tables","Table with Highlighting"]
+            },
+          
+            
+            
+            {
+            "title": "Cycle table (single)",
+            "breadcrumb": "Base Layout - Tables > Cycle table (single)",
+            "path": "base_layout_-_tables.html#a-cycle-table-single",
+            "tokens": ["Base Layout - Tables","Cycle table (single)"]
+            },
+          
+            
+            
+            {
+            "title": "Cycle table (pairs)",
+            "breadcrumb": "Base Layout - Tables > Cycle table (pairs)",
+            "path": "base_layout_-_tables.html#b-cycle-table-pairs",
+            "tokens": ["Base Layout - Tables","Cycle table (pairs)"]
+            },
+          
+            
+            
+            {
+            "title": "Table with Caption",
+            "breadcrumb": "Base Layout - Tables > Table with Caption",
+            "path": "base_layout_-_tables.html#c-table-with-caption",
+            "tokens": ["Base Layout - Tables","Table with Caption"]
+            },
+          
+            
+            
+            {
+            "title": "Sortable table",
+            "breadcrumb": "Base Layout - Tables > Sortable table",
+            "path": "base_layout_-_tables.html#d-sortable-table",
+            "tokens": ["Base Layout - Tables","Sortable table"]
+            },
+          
+            
+            
+            {
+            "title": "Table with Expandable Rows",
+            "breadcrumb": "Base Layout - Tables > Table with Expandable Rows",
+            "path": "base_layout_-_tables.html#e-expandable-table",
+            "tokens": ["Base Layout - Tables","Table with Expandable Rows"]
+            },
+          
+            
+            
+            {
+            "title": "Ruled Table",
+            "breadcrumb": "Base Layout - Tables > Ruled Table",
+            "path": "base_layout_-_tables.html#f-ruled-table",
+            "tokens": ["Base Layout - Tables","Ruled Table"]
+            },
+          
+            
+            
+            {
+            "title": "Unruled Table",
+            "breadcrumb": "Base Layout - Tables > Unruled Table",
+            "path": "base_layout_-_tables.html#g-unruled-table",
+            "tokens": ["Base Layout - Tables","Unruled Table"]
+            },
+          
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Titles",
+            "breadcrumb": "Base Layout - Typography > Titles",
+            "path": "base_layout_-_typography.html#a-titles",
+            "tokens": ["Base Layout - Typography","Titles"]
+            },
+          
+            
+            
+            {
+            "title": "Paragraphs",
+            "breadcrumb": "Base Layout - Typography > Paragraphs",
+            "path": "base_layout_-_typography.html#b-paragraphs",
+            "tokens": ["Base Layout - Typography","Paragraphs"]
+            },
+          
+            
+            
+            {
+            "title": "Text elements",
+            "breadcrumb": "Base Layout - Typography > Text elements",
+            "path": "base_layout_-_typography.html#c-text-elements",
+            "tokens": ["Base Layout - Typography","Text elements"]
+            },
+          
+            
+            
+            {
+            "title": "Blockquote",
+            "breadcrumb": "Base Layout - Typography > Blockquote",
+            "path": "base_layout_-_typography.html#d-blockquote",
+            "tokens": ["Base Layout - Typography","Blockquote"]
+            },
+          
+            
+            
+            {
+            "title": "Lists",
+            "breadcrumb": "Base Layout - Typography > Lists",
+            "path": "base_layout_-_typography.html#e-lists",
+            "tokens": ["Base Layout - Typography","Lists"]
+            },
+          
+            
+            
+            {
+            "title": "Links",
+            "breadcrumb": "Base Layout - Typography > Links",
+            "path": "base_layout_-_typography.html#f-links",
+            "tokens": ["Base Layout - Typography","Links"]
+            },
+          
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Anchor links",
+            "breadcrumb": "Navigation modules - Content Navigation > Anchor links",
+            "path": "navigation_modules_-_content_navigation.html#b-anchorlinks",
+            "tokens": ["Navigation modules - Content Navigation","Anchor links"]
+            },
+          
+            
+            
+            {
+            "title": "Pagination",
+            "breadcrumb": "Navigation modules - Content Navigation > Pagination",
+            "path": "navigation_modules_-_content_navigation.html#c-pagination",
+            "tokens": ["Navigation modules - Content Navigation","Pagination"]
+            },
+          
+        
+      
+        
+      
+    {}];
+
+    (function($) {
+      $('#cortana-search').typeahead({
+        name: 'cortana_search',
+        local: cortanaSearchData,
+        template: [
+          '<a href="{{path}}">',
+          '<p class="cortana-search-title">{{title}}</p>',
+          '<p class="cortana-search-path">{{breadcrumb}}</p>',
+          '</a>'
+        ].join(''),
+        updater: function () {
+          /* navigate to the selected item */
+          alert('ok');
+        },
+        engine: Hogan
+      }).on('typeahead:selected', function(event, data) {
+        window.location.replace(data.path);
+      });
+    }) (jQuery_no_conflict);
+  </script>
+  
+  <!-- Styleguide JS -->
+  
+    <script type="text/javascript" src="js/vendors.min.js"></script>
+  
+    <script type="text/javascript" src="js/main.min.js"></script>
+  
+</body>
+</html>

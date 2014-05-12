@@ -20,12 +20,18 @@
       $dropdownMenu = $('.dropdown-menu');
 
   // Toggle overlay
-  $yamm.find($dropdownToggle).click(function () {
-    if ($(this).parent().hasClass('open')){
-      $body.removeClass('overlay');
-    } else {
-      $body.addClass('overlay');
-    }
+  $yamm.each(function () {
+    var $that = $(this);
+    $that.find($dropdownToggle).click(function () {
+      if ($(this).parent().hasClass('open')){
+        $body.removeClass('overlay');
+        $that.css('z-index', 20);
+      } else {
+        $that.find($dropdown).removeClass('open');
+        $body.addClass('overlay');
+        $that.css('z-index', 9999);
+      }
+    });
   });
 
   // Disable outside click
