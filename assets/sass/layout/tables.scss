@@ -24,6 +24,9 @@ The standard table consists of the table title `<caption>`, the table head `<the
 
 Add `.table-bordered` for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.
 
+
+A simple example without `id` and `headers` attributes :
+
 ```html_example
 <table class="table table-bordered text-right">
   <caption>Game animals shot in Switzerland</caption>
@@ -71,560 +74,7 @@ Add `.table-bordered` for borders on all sides of the table and cells. The stand
     </tr>
   </tfoot>
 </table>
-
-<div class="offset3 span6">
-                <h2>Cycle-Tabelle (einzeln)</h2>
-<div class="cycletable" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-
-
-  <table class="cycletable" summary="Erwerbspersonen Statistik 2007-2011, Zahlen in 1000" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-    <caption>Inlandkonzept, in 1000</caption>
-    <thead>
-      <tr>
-        <td>&nbsp;</td>
-        <th id="2007" class="right" style="display: none;">2007</th>
-        <th id="2008" class="right" style="display: none;">2008</th>
-        <th id="2009" class="right" style="display: none;">2009</th>
-        <th id="2010" class="right" style="display: none;">2010</th>
-        <th id="2011" class="default right" style="display: table-cell;">2011</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th id="total" colspan="6">Total</th>
-      </tr>
-      <tr>
-        <th>Erwerbspersonen am 1. Januar</th>
-        <td headers="total 2007" class="right" style="display: none;">4'515</td>
-        <td headers="total 2008" class="right" style="display: none;">4'618</td>
-        <td headers="total 2009" class="right" style="display: none;">4'735</td>
-        <td headers="total 2010" class="right" style="display: none;">4'775</td>
-        <td headers="total 2011" class="right" style="display: table-cell;">4'834</td>
-      </tr>
-      <tr>
-        <th>+ Arbeitsmarkteintritte</th>
-        <td headers="total 2007" class="right" style="display: none;">308</td>
-        <td headers="total 2008" class="right" style="display: none;">297</td>
-        <td headers="total 2009" class="right" style="display: none;">316</td>
-        <td headers="total 2010" class="right" style="display: none;">289</td>
-        <td headers="total 2011" class="right" style="display: table-cell;">300</td>
-      </tr>
-      <tr>
-        <th>- Arbeitsmarktaustritte</th>
-        <td headers="total 2007" class="right" style="display: none;">250</td>
-        <td headers="total 2008" class="right" style="display: none;">289</td>
-        <td headers="total 2009" class="right" style="display: none;">302</td>
-        <td headers="total 2010" class="right" style="display: none;">273</td>
-        <td headers="total 2011" class="right" style="display: table-cell;">271</td>
-      </tr>
-      <tr>
-        <th>+ Einwanderung von Erwerbspersonen</th>
-        <td headers="total 2007" class="right" style="display: none;">151</td>
-        <td headers="total 2008" class="right" style="display: none;">171</td>
-        <td headers="total 2009" class="right" style="display: none;">135</td>
-        <td headers="total 2010" class="right" style="display: none;">149</td>
-        <td headers="total 2011" class="right" style="display: table-cell;">172</td>
-      </tr>
-      <tr>
-        <th>- Auswanderung von Erwerbspersonen</th>
-        <td headers="total 2007" class="right" style="display: none;">106</td>
-        <td headers="total 2008" class="right" style="display: none;">108</td>
-        <td headers="total 2009" class="right" style="display: none;">109</td>
-        <td headers="total 2010" class="right" style="display: none;">106</td>
-        <td headers="total 2011" class="right" style="display: table-cell;">93</td>
-      </tr>
-      <tr>
-        <th>= Erwerbspersonen am 31. Dezember</th>
-        <td headers="total 2007" class="right" style="display: none;">4'618</td>
-        <td headers="total 2008" class="right" style="display: none;">4'690</td>
-        <td headers="total 2009" class="right" style="display: none;">4'775</td>
-        <td headers="total 2010" class="right" style="display: none;">4'834</td>
-        <td headers="total 2011" class="right" style="display: table-cell;">4'943</td>
-      </tr>
-    </tbody>
-    <tbody>
-      <tr>
-        <th id="maenner" colspan="6">Männer</th>
-      </tr>
-      <tr>
-        <th>Erwerbspersonen am 1. Januar</th>
-        <td headers="maenner 2007" class="right" style="display: none;">2'488</td>
-        <td headers="maenner 2008" class="right" style="display: none;">2'532</td>
-        <td headers="maenner 2009" class="right" style="display: none;">2'585</td>
-        <td headers="maenner 2010" class="right" style="display: none;">2'602</td>
-        <td headers="maenner 2011" class="right" style="display: table-cell;">2'648</td>
-      </tr>
-      <tr>
-        <th>+ Arbeitsmarkteintritte</th>
-        <td headers="maenner 2007" class="right" style="display: none;">126</td>
-        <td headers="maenner 2008" class="right" style="display: none;">118</td>
-        <td headers="maenner 2009" class="right" style="display: none;">141</td>
-        <td headers="maenner 2010" class="right" style="display: none;">133</td>
-        <td headers="maenner 2011" class="right" style="display: table-cell;">132</td>
-      </tr>
-      <tr>
-        <th>- Arbeitsmarktaustritte</th>
-        <td headers="maenner 2007" class="right" style="display: none;">108</td>
-        <td headers="maenner 2008" class="right" style="display: none;">131</td>
-        <td headers="maenner 2009" class="right" style="display: none;">138</td>
-        <td headers="maenner 2010" class="right" style="display: none;">111</td>
-        <td headers="maenner 2011" class="right" style="display: table-cell;">121</td>
-      </tr>
-      <tr>
-        <th>+ Einwanderung von Erwerbspersonen</th>
-        <td headers="maenner 2007" class="right" style="display: none;">95</td>
-        <td headers="maenner 2008" class="right" style="display: none;">108</td>
-        <td headers="maenner 2009" class="right" style="display: none;">85</td>
-        <td headers="maenner 2010" class="right" style="display: none;">92</td>
-        <td headers="maenner 2011" class="right" style="display: table-cell;">110</td>
-      </tr>
-      <tr>
-        <th>- Auswanderung von Erwerbspersonen</th>
-        <td headers="maenner 2007" class="right" style="display: none;">69</td>
-        <td headers="maenner 2008" class="right" style="display: none;">70</td>
-        <td headers="maenner 2009" class="right" style="display: none;">70</td>
-        <td headers="maenner 2010" class="right" style="display: none;">69</td>
-        <td headers="maenner 2011" class="right" style="display: table-cell;">60</td>
-      </tr>
-      <tr>
-        <th>= Erwerbspersonen am 31. Dezember</th>
-        <td headers="maenner 2007" class="right" style="display: none;">2532</td>
-        <td headers="maenner 2008" class="right" style="display: none;">2'556</td>
-        <td headers="maenner 2009" class="right" style="display: none;">2'602</td>
-        <td headers="maenner 2010" class="right" style="display: none;">2'648</td>
-        <td headers="maenner 2011" class="right" style="display: table-cell;">2'708</td>
-      </tr>
-    </tbody>
-    <tbody>
-      <tr>
-        <th id="frauen" colspan="6">Frauen</th>
-      </tr>
-      <tr>
-        <th>Erwerbspersonen am 1. Januar</th>
-        <td headers="frauen 2007" class="right" style="display: none;">2'027</td>
-        <td headers="frauen 2008" class="right" style="display: none;">2'086</td>
-        <td headers="frauen 2009" class="right" style="display: none;">2'150</td>
-        <td headers="frauen 2010" class="right" style="display: none;">2'173</td>
-        <td headers="frauen 2011" class="right" style="display: table-cell;">2'186</td>
-      </tr>
-      <tr>
-        <th>+ Arbeitsmarkteintritte</th>
-        <td headers="frauen 2007" class="right" style="display: none;">182</td>
-        <td headers="frauen 2008" class="right" style="display: none;">179</td>
-        <td headers="frauen 2009" class="right" style="display: none;">175</td>
-        <td headers="frauen 2010" class="right" style="display: none;">156</td>
-        <td headers="frauen 2011" class="right" style="display: table-cell;">168</td>
-      </tr>
-      <tr>
-        <th>- Arbeitsmarktaustritte</th>
-        <td headers="frauen 2007" class="right" style="display: none;">142</td>
-        <td headers="frauen 2008" class="right" style="display: none;">157</td>
-        <td headers="frauen 2009" class="right" style="display: none;">163</td>
-        <td headers="frauen 2010" class="right" style="display: none;">162</td>
-        <td headers="frauen 2011" class="right" style="display: table-cell;">149</td>
-      </tr>
-      <tr>
-        <th>+ Einwanderung von Erwerbspersonen</th>
-        <td headers="frauen 2007" class="right" style="display: none;">56</td>
-        <td headers="frauen 2008" class="right" style="display: none;">64</td>
-        <td headers="frauen 2009" class="right" style="display: none;">50</td>
-        <td headers="frauen 2010" class="right" style="display: none;">56</td>
-        <td headers="frauen 2011" class="right" style="display: table-cell;">62</td>
-      </tr>
-      <tr>
-        <th>- Auswanderung von Erwerbspersonen</th>
-        <td headers="frauen 2007" class="right" style="display: none;">37</td>
-        <td headers="frauen 2008" class="right" style="display: none;">38</td>
-        <td headers="frauen 2009" class="right" style="display: none;">39</td>
-        <td headers="frauen 2010" class="right" style="display: none;">37</td>
-        <td headers="frauen 2011" class="right" style="display: table-cell;">33</td>
-      </tr>
-      <tr>
-        <th>= Erwerbspersonen am 31. Dezember</th>
-        <td headers="frauen 2007" class="right" style="display: none;">2'086</td>
-        <td headers="frauen 2008" class="right" style="display: none;">2'133</td>
-        <td headers="frauen 2009" class="right" style="display: none;">2'173</td>
-        <td headers="frauen 2010" class="right" style="display: none;">2'186</td>
-        <td headers="frauen 2011" class="right" style="display: table-cell;">2'234</td>
-      </tr>
-      <tr aria-hidden="true">
-        <td>&nbsp;</td>
-        <td class="highlight right" style="display: none;">2007</td>
-        <td class="highlight right" style="display: none;">2008</td>
-        <td class="highlight right" style="display: none;">2009</td>
-        <td class="highlight right" style="display: none;">2010</td>
-        <td class="highlight right" style="display: table-cell;">2011</td>
-      </tr>
-    </tbody>
-  </table>
-<div class="tablecycler"><div class="control"><a href="#" title="Vorherige Spalte" class="columns_prev" data-icon="<"></a><a href="#" title="Nächste Spalte" class="columns_next" data-icon=">"></a></div><div class="indicator"><a href="#" title="2007" class="icn_indicator" data-index="0">•</a><a href="#" title="2008" class="icn_indicator" data-index="1">•</a><a href="#" title="2009" class="icn_indicator" data-index="2">•</a><a href="#" title="2010" class="icn_indicator" data-index="3">•</a><a href="#" title="2011" class="icn_indicator icn_indicator_active" data-index="4">•</a></div></div></div>
-
-
-
-
-
-<h2>Cycle-Tabelle (paarweise)</h2>
-<div class="cycletable pair" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-  <table summary="GAV Statistik 2011-2013, mit und ohne Lohnverhandlung">
-    <caption>Tabelle mit Titelzeile (Standardtabelle)</caption>
-    <thead>
-      <tr class="pairwise">
-        <td>&nbsp;</td>
-        <th id="2011" colspan="2" class="center" style="display: none;">2011</th>
-        <th id="2012" colspan="2" class="center" style="display: none;">2012</th>
-        <th id="2013" colspan="2" class="default center" style="display: table-cell;">2013</th>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <th id="gav-2011" headers="2011" style="display: none;">GAV</th>
-        <th id="arbeitnehmende-2011" headers="2011" style="display: none;">unterstellte Arbeit<span class="hidden-phone-portrait">-<br></span>nehmende</th>
-        <th id="gav-2012" headers="2012" style="display: none;">GAV</th>
-        <th id="arbeitnehmende-2012" headers="2012" style="display: none;">unterstellte Arbeit<span class="hidden-phone-portrait">-<br></span>nehmende</th>
-        <th id="gav-2013" headers="2013" style="display: table-cell;">GAV</th>
-        <th id="arbeitnehmende-2013" headers="2013" style="display: table-cell;">unterstellte Arbeit<span class="hidden-phone-portrait">-<br></span>nehmende</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th id="wichtigsten-gav">Wichtigsten GAV<sup title="lorem ipsum dolor sit amet">1)</sup></th>
-        <td headers="gav-2011 wichtigsten-gav 2011" class="right" style="display: none;">100</td>
-        <td headers="gav-2011 wichtigsten-gav 2011" class="right" style="display: none;">1'400'600</td>
-        <td headers="gav-2012 wichtigsten-gav 2012" class="right" style="display: none;">97</td>
-        <td headers="gav-2012 wichtigsten-gav 2012" class="right" style="display: none;">1'607'100</td>
-        <td headers="gav-2013 wichtigsten-gav 2013" class="right" style="display: table-cell;">93</td>
-        <td headers="gav-2013 wichtigsten-gav 2013" class="right" style="display: table-cell;">1'574'800</td>
-      </tr>
-      <tr>
-        <th id="gav-ohne-lohnverhandlung">GAV ohne Lohnverhandlung</th>
-        <td headers="gav-2011 gav-ohne-lohnverhandlung 2011" class="right" style="display: none;">28</td>
-        <td headers="gav-2011 gav-ohne-lohnverhandlung 2011" class="right" style="display: none;">362'400</td>
-        <td headers="gav-2012 gav-ohne-lohnverhandlung 2012" class="right" style="display: none;">29</td>
-        <td headers="gav-2012 gav-ohne-lohnverhandlung 2012" class="right" style="display: none;">605'900</td>
-        <td headers="gav-2013 gav-ohne-lohnverhandlung 2013" class="right" style="display: table-cell;">68</td>
-        <td headers="gav-2013 gav-ohne-lohnverhandlung 2013" class="right" style="display: table-cell;">1'032'700</td>
-      </tr>
-      <tr>
-        <th id="gav-mit-lohnverhandlung">GAV mit Lohnverhandlung</th>
-        <td headers="gav-2011 gav-mit-lohnverhandlung 2011" class="right" style="display: none;">72</td>
-        <td headers="gav-2011 gav-mit-lohnverhandlung 2011" class="right" style="display: none;">1'038'200</td>
-        <td headers="gav-2012 gav-mit-lohnverhandlung 2012" class="right" style="display: none;">68</td>
-        <td headers="gav-2012 gav-mit-lohnverhandlung 2012" class="right" style="display: none;">1'001'200</td>
-        <td headers="gav-2013 gav-mit-lohnverhandlung 2013" class="right" style="display: table-cell;">25</td>
-        <td headers="gav-2013 gav-mit-lohnverhandlung 2013" class="right" style="display: table-cell;">542'100</td>
-      </tr>
-    </tbody>
-    <tbody>
-      <tr>
-        <th id="lohnvereinbarungsart" colspan="7">Lohnvereinbarungsart</th>
-      </tr>
-      <tr>
-        <th id="effektiv-vereinbarung">Effektivlohn-vereinbarung</th>
-        <td headers="gav-2011 effektiv-vereinbarung 2011" class="right" style="display: none;">9</td>
-        <td headers="gav-2011 effektiv-vereinbarung 2011" class="right" style="display: none;">129'500</td>
-        <td headers="gav-2012 effektiv-vereinbarung 2012" class="right" style="display: none;">6</td>
-        <td headers="gav-2012 effektiv-vereinbarung 2012" class="right" style="display: none;">79'500</td>
-        <td headers="gav-2013 effektiv-vereinbarung 2013" class="right" style="display: table-cell;">6</td>
-        <td headers="gav-2013 effektiv-vereinbarung 2013" class="right" style="display: table-cell;">76'500</td>
-      </tr>
-      <tr>
-        <th id="effektiv-mindest-vereinbarung">Effektiv- und Mindest-lohnvereinbarung<sup title="lorem ipsum dolor sit amet">2)</sup></th>
-        <td headers="gav-2011 effektiv-mindest-vereinbarung 2011" class="right" style="display: none;">45</td>
-        <td headers="gav-2011 effektiv-mindest-vereinbarung 2011" class="right" style="display: none;">365'800</td>
-        <td headers="gav-2012 effektiv-mindest-vereinbarung 2012" class="right" style="display: none;">47</td>
-        <td headers="gav-2012 effektiv-mindest-vereinbarung 2012" class="right" style="display: none;">3) 688400</td>
-        <td headers="gav-2013 effektiv-mindest-vereinbarung 2013" class="right" style="display: table-cell;">40</td>
-        <td headers="gav-2013 effektiv-mindest-vereinbarung 2013" class="right" style="display: table-cell;">403'700</td>
-      </tr>
-      <tr>
-        <th id="mindestlohn-vereinbarung">Mindestlohn-vereinbarung<sup title="lorem ipsum dolor sit amet">2)</sup></th>
-        <td headers="gav-2011 mindestlohn-vereinbarung 2011" class="right" style="display: none;">18</td>
-        <td headers="gav-2011 mindestlohn-vereinbarung 2011" class="right" style="display: none;">543'000</td>
-        <td headers="gav-2012 mindestlohn-vereinbarung 2012" class="right" style="display: none;">15</td>
-        <td headers="gav-2012 mindestlohn-vereinbarung 2012" class="right" style="display: none;">233'300</td>
-        <td headers="gav-2013 mindestlohn-vereinbarung 2013" class="right" style="display: table-cell;">21</td>
-        <td headers="gav-2013 mindestlohn-vereinbarung 2013" class="right" style="display: table-cell;">537'400</td>
-      </tr>
-      <tr>
-        <th id="keine-vereinbarung">Keine Lohn-vereinbarung</th>
-        <td headers="gav-2011 keine-vereinbarung 2011" class="right" style="display: none;">0</td>
-        <td headers="gav-2011 keine-vereinbarung 2011" class="right" style="display: none;">0</td>
-        <td headers="gav-2012 keine-vereinbarung 2012" class="right" style="display: none;">0</td>
-        <td headers="gav-2012 keine-vereinbarung 2012" class="right" style="display: none;">0</td>
-        <td headers="gav-2013 keine-vereinbarung 2013" class="right" style="display: table-cell;">1</td>
-        <td headers="gav-2013 keine-vereinbarung 2013" class="right" style="display: table-cell;">15'100</td>
-      </tr>
-      <tr aria-hidden="true" class="pairwise">
-        <td>&nbsp;</td>
-        <td class="highlight" colspan="2" style="display: none;">2011</td>
-        <td class="highlight" colspan="2" style="display: none;">2012</td>
-        <td class="highlight" colspan="2" style="display: table-cell;">2013</td>
-      </tr>
-      <tr aria-hidden="true">
-        <td>&nbsp;</td>
-        <td class="highlight" style="display: none;">GAV</td>
-        <td class="highlight" style="display: none;">unterstellte Arbeit<span class="hidden-phone-portrait">-<br></span>nehmende</td>
-        <td class="highlight" style="display: none;">GAV</td>
-        <td class="highlight" style="display: none;">unterstellte Arbeit<span class="hidden-phone-portrait">-<br></span>nehmende</td>
-        <td class="highlight" style="display: table-cell;">GAV</td>
-        <td class="highlight" style="display: table-cell;">unterstellte Arbeit<span class="hidden-phone-portrait">-<br></span>nehmende</td>
-      </tr>
-    </tbody>
-  </table>
-<div class="tablecycler"><div class="control"><a href="#" title="Vorherige Spalte" class="columns_prev" data-icon="<"></a><a href="#" title="Nächste Spalte" class="columns_next" data-icon=">"></a></div><div class="indicator"><a href="#" title="2011" class="icn_indicator" data-index="0">•</a><a href="#" title="2012" class="icn_indicator" data-index="1">•</a><a href="#" title="2013" class="icn_indicator icn_indicator_active" data-index="2">•</a></div></div></div>
-
-
-
-
-
-<h2>Scroll-Tabelle</h2>
-<div class="scrolltable">
-  <table summary="Diskographie">
-    <caption>Tabelle mit Titelzeile (Standardtabelle)</caption>
-    <thead>
-      <tr>
-        <th>
-          Artist</th>
-        <th id="album">
-          Album</th>
-        <th id="year">
-          Year</th>
-        <th id="price" class="right">
-          Price in USD</th>
-        <th id="label">
-          Label</th>
-        <th id="tracks" class="right">
-          Tracks</th>
-        <th id="length" class="right">
-          Length</th>
-        <th id="producer">
-          Producer</th>
-        <th id="recorded">
-          Recorded</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th id="jimi" headers="artist">
-          Jimi Hendrix</th>
-        <td headers="album jimi">
-          Are You Experienced</td>
-        <td headers="year jimi">
-          1967</td>
-        <td headers="price jimi" class="right">
-          10.00</td>
-        <td headers="label jimi">
-          MCA</td>
-        <td headers="tracks jimi" class="right">
-          11</td>
-        <td headers="length jimi" class="right">
-          53:10</td>
-        <td headers="producer jimi">
-          Chas Chandler</td>
-        <td headers="recorded jimi">
-          February 1967</td>
-      </tr>
-      <tr>
-        <th id="pink" headers="artist">
-          Pink Floyd</th>
-        <td headers="album pink">
-          Wish You Were Here</td>
-        <td headers="year pink">
-          1975</td>
-        <td headers="price pink" class="right">
-          12.00</td>
-        <td headers="label pink">
-          Harvest, Emi</td>
-        <td headers="tracks pink" class="right">
-          8</td>
-        <td headers="length pink" class="right">
-          42:59</td>
-        <td headers="producer pink">
-          Pink Floyd</td>
-        <td headers="recorded pink">
-          May - October 1975</td>
-      </tr>
-      <tr>
-        <th id="beatles" headers="artist">
-          Beatles</th>
-        <td headers="album beatles">
-          Abbey Road</td>
-        <td headers="year beatles">
-          1969</td>
-        <td headers="price beatles" class="right">
-          14.00</td>
-        <td headers="label beatles">
-          Apple</td>
-        <td headers="tracks beatles" class="right">
-          12</td>
-        <td headers="length beatles" class="right">
-          58:45</td>
-        <td headers="producer beatles">
-          Hans Muster</td>
-        <td headers="recorded beatles">
-          January - July 1969</td>
-      </tr>
-      <tr>
-        <th id="bob" headers="artist">
-          Bob Dylan</th>
-        <td headers="album bob">
-          Blonde on Blonde</td>
-        <td headers="year bob">
-          1966</td>
-        <td headers="price bob" class="right">
-          15.00</td>
-        <td headers="label bob">
-          Columbia</td>
-        <td headers="tracks bob" class="right">
-          14</td>
-        <td headers="length bob" class="right">
-          75:21</td>
-        <td headers="producer bob">
-          Johnny Cash</td>
-        <td headers="recorded bob">
-          July 1966</td>
-      </tr>
-      <tr class="highlight" aria-hidden="true">
-        <td>Artist</td>
-        <td>Album</td>
-        <td>Year</td>
-        <td class="right">Price in USD</td>
-        <td>Label</td>
-        <td class="right">Tracks</td>
-        <td class="right"> Length</td>
-        <td>Producer</td>
-        <td>Recorded</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-
-
-
-
-<h2>Scroll-Tabelle mit fixer linken Spalte</h2>
-<div class="scrolltable fixedColumn">
-  <table summary="Diskographie">
-    <caption>Tabelle mit Titelzeile (Standardtabelle)</caption>
-    <thead>
-      <tr>
-        <th>
-          Artist</th>
-        <th id="album">
-          Album</th>
-        <th id="year">
-          Year</th>
-        <th id="price" class="right">
-          Price in USD</th>
-        <th id="label">
-          Label</th>
-        <th id="tracks" class="right">
-          Tracks</th>
-        <th id="length" class="right">
-          Length</th>
-        <th id="producer">
-          Producer</th>
-        <th id="recorded">
-          Recorded</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th id="jimi" headers="artist">
-          Jimi Hendrix</th>
-        <td headers="album jimi">
-          Are You Experienced</td>
-        <td headers="year jimi">
-          1967</td>
-        <td headers="price jimi" class="right">
-          10.00</td>
-        <td headers="label jimi">
-          MCA</td>
-        <td headers="tracks jimi" class="right">
-          11</td>
-        <td headers="length jimi" class="right">
-          53:10</td>
-        <td headers="producer jimi">
-          Chas Chandler</td>
-        <td headers="recorded jimi">
-          February 1967</td>
-      </tr>
-      <tr>
-        <th id="pink" headers="artist">
-          Pink Floyd</th>
-        <td headers="album pink">
-          Wish You Were Here</td>
-        <td headers="year pink">
-          1975</td>
-        <td headers="price pink" class="right">
-          12.00</td>
-        <td headers="label pink">
-          Harvest, Emi</td>
-        <td headers="tracks pink" class="right">
-          8</td>
-        <td headers="length pink" class="right">
-          42:59</td>
-        <td headers="producer pink">
-          Pink Floyd</td>
-        <td headers="recorded pink">
-          May - October 1975</td>
-      </tr>
-      <tr>
-        <th id="beatles" headers="artist">
-          Beatles</th>
-        <td headers="album beatles">
-          Abbey Road</td>
-        <td headers="year beatles">
-          1969</td>
-        <td headers="price beatles" class="right">
-          14.00</td>
-        <td headers="label beatles">
-          Apple</td>
-        <td headers="tracks beatles" class="right">
-          12</td>
-        <td headers="length beatles" class="right">
-          58:45</td>
-        <td headers="producer beatles">
-          Hans Muster</td>
-        <td headers="recorded beatles">
-          January - July 1969</td>
-      </tr>
-      <tr>
-        <th id="bob" headers="artist">
-          Bob Dylan</th>
-        <td headers="album bob">
-          Blonde on Blonde</td>
-        <td headers="year bob">
-          1966</td>
-        <td headers="price bob" class="right">
-          15.00</td>
-        <td headers="label bob">
-          Columbia</td>
-        <td headers="tracks bob" class="right">
-          14</td>
-        <td headers="length bob" class="right">
-          75:21</td>
-        <td headers="producer bob">
-          Johnny Cash</td>
-        <td headers="recorded bob">
-          July 1966</td>
-      </tr>
-      <tr aria-hidden="true">
-        <td class="highlight">Artist</td>
-        <td class="highlight">Album</td>
-        <td class="highlight">Year</td>
-        <td class="right highlight">Price in USD</td>
-        <td class="highlight">Label</td>
-        <td class="right highlight">Tracks</td>
-        <td class="right highlight"> Length</td>
-        <td class="highlight">Producer</td>
-        <td class="highlight">Recorded</td>
-      </tr>
-    </tbody>
-  </table>
-</div>              </div>
 ```
-
 */
 
 table caption {
@@ -679,6 +129,8 @@ category: Base Layout - Tables
 
 The zebra stripes are shown when the `table-striped` class is added to the `<table>`.
 
+A simple example without `id` and `headers` attributes :
+
 ```html_example
 <table class="table table-bordered text-right table-striped">
   <caption>Game animals shot in Switzerland</caption>
@@ -728,6 +180,28 @@ The zebra stripes are shown when the `table-striped` class is added to the `<tab
 
 */
 
+.table-striped {
+  > tbody > tr:nth-child(odd) {
+    > td,
+    > th {
+      background-color: transparent;
+    }
+  }
+  > tbody > tr:nth-child(even) {
+    > td,
+    > th {
+      background-color: $table-bg-accent;
+    }
+  }
+  > thead td, > thead th, > tfoot td, > tfoot th {
+    background: $smoke;
+    font-weight: bold;
+    color: $black;
+  }
+}
+
+
+
 /*doc
 ---
 title: Table with Highlighting
@@ -738,6 +212,8 @@ category: Base Layout - Tables
 <span class="label label-default">FLEX</span>
 
 This table is based on the standard table but with `active` class on cells or on row.
+
+A simple example without `id` and `headers` attributes :
 
 ```html_example
 <table class="table table-bordered text-right">
@@ -817,59 +293,71 @@ The sortable table automatically formats the column in which the data has been s
   <thead>
     <tr>
       <td></td>
-      <th>2000</th>
-      <th>2010</th>
-      <th>2011</th>
-      <th>2012</th>
+      <th id="2000">2000</th>
+      <th id="2010">2010</th>
+      <th id="2011">2011</th>
+      <th id="2012">2012</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th class="text-left">Boars</th>
-      <td>4'160</td>
-      <td>7'647</td>
-      <td>4'726</td>
-      <td>10'650</td>
+      <td headers="2000">4'160</td>
+      <td headers="2010">7'647</td>
+      <td headers="2011">4'726</td>
+      <td headers="2012">10'650</td>
     </tr>
     <tr>
       <th class="text-left">Chamois</th>
-      <td>16'625</td>
-      <td>13'427</td>
-      <td>13'413</td>
-      <td>13'350</td>
+      <td headers="2000">16'625</td>
+      <td headers="2010">13'427</td>
+      <td headers="2011">13'413</td>
+      <td headers="2012">13'350</td>
     </tr>
     <tr>
       <th class="text-left">Fox</th>
-      <td>42'221</td>
-      <td>31'044</td>
-      <td>27'094</td>
-      <td>35'616</td>
+      <td headers="2000">42'221</td>
+      <td headers="2010">31'044</td>
+      <td headers="2011">27'094</td>
+      <td headers="2012">35'616</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
       <th></th>
-      <td>63'006</td>
-      <td>52'118</td>
-      <td>45'233</td>
-      <td>59'616</td>
+      <td headers="2000">63'006</td>
+      <td headers="2010">52'118</td>
+      <td headers="2011">45'233</td>
+      <td headers="2012">59'616</td>
     </tr>
   </tfoot>
 </table>
 ```
-
 */
 
-/*.table-sort thead th span:after {
-  content: "\5E";
-  margin-left: .4em;
-  color: $empress;
-  font-family: $admin-icons;
-}
 
-.table-sort thead th.headerSortUp span:after {
-  content: "v";
-}*/
+.table-sort thead th {
+  color: $cerulean;
+  &:hover, &:hover:after {color: $venetian-red;}
+  div {
+    display: inline;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:after {
+    content: "v";
+    margin-left: .4em;
+    color: $empress;
+    font-family: $admin-icons;
+  }
+  &.tablesorter-headerAsc:after {
+    content: "\5E";
+  }
+  &.tablesorter-headerAsc div, &.tablesorter-headerDesc div {
+    color: $empress !important;
+  }
+}
 
 
 /*doc
