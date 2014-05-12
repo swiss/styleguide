@@ -604,14 +604,14 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
       <nav class="nav-page-list nav-page-list--facette">
         <a href="#" class="icon icon--before icon--less">Home page swisstopo</a>
         <ul>
-          <li><a href="#">Products <span class="badge">4245</span></a></li>
+          <li class="active"><a href="#">Products <span class="badge">4245</span></a></li>
           <li>
             <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#geodata">Geodata</button>
             <ul id="geodata" class="collapse in">
               <li>
                 <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#images">Images <span class="badge">1285</span></button>
                 <ul id="images" class="collapse in">
-                  <li class="active"><a href="#">Aerial image</a> <span class="icon icon--close"></span></li>
+                  <li class="active"><a href="#">Aerial image</a>  <button type="button" class="close">&times;</button></li>
                 </ul>
               </li>
               <li><a href="#">Landscape models</a> <span class="badge">245</span></li>
@@ -718,22 +718,22 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
       font-size: 15px;
       border-radius: 3px;
     }
-    .icon--close {
-      display: block;
+    .close {
+      display: inline-block;
+      padding-left: 0;
+      text-decoration: none;
+      border: none;
+      max-width: 20px;
       position: absolute;
       right: 10px;
-      top: 10px;
-      &:after {
-        color: $light-grey;
-        font-size: 11px;
-      }
-      &:after:hover {cursor: click;}
+      top: 0px;
     }
   }
-  li.active, ul ul li.active {
+  ul ul li.active {
     a {
       border: none;
       padding: 10px 20px;
+      margin-left: 20px;
     }
     a:before {
       background: $venetian-red;
