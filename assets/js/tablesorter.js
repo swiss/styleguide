@@ -16,4 +16,18 @@
 
   $tables.tablesorter();
 
+  $tables.each(function () {
+    $table = $(this);
+    $table.find('thead th').click(function () {
+      var $headers = $(this).attr('id');
+      $table.find('td, th').each(function () {
+        if ($(this).attr('headers') === $headers || $(this).attr('id') === $headers) {
+          $(this).addClass('active');
+        } else {
+          $(this).removeClass('active');
+        }
+      });
+    });
+  });
+
 }) (jQuery);

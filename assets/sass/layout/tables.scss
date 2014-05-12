@@ -18,11 +18,14 @@ name: a-standard-table
 category: Base Layout - Tables
 ---
 
-*FLEX*
+<span class="label label-default">FLEX</span>
 
 The standard table consists of the table title `<caption>`, the table head `<thead>`, the table body `<tbody>`, and the table foot `<tfoot>`. 
 
 Add `.table-bordered` for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.
+
+
+A simple example without `id` and `headers` attributes :
 
 ```html_example
 <table class="table table-bordered text-right">
@@ -72,7 +75,6 @@ Add `.table-bordered` for borders on all sides of the table and cells. The stand
   </tfoot>
 </table>
 ```
-
 */
 
 table caption {
@@ -86,6 +88,10 @@ table.table-bordered {
   thead th, tfoot td {background: $smoke;}
   tbody td {color: $night-rider;}
   th {color: $black;}
+}
+
+.table>tbody+tbody {
+  border-top-width: 1px;
 }
 
 table.table thead tr {
@@ -123,9 +129,11 @@ name: b-zebra-table
 category: Base Layout - Tables
 ---
 
-*FLEX*
+<span class="label label-default">FLEX</span>
 
 The zebra stripes are shown when the `table-striped` class is added to the `<table>`.
+
+A simple example without `id` and `headers` attributes :
 
 ```html_example
 <table class="table table-bordered text-right table-striped">
@@ -176,6 +184,28 @@ The zebra stripes are shown when the `table-striped` class is added to the `<tab
 
 */
 
+.table-striped {
+  > tbody > tr:nth-child(odd) {
+    > td,
+    > th {
+      background-color: transparent;
+    }
+  }
+  > tbody > tr:nth-child(even) {
+    > td,
+    > th {
+      background-color: $table-bg-accent;
+    }
+  }
+  > thead td, > thead th, > tfoot td, > tfoot th {
+    background: $smoke;
+    font-weight: bold;
+    color: $black;
+  }
+}
+
+
+
 /*doc
 ---
 title: Table with Highlighting
@@ -183,9 +213,11 @@ name: c-highlight-table
 category: Base Layout - Tables
 ---
 
-*FLEX*
+<span class="label label-default">FLEX</span>
 
 This table is based on the standard table but with `active` class on cells or on row.
+
+A simple example without `id` and `headers` attributes :
 
 ```html_example
 <table class="table table-bordered text-right">
@@ -255,12 +287,97 @@ name: d-sortable-table
 category: Base Layout - Tables
 ---
 
-*FLEX*
+<span class="label label-default">FLEX</span>
 
 The sortable table automatically formats the column in which the data has been sorted. You just have to use the `table-sort` class
 
 ```html_example
 <table class="table table-bordered table-sort text-right">
+  <caption>Game animals shot in Switzerland</caption>
+  <thead>
+    <tr>
+      <td></td>
+      <th id="2000">2000</th>
+      <th id="2010">2010</th>
+      <th id="2011">2011</th>
+      <th id="2012">2012</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th class="text-left">Boars</th>
+      <td headers="2000">4'160</td>
+      <td headers="2010">7'647</td>
+      <td headers="2011">4'726</td>
+      <td headers="2012">10'650</td>
+    </tr>
+    <tr>
+      <th class="text-left">Chamois</th>
+      <td headers="2000">16'625</td>
+      <td headers="2010">13'427</td>
+      <td headers="2011">13'413</td>
+      <td headers="2012">13'350</td>
+    </tr>
+    <tr>
+      <th class="text-left">Fox</th>
+      <td headers="2000">42'221</td>
+      <td headers="2010">31'044</td>
+      <td headers="2011">27'094</td>
+      <td headers="2012">35'616</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th></th>
+      <td headers="2000">63'006</td>
+      <td headers="2010">52'118</td>
+      <td headers="2011">45'233</td>
+      <td headers="2012">59'616</td>
+    </tr>
+  </tfoot>
+</table>
+```
+*/
+
+
+.table-sort thead th {
+  color: $cerulean;
+  &:hover, &:hover:after {color: $venetian-red;}
+  div {
+    display: inline;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:after {
+    content: "v";
+    margin-left: .4em;
+    color: $empress;
+    font-family: $admin-icons;
+  }
+  &.tablesorter-headerAsc:after {
+    content: "\5E";
+  }
+  &.tablesorter-headerAsc div, &.tablesorter-headerDesc div {
+    color: $empress !important;
+  }
+}
+
+
+/*doc
+---
+title: Table with Expandable Rows
+name: e-expandable-table
+category: Base Layout - Tables
+---
+
+<span class="label label-default">FLEX</span>
+
+Some tables can be expanded to show details of a data set
+
+```html_example
+
+<table class="table table-bordered text-right">
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr>
@@ -273,26 +390,35 @@ The sortable table automatically formats the column in which the data has been s
   </thead>
   <tbody>
     <tr>
-      <th class="text-left">Boars</th>
-      <td>4'160</td>
-      <td>7'647</td>
-      <td>4'726</td>
-      <td>10'650</td>
+      <th class="text-left icon icon--before icon--right" data-toggle="collapse" data-target="#animals">Animals</th>
+      <td>63'006</td>
+      <td>52'118</td>
+      <td>45'233</td>
+      <td>59'616</td>
     </tr>
-    <tr>
-      <th class="text-left">Chamois</th>
-      <td>16'625</td>
-      <td>13'427</td>
-      <td>13'413</td>
-      <td>13'350</td>
-    </tr>
-    <tr>
-      <th class="text-left">Fox</th>
-      <td>42'221</td>
-      <td>31'044</td>
-      <td>27'094</td>
-      <td>35'616</td>
-    </tr>
+    <tbody id="animals" class="collapse">
+      <tr>
+        <th class="text-left">Boars</th>
+        <td>4'160</td>
+        <td>7'647</td>
+        <td>4'726</td>
+        <td>10'650</td>
+      </tr>
+      <tr>
+        <th class="text-left">Chamois</th>
+        <td>16'625</td>
+        <td>13'427</td>
+        <td>13'413</td>
+        <td>13'350</td>
+      </tr>
+      <tr>
+        <th class="text-left">Fox</th>
+        <td>42'221</td>
+        <td>31'044</td>
+        <td>27'094</td>
+        <td>35'616</td>
+      </tr>
+    </tbody>
   </tbody>
   <tfoot>
     <tr>
@@ -304,36 +430,26 @@ The sortable table automatically formats the column in which the data has been s
     </tr>
   </tfoot>
 </table>
+
 ```
-
 */
 
-/*.table-sort thead th span:after {
-  content: "\5E";
-  margin-left: .4em;
-  color: $empress;
-  font-family: $admin-icons;
+
+.table {
+  th[data-toggle="collapse"], td[data-toggle="collapse"] {
+    color: $cerulean;
+    &:hover {
+      cursor: pointer;
+      color: $venetian-red;
+    }
+  }
+  tbody tbody {
+    tr td:first-child, tr th:first-child {
+      background: red;
+      padding-left: 20px;
+    }
+  }
 }
-
-.table-sort thead th.headerSortUp span:after {
-  content: "v";
-}*/
-
-
-/*doc
----
-title: Table with Expandable Rows
-name: e-expandable-table
-category: Base Layout - Tables
----
-
-*FLEX*
-
-Some tables can be expanded to show details of a data set
-
-**@TODO : Add functionnal example !**
-
-*/
 
 
 /*doc
@@ -343,7 +459,7 @@ name: f-ruled-table
 category: Base Layout - Tables
 ---
 
-*FLEX*
+<span class="label label-default">FLEX</span>
 
 Ruled tables are particularly suitable for presenting simple 1:1 relationships. The ruled format is set by adding the `table-simple` to the table tag.
 
@@ -400,7 +516,7 @@ name: g-unruled-table
 category: Base Layout - Tables
 ---
 
-*FLEX*
+<span class="label label-default">FLEX</span>
 
 Unruled tables are suitable for presenting properties, e.g. of a publication. A simple unruled table is formatted with the class `table-naked`.
 
