@@ -14,9 +14,11 @@
 /*doc
 ---
 title: Icons
-name: f-icons
-category: Base Layout > Visual
+name: e-icons
+category: Base Layout - General
 ---
+
+*FLEX*
 
 The icons used are one-color and two-dimensional. They are provided as a web font which is to be found in the resources as a TrueType font.
 
@@ -172,9 +174,11 @@ $icon-list: (
 ---
 title: Form icons
 name: form-icons
-parent: f-icons
-category: Base Layout > Visual
+parent: e-icons
+category: Base Layout - General
 ---
+
+*FLEX*
 
 Use the global `.form-icon` class followed by the more specific class
 

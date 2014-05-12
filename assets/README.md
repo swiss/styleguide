@@ -10,7 +10,7 @@ The design specifications described for use on the Internet or in intranets can 
 
 The elements and modules described can be categorized in three groups:
 
-## [Corporate Design Elements](#corporate)
+## Corporate Design Elements
 
 The corporate design elements identify the website definitively as websites of the Confederation and for this reason their use is obligatory. Their presentation and design are set out in the Confederation CD, and they may not be modified in any way. Changes to these elements may only be implemented by the Specialist Unit for the Confederation CD or by the KID (Information Services Conference of the Administrative Departments). The CD elements are:
 
@@ -22,7 +22,7 @@ The corporate design elements identify the website definitively as websites of t
 
 The CD elements are marked with the following icon in the detailed descriptions: Corporate
 
-## [Fixed Elements](#fixed)
+## Fixed Elements
 
 The use of fixed elements is not mandatory. However, if they are used, their position and design are fixed and unalterable. For this reason they may not be modified in any way. Changes or additions to the following elements require the approval of the Web Forum:
 
@@ -40,7 +40,7 @@ The use of fixed elements is not mandatory. However, if they are used, their pos
 
 Fixed elements are marked with the following icon in the detailed descriptions: Fixed
 
-##  [Flexible Elements](#flexible)
+##  Flexible Elements
 
 The descriptions of all other elements are recommendations. They can and may be adapted to meet specific requirements. They can be freely expanded upon and modified. The general look and feel of the site must, however, be retained. Additions to and amendments of these elements can be presented to the Web Forum for consideration as part of the web guidelines.
 

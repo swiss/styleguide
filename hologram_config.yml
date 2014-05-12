@@ -23,4 +23,4 @@ js_include:
   - 'js/main.min.js'
 
 # String who is used to split the category name and create category wrapper
-name_scope: ' > '
+name_scope: ' - '

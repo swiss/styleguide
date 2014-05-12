@@ -15,8 +15,10 @@
 ---
 title: Standard table
 name: a-standard-table
-category: Base Layout > Tables
+category: Base Layout - Tables
 ---
+
+*FLEX*
 
 The standard table consists of the table title `<caption>`, the table head `<thead>`, the table body `<tbody>`, and the table foot `<tfoot>`. 
 
@@ -118,8 +120,10 @@ tr, td, th {
 ---
 title: Table with Zebra Striping
 name: b-zebra-table
-category: Base Layout > Tables
+category: Base Layout - Tables
 ---
+
+*FLEX*
 
 The zebra stripes are shown when the `table-striped` class is added to the `<table>`.
 
@@ -176,8 +180,10 @@ The zebra stripes are shown when the `table-striped` class is added to the `<tab
 ---
 title: Table with Highlighting
 name: c-highlight-table
-category: Base Layout > Tables
+category: Base Layout - Tables
 ---
+
+*FLEX*
 
 This table is based on the standard table but with `active` class on cells or on row.
 
@@ -246,8 +252,10 @@ tfoot td.active {background: $solitude !important;}
 ---
 title: Sortable table
 name: d-sortable-table
-category: Base Layout > Tables
+category: Base Layout - Tables
 ---
+
+*FLEX*
 
 The sortable table automatically formats the column in which the data has been sorted. You just have to use the `table-sort` class
 
@@ -316,8 +324,10 @@ The sortable table automatically formats the column in which the data has been s
 ---
 title: Table with Expandable Rows
 name: e-expandable-table
-category: Base Layout > Tables
+category: Base Layout - Tables
 ---
+
+*FLEX*
 
 Some tables can be expanded to show details of a data set
 
@@ -330,8 +340,10 @@ Some tables can be expanded to show details of a data set
 ---
 title: Ruled Table
 name: f-ruled-table
-category: Base Layout > Tables
+category: Base Layout - Tables
 ---
+
+*FLEX*
 
 Ruled tables are particularly suitable for presenting simple 1:1 relationships. The ruled format is set by adding the `table-simple` to the table tag.
 
@@ -385,8 +397,10 @@ Ruled tables are particularly suitable for presenting simple 1:1 relationships. 
 ---
 title: Unruled Table
 name: g-unruled-table
-category: Base Layout > Tables
+category: Base Layout - Tables
 ---
+
+*FLEX*
 
 Unruled tables are suitable for presenting properties, e.g. of a publication. A simple unruled table is formatted with the class `table-naked`.
 
