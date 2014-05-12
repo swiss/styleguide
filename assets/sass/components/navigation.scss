@@ -36,8 +36,10 @@ nav {
 ---
 title: Global Navigation
 name: a-globalnavigation
-category: Navigation modules - Hierarchy navigation
+category: Navigation modules - Hierarchical Navigation
 ---
+
+<span class="label label-default">FIX</span>
 
 The global navigation shows the main points of access to a website as tabs. It is separated from the header above by a red line. The terminology used for the tabs should be chosen carefully, as this is what gives the user the first impression of the purpose of the website.
 
@@ -481,8 +483,10 @@ On smartphones, the treecrumb navigation is omitted.
 ---
 title: Page Navigation List (Left Sidebar Navigation)
 name: d-page-nav-list
-category: Navigation modules - Hierarchy navigation
+category: Navigation modules - Hierarchical Navigation
 ---
+
+<span class="label label-default">FIX</span>
 
 The sub-navigation on the left sidebar of the content section is a so-called dynamic navigation. It always only shows the page that has currently been selected and the navigation options that page has to offer:
 
@@ -590,8 +594,10 @@ Navigation below the content level on a smartphone with links to the home page, 
 ---
 title: Faceted Page Navigation
 name: e-facete-page-nav
-category: Navigation modules - Hierarchy navigation
+category: Navigation modules - Hierarchical Navigation
 ---
+
+<span class="label label-default">FLEX</span>
 
 Faceted navigation serves the purpose of filtering elements (e.g. in a product catalog) on the basis of predefined criteria, so-called facets. These facets are grouped by facet types. A facet which contains subfacets is marked with a triangle.
 
