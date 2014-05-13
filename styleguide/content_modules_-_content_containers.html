@@ -51,13 +51,13 @@
       
         
         
-      
-        
-        
-      
-        
-        
           
+        
+      
+        
+        
+      
+        
         
       
         
@@ -152,8 +152,63 @@
           
           </ul>
         
+          <h3>Content Modules</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="content_modules_-_content_containers.html">Content Containers</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="content_modules_-_standard_elements.html">Standard elements</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
           <h3>Base Layout</h3>
           <ul>
+          
+            
           
             
           
@@ -211,12 +266,12 @@
           
             
           
-            
-          
           </ul>
         
           <h3>Navigation modules</h3>
           <ul>
+          
+            
           
             
           
@@ -274,12 +329,12 @@
           
             
           
-            
-          
           </ul>
         
           <h3>Design Principles</h3>
           <ul>
+          
+            
           
             
           
@@ -323,8 +378,6 @@
             
           
             
-          
-            
               
               
                 <li><a href="design_principles_-_sample_pages.html">Sample Pages</a></li>
@@ -361,59 +414,6 @@
           
           </ul>
         
-          <h3>Content Modules</h3>
-          <ul>
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              
-              
-                <li><a href="content_modules_-_standard_elements.html">Standard elements</a></li>
-              
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-              
-              
-                <li><a class="active" href="content_modules_-_content_containers.html">Content Containers</a></li>
-              
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-          </ul>
-        
       </nav>
     </div>
 
@@ -437,7 +437,15 @@
           <ul>
              
               
-                <li><a href="#d-elements-list">Elements List</a></li>
+                <li><a href="#a-elements-list">Elements List</a></li>
+              
+             
+              
+                <li><a href="#b-further-info">Further Information</a></li>
+              
+             
+              
+                <li><a href="#c-dropdown-box">Drop-Down Box</a></li>
               
             
           </ul>
@@ -446,7 +454,9 @@
         <div class="cortana-content-wrapper">
 
 
-<h1 id="d-elements-list">Elements List</h1>
+<h1 id="a-elements-list">Elements List</h1>
+
+<p><span class="label label-default">FLEX</span></p>
 
 <p>The elements list is a very generic element that groups content elements in a list. The elements shown here are merely examples.</p>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
@@ -629,6 +639,166 @@
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="b-further-info">Further Information</h1>
+
+<p><span class="label label-default">FLEX</span></p>
+
+<p>Below the content of a page, additional information may be shown. This has the purpose of presenting content (e.g. publications, news, or links) that is directly related to the content that is being shown, but which is not mentioned explicitly in the text (in which case it would have an embedded link). This content is arranged in tabs.</p>
+
+<p>This feature is a specific type of horizontal tab navigation. Up to five tabs can be used. The names to be given to the tabs are not predefined. However, the terminology used must be uniform and used consistently throughout a website. The following tabs are possible, for instance: &quot;Documents and Publications&quot;, &quot;Services&quot;, &quot;Legal Framework&quot;, &quot;Links&quot;, and &quot;News&quot;.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="col-sm-10 col-sm-offset-1">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#documents" data-toggle="tab">Documents</a></li>
+    <li><a href="#links" data-toggle="tab">Links</a></li>
+    <li><a href="#news" data-toggle="tab">News</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content tab-border">
+    <div class="tab-pane active" id="documents">
+      <article>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p><a href="#" class="icon icon--before icon--pdf">link with icon lorem <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></a></p>
+      </article>
+      <hr>
+      <article>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p><a href="#" class="icon icon--before icon--pdf">link with icon lorem <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></a></p>
+      </article>
+    </div>
+    <div class="tab-pane" id="links">
+      <p><a href="#" class="icon icon--after icon--external">external link</a></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eum amet architecto corporis aut cumque ratione dolores odit et libero impedit ipsa. Enim, deleniti, quae ipsa nostrum doloremque nihil repellendus.</p>
+      <hr>
+      <p><a href="#" class="icon icon--after icon--external">external link</a></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eum amet architecto corporis aut cumque ratione dolores odit et libero impedit ipsa. Enim, deleniti, quae ipsa nostrum doloremque nihil repellendus.</p>
+    </div>
+    <div class="tab-pane" id="news">
+      <!-- Add .clearfix class to prevent errors with floated elements -->
+      <article class="clearfix">
+        <h4><a href="#">Title Lorem ipsum</a></h4>
+        <figure class="pull-left">
+          <img src="http://placehold.it/180x113" alt="image description">
+        </figure>
+        <p><small>13.05.2014 - Lorem</small><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nam est alias voluptas minus libero quo aliquid consectetur ipsum sapiente dicta temporibus repellat odio nisi at laudantium error tempore illum!</p>
+      </article>
+      <hr>
+      <article class="clearfix">
+        <h4><a href="#">Title Lorem ipsum</a></h4>
+        <figure class="pull-left">
+          <img src="http://placehold.it/180x113" alt="image description">
+        </figure>
+        <p><small>13.05.2014 - Lorem</small><br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nam est alias voluptas minus libero quo aliquid consectetur ipsum sapiente dicta temporibus repellat odio nisi at laudantium error tempore illum!</p>
+      </article>
+    </div>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10 col-sm-offset-1&quot;</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!-- Nav tabs --&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav nav-tabs&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#documents&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Documents<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#links&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Links<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#news&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>News<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+
+  <span class="c">&lt;!-- Tab panes --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-content tab-border&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane active&quot;</span> <span class="na">id=</span><span class="s">&quot;documents&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;article&gt;</span>
+        <span class="nt">&lt;h4&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--pdf&quot;</span><span class="nt">&gt;</span>link with icon lorem <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;text-dimmed&quot;</span><span class="nt">&gt;</span>(PDF, 43 pages, 2Mb, English)<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;/article&gt;</span>
+      <span class="nt">&lt;hr&gt;</span>
+      <span class="nt">&lt;article&gt;</span>
+        <span class="nt">&lt;h4&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--pdf&quot;</span><span class="nt">&gt;</span>link with icon lorem <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;text-dimmed&quot;</span><span class="nt">&gt;</span>(PDF, 43 pages, 2Mb, English)<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;/article&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;links&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>external link<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eum amet architecto corporis aut cumque ratione dolores odit et libero impedit ipsa. Enim, deleniti, quae ipsa nostrum doloremque nihil repellendus.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;hr&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--external&quot;</span><span class="nt">&gt;</span>external link<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eum amet architecto corporis aut cumque ratione dolores odit et libero impedit ipsa. Enim, deleniti, quae ipsa nostrum doloremque nihil repellendus.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;news&quot;</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!-- Add .clearfix class to prevent errors with floated elements --&gt;</span>
+      <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">&quot;clearfix&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title Lorem ipsum<span class="nt">&lt;/a&gt;&lt;/h4&gt;</span>
+        <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/180x113&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;small&gt;</span>13.05.2014 - Lorem<span class="nt">&lt;/small&gt;&lt;br&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nam est alias voluptas minus libero quo aliquid consectetur ipsum sapiente dicta temporibus repellat odio nisi at laudantium error tempore illum!<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/article&gt;</span>
+      <span class="nt">&lt;hr&gt;</span>
+      <span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">&quot;clearfix&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h4&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title Lorem ipsum<span class="nt">&lt;/a&gt;&lt;/h4&gt;</span>
+        <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/180x113&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;small&gt;</span>13.05.2014 - Lorem<span class="nt">&lt;/small&gt;&lt;br&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nam est alias voluptas minus libero quo aliquid consectetur ipsum sapiente dicta temporibus repellat odio nisi at laudantium error tempore illum!<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/article&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h1 id="c-dropdown-box">Drop-Down Box</h1>
+
+<p>The drop-down box is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.</p>
+
+<p>Add <code>.collapsed</code> to link for it to change the icon direction when collapsing.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="collapse-box">
+  <a data-toggle="collapse" class="collapsed" href="#collapseOne">
+    Collapsible Group Item #1
+  </a>
+  <div id="collapseOne" class="collapse">
+    <ul class="list-unstyled">
+      <li><a href="#" class="icon icon--before icon--cart">link with icon</a></li>
+      <li><a href="#" class="icon icon--before icon--cart">link with icon</a></li>
+      <li><a href="#" class="icon icon--before icon--cart">link with icon</a></li>
+    </ul>
+  </div>
+</div>
+
+<br>
+
+<a data-toggle="collapse" class="collapsed" href="#collapseTwo">
+  Collapsible Group Item #2
+</a>
+<div id="collapseTwo" class="collapse">
+  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;collapse-box&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">class=</span><span class="s">&quot;collapsed&quot;</span> <span class="na">href=</span><span class="s">&quot;#collapseOne&quot;</span><span class="nt">&gt;</span>
+    Collapsible Group Item #1
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;collapseOne&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;list-unstyled&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--cart&quot;</span><span class="nt">&gt;</span>link with icon<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--cart&quot;</span><span class="nt">&gt;</span>link with icon<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--cart&quot;</span><span class="nt">&gt;</span>link with icon<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;br&gt;</span>
+
+<span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">class=</span><span class="s">&quot;collapsed&quot;</span> <span class="na">href=</span><span class="s">&quot;#collapseTwo&quot;</span><span class="nt">&gt;</span>
+  Collapsible Group Item #2
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;collapseTwo&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven&#39;t heard of them accusamus labore sustainable VHS.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>
@@ -675,13 +845,35 @@
             "tokens": ["","Timeline"]
             },
           
+        
+      
+        
+          
+            
+            
+            {
+            "title": "Elements List",
+            "breadcrumb": " > Elements List",
+            "path": ".html#a-elements-list",
+            "tokens": ["","Elements List"]
+            },
+          
             
             
             {
             "title": "Further Information",
             "breadcrumb": " > Further Information",
-            "path": ".html#e-further-info",
+            "path": ".html#b-further-info",
             "tokens": ["","Further Information"]
+            },
+          
+            
+            
+            {
+            "title": "Drop-Down Box",
+            "breadcrumb": " > Drop-Down Box",
+            "path": ".html#c-dropdown-box",
+            "tokens": ["","Drop-Down Box"]
             },
           
         
@@ -1270,19 +1462,6 @@
             "breadcrumb": " > Basic Grid and Page Types",
             "path": ".html#c-basicgrid",
             "tokens": ["","Basic Grid and Page Types"]
-            },
-          
-        
-      
-        
-          
-            
-            
-            {
-            "title": "Elements List",
-            "breadcrumb": " > Elements List",
-            "path": ".html#d-elements-list",
-            "tokens": ["","Elements List"]
             },
           
         

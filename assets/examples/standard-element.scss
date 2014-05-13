@@ -18,6 +18,8 @@ name: a-page-title
 category: Content Modules - Standard elements
 ---
 
+<span class="label label-default">FIX</span>
+
 Each page with the exception of the home page must have its own page title. This is always positioned as the first element on the content page. Only in unattached detail pages (such as publications) is it preceded by the "back to overview" link.
 
 The text used in the page title is of relevance for rankings in search engines (e.g. Google).
@@ -35,6 +37,8 @@ title: Image & Text
 name: b-image-text
 category: Content Modules - Standard elements
 ---
+
+<span class="label label-default">FLEX</span>
 
 This element comprises running text body, which can be complemented by a title and a subtitle. An image and a caption can also be added. If required, the caption can be right-ragged below the text. Various standard image sizes (mainly in golden section proportions) are possible.
 
@@ -130,6 +134,8 @@ title: Info box
 name: c-info-box
 category: Content Modules - Standard elements
 ---
+
+<span class="label label-default">FLEX</span>
 
 The info box is a "text and image" element that has a gray background. It can be integrated into the running text body in order highlight additional information.
 

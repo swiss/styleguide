@@ -1,14 +1,14 @@
 /* ==========================================================
  * lists.scss
  * List element styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
@@ -63,6 +63,18 @@ Download lists
   </li>
   <li>Lorem ipsum</li>
 </ol>
+```
+
+### Unstyled lists
+
+To use with links. Outputs a more readable and clickable list of links. Just add the `.list-unstyled` class.
+
+```html_example
+<ul class="list-unstyled">
+  <li><a href="#" class="icon icon--before icon--pdf">Link 1</a></li>
+  <li><a href="#" class="icon icon--before icon--cart">Link 2</a></li>
+  <li><a href="#" class="icon icon--after icon--external">Link 3</a></li>
+</ul>
 ```
 
 ### Definition lists
@@ -124,4 +136,8 @@ dd {
 dt, dd {
   font-size: 1.1em;
   dt, dd {font-size: 1em;}
+}
+
+.list-unstyled li {
+  margin-top: 0.8em;
 }

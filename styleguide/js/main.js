@@ -60,7 +60,6 @@ if (typeof searchData != "undefined") {
   checkCollapseStatus();
 
   $toggleButton.click(function () {
-    console.log('hello');
     setTimeout(function(){
       checkCollapseStatus();
     }, 360);
@@ -83,7 +82,6 @@ if (typeof searchData != "undefined") {
   checkCollapseTableStatus();
 
   $tableToggle.click(function () {
-    console.log('hello');
     setTimeout(function(){
       checkCollapseTableStatus();
     }, 360);

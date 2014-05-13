@@ -18,7 +18,6 @@
   checkCollapseStatus();
 
   $toggleButton.click(function () {
-    console.log('hello');
     setTimeout(function(){
       checkCollapseStatus();
     }, 360);
@@ -41,7 +40,6 @@
   checkCollapseTableStatus();
 
   $tableToggle.click(function () {
-    console.log('hello');
     setTimeout(function(){
       checkCollapseTableStatus();
     }, 360);

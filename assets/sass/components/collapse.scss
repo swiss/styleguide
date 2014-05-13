@@ -1,0 +1,56 @@
+/*doc
+---
+title: Drop-Down Box
+name: c-dropdown-box
+category: Content Modules - Content Containers
+---
+
+The drop-down box is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.
+
+Add `.collapsed` to link for it to change the icon direction when collapsing.
+
+```html_example
+<div class="collapse-box">
+  <a data-toggle="collapse" class="collapsed" href="#collapseOne">
+    Collapsible Group Item #1
+  </a>
+  <div id="collapseOne" class="collapse">
+    <ul class="list-unstyled">
+      <li><a href="#" class="icon icon--before icon--cart">link with icon</a></li>
+      <li><a href="#" class="icon icon--before icon--cart">link with icon</a></li>
+      <li><a href="#" class="icon icon--before icon--cart">link with icon</a></li>
+    </ul>
+  </div>
+</div>
+
+<br>
+
+<a data-toggle="collapse" class="collapsed" href="#collapseTwo">
+  Collapsible Group Item #2
+</a>
+<div id="collapseTwo" class="collapse">
+  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+</div>
+```
+
+*/
+
+.collapsing, .collapse.in {
+  margin-left: 1.2em;
+}
+
+.collapse-box {
+  padding: 0.8em;
+  background: $smoke;
+}
+
+a[data-toggle="collapse"] {
+  @extend .icon;
+  @extend .icon--before;
+  @extend .icon--bottom;
+  display: block;
+  &.collapsed {
+    @extend .icon--right;
+  }
+}
+
