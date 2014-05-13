@@ -14,6 +14,10 @@ if (typeof searchData != "undefined") {
 
     var $searchField = $('#search-field');
 
+    // Insert the icons
+    $('<span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>').insertAfter($searchField);
+    $('.form-search').append('<span class="icon icon--search"></span>');
+
     // Init the Bloodhound suggestion engine
     var bloodhound = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
@@ -33,10 +37,6 @@ if (typeof searchData != "undefined") {
       displayKey: 'value',
       source: bloodhound.ttAdapter()
     });
-
-    // Insert the icons
-    $('<span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>').insertAfter($searchField);
-    $('.form-search').append('<span class="icon icon--search"></span>');
 
   }) (jQuery, searchData);
 }

@@ -1,6 +1,6 @@
 source: ./assets
 destination: ./styleguide
-documentation_assets: ./bower_components/cortana-swiss-admin
+documentation_assets: ./styleguide-theme
 
 dependencies:
   - ./build/img
