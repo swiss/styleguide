@@ -13,9 +13,9 @@
 
  /*doc
  ---
- title: Tabs
- name: c-tabs
- category: Content Components > Widgets
+ title: Tab Navigation
+ name: d-tab-nav
+ category: Navigation modules - Content Navigation
  ---
 
  Tab navigation is used to group related contents locally within the same page. By way of exception, the font color of the tabs is dark gray (rather than blue) here. The active tab is highlighted with the red bar and the white background color.
@@ -63,21 +63,18 @@
     background: $smoke;
     color: $venetian-red;
     border-right-color: $silver;
-    border-bottom-color: transparent;
-    padding-top: 0px !important;
+    padding-top: 8px !important;
   }
   &.active a, &.active:hover a {
     background: $white;
     border-bottom-color: transparent;
     border-left-color: transparent;
+     padding-top: 10px !important;
+    padding-bottom: 8px !important;
+    box-sizing: padding-box;
   }
   &.active a, &.active:hover a,  &:hover a {
     border-top: 3px solid $venetian-red;
-    padding-top: 8px;
-  }
-  > a:hover {
-    padding-top: 9px;
-    padding-bottom: 9px;
   }
 }
 
