@@ -515,6 +515,7 @@ On smartphones, the navigation is shown at the end of the page above the footer 
 
 Navigation below the content level on a smartphone with links to the home page, the navigation level above, and to further pages.
 
+
 ```html_example
 <div class="container-fluid">
   <div class="row">
@@ -581,7 +582,7 @@ Navigation below the content level on a smartphone with links to the home page, 
       position: absolute;
       top: 0;
       bottom: 0;
-      left: -25px;
+      left: -20px;
       width: 5px;
       background: $white;
     }

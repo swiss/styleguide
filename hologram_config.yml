@@ -1,6 +1,6 @@
 source: ./assets
 destination: ./styleguide
-documentation_assets: ./bower_components/cortana-swiss-admin
+documentation_assets: ./styleguide-theme
 
 dependencies:
   - ./build/img
@@ -24,3 +24,11 @@ js_include:
 
 # String who is used to split the category name and create category wrapper
 name_scope: ' - '
+
+# Order of Category Wrapper
+cat_order:
+  - Design Principles
+  - Base Layout
+  - Navigation modules
+  - Content Modules
+  - Example pages

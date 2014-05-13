@@ -1,0 +1,87 @@
+.cortana-content {
+  font-size: 15px !important;
+  line-height: 1.6em !important;
+  h1, h2, h3, h4, h5, h6{
+    font-family: $lightFont !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    margin: 2em 0 0.4em 0 !important;
+    line-height: 1.2em !important;
+    padding: 1em 4% 0.2em 4% !important;
+    border-top: 1px solid $softBlue;
+    color: $mine !important;
+    @media only screen and (max-width: 900px) {padding: 0.4em 10px !important;}
+  }
+  h1 {
+    font-size: 36px !important;
+    @media only screen and (max-width: 900px) {font-size: 28px !important;}
+  }
+  h2 {
+    font-size: 28px !important;
+    @media only screen and (max-width: 900px) {font-size: 23px !important;}
+  }
+  h3 {
+    font-size: 25px !important;
+    @media only screen and (max-width: 900px) {font-size: 21px !important;}
+  }
+  p {
+    font-family: $mainFont !important;
+    line-height: 1.6em !important;
+    padding: 0 4% !important;
+    margin: 1.8em 0 !important;
+    @media only screen and (max-width: 900px) {padding: 0 10px !important;}
+  }
+  table {
+    margin: 30px 4% !important;
+    font-family: $mainFont !important;
+    border-collapse:collapse !important;
+    @media only screen and (max-width: 900px) {margin: 30px 10px !important;}
+  }
+  strong, b {
+    font-weight: normal !important;
+    font-family: $boldFont !important;
+  }
+  em, i {
+    font-style: normal !important;
+    font-family: $italicFont !important;
+  }
+  table tr, table td, table th {
+    padding: 10px 15px !important;
+    border: 1px solid #ccc !important;
+  }
+  table th {
+    font-weight: bold !important;
+    color: $mine !important;
+  }
+  ul {
+    margin: 0 4% !important;
+    padding-left: 2em !important;
+    font-size: 1.1em !important
+  }
+  li {
+    margin: 1em 0.8em 1em 0 !important;
+  }
+  a {
+    text-decoration: underline !important;
+    font-weight: normal !important;
+    color: $mine !important;
+    font-style: normal !important;
+    font-size: 15px !important;
+    transition: color 0.3s !important;
+    background: $white !important;
+    &:hover, &:active, &:focus {
+      text-decoration: underline !important;
+      font-weight: normal !important;
+      color: $alizarin !important;
+      font-style: normal !important;
+      font-size: 15px !important;
+      background: $white !important;
+    }
+  }
+  &:first-child {
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0 !important;
+      border: none !important;
+    }
+  }
+}

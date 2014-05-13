@@ -1,0 +1,139 @@
+<% nameScope = @config['name_scope'] %>
+<% catWrappers = Array.new %>
+<% @config['cat_order'].each do |catWrapperName| %>
+  <% catWrappers.push(catWrapperName) %>
+<% end %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title><%= title %></title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    <% @config['css_include'].each do |css| %>
+      <link rel="stylesheet" href="<%= css %>">
+    <% end %>
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body data-spy="scroll" data-target="#styleguide-inside-nav">
+
+    <div class="container container-main">
+
+      <header>
+        <div class="row">
+          <div class="col-sm-8">
+            <a href="index.html" class="brand hidden-xs">
+              <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+              <h1>Swiss Confederation<br>Web Guidelines</h1>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <nav class="nav-lang">
+              <ul>
+                <li><a class="active" href="#">DE</a></li>
+                <li><a href="#">FR</a></li>
+                <li><a href="#">IT</a></li>
+                <li><a class="disabled" href="#">RM</a></li>
+                <li><a href="#">EN</a></li>
+              </ul>
+            </nav>
+            <nav class="pull-right">
+              <ul>
+                <li><a href="#">Download</a></li>
+              </ul>
+            </nav>
+            <br><br>
+            <form class="form-horizontal form-search pull-right" role="form">
+              <input id="cortana-search" class="form-control search-field" type="text" placeholder="Search">
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <nav class="nav-main yamm navbar" role="navigation">
+        
+        <ul class="nav navbar-nav">
+          
+          <% catWrappers.each do |wrapper| %>
+            <li class="dropdown yamm-fw">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= wrapper %></a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <div class="yamm-content container-fluid">
+                    <div class="row">
+                      <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+                    </div>
+                    <div class="row">
+                      <% @categories.each do |cat| %>
+                        <% if cat[0].include?(wrapper) %>
+                          <% catName = cat[0].split(nameScope).last %>
+                          <div class="col-sm-3">
+                            <h4><a href="<%= cat[1] %>"><strong><%= catName %></strong></a></h4>
+                            <ul>
+                              <% @pages.each do |file_name, page| %>
+                                <% if not page[:blocks].empty? %>
+                                  <% page[:blocks].each do |block| %>
+                                    <% if block[:category] == cat[0] and block[:title] != cat[0].split(nameScope).last %>
+                                      <% file_path = block[:category].to_s.gsub(' ', '_').downcase + '.html' %>
+                                      <% file_id = "#"+block[:name].to_s %>
+                                      <li><a href="<%= file_path+file_id %>"><%= block[:title].to_s %></a></li>
+                                    <% end %>
+                                  <% end %>
+                                <% end %>
+                              <% end %>
+                            </ul>
+                          </div>
+                        <% end %>
+                      <% end %>
+                    </div>
+                    <br><br><br>
+                    <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+
+      <br>
+
+      <% # Check if we display or not side navigation %>
+      <% blockNumber = 0; %>
+      <% @blocks.each do |block| %> 
+        <% if not block[:parent] %>
+          <% blockNumber += 1 %>
+        <% end %>
+      <% end %>
+
+      <% if blockNumber >= 2 %>
+        <div class="row">
+          <div class="col-sm-3">
+            <div data-spy="affix" class="affix-top" style="width: 18%;">
+              <nav id="styleguide-inside-nav" class="nav-page-list">
+                <a href="index.html" class="icon icon--before icon--less">Home</a>
+                <ul class="nav">
+                  <li><a href="#"><%= title %></a></li>
+                  <% @blocks.each do |block| %> 
+                    <% if not block[:parent] %>
+                      <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+                    <% end %>
+                  <% end %>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        <% end %>
+        <div class="col-sm-9">
+        
+

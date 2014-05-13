@@ -1,3 +1,17 @@
+/* ==========================================================
+ * footer.scss
+ * Footer elements
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-13 15:54:19
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
+
 /*doc
 ---
 title: Site Map and Partners
@@ -150,10 +164,8 @@ footer {
 }
 
 address {
-  margin-top: 10px;
   margin-bottom: 0;
   padding-top: 10px;
-  border-top: 1px solid $white;
 }
 
 .site-map {
@@ -168,6 +180,10 @@ address {
   border-bottom: 1px solid $silver;
   border-top: 1px solid $white;
   padding-bottom: 30px;
+  & + div {
+    border-top: 1px solid $white;
+    padding-bottom: 10px;
+  }
   a {
     font-size: 13px;
     display: inline-block;
