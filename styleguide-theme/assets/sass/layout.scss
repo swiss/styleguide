@@ -81,3 +81,15 @@
     font-family: $mainFont !important;
   }
 }
+
+.label-admin {
+  border: 1px solid $black !important;
+  color: $black !important;
+  font-size: 8px !important;
+  line-height: 26px !important;
+  text-align: center !important;
+  display: block !important;
+  width: 31px !important;
+  height: 31px !important;
+  border-radius: 31px !important;
+}

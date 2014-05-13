@@ -18,7 +18,7 @@ name: f-links
 category: Base Layout - Typography
 ---
 
-<span class="label label-default">CD</span>
+<span class="label label-admin">CD</span>
 
 Links are formatted blue by default and are not underlined. When a mouseover is used, they become red.
 
@@ -37,7 +37,7 @@ You can  use the `.icon` classes to add some icons after or before the link. Use
 
 ## Top Link
 
-<span class="label label-default">FLEX</span>
+<span class="label label-admin">FLEX</span>
 
 The top link is the counterpart to the anchor link. It takes the user back to the beginning of the page from any position in the page currently in use.
 
@@ -48,7 +48,7 @@ The top link is the counterpart to the anchor link. It takes the user back to th
 
 ## End Page Link
 
-<span class="label label-default">FLEX</span>
+<span class="label label-admin">FLEX</span>
 
 The link at the end of the page is a special top link. Each page (with the exception of the home page and the level 1 pages) has a page-end link at the bottom of the page. It contains a link to the top of the page currently in use, together with the date of the last update of the content on this page.
 
@@ -99,7 +99,7 @@ name: c-back-to-overview
 category: Navigation modules - Hierarchical Navigation
 ---
 
-<span class="label label-default">FIX</span>
+<span class="label label-admin">FIX</span>
 
 The “back to overview” navigation links pages that do not appear in the navigation to their “parent page”. An example of this can be found in the details page of the publications section.
 
