@@ -108,23 +108,32 @@
 
       <br>
 
-      <div class="row">
-        <div class="col-sm-3">
-          <div data-spy="affix" class="affix-top" style="width: 18%;">
-            <nav id="styleguide-inside-nav" class="nav-page-list">
-              <a href="index.html" class="icon icon--before icon--less">Home</a>
-              <ul class="nav">
-                <li><a href="#"><%= title %></a></li>
-                <% @blocks.each do |block| %> 
-                  <% if not block[:parent] %>
-                    <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+      <% # Check if we display or not side navigation %>
+      <% blockNumber = 0; %>
+      <% @blocks.each do |block| %> 
+        <% if not block[:parent] %>
+          <% blockNumber += 1 %>
+        <% end %>
+      <% end %>
+
+      <% if blockNumber >= 2 %>
+        <div class="row">
+          <div class="col-sm-3">
+            <div data-spy="affix" class="affix-top" style="width: 18%;">
+              <nav id="styleguide-inside-nav" class="nav-page-list">
+                <a href="index.html" class="icon icon--before icon--less">Home</a>
+                <ul class="nav">
+                  <li><a href="#"><%= title %></a></li>
+                  <% @blocks.each do |block| %> 
+                    <% if not block[:parent] %>
+                      <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+                    <% end %>
                   <% end %>
-                <% end %>
-              </ul>
-            </nav>
+                </ul>
+              </nav>
+            </div>
           </div>
-        </div>
+        <% end %>
         <div class="col-sm-9">
-          
         
 
