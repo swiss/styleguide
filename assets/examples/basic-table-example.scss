@@ -1,7 +1,20 @@
+/* ==========================================================
+ * basic-table-example.scss
+ * Basic table examples
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-13 16:41:04
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
 /*doc
 ---
 title: Cycle table (single)
-name: a-cycle-table-single
+name: a-standard-cycle-table-single
 parent: a-standard-table
 category: Base Layout - Tables
 ---
@@ -191,7 +204,7 @@ category: Base Layout - Tables
 /*doc
 ---
 title: Cycle table (pairs)
-name: b-cycle-table-pairs
+name: b-standard-cycle-table-pairs
 parent: a-standard-table
 category: Base Layout - Tables
 ---
@@ -308,7 +321,7 @@ category: Base Layout - Tables
 /*doc
 ---
 title: Table with Caption
-name: c-table-with-caption
+name: c-standard-table-with-caption
 parent: a-standard-table
 category: Base Layout - Tables
 ---
