@@ -12,9 +12,11 @@
   color: $mine !important;
 }
 
-.codeExample {
+.codeExample, .codeBlock {
   margin: 30px 0;
 }
+
+.codeExample .codeBlock {margin-top: 0;}
 
 .codeBlock {
   padding: 50px 4% !important;
