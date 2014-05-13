@@ -429,6 +429,10 @@
               
                 <li><a href="#c-process-navigation">Process navigation</a></li>
               
+             
+              
+                <li><a href="#d-tab-nav">Tab Navigation</a></li>
+              
             
           </ul>
         </nav>
@@ -519,6 +523,48 @@
     <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
+</pre></div></div></div>
+<h1 id="d-tab-nav">Tab Navigation</h1>
+
+<p>Tab navigation is used to group related contents locally within the same page. By way of exception, the font color of the tabs is dark gray (rather than blue) here. The active tab is highlighted with the red bar and the white background color.</p>
+
+<p>Please note that the contents in the tabs are only used for presentation purposes here. The actual contents are contingent on the purpose of their use (e.g. search results or “further information”).</p>
+
+<p>Reference in detailed specification: Chapter <strong>2.5.4</strong></p>
+<div class="codeExample"><div class="exampleOutput"> <div class="col-sm-10 col-sm-offset-1">
+   <!-- Nav tabs -->
+   <ul class="nav nav-tabs">
+     <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+     <li><a href="#profile" data-toggle="tab">Profile</a></li>
+     <li><a href="#messages" data-toggle="tab">Messages</a></li>
+     <li><a href="#settings" data-toggle="tab">Settings</a></li>
+   </ul>
+
+   <!-- Tab panes -->
+   <div class="tab-content tab-border">
+     <div class="tab-pane active" id="home">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, voluptas, repudiandae, sequi, aliquam eveniet laborum sunt accusantium quisquam esse obcaecati similique iure voluptates nobis provident totam autem odit quos eligendi!</div>
+     <div class="tab-pane" id="profile">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, et nam molestiae repellat voluptas. Praesentium, earum reprehenderit quam voluptatem qui minus neque? Libero, minima magni ab dolor nemo reiciendis aperiam.</div>
+     <div class="tab-pane" id="messages">3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, qui, eligendi veritatis tenetur magnam aut voluptates nam optio eveniet ad quisquam est blanditiis cumque error illum sapiente consectetur tempora impedit?</div>
+     <div class="tab-pane" id="settings">4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, libero, alias veniam a eveniet dolores necessitatibus nam officiis blanditiis ea expedita vitae minima et inventore dolorum quibusdam natus commodi rerum.</div>
+   </div>
+ </div>
+</div><div class="codeBlock"><div class="highlight"><pre> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10 col-sm-offset-1&quot;</span><span class="nt">&gt;</span>
+   <span class="c">&lt;!-- Nav tabs --&gt;</span>
+   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav nav-tabs&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#home&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#profile&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#messages&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#settings&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;tab&quot;</span><span class="nt">&gt;</span>Settings<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+   <span class="nt">&lt;/ul&gt;</span>
+
+   <span class="c">&lt;!-- Tab panes --&gt;</span>
+   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-content tab-border&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane active&quot;</span> <span class="na">id=</span><span class="s">&quot;home&quot;</span><span class="nt">&gt;</span>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, voluptas, repudiandae, sequi, aliquam eveniet laborum sunt accusantium quisquam esse obcaecati similique iure voluptates nobis provident totam autem odit quos eligendi!<span class="nt">&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;profile&quot;</span><span class="nt">&gt;</span>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, et nam molestiae repellat voluptas. Praesentium, earum reprehenderit quam voluptatem qui minus neque? Libero, minima magni ab dolor nemo reiciendis aperiam.<span class="nt">&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;messages&quot;</span><span class="nt">&gt;</span>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, qui, eligendi veritatis tenetur magnam aut voluptates nam optio eveniet ad quisquam est blanditiis cumque error illum sapiente consectetur tempora impedit?<span class="nt">&lt;/div&gt;</span>
+     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;tab-pane&quot;</span> <span class="na">id=</span><span class="s">&quot;settings&quot;</span><span class="nt">&gt;</span>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, libero, alias veniam a eveniet dolores necessitatibus nam officiis blanditiis ea expedita vitae minima et inventore dolorum quibusdam natus commodi rerum.<span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/div&gt;</span>
+ <span class="nt">&lt;/div&gt;</span>
 </pre></div></div></div>      </div>
     </div>
   </div>
@@ -563,15 +609,6 @@
             "breadcrumb": "Content Components > Widgets > Timeline",
             "path": "content_components_>_widgets.html#b-timeline",
             "tokens": ["Content Components > Widgets","Timeline"]
-            },
-          
-            
-            
-            {
-            "title": "Tabs",
-            "breadcrumb": "Content Components > Widgets > Tabs",
-            "path": "content_components_>_widgets.html#c-tabs",
-            "tokens": ["Content Components > Widgets","Tabs"]
             },
           
             
@@ -933,6 +970,15 @@
             "breadcrumb": "Navigation modules - Content Navigation > Process navigation",
             "path": "navigation_modules_-_content_navigation.html#c-process-navigation",
             "tokens": ["Navigation modules - Content Navigation","Process navigation"]
+            },
+          
+            
+            
+            {
+            "title": "Tab Navigation",
+            "breadcrumb": "Navigation modules - Content Navigation > Tab Navigation",
+            "path": "navigation_modules_-_content_navigation.html#d-tab-nav",
+            "tokens": ["Navigation modules - Content Navigation","Tab Navigation"]
             },
           
         
