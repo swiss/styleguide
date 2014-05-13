@@ -1,0 +1,140 @@
+.cortana-menu-btn {
+  width: 28px !important;
+  height: 28px !important;
+  margin: 0 !important;
+  position: absolute !important;
+  left: 25px !important;
+  top: 20px !important;
+  &:hover {
+    cursor: pointer !important;
+    span {background: $mine !important;}
+  }
+  span {
+    display: block !important;
+    width: 100% !important;
+    height: 4px !important;
+    border-radius: 1px !important;
+    margin: 5px 0 !important;
+    background: $silver !important;
+    transition: background 0.3s !important;
+  }
+  @media only screen and (max-width: 767px) {
+    top: 12px !important;
+  }
+}
+
+.cortana-sidenav {
+  background: $white !important;
+  box-shadow: inset -3px 0 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cortana-nav {
+  padding: 10px 0 !important;
+  padding-top: 20px !important;
+  margin: 0 !important;
+  ul {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  li {
+    list-style-type: none !important;
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+  }
+  li a {
+    display: block !important;
+    width: 100% !important;
+    padding: 3px 5% !important;
+    text-decoration: none !important;
+    font-family: $mainFont !important;
+    color: $alizarin !important;
+    margin: 0 !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-transform: none !important;
+    background: transparent !important;
+    border: none !important;
+    transition: all 0.3s !important;
+    font-size: 16px !important;
+    &:hover, &.active {
+      background: $alizarin !important;
+      color: $white !important;
+      font-size: 16px !important;
+      text-decoration: none !important;
+    }
+  }
+  h3 {
+    padding: 0 5% !important;
+    margin: 20px 0 10px 0 !important;
+    padding-top: 20px !important;
+    font-family: $boldFont !important;
+    border-top: 1px solid $silver !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    &:first-child {border: none;}
+  }
+}
+
+.cortana-inside-nav {
+  margin-left: -190px !important;
+  width: 170px !important;
+  float: left !important;
+  margin-top: 100px !important;
+  &.cortana-stick-bottom {
+    position: fixed !important;
+    top: 0px !important;
+    bottom: auto !important;
+  }
+  a {
+    color: $mine !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 5px 0 !important;
+    text-decoration: none !important;
+    font-family: $mainFont !important;
+    transition: color 0.3s !important;
+    font-size: 16px !important;
+    background: transparent !important;
+    &:hover, &.active {
+      color: $alizarin !important;
+      font-size: 16px !important;
+      background: transparent !important;
+      text-decoration: none !important;
+    }
+  }
+  li {
+    list-style-type: none  !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+  ul {
+    position: relative  !important;
+    top: -100px  !important;
+    margin-top: 100px  !important;
+    padding: 0 !important;
+  }
+  @media only screen and (max-width: 1280px) {
+    float: none !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    padding: 0 30px !important;
+    li {
+      display: inline-block !important;
+      width: 45% !important;
+    }
+    ul {
+      position: static !important;
+    }
+  }
+}
+
+
+
+
+
+
+

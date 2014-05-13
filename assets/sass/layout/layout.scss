@@ -18,7 +18,7 @@ name: c-background
 category: Base Layout - General
 ---
 
-<span class="label label-default">FIX</span>
+<span class="label label-admin">FIX</span>
 
 The background color is a light shade of gray.
 
@@ -30,7 +30,7 @@ The background color is a light shade of gray.
 */
 
 body {
-  background: $white;
+  background: url('../img/bg-striped.png') repeat;
 }
 
 body.overlay:after {
@@ -43,4 +43,12 @@ body.overlay:after {
   right: 0;
   background: url('../img/overlay.png') repeat;
   z-index: 999;
+}
+
+.container-main {
+  padding: 0;
+  background: $white;
+  margin-top: 0;
+  margin-bottom: 90px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
 }

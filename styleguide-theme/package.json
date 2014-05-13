@@ -1,0 +1,20 @@
+{
+    "name": "Cortana",
+    "version": "0.1.0",
+    "description": "A nice Hologram theme",
+    "devDependencies": {
+        "gulp-minify-css": "~0.3.0",
+        "gulp-ruby-sass": "~0.3.1",
+        "gulp-autoprefixer": "0.0.6",
+        "gulp-notify": "~1.0.0-beta",
+        "gulp-util": "~2.2.14",
+        "gulp": "~3.6.0",
+        "gulp-jshint": "~1.4.2",
+        "browser-sync": "~0.7.3",
+        "gulp-rename": "~1.1.0",
+        "gulp-uglify": "~0.2.1",
+        "gulp-concat": "~2.1.7",
+        "jshint-stylish": "~0.1.5",
+        "gulp-shell": "~0.2.4"
+    }
+}

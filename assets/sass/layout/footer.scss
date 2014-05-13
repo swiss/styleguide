@@ -1,3 +1,17 @@
+/* ==========================================================
+ * footer.scss
+ * Footer elements
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-13 15:54:19
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
+
 /*doc
 ---
 title: Site Map and Partners
@@ -5,7 +19,7 @@ name: a-site-map
 category: Navigation modules - Footer
 ---
 
-<span class="label label-default">FIX</span>
+<span class="label label-admin">FIX</span>
 
 Links are placed in the footer to make them equally accessible on all pages. These can take the form of a site map linking to pages within the website currently being used, or they can refer to external contents, such as partner websites. If required, the footer can be divided into various sections.
 
@@ -144,16 +158,15 @@ footer {
   border-top: 1px solid $light-grey;
   background: $smoke;
   padding-bottom: 10px;
+  margin-top: 20px;
   select {
     min-width: 200px;
   }
 }
 
 address {
-  margin-top: 10px;
   margin-bottom: 0;
   padding-top: 10px;
-  border-top: 1px solid $white;
 }
 
 .site-map {
@@ -168,6 +181,10 @@ address {
   border-bottom: 1px solid $silver;
   border-top: 1px solid $white;
   padding-bottom: 30px;
+  & + div {
+    border-top: 1px solid $white;
+    padding-bottom: 10px;
+  }
   a {
     font-size: 13px;
     display: inline-block;
@@ -184,7 +201,7 @@ name: b-social-media
 category: Navigation modules - Footer
 ---
 
-<span class="label label-default">FIX</span>
+<span class="label label-admin">FIX</span>
 
 The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) are listed in a separate section of the footer.
 
@@ -230,7 +247,7 @@ name: c-footbar
 category: Navigation modules - Footer
 ---
 
-<span class="label label-default">CD</span>
+<span class="label label-admin">CD</span>
 
 In the footbar below the footer there is a left-justified copyright notice and right-justified links to “further legal information” and “legal notice”. These notices are mandatory for legal reasons.
 

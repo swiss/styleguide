@@ -39,7 +39,7 @@ name: a-globalnavigation
 category: Navigation modules - Hierarchical Navigation
 ---
 
-<span class="label label-default">FIX</span>
+<span class="label label-admin">FIX</span>
 
 The global navigation shows the main points of access to a website as tabs. It is separated from the header above by a red line. The terminology used for the tabs should be chosen carefully, as this is what gives the user the first impression of the purpose of the website.
 
@@ -237,7 +237,7 @@ name: b-service-navigation
 category: Navigation modules - Header
 ---
 
-<span class="label label-default">CD</span>
+<span class="label label-admin">CD</span>
 
 The service navigation is positioned at the top right of the header next to the language selection. It contains links that are of overriding importance (e.g. Contact, Jobs, Media and Contact). Ideally, there should be three, but in no case should there be more than five links in the service navigation.
 
@@ -280,7 +280,7 @@ name: d-lang-navigation-list
 category: Navigation modules - Header
 ---
 
-<span class="label label-default">CD</span>
+<span class="label label-admin">CD</span>
 
 The languages available are shown as links at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.). The following rules apply:
 
@@ -347,7 +347,7 @@ name: g-treecrumb-federal-administration
 category: Navigation modules - Header
 ---
 
-<span class="label label-default">CD</span>
+<span class="label label-admin">CD</span>
 
 The treecrumb navigation shows the position of the current website within the context of all the websites of the Federal Administration. It also serves as an efficient means of accessing information across departments.
 
@@ -486,7 +486,7 @@ name: d-page-nav-list
 category: Navigation modules - Hierarchical Navigation
 ---
 
-<span class="label label-default">FIX</span>
+<span class="label label-admin">FIX</span>
 
 The sub-navigation on the left sidebar of the content section is a so-called dynamic navigation. It always only shows the page that has currently been selected and the navigation options that page has to offer:
 
@@ -514,6 +514,7 @@ On smartphones, the navigation is shown at the end of the page above the footer 
 ![Left nav on mobile](styleguide-img/mobile_navi_3.png)
 
 Navigation below the content level on a smartphone with links to the home page, the navigation level above, and to further pages.
+
 
 ```html_example
 <div class="container-fluid">
@@ -581,7 +582,7 @@ Navigation below the content level on a smartphone with links to the home page, 
       position: absolute;
       top: 0;
       bottom: 0;
-      left: -25px;
+      left: -20px;
       width: 5px;
       background: $white;
     }
@@ -597,7 +598,7 @@ name: e-facete-page-nav
 category: Navigation modules - Hierarchical Navigation
 ---
 
-<span class="label label-default">FLEX</span>
+<span class="label label-admin">FLEX</span>
 
 Faceted navigation serves the purpose of filtering elements (e.g. in a product catalog) on the basis of predefined criteria, so-called facets. These facets are grouped by facet types. A facet which contains subfacets is marked with a triangle.
 

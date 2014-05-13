@@ -18,7 +18,7 @@ name: a-standard-table
 category: Base Layout - Tables
 ---
 
-<span class="label label-default">FLEX</span>
+<span class="label label-admin">FLEX</span>
 
 The standard table consists of the table title `<caption>`, the table head `<thead>`, the table body `<tbody>`, and the table foot `<tfoot>`. 
 
@@ -129,7 +129,7 @@ name: b-zebra-table
 category: Base Layout - Tables
 ---
 
-<span class="label label-default">FLEX</span>
+<span class="label label-admin">FLEX</span>
 
 The zebra stripes are shown when the `table-striped` class is added to the `<table>`.
 
@@ -213,7 +213,7 @@ name: c-highlight-table
 category: Base Layout - Tables
 ---
 
-<span class="label label-default">FLEX</span>
+<span class="label label-admin">FLEX</span>
 
 This table is based on the standard table but with `active` class on cells or on row.
 
@@ -287,7 +287,7 @@ name: d-sortable-table
 category: Base Layout - Tables
 ---
 
-<span class="label label-default">FLEX</span>
+<span class="label label-admin">FLEX</span>
 
 The sortable table automatically formats the column in which the data has been sorted. You just have to use the `table-sort` class
 
@@ -371,7 +371,7 @@ name: e-expandable-table
 category: Base Layout - Tables
 ---
 
-<span class="label label-default">FLEX</span>
+<span class="label label-admin">FLEX</span>
 
 Some tables can be expanded to show details of a data set
 
@@ -459,7 +459,7 @@ name: f-ruled-table
 category: Base Layout - Tables
 ---
 
-<span class="label label-default">FLEX</span>
+<span class="label label-admin">FLEX</span>
 
 Ruled tables are particularly suitable for presenting simple 1:1 relationships. The ruled format is set by adding the `table-simple` to the table tag.
 
@@ -516,7 +516,7 @@ name: g-unruled-table
 category: Base Layout - Tables
 ---
 
-<span class="label label-default">FLEX</span>
+<span class="label label-admin">FLEX</span>
 
 Unruled tables are suitable for presenting properties, e.g. of a publication. A simple unruled table is formatted with the class `table-naked`.
 

@@ -14,11 +14,11 @@
 /*doc
 ---
 title: Site Search
-name: f-site-search
+name: -site-search
 category: Navigation modules - Header
 ---
 
-<span class="label label-default">CD</span>
+<span class="label label-admin">CD</span>
 
 The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
 
@@ -76,20 +76,9 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
   width: 160px;
   transition: width 0.4s;
   &:focus {width: 250px;}
-  &:before {
-    display: block;
-    position: absolute;
-    z-index: 99999;
-    background: green;
-    left: 10px;
-    top: 3px;
-    color: $black;
-    content: 'S';
-    font-family: $admin-icons;
-  }
 }
 
-.search-field:focus + .icon--close {color: $black;}
+.search-field:focus + .icon--close:after {color: $black;}
 
 .tt-dropdown-menu {
   background: $white;
@@ -106,9 +95,10 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
   line-height: 16px;
   padding: 3px 10px 1px 10px;
   margin: 0;
+  a {color: $coal;}
 }
 
-.tt-suggestion.tt-cursor {
+.tt-suggestion.tt-cursor, .tt-is-under-cursor {
   background-color: $smoke;
 }
 
