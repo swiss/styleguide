@@ -3,34 +3,52 @@
   </div>
 
   <!-- Styleguide JS -->
-  <!-- <script src="theme-build/js/vendors.min.js"></script>
+  <script src="theme-build/js/vendors.min.js"></script>
   <script type="text/javascript">
       // avoid conflict with potential other jQuery loaded on the styleguide
       var jQuery_no_conflict = $.noConflict(true);
   </script>
-  <script src="theme-build/js/main.js"></script> -->
+  <script src="theme-build/js/main.js"></script>
   <script>
-    var searchData = '';
+    var cortanaSearchData = 
+    <%= "[" %>
+      <% @pages.each do |file_name, page| %>
+        <% if not page[:blocks].empty? %>
+          <% page[:blocks].each do |block| %>
+            <% file_path = block[:category].to_s.gsub(' ', '_').downcase + '.html' %>
+            <% file_id = "#"+block[:name].to_s %>
+            <%= "{" %>
+            <%= "\"title\": \""+block[:title].to_s+"\"," %>
+            <%= "\"breadcrumb\": \""+block[:category].to_s+" > "+block[:title]+"\"," %>
+            <%= "\"path\": \""+file_path+file_id+"\"," %>
+            <%= "\"tokens\": [\""+block[:category].to_s+"\",\""+block[:title].to_s+"\"]" %>
+            <%= "}," %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <%= "{}]" %>;
 
-    // (function($) {
-    //   $('#cortana-search').typeahead({
-    //     name: 'cortana_search',
-    //     local: cortanaSearchData,
-    //     template: [
-    //       '<a href="{{path}}">',
-    //       '<p class="cortana-search-title">{{title}}</p>',
-    //       '<p class="cortana-search-path">{{breadcrumb}}</p>',
-    //       '</a>'
-    //     ].join(''),
-    //     updater: function () {
-    //       /* navigate to the selected item */
-    //       alert('ok');
-    //     },
-    //     engine: Hogan
-    //   }).on('typeahead:selected', function(event, data) {
-    //     window.location.replace(data.path);
-    //   });
-    // }) (jQuery_no_conflict);
+    (function($) {
+      $('#cortana-search').typeahead({
+        name: 'cortana_search',
+        local: cortanaSearchData,
+        template: [
+          '<a href="{{path}}">',
+          '<p class="cortana-search-title">{{title}}</p>',
+          '<p class="cortana-search-path">{{breadcrumb}}</p>',
+          '</a>'
+        ].join(''),
+        updater: function () {
+          /* navigate to the selected item */
+          alert('ok');
+        },
+        engine: Hogan
+      }).on('typeahead:selected', function(event, data) {
+        window.location.replace(data.path);
+      });
+      $('<span class="icon icon--close" onclick="$(\'#cortana-search\').focus().val(\'\');"></span>').insertAfter('#cortana-search');
+      $('.form-search').append('<span class="icon icon--search"></span>');
+    }) (jQuery_no_conflict);
   </script>
   
   <!-- Styleguide JS -->
