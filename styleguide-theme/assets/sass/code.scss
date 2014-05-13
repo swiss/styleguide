@@ -28,6 +28,7 @@
   margin-bottom: 20px !important;
   position: relative !important;
   width: auto !important;
+  &.collapse.in, &.collapsing {margin-left: 0 !important;}
   &:after {
     content: 'HTML' !important;
     position: absolute !important;

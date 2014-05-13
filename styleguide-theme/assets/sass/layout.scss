@@ -61,12 +61,13 @@
 
 
 .exampleOutput {
-  padding: 50px 4% !important;
+  padding: 50px 4% 20px 4% !important;
   border: 1px solid $softBlue !important;
   position: relative !important;
   width: 100% !important;
   overflow-y: auto !important;
   box-sizing: border-box !important;
+  position: relative !important;
   &:after {
     content: 'Example' !important;
     position: absolute !important;
@@ -80,6 +81,20 @@
     display: inline-block !important;
     font-family: $mainFont !important;
   }
+}
+
+.show-code {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 !important;
+  z-index: 50;
+  border: none;
+  color: #CCCCCC;
+  background: transparent;
+  font-family: $mainFont;
+  outline: none;
+  &:hover {color: #DC0018;}
 }
 
 .label-admin {
