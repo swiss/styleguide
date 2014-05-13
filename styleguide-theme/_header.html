@@ -1,4 +1,8 @@
 <% nameScope = @config['name_scope'] %>
+<% catWrappers = Array.new %>
+<% @config['cat_order'].each do |catWrapperName| %>
+  <% catWrappers.push(catWrapperName) %>
+<% end %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,9 +32,9 @@
       <header>
         <div class="row">
           <div class="col-sm-8">
-            <a href="#" class="brand hidden-xs">
+            <a href="index.html" class="brand hidden-xs">
               <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
-              <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
+              <h1>Swiss Confederation<br>Web Guidelines</h1>
             </a>
           </div>
           <div class="col-sm-4">
@@ -56,7 +60,51 @@
         </div>
       </header>
 
-      <nav class="nav-main"></nav>
+      <nav class="nav-main yamm navbar" role="navigation">
+        
+        <ul class="nav navbar-nav">
+          
+          <% catWrappers.each do |wrapper| %>
+            <li class="dropdown yamm-fw">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= wrapper %></a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <div class="yamm-content container-fluid">
+                    <div class="row">
+                      <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+                    </div>
+                    <div class="row">
+                      <% @categories.each do |cat| %>
+                        <% if cat[0].include?(wrapper) %>
+                          <% catName = cat[0].split(nameScope).last %>
+                          <div class="col-sm-3">
+                            <h4><a href="<%= cat[1] %>"><strong><%= catName %></strong></a></h4>
+                            <ul>
+                              <% @pages.each do |file_name, page| %>
+                                <% if not page[:blocks].empty? %>
+                                  <% page[:blocks].each do |block| %>
+                                    <% if block[:category] == cat[0] and block[:title] != cat[0].split(nameScope).last %>
+                                      <% file_path = block[:category].to_s.gsub(' ', '_').downcase + '.html' %>
+                                      <% file_id = "#"+block[:name].to_s %>
+                                      <li><a href="<%= file_path+file_id %>"><%= block[:title].to_s %></a></li>
+                                    <% end %>
+                                  <% end %>
+                                <% end %>
+                              <% end %>
+                            </ul>
+                          </div>
+                        <% end %>
+                      <% end %>
+                    </div>
+                    <br><br><br>
+                    <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
 
       <br>
 
@@ -77,9 +125,6 @@
           </div>
         </div>
         <div class="col-sm-9">
-
-
-
           
         
 
