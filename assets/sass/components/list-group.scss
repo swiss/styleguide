@@ -15,7 +15,7 @@
 ---
 title: Elements List
 name: d-elements-list
-category: Content Components > Widgets
+category: Content Modules - Content Containers
 ---
 
 The elements list is a very generic element that groups content elements in a list. The elements shown here are merely examples.
@@ -30,7 +30,7 @@ The elements list is a very generic element that groups content elements in a li
       <div class="list-group">
         <div class="list-group-header">
           <h3 class="pull-left">News</h3>
-          <a href="#" class="pull-right icon icon--after icon--list">All News</a>
+          <a href="#" class="pull-right icon icon--before icon--list">All News</a>
         </div>
         <div class="list-group-item">
           <p>
@@ -63,12 +63,12 @@ The elements list is a very generic element that groups content elements in a li
 
     </div>
     <div class="col-sm-4">
-      
+
       <!-- Publications list example -->
       <div class="list-group">
         <div class="list-group-header">
-          <h3>Publications</h3>
-          <a href="#" class="icon icon--before icon--list">All Publications</a>
+          <h3 class="pull-left">Publications</h3>
+          <a href="#" class="pull-right icon icon--before icon--list">All</a>
         </div>
         <div class="list-group-item">
           <a href="#">

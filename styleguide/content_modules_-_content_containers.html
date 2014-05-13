@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Design Principles - Output across a Range of End Devices</title>
+    <title>Content Modules - Content Containers</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.css">
@@ -341,7 +341,7 @@
             
               
               
-                <li><a class="active" href="design_principles_-_output_across_a_range_of_end_devices.html">Output across a Range of End Devices</a></li>
+                <li><a href="design_principles_-_output_across_a_range_of_end_devices.html">Output across a Range of End Devices</a></li>
               
             
           
@@ -398,7 +398,7 @@
             
               
               
-                <li><a href="content_modules_-_content_containers.html">Content Containers</a></li>
+                <li><a class="active" href="content_modules_-_content_containers.html">Content Containers</a></li>
               
             
           
@@ -419,7 +419,7 @@
 
     <header class="cortana-header sb-slide">
       
-        <h1><img src="theme-build/img/ch.jpg">Output across a Range of End Devices</h1>
+        <h1><img src="theme-build/img/ch.jpg">Content Containers</h1>
       
       <div id="open-left" class="cortana-menu-btn">
         <span></span>
@@ -437,7 +437,7 @@
           <ul>
              
               
-                <li><a href="#f-devices">Output across a Range of End Devices</a></li>
+                <li><a href="#d-elements-list">Elements List</a></li>
               
             
           </ul>
@@ -446,34 +446,190 @@
         <div class="cortana-content-wrapper">
 
 
-<h1 id="f-devices">Output across a Range of End Devices</h1>
+<h1 id="d-elements-list">Elements List</h1>
 
-<p>The Confederation Web Guidelines facilitate optimized output of all the content on a website on various end devices such as desktop computers, laptops, tablets, and smartphones. The layout of the individual web pages and the individual elements adapts on the fly to the viewing environment of the output device.</p>
+<p>The elements list is a very generic element that groups content elements in a list. The elements shown here are merely examples.</p>
+<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-2">
 
-<p>In the Confederation Web Guidelines, the target output viewing environments are shown at the bottom left-hand corner of the preview box of the element/module, and in the window of the sample pages. For use in production, the display of this message must be deactivated in the responsive.less file (lines 15-16).</p>
-
-<p><img src="styleguide-img/responsive_indicator.png" alt="image"></p>
-
-<p><em>The “tablet” output format in the bottom left-hand corner of the preview box</em></p>
-
-<p><img src="styleguide-img/responsive_production.png" alt="image"></p>
-
-<p>For use in productive systems, line 15 (production) of the LESS code file responsive.less must be activated. Line 16 (development) can be commented out.</p>
-
-<h2>Desktop Computers, Laptops, and Tablets</h2>
-
-<p>For desktop computers, laptops, and tablets held in landscape mode, the original layout is retained. As soon as a tablet is held in portrait mode, the content of the right-hand column (the context pane) is shown below the content.</p>
-
-<p><img src="styleguide-img/responsive.png" alt="image"></p>
-
-<p><em>The contents are arranged and displayed differently on different end devices</em></p>
-
-<h2>Mobile Devices / Smartphones</h2>
-
-<p>If the page is displayed on a smartphone, only the content is shown. The navigation function in the left sidebar disappears, as does the context pane. Instead, the user can navigate via links in the footer and a special menu for mobile devices.</p>
-
-<p>Usability tests have shown that many smartphone users ignore the navigation menu in the header and navigate via links in the footer. It is therefore important to reproduce the navigation in the footer.</p>
+      <!-- News list example -->
+      <div class="list-group">
+        <div class="list-group-header">
+          <h3 class="pull-left">News</h3>
+          <a href="#" class="pull-right icon icon--before icon--list">All News</a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 1
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 2
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 3
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
       </div>
+
+    </div>
+    <div class="col-sm-4">
+
+      <!-- Publications list example -->
+      <div class="list-group">
+        <div class="list-group-header">
+          <h3 class="pull-left">Publications</h3>
+          <a href="#" class="pull-right icon icon--before icon--list">All</a>
+        </div>
+        <div class="list-group-item">
+          <a href="#">
+            Publication's title : Lorem ipsum dolor sit amet
+          </a>
+          <br><br>
+          <figure class="pull-left">
+            <img src="http://placehold.it/78x117" alt="image description">
+          </figure>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+          </p>
+        </div>
+        <div class="list-group-item">
+          <a href="#">
+            Publication's title : Lorem ipsum dolor sit amet
+          </a>
+          <br><br>
+          <figure class="pull-left">
+            <img src="http://placehold.it/78x117" alt="image description">
+          </figure>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+          </p>
+        </div>
+        <div class="list-group-item">
+          <a href="#">
+            Publication's title : Lorem ipsum dolor sit amet
+          </a>
+          <br><br>
+          <figure class="pull-left">
+            <img src="http://placehold.it/78x117" alt="image description">
+          </figure>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4 col-sm-offset-2&quot;</span><span class="nt">&gt;</span>
+
+      <span class="c">&lt;!-- News list example --&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group-header&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>News<span class="nt">&lt;/h3&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;pull-right icon icon--before icon--list&quot;</span><span class="nt">&gt;</span>All News<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p&gt;</span>
+            23.05.2012<span class="nt">&lt;br&gt;</span>
+            Medienmitteilung 1
+          <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p&gt;</span>
+            23.05.2012<span class="nt">&lt;br&gt;</span>
+            Medienmitteilung 2
+          <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;p&gt;</span>
+            23.05.2012<span class="nt">&lt;br&gt;</span>
+            Medienmitteilung 3
+          <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4&quot;</span><span class="nt">&gt;</span>
+
+      <span class="c">&lt;!-- Publications list example --&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group-header&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>Publications<span class="nt">&lt;/h3&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;pull-right icon icon--before icon--list&quot;</span><span class="nt">&gt;</span>All<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+            Publication&#39;s title : Lorem ipsum dolor sit amet
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/78x117&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
+          <span class="nt">&lt;p&gt;</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+          <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+            Publication&#39;s title : Lorem ipsum dolor sit amet
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/78x117&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
+          <span class="nt">&lt;p&gt;</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+          <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;list-group-item&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+            Publication&#39;s title : Lorem ipsum dolor sit amet
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/78x117&quot;</span> <span class="na">alt=</span><span class="s">&quot;image description&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/figure&gt;</span>
+          <span class="nt">&lt;p&gt;</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+          <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>      </div>
     </div>
   </div>
 

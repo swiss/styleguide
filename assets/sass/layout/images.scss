@@ -1,14 +1,14 @@
 /* ==========================================================
  * images.scss
  * Images styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
@@ -65,12 +65,14 @@ category: Base Layout - General
 */
 
 figure {
+  margin-top: .3em;
   &.pull-left {
     padding-right: 10px;
     display: table;
     figcaption {
       display: table-caption;
       caption-side: bottom;
+      padding-right: 10px;
     }
   }
   &.pull-right {
