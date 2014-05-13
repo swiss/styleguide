@@ -12,9 +12,11 @@
  /*doc
 ---
 title: Emergency
-name: b-emergency
-category: Content Components > Widgets
+name: a-emergency
+category: Content Modules - Widgets
 ---
+
+<span class="label label-admin">FLEX</span>
 
 The emergency banner is only ever shown on the home page in cases of extreme urgency. It is always placed at the very top of the home page.
 
@@ -38,13 +40,14 @@ It is vital that this element should only be used in cases of emergency – i.e.
 .alert--emergency {
   background-color: $mocassin;
   border-left: 20px solid $venetian-red;
+  border-radius: 0;
   padding-left: 15px;
   &:before {
     position: absolute;
     top: 0;
     left: -20px;
     width: 20px;
-    height: 100%;
+    height: auto;
     color: $white;
     content: '!';
     font-size: 2em;
@@ -52,5 +55,10 @@ It is vital that this element should only be used in cases of emergency – i.e.
   }
   h3 {
     margin-top: 0;
+    font-family: $font-family-sans-serif-bold;
   }
+  p {
+    margin-top: 0;
+  }
+
 }

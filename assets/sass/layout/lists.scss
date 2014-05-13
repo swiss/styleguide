@@ -125,6 +125,17 @@ dl {
   padding: 0;
 }
 
+.dl-horizontal {
+  dt {
+    width: 2em;
+    text-align: left;
+    font-family: $font-family-sans-serif;
+  }
+  dd {
+    margin-left: 3em;
+  }
+}
+
 dt {
   @extend strong;
 }
