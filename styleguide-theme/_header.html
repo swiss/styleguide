@@ -21,7 +21,7 @@
     <![endif]-->
 </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#styleguide-inside-nav">
 
     <div class="container container-main">
 
@@ -58,4 +58,28 @@
 
       <nav class="nav-main"></nav>
 
+      <br>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div data-spy="affix" class="affix-top" style="width: 18%;">
+            <nav id="styleguide-inside-nav" class="nav-page-list">
+              <a href="index.html" class="icon icon--before icon--less">Home</a>
+              <ul class="nav">
+                <li><a href="#"><%= title %></a></li>
+                <% @blocks.each do |block| %> 
+                  <% if not block[:parent] %>
+                    <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-sm-9">
+
+
+
+          
+        
 
