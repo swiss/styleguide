@@ -115,6 +115,9 @@ legend {
 
 .form-control {
   border: 1px solid $empress;
+  padding: 0.4em 0.3076em;
+  line-height: 1.2;
+  height: auto;
   &:hover {
     border-color: $venetian-red;
   }
@@ -169,5 +172,17 @@ label {
   .form-control {
     border-color: $coal;
     @extend .form-control;
+  }
+}
+
+.form-inline {
+  label {
+    margin-right: 1.6em;
+  }
+  input[type="number"] {
+    width: 50px;
+  }
+  .form-control {
+    margin-right: 0.8em;
   }
 }

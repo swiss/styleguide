@@ -16,7 +16,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Design Principles - Basic Grid and Page Types</title>
+    <title>Content Modules - Ordering and Check-out</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.css">
@@ -5383,51 +5383,155 @@
         
           
         
+       
+        
+          
+        
       
 
       <div class="row">
         
+          <div class="col-sm-3">
+            <div data-spy="affix" class="affix hidden-sm hidden-xs" style="width: 230px;">
+              <nav id="styleguide-inside-nav" class="nav-page-list">
+                <a href="index.html" class="icon icon--before icon--less">Home</a>
+                <ul class="nav">
+                  <li><a href="#">Content Modules - Ordering and Check-out</a></li>
+                   
+                    
+                      <li><a href="#a-onelineorderform">One-line Order Form</a></li>
+                    
+                   
+                    
+                      <li><a href="#b-shoppingcart">Shopping Cart</a></li>
+                    
+                  
+                </ul>
+              </nav>
+            </div>
+          </div>
+        
         <div class="col-sm-9">
           <div class="container-fluid">
 
-<h1 id="c-basicgrid">Basic Grid and Page Types</h1>
+<h1 id="a-onelineorderform">One-line Order Form</h1>
 
-<h2> Basic Grid</h2>
+<p>English text (missing?)</p>
+<div class="codeExample"><div class="exampleOutput"><form class="form-inline" role="form">
 
-<p>The websites are made up of three segments:</p>
+    <fieldset>
+      <legend>Compact form on one line</legend>
 
-<p>the header, the four-column content section, and the footer.</p>
+      <!-- Number input -->
+      <div class="form-group">
+        <label for="inputNumber" class="control-label">Number</label>
+        <input type="number" class="form-control" size="2" id="inputNumber" placeholder="5">
+      </div>
 
-<p><img src="styleguide-img/grid.png" alt="image"></p>
+      <!-- Dropdown -->
+      <div class="form-group">
+        <label class="control-label hidden" for="dropdown">Dropdown</label>
+        <select id="dropdown" class="form-control">
+          <option>Choose your language ...</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
+      </div>
 
-<p><em>The four-column grid is used in different ways by the various page types</em></p>
+      <button type="submit" class="btn btn-primary">Add to basket</button>
 
-<h2> Page Types</h2>
+    </fieldset>
 
-<p>Basically, there are two page types; the home page and the content page. There are also some mixed forms and special pages (see “Sample Pages”).</p>
+</form>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-inline&quot;</span> <span class="na">role=</span><span class="s">&quot;form&quot;</span><span class="nt">&gt;</span>
 
-<h2>Home page</h2>
+    <span class="nt">&lt;fieldset&gt;</span>
+      <span class="nt">&lt;legend&gt;</span>Compact form on one line<span class="nt">&lt;/legend&gt;</span>
 
-<p>The home page is made up of the header (that can contain the global navigation section, which is explained in the Elements Page , the teaser section, and the footer. The teaser section is divided into four columns. There are many different teasers for the various applications, and these are listed in the “Content Modules” section and described in detail there. The teasers can be used flexibly in the teaser section. For instance, a focus teaser can be spread over three columns, while a person teaser with a portrait of the responsible Federal Councillor can be limited to one column.</p>
+      <span class="c">&lt;!-- Number input --&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;inputNumber&quot;</span> <span class="na">class=</span><span class="s">&quot;control-label&quot;</span><span class="nt">&gt;</span>Number<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;number&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">size=</span><span class="s">&quot;2&quot;</span> <span class="na">id=</span><span class="s">&quot;inputNumber&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;5&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
 
-<h2> Content Page</h2>
+      <span class="c">&lt;!-- Dropdown --&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;control-label hidden&quot;</span> <span class="na">for=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>Dropdown<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;option&gt;</span>Choose your language ...<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option&gt;</span>Option 1<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;option&gt;</span>Option 2<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
 
-<p>A content page also has a header and a footer. In place of the teaser section, this page has a four-column content section. The column on the left is used as the left navigation bar, the two columns in the middle are set aside for the content proper, while the column on the right is used as the context pane.</p>
+      <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary&quot;</span><span class="nt">&gt;</span>Add to basket<span class="nt">&lt;/button&gt;</span>
 
-<h3>Left Navigation Bar:</h3>
+    <span class="nt">&lt;/fieldset&gt;</span>
 
-<p>The navigation used on the left of the content section is dynamic, meaning that the subsections of the page currently in use are always shown. There are three parts to the navigation: a link back to the previous level, the navigation header with the title of the current page, and the actual navigation with links to the sub-pages. Its use is described on the Elements Page.</p>
+<span class="nt">&lt;/form&gt;</span>
+</pre></div></div></div>
+<h1 id="b-shoppingcart">Shopping Cart</h1>
 
-<h3>Content Section</h3>
-
-<p>The content section contains the title and subtitle of the page, the body copy, the images, info boxes, and further information. The further information section is always positioned as the last element in the content section and should not be placed in the context pane. Usability tests have shown that users paid little attention to the information contained in the context pane.</p>
-
-<h3>Context Pane</h3>
-
-<p>The context pane is reserved for the following elements: wherever it makes sense to do so, a direct contact should be placed at the very top. If there is a shopping cart element, this is placed directly under the contact box. Teasers, such as an RSS feed box or a temporary teaser (for instance for a conference) can also be placed in this section. However, in no case is it possible to have more than three elements here. If using any of the elements listed here does not make sense, then the column remains blank.</p>
-
-<p>No additional information and no essential content components may be placed in the context pane, with the exception of the elements mentioned above.</p>
-        </div>
+<p>By default, the shopping cart is not shown. Only after an object has been added to the shopping cart does the latter appear in the context pane. It then remains visible until it is either completely deleted or the purchase is finalized.</p>
+<div class="codeExample"><div class="exampleOutput"><div class="row">
+  <div class="col-sm-4 col-sm-offset-8">
+    <aside class="cart">
+      <h4>Shopping Cart (3 items)</h4>
+      <ul class="list-unstyled">
+        <li class="clearfix">
+          <span class="pull-left">Lorem ipsum product name a bit longer at <b>CHF 45.-</b></span>
+          <a class="pull-right" href="#">
+            <span class="icon icon--after icon--trash"></span>
+          </a>
+        </li>
+        <li class="clearfix">
+          <span class="pull-left">Lorem ipsum <b>CHF 45.-</b></span>
+          <a class="pull-right" href="#">
+            <span class="icon icon--after icon--trash"></span>
+          </a>
+        </li>
+        <li class="clearfix">
+          <span class="pull-left">Lorem ipsum <b>CHF 45.-</b></span>
+          <a class="pull-right" href="#">
+            <span class="icon icon--after icon--trash"></span>
+          </a>
+        </li>
+      </ul>
+      <p>Total price <b>CHF 135.-</b></p>
+      <p><a class="icon icon--before icon--cart" href="#">Show Shopping Cart</a></p>
+    </aside>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4 col-sm-offset-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;aside</span> <span class="na">class=</span><span class="s">&quot;cart&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4&gt;</span>Shopping Cart (3 items)<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;list-unstyled&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;clearfix&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>Lorem ipsum product name a bit longer at <span class="nt">&lt;b&gt;</span>CHF 45.-<span class="nt">&lt;/b&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-right&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--trash&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;clearfix&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>Lorem ipsum <span class="nt">&lt;b&gt;</span>CHF 45.-<span class="nt">&lt;/b&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-right&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--trash&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;clearfix&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;pull-left&quot;</span><span class="nt">&gt;</span>Lorem ipsum <span class="nt">&lt;b&gt;</span>CHF 45.-<span class="nt">&lt;/b&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;pull-right&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--after icon--trash&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Total price <span class="nt">&lt;b&gt;</span>CHF 135.-<span class="nt">&lt;/b&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--cart&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Show Shopping Cart<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/aside&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>        </div>
       </div>
     </div>
 
