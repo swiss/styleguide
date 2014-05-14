@@ -82,15 +82,16 @@ The `hologram_config.yml` have a referance  to it:
 source: ./path/to/your/source
 destination: ./path/to/output
 documentation_assets: ./path/to/theme
+```
 
 ## Build the Styleguide Theme
 
 The theme as his own gulp file (for the moment). So you have to do the following command:
 
-  ```
-  $ cd styleguide-theme
-  $ gulp
-  ```
+```
+$ cd styleguide-theme
+$ gulp
+```
 
 ## FAQ
 
@@ -108,7 +109,7 @@ The theme is their for the presentation. It's not part of the styleguide. To avo
 
 This bug an Hologram bug that should be fix in the next release. The workaround is to force UTF8:
 
-  ```
-  $ LC_ALL="en_US.UTF-8" gulp
-  ```
+```
+$ LC_ALL="en_US.UTF-8" gulp
+```
 
