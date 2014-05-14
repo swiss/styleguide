@@ -14,7 +14,7 @@ A click on “Print contact information” opens the browser’s or operating sy
 On tablets the contact information is shown under the content of the page in a two-column layout. The contents of the two tabs are shown next to one another.
 
 ```html_example
-<div class="col-sm-10 col-sm-offset-1">
+<div class="col-sm-6 col-sm-offset-1">
   <!-- Nav tabs -->
   <ul class="nav nav-tabs">
     <li class="active"><a href="#contact" data-toggle="tab">Contact</a></li>
