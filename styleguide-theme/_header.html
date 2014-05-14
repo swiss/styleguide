@@ -113,16 +113,16 @@
           <% blockNumber += 1 %>
         <% end %>
       <% end %>
-
       <div class="row">
-        <% if blockNumber >= 2 %>
+          <% # For the moment never show the navigation %>
+          <% if false && blockNumber >= 2 %>
           <div class="col-sm-3">
             <div data-spy="affix" class="affix hidden-sm hidden-xs" style="width: 230px;">
               <nav id="styleguide-inside-nav" class="nav-page-list">
                 <a href="index.html" class="icon icon--before icon--less">Home</a>
                 <ul class="nav">
                   <li><a href="#"><%= title %></a></li>
-                  <% @blocks.each do |block| %> 
+                  <% @blocks.each do |block| %>
                     <% if not block[:parent] %>
                       <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
                     <% end %>
