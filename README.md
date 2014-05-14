@@ -60,3 +60,32 @@ There are several ways to get started:
   
   
   [Browser-sync](http://www.browsersync.io) is automatically set up on `localhost` and will allow you to make changes and see them in real time.
+
+## Styleguide Theme
+
+
+The stylguide theme is in `styleguide-theme`. It's a theme for Trulia's [Hologram](https://github.com/trulia/hologram).
+It was based on [Cortana](https://github.com/Yago31/Cortana).
+
+## How it's include?
+The `hologram_config.yml` have a referance  to it:
+
+```
+source: ./path/to/your/source
+destination: ./path/to/output
+documentation_assets: ./path/to/theme
+
+
+
+## FAQ
+
+### What is the .cortana-* prefix for CSS selector names?
+
+This is not propertly part of the styleguide code. It's used for the theme to avoid conflict with the CSS for styleguide.
+We could use iframe, but iframe provide different others bugs. Now than the theme is include directly in this repository,
+we will change to a better prefix like ".stylguide-theme-*".
+
+### Why the Styleguide Theme (styleguide-theme) as so many !important?
+
+The theme is their for the presentation. It's not part of the styleguide. To avoid conflict with other style we have
+
