@@ -34,35 +34,34 @@ There are several ways to get started:
 
 ## Installation (to contribute)
 
-  > We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [Hologram](https://github.com/trulia/hologram).
-  
-  Make sure you have [Node.js](http://nodejs.org) installed.
-  
-  
-  Install all the dependencies you need:
-  
-  ```
-  $ npm install
-  $ bower install
-  ```
-  
-  Install Hologram from the Gemfile:
-  
-  ```
-  $ bundle
-  ```
-  
-  Run gulp
-  
-  ```
-  $ gulp
-  ```
-  
-  
-  [Browser-sync](http://www.browsersync.io) is automatically set up on `localhost` and will allow you to make changes and see them in real time.
+> We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [Hologram](https://github.com/trulia/hologram).
+
+Make sure you have [Node.js](http://nodejs.org) installed.
+
+
+Install all the dependencies you need:
+
+```
+$ npm install
+$ bower install
+```
+
+Install Hologram from the Gemfile:
+
+```
+$ bundle
+```
+
+Run gulp
+
+```
+$ gulp
+```
+
+
+[Browser-sync](http://www.browsersync.io) is automatically set up on `localhost` and will allow you to make changes and see them in real time.
 
 ## Styleguide Theme
-
 
 The stylguide theme is in `styleguide-theme`. It's a theme for Trulia's [Hologram](https://github.com/trulia/hologram).
 It was based on [Cortana](https://github.com/Yago31/Cortana).
@@ -75,7 +74,14 @@ source: ./path/to/your/source
 destination: ./path/to/output
 documentation_assets: ./path/to/theme
 
+## Build the Styleguide Theme
 
+The theme as his own gulp file (for the moment). So you have to do the following command:
+
+  ```
+  $ cd styleguide-theme
+  $ gulp
+  ```
 
 ## FAQ
 
