@@ -183,6 +183,9 @@ label {
     width: 50px;
   }
   .form-control {
-    margin-right: 0.8em;
+    @media only screen and (min-width: $screen-sm-min) {
+      width: 150px;
+    }
+    // margin-right: 0.8em;
   }
 }

@@ -11,26 +11,6 @@
 
 @charset "UTF-8";
 
-.breadcrumb {
-  li {
-    margin: 0 10px;
-    &:first-child {margin-left: 0;}
-  }
-  a {
-    color: $cerulean;
-    font-size: 0.85em;
-    margin-top: 0;
-  }
-  span.icon {
-    position: relative;
-    top: 2px;
-  }
-  li.active {
-    color: $coal;
-    font-size: 0.85em
-  }
-}
-
 /*doc
 ---
 title: Breadcrumb
@@ -74,3 +54,27 @@ On smartphones there is always a link at the end of the page to the home page an
 </div>
 ```
 */
+
+.breadcrumb {
+  li {
+    margin: 0 10px;
+    &:first-child {margin-left: 0;}
+  }
+  a {
+    color: $cerulean;
+    font-size: 0.85em;
+    margin-top: 0;
+  }
+  span.icon {
+    position: relative;
+    top: 2px;
+  }
+  li.active {
+    color: $coal;
+    font-size: 0.85em
+  }
+  &.breadcrumb--search {
+    margin: 0.8em 0;
+  }
+}
+

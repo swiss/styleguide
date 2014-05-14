@@ -43,6 +43,9 @@ The paging function allows the user to browse through a large number of elements
   border-bottom: 1px solid $light-grey;
   padding: 10px 0;
 }
+.pagination-end {
+  border-bottom: none;
+}
 .pagination {
   border-radius: 0;
   display: block;

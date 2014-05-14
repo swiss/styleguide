@@ -1,14 +1,14 @@
 /* ==========================================================
  * buttons.scss
  * Global buttons styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 09:38:36
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
@@ -43,10 +43,9 @@ Buttons                                                                       | 
   padding: 0.45em 0.9em;
   border-radius: 3px;
   line-height: 1.2;
-  margin: 0 0 0 0.8em;
   background-color: $smoke;
   border: 1px solid $empress;
-  float: right;
+  font-family: $font-family-sans-serif-light;
   &:hover {
     border-color: $venetian-red;
     color: $empress;
