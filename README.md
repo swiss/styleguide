@@ -95,3 +95,11 @@ we will change to a better prefix like ".stylguide-theme-*".
 
 The theme is their for the presentation. It's not part of the styleguide. To avoid conflict with other style we have
 
+### When I try to build with gulp I have the following error `Syntax error: Invalid US-ASCII character "\xC3"`
+
+This bug an Hologram bug that should be fix in the next release. The workaround is to force UTF8:
+
+  ```
+  $ LC_ALL="en_US.UTF-8" gulp
+  ```
+
