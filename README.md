@@ -46,7 +46,16 @@ $ npm install
 $ bower install
 ```
 
-Install Hologram from the Gemfile:
+NOTE: Until hologram release a version > 1.0.1 you have to build and install the gem manually.
+
+```
+$ git clone git@github.com:trulia/hologram.git
+$ cd hologram
+$ gem build hologram.gemspec
+$ gem install hologram-1.0.1.gem // 1.0.1 but actually the head of master
+```
+
+Install Hologram from the Gemfile (for version > 1.0.1):
 
 ```
 $ bundle
