@@ -568,6 +568,7 @@ Navigation below the content level on a smartphone with links to the home page, 
     display: block;
     margin: 0;
   }
+  li.active a {color: $black;}
   li:first-child a {
     color: $black;
     font-weight: bold;
