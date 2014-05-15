@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=$start">
+  <meta name="viewport" content="width=device-width">
+  <title>Admin.ch - Homepage with Global Nav Example</title>
+
+  <link rel="stylesheet" href="../css/vendors.css">
+  <link rel="stylesheet" href="../css/admin.css">
+
+  <!--[if lt IE 9]>
+    <script src="../theme-build/polyfill/html5shiv.js"></script>
+    <script src="../theme-build/polyfill/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container container-main">
+    <header>
+      <div class="clearfix">
+        <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
+        <nav class="navbar treecrumb pull-left" role="navigation">
+          <ul class="nav navbar-nav">
+
+            <!-- Treecrumb dropdown element -->
+            <li class="dropdown">
+              <!-- Dropdown label -->
+              <a id="admin-dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Federal Administration</a>
+              <!-- Dropdown list element -->
+              <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
+                <!-- Dropdown title, can ben place anywhere in the list -->
+                <li class="dropdown-header">Federal Administration admin.ch</li>
+                <!-- Dropdown element link -->
+                <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
+                <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
+                <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
+                <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
+                <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
+                <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
+                <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" id="service-dropdown" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Departement: EDI</a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="service-dropdown">
+                <li class="dropdown-header">Departement: EDI</li>
+                <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
+                <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
+                <li><a href="#">Integrationsbüros</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+
+        <nav class="nav-lang">
+          <ul>
+            <li><a class="active" href="#">DE</a></li>
+            <li><a href="#">FR</a></li>
+            <li><a href="#">IT</a></li>
+            <li><a class="disabled" href="#">RM</a></li>
+            <li><a href="#">EN</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-service">
+          <ul>
+            <li><a href="#">Emergencies</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <a href="#" class="brand hidden-xs">
+        <img src="../img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+        <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
+      </a>
+
+      <form class="form-horizontal form-search pull-right" role="form">
+        <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+      </form>
+
+      <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
+      <nav class="navbar yamm yamm--select" role="navigation">
+        <ul>
+          <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
+          <li class="dropdown pull-right">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themen A-Z <span class="icon icon--bottom"></span></a>
+            <ul class="dropdown-menu">
+              <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+              <li>
+                <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                <div class="yamm-content container-fluid">
+
+                  <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+                  <div class="row">
+                    <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+                  </div>
+
+                  <!-- The tab navigation -->
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#eda" data-toggle="tab">EDA</a></li>
+                    <li><a href="#deza" data-toggle="tab">DEZA</a></li>
+                  </ul>
+
+                  <!-- The tab content -->
+                  <div class="tab-content">
+
+                    <div class="tab-pane active" id="eda">
+
+                      <!-- The inside-tab navigation -->
+                      <ul class="nav nav-tabs nav-tabs-alphabet">
+                        <li class="active"><a href="#eda-tab-a" data-toggle="tab">A</a></li>
+                        <li><a href="#eda-tab-b" data-toggle="tab">B</a></li>
+                        <li><a href="#eda-tab-c" data-toggle="tab">C</a></li>
+                        <li><a href="#eda-tab-d" data-toggle="tab">D</a></li>
+                        <li><a href="#eda-tab-e" data-toggle="tab">E</a></li>
+                        <li><a href="#eda-tab-f" data-toggle="tab">F</a></li>
+                        <li><a href="#eda-tab-g" data-toggle="tab">G</a></li>
+                        <li><a href="#eda-tab-h" data-toggle="tab">H</a></li>
+                        <li><a href="#eda-tab-i" data-toggle="tab">I</a></li>
+                        <li><a href="#eda-tab-j" data-toggle="tab">J</a></li>
+                        <li><a href="#eda-tab-k" data-toggle="tab">K</a></li>
+                        <li><a href="#eda-tab-l" data-toggle="tab">L</a></li>
+                        <li><a href="#eda-tab-m" data-toggle="tab">M</a></li>
+                        <li><a href="#eda-tab-n" data-toggle="tab">N</a></li>
+                        <li><a href="#eda-tab-o" data-toggle="tab">O</a></li>
+                        <li><a href="#eda-tab-p" data-toggle="tab">P</a></li>
+                        <li><a href="#eda-tab-q" data-toggle="tab">Q</a></li>
+                        <li><a href="#eda-tab-r" data-toggle="tab">R</a></li>
+                        <li><a href="#eda-tab-s" data-toggle="tab">S</a></li>
+                        <li><a href="#eda-tab-t" data-toggle="tab">T</a></li>
+                        <li><a href="#eda-tab-u" data-toggle="tab">U</a></li>
+                        <li><a href="#eda-tab-v" data-toggle="tab">V</a></li>
+                        <li><a href="#eda-tab-w" data-toggle="tab">W</a></li>
+                        <li><a href="#eda-tab-x" data-toggle="tab">X</a></li>
+                        <li><a href="#eda-tab-y" data-toggle="tab">Y</a></li>
+                        <li><a href="#eda-tab-z" data-toggle="tab">Z</a></li>
+                      </ul>
+
+                      <!-- The inside-tab content -->
+                      <div class="tab-content">
+                        <!-- All `tab-pane` can contain any kind of content like table, list, article... -->
+                        <div class="tab-pane active" id="eda-tab-a">a. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-b">b. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-c">c. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-d">d. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-e">e. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-f">f. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-g">g. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-h">h. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-i">i. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-j">j. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-k">k. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-l">l. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-m">m. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-n">n. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-o">o. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-p">p. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-q">q. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-r">r. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-s">s. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-t">t. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-u">u. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-v">v. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-w">w. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-x">x. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-y">y. Some content...</div>
+                        <div class="tab-pane" id="eda-tab-z">z. Some content...</div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="deza">
+                      <p>Same as previous</p>
+                    </div>
+
+                  </div><!-- Main tab content end -->
+
+                </div><!-- `yamm-content` end -->
+              </li><!-- Dropdown `li` end -->
+            </ul><!-- Dropdown `ul` end -->
+          </li><!-- Navbar item end -->
+        </ul><!-- Navbar list end -->
+      </nav><!-- Navbar end -->
+
+    </header>
+
+    <nav class="nav-main yamm navbar" role="navigation">
+      <!-- The tab navigation -->
+      <ul class="nav navbar-nav">
+        <li class="dropdown yamm-fw">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="grid-demo">
+              <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+              <div class="yamm-content container-fluid"></div>
+            </li>
+          </ul><!-- Dropdown `ul` end -->
+        </li>
+        <li class="dropdown yamm-fw">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+          <ul class="dropdown-menu" role="menu">
+            <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+            <li>
+              <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+              <div class="yamm-content container-fluid"></div><!-- `yamm-content` end -->
+            </li><!-- Dropdown `li` end -->
+          </ul><!-- Dropdown `ul` end -->
+        </li>
+      </ul>
+    </nav>
+
+    <div class="alert alert--emergency clearfix">
+      <div class="col-sm-3">
+        <h3>Lorem ipsum</h3>
+      </div>
+      <div class="col-sm-9">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, placeat, recusandae, amet, modi hic accusamus cumque id nesciunt debitis nihil neque quaerat reprehenderit iste mollitia laborum natus culpa laboriosam labore.
+        </p>
+      </div>
+    </div>
+
+    <!-- focus panes -->
+    <div class="tab-content tab-border tab-focus">
+      <div class="tab-pane fade active in" id="home">
+        <div class="row">
+          <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
+          <div class="col-sm-5">
+            <h4>Lorem ispum title 1</h4>
+            <p>
+              1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
+            </p>
+            <br>
+            <a href="#" class="icon icon--after icon--external">An external link</a>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile">
+        <div class="row">
+          <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
+          <div class="col-sm-5">
+            <h4>Lorem ispum title 2</h4>
+            <p>
+              2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
+            </p>
+            <br>
+            <a href="#" class="icon icon--after icon--external">An external link</a>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="messages">
+        <div class="row">
+          <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
+          <div class="col-sm-5">
+            <h4>Lorem ispum title 3</h4>
+            <p>
+              3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
+            </p>
+            <br>
+            <a href="#" class="icon icon--after icon--external">An external link</a>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="settings">
+        <div class="row">
+          <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
+          <div class="col-sm-5">
+            <h4>Lorem ispum title 4</h4>
+            <p>
+              4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
+            </p>
+            <br>
+            <a href="#" class="icon icon--after icon--external">An external link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- focus tabs -->
+    <ul class="nav nav-tabs nav-tabs-focus nav-justified">
+      <li class="active"><a href="#home" data-toggle="tab">Title in H2 uns extra lang, weil es eigentlich schon fast ein Leadtext ist.</a></li>
+      <li><a href="#profile" data-toggle="tab">Title 2</a></li>
+      <li><a href="#messages" data-toggle="tab">Das ist der Megateaser</a></li>
+      <li><a href="#settings" data-toggle="tab">Lorem ipsum dolor sit amet</a></li>
+    </ul>
+
+    <div class="col-sm-3">
+      <!-- News list example -->
+      <div class="list-group">
+        <div class="list-group-header">
+          <h3 class="pull-left">News</h3>
+          <a href="#" class="pull-right icon icon--before icon--list">All News</a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 1
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 2
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 3
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <img src="http://placehold.it/282x176" alt="Image description">
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
+      </p>
+    </div>
+
+    <div class="col-sm-3">
+
+      <div class="list-group">
+        <div class="list-group-header">
+          <h3 class="pull-left">Director</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <img src="http://placehold.it/282x176" alt="Image description">
+            <div class="well">
+              <h3><a href="#">Title in H3</a></h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
+              </p>
+              <ul>
+                <li><a href="#">Link n°1</a></li>
+                <li><a href="#">Link n°2</a></li>
+                <li><a href="#">Link n°3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="../js/vendors.min.js"></script>
+  <script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>
