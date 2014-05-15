@@ -171,6 +171,7 @@ function carouselInit ($) {
         $that.css('z-index', 20);
       } else {
         $that.find($dropdown).removeClass('open');
+        $that.find($dropdown).removeClass('active');
         $body.addClass('overlay');
         $that.css('z-index', 9999);
       }
