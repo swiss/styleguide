@@ -17,7 +17,7 @@
 
   $(window).resize(function () {
     carouselInit(jQuery);
-  })
+  });
 
 }) (jQuery);
 
