@@ -1,0 +1,46 @@
+/* ==========================================================
+ * teaser-examples.scss
+ * teaser example
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-15 11:34:18
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
+
+/*doc
+---
+title: News
+name: b-news
+category: Content Modules - Teaser
+---
+
+<span class="label label-admin">FLEX</span>
+
+Instead of the focus teaser, the "News" teaser can be used, in this case with only one article. This is the best solution if only a limited number of newsworthy items are presented on the home page and there is a low frequency of changes to the content of the home page.
+
+The "News" teaser consists of a headline, a large image, a brief teaser text, and a "more" link.
+
+```html_example
+<h3>News</h3>
+<hr>
+<div class="row">
+  <div class="col-sm-7">
+    <p>
+      <img src="http://placehold.it/588x368" alt="image description">
+    </p>
+  </div>
+  <div class="col-sm-5">
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum. Erit enim mecum, si tecum erit. Ne amores quidem sanctos a sapiente alienos esse arbitrantur.
+    </p>
+    <br>
+    <a href="#" class="icon icon--after icon--external">An external link</a>
+  </div>
+</div>
+```
+*/
