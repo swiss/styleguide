@@ -65,47 +65,53 @@ The teaser title line makes it possible to provide a teaser with an additional h
 The title line consists of a headline, an optional link to related topics, and a line 2 pixels in height.
 
 ```html_example
-<div class="list-group">
+<div class="row">
+  <div class="col-sm-8">
+  
+    <div class="list-group">
 
-  <div class="list-group-header">
-    <h3 class="pull-left">Themes</h3>
-    <a href="#" class="pull-right icon icon--before icon--list">All Themes</a>
-  </div>
+      <div class="list-group-header">
+        <h3 class="pull-left">Themes</h3>
+        <a href="#" class="pull-right icon icon--before icon--list">All Themes</a>
+      </div>
 
-  <div class="row">
-    <div class="col-sm-4">
-      <p>
-        <img src="http://placehold.it/588x368" alt="image description">
-      </p>
-      <h3><a href="#">Title in H3</a></h3>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum.
-      </p>
-      <br>
-      <a href="#" class="icon icon--after icon--external">An external link</a>
+      <div class="row">
+        <div class="col-sm-4">
+          <p>
+            <img src="http://placehold.it/282x176" alt="Image description">
+          </p>
+          <h3><a href="#">Title in H3</a></h3>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum.
+          </p>
+          <br>
+          <a href="#" class="icon icon--after icon--external">An external link</a>
+        </div>
+        <div class="col-sm-4">
+          <p>
+            <img src="http://placehold.it/282x176" alt="Image description">
+          </p>
+          <h3><a href="#">Title in H3</a></h3>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum. Erit enim mecum, si tecum erit. Ne amores quidem sanctos a sapiente alienos esse arbitrantur.
+          </p>
+          <br>
+          <a href="#" class="icon icon--after icon--external">An external link</a>
+        </div>
+        <div class="col-sm-4">
+          <p>
+            <img src="http://placehold.it/282x176" alt="Image description">
+          </p>
+          <h3><a href="#">Title in H3</a></h3>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse.
+          </p>
+          <br>
+          <a href="#" class="icon icon--after icon--external">An external link</a>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <p>
-        <img src="http://placehold.it/588x368" alt="image description">
-      </p>
-      <h3><a href="#">Title in H3</a></h3>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum. Erit enim mecum, si tecum erit. Ne amores quidem sanctos a sapiente alienos esse arbitrantur.
-      </p>
-      <br>
-      <a href="#" class="icon icon--after icon--external">An external link</a>
-    </div>
-    <div class="col-sm-4">
-      <p>
-        <img src="http://placehold.it/588x368" alt="image description">
-      </p>
-      <h3><a href="#">Title in H3</a></h3>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse.
-      </p>
-      <br>
-      <a href="#" class="icon icon--after icon--external">An external link</a>
-    </div>
+
   </div>
 </div>
 ```
@@ -127,7 +133,7 @@ It consists of a headline with a link and a short text.
 
 ```html_example
 <div class="row">
-  <div class="col-sm-4">
+  <div class="col-sm-3">
     
     <h3><a href="#">Title in H3</a></h3>
     <p>
@@ -135,6 +141,83 @@ It consists of a headline with a link and a short text.
     </p>
 
   </div>
+</div>
+```
+*/
+
+
+/*doc
+---
+title: Dossier Teaser
+name: e-dossier-teaser
+category: Content Modules - Teaser
+---
+
+<span class="label label-admin">FLEX</span>
+
+The dossier teaser is used to introduce topics on home pages or overview pages.
+
+It consists of a 16:10 format image, the title of the topic, and a brief introductory text. Both the title and the image are linked to the appropriate page with a detailed presentation of the topic.
+
+Dossier teasers can be grouped with a title line.
+
+```html_example
+<div class="row">
+  <div class="col-sm-3">
+    <img src="http://placehold.it/282x176" alt="Image description">
+    <h3><a href="#">Title in H3</a></h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
+    </p>
+
+  </div>
+</div>
+```
+*/
+
+
+/*doc
+---
+title: Person Teaser
+name: f-person-teaser
+category: Content Modules - Teaser
+---
+
+<span class="label label-admin">FLEX</span>
+
+In order to place particular emphasis on an individual topic, a maximum of one person teaser may be used on a home page. It is used, for example, on department web pages for a portrait of the responsible Federal Councillor.
+
+Like the dossier teaser, the person teaser consists of a 16:10 format image, the title of the topic, and a brief introductory text. Both the title and the image are linked to the appropriate page with a detailed presentation of the topic. In addition, the teaser has a gray background.
+
+```html_example
+<div class="row">
+  <div class="col-sm-3">
+    
+    <div class="list-group">
+
+      <div class="list-group-header">
+        <h3 class="pull-left">Director</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <img src="http://placehold.it/282x176" alt="Image description">
+          <div class="well">
+            <h3><a href="#">Title in H3</a></h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
+            </p>
+            <ul>
+              <li><a href="#">Link n°1</a></li>
+              <li><a href="#">Link n°2</a></li>
+              <li><a href="#">Link n°3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
 </div>
 ```
 */

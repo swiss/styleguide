@@ -17,7 +17,11 @@
   padding: 10px;
   margin: 0;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  background: $smoke;
+  background: $smoke !important;
+  &.well-freeboard {
+    padding: 0;
+    border: 1px solid $light-grey;
+  }
   h2:first-child {
     margin-top: 0;
   }
