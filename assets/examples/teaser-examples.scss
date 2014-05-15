@@ -290,3 +290,60 @@ Alternatively, this content element can be placed inside a gray info box.
 </div>
 ```
 */
+
+
+/*doc
+---
+title: News Feed
+name: h-news-feed
+category: Content Modules - Teaser
+---
+
+<span class="label label-admin">FLEX</span>
+
+In the news teaser, various snippets of news items are arranged chronologically. The user can use the scrollbar to scroll down the teaser and take a look at all of the news snippets that are available. Each snippet contains the date, the type of news item, and the link to the news story’s headline.
+
+```html_example
+<div class="row">
+  <div class="col-sm-3">
+
+    <!-- News list example -->
+    <div class="list-group">
+      <div class="list-group-header">
+        <h3 class="pull-left">News</h3>
+        <a href="#" class="pull-right icon icon--before icon--list">All News</a>
+      </div>
+      <div class="list-group-item">
+        <p>
+          23.05.2012<br>
+          Medienmitteilung 1
+        </p>
+        <a href="#">
+          Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+        </a>
+      </div>
+      <div class="list-group-item">
+        <p>
+          23.05.2012<br>
+          Medienmitteilung 2
+        </p>
+        <a href="#">
+          Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+        </a>
+      </div>
+      <div class="list-group-item">
+        <p>
+          23.05.2012<br>
+          Medienmitteilung 3
+        </p>
+        <a href="#">
+          Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+```
+*/
