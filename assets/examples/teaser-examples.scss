@@ -110,3 +110,31 @@ The title line consists of a headline, an optional link to related topics, and a
 </div>
 ```
 */
+
+
+/*doc
+---
+title: Text Teaser
+name: d-text-teaser
+category: Content Modules - Teaser
+---
+
+<span class="label label-admin">FLEX</span>
+
+The text teaser is a simple element which is usually used in lists.
+
+It consists of a headline with a link and a short text.
+
+```html_example
+<div class="row">
+  <div class="col-sm-4">
+    
+    <h3><a href="#">Title in H3</a></h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
+    </p>
+
+  </div>
+</div>
+```
+*/
