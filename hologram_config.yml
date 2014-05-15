@@ -37,4 +37,7 @@ static_page:
   - Homepage without Global navigation | home-without-nav.html
   - Subpage | subpage.html
   - Overview page | preview-without-nav.html
+  - Preview page | preview.html
+  - Publications page | publications.html
   - Details page | detail.html
+  - Forms page | forms.html
