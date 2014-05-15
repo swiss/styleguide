@@ -123,6 +123,27 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
           </li>
         </ul><!-- Dropdown `ul` end -->
       </li>
+      <li class="active dropdown yamm-fw">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+        <ul class="dropdown-menu" role="menu">
+          <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+          <li>
+            <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+            <div class="yamm-content container-fluid">
+
+              <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+              <div class="row">
+                <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+              </div>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, quae, ut, numquam tempora facilis mollitia temporibus error dolorem vel ea debitis perspiciatis doloremque necessitatibus dignissimos pariatur minima molestiae aliquid voluptatibus.</p>
+
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+
+            </div><!-- `yamm-content` end -->
+          </li><!-- Dropdown `li` end -->
+        </ul><!-- Dropdown `ul` end -->
+      </li>
       <li class="dropdown yamm-fw">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
         <ul class="dropdown-menu" role="menu">
@@ -207,6 +228,13 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
     &:after {
       content: ';';
     }
+  }
+  .dropdown.active > a {
+    z-index: 9999;
+    background: $white;
+    border-top: 5px solid $red;
+    margin-top: -5px;
+    height: 75px;
   }
 }
 
