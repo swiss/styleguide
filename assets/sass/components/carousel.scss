@@ -47,25 +47,52 @@ The carousel consists of various information blocks, each of which contains a la
           <!-- Carousel items -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="http://placehold.it/588x331">
-              <div class="carousel-caption">
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </div>
+              <h3>Entwicklungspolitik 1</h3>
+              <p>
+                <img class="carousel-img" src="http://placehold.it/588x331">
+              </p>
+              <div class="spacer"></div>
+              <figure class="pull-left">
+                <img src="http://placehold.it/130x81" alt="image description">
+              </figure>
+              <h4><a href="#">Strassenbau in Nepal 1: ein Weg aus der Armut</a></h4>
+              <p>
+                <small>
+                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae.
+                </small>
+              </p>
             </div>
             <div class="item">
-              <img src="http://placehold.it/588x331">
-              <div class="carousel-caption">
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
+              <h3>Entwicklungspolitik 2</h3>
+              <p>
+                <img class="carousel-img" src="http://placehold.it/588x331">
+              </p>
+              <div class="spacer"></div>
+              <figure class="pull-left">
+                <img src="http://placehold.it/130x81" alt="image description">
+              </figure>
+              <h4><a href="#">Strassenbau in Nepal 2: ein Weg aus der Armut</a></h4>
+              <p>
+                <small>
+                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae.
+                </small>
+              </p>
             </div>
             <div class="item">
-              <img src="http://placehold.it/588x331">
-              <div class="carousel-caption">
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-              </div>
+              <h3>Entwicklungspolitik 3</h3>
+              <p>
+                <img class="carousel-img" src="http://placehold.it/588x331">
+              </p>
+              <div class="spacer"></div>
+              <figure class="pull-left">
+                <img src="http://placehold.it/130x81" alt="image description">
+              </figure>
+              <h4><a href="#">Strassenbau in Nepal 3: ein Weg aus der Armut</a></h4>
+              <p>
+                <small>
+                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+                </small>
+              </p>
             </div>
 
           </div>
@@ -82,4 +109,31 @@ The carousel consists of various information blocks, each of which contains a la
 ```
 */
 
-.carousel-control.right, .carousel-control.left {background-image: none !important;}
+.carousel {
+  border: 1px solid $silver;
+  .item {
+    padding: 10px;
+  }
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none !important;
+  &:before {
+    color: $coal;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.carousel-indicators {
+  bottom: auto;
+}
+
+.carousel-indicators li {
+  border: none;
+  background: $gainsboro;
+}
+
+.carousel-indicators .active {background: $venetian-red;}
+
+
+
