@@ -171,6 +171,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 */
 
 .yamm--select {
+  height: 0px;
   &.pull-right .dropdown-menu {right: 0;}
   .dropdown-toggle {
     color: $coal;
@@ -185,6 +186,8 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     box-sizing: border-box;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     background: $white;
+    position: relative;
+    top: -15px;
     &:hover, &:active {
       text-decoration: none;
       color: $venetian-red;
@@ -205,7 +208,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     position: relative;
     z-index: 1000;
   }
-  .dropdown-menu {top: 80%}
+  .dropdown-menu {margin-top: -4px;}
 }
 
 

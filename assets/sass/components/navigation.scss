@@ -406,6 +406,10 @@ On smartphones, the treecrumb navigation is omitted.
 */
 
 .treecrumb {
+  &.navbar {
+    margin-bottom: 15px;
+    min-height: 0;
+  }
   .dropdown {margin: 0;}
   .nav .open a.dropdown-toggle {
     background: $white;
@@ -520,7 +524,7 @@ Navigation below the content level on a smartphone with links to the home page, 
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-4">
-      
+
       <nav class="nav-page-list">
         <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
         <ul>
@@ -620,7 +624,7 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-4">
-      
+
       <nav class="nav-page-list nav-page-list--facette">
         <a href="#" class="icon icon--before icon--less">Home page swisstopo</a>
         <ul>
