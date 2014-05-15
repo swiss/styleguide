@@ -1,0 +1,85 @@
+/* ==========================================================
+ * carousel.scss
+ * Carousel component
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-15 13:12:44
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
+/*doc
+---
+title: Carousel
+name: d-carousel
+category: Content Modules - Teaser
+---
+
+<span class="label label-admin">FLEX</span>
+
+In a rotating carousel a topic can be presented from different perspectives. The various articles on the topic alternate automatically.
+
+The carousel consists of various information blocks, each of which contains a large image, an optional small image, a brief teaser headline, a text, and a "more" link.
+
+```html_example
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+
+    <div class="list-group">
+
+      <div class="list-group-header">
+        <h3 class="pull-left">DEZA - Projekte Weltweit</h3>
+        <a href="#" class="pull-right icon icon--before icon--list">All entry</a>
+      </div>
+
+      <div id="carousel-example-captions" class="carousel" data-ride="carousel">
+
+          <!-- Carousel Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-captions" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-example-captions" data-slide-to="2" class=""></li>
+          </ol>
+
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="http://placehold.it/588x331">
+              <div class="carousel-caption">
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="http://placehold.it/588x331">
+              <div class="carousel-caption">
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="http://placehold.it/588x331">
+              <div class="carousel-caption">
+                <h3>Third slide label</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Carousel left/right -->
+          <a class="left carousel-control icon icon--before icon--less" href="#carousel-example-captions" data-slide="prev"></a>
+          <a class="right carousel-control icon icon--before icon--greater" href="#carousel-example-captions" data-slide="next"></a>
+
+        </div>
+    </div>
+
+  </div>
+</div>
+```
+*/
+
+.carousel-control.right, .carousel-control.left {background-image: none !important;}

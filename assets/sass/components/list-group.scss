@@ -76,7 +76,7 @@ The elements list is a very generic element that groups content elements in a li
           <a href="#">
             Publication's title : Lorem ipsum dolor sit amet
           </a>
-          <br><br>
+          <br>
           <figure class="pull-left">
             <img src="http://placehold.it/78x117" alt="image description">
           </figure>
@@ -88,7 +88,7 @@ The elements list is a very generic element that groups content elements in a li
           <a href="#">
             Publication's title : Lorem ipsum dolor sit amet
           </a>
-          <br><br>
+          <br>
           <figure class="pull-left">
             <img src="http://placehold.it/78x117" alt="image description">
           </figure>
@@ -100,7 +100,7 @@ The elements list is a very generic element that groups content elements in a li
           <a href="#">
             Publication's title : Lorem ipsum dolor sit amet
           </a>
-          <br><br>
+          <br>
           <figure class="pull-left">
             <img src="http://placehold.it/78x117" alt="image description">
           </figure>
@@ -117,8 +117,9 @@ The elements list is a very generic element that groups content elements in a li
 */
 
 .list-group-header {
-  min-height: 50px;
+  min-height: 30px;
   border-bottom: 2px solid $silver;
+  margin-bottom: 10px;
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
