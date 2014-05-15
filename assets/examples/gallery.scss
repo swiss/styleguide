@@ -18,6 +18,8 @@ name: a-photo-gallery-overview
 category: Content Modules - Multimedia
 ---
 
+<span class="label label-admin">FLEX</span>
+
 The photo gallery shows scaled-down preview images (thumbnails) together with their names. These preview images are arranged in groups of 12. If the number of preview images exceeds this quantity, the “paging” navigation element is added to the photo gallery.
 
 When the user clicks on an image, a detailed view is opened either in a lightbox or in single view mode for the images.
@@ -196,9 +198,11 @@ When the user clicks on an image, a detailed view is opened either in a lightbox
 /*doc
 ---
 title: Photo Gallery Single View Mode
-name: a-photo-gallery-single
+name: b-photo-gallery-single
 category: Content Modules - Multimedia
 ---
+
+<span class="label label-admin">FLEX</span>
 
 The single view mode allows the user to browse through the complete contents of a photo gallery. A caption can be added below the image.
 
@@ -252,3 +256,48 @@ The single view mode allows the user to browse through the complete contents of 
 */
 
 
+/*doc
+---
+title: Lightbox
+name: c-lightbox
+category: Content Modules - Multimedia
+---
+
+<span class="label label-admin">FLEX</span>
+
+A "lightbox" is an overlay that opens on top of the website. For instance, it is opened when a preview image in a photo gallery is clicked on, or when the zoom icon of an individual image is activated.
+
+When a "lightbox" is opened, the website in the background is darkened. The "lightbox" comprises the title, the full view of the image, and its caption. The user can then browse through various images using the arrow icons in the "lightbox" or the arrow keys on the keyboard. The "lightbox" can be closed by clicking on the background, and by using the close command or the Esc key.
+
+```html_example
+<div class="row">
+  <div class="col-sm-3 col-sm-offset-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox-example">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="lightbox-example" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close icon icon--before icon--close" data-dismiss="modal" aria-hidden="true">Close</button>
+        <h3 class="modal-title" id="myModalLabel">Image title</h3>
+      </div>
+      <div class="modal-body">
+        <img src="http://placehold.it/588x368" alt="image description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Esse enim quam vellet iniquus iustus poterat inpune. Itaque primos congressus.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+```
+*/
