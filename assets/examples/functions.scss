@@ -1,0 +1,29 @@
+/* ==========================================================
+ * functions.scss
+ * Functions markup
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-15 10:30:21
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
+
+/*doc
+---
+title: Print
+name: a-print
+category: Content Modules - Functions
+---
+
+The single view mode allows the user to browse through the complete contents of a photo gallery. A caption can be added below the image.
+
+```html_example
+<a href="#" onclick="window.print()" class="icon icon--before icon--print"></a>
+
+<br><br>
+```
+*/
