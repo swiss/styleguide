@@ -38,3 +38,4 @@ static_page:
   - Subpage | subpage.html
   - Overview page | preview-without-nav.html
   - Details page | detail.html
+  - Search result page | results.html
