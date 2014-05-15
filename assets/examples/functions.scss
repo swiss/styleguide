@@ -19,11 +19,44 @@ name: a-print
 category: Content Modules - Functions
 ---
 
-The single view mode allows the user to browse through the complete contents of a photo gallery. A caption can be added below the image.
+The "Print" icon, with a link to the print version, can be integrated into every page (except the home page). It is positioned at the top right of the content column. A click on the icon opens the browser’s or operating system’s print dialog.
 
 ```html_example
 <a href="#" onclick="window.print()" class="icon icon--before icon--print"></a>
 
 <br><br>
+```
+*/
+
+
+/*doc
+---
+title: Downloading Files
+name: b-download-file
+category: Content Modules - Functions
+---
+
+Links with which a file can be downloaded are always preceded by a document icon.
+
+```html_example
+<div class="row">
+  <div class="col-sm-5">
+
+    <h3>Download list (PDF)</h3>
+    <ul class="list-unstyled">
+      <li><a href="#" class="icon icon--before icon--pdf">Document 1</a> <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></li>
+      <li><a href="#" class="icon icon--before icon--pdf">Document 2</a> <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></li>
+      <li><a href="#" class="icon icon--before icon--pdf">Document 3</a> <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></li>
+    </ul>
+    <br>
+    <h3>Download list (General document)</h3>
+    <ul class="list-unstyled">
+      <li><a href="#" class="icon icon--before icon--doc">list item mit viel Text zum testen wohin welcher Browser das Icon platziert</a> <span class="text-dimmed">(docx, 43 pages, 2Mb, English)</span></li>
+      <li><a href="#" class="icon icon--before icon--doc">list item mit viel Text zum testen wohin welcher Browser das Icon platziert</a> <span class="text-dimmed">(docx, 43 pages, 2Mb, English)</span></li>
+      <li><a href="#" class="icon icon--before icon--doc">list item mit viel Text zum testen wohin welcher Browser das Icon platziert</a> <span class="text-dimmed">(docx, 43 pages, 2Mb, English)</span></li>
+    </ul>
+
+  </div>
+</div>
 ```
 */

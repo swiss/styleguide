@@ -232,8 +232,10 @@ The single view mode allows the user to browse through the complete contents of 
     <br><br>
     <a data-toggle="collapse" class="collapsed" href="#collapseImg">Images format</a>
     <div id="collapseImg" class="collapse">
-      <a href="#" class="icon icon--before icon--doc">Image title</a> JPG, 1024 x 768 Pixel, 1.1 MB<br>
-      <a href="#" class="icon icon--before icon--doc">Image title</a> JPG, 5000 x 3000 Pixel, 8.3 MB
+      <ul class="list-unstyled">
+        <li><a href="#" class="icon icon--before icon--doc">Image title</a> JPG, 1024 x 768 Pixel, 1.1 MB</li>
+        <li><a href="#" class="icon icon--before icon--doc">Image title</a> JPG, 5000 x 3000 Pixel, 8.3 MB</li>
+      </ul>
     </div>
     <br>
   </div>
