@@ -59,7 +59,7 @@ if (typeof searchData != "undefined") {
 
   $(window).resize(function () {
     carouselInit(jQuery);
-  })
+  });
 
 }) (jQuery);
 
