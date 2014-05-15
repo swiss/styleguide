@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=$start">
+  <meta name="viewport" content="width=device-width">
+  <title>Admin.ch - Homepage with Global Nav Example</title>
+
+  <link rel="stylesheet" href="../css/vendors.css">
+  <link rel="stylesheet" href="../css/admin.css">
+
+  <!--[if lt IE 9]>
+    <script src="../theme-build/polyfill/html5shiv.js"></script>
+    <script src="../theme-build/polyfill/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container container-main">
+    <header>
+      <div class="clearfix">
+        <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
+        <nav class="navbar treecrumb pull-left" role="navigation">
+          <ul class="nav navbar-nav">
+
+            <!-- Treecrumb dropdown element -->
+            <li class="dropdown">
+              <!-- Dropdown label -->
+              <a id="admin-dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Federal Administration</a>
+              <!-- Dropdown list element -->
+              <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
+                <!-- Dropdown title, can ben place anywhere in the list -->
+                <li class="dropdown-header">Federal Administration admin.ch</li>
+                <!-- Dropdown element link -->
+                <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
+                <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
+                <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
+                <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
+                <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
+                <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
+                <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" id="service-dropdown" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Departement: EDI</a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="service-dropdown">
+                <li class="dropdown-header">Departement: EDI</li>
+                <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
+                <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
+                <li><a href="#">Integrationsbüros</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+
+        <nav class="nav-lang">
+          <ul>
+            <li><a class="active" href="#">DE</a></li>
+            <li><a href="#">FR</a></li>
+            <li><a href="#">IT</a></li>
+            <li><a class="disabled" href="#">RM</a></li>
+            <li><a href="#">EN</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-service">
+          <ul>
+            <li><a href="#">Emergencies</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <a href="#" class="brand hidden-xs">
+        <img src="../img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+        <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
+      </a>
+
+      <form class="form-horizontal form-search pull-right" role="form">
+        <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+      </form>
+
+      <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
+      <nav class="navbar yamm yamm--select" role="navigation">
+        <ul>
+          <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
+          <li class="dropdown pull-right">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themen A-Z <span class="icon icon--bottom"></span></a>
+            <ul class="dropdown-menu">
+              <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+              <li>
+                <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                <div class="yamm-content container-fluid">
+
+                  <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+                  <div class="row">
+                    <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+                  </div>
+
+                </div><!-- `yamm-content` end -->
+              </li><!-- Dropdown `li` end -->
+            </ul><!-- Dropdown `ul` end -->
+          </li><!-- Navbar item end -->
+        </ul><!-- Navbar list end -->
+      </nav><!-- Navbar end -->
+
+    </header>
+
+
+  </div>
+  <script type="text/javascript" src="../js/vendors.min.js"></script>
+  <script type="text/javascript" src="../js/main.min.js"></script>
+</body>
+</html>
