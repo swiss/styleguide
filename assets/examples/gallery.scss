@@ -22,6 +22,8 @@ The photo gallery shows scaled-down preview images (thumbnails) together with th
 
 When the user clicks on an image, a detailed view is opened either in a lightbox or in single view mode for the images.
 
+@TODO : buggy vertical img (CSS)
+
 ```html_example
 <h1>Title of gallery</h1>
 <br>
@@ -186,6 +188,66 @@ When the user clicks on an image, a detailed view is opened either in a lightbox
     <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
   </ul>
 </nav>
+```
+*/
+
+
+
+/*doc
+---
+title: Photo Gallery Single View Mode
+name: a-photo-gallery-single
+category: Content Modules - Multimedia
+---
+
+The single view mode allows the user to browse through the complete contents of a photo gallery. A caption can be added below the image.
+
+```html_example
+<div class="row">
+  <div class="col-sm-12">
+    <hr>
+    <a href="#" class="icon icon--before icon--less">Back to Overview</a>
+    <nav class="pull-right">
+      <ul>
+        <li><a href="#">Previous</a></li>
+        <li> | </li>
+        <li><a href="#">Next</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+    <img src="http://placehold.it/1000x768" alt="image description">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Primum quid tu dicis breve? Neminem videbis ita laudatum, ut artifex callidus comparandarum voluptatum diceretur. Nihil enim iam habes, quod ad corpus referas; Duo Reges: constructio interrete. At hoc in eo M. Id mihi magnum videtur.
+    </p>
+    <small>Bildnachweis / Copyright: Fotograf Hans Mustermann, Bern, 2009</small>
+    <br><br>
+    <a data-toggle="collapse" class="collapsed" href="#collapseImg">Images format</a>
+    <div id="collapseImg" class="collapse">
+      <a href="#" class="icon icon--before icon--doc">Image title</a> JPG, 1024 x 768 Pixel, 1.1 MB<br>
+      <a href="#" class="icon icon--before icon--doc">Image title</a> JPG, 5000 x 3000 Pixel, 8.3 MB
+    </div>
+    <br>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <hr>
+    <a href="#" class="icon icon--before icon--less">Back to Overview</a>
+    <nav class="pull-right">
+      <ul>
+        <li><a href="#">Previous</a></li>
+        <li> | </li>
+        <li><a href="#">Next</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </div>
+</div>
 ```
 */
 
