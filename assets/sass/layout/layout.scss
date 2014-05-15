@@ -52,3 +52,10 @@ body.overlay:after {
   margin-bottom: 90px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
 }
+
+hr {
+  margin: 0;
+  border: none;
+  height: 1px;
+  background: $light-grey;
+}

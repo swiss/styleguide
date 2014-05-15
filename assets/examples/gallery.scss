@@ -23,6 +23,170 @@ The photo gallery shows scaled-down preview images (thumbnails) together with th
 When the user clicks on an image, a detailed view is opened either in a lightbox or in single view mode for the images.
 
 ```html_example
-Markup
+<h1>Title of gallery</h1>
+<br>
+<hr>
+<nav class="pagination-container">
+  <span>Object - 2 of 3</span>
+  <ul class="pull-right pagination">
+    <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
+    <li class="separator"><a href="#">Previous</a></li>
+    <li><a href="#">1</a></li>
+    <li class="active"><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li class="separator-left"><a href="#">Next</a></li>
+    <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
+  </ul>
+</nav>
+<div class="row">
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/306x306" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/306x306" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="thumbnail-wrapper">
+      <a href="#" class="thumbnail">
+        <figure>
+          <span><img src="http://placehold.it/588x368" alt="image description"></span>
+          <figcaption>Caption content</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+</div>
+<hr>
+<nav class="pagination-container">
+  <span>Object - 2 of 3</span>
+  <ul class="pull-right pagination">
+    <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
+    <li class="separator"><a href="#">Previous</a></li>
+    <li><a href="#">1</a></li>
+    <li class="active"><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li class="separator-left"><a href="#">Next</a></li>
+    <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
+  </ul>
+</nav>
 ```
 */
+
+

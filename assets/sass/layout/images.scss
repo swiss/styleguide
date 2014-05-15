@@ -120,3 +120,67 @@ category: Base Layout - General
 
 */
 
+
+/*
+
+Thumbnail -> See Content Modules / Photo Gallery: Overview
+
+```html
+<div class="thumbnail-wrapper">
+  <a href="#" class="thumbnail">
+    <figure>
+      <span><img src="http://placehold.it/588x368" alt="image description"></span>
+      <figcaption>Caption content</figcaption>
+    </figure>
+  </a>
+</div>
+```
+
+*/
+
+.thumbnail-wrapper {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  margin: 10px 0 45px 0;
+  font-size: 1em;
+}
+
+.thumbnail {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  figure {
+    margin: 0;
+    background: $smoke;
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  span {
+    display: table-cell;
+    vertical-align: middle !important;
+    text-align: center;
+  }
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  figcaption {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+}
+
