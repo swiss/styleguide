@@ -53,6 +53,10 @@ body.overlay:after {
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
 }
 
+.container-fluid h1:first-child {
+  margin-top: 0;
+}
+
 hr {
   margin: 0;
   border: none;

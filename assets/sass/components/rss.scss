@@ -1,0 +1,44 @@
+/* ==========================================================
+ * rss.scss
+ * RSS component
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-15 16:13:19
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
+
+/*doc
+---
+title: RSS Feed
+name: j-rssfeed
+category: Content Modules - Teasers
+---
+
+<span class="label label-admin">FLEX</span>
+
+An RSS feed is a very specialized teaser with which only RSS feeds can be accessed.
+
+The title always consists of an RSS icon and the letters “RSS”. A list of links can be found below this.
+
+```html_example
+<div class="col-sm-4">
+  <div class="bordered">
+    <div class="well well-white">
+      <h4 class="icon icon--before icon--rss">RSS</h4>
+      <ul class="list-unstyled">
+        <li><a href="#">News</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+```
+
+*/
+

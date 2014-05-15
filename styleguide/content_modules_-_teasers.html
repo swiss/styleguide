@@ -8359,19 +8359,23 @@
                   <div class="row">
                     
                       <div class="col-sm-3">
-                        <h4><a href="pages/home-without-nav.html">Homepage with Global navigation</a></h4>
+                        <h4><a href="pages/homepage-global-nav.html">Homepage with Global navigation</a></h4>
                       </div>
                     
                       <div class="col-sm-3">
-                        <h4><a href="pages/homepage-global-nav.html">Homepage without Global navigation</a></h4>
+                        <h4><a href="pages/home-without-nav.html">Homepage without Global navigation</a></h4>
                       </div>
                     
                       <div class="col-sm-3">
-                        <h4><a href="pages/preview-without-nav.html">Subpage</a></h4>
+                        <h4><a href="pages/subpage.html">Subpage</a></h4>
                       </div>
                     
                       <div class="col-sm-3">
-                        <h4><a href="pages/subpage.html">Overview page</a></h4>
+                        <h4><a href="pages/preview-without-nav.html">Overview page</a></h4>
+                      </div>
+                    
+                      <div class="col-sm-3">
+                        <h4><a href="pages/detail.html">Details page</a></h4>
                       </div>
                     
                   </div>
@@ -8405,22 +8409,30 @@
 <p>An RSS feed is a very specialized teaser with which only RSS feeds can be accessed.</p>
 
 <p>The title always consists of an RSS icon and the letters “RSS”. A list of links can be found below this.</p>
-<div class="codeExample"><div class="exampleOutput"><article class="bordered col-sm-4">
-  <h4 class="icon icon--before icon--rss">RSS</h4>
-  <ul class="list-unstyled">
-    <li><a href="#">News</a></li>
-    <li><a href="#">Agenda</a></li>
-    <li><a href="#">Events</a></li>
-  </ul>
-</article>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;article</span> <span class="na">class=</span><span class="s">&quot;bordered col-sm-4&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--rss&quot;</span><span class="nt">&gt;</span>RSS<span class="nt">&lt;/h4&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;list-unstyled&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>News<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Agenda<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Events<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/article&gt;</span>
+<div class="codeExample"><div class="exampleOutput"><div class="col-sm-4">
+  <div class="bordered">
+    <div class="well well-white">
+      <h4 class="icon icon--before icon--rss">RSS</h4>
+      <ul class="list-unstyled">
+        <li><a href="#">News</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bordered&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well well-white&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--rss&quot;</span><span class="nt">&gt;</span>RSS<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;list-unstyled&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>News<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Agenda<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Events<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </pre></div></div></div>        </div>
       </div>
     </div>
