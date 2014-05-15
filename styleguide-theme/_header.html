@@ -83,8 +83,8 @@
                               <% @pages.each do |file_name, page| %>
                                 <% if not page[:blocks].empty? %>
                                   <% page[:blocks].each do |block| %>
-                                    <% if block[:category] == cat[0] and block[:title] != cat[0].split(nameScope).last %>
-                                      <% file_path = block[:category].to_s.gsub(' ', '_').downcase + '.html' %>
+                                    <% if block[:categories][0] == cat[0] and block[:title] != cat[0].split(nameScope).last %>
+                                      <% file_path = block[:categories][0].to_s.gsub(' ', '_').downcase + '.html' %>
                                       <% file_id = "#"+block[:name].to_s %>
                                       <li><a href="<%= file_path+file_id %>"><%= block[:title].to_s %></a></li>
                                     <% end %>
