@@ -67,7 +67,7 @@ The title line consists of a headline, an optional link to related topics, and a
 ```html_example
 <div class="row">
   <div class="col-sm-8">
-  
+
     <div class="list-group">
 
       <div class="list-group-header">
@@ -218,6 +218,75 @@ Like the dossier teaser, the person teaser consists of a 16:10 format image, the
 
   </div>
 </div>
+</div>
+```
+*/
+
+
+/*doc
+---
+title: Publications Preview
+name: g-publications-preview
+category: Content Modules - Teaser
+---
+
+<span class="label label-admin">FLEX</span>
+
+The publications preview is a very flexible teaser from a formal viewpoint.
+
+It consists of an optional title, an optional image, an optional caption, and the text. The text can be wrapped round the image, starting on the right of the image.
+
+Alternatively, this content element can be placed inside a gray info box.
+
+```html_example
+<div class="row">
+  <div class="col-sm-3">
+
+    <!-- Publications list example -->
+    <div class="list-group">
+      <div class="list-group-header">
+        <h3>Publications</h3>
+        <a href="#" class="icon icon--before icon--list">All publication</a>
+      </div>
+      <div class="list-group-item">
+        <a href="#">
+          Publication's title : Lorem ipsum dolor sit amet
+        </a>
+        <br>
+        <figure class="pull-left">
+          <img src="http://placehold.it/78x117" alt="image description">
+        </figure>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+        </p>
+      </div>
+      <div class="list-group-item">
+        <a href="#">
+          Publication's title : Lorem ipsum dolor sit amet
+        </a>
+        <br>
+        <figure class="pull-left">
+          <img src="http://placehold.it/78x117" alt="image description">
+        </figure>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+        </p>
+      </div>
+      <div class="list-group-item">
+        <a href="#">
+          Publication's title : Lorem ipsum dolor sit amet
+        </a>
+        <br>
+        <figure class="pull-left">
+          <img src="http://placehold.it/78x117" alt="image description">
+        </figure>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec hoc ille non vidit, sed verborum magnificentia est et gloria delectatus. Tum Triarius: Posthac quidem, inquit, audacius.
+        </p>
+      </div>
+    </div>
+
+  </div>
 </div>
 ```
 */
