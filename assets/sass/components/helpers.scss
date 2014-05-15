@@ -25,3 +25,7 @@
 .separator-both {
   @include separator($light-grey, both);
 }
+
+.bordered {
+  border: 1px solid $silver;
+}
