@@ -31,4 +31,9 @@ cat_order:
   - Base Layout
   - Navigation modules
   - Content Modules
-  - Example pages
+
+static_page:
+  - Homepage with Global navigation | homepage-global-nav.html
+  - Homepage without Global navigation | home-without-nav.html
+  - Subpage | subpage.html
+  - Overview page | preview-without-nav.html

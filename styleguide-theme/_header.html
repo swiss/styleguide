@@ -78,7 +78,7 @@
                         <% if cat[0].include?(wrapper) %>
                           <% catName = cat[0].split(nameScope).last %>
                           <div class="col-sm-3">
-                            <h4><a href="<%= cat[1] %>"><strong><%= catName %></strong></a></h4>
+                            <h4><a href="<%= cat[1] %>"><%= catName %></a></h4>
                             <ul>
                               <% @pages.each do |file_name, page| %>
                                 <% if not page[:blocks].empty? %>
@@ -103,6 +103,31 @@
               </ul>
             </li>
           <% end %>
+          
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Example pages</a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <div class="yamm-content container-fluid">
+                  <div class="row">
+                    <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+                  </div>
+                  <div class="row">
+                    <% @config['static_page'].each do |static| %>
+                      <div class="col-sm-3">
+                        <h4><a href="pages/<%= static.split(' | ').last %>"><%= static.split(' | ').first %></a></h4>
+                      </div>
+                    <% end %>
+                  </div>
+                  <br><br><br>
+                  <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+
+
         </ul>
       </nav>
 
