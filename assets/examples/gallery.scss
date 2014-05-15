@@ -1,0 +1,28 @@
+/* ==========================================================
+ * gallery.scss
+ * Images gallery example
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-15 08:39:49
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
+/*doc
+---
+title: Photo Gallery Overview
+name: a-photo-gallery-overview
+category: Content Modules - Multimedia
+---
+
+The photo gallery shows scaled-down preview images (thumbnails) together with their names. These preview images are arranged in groups of 12. If the number of preview images exceeds this quantity, the “paging” navigation element is added to the photo gallery.
+
+When the user clicks on an image, a detailed view is opened either in a lightbox or in single view mode for the images.
+
+```html_example
+Markup
+```
+*/
