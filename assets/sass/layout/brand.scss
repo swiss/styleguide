@@ -1,14 +1,14 @@
 /* ==========================================================
  * brand.scss
  * Brand and logo display styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
@@ -42,7 +42,7 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 .brand {
   display: inline-block;
   img {
-    max-width: 235px;
+    max-width: 250px;
     margin: 0;
     padding-right: 2em;
     border-right: 1px solid $gainsboro;
