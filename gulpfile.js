@@ -48,7 +48,18 @@ gulp.task('vendors', function() {
     .pipe(gulp.dest('build/js/TimelineJS'));
 
   gulp.src([
-          './bower_components/yamm3/yamm/yamm.css'
+      './bower_components/jquery.socialshareprivacy/socialshareprivacy/images/*'
+    ])
+    .pipe(gulp.dest('build/js/socialshareprivacy/images'));
+
+  gulp.src([
+      './bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css'
+    ])
+    .pipe(gulp.dest('build/js/socialshareprivacy'));
+
+  gulp.src([
+          './bower_components/yamm3/yamm/yamm.css',
+          './bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css'
       ])
       .pipe(concat('vendors.css'))
       .pipe(minifycss())
@@ -71,7 +82,8 @@ gulp.task('vendors', function() {
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js',
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js',
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js',
-      './bower_components/jquery.tablesorter/js/jquery.tablesorter.js'
+      './bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
+      './bower_components/jquery.socialshareprivacy/jquery.socialshareprivacy.min.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
