@@ -1,14 +1,14 @@
 /* ==========================================================
  * layout.scss
  * Global layout definition
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
@@ -33,9 +33,9 @@ body {
   background: url('../img/bg-striped.png') repeat;
 }
 
-body.overlay:after {
+.overlay {
   content: ' ';
-  display: block;
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;

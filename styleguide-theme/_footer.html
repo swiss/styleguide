@@ -11,6 +11,8 @@
     </footer>
   </div>
 
+  <div class="overlay"></div>
+
   <!-- Styleguide JS -->
   <script src="theme-build/js/vendors.min.js"></script>
   <script type="text/javascript">
@@ -19,7 +21,7 @@
   </script>
   <script src="theme-build/js/main.js"></script>
   <script>
-    var cortanaSearchData = 
+    var cortanaSearchData =
     <%= "[" %>
       <% @pages.each do |file_name, page| %>
         <% if not page[:blocks].empty? %>
@@ -59,7 +61,7 @@
       $('.form-search').append('<span class="icon icon--search"></span>');
     }) (jQuery_no_conflict);
   </script>
-  
+
   <!-- Styleguide JS -->
   <% @config['js_include'].each do |js| %>
     <script type="text/javascript" src="<%= js %>"></script>

@@ -4,7 +4,11 @@
   <% catWrappers.push(catWrapperName) %>
 <% end %>
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7 ]> <html class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9 ]><!--><html class="no-js no-ie"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -61,9 +65,9 @@
       </header>
 
       <nav class="nav-main yamm navbar" role="navigation">
-        
+
         <ul class="nav navbar-nav">
-          
+
           <% catWrappers.each do |wrapper| %>
             <li class="dropdown yamm-fw">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= wrapper %></a>
@@ -103,7 +107,7 @@
               </ul>
             </li>
           <% end %>
-          
+
           <li class="dropdown yamm-fw">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Example pages</a>
             <ul class="dropdown-menu" role="menu">
@@ -133,7 +137,7 @@
 
       <% # Check if we display or not side navigation %>
       <% blockNumber = 0; %>
-      <% @blocks.each do |block| %> 
+      <% @blocks.each do |block| %>
         <% if not block[:parent] %>
           <% blockNumber += 1 %>
         <% end %>
