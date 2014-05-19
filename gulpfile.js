@@ -50,12 +50,7 @@ gulp.task('vendors', function() {
   gulp.src([
       './bower_components/jquery.socialshareprivacy/socialshareprivacy/images/*'
     ])
-    .pipe(gulp.dest('build/js/socialshareprivacy/images'));
-
-  gulp.src([
-      './bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css'
-    ])
-    .pipe(gulp.dest('build/js/socialshareprivacy'));
+    .pipe(gulp.dest('build/css/images'));
 
   gulp.src([
           './bower_components/yamm3/yamm/yamm.css',
