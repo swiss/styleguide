@@ -192,7 +192,7 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
     border-left: 1px solid $menu-border-light;
     > a {
       height: 70px;
-      background: $menu-gradient;
+      @include gradient-menu;
       color: $coal;
       font-size: 0.9em;
       &:after {
@@ -207,7 +207,6 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
         font-size: 0.9em;
       }
       &:hover {
-        background: $menu-gradient;
         color: $venetian-red;
       }
     }
@@ -219,15 +218,22 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
     margin-left: 0;
     &:hover a {border-top: none; padding-bottom: 0;}
   }
-  .dropdown.open > a {
+  > .open > a {
     z-index: 9999;
     background: $white;
     border-top: 5px solid $red;
     margin-top: -5px;
     height: 75px;
+    &:hover {
+      background: $white;
+    }
     &:after {
       content: ';';
     }
+  }
+  .ie9 & > .open > a {
+    background: $white;
+    opacity: 1;
   }
   .dropdown.active > a {
     z-index: 9999;

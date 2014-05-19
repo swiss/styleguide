@@ -12,14 +12,20 @@
 .yamm {
   display: block;
   min-height: 0;
+  .no-ie & {
+    z-index: 20;
+  }
   .yamm-content {padding: 5px 20px 20px 20px !important;}
   .dropdown {margin-left: 0;}
   .dropdown-menu {
     width: 100%;
     border-radius: 0;
     border: none;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 4px fade-out($black, 0.7);
     li {display: block;}
+  }
+  .no-ie &.nav-open {
+    z-index: 9999;
   }
 }
 

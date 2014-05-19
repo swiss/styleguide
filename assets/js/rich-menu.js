@@ -24,13 +24,13 @@
     var $that = $(this);
     $that.find($dropdownToggle).click(function () {
       if ($(this).parent().hasClass('open')){
-        $body.removeClass('overlay');
-        $that.css('z-index', 20);
+        $('.overlay').hide();
+        $that.removeClass('nav-open');
       } else {
         $that.find($dropdown).removeClass('open');
         $that.find($dropdown).removeClass('active');
-        $body.addClass('overlay');
-        $that.css('z-index', 9999);
+        $('.overlay').show();
+        $that.addClass('nav-open');
       }
     });
   });
