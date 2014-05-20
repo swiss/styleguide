@@ -70,6 +70,27 @@ $ gulp
 
 [Browser-sync](http://www.browsersync.io) is automatically set up on `localhost` and will allow you to make changes and see them in real time.
 
+## Installation Windows
+
+[Setup your server](http://webmasterjuice.com/how-to-activate-built-in-web-server-windows)
+
+[Install Github for Windows](https://windows.github.com)
+
+You can then use the Git Shell from Github to setup the rest.
+
+[Install Ruby](http://rubyinstaller.org)
+
+[Install Node.js](http://nodejs.org)
+
+Install bower and gulp globally.
+
+```
+$ npm install gulp bower --global
+```
+
+You should be set and ready to go with the standard step-by-step installation.
+
+
 ## Grid System
 
 The grid system works exactly the same way as [Bootstrap](http://getbootstrap.com/css/#grid), no changes were made. Please refer to their documentation for more details.
