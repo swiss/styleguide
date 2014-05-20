@@ -56,7 +56,7 @@ gulp.task('vendors', function() {
           './bower_components/yamm3/yamm/yamm.css',
           './bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css'
       ])
-      .pipe(concat('vendors.css'))
+      .pipe(concat('vendors.min.css'))
       .pipe(minifycss())
       .pipe(gulp.dest('./build/css'));
 
@@ -92,7 +92,9 @@ gulp.task('styles', function() {
       .on('error', gutil.beep)
       .on('error', notify.onError("Error: <%= error.message %>"))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe(gulp.dest('build/css'))
     .pipe(minifycss())
+    .pipe(rename('admin.min.css'))
     .pipe(gulp.dest('build/css'));
 });
 
