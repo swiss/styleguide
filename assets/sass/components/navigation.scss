@@ -594,7 +594,6 @@ Navigation below the content level on a smartphone with links to the home page, 
     padding: 0px 10px 5px 10px;
     font-size: 11px;
     border-bottom: 1px solid $silver;
-    margin-left: 20px;
     &:before {
       font-size: 20px;
       position: relative;
@@ -613,12 +612,12 @@ Navigation below the content level on a smartphone with links to the home page, 
   li:first-child a {
     color: $black;
     font-weight: bold;
+    border-color: $coal;
   }
   ul a, ul ul li:first-child a {
     color: $empress;
     border-bottom: 1px solid $silver;
     padding: 10px 0;
-    margin-left: 20px;
     position: relative;
     font-weight: normal;
     &:active {color: $black;}
@@ -628,9 +627,8 @@ Navigation below the content level on a smartphone with links to the home page, 
       position: absolute;
       top: 0;
       bottom: 0;
-      left: -20px;
+      left: -15px;
       width: 5px;
-      background: $white;
     }
   }
   li.active a:before, li a:hover:before {background: $venetian-red;}
