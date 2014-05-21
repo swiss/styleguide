@@ -8931,11 +8931,10 @@ On smartphones there is always a link at the end of the page to the home page an
 .breadcrumb {
   margin: 0; }
   .breadcrumb li {
-    margin: 0 10px; }
-    .breadcrumb li:first-child {
-      margin-left: 0; }
+    margin: 0 10px 0 0; }
+  .breadcrumb .icon, .breadcrumb a[data-toggle="collapse"] {
+    margin-right: 10px; }
   .breadcrumb a {
-    color: #006699;
     font-size: 0.85em;
     margin-top: 0; }
   .breadcrumb span.icon {
@@ -8943,7 +8942,7 @@ On smartphones there is always a link at the end of the page to the home page an
     top: 2px; }
   .breadcrumb li.active {
     color: #454545;
-    font-size: 0.85em; }
+    font-size: 0.935em; }
   .breadcrumb.breadcrumb--search {
     margin: 0.8em 0; }
 
