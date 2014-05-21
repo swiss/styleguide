@@ -305,6 +305,7 @@ On mobile devices the links in the service navigation are moved to the footer.
   a {
     font-size: 0.85em;
     color: $coal;
+    &:hover {color: $venetian-red;}
   }
 }
 
@@ -365,10 +366,14 @@ On smartphones the language selection is always included in a drawer section abo
   border-left: 1px solid $gainsboro;
   margin-left: 15px;
   padding-left: 15px;
-  li {padding: 0;}
+  li {
+    padding: 0;
+    margin: 0;
+  }
   a {
     color: $coal;
     padding: 4px;
+    &:hover {color: $venetian-red;}
     &.active {background: $gainsboro;}
     &.disabled {color: $silver;}
     &.disabled:hover {cursor: default;}

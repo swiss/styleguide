@@ -9630,6 +9630,8 @@ On mobile devices the links in the service navigation are moved to the footer.
   .nav-service a {
     font-size: 0.85em;
     color: #454545; }
+    .nav-service a:hover {
+      color: #dc0018; }
 
 /*doc
 ---
@@ -9688,10 +9690,13 @@ On smartphones the language selection is always included in a drawer section abo
   margin-left: 15px;
   padding-left: 15px; }
   .nav-lang li {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
   .nav-lang a {
     color: #454545;
     padding: 4px; }
+    .nav-lang a:hover {
+      color: #dc0018; }
     .nav-lang a.active {
       background: #e5e5e5; }
     .nav-lang a.disabled {
