@@ -46,16 +46,16 @@ $ npm install
 $ bower install
 ```
 
-NOTE: Until hologram release a version > 1.0.1 you have to build and install the gem manually.
+NOTE: Until hologram release a version > 1.1.0 you have to build and install the gem manually.
 
 ```
 $ git clone git@github.com:trulia/hologram.git
 $ cd hologram
 $ gem build hologram.gemspec
-$ gem install hologram-1.0.1.gem // 1.0.1 but actually the head of master
+$ gem install hologram-1.1.0.gem // 1.1.0 but actually the head of master
 ```
 
-Install Hologram from the Gemfile (for version > 1.0.1):
+Install Hologram from the Gemfile (for version > 1.1.0):
 
 ```
 $ bundle
@@ -70,13 +70,38 @@ $ gulp
 
 [Browser-sync](http://www.browsersync.io) is automatically set up on `localhost` and will allow you to make changes and see them in real time.
 
+## Installation Windows
+
+[Setup your server](http://webmasterjuice.com/how-to-activate-built-in-web-server-windows)
+
+[Install Github for Windows](https://windows.github.com)
+
+You can then use the Git Shell from Github to setup the rest.
+
+[Install Ruby](http://rubyinstaller.org)
+
+[Install Node.js](http://nodejs.org)
+
+Install bower and gulp globally.
+
+```
+$ npm install gulp bower --global
+```
+
+You should be set and ready to go with the standard step-by-step installation.
+
+
+## Grid System
+
+The grid system works exactly the same way as [Bootstrap](http://getbootstrap.com/css/#grid), no changes were made. Please refer to their documentation for more details.
+
 ## Styleguide Theme
 
 The stylguide theme is in `styleguide-theme`. It's a theme for Trulia's [Hologram](https://github.com/trulia/hologram).
 It was based on [Cortana](https://github.com/Yago31/Cortana).
 
-## How it's include?
-The `hologram_config.yml` have a referance  to it:
+## How is it included?
+The `hologram_config.yml` has a reference  to the styleguide theme:
 
 ```
 source: ./path/to/your/source
@@ -86,7 +111,7 @@ documentation_assets: ./path/to/theme
 
 ## Build the Styleguide Theme
 
-The theme as his own gulp file (for the moment). So you have to do the following command:
+The theme has his own gulpfile (for the moment). So you have to do the following command to build the assets to then generate the styleguide with `hologram`:
 
 ```
 $ cd styleguide-theme
