@@ -9776,7 +9776,8 @@ On smartphones, the treecrumb navigation is omitted.
   position: relative;
   z-index: 1001; }
 .treecrumb .dropdown-toggle {
-  padding: 5px 10px;
+  padding: 0 10px;
+  line-height: 24px;
   padding-left: 30px;
   font-size: 13px;
   background: transparent;
@@ -9793,15 +9794,15 @@ On smartphones, the treecrumb navigation is omitted.
     content: '';
     display: block;
     position: absolute;
-    top: -1px;
-    right: -2.65em;
+    top: 0;
+    right: -2.15em;
     width: 0;
     height: 0;
     border-color: transparent transparent transparent #cccccc;
     border-style: solid;
-    border-width: 1.35em; }
+    border-width: 1.05em; }
   .treecrumb .dropdown-toggle:after {
-    right: -2.55em;
+    right: -2.05em;
     border-color: transparent transparent transparent white; }
 .treecrumb .dropdown:first-child .dropdown-toggle {
   border-left-color: #cccccc;
