@@ -49,7 +49,7 @@ $ bower install
 NOTE: Until hologram release a version > 1.1.0 you have to build and install the gem manually.
 
 ```
-$ git clone git@github.com:trulia/hologram.git
+$ git clone https://github.com/trulia/hologram.git
 $ cd hologram
 $ gem build hologram.gemspec
 $ gem install hologram-1.1.0.gem // 1.1.0 but actually the head of master
@@ -59,26 +59,22 @@ Install Hologram from the Gemfile (for version > 1.1.0):
 
 ```
 $ bundle
+$ cd ..
 ```
 
-Run gulp
+Build project using Gulp:
 
 ```
 $ gulp
 ```
 
-
 [Browser-sync](http://www.browsersync.io) is automatically set up on `localhost` and will allow you to make changes and see them in real time.
 
 ## Installation Windows
 
-[Setup your server](http://webmasterjuice.com/how-to-activate-built-in-web-server-windows)
+[Install Ruby & DevKit](http://rubyinstaller.org)
 
-[Install Github for Windows](https://windows.github.com)
-
-You can then use the Git Shell from Github to setup the rest.
-
-[Install Ruby](http://rubyinstaller.org)
+[Configure DevKit](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 
 [Install Node.js](http://nodejs.org)
 
@@ -86,6 +82,12 @@ Install bower and gulp globally.
 
 ```
 $ npm install gulp bower --global
+```
+
+Install SASS & Bundle:
+
+```
+$ gem install sass bundle
 ```
 
 You should be set and ready to go with the standard step-by-step installation.
