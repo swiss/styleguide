@@ -6503,6 +6503,7 @@ label {
   padding-bottom: 1.3em;
   border-bottom: 2px solid #cccccc; }
   .form-inline label, .navbar-form label {
+    padding: 3px 0;
     margin-right: 1.6em; }
   .form-inline input[type="number"], .navbar-form input[type="number"] {
     width: 50px; }
