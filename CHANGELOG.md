@@ -11,6 +11,9 @@ This changelog references the relevant changes and bug fixes.
  * #52 fix side navigation
  * #52 fix breadcrumb
  * #52 #37 fix nav-lang and nav-services
+ * #52 #49 revert fonts to original files
+ * #35 update README with feedback for windows 7 installation
+ * #55 add more list-items to news-feed
 
 * 2.0.0 (2014-05-20)
  * #50 Main navigation working on IE9
