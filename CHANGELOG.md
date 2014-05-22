@@ -11,6 +11,7 @@ This changelog references the relevant changes and bug fixes.
  * #35 update README with feedback for windows 7 installation
  * #55 add more list-items to news-feed
  * #52 fix focus element [**! Markup changes**](http://adminch.antistatique.net/content_modules_-_teaser.html#a-focus)
+ * #52 fix footer sitemap links [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_footer.html#a-site-map)
 
 
 * 2.0.1 (2014-05-21)
