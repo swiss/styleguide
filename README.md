@@ -40,31 +40,16 @@ This is not needed to use the styleguide, only if you want to modify it to fix s
 
 > We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [Hologram](https://github.com/trulia/hologram).
 
-Make sure you have [Node.js](http://nodejs.org) installed.
+Make sure you have [Node.js](http://nodejs.org) and [Ruby](https://www.ruby-lang.org) installed.
 
 
 Install all the dependencies you need:
 
 ```
-$ npm install -g gulp
+$ gem install sass hologram
+$ npm install -g gulp bower
 $ npm install
 $ bower install
-```
-
-NOTE: Until hologram release a version > 1.1.0 you have to build and install the gem manually.
-
-```
-$ git clone https://github.com/trulia/hologram.git
-$ cd hologram
-$ gem build hologram.gemspec
-$ gem install hologram-1.1.0.gem // 1.1.0 but actually the head of master
-```
-
-Install Hologram from the Gemfile (for version > 1.1.0):
-
-```
-$ bundle
-$ cd ..
 ```
 
 Build project using Gulp:
@@ -75,8 +60,9 @@ Build project using Gulp:
 
 This is the not the recommended OS. If you have a choice, use OSX.
 
-Warning: This was tested on the [Windows PowerShell](﻿http://en.wikipedia.org/wiki/Windows_PowerShell) but should work on any shell that support UTF8.
+Warning: This was tested on the [Windows PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell) but should work on any shell that support UTF8.
 
+#### Install Ruby
 Downlad and Install [Ruby](http://rubyinstaller.org)
 
 Install DevKit. Follow [those instructions](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
@@ -85,24 +71,16 @@ Install DevKit. Follow [those instructions](https://github.com/oneclick/rubyinst
 
 [Configure DevKit](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 
+Install SASS & Hologram
+
+```
+gem install sass hologram
+```
+
+#### Install Node.JS
 Download and install [Node.js](http://nodejs.org)
 
 Install [Git for Windows](http://msysgit.github.io/) (recommended) or alternatively [Github for Windows](https://windows.github.com)`
-
-Install SASS & Bundle
-
-```
-gem install sass bundle
-```
-
-NOTE: Until hologram release a version > 1.1.0 you have to build and install the gem manually.
-
-```
-$ git clone https://github.com/trulia/hologram.git
-$ cd hologram
-$ gem build hologram.gemspec
-$ gem install hologram-1.1.0.gem // 1.1.0 but actually the head of master
-```
 
 
 Go in the project directory and install the dependencies:
@@ -113,13 +91,7 @@ C:\\projectPath> npm install
 C:\\projectPath> node_module\.bin\bower install
 ```
 
-Install SASS & Bundle:
-
-```
-$ gem install sass bundle
-```
-
-Finnaly you will have to rebuild some gems
+Finally you will have to rebuild some gems
 
 ````
 ﻿gem uninstal yajl-ruby
@@ -154,10 +126,11 @@ documentation_assets: ./path/to/theme
 
 ## Build the Styleguide Theme
 
-The theme has his own gulpfile (for the moment). So you have to do the following command to build the assets to then generate the styleguide with `hologram`:
+If you want to contribute on the styleguide **theme** execute the following command to build the assets to then generate the styleguide with `hologram`:
 
 ```
 $ cd styleguide-theme
+# do some work on the theme...
 $ gulp
 ```
 
@@ -175,7 +148,9 @@ The theme is their for the presentation. It's not part of the styleguide. To avo
 
 ### When I try to build with gulp I have the following error `Syntax error: Invalid US-ASCII character "\xC3"`
 
-This bug an Hologram bug that should be fix in the next release. The workaround is to force UTF8:
+This is bug an Hologram and is fixed in lastest version. Upgrade with `gem install hologram`.
+
+The workaround is to force UTF8:
 
 ```
 $ LC_ALL="en_US.UTF-8" gulp
