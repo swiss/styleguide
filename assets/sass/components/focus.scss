@@ -24,6 +24,13 @@ The focus teaser contains two to four articles selected by the editorial team an
 
 On tablets and smartphones, the tab bar is replaced by a series of dots.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - added `.nopadding-left` class to `.col-sm-5` element
+</div>
+
 ```html_example
  <div class="col-sm-10 col-sm-offset-1">
 
@@ -32,7 +39,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade active in" id="home">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5">
+        <div class="col-sm-5 nopadding-left">
           <h4>Lorem ispum title 1</h4>
           <p>
             1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -45,7 +52,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade" id="profile">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5">
+        <div class="col-sm-5 nopadding-left">
           <h4>Lorem ispum title 2</h4>
           <p>
             2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -58,7 +65,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade" id="messages">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5">
+        <div class="col-sm-5 nopadding-left">
           <h4>Lorem ispum title 3</h4>
           <p>
             3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -71,7 +78,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade" id="settings">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5">
+        <div class="col-sm-5 nopadding-left">
           <h4>Lorem ispum title 4</h4>
           <p>
             4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -97,7 +104,9 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
 
 .nav-tabs.nav-tabs-focus {
   position: relative;
-  border: 1px solid $silver;
+  border-top: 1px solid $silver;
+  border-right: 1px solid $silver;
+  border-left: 1px solid $silver;
   margin-top: 0;
 }
 
@@ -107,34 +116,46 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   clear: both;
 }
 
+.nav-tabs.nav-justified.nav-tabs-focus>.active>a,
+.nav-tabs.nav-justified.nav-tabs-focus>.active>a:hover {
+  height: 70px;
+  border-bottom: 3px solid $venetian-red;
+}
+
 .nav-tabs.nav-tabs-focus li {
-  height: 100%;
-  background: $smoke;
   border-left: 1px solid $silver;
+  border-bottom: none !important;
   position: relative;
   &:first-child {border-left: none;}
   a {
-    border: none !important;
+    background: $smoke;
+    height: 69px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid $silver;
     padding-bottom: 10px;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.1em;
     text-align: center;
     border-radius: 0;
-    background: transparent !important;
+    color: $night-rider;
+  }
+  a:hover  {
+    height: 69px;
+    // padding-bottom: 9px !important;
+    border-bottom: 3px solid $venetian-red;
+    color: $black;
+  }
+  &.active a, &.active a:hover {
+    border-right: none;
+    border-left: none;
+    padding-bottom: 10px !important;
+    border-bottom: 3px solid $venetian-red;
+    background: $gainsboro;
+    color: $black;
   }
   &:hover a {
-    border-right-color: $silver;
-    padding-bottom: 8px !important;
-    color: $coal;
-  }
-  &.active a, &.active:hover a {
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    padding-bottom: 8px !important;
-  }
-  &.active, &.active:hover, &:hover {
-    background: $gainsboro;
-    border-bottom: 3px solid $venetian-red;
+    padding-top: 10px !important; // override nav-tabs behaviour
   }
 }
 
@@ -142,4 +163,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   padding: 0;
   border-bottom: none;
   border-top: 1px solid $silver;
+  h2 {
+    font-family: $font-family-sans-serif-bold;
+  }
 }
