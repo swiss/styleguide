@@ -56,6 +56,8 @@ Only on the home page are all the tabs closed. If the user navigates in the area
 
 A flyout can contain a teaser, which consists of a linked heading, an image, and a descriptive text (max. 70 characters including spaces).
 
+Add `<div class="overlay"></div>` at the end of the `body` tag to display the gray overlay.
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">

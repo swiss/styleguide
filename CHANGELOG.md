@@ -13,6 +13,7 @@ This changelog references the relevant changes and bug fixes.
  * #52 fix footer sitemap links [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_footer.html#a-site-map)
  * #44 fix search field label vertical alignment
  * #45 fix search field and themes select position
+ * #54 fix overlay not showing in example pages
 
 
 * 2.0.1 (2014-05-21)
