@@ -15,6 +15,7 @@ This changelog references the relevant changes and bug fixes.
  * #45 fix search field and themes select position
  * #54 fix overlay not showing in example pages
  * #48 fix services navigation responsive placement
+ * #48 update header to make it responsive until xs size
 
 
 * 2.0.1 (2014-05-21)

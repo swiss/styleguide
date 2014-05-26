@@ -60,7 +60,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
   <header>
 
     <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
-    <nav class="navbar yamm yamm--select pull-right" role="navigation">
+    <nav class="navbar yamm yamm--select" role="navigation">
       <ul>
         <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
         <li class="dropdown pull-right">
@@ -175,6 +175,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
   width: 100%;
   margin-bottom: 0;
   margin-top: -20px;
+  float: right;
   @media only screen and (max-width: $screen-sm-max) {
     margin-top: -15px;
   }

@@ -5795,7 +5795,8 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 
 */
 .brand {
-  display: inline-block; }
+  display: inline-block;
+  float: left; }
   .brand img {
     max-width: 268px;
     margin: 0;
@@ -10791,13 +10792,14 @@ The topics A-Z section is positioned on the right-hand side of the header. When 
 
 On smartphones, the A-Z navigation is accessed via an icon together with the search function.
 
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
   <header>
 
     <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
-    <nav class="navbar yamm yamm--select pull-right" role="navigation">
+    <nav class="navbar yamm yamm--select" role="navigation">
       <ul>
         <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
         <li class="dropdown pull-right">
@@ -10910,7 +10912,8 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
   height: 0px;
   width: 100%;
   margin-bottom: 0;
-  margin-top: -20px; }
+  margin-top: -20px;
+  float: right; }
   @media only screen and (max-width: 991px) {
     .yamm--select {
       margin-top: -15px; } }
