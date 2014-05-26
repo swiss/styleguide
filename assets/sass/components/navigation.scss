@@ -500,7 +500,7 @@ On smartphones, the treecrumb navigation is omitted.
       content: '';
       display: block;
       position: absolute;
-      top: 0;
+      top: -1px;
       right: -2.15em;
       width: 0;
       height: 0;

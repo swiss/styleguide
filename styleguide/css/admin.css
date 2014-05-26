@@ -6548,7 +6548,7 @@ The Confederation logo with the coat of arms and the four-language wordmark as w
 ```
 */
 header {
-  background: whitesmoke;
+  background: white;
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(7%, white), color-stop(100%, white));
   /* Chrome,Safari4+ */
@@ -6558,8 +6558,6 @@ header {
   /* IE10+ */
   background: linear-gradient(to bottom, whitesmoke 0%, white 7%, white 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F5F5F5', endColorstr='#ffffff',GradientType=0 );
-  /* IE6-9 */
   padding: 10px 15px;
   position: relative; }
   header:after {
@@ -9848,7 +9846,7 @@ On smartphones, the treecrumb navigation is omitted.
     content: '';
     display: block;
     position: absolute;
-    top: 0;
+    top: -1px;
     right: -2.15em;
     width: 0;
     height: 0;
