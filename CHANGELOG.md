@@ -14,6 +14,7 @@ This changelog references the relevant changes and bug fixes.
  * #44 fix search field label vertical alignment
  * #45 fix search field and themes select position
  * #54 fix overlay not showing in example pages
+ * #48 fix services navigation responsive placement
 
 
 * 2.0.1 (2014-05-21)

@@ -304,6 +304,9 @@ On mobile devices the links in the service navigation are moved to the footer.
 .nav-service {
   display: inline-block;
   float: right;
+  @media only screen and (max-width: $screen-sm-max) {
+    float: left;
+  }
   a {
     font-size: 0.85em;
     color: $coal;
@@ -332,6 +335,13 @@ Other languages are optional and are dependent on the requirements of the indivi
 If no content in one of the languages is available on only some of the pages, the language link is shown as `disabled. In the navigation the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
 
 On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
+
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></div>`
+</div>
 
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
@@ -362,10 +372,20 @@ On smartphones the language selection is always included in a drawer section abo
 ```
 */
 
+.nav-services {
+  @media only screen and (max-width: $screen-sm-max) {
+    display: block;
+    clear: both;
+    margin-bottom: 25px;
+  }
+}
+
 .nav-lang {
   display: inline-block;
   float: right;
-  border-left: 1px solid $gainsboro;
+  @media only screen and (min-width: $screen-md-min) {
+    border-left: 1px solid $gainsboro;
+  }
   margin-left: 15px;
   padding-left: 15px;
   li {
