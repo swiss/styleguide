@@ -5797,11 +5797,14 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 .brand {
   display: inline-block; }
   .brand img {
-    max-width: 250px;
+    max-width: 268px;
     margin: 0;
     padding-right: 2em;
     border-right: 1px solid #e5e5e5;
     float: left; }
+    @media only screen and (max-width: 991px) {
+      .brand img {
+        max-height: 50px; } }
   .brand h1 {
     color: black;
     display: inline;
@@ -5812,6 +5815,9 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
     margin: 0;
     padding-left: 2.5em;
     float: left; }
+    @media only screen and (max-width: 1199px) {
+      .brand h1 {
+        font-size: 0.85em; } }
   .brand:hover {
     text-decoration: none; }
   .brand:after {
@@ -6558,7 +6564,7 @@ header {
   /* IE10+ */
   background: linear-gradient(to bottom, whitesmoke 0%, white 7%, white 100%);
   /* W3C */
-  padding: 10px 15px;
+  padding: 10px 15px 30px 15px;
   position: relative; }
   header:after {
     content: ".";
@@ -9722,11 +9728,14 @@ On smartphones the language selection is always included in a drawer section abo
 </div>
 ```
 */
-@media only screen and (max-width: 991px) {
-  .nav-services {
-    display: block;
-    clear: both;
-    margin-bottom: 25px; } }
+.nav-services {
+  font-size: 0.85em;
+  padding-top: 5px; }
+  @media only screen and (max-width: 991px) {
+    .nav-services {
+      display: block;
+      clear: both;
+      margin-bottom: 25px; } }
 
 .nav-lang {
   display: inline-block;
@@ -9856,6 +9865,8 @@ On smartphones, the treecrumb navigation is omitted.
   .treecrumb .dropdown-toggle:after {
     right: -2.05em;
     border-color: transparent transparent transparent white; }
+  .treecrumb .dropdown-toggle span {
+    margin-right: 1em; }
 .treecrumb .dropdown:first-child .dropdown-toggle {
   border-left-color: #cccccc;
   padding-left: 10px; }
@@ -9865,7 +9876,9 @@ On smartphones, the treecrumb navigation is omitted.
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   border-radius: 0;
-  top: 97%; }
+  top: 97%;
+  padding-left: 1em;
+  padding-right: 1em; }
   .treecrumb .dropdown-menu li {
     display: inline-block; }
   .treecrumb .dropdown-menu a {
@@ -10784,7 +10797,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
   <header>
 
     <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
-    <nav class="navbar yamm yamm--select" role="navigation">
+    <nav class="navbar yamm yamm--select pull-right" role="navigation">
       <ul>
         <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
         <li class="dropdown pull-right">
@@ -10894,7 +10907,13 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 
 */
 .yamm--select {
-  height: 0px; }
+  height: 0px;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: -20px; }
+  @media only screen and (max-width: 991px) {
+    .yamm--select {
+      margin-top: -15px; } }
   .yamm--select.pull-right .dropdown-menu {
     right: 0; }
   .yamm--select .dropdown-toggle {
@@ -10912,9 +10931,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     box-sizing: border-box;
     -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
-    background: white;
-    position: relative;
-    top: -20px; }
+    background: white; }
     .yamm--select .dropdown-toggle:hover, .yamm--select .dropdown-toggle:active {
       text-decoration: none;
       color: #dc0018; }
@@ -10927,13 +10944,15 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
       padding-left: 10px; }
   .yamm--select .dropdown.open .dropdown-toggle {
     border-color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     -webkit-box-shadow: 0 0 0 0 transparent;
     box-shadow: 0 0 0 0 transparent;
     color: #dc0018;
     position: relative;
     z-index: 1000; }
   .yamm--select .dropdown-menu {
-    margin-top: -4px; }
+    top: 22px; }
 
 /*doc
 ---

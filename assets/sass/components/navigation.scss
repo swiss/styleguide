@@ -373,6 +373,8 @@ On smartphones the language selection is always included in a drawer section abo
 */
 
 .nav-services {
+  font-size: 0.85em;
+  padding-top: 5px;
   @media only screen and (max-width: $screen-sm-max) {
     display: block;
     clear: both;
@@ -512,6 +514,9 @@ On smartphones, the treecrumb navigation is omitted.
       right: -2.05em;
       border-color: transparent transparent transparent $white;
     }
+    span {
+      margin-right: 1em;
+    }
   }
   .dropdown:first-child .dropdown-toggle {
     border-left-color: $silver;
@@ -524,6 +529,8 @@ On smartphones, the treecrumb navigation is omitted.
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     border-radius: 0;
     top: 97%;
+    padding-left: 1em;
+    padding-right: 1em;
     li {display: inline-block;}
     a {
       padding: 5px 15px;

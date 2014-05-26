@@ -60,7 +60,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
   <header>
 
     <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
-    <nav class="navbar yamm yamm--select" role="navigation">
+    <nav class="navbar yamm yamm--select pull-right" role="navigation">
       <ul>
         <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
         <li class="dropdown pull-right">
@@ -172,6 +172,12 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 
 .yamm--select {
   height: 0px;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: -20px;
+  @media only screen and (max-width: $screen-sm-max) {
+    margin-top: -15px;
+  }
   &.pull-right .dropdown-menu {right: 0;}
   .dropdown-toggle {
     color: $coal;
@@ -186,8 +192,6 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     box-sizing: border-box;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     background: $white;
-    position: relative;
-    top: -20px;
     &:hover, &:active {
       text-decoration: none;
       color: $venetian-red;
@@ -203,12 +207,16 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
   }
   .dropdown.open .dropdown-toggle {
     border-color: $white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     color: $venetian-red;
     position: relative;
     z-index: 1000;
   }
-  .dropdown-menu {margin-top: -4px;}
+  .dropdown-menu {
+    top: 22px;
+  }
 }
 
 
