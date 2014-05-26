@@ -195,13 +195,16 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     > a {
       height: 70px;
       @include gradient-menu;
+      max-width: 140px;
       color: $coal;
-      font-size: 0.9em;
+      font-size: 0.8em;
+      line-height: 1.2;
+      padding: 10px;
       &:after {
         content: ',';
         font-family: $admin-icons;
         position: absolute;
-        bottom: 0;
+        bottom: 4px;
         left: 0;
         width: 100%;
         text-align: center;

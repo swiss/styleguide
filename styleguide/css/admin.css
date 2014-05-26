@@ -9568,13 +9568,16 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
       background: -webkit-linear-gradient(top, #e8e8e8 0%, #f7f7f7 61%, #f7f7f7 89%, whitesmoke 91%, #ececec 95%, #d7d7d7 100%);
       background: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), color-stop(61%, #f7f7f7), color-stop(89%, #f7f7f7), color-stop(91%, whitesmoke), color-stop(95%, #ececec), to(#d7d7d7));
       background: linear-gradient(top, #e8e8e8 0%, #f7f7f7 61%, #f7f7f7 89%, whitesmoke 91%, #ececec 95%, #d7d7d7 100%);
+      max-width: 140px;
       color: #454545;
-      font-size: 0.9em; }
+      font-size: 0.8em;
+      line-height: 1.2;
+      padding: 10px; }
       .nav-main.yamm .nav > li > a:after {
         content: ',';
         font-family: "Admin Icons";
         position: absolute;
-        bottom: 0;
+        bottom: 4px;
         left: 0;
         width: 100%;
         text-align: center;
@@ -10791,7 +10794,6 @@ The topics A-Z search function is an alternative means of accessing the contents
 The topics A-Z section is positioned on the right-hand side of the header. When it is clicked on, a flyout opens which contains an A-Z tab navigation. The topics can also be grouped in other tabs, e.g. according to organizational unit.
 
 On smartphones, the A-Z navigation is accessed via an icon together with the search function.
-
 
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
