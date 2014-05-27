@@ -9,10 +9,14 @@ This changelog references the relevant changes and bug fixes.
  * #52 #37 fix nav-lang and nav-services
  * #52 #49 revert fonts to original files
  * #55 add more list-items to news-feed
- * #52 fix focus element [**! Markup changes**](http://adminch.antistatique.net/content_modules_-_teaser.html#a-focus)
+ * #52 fix focus element
  * #52 fix footer sitemap links [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_footer.html#a-site-map)
  * #44 fix search field label vertical alignment
  * #45 fix search field and themes select position
+ * #54 fix overlay not showing in example pages
+ * #48 fix services navigation responsive placement
+ * #48 update header to make it responsive until xs size
+ * fix global navigation to display more elements without problems
 
 
 * 2.0.1 (2014-05-21)

@@ -5795,13 +5795,17 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 
 */
 .brand {
-  display: inline-block; }
+  display: inline-block;
+  float: left; }
   .brand img {
-    max-width: 250px;
+    max-width: 268px;
     margin: 0;
     padding-right: 2em;
     border-right: 1px solid #e5e5e5;
     float: left; }
+    @media only screen and (max-width: 991px) {
+      .brand img {
+        max-height: 50px; } }
   .brand h1 {
     color: black;
     display: inline;
@@ -5812,6 +5816,9 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
     margin: 0;
     padding-left: 2.5em;
     float: left; }
+    @media only screen and (max-width: 1199px) {
+      .brand h1 {
+        font-size: 0.85em; } }
   .brand:hover {
     text-decoration: none; }
   .brand:after {
@@ -6548,7 +6555,7 @@ The Confederation logo with the coat of arms and the four-language wordmark as w
 ```
 */
 header {
-  background: whitesmoke;
+  background: white;
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(7%, white), color-stop(100%, white));
   /* Chrome,Safari4+ */
@@ -6558,9 +6565,7 @@ header {
   /* IE10+ */
   background: linear-gradient(to bottom, whitesmoke 0%, white 7%, white 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F5F5F5', endColorstr='#ffffff',GradientType=0 );
-  /* IE6-9 */
-  padding: 10px 20px;
+  padding: 10px 15px 30px 15px;
   position: relative; }
   header:after {
     content: ".";
@@ -9423,6 +9428,8 @@ Only on the home page are all the tabs closed. If the user navigates in the area
 
 A flyout can contain a teaser, which consists of a linked heading, an image, and a descriptive text (max. 70 characters including spaces).
 
+Add `<div class="overlay"></div>` at the end of the `body` tag to display the gray overlay.
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
@@ -9537,7 +9544,7 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
 
 </div>
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 ```
 
 */
@@ -9561,13 +9568,16 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
       background: -webkit-linear-gradient(top, #e8e8e8 0%, #f7f7f7 61%, #f7f7f7 89%, whitesmoke 91%, #ececec 95%, #d7d7d7 100%);
       background: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), color-stop(61%, #f7f7f7), color-stop(89%, #f7f7f7), color-stop(91%, whitesmoke), color-stop(95%, #ececec), to(#d7d7d7));
       background: linear-gradient(top, #e8e8e8 0%, #f7f7f7 61%, #f7f7f7 89%, whitesmoke 91%, #ececec 95%, #d7d7d7 100%);
+      max-width: 140px;
       color: #454545;
-      font-size: 0.9em; }
+      font-size: 0.8em;
+      line-height: 1.2;
+      padding: 10px; }
       .nav-main.yamm .nav > li > a:after {
         content: ',';
         font-family: "Admin Icons";
         position: absolute;
-        bottom: 0;
+        bottom: 4px;
         left: 0;
         width: 100%;
         text-align: center;
@@ -9656,6 +9666,9 @@ On mobile devices the links in the service navigation are moved to the footer.
 .nav-service {
   display: inline-block;
   float: right; }
+  @media only screen and (max-width: 991px) {
+    .nav-service {
+      float: left; } }
   .nav-service a {
     font-size: 0.85em;
     color: #454545; }
@@ -9683,6 +9696,13 @@ Other languages are optional and are dependent on the requirements of the indivi
 If no content in one of the languages is available on only some of the pages, the language link is shown as `disabled. In the navigation the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
 
 On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
+
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></div>`
+</div>
 
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
@@ -9712,12 +9732,23 @@ On smartphones the language selection is always included in a drawer section abo
 </div>
 ```
 */
+.nav-services {
+  font-size: 0.85em;
+  padding-top: 5px; }
+  @media only screen and (max-width: 991px) {
+    .nav-services {
+      display: block;
+      clear: both;
+      margin-bottom: 25px; } }
+
 .nav-lang {
   display: inline-block;
   float: right;
-  border-left: 1px solid #e5e5e5;
   margin-left: 15px;
   padding-left: 15px; }
+  @media only screen and (min-width: 992px) {
+    .nav-lang {
+      border-left: 1px solid #e5e5e5; } }
   .nav-lang li {
     padding: 0;
     margin: 0; }
@@ -9828,7 +9859,7 @@ On smartphones, the treecrumb navigation is omitted.
     content: '';
     display: block;
     position: absolute;
-    top: 0;
+    top: -1px;
     right: -2.15em;
     width: 0;
     height: 0;
@@ -9838,6 +9869,8 @@ On smartphones, the treecrumb navigation is omitted.
   .treecrumb .dropdown-toggle:after {
     right: -2.05em;
     border-color: transparent transparent transparent white; }
+  .treecrumb .dropdown-toggle span {
+    margin-right: 1em; }
 .treecrumb .dropdown:first-child .dropdown-toggle {
   border-left-color: #cccccc;
   padding-left: 10px; }
@@ -9847,7 +9880,9 @@ On smartphones, the treecrumb navigation is omitted.
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   border-radius: 0;
-  top: 97%; }
+  top: 97%;
+  padding-left: 1em;
+  padding-right: 1em; }
   .treecrumb .dropdown-menu li {
     display: inline-block; }
   .treecrumb .dropdown-menu a {
@@ -10876,7 +10911,14 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 
 */
 .yamm--select {
-  height: 0px; }
+  height: 0px;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: -20px;
+  float: right; }
+  @media only screen and (max-width: 991px) {
+    .yamm--select {
+      margin-top: -15px; } }
   .yamm--select.pull-right .dropdown-menu {
     right: 0; }
   .yamm--select .dropdown-toggle {
@@ -10894,9 +10936,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     box-sizing: border-box;
     -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
-    background: white;
-    position: relative;
-    top: -20px; }
+    background: white; }
     .yamm--select .dropdown-toggle:hover, .yamm--select .dropdown-toggle:active {
       text-decoration: none;
       color: #dc0018; }
@@ -10909,13 +10949,15 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
       padding-left: 10px; }
   .yamm--select .dropdown.open .dropdown-toggle {
     border-color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     -webkit-box-shadow: 0 0 0 0 transparent;
     box-shadow: 0 0 0 0 transparent;
     color: #dc0018;
     position: relative;
     z-index: 1000; }
   .yamm--select .dropdown-menu {
-    margin-top: -4px; }
+    top: 22px; }
 
 /*doc
 ---
@@ -11317,13 +11359,6 @@ The focus teaser contains two to four articles selected by the editorial team an
 
 On tablets and smartphones, the tab bar is replaced by a series of dots.
 
-<br>
-<div class="alert alert-warning">
-  **2.1.0:**
-
-  - added `.nopadding-left` class to `.col-sm-5` element
-</div>
-
 ```html_example
  <div class="col-sm-10 col-sm-offset-1">
 
@@ -11332,7 +11367,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade active in" id="home">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5 nopadding-left">
+        <div class="col-sm-5">
           <h4>Lorem ispum title 1</h4>
           <p>
             1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -11345,7 +11380,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade" id="profile">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5 nopadding-left">
+        <div class="col-sm-5">
           <h4>Lorem ispum title 2</h4>
           <p>
             2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -11358,7 +11393,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade" id="messages">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5 nopadding-left">
+        <div class="col-sm-5">
           <h4>Lorem ispum title 3</h4>
           <p>
             3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -11371,7 +11406,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade" id="settings">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5 nopadding-left">
+        <div class="col-sm-5">
           <h4>Lorem ispum title 4</h4>
           <p>
             4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -11449,6 +11484,8 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   border-top: 1px solid #cccccc; }
   .tab-content.tab-focus h2 {
     font-family: "Frutiger Neue Bold", Arial, sans-serif; }
+  .tab-content.tab-focus .col-sm-5 {
+    padding-left: 0 !important; }
 
 /* ==========================================================
  * carousel.scss
