@@ -56,6 +56,8 @@ Only on the home page are all the tabs closed. If the user navigates in the area
 
 A flyout can contain a teaser, which consists of a linked heading, an image, and a descriptive text (max. 70 characters including spaces).
 
+Add `<div class="overlay"></div>` at the end of the `body` tag to display the gray overlay.
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
@@ -170,7 +172,7 @@ A flyout can contain a teaser, which consists of a linked heading, an image, and
 
 </div>
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 ```
 
 */
@@ -302,9 +304,13 @@ On mobile devices the links in the service navigation are moved to the footer.
 .nav-service {
   display: inline-block;
   float: right;
+  @media only screen and (max-width: $screen-sm-max) {
+    float: left;
+  }
   a {
     font-size: 0.85em;
     color: $coal;
+    &:hover {color: $venetian-red;}
   }
 }
 
@@ -329,6 +335,13 @@ Other languages are optional and are dependent on the requirements of the indivi
 If no content in one of the languages is available on only some of the pages, the language link is shown as `disabled. In the navigation the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
 
 On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
+
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></div>`
+</div>
 
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
@@ -359,16 +372,32 @@ On smartphones the language selection is always included in a drawer section abo
 ```
 */
 
+.nav-services {
+  font-size: 0.85em;
+  padding-top: 5px;
+  @media only screen and (max-width: $screen-sm-max) {
+    display: block;
+    clear: both;
+    margin-bottom: 25px;
+  }
+}
+
 .nav-lang {
   display: inline-block;
   float: right;
-  border-left: 1px solid $gainsboro;
+  @media only screen and (min-width: $screen-md-min) {
+    border-left: 1px solid $gainsboro;
+  }
   margin-left: 15px;
   padding-left: 15px;
-  li {padding: 0;}
+  li {
+    padding: 0;
+    margin: 0;
+  }
   a {
     color: $coal;
     padding: 4px;
+    &:hover {color: $venetian-red;}
     &.active {background: $gainsboro;}
     &.disabled {color: $silver;}
     &.disabled:hover {cursor: default;}
@@ -473,7 +502,7 @@ On smartphones, the treecrumb navigation is omitted.
       content: '';
       display: block;
       position: absolute;
-      top: 0;
+      top: -1px;
       right: -2.15em;
       width: 0;
       height: 0;
@@ -484,6 +513,9 @@ On smartphones, the treecrumb navigation is omitted.
     &:after {
       right: -2.05em;
       border-color: transparent transparent transparent $white;
+    }
+    span {
+      margin-right: 1em;
     }
   }
   .dropdown:first-child .dropdown-toggle {
@@ -497,6 +529,8 @@ On smartphones, the treecrumb navigation is omitted.
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     border-radius: 0;
     top: 97%;
+    padding-left: 1em;
+    padding-right: 1em;
     li {display: inline-block;}
     a {
       padding: 5px 15px;
@@ -589,7 +623,6 @@ Navigation below the content level on a smartphone with links to the home page, 
     padding: 0px 10px 5px 10px;
     font-size: 11px;
     border-bottom: 1px solid $silver;
-    margin-left: 20px;
     &:before {
       font-size: 20px;
       position: relative;
@@ -608,12 +641,12 @@ Navigation below the content level on a smartphone with links to the home page, 
   li:first-child a {
     color: $black;
     font-weight: bold;
+    border-color: $coal;
   }
   ul a, ul ul li:first-child a {
     color: $empress;
     border-bottom: 1px solid $silver;
     padding: 10px 0;
-    margin-left: 20px;
     position: relative;
     font-weight: normal;
     &:active {color: $black;}
@@ -623,9 +656,8 @@ Navigation below the content level on a smartphone with links to the home page, 
       position: absolute;
       top: 0;
       bottom: 0;
-      left: -20px;
+      left: -15px;
       width: 5px;
-      background: $white;
     }
   }
   li.active a:before, li a:hover:before {background: $venetian-red;}
