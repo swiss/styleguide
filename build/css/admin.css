@@ -6090,9 +6090,16 @@ Links are placed in the footer to make them equally accessible on all pages. The
 
 On smartphones, some of the functions from the header, e.g. service navigation or the full form of the Confederation logo, are moved to the footer.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - placed links in a `ul.list-unstyled` list
+</div>
+
 ```html_example
 <footer>
-  
+
   <div class="site-map">
 
     <!-- Use normal `container` instead of `container-fluid` -->
@@ -6100,77 +6107,93 @@ On smartphones, some of the functions from the header, e.g. service navigation o
       <div class="row">
         <div class="col-sm-3">
           <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <a href="#">Einreise in die Schweiz</a>
-          <a href="#">Visabestimmungen</a>
-          <a href="#">Aufenthalt in der Schweiz</a>
-          <a href="#">Geschäftstätigkeit in der Schweiz</a>
-          <a href="#">Ausländische Vertretungen in der Schweiz</a>
-          <a href="#">Informationen zur Schweiz</a>
+          <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
         </div>
         <div class="col-sm-3">
           <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <a href="#">Einreise in die Schweiz</a>
-          <a href="#">Visabestimmungen</a>
-          <a href="#">Aufenthalt in der Schweiz</a>
-          <a href="#">Geschäftstätigkeit in der Schweiz</a>
-          <a href="#">Ausländische Vertretungen in der Schweiz</a>
-          <a href="#">Informationen zur Schweiz</a>
+          <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
         </div>
         <div class="col-sm-3">
           <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <a href="#">Einreise in die Schweiz</a>
-          <a href="#">Visabestimmungen</a>
-          <a href="#">Aufenthalt in der Schweiz</a>
-          <a href="#">Geschäftstätigkeit in der Schweiz</a>
-          <a href="#">Ausländische Vertretungen in der Schweiz</a>
-          <a href="#">Informationen zur Schweiz</a>
+          <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
         </div>
         <div class="col-sm-3">
           <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <a href="#">Einreise in die Schweiz</a>
-          <a href="#">Visabestimmungen</a>
-          <a href="#">Aufenthalt in der Schweiz</a>
-          <a href="#">Geschäftstätigkeit in der Schweiz</a>
-          <a href="#">Ausländische Vertretungen in der Schweiz</a>
-          <a href="#">Informationen zur Schweiz</a>
+          <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-3">
           <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <a href="#">Einreise in die Schweiz</a>
-          <a href="#">Visabestimmungen</a>
-          <a href="#">Aufenthalt in der Schweiz</a>
-          <a href="#">Geschäftstätigkeit in der Schweiz</a>
-          <a href="#">Ausländische Vertretungen in der Schweiz</a>
-          <a href="#">Informationen zur Schweiz</a>
+          <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
         </div>
         <div class="col-sm-3">
           <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <a href="#">Einreise in die Schweiz</a>
-          <a href="#">Visabestimmungen</a>
-          <a href="#">Aufenthalt in der Schweiz</a>
-          <a href="#">Geschäftstätigkeit in der Schweiz</a>
-          <a href="#">Ausländische Vertretungen in der Schweiz</a>
-          <a href="#">Informationen zur Schweiz</a>
+          <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
         </div>
         <div class="col-sm-3">
           <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <a href="#">Einreise in die Schweiz</a>
-          <a href="#">Visabestimmungen</a>
-          <a href="#">Aufenthalt in der Schweiz</a>
-          <a href="#">Geschäftstätigkeit in der Schweiz</a>
-          <a href="#">Ausländische Vertretungen in der Schweiz</a>
-          <a href="#">Informationen zur Schweiz</a>
+          <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
         </div>
         <div class="col-sm-3">
           <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <a href="#">Einreise in die Schweiz</a>
-          <a href="#">Visabestimmungen</a>
-          <a href="#">Aufenthalt in der Schweiz</a>
-          <a href="#">Geschäftstätigkeit in der Schweiz</a>
-          <a href="#">Ausländische Vertretungen in der Schweiz</a>
-          <a href="#">Informationen zur Schweiz</a>
+          <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -6480,6 +6503,7 @@ label {
   padding-bottom: 1.3em;
   border-bottom: 2px solid #cccccc; }
   .form-inline label, .navbar-form label {
+    padding: 3px 0;
     margin-right: 1.6em; }
   .form-inline input[type="number"], .navbar-form input[type="number"] {
     width: 50px; }
@@ -8931,11 +8955,10 @@ On smartphones there is always a link at the end of the page to the home page an
 .breadcrumb {
   margin: 0; }
   .breadcrumb li {
-    margin: 0 10px; }
-    .breadcrumb li:first-child {
-      margin-left: 0; }
+    margin: 0 10px 0 0; }
+  .breadcrumb .icon, .breadcrumb a[data-toggle="collapse"] {
+    margin-right: 10px; }
   .breadcrumb a {
-    color: #006699;
     font-size: 0.85em;
     margin-top: 0; }
   .breadcrumb span.icon {
@@ -8943,7 +8966,7 @@ On smartphones there is always a link at the end of the page to the home page an
     top: 2px; }
   .breadcrumb li.active {
     color: #454545;
-    font-size: 0.85em; }
+    font-size: 0.935em; }
   .breadcrumb.breadcrumb--search {
     margin: 0.8em 0; }
 
@@ -9153,6 +9176,12 @@ It is vital that this element should only be used in cases of emergency – i.e.
 
 .scroll-y {
   overflow-y: scroll; }
+
+.nopadding-right {
+  padding-right: 0 !important; }
+
+.nopadding-left {
+  padding-left: 0 !important; }
 
 /* ==========================================================
  * list-group.scss
@@ -9630,6 +9659,8 @@ On mobile devices the links in the service navigation are moved to the footer.
   .nav-service a {
     font-size: 0.85em;
     color: #454545; }
+    .nav-service a:hover {
+      color: #dc0018; }
 
 /*doc
 ---
@@ -9688,10 +9719,13 @@ On smartphones the language selection is always included in a drawer section abo
   margin-left: 15px;
   padding-left: 15px; }
   .nav-lang li {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
   .nav-lang a {
     color: #454545;
     padding: 4px; }
+    .nav-lang a:hover {
+      color: #dc0018; }
     .nav-lang a.active {
       background: #e5e5e5; }
     .nav-lang a.disabled {
@@ -9897,8 +9931,7 @@ Navigation below the content level on a smartphone with links to the home page, 
   color: black;
   padding: 0px 10px 5px 10px;
   font-size: 11px;
-  border-bottom: 1px solid #cccccc;
-  margin-left: 20px; }
+  border-bottom: 1px solid #cccccc; }
   .nav-page-list .icon--less:before {
     font-size: 20px;
     position: relative;
@@ -9913,12 +9946,12 @@ Navigation below the content level on a smartphone with links to the home page, 
   color: black; }
 .nav-page-list li:first-child a {
   color: black;
-  font-weight: bold; }
+  font-weight: bold;
+  border-color: #454545; }
 .nav-page-list ul a, .nav-page-list ul ul li:first-child a {
   color: #757575;
   border-bottom: 1px solid #cccccc;
   padding: 10px 0;
-  margin-left: 20px;
   position: relative;
   font-weight: normal; }
   .nav-page-list ul a:active, .nav-page-list ul ul li:first-child a:active {
@@ -9929,9 +9962,8 @@ Navigation below the content level on a smartphone with links to the home page, 
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -20px;
-    width: 5px;
-    background: white; }
+    left: -15px;
+    width: 5px; }
 .nav-page-list li.active a:before, .nav-page-list li a:hover:before {
   background: #dc0018; }
 
@@ -10143,6 +10175,24 @@ In the news teaser, various snippets of news items are arranged chronologically.
           <p>
             23.05.2012<br>
             Medienmitteilung 2
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 3
+          </p>
+          <a href="#">
+            Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
+          </a>
+        </div>
+        <div class="list-group-item">
+          <p>
+            23.05.2012<br>
+            Medienmitteilung 3
           </p>
           <a href="#">
             Offizieller Besuch von Bundespräsident Didier Burkhalter in Italien
@@ -10846,7 +10896,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     background: white;
     position: relative;
-    top: -25px; }
+    top: -20px; }
     .yamm--select .dropdown-toggle:hover, .yamm--select .dropdown-toggle:active {
       text-decoration: none;
       color: #dc0018; }
@@ -11267,6 +11317,13 @@ The focus teaser contains two to four articles selected by the editorial team an
 
 On tablets and smartphones, the tab bar is replaced by a series of dots.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - added `.nopadding-left` class to `.col-sm-5` element
+</div>
+
 ```html_example
  <div class="col-sm-10 col-sm-offset-1">
 
@@ -11275,7 +11332,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade active in" id="home">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5">
+        <div class="col-sm-5 nopadding-left">
           <h4>Lorem ispum title 1</h4>
           <p>
             1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -11288,7 +11345,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade" id="profile">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5">
+        <div class="col-sm-5 nopadding-left">
           <h4>Lorem ispum title 2</h4>
           <p>
             2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -11301,7 +11358,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade" id="messages">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5">
+        <div class="col-sm-5 nopadding-left">
           <h4>Lorem ispum title 3</h4>
           <p>
             3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -11314,7 +11371,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     <div class="tab-pane fade" id="settings">
       <div class="row">
         <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
-        <div class="col-sm-5">
+        <div class="col-sm-5 nopadding-left">
           <h4>Lorem ispum title 4</h4>
           <p>
             4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Occultum facinus esse potuerit.
@@ -11339,7 +11396,9 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
 */
 .nav-tabs.nav-tabs-focus {
   position: relative;
-  border: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
   margin-top: 0; }
 
 .nav-tabs.nav-tabs-focus:after {
@@ -11347,37 +11406,49 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   display: block;
   clear: both; }
 
+.nav-tabs.nav-tabs-focus.nav-justified > .active > a,
+.nav-tabs.nav-tabs-focus.nav-justified > .active > a:hover {
+  height: 70px;
+  border-bottom: 3px solid #dc0018; }
+
 .nav-tabs.nav-tabs-focus li {
-  height: 100%;
-  background: whitesmoke;
   border-left: 1px solid #cccccc;
+  border-bottom: none !important;
   position: relative; }
   .nav-tabs.nav-tabs-focus li:first-child {
     border-left: none; }
   .nav-tabs.nav-tabs-focus li a {
-    border: none !important;
+    background: whitesmoke;
+    height: 69px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #cccccc;
     padding-bottom: 10px;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.1em;
     text-align: center;
     border-radius: 0;
-    background: transparent !important; }
-  .nav-tabs.nav-tabs-focus li:hover a {
-    border-right-color: #cccccc;
-    padding-bottom: 8px !important;
-    color: #454545; }
-  .nav-tabs.nav-tabs-focus li.active a, .nav-tabs.nav-tabs-focus li.active:hover a {
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    padding-bottom: 8px !important; }
-  .nav-tabs.nav-tabs-focus li.active, .nav-tabs.nav-tabs-focus li.active:hover, .nav-tabs.nav-tabs-focus li:hover {
+    color: #333333; }
+  .nav-tabs.nav-tabs-focus li a:hover {
+    height: 69px;
+    border-bottom: 3px solid #dc0018;
+    color: black; }
+  .nav-tabs.nav-tabs-focus li.active a, .nav-tabs.nav-tabs-focus li.active a:hover {
+    border-right: none;
+    border-left: none;
+    padding-bottom: 10px !important;
+    border-bottom: 3px solid #dc0018;
     background: #e5e5e5;
-    border-bottom: 3px solid #dc0018; }
+    color: black; }
+  .nav-tabs.nav-tabs-focus li:hover a {
+    padding-top: 10px !important; }
 
 .tab-content.tab-focus {
   padding: 0;
   border-bottom: none;
   border-top: 1px solid #cccccc; }
+  .tab-content.tab-focus h2 {
+    font-family: "Frutiger Neue Bold", Arial, sans-serif; }
 
 /* ==========================================================
  * carousel.scss

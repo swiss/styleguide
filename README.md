@@ -32,7 +32,11 @@ There are several ways to get started:
   - Install with bower `bower install Swiss-Admin-web-guidelines` (soon)
 
 
-## Installation (to contribute)
+## Installation (development tools)
+This is not needed to use the styleguide, only if you want to modify it to fix some bugs and contribute.
+
+
+### Installation on OSX/Unix
 
 > We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [Hologram](https://github.com/trulia/hologram).
 
@@ -42,6 +46,7 @@ Make sure you have [Node.js](http://nodejs.org) installed.
 Install all the dependencies you need:
 
 ```
+$ npm install -g gulp
 $ npm install
 $ bower install
 ```
@@ -49,7 +54,7 @@ $ bower install
 NOTE: Until hologram release a version > 1.1.0 you have to build and install the gem manually.
 
 ```
-$ git clone git@github.com:trulia/hologram.git
+$ git clone https://github.com/trulia/hologram.git
 $ cd hologram
 $ gem build hologram.gemspec
 $ gem install hologram-1.1.0.gem // 1.1.0 but actually the head of master
@@ -59,37 +64,75 @@ Install Hologram from the Gemfile (for version > 1.1.0):
 
 ```
 $ bundle
+$ cd ..
 ```
+
+Build project using Gulp:
+
+[Browser-sync](http://www.browsersync.io) is automatically set up on `localhost` and will allow you to make changes and see them in real time.
+
+### Installation on Windows
+
+This is the not the recommended OS. If you have a choice, use OSX.
+
+Warning: This was tested on the [Windows PowerShell](﻿http://en.wikipedia.org/wiki/Windows_PowerShell) but should work on any shell that support UTF8.
+
+Downlad and Install [Ruby](http://rubyinstaller.org)
+
+Install DevKit. Follow [those instructions](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
+
+[Install Ruby & DevKit](http://rubyinstaller.org)
+
+[Configure DevKit](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
+
+Download and install [Node.js](http://nodejs.org)
+
+Install [Git for Windows](http://msysgit.github.io/) (recommended) or alternatively [Github for Windows](https://windows.github.com)`
+
+Install SASS & Bundle
+
+```
+gem install sass bundle
+```
+
+NOTE: Until hologram release a version > 1.1.0 you have to build and install the gem manually.
+
+```
+$ git clone https://github.com/trulia/hologram.git
+$ cd hologram
+$ gem build hologram.gemspec
+$ gem install hologram-1.1.0.gem // 1.1.0 but actually the head of master
+```
+
+
+Go in the project directory and install the dependencies:
+
+```
+C:\\projectPath> npm install gulp -g
+C:\\projectPath> npm install
+C:\\projectPath> node_module\.bin\bower install
+```
+
+Install SASS & Bundle:
+
+```
+$ gem install sass bundle
+```
+
+Finnaly you will have to rebuild some gems
+
+````
+﻿gem uninstal yajl-ruby
+﻿gem install yajl-ruby --version=1.1.0 --platform=ruby
+````
+
+### Build the stylguide
 
 Run gulp
 
 ```
 $ gulp
 ```
-
-
-[Browser-sync](http://www.browsersync.io) is automatically set up on `localhost` and will allow you to make changes and see them in real time.
-
-## Installation Windows
-
-[Setup your server](http://webmasterjuice.com/how-to-activate-built-in-web-server-windows)
-
-[Install Github for Windows](https://windows.github.com)
-
-You can then use the Git Shell from Github to setup the rest.
-
-[Install Ruby](http://rubyinstaller.org)
-
-[Install Node.js](http://nodejs.org)
-
-Install bower and gulp globally.
-
-```
-$ npm install gulp bower --global
-```
-
-You should be set and ready to go with the standard step-by-step installation.
-
 
 ## Grid System
 

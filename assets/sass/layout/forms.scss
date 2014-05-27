@@ -180,6 +180,7 @@ label {
   padding-bottom: 1.3em;
   border-bottom: 2px solid $silver;
   label {
+    padding: 3px 0;
     margin-right: 1.6em;
   }
   input[type="number"] {
@@ -189,6 +190,5 @@ label {
     @media only screen and (min-width: $screen-sm-min) {
       width: 150px;
     }
-    // margin-right: 0.8em;
   }
 }
