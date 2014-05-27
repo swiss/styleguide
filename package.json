@@ -8,7 +8,7 @@
   },
   "author": "antistatique",
   "devDependencies": {
-    "gulp-minify-css": "~0.3.0",
+    "gulp-minify-css": "~0.3.4",
     "gulp-ruby-sass": "~0.3.1",
     "gulp-autoprefixer": "0.0.6",
     "gulp-notify": "~1.0.0-beta",
