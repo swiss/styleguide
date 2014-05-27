@@ -6565,8 +6565,10 @@ header {
   /* IE10+ */
   background: linear-gradient(to bottom, whitesmoke 0%, white 7%, white 100%);
   /* W3C */
-  padding: 10px 15px 30px 15px;
   position: relative; }
+  @media only screen and (min-width: 768px) {
+    header {
+      padding: 10px 15px 30px 15px; } }
   header:after {
     content: ".";
     display: block;
@@ -9188,6 +9190,13 @@ It is vital that this element should only be used in cases of emergency – i.e.
 .nopadding-left {
   padding-left: 0 !important; }
 
+.table-row {
+  display: table-row; }
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle; }
+
 /* ==========================================================
  * list-group.scss
  * List group widget
@@ -9388,22 +9397,6 @@ nav li {
 nav li:first-child {
   margin-left: 0; }
 
-.nav-main {
-  min-height: 70px;
-  background: #e4e4e4;
-                                                                                                                    /* Old browsers * navigation.scss
-background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
-  /* IE10+ */
-  background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), to(#bebebe));
-  /* IE10+ */
-  background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 );
-  /* IE6-9 */ }
-
 /*doc
 ---
 title: Global Navigation
@@ -9437,6 +9430,16 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
   </header>
   <nav class="nav-main yamm navbar" role="navigation">
+    <nav class="nav-page-list">
+      <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+      <ul>
+        <li><a href="#">Drinks</a></li>
+        <li><a href="#">Mineral water</a></li>
+        <li class="active"><a href="#">Wine</a></li>
+        <li><a href="#">Beer</a></li>
+        <li><a href="#">Spirits</a></li>
+      </ul>
+    </nav>
     <!-- The tab navigation -->
     <ul class="nav navbar-nav">
       <li class="dropdown yamm-fw">
@@ -9552,8 +9555,89 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   border-radius: 0;
   margin-bottom: 10px; }
 
+.nav-mobile {
+  position: relative;
+  display: table;
+  width: 100%;
+  background: white; }
+  @media only screen and (min-width: 768px) {
+    .nav-mobile {
+      display: none; } }
+  .nav-mobile .nav-mobile-header {
+    display: table-cell;
+    width: 100%;
+    padding: 9px 6px 9px 10px; }
+  .nav-mobile h1 {
+    display: table-cell;
+    width: auto;
+    margin: 0 0 0 6px;
+    font-size: 1.5em;
+    font-family: "Frutiger Neue Regular", Arial, sans-serif;
+    color: #454545;
+    display: inline-block; }
+    .nav-mobile h1 a {
+      color: inherit; }
+  .nav-mobile .nav-mobile-logo {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+    margin: 0 1em; }
+    .nav-mobile .nav-mobile-logo img {
+      vertical-align: middle;
+      max-width: 24px; }
+  .nav-mobile .table-cell > a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+    padding: 10px 15px;
+    border-left: 1px solid #cccccc;
+    color: inherit; }
+    .nav-mobile .table-cell > a:focus {
+      text-decoration: none; }
+  .nav-mobile .dropdown-menu {
+    margin-top: 5px;
+    left: 0; }
+    .nav-mobile .dropdown-menu form {
+      padding: 5px 8px; }
+      .nav-mobile .dropdown-menu form input {
+        padding-left: 20px; }
+      .nav-mobile .dropdown-menu form .icon, .nav-mobile .dropdown-menu form a[data-toggle="collapse"] {
+        position: absolute;
+        top: 12px;
+        left: 8px; }
+  .nav-mobile .nav-page-list {
+    padding-top: 0; }
+
 .nav-main {
-  border-top: 5px solid #dc0018; }
+  background: #e4e4e4;
+                                                                                                                    /* Old browsers * navigation.scss
+background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
+  /* IE10+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), to(#bebebe));
+  /* IE10+ */
+  background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 );
+  /* IE6-9 */ }
+  @media only screen and (max-width: 767px) {
+    .nav-main {
+      background: white;
+      border: none;
+      border-bottom: 5px solid #dc0018;
+      position: relative; }
+      .nav-main .navbar-nav {
+        display: none; } }
+  @media only screen and (min-width: 768px) {
+    .nav-main {
+      min-height: 70px;
+      border-top: 5px solid #dc0018; }
+      .nav-main .nav-page-list  {
+        display: none; } }
 
 .nav-main.yamm .nav {
   margin: 0 1.6em;
@@ -9666,6 +9750,9 @@ On mobile devices the links in the service navigation are moved to the footer.
 .nav-service {
   display: inline-block;
   float: right; }
+  @media only screen and (max-width: 767px) {
+    .nav-service {
+      display: none; } }
   @media only screen and (max-width: 991px) {
     .nav-service {
       float: left; } }
@@ -9701,7 +9788,8 @@ On smartphones the language selection is always included in a drawer section abo
 <div class="alert alert-warning">
   **2.1.0:**
 
-  - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></div>`
+  - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
+  - added the `.select-lang` [element](http://adminch.antistatique.net/navigation_modules_-_header.html#c-lang-select) after the `.nav-lang`
 </div>
 
 ```html_example
@@ -9709,23 +9797,37 @@ On smartphones the language selection is always included in a drawer section abo
 <div class="container-fluid">
 
   <header>
-    <nav class="nav-lang">
-      <ul>
-        <li><a class="active" href="#">DE</a></li>
-        <li><a href="#">FR</a></li>
-        <li><a href="#">IT</a></li>
-        <li><a class="disabled" href="#">RM</a></li>
-        <li><a href="#">EN</a></li>
-      </ul>
-    </nav>
-    <nav class="nav-service">
-      <ul>
-        <li><a href="#">Emergencies</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Media</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+
+    <section class="nav-services clearfix">
+      <h2>Title of page</h2>
+      <nav class="nav-lang">
+        <ul>
+          <li><a class="active" href="#">DE</a></li>
+          <li><a href="#">FR</a></li>
+          <li><a href="#">IT</a></li>
+          <li><a class="disabled" href="#">RM</a></li>
+          <li><a href="#">EN</a></li>
+        </ul>
+      </nav>
+      <nav class="select-lang pull-right">
+        <select class="form-control select-lang">
+          <option>DE</option>
+          <option>FR</option>
+          <option>IT</option>
+          <option>RM</option>
+          <option>EN</option>
+        </select>
+      </nav>
+      <nav class="nav-service">
+        <ul>
+          <li><a href="#">Emergencies</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Media</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+
   </header>
   <nav class="nav-main"></nav>
 
@@ -9735,11 +9837,35 @@ On smartphones the language selection is always included in a drawer section abo
 .nav-services {
   font-size: 0.85em;
   padding-top: 5px; }
+  .nav-services h2 {
+    display: none; }
   @media only screen and (max-width: 991px) {
     .nav-services {
       display: block;
       clear: both;
       margin-bottom: 25px; } }
+  @media only screen and (max-width: 767px) {
+    .nav-services {
+      padding: 10px;
+      margin-bottom: 0;
+      background: #e4e4e4;
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
+      /* IE10+ */
+      background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), to(#bebebe));
+      /* IE10+ */
+      background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 );
+      /* IE6-9 */ }
+      .nav-services h2 {
+        display: block;
+        font-size: 1em;
+        margin: 6px 0 0 0;
+        float: left;
+        font-family: "Frutiger Neue Bold", Arial, sans-serif; } }
 
 .nav-lang {
   display: inline-block;
@@ -9749,6 +9875,9 @@ On smartphones the language selection is always included in a drawer section abo
   @media only screen and (min-width: 992px) {
     .nav-lang {
       border-left: 1px solid #e5e5e5; } }
+  @media only screen and (max-width: 767px) {
+    .nav-lang {
+      display: none; } }
   .nav-lang li {
     padding: 0;
     margin: 0; }
@@ -9828,6 +9957,9 @@ On smartphones, the treecrumb navigation is omitted.
 ```
 
 */
+@media only screen and (max-width: 767px) {
+  .treecrumb {
+    display: none; } }
 .treecrumb.navbar {
   margin-bottom: 15px;
   min-height: 0; }
@@ -10477,6 +10609,9 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 .form-search {
   display: inline-block;
   position: relative; }
+  @media only screen and (max-width: 767px) {
+    header .form-search {
+      display: none; } }
   .form-search .icon, .form-search a[data-toggle="collapse"] {
     display: inline-block;
     position: absolute;
@@ -10910,6 +11045,10 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 ```
 
 */
+@media only screen and (max-width: 767px) {
+  .navbar.yamm--select {
+    display: none; } }
+
 .yamm--select {
   height: 0px;
   width: 100%;
@@ -10998,7 +11137,11 @@ On smartphones the language selection is always included in a drawer section abo
 ```
 */
 .select-lang {
-  width: 60px; }
+  width: 60px;
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .select-lang {
+      display: inline-block; } }
 
 /*doc
 ---

@@ -142,6 +142,17 @@ function carouselInit ($) {
 
 }) (jQuery);
 /* ==========================================================
+ * global-nav.js
+ * Global Navigation syripts
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-27 16:36:15
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+/* ==========================================================
  * rich-menu.js
  * Add overlay when openning a rich yamm menu and define open/close events
  *
@@ -176,6 +187,10 @@ function carouselInit ($) {
         $that.addClass('nav-open');
       }
     });
+  });
+
+  $('.nav-main').on('click', '.dropdown-toggle', function() {
+    $(this).find('span').toggleClass('icon--menu icon--close yamm-close');
   });
 
   // Disable outside click

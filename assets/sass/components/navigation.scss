@@ -20,18 +20,6 @@ nav {
   li:first-child {margin-left: 0;}
 }
 
-.nav-main {
-  min-height: 70px;
-  background: #e4e4e4; /* Old browsers * navigation.scss
-  background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(39%,#e2e2e2), color-stop(79%,#dddddd), color-stop(91%,#d5d5d5), color-stop(95%,#cfcfcf), color-stop(99%,#bebebe)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* IE10+ */
-  background: linear-gradient(to bottom, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 ); /* IE6-9 */
-}
-
 /*doc
 ---
 title: Global Navigation
@@ -65,6 +53,16 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
   </header>
   <nav class="nav-main yamm navbar" role="navigation">
+    <nav class="nav-page-list">
+      <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+      <ul>
+        <li><a href="#">Drinks</a></li>
+        <li><a href="#">Mineral water</a></li>
+        <li class="active"><a href="#">Wine</a></li>
+        <li><a href="#">Beer</a></li>
+        <li><a href="#">Spirits</a></li>
+      </ul>
+    </nav>
     <!-- The tab navigation -->
     <ul class="nav navbar-nav">
       <li class="dropdown yamm-fw">
@@ -182,8 +180,93 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   margin-bottom: 10px;
 }
 
+.nav-mobile {
+  position: relative;
+  display: table;
+  width: 100%;
+  background: $white;
+  @media only screen and (min-width: $screen-sm-min) {
+    display: none;
+  }
+  .nav-mobile-header {
+    display: table-cell;
+    width: 100%;
+    padding: 9px 6px 9px 10px;
+  }
+  h1 {
+    display: table-cell;
+    width: auto;
+    margin: 0 0 0 6px;
+    font-size: 1.5em;
+    font-family: $font-family-sans-serif;
+    color: $coal;
+    display: inline-block;
+    a {color: inherit;}
+  }
+  .nav-mobile-logo {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+    margin: 0 1em;
+    img {
+      vertical-align: middle;
+      max-width: 24px;
+    }
+  }
+  .table-cell > a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+    padding: 10px 15px;
+    border-left: 1px solid $silver;
+    color: inherit;
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  .dropdown-menu {
+    margin-top: 5px;
+    left: 0;
+    form {
+      padding: 5px 8px;
+      input {
+        padding-left: 20px;
+      }
+      .icon {
+        position: absolute;
+        top: 12px;
+        left: 8px;
+      }
+    }
+  }
+  .nav-page-list {
+    padding-top: 0;
+  }
+}
+
 .nav-main {
-  border-top: 5px solid $venetian-red;
+  background: #e4e4e4; /* Old browsers * navigation.scss
+  background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(39%,#e2e2e2), color-stop(79%,#dddddd), color-stop(91%,#d5d5d5), color-stop(95%,#cfcfcf), color-stop(99%,#bebebe)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* IE10+ */
+  background: linear-gradient(to bottom, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 ); /* IE6-9 */
+  @media only screen and (max-width: $screen-xs-max) {
+    background: $white;
+    border: none;
+    border-bottom: 5px solid $venetian-red;
+    position: relative;
+    .navbar-nav {display: none;}
+  }
+  @media only screen and (min-width: $screen-sm-min) {
+    min-height: 70px;
+    border-top: 5px solid $venetian-red;
+    .nav-page-list {display: none;}
+  }
 }
 
 .nav-main.yamm .nav {
@@ -307,6 +390,9 @@ On mobile devices the links in the service navigation are moved to the footer.
 .nav-service {
   display: inline-block;
   float: right;
+  @media only screen and (max-width: $screen-xs-max) {
+    display: none;
+  }
   @media only screen and (max-width: $screen-sm-max) {
     float: left;
   }
@@ -343,7 +429,8 @@ On smartphones the language selection is always included in a drawer section abo
 <div class="alert alert-warning">
   **2.1.0:**
 
-  - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></div>`
+  - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
+  - added the `.select-lang` [element](http://adminch.antistatique.net/navigation_modules_-_header.html#c-lang-select) after the `.nav-lang`
 </div>
 
 ```html_example
@@ -351,23 +438,37 @@ On smartphones the language selection is always included in a drawer section abo
 <div class="container-fluid">
 
   <header>
-    <nav class="nav-lang">
-      <ul>
-        <li><a class="active" href="#">DE</a></li>
-        <li><a href="#">FR</a></li>
-        <li><a href="#">IT</a></li>
-        <li><a class="disabled" href="#">RM</a></li>
-        <li><a href="#">EN</a></li>
-      </ul>
-    </nav>
-    <nav class="nav-service">
-      <ul>
-        <li><a href="#">Emergencies</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Media</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+
+    <section class="nav-services clearfix">
+      <h2>Title of page</h2>
+      <nav class="nav-lang">
+        <ul>
+          <li><a class="active" href="#">DE</a></li>
+          <li><a href="#">FR</a></li>
+          <li><a href="#">IT</a></li>
+          <li><a class="disabled" href="#">RM</a></li>
+          <li><a href="#">EN</a></li>
+        </ul>
+      </nav>
+      <nav class="select-lang pull-right">
+        <select class="form-control select-lang">
+          <option>DE</option>
+          <option>FR</option>
+          <option>IT</option>
+          <option>RM</option>
+          <option>EN</option>
+        </select>
+      </nav>
+      <nav class="nav-service">
+        <ul>
+          <li><a href="#">Emergencies</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Media</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+
   </header>
   <nav class="nav-main"></nav>
 
@@ -378,21 +479,44 @@ On smartphones the language selection is always included in a drawer section abo
 .nav-services {
   font-size: 0.85em;
   padding-top: 5px;
+  h2 {display: none;}
   @media only screen and (max-width: $screen-sm-max) {
     display: block;
     clear: both;
     margin-bottom: 25px;
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    padding: 10px;
+    margin-bottom: 0;
+    background: #e4e4e4; /* Old browsers * navigation.scss */
+    background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(39%,#e2e2e2), color-stop(79%,#dddddd), color-stop(91%,#d5d5d5), color-stop(95%,#cfcfcf), color-stop(99%,#bebebe)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* IE10+ */
+    background: linear-gradient(to bottom, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 ); /* IE6-9 */
+    h2 {
+      display: block;
+      font-size: 1em;
+      margin: 6px 0 0 0;
+      float: left;
+      font-family: $font-family-sans-serif-bold;
+    }
   }
 }
 
 .nav-lang {
   display: inline-block;
   float: right;
+  margin-left: 15px;
+  padding-left: 15px;
   @media only screen and (min-width: $screen-md-min) {
     border-left: 1px solid $gainsboro;
   }
-  margin-left: 15px;
-  padding-left: 15px;
+  @media only screen and (max-width: $screen-xs-max) {
+    display: none;
+  }
   li {
     padding: 0;
     margin: 0;
@@ -473,6 +597,9 @@ On smartphones, the treecrumb navigation is omitted.
 */
 
 .treecrumb {
+  @media only screen and (max-width: $screen-xs-max) {
+    display: none;
+  }
   &.navbar {
     margin-bottom: 15px;
     min-height: 0;

@@ -35,6 +35,10 @@
     });
   });
 
+  $('.nav-main').on('click', '.dropdown-toggle', function() {
+    $(this).find('span').toggleClass('icon--menu icon--close yamm-close');
+  });
+
   // Disable outside click
   $yamm.find($dropdown).on({
       "shown.bs.dropdown": function() {
