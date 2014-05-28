@@ -159,7 +159,19 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   h2 {
     font-family: $font-family-sans-serif-bold;
   }
-  .col-sm-5 {
-    padding-left: 0 !important; // override normal padding behaviour
+  div[class*="col"]:last-child {
+    padding-left: 0;
+  }
+  @media only screen and (max-width: $screen-sm) {
+    div[class*="col"]:last-child {
+      padding: 20px 30px;
+    }
   }
 }
+
+.nav-justified>li>a, .nav-tabs.nav-justified>li>a {
+  @media only screen and (max-width: $screen-sm) {
+    margin-bottom: 1px;
+  }
+}
+
