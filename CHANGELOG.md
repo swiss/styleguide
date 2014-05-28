@@ -17,6 +17,7 @@ This changelog references the relevant changes and bug fixes.
  * #48 fix services navigation responsive placement
  * #48 update header to make it responsive until xs size
  * fix global navigation to display more elements without problems
+ * #53 update global navigation to support mobile view [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
 
 
 * 2.0.1 (2014-05-21)

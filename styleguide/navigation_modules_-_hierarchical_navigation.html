@@ -42,37 +42,72 @@
     <div class="container container-main">
 
       <header>
-        <div class="row">
-          <div class="col-sm-8">
-            <a href="index.html" class="brand hidden-xs">
-              <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
-              <h1>Swiss Confederation<br>Web Guidelines</h1>
-            </a>
-          </div>
-          <div class="col-sm-4">
+        <div class="clearfix">
+          <section class="nav-services clearfix">
+            <h2>Styleguide</h2>
+            <h2 class="pull-right"><a href="https://github.com/antistatique/Swiss-Admin-web-guidelines/releases/latest">Download</a></h2>
             <nav class="nav-lang">
               <ul>
-                <li><a class="active" href="#">DE</a></li>
+                <li><a href="#">DE</a></li>
                 <li><a href="#">FR</a></li>
                 <li><a href="#">IT</a></li>
-                <li><a class="disabled" href="#">RM</a></li>
-                <li><a href="#">EN</a></li>
+                <li><a class="d#isabled" href="#">RM</a></li>
+                <li><a class="active" href="#">EN</a></li>
               </ul>
             </nav>
             <nav class="pull-right">
-              <ul>
+              <ul class="download-link">
                 <li><a href="https://github.com/antistatique/Swiss-Admin-web-guidelines/releases/latest">Download</a></li>
               </ul>
             </nav>
-            <br><br>
-            <form class="form-horizontal form-search pull-right" role="form">
-              <input id="cortana-search" class="form-control search-field" type="text" placeholder="Search">
-            </form>
-          </div>
+          </section>
         </div>
+
+        <a href="index.html" class="brand hidden-xs">
+          <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+          <h1>Swiss Confederation<br>Web Guidelines</h1>
+        </a>
+
+        <form class="form-horizontal form-search pull-right" role="form">
+          <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+        </form>
+
       </header>
 
       <nav class="nav-main yamm navbar" role="navigation">
+
+        <section class="nav-mobile">
+          <div class="table-row">
+            <div class="nav-mobile-header">
+              <div class="table-row">
+                <span class="nav-mobile-logo"><img src="img/swiss.svg" alt="Confederatio Helvetica"></span>
+                <h1><a href="#">Main Title</a></h1>
+              </div>
+            </div>
+            <div class="table-cell dropdown">
+              <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--menu"></span></a>
+              <nav class="nav-page-list dropdown-menu" role="menu">
+                <ul>
+                  <li><a href="#">Drinks</a></li>
+                  <li><a href="#">Mineral water</a></li>
+                  <li><a href="#">Wine</a></li>
+                  <li><a href="#">Beer</a></li>
+                  <li><a href="#">Spirits</a></li>
+                </ul>
+                <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+              </nav>
+            </div>
+            <div class="table-cell dropdown">
+              <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
+              <div class="dropdown-menu" role="menu">
+                <form class="form" role="form">
+                  <input id="search-field-mobile" class="form-control" type="text" placeholder="Search">
+                  <span class="icon icon--search"></span>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <ul class="nav navbar-nav">
 
@@ -7948,22 +7983,57 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
 <p>A flyout can contain a teaser, which consists of a linked heading, an image, and a descriptive text (max. 70 characters including spaces).</p>
 
 <p>Add <code>&lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;</code> at the end of the <code>body</code> tag to display the gray overlay.</p>
+
+<p><br>
+<div class="alert alert-warning">
+  <strong>2.1.0:</strong></p>
+
+<ul>
+<li>added the <code>.nav-mobile</code> section to the beginning of the <code>.list-group</code> element
+</div></li>
+</ul>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
   <header>
 
   </header>
   <nav class="nav-main yamm navbar" role="navigation">
-    <nav class="nav-page-list">
-      <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
-      <ul>
-        <li><a href="#">Drinks</a></li>
-        <li><a href="#">Mineral water</a></li>
-        <li class="active"><a href="#">Wine</a></li>
-        <li><a href="#">Beer</a></li>
-        <li><a href="#">Spirits</a></li>
-      </ul>
-    </nav>
+
+    <!-- Mobile Navigation (hidden on desktop) -->
+    <section class="nav-mobile">
+      <div class="table-row">
+        <div class="nav-mobile-header">
+          <div class="table-row">
+            <span class="nav-mobile-logo"><img src="img/swiss.svg" alt="Confederatio Helvetica"></span>
+            <h1><a href="#">Main Title</a></h1>
+          </div>
+        </div>
+        <div class="table-cell dropdown">
+          <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--menu"></span></a>
+          <nav class="nav-page-list dropdown-menu" role="menu">
+            <ul>
+              <li><a href="#">Drinks</a></li>
+              <li><a href="#">Mineral water</a></li>
+              <li><a href="#">Wine</a></li>
+              <li><a href="#">Beer</a></li>
+              <li><a href="#">Spirits</a></li>
+            </ul>
+            <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+          </nav>
+        </div>
+        <div class="table-cell dropdown">
+          <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
+          <div class="dropdown-menu" role="menu">
+            <form class="form" role="form">
+              <input class="form-control" type="text" placeholder="Search">
+              <span class="icon icon--search"></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Standard menu layout -->
     <!-- The tab navigation -->
     <ul class="nav navbar-nav">
       <li class="dropdown yamm-fw">
@@ -8078,16 +8148,42 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
 
   <span class="nt">&lt;/header&gt;</span>
   <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main yamm navbar&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-page-list&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--less&quot;</span><span class="nt">&gt;</span>Comestible Goods<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;ul&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Drinks<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Mineral water<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Wine<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Beer<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Spirits<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-      <span class="nt">&lt;/ul&gt;</span>
-    <span class="nt">&lt;/nav&gt;</span>
+
+    <span class="c">&lt;!-- Mobile Navigation (hidden on desktop) --&gt;</span>
+    <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">&quot;nav-mobile&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;table-row&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;nav-mobile-header&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;table-row&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;nav-mobile-logo&quot;</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;img/swiss.svg&quot;</span> <span class="na">alt=</span><span class="s">&quot;Confederatio Helvetica&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;h1&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Main Title<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;table-cell dropdown&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;nav-mobile-menu dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--menu&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-page-list dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Drinks<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Mineral water<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Wine<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Beer<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Spirits<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;yamm-close-bottom&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--top&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;/nav&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;table-cell dropdown&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;nav-mobile-menu dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--search&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form&quot;</span> <span class="na">role=</span><span class="s">&quot;form&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--search&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/form&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+
+    <span class="c">&lt;!-- Standard menu layout --&gt;</span>
     <span class="c">&lt;!-- The tab navigation --&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown yamm-fw&quot;</span><span class="nt">&gt;</span>
