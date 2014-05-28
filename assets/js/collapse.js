@@ -15,15 +15,16 @@
 
   var $toggleButton = $('button[data-toggle="collapse"]');
 
-  checkCollapseStatus();
+  checkCollapseStatusInit();
 
   $toggleButton.click(function () {
+    var $that = $(this);
     setTimeout(function(){
-      checkCollapseStatus();
-    }, 360);
+      checkCollapseStatus($that);
+    }, 500);
   });
 
-  function checkCollapseStatus() {
+  function checkCollapseStatusInit() {
     $toggleButton.each(function () {
       var $collapseTarget = $(this).data('target');
       $(this).removeClass('active').removeClass('icon--root').addClass('icon--greater');
@@ -31,6 +32,16 @@
         $(this).addClass('active').addClass('icon--root').removeClass('icon--greater');
       }
     });
+  }
+
+  function checkCollapseStatus($that) {
+    var $collapseTarget = $that.data('target');
+    console.log($($collapseTarget).attr('class'));
+    $that.removeClass('active').removeClass('icon--root').addClass('icon--greater');
+    if($($collapseTarget).hasClass('in')){
+      console.log('Open')
+      $that.addClass('active').addClass('icon--root').removeClass('icon--greater');
+    }
   }
 
   // Table Collapse
