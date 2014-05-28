@@ -554,6 +554,7 @@ On smartphones, the treecrumb navigation is omitted.
     padding: 10px 5px;
   }
   @media only screen and (max-width: $screen-sm) {
+    display: none;
     .nav li {display: inline;}
     .dropdown-toggle {
       border-left-color: $silver;

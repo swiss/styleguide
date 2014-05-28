@@ -9908,16 +9908,18 @@ On smartphones, the treecrumb navigation is omitted.
   font-weight: bold;
   padding: 10px 5px; }
 @media only screen and (max-width: 768px) {
-  .treecrumb .nav li {
-    display: inline; }
-  .treecrumb .dropdown-toggle {
-    border-left-color: #cccccc;
-    padding-left: 10px; }
-  .treecrumb .dropdown-menu, .treecrumb .open .dropdown-menu {
-    border: 1px solid #cccccc;
-    overflow: hidden; }
-    .treecrumb .dropdown-menu li, .treecrumb .open .dropdown-menu li {
-      display: inline-block; } }
+  .treecrumb {
+    display: none; }
+    .treecrumb .nav li {
+      display: inline; }
+    .treecrumb .dropdown-toggle {
+      border-left-color: #cccccc;
+      padding-left: 10px; }
+    .treecrumb .dropdown-menu, .treecrumb .open .dropdown-menu {
+      border: 1px solid #cccccc;
+      overflow: hidden; }
+      .treecrumb .dropdown-menu li, .treecrumb .open .dropdown-menu li {
+        display: inline-block; } }
 
 /*doc
 ---
