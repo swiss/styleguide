@@ -553,6 +553,18 @@ On smartphones, the treecrumb navigation is omitted.
     font-weight: bold;
     padding: 10px 5px;
   }
+  @media only screen and (max-width: $screen-sm) {
+    .nav li {display: inline;}
+    .dropdown-toggle {
+      border-left-color: $silver;
+      padding-left: 10px;
+    }
+    .dropdown-menu, .open .dropdown-menu {
+      border: 1px solid $silver;
+      overflow: hidden;
+      li {display: inline-block;}
+    }
+  }
 }
 
 
