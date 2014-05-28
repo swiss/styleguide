@@ -221,6 +221,13 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   @media only screen and (min-width: $screen-sm-min) {
     display: none;
   }
+  &.fixed {
+    position: fixed;
+    box-shadow: 0 0 40px 0 fade-out($coal, 0.3);
+    top: 0;
+    box-sizing: content-box; // so that the border goes below the box
+    border-bottom: 5px solid $venetian-red;
+  }
   .nav-mobile-header {
     display: table-cell;
     width: 100%;

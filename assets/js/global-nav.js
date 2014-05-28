@@ -8,3 +8,24 @@
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
+
+ (function($) {
+
+  // Handle scroll to position nav as fixed
+
+  var top = $('.nav-mobile').offset().top;
+
+
+  $(window).scroll(function (event) {
+
+    var y = $(this).scrollTop();
+
+    if (y >= top) {
+      $('.nav-mobile').addClass('fixed');
+    }
+    else {
+      $('.nav-mobile').removeClass('fixed');
+    }
+
+  });
+ }) (jQuery);

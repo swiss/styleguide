@@ -9603,6 +9603,15 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   @media only screen and (min-width: 768px) {
     .nav-mobile {
       display: none; } }
+  .nav-mobile.fixed {
+    position: fixed;
+    -webkit-box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
+    box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
+    top: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border-bottom: 5px solid #dc0018; }
   .nav-mobile .nav-mobile-header {
     display: table-cell;
     width: 100%;
