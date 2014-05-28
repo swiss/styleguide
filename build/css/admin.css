@@ -9380,6 +9380,8 @@ The elements list is a very generic element that groups content elements in a li
   color: #757575; }
   .yamm-close-bottom:hover {
     color: #dc0018; }
+  .nav-page-list .yamm-close-bottom {
+    width: 100px; }
 
 /* ==========================================================
  * navigation.scss
@@ -9604,15 +9606,15 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     .nav-mobile .dropdown-menu form {
       padding: 5px 8px; }
       .nav-mobile .dropdown-menu form input {
-        padding-left: 20px; }
+        padding-left: 25px; }
       .nav-mobile .dropdown-menu form .icon, .nav-mobile .dropdown-menu form a[data-toggle="collapse"] {
         position: absolute;
-        top: 12px;
-        left: 8px; }
+        top: 13px;
+        left: 15px; }
   .nav-mobile .nav-page-list {
     padding-top: 0; }
   .nav-mobile .open .icon--menu:after,
-  .nav-mobile .open .icon--search:after {
+  .nav-mobile .open a > .icon--search:after {
     content: 'x'; }
 
 .nav-main {
@@ -10116,16 +10118,20 @@ Navigation below the content level on a smartphone with links to the home page, 
   margin: 0; }
 .nav-page-list li.active a {
   color: black; }
-.nav-page-list li:first-child a {
-  color: black;
-  font-weight: bold;
-  border-color: #454545; }
+@media only screen and (min-width: 768px) {
+  .nav-page-list li:first-child a {
+    color: black;
+    font-weight: bold;
+    border-color: #454545; } }
 .nav-page-list ul a, .nav-page-list ul ul li:first-child a {
-  color: #757575;
+  color: #454545;
   border-bottom: 1px solid #cccccc;
   padding: 10px 0;
   position: relative;
   font-weight: normal; }
+  @media only screen and (max-width: 767px) {
+    .nav-page-list ul a, .nav-page-list ul ul li:first-child a {
+      padding: 10px; } }
   .nav-page-list ul a:active, .nav-page-list ul ul li:first-child a:active {
     color: black; }
   .nav-page-list ul a:before, .nav-page-list ul ul li:first-child a:before {
@@ -10138,6 +10144,8 @@ Navigation below the content level on a smartphone with links to the home page, 
     width: 5px; }
 .nav-page-list li.active a:before, .nav-page-list li a:hover:before {
   background: #dc0018; }
+.nav-mobile .nav-page-list {
+  padding-bottom: 40px; }
 
 /*doc
 ---

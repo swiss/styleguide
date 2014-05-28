@@ -232,12 +232,12 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     form {
       padding: 5px 8px;
       input {
-        padding-left: 20px;
+        padding-left: 25px;
       }
       .icon {
         position: absolute;
-        top: 12px;
-        left: 8px;
+        top: 13px;
+        left: 15px;
       }
     }
   }
@@ -245,7 +245,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     padding-top: 0;
   }
   .open .icon--menu:after,
-  .open .icon--search:after {
+  .open a > .icon--search:after {
     content: 'x'; // display close icon when dropdown is open
   }
 }
@@ -772,15 +772,20 @@ Navigation below the content level on a smartphone with links to the home page, 
     margin: 0;
   }
   li.active a {color: $black;}
-  li:first-child a {
-    color: $black;
-    font-weight: bold;
-    border-color: $coal;
+  @media only screen and (min-width: $screen-sm-min) {
+    li:first-child a {
+      color: $black;
+      font-weight: bold;
+      border-color: $coal;
+    }
   }
   ul a, ul ul li:first-child a {
-    color: $empress;
+    color: $coal;
     border-bottom: 1px solid $silver;
     padding: 10px 0;
+    @media only screen and (max-width: $screen-xs-max) {
+      padding: 10px;
+    }
     position: relative;
     font-weight: normal;
     &:active {color: $black;}
@@ -795,6 +800,9 @@ Navigation below the content level on a smartphone with links to the home page, 
     }
   }
   li.active a:before, li a:hover:before {background: $venetian-red;}
+  .nav-mobile & {
+    padding-bottom: 40px;
+  }
 }
 
 

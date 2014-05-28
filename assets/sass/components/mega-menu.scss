@@ -47,4 +47,7 @@
   &:hover {
     color: $venetian-red;
   }
+  .nav-page-list & {
+    width: 100px;
+  }
 }
