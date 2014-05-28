@@ -506,7 +506,7 @@ On smartphones, the treecrumb navigation is omitted.
       display: block;
       position: absolute;
       top: -1px;
-      right: -2.15em;
+      right: -2em;
       width: 0;
       height: 0;
       border-color: transparent transparent transparent $silver;
@@ -514,7 +514,7 @@ On smartphones, the treecrumb navigation is omitted.
       border-width: 1.05em;
     }
     &:after {
-      right: -2.05em;
+      right: -1.95em;
       border-color: transparent transparent transparent $white;
     }
     span {
