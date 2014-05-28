@@ -11461,6 +11461,10 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     .tab-content.tab-focus div[class*="col"]:last-child {
       padding: 20px 30px; } }
 
+@media only screen and (max-width: 768px) {
+  .nav-justified > li > a, .nav-tabs.nav-justified > li > a, .nav-tabs.nav-justified > li > a {
+    margin-bottom: 1px; } }
+
 /* ==========================================================
  * carousel.scss
  * Carousel component

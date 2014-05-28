@@ -169,3 +169,9 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   }
 }
 
+.nav-justified>li>a, .nav-tabs.nav-justified>li>a {
+  @media only screen and (max-width: $screen-sm) {
+    margin-bottom: 1px;
+  }
+}
+
