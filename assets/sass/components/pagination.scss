@@ -51,6 +51,11 @@ The paging function allows the user to browse through a large number of elements
   display: block;
   margin: 0;
   background: none;
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
   ul {
     margin-right: 10px;
   }
@@ -77,6 +82,15 @@ The paging function allows the user to browse through a large number of elements
         background: $gainsboro;
         color: inherit;
       }
+    }
+  }
+  @media only screen and (max-width: $screen-sm) {
+    padding-top: 10px;
+    &.pull-right {
+      float: none !important;
+    }
+    li a {
+      font-size: 12px;
     }
   }
 }

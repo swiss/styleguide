@@ -10323,6 +10323,10 @@ The paging function allows the user to browse through a large number of elements
   display: block;
   margin: 0;
   background: none; }
+  .pagination:after {
+    content: " ";
+    display: table;
+    clear: both; }
   .pagination ul  {
     margin-right: 10px; }
   .pagination > li {
@@ -10343,6 +10347,13 @@ The paging function allows the user to browse through a large number of elements
     .pagination > .active > a:hover {
       background: #e5e5e5;
       color: inherit; }
+  @media only screen and (max-width: 768px) {
+    .pagination {
+      padding-top: 10px; }
+      .pagination.pull-right {
+        float: none !important; }
+      .pagination li a {
+        font-size: 12px; } }
 
 /* ==========================================================
  * progression.scss
