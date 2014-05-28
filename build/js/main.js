@@ -176,7 +176,7 @@ function carouselInit ($) {
   // Toggle overlay
   $yamm.each(function () {
     var $that = $(this);
-    $that.find($dropdownToggle).click(function () {
+    $that.on('click', '.dropdown-toggle', function () {
       if ($(this).parent().hasClass('open')){
         $('.overlay').hide();
         $that.removeClass('nav-open');
@@ -187,10 +187,6 @@ function carouselInit ($) {
         $that.addClass('nav-open');
       }
     });
-  });
-
-  $('.nav-main').on('click', '.dropdown-toggle', function() {
-    $(this).find('span').toggleClass('icon--menu icon--close yamm-close');
   });
 
   // Disable outside click

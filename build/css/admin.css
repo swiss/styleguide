@@ -9361,6 +9361,8 @@ The elements list is a very generic element that groups content elements in a li
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); }
     .yamm .dropdown-menu li {
       display: block; }
+  .yamm .dropdown-backdrop {
+    display: none; }
   .no-ie .yamm.nav-open {
     z-index: 9999; }
 
@@ -9609,6 +9611,9 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
         left: 8px; }
   .nav-mobile .nav-page-list {
     padding-top: 0; }
+  .nav-mobile .open .icon--menu:after,
+  .nav-mobile .open .icon--search:after {
+    content: 'x'; }
 
 .nav-main {
   background: #e4e4e4;

@@ -244,6 +244,10 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   .nav-page-list {
     padding-top: 0;
   }
+  .open .icon--menu:after,
+  .open .icon--search:after {
+    content: 'x'; // display close icon when dropdown is open
+  }
 }
 
 .nav-main {
