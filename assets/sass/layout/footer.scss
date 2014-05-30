@@ -270,6 +270,10 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
 
 
 footer {
+  img {
+    max-width: 204px;
+    margin: 15px 0;
+  }
   .links-social {
     @media only screen and (max-width: $screen-xs-max) {
       ul {

@@ -6326,6 +6326,9 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
 </footer>
 ```
 */
+footer img {
+  max-width: 204px;
+  margin: 15px 0; }
 @media only screen and (max-width: 767px) {
   footer .links-social ul {
     padding: 0;
