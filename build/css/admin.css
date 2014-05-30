@@ -15,35 +15,30 @@
   src: url("../fonts/AdminCH_Symbols.eot?#iefix") format("embedded-opentype"), url("../fonts/AdminCH_Symbols.woff?v2") format("woff"), url("../fonts/AdminCH_Symbols.ttf?v2") format("truetype"), url("../fonts/AdminCH_Symbols.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Bold';
   src: url("../fonts/FrutigerNeueW02-Bd.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Bd.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Bd.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Bd.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Italic';
   src: url("../fonts/FrutigerNeueW02-It.eot?v2");
   src: url("../fonts/FrutigerNeueW02-It.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-It.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-It.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-It.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Regular';
   src: url("../fonts/FrutigerNeueW02-Regular.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Regular.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Regular.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Regular.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Light';
   src: url("../fonts/FrutigerNeueW02-Light.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Light.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Light.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Light.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /* ==========================================================
  * admin-mixins.scss
  * Our project mixins
@@ -402,7 +397,6 @@ th {
   font-family: 'Glyphicons Halflings';
   src: url("bootstrap/glyphicons-halflings-regular.eot");
   src: url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
-
 .glyphicon {
   position: relative;
   top: 1px;
@@ -1027,7 +1021,7 @@ th {
 
 html {
   font-size: 62.5%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: transparent; }
 
 body {
   font-family: "Frutiger Neue Regular", Arial, sans-serif;
@@ -4160,7 +4154,6 @@ a.thumbnail.active {
 
   to {
     background-position: 0 0; } }
-
 .progress {
   overflow: hidden;
   height: 22px;
@@ -5109,7 +5102,7 @@ button.close {
     border-radius: 10px;
     cursor: pointer;
     background-color: #000 \9;
-    background-color: rgba(0, 0, 0, 0); }
+    background-color: transparent; }
   .carousel-indicators .active {
     margin: 0;
     width: 12px;
@@ -5195,7 +5188,6 @@ button.close {
 
 @-ms-viewport {
   width: device-width; }
-
 .visible-xs, .visible-sm, .visible-md, .visible-lg {
   display: none !important; }
 
@@ -8982,6 +8974,9 @@ On smartphones there is always a link at the end of the page to the home page an
     font-size: 0.935em; }
   .breadcrumb.breadcrumb--search {
     margin: 0.8em 0; }
+  @media only screen and (max-width: 768px) {
+    .breadcrumb {
+      display: none; } }
 
 /*doc
 ---
@@ -9868,14 +9863,14 @@ On smartphones, the treecrumb navigation is omitted.
     display: block;
     position: absolute;
     top: -1px;
-    right: -2.15em;
+    right: -2em;
     width: 0;
     height: 0;
     border-color: transparent transparent transparent #cccccc;
     border-style: solid;
     border-width: 1.05em; }
   .treecrumb .dropdown-toggle:after {
-    right: -2.05em;
+    right: -1.95em;
     border-color: transparent transparent transparent white; }
   .treecrumb .dropdown-toggle span {
     margin-right: 1em; }
@@ -9907,6 +9902,19 @@ On smartphones, the treecrumb navigation is omitted.
   color: #454545;
   font-weight: bold;
   padding: 10px 5px; }
+@media only screen and (max-width: 768px) {
+  .treecrumb {
+    display: none; }
+    .treecrumb .nav li {
+      display: inline; }
+    .treecrumb .dropdown-toggle {
+      border-left-color: #cccccc;
+      padding-left: 10px; }
+    .treecrumb .dropdown-menu, .treecrumb .open .dropdown-menu {
+      border: 1px solid #cccccc;
+      overflow: hidden; }
+      .treecrumb .dropdown-menu li, .treecrumb .open .dropdown-menu li {
+        display: inline-block; } }
 
 /*doc
 ---
@@ -10462,6 +10470,43 @@ Process navigation is used in connection with forms that are spread over several
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
+/*doc
+---
+title: Site Search
+name: -site-search
+category: Navigation modules - Header
+---
+
+<span class="label label-admin">CD</span>
+
+The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
+
+On smartphones, the search function can be accessed via an icon in the Header.
+
+```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+    <form class="form-horizontal form-search pull-right" role="form">
+      <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+    </form>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+```
+
+```js_example
+// You have to store all your data inside `searchData` and define it globaly
+var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
+  "Basel-Landschaft", "Basel-Stadt", "Bern", "Fribourg", "Genève",
+  "Glarus", "Graubünden", "Jura", "Lucerne", "Neuchâtel", "Nidwalden",
+  "Obwalden", "Schaffhausen", "Schwyz", "Solothurn", "St. Gallen",
+  "Thurgau", "Ticino", "Uri", "Valais", "Vaud", "Zug", "Zurich"
+];
+```
+*/
 .form-search {
   display: inline-block;
   position: relative; }
@@ -10894,6 +10939,8 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
   </header>
   <nav class="nav-main"></nav>
 
+  <br><br><br><br><br><br><br><br><br>
+
 </div>
 ```
 
@@ -10939,8 +10986,8 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     border-color: white;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 transparent;
     color: #dc0018;
     position: relative;
     z-index: 1000; }
@@ -11283,8 +11330,8 @@ By default, the shopping cart is not shown. Only after an object has been added 
   border-radius: 0;
   padding: 10px;
   margin: 0;
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
   background: whitesmoke !important; }
   .well.well-freeboard {
     padding: 0;
@@ -11308,7 +11355,7 @@ By default, the shopping cart is not shown. Only after an object has been added 
   color: #006699;
   font-size: 13px;
   opacity: 1;
-  text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+  text-shadow: 0 0 0 transparent; }
   .close:hover {
     opacity: 1;
     font-style: 13px;
@@ -11472,8 +11519,15 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   border-top: 1px solid #cccccc; }
   .tab-content.tab-focus h2 {
     font-family: "Frutiger Neue Bold", Arial, sans-serif; }
-  .tab-content.tab-focus .col-sm-5 {
-    padding-left: 0 !important; }
+  .tab-content.tab-focus div[class*="col"]:last-child {
+    padding-left: 0; }
+  @media only screen and (max-width: 768px) {
+    .tab-content.tab-focus div[class*="col"]:last-child {
+      padding: 20px 30px; } }
+
+@media only screen and (max-width: 768px) {
+  .nav-justified > li > a, .nav-tabs.nav-justified > li > a, .nav-tabs.nav-justified > li > a {
+    margin-bottom: 1px; } }
 
 /* ==========================================================
  * carousel.scss
@@ -11591,7 +11645,7 @@ The carousel consists of various information blocks, each of which contains a la
   background-image: none !important; }
   .carousel-control.right:before, .carousel-control.left:before {
     color: #454545;
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    text-shadow: 0 0 0 transparent; }
 
 .carousel-indicators {
   bottom: auto; }

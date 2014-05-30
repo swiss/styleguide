@@ -121,10 +121,8 @@ function carouselInit ($) {
 
   function checkCollapseStatus($that) {
     var $collapseTarget = $that.data('target');
-    console.log($($collapseTarget).attr('class'));
     $that.removeClass('active').removeClass('icon--root').addClass('icon--greater');
     if($($collapseTarget).hasClass('in')){
-      console.log('Open')
       $that.addClass('active').addClass('icon--root').removeClass('icon--greater');
     }
   }
