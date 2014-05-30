@@ -11416,6 +11416,15 @@ By default, the shopping cart is not shown. Only after an object has been added 
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .bordered {
+    padding: 15px;
+    background: whitesmoke; }
+    .bordered img {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px; } }
+
 .well {
   border: none;
   border-radius: 0;

@@ -11,6 +11,18 @@
 
 @charset "UTF-8";
 
+.bordered {
+  @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+    padding: 15px;
+    background: $smoke;
+    img {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
 .well {
   border: none;
   border-radius: 0;
