@@ -9952,6 +9952,12 @@ On smartphones, the navigation is shown at the end of the page above the footer 
 
 Navigation below the content level on a smartphone with links to the home page, the navigation level above, and to further pages.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
+</div>
 
 ```html_example
 <div class="container-fluid">
@@ -9961,7 +9967,8 @@ Navigation below the content level on a smartphone with links to the home page, 
       <nav class="nav-page-list">
         <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
         <ul>
-          <li><a href="#">Drinks</a></li>
+          <!-- the .list-emphasis class is optionnal -->
+          <li class="list-emphasis"><a href="#">Drinks</a></li>
           <li><a href="#">Mineral water</a></li>
           <li class="active"><a href="#">Wine</a></li>
           <li><a href="#">Beer</a></li>
@@ -9995,7 +10002,7 @@ Navigation below the content level on a smartphone with links to the home page, 
   margin: 0; }
 .nav-page-list li.active a {
   color: black; }
-.nav-page-list li:first-child a {
+.nav-page-list li.list-emphasis a {
   color: black;
   font-weight: bold;
   border-color: #454545; }
