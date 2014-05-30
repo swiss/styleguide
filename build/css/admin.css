@@ -6287,6 +6287,13 @@ category: Navigation modules - Footer
 
 The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) are listed in a separate section of the footer.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - added the `.links-social` class to the `<nav/>` element containing the social links
+</div>
+
 ```html_example
 <footer>
 
@@ -6294,7 +6301,7 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
     <br>
-    <nav>
+    <nav class="links-social">
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
         <li><a class="icon icon--before icon--facebook" href="#">Facebook</a></li>
@@ -6319,6 +6326,18 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
 </footer>
 ```
 */
+@media only screen and (max-width: 767px) {
+  footer .links-social ul {
+    padding: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    border-bottom: 1px solid #cccccc; }
+  footer .links-social li {
+    display: block;
+    margin-left: 0;
+    padding: 9px;
+    border-top: 1px solid #cccccc; } }
+
 /*doc
 ---
 title: Footbar

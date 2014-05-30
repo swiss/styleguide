@@ -19,6 +19,7 @@ This changelog references the relevant changes and bug fixes.
  * fix global navigation to display more elements without problems
  * add `.list-emphasis` class to `.nav-page-list` [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#d-page-nav-list)
  * add drilldown plugin to handle `.nav-page-list` sub-navigation animations [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#d-page-nav-list)
+ * fix social links in footer on mobile [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_footer.html#b-social-media)
 
 
 * 2.0.1 (2014-05-21)
