@@ -18,6 +18,7 @@ This changelog references the relevant changes and bug fixes.
  * #48 update header to make it responsive until xs size
  * fix global navigation to display more elements without problems
  * add `.list-emphasis` class to `.nav-page-list` [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#d-page-nav-list)
+ * add drilldown plugin to handle `.nav-page-list` sub-navigation animations [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#d-page-nav-list)
 
 
 * 2.0.1 (2014-05-21)

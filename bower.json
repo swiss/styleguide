@@ -22,7 +22,8 @@
     "TimelineJS": "v2.25",
     "typeahead.js": "~0.10.2",
     "tablesorter": "https://github.com/Mottie/tablesorter",
-    "jquery.socialshareprivacy": "~1.4.5"
+    "jquery.socialshareprivacy": "~1.4.5",
+    "jquery-drilldown": "~0.1.4"
   },
   "devDependencies": {}
 }
