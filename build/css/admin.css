@@ -8979,6 +8979,9 @@ On smartphones there is always a link at the end of the page to the home page an
     font-size: 0.935em; }
   .breadcrumb.breadcrumb--search {
     margin: 0.8em 0; }
+  @media only screen and (max-width: 768px) {
+    .breadcrumb {
+      display: none; } }
 
 /*doc
 ---
@@ -10045,14 +10048,14 @@ On smartphones, the treecrumb navigation is omitted.
     display: block;
     position: absolute;
     top: -1px;
-    right: -2.15em;
+    right: -2em;
     width: 0;
     height: 0;
     border-color: transparent transparent transparent #cccccc;
     border-style: solid;
     border-width: 1.05em; }
   .treecrumb .dropdown-toggle:after {
-    right: -2.05em;
+    right: -1.95em;
     border-color: transparent transparent transparent white; }
   .treecrumb .dropdown-toggle span {
     margin-right: 1em; }
@@ -10084,6 +10087,19 @@ On smartphones, the treecrumb navigation is omitted.
   color: #454545;
   font-weight: bold;
   padding: 10px 5px; }
+@media only screen and (max-width: 768px) {
+  .treecrumb {
+    display: none; }
+    .treecrumb .nav li {
+      display: inline; }
+    .treecrumb .dropdown-toggle {
+      border-left-color: #cccccc;
+      padding-left: 10px; }
+    .treecrumb .dropdown-menu, .treecrumb .open .dropdown-menu {
+      border: 1px solid #cccccc;
+      overflow: hidden; }
+      .treecrumb .dropdown-menu li, .treecrumb .open .dropdown-menu li {
+        display: inline-block; } }
 
 /*doc
 ---
@@ -10121,24 +10137,48 @@ On smartphones, the navigation is shown at the end of the page above the footer 
 
 Navigation below the content level on a smartphone with links to the home page, the navigation level above, and to further pages.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
+  - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
+</div>
 
 ```html_example
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-4">
 
-      <nav class="nav-page-list">
-        <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
-        <ul>
-          <li><a href="#">Drinks</a></li>
-          <li><a href="#">Mineral water</a></li>
-          <li class="active"><a href="#">Wine</a></li>
-          <li><a href="#">Beer</a></li>
-          <li><a href="#">Spirits</a></li>
-        </ul>
-      </nav>
+    <!-- these `.drilldown` container classes are used only if you want the drilldown behaviour (if you have sub-lists) -->
+    <div class="col-sm-4 drilldown">
+      <div class="drilldown-container">
 
+        <nav class="nav-page-list">
+          <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+          <ul>
+            <!-- the .list-emphasis class is optionnal -->
+            <li class="list-emphasis"><a href="#">Drinks</a></li>
+            <!-- add the .list-sub class if the list has some sub-lists -->
+            <li class="list-sub"><a href="#">Mineral water</a>
+              <!-- sub-list element -->
+              <nav class="drilldown-sub">
+                <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                <ul>
+                  <li><a href="#">Test</a></li>
+                  <li><a href="#">Test2</a></li>
+                  <li><a href="#">Test3</a></li>
+                </ul>
+              </nav>
+            </li>
+            <li class="active"><a href="#">Wine</a></li>
+            <li><a href="#">Beer</a></li>
+            <li><a href="#">Spirits</a></li>
+          </ul>
+        </nav>
+
+      </div>
     </div>
+
   </div>
 </div>
 ```
@@ -10159,28 +10199,39 @@ Navigation below the content level on a smartphone with links to the home page, 
     left: -3px; }
   .nav-page-list .icon--less:hover, .nav-page-list .icon--less:hover:before {
     color: #dc0018; }
+  .nav-page-list .icon--less:hover:before {
+    background: none; }
 .nav-page-list li {
   display: block;
   margin: 0; }
 .nav-page-list li.active a {
   color: black; }
 @media only screen and (min-width: 768px) {
-  .nav-page-list li:first-child a {
+  .nav-page-list li.list-emphasis a {
     color: black;
     font-weight: bold;
     border-color: #454545; } }
-.nav-page-list ul a, .nav-page-list ul ul li:first-child a {
-  color: #454545;
+.nav-page-list .list-sub {
+  position: relative; }
+  .nav-page-list .list-sub:after {
+    font-family: "Admin Icons";
+    content: '>';
+    padding-right: 5px;
+    position: absolute;
+    top: 10px;
+    right: 5px; }
+.nav-page-list li a, .nav-page-list ul ul li:first-child a {
+  color: #757575;
   border-bottom: 1px solid #cccccc;
   padding: 10px 0;
   position: relative;
   font-weight: normal; }
   @media only screen and (max-width: 767px) {
-    .nav-page-list ul a, .nav-page-list ul ul li:first-child a {
+    .nav-page-list li a, .nav-page-list ul ul li:first-child a {
       padding: 10px; } }
-  .nav-page-list ul a:active, .nav-page-list ul ul li:first-child a:active {
+  .nav-page-list li a:active, .nav-page-list ul ul li:first-child a:active {
     color: black; }
-  .nav-page-list ul a:before, .nav-page-list ul ul li:first-child a:before {
+  .nav-page-list li a:before, .nav-page-list ul ul li:first-child a:before {
     content: '';
     display: block;
     position: absolute;
@@ -10192,6 +10243,11 @@ Navigation below the content level on a smartphone with links to the home page, 
   background: #dc0018; }
 .nav-mobile .nav-page-list {
   padding-bottom: 40px; }
+
+.drilldown {
+  overflow: hidden; }
+  .drilldown .drilldown-sub {
+    display: none; }
 
 /*doc
 ---
@@ -10288,16 +10344,22 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
   width: 100%;
   text-align: left;
   border: 1px solid #cccccc;
-  margin-left: 20px;
+  margin-left: 0px;
   padding: 10px;
   margin-top: 5px; }
+  .nav-page-list--facette button:focus {
+    outline: 0; }
   .nav-page-list--facette button.active {
     background: whitesmoke; }
+.nav-page-list--facette ul li:first-child a {
+  border-bottom: none; }
+.nav-page-list--facette .collapse.in {
+  margin-left: 0; }
 .nav-page-list--facette ul ul {
   border: 1px solid #cccccc;
   border-top: none;
   border-bottom: none;
-  margin-left: 20px;
+  margin-left: 0px;
   width: 100%; }
   .nav-page-list--facette ul ul a {
     margin: 0;
@@ -10500,6 +10562,10 @@ The paging function allows the user to browse through a large number of elements
   display: block;
   margin: 0;
   background: none; }
+  .pagination:after {
+    content: " ";
+    display: table;
+    clear: both; }
   .pagination ul  {
     margin-right: 10px; }
   .pagination > li {
@@ -10520,6 +10586,13 @@ The paging function allows the user to browse through a large number of elements
     .pagination > .active > a:hover {
       background: #e5e5e5;
       color: inherit; }
+  @media only screen and (max-width: 768px) {
+    .pagination {
+      padding-top: 10px; }
+      .pagination.pull-right {
+        float: none !important; }
+      .pagination li a {
+        font-size: 12px; } }
 
 /* ==========================================================
  * progression.scss
@@ -11099,6 +11172,8 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 
   </header>
   <nav class="nav-main"></nav>
+
+  <br><br><br><br><br><br><br><br><br>
 
 </div>
 ```
@@ -11686,8 +11761,15 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   border-top: 1px solid #cccccc; }
   .tab-content.tab-focus h2 {
     font-family: "Frutiger Neue Bold", Arial, sans-serif; }
-  .tab-content.tab-focus .col-sm-5 {
-    padding-left: 0 !important; }
+  .tab-content.tab-focus div[class*="col"]:last-child {
+    padding-left: 0; }
+  @media only screen and (max-width: 768px) {
+    .tab-content.tab-focus div[class*="col"]:last-child {
+      padding: 20px 30px; } }
+
+@media only screen and (max-width: 768px) {
+  .nav-justified > li > a, .nav-tabs.nav-justified > li > a, .nav-tabs.nav-justified > li > a {
+    margin-bottom: 1px; } }
 
 /* ==========================================================
  * carousel.scss

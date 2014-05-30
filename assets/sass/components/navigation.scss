@@ -678,7 +678,7 @@ On smartphones, the treecrumb navigation is omitted.
       display: block;
       position: absolute;
       top: -1px;
-      right: -2.15em;
+      right: -2em;
       width: 0;
       height: 0;
       border-color: transparent transparent transparent $silver;
@@ -686,7 +686,7 @@ On smartphones, the treecrumb navigation is omitted.
       border-width: 1.05em;
     }
     &:after {
-      right: -2.05em;
+      right: -1.95em;
       border-color: transparent transparent transparent $white;
     }
     span {
@@ -724,6 +724,19 @@ On smartphones, the treecrumb navigation is omitted.
     color: $coal;
     font-weight: bold;
     padding: 10px 5px;
+  }
+  @media only screen and (max-width: $screen-sm) {
+    display: none;
+    .nav li {display: inline;}
+    .dropdown-toggle {
+      border-left-color: $silver;
+      padding-left: 10px;
+    }
+    .dropdown-menu, .open .dropdown-menu {
+      border: 1px solid $silver;
+      overflow: hidden;
+      li {display: inline-block;}
+    }
   }
 }
 
@@ -764,24 +777,48 @@ On smartphones, the navigation is shown at the end of the page above the footer 
 
 Navigation below the content level on a smartphone with links to the home page, the navigation level above, and to further pages.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
+  - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
+</div>
 
 ```html_example
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-4">
 
-      <nav class="nav-page-list">
-        <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
-        <ul>
-          <li><a href="#">Drinks</a></li>
-          <li><a href="#">Mineral water</a></li>
-          <li class="active"><a href="#">Wine</a></li>
-          <li><a href="#">Beer</a></li>
-          <li><a href="#">Spirits</a></li>
-        </ul>
-      </nav>
+    <!-- these `.drilldown` container classes are used only if you want the drilldown behaviour (if you have sub-lists) -->
+    <div class="col-sm-4 drilldown">
+      <div class="drilldown-container">
 
+        <nav class="nav-page-list">
+          <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+          <ul>
+            <!-- the .list-emphasis class is optionnal -->
+            <li class="list-emphasis"><a href="#">Drinks</a></li>
+            <!-- add the .list-sub class if the list has some sub-lists -->
+            <li class="list-sub"><a href="#">Mineral water</a>
+              <!-- sub-list element -->
+              <nav class="drilldown-sub">
+                <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                <ul>
+                  <li><a href="#">Test</a></li>
+                  <li><a href="#">Test2</a></li>
+                  <li><a href="#">Test3</a></li>
+                </ul>
+              </nav>
+            </li>
+            <li class="active"><a href="#">Wine</a></li>
+            <li><a href="#">Beer</a></li>
+            <li><a href="#">Spirits</a></li>
+          </ul>
+        </nav>
+
+      </div>
     </div>
+
   </div>
 </div>
 ```
@@ -807,6 +844,7 @@ Navigation below the content level on a smartphone with links to the home page, 
     &:hover, &:hover:before {
       color: $venetian-red;
     }
+    &:hover:before {background: none;}
   }
   li {
     display: block;
@@ -814,14 +852,25 @@ Navigation below the content level on a smartphone with links to the home page, 
   }
   li.active a {color: $black;}
   @media only screen and (min-width: $screen-sm-min) {
-    li:first-child a {
+    li.list-emphasis a {
       color: $black;
       font-weight: bold;
       border-color: $coal;
     }
   }
-  ul a, ul ul li:first-child a {
-    color: $coal;
+  .list-sub {
+    position: relative;
+    &:after {
+      font-family: $admin-icons;
+      content: '>';
+      padding-right: 5px;
+      position: absolute;
+      top: 10px;
+      right: 5px;
+    }
+  }
+  li a, ul ul li:first-child a {
+    color: $empress;
     border-bottom: 1px solid $silver;
     padding: 10px 0;
     @media only screen and (max-width: $screen-xs-max) {
@@ -843,6 +892,13 @@ Navigation below the content level on a smartphone with links to the home page, 
   li.active a:before, li a:hover:before {background: $venetian-red;}
   .nav-mobile & {
     padding-bottom: 40px;
+  }
+}
+
+.drilldown {
+  overflow: hidden;
+  .drilldown-sub {
+    display: none;
   }
 }
 
@@ -945,16 +1001,25 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
     width: 100%;
     text-align: left;
     border: 1px solid $silver;
-    margin-left: 20px;
+    margin-left: 0px;
     padding: 10px;
     margin-top: 5px;
+    &:focus {
+      outline: 0;
+    }
     &.active {background: $smoke;}
+  }
+  ul li:first-child a {
+    border-bottom: none;
+  }
+  .collapse.in {
+    margin-left: 0;
   }
   ul ul {
     border: 1px solid $silver;
     border-top: none;
     border-bottom: none;
-    margin-left: 20px;
+    margin-left: 0px;
     width: 100%;
     a {
       margin: 0;

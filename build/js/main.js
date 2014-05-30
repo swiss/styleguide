@@ -100,15 +100,16 @@ function carouselInit ($) {
 
   var $toggleButton = $('button[data-toggle="collapse"]');
 
-  checkCollapseStatus();
+  checkCollapseStatusInit();
 
   $toggleButton.click(function () {
+    var $that = $(this);
     setTimeout(function(){
-      checkCollapseStatus();
-    }, 360);
+      checkCollapseStatus($that);
+    }, 500);
   });
 
-  function checkCollapseStatus() {
+  function checkCollapseStatusInit() {
     $toggleButton.each(function () {
       var $collapseTarget = $(this).data('target');
       $(this).removeClass('active').removeClass('icon--root').addClass('icon--greater');
@@ -116,6 +117,14 @@ function carouselInit ($) {
         $(this).addClass('active').addClass('icon--root').removeClass('icon--greater');
       }
     });
+  }
+
+  function checkCollapseStatus($that) {
+    var $collapseTarget = $that.data('target');
+    $that.removeClass('active').removeClass('icon--root').addClass('icon--greater');
+    if($($collapseTarget).hasClass('in')){
+      $that.addClass('active').addClass('icon--root').removeClass('icon--greater');
+    }
   }
 
   // Table Collapse
@@ -141,6 +150,34 @@ function carouselInit ($) {
   }
 
 }) (jQuery);
+/* ==========================================================
+ * drilldown.js
+ * Drilldown plugin scripts. For page-list-nav element
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-30 09:02:09
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+ (function($) {
+
+  var options = {
+    event: 'click', // * View note below
+    selector: 'a',  // * View note below
+    speed: 100,
+    cssClass: {
+      container: 'drilldown-container',
+      root: 'nav-page-list',
+      sub: 'drilldown-sub',
+      back: 'drilldown-back'
+    }
+  };
+
+  $('.drilldown').drilldown(options);
+
+ }) (jQuery);
 /* ==========================================================
  * global-nav.js
  * Global Navigation syripts

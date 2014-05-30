@@ -75,5 +75,8 @@ On smartphones there is always a link at the end of the page to the home page an
   &.breadcrumb--search {
     margin: 0.8em 0;
   }
+  @media only screen and (max-width: $screen-sm) {
+    display: none;
+  }
 }
 
