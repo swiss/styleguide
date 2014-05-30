@@ -6103,10 +6103,20 @@ On smartphones, some of the functions from the header, e.g. service navigation o
 
   - placed links in a `ul.list-unstyled` list
   - changed `.col-sm-3` in `.col-sm-4.col-md-3` for more readability on small size and removed useless `.row` wrapper
+  - added ``
 </div>
 
 ```html_example
 <footer>
+
+  <nav class="footer-service">
+    <ul>
+      <li><a href="#">Emergencies</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">Media</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
   <div class="site-map">
 
@@ -6265,6 +6275,9 @@ address {
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid white;
   padding-bottom: 30px; }
+  @media only screen and (max-width: 767px) {
+    .site-map {
+      display: none; } }
   .site-map + div {
     border-bottom: 1px solid white;
     padding-bottom: 10px; }
@@ -6272,6 +6285,22 @@ address {
     font-size: 13px;
     display: inline-block;
     padding: 3px 0; }
+
+.footer-service, .links-social {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .footer-service, .links-social {
+      display: block; }
+      .footer-service ul, .links-social ul {
+        padding: 0;
+        border-bottom: 1px solid #cccccc;
+        margin-left: -15px;
+        margin-right: -15px; }
+      .footer-service li, .links-social li {
+        display: block;
+        margin-left: 0;
+        padding: 9px;
+        border-top: 1px solid #cccccc; } }
 
 /*doc
 ---
@@ -6326,17 +6355,9 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
 footer img {
   max-width: 204px;
   margin: 15px 0; }
-@media only screen and (max-width: 767px) {
-  footer .links-social ul {
-    padding: 0;
-    margin-left: -15px;
-    margin-right: -15px;
-    border-bottom: 1px solid #cccccc; }
-  footer .links-social li {
-    display: block;
-    margin-left: 0;
-    padding: 9px;
-    border-top: 1px solid #cccccc; } }
+
+.links-social {
+  display: block; }
 
 /*doc
 ---
