@@ -258,16 +258,18 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
       max-width: 24px;
     }
   }
-  .table-cell > a {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    height: 100%;
-    padding: 10px 15px;
+  .table-cell {
     border-left: 1px solid $silver;
-    color: inherit;
-    &:focus {
-      text-decoration: none;
+      & > a {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      height: 100%;
+      padding: 10px 15px;
+      color: inherit;
+      &:focus {
+        text-decoration: none;
+      }
     }
   }
   .dropdown-menu {

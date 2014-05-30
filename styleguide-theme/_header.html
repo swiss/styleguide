@@ -73,21 +73,36 @@
             <div class="nav-mobile-header">
               <div class="table-row">
                 <span class="nav-mobile-logo"><img src="img/swiss.svg" alt="Confederatio Helvetica"></span>
-                <h1><a href="#">Main Title</a></h1>
+                <h1><a href="#"><%= title %></a></h1>
               </div>
             </div>
             <div class="table-cell dropdown">
               <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--menu"></span></a>
-              <nav class="nav-page-list dropdown-menu" role="menu">
-                <ul>
-                  <li><a href="#">Drinks</a></li>
-                  <li><a href="#">Mineral water</a></li>
-                  <li><a href="#">Wine</a></li>
-                  <li><a href="#">Beer</a></li>
-                  <li><a href="#">Spirits</a></li>
-                </ul>
+              <div class="drilldown dropdown-menu" role="menu">
+                <div class="drilldown-container">
+                  <nav class="nav-page-list">
+                    <ul>
+                      <% catWrappers.each do |wrapper| %>
+                        <li class="list-sub">
+                          <a href="#"><%= wrapper %></a>
+                          <ul class="drilldown-sub">
+                            <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                            <% @categories.each do |cat| %>
+                              <% if cat[0].include?(wrapper) %>
+                                <% catName = cat[0].split(nameScope).last %>
+                                <li>
+                                  <a href="<%= cat[1] %>"><%= catName %></a>
+                                </li>
+                              <% end %>
+                            <% end %>
+                          </ul>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </nav>
+                </div>
                 <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
-              </nav>
+              </div>
             </div>
             <div class="table-cell dropdown">
               <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>

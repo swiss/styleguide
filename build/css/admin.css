@@ -9642,16 +9642,17 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     .nav-mobile .nav-mobile-logo img {
       vertical-align: middle;
       max-width: 24px; }
-  .nav-mobile .table-cell > a {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    height: 100%;
-    padding: 10px 15px;
-    border-left: 1px solid #cccccc;
-    color: inherit; }
-    .nav-mobile .table-cell > a:focus {
-      text-decoration: none; }
+  .nav-mobile .table-cell {
+    border-left: 1px solid #cccccc; }
+    .nav-mobile .table-cell > a {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      height: 100%;
+      padding: 10px 15px;
+      color: inherit; }
+      .nav-mobile .table-cell > a:focus {
+        text-decoration: none; }
   .nav-mobile .dropdown-menu {
     margin-top: 5px;
     left: 0; }
