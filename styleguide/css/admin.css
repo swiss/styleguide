@@ -9459,16 +9459,20 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
         </div>
         <div class="table-cell dropdown">
           <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--menu"></span></a>
-          <nav class="nav-page-list dropdown-menu" role="menu">
-            <ul>
-              <li><a href="#">Drinks</a></li>
-              <li><a href="#">Mineral water</a></li>
-              <li><a href="#">Wine</a></li>
-              <li><a href="#">Beer</a></li>
-              <li><a href="#">Spirits</a></li>
-            </ul>
-            <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
-          </nav>
+          <div class="drilldown dropdown-menu" role="menu">
+            <div class="drilldown-container">
+              <nav class="nav-page-list">
+                <ul>
+                  <li><a href="#">Drinks</a></li>
+                  <li><a href="#">Mineral water</a></li>
+                  <li><a href="#">Wine</a></li>
+                  <li><a href="#">Beer</a></li>
+                  <li><a href="#">Spirits</a></li>
+                </ul>
+                <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+              </nav>
+            </div>
+          </div>
         </div>
         <div class="table-cell dropdown">
           <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
@@ -10248,6 +10252,8 @@ Navigation below the content level on a smartphone with links to the home page, 
   overflow: hidden; }
   .drilldown .drilldown-sub {
     display: none; }
+  .drilldown.dropdown-menu {
+    padding-top: 0; }
 
 /*doc
 ---
