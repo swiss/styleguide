@@ -778,16 +778,25 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
     width: 100%;
     text-align: left;
     border: 1px solid $silver;
-    margin-left: 20px;
+    margin-left: 0px;
     padding: 10px;
     margin-top: 5px;
+    &:focus {
+      outline: 0;
+    }
     &.active {background: $smoke;}
+  }
+  ul li:first-child a {
+    border-bottom: none;
+  }
+  .collapse.in {
+    margin-left: 0;
   }
   ul ul {
     border: 1px solid $silver;
     border-top: none;
     border-bottom: none;
-    margin-left: 20px;
+    margin-left: 0px;
     width: 100%;
     a {
       margin: 0;

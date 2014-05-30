@@ -10113,16 +10113,22 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
   width: 100%;
   text-align: left;
   border: 1px solid #cccccc;
-  margin-left: 20px;
+  margin-left: 0px;
   padding: 10px;
   margin-top: 5px; }
+  .nav-page-list--facette button:focus {
+    outline: 0; }
   .nav-page-list--facette button.active {
     background: whitesmoke; }
+.nav-page-list--facette ul li:first-child a {
+  border-bottom: none; }
+.nav-page-list--facette .collapse.in {
+  margin-left: 0; }
 .nav-page-list--facette ul ul {
   border: 1px solid #cccccc;
   border-top: none;
   border-bottom: none;
-  margin-left: 20px;
+  margin-left: 0px;
   width: 100%; }
   .nav-page-list--facette ul ul a {
     margin: 0;
@@ -10325,6 +10331,10 @@ The paging function allows the user to browse through a large number of elements
   display: block;
   margin: 0;
   background: none; }
+  .pagination:after {
+    content: " ";
+    display: table;
+    clear: both; }
   .pagination ul  {
     margin-right: 10px; }
   .pagination > li {
@@ -10345,6 +10355,13 @@ The paging function allows the user to browse through a large number of elements
     .pagination > .active > a:hover {
       background: #e5e5e5;
       color: inherit; }
+  @media only screen and (max-width: 768px) {
+    .pagination {
+      padding-top: 10px; }
+      .pagination.pull-right {
+        float: none !important; }
+      .pagination li a {
+        font-size: 12px; } }
 
 /* ==========================================================
  * progression.scss
