@@ -98,6 +98,16 @@
                           </ul>
                         </li>
                       <% end %>
+                      <li class="list-sub">
+                        <a href="#">Example Pages</a>
+                        <ul class="drilldown-sub">
+                          <% @config['static_page'].each do |static| %>
+                            <li>
+                              <a href="pages/<%= static.split(' | ').last %>"><%= static.split(' | ').first %></a>
+                            </li>
+                          <% end %>
+                        </ul>
+                      </li>
                     </ul>
                   </nav>
                 </div>
