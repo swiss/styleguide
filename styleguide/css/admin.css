@@ -10359,6 +10359,17 @@ In the news teaser, various snippets of news items are arranged chronologically.
   margin-bottom: 0; }
 .news-feed .list-group-item {
   padding: 5px 0; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .news-feed .list-group-item {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
+    .news-feed .list-group-item {
+      float: left;
+      width: 25%; } }
+
 .news-feed .list-group-item:last-child {
   border-bottom: none; }
 
