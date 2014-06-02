@@ -63,3 +63,7 @@ hr {
   height: 1px;
   background: $light-grey;
 }
+
+.container-main > .container-fluid > .row {
+  margin-bottom: 2em;
+}
