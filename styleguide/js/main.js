@@ -251,12 +251,13 @@ function carouselInit ($) {
       "shown.bs.dropdown": function() {
           $(this).data('closable', false);
        },
-      "click": function() {
-          $(this).data('closable', true);
-      },
       "hide.bs.dropdown": function() {
           return $(this).data('closable');
       }
+  });
+
+  $yamm.on("click", '.yamm-close, .yamm-close-bottom, .dropdown-toggle', function() {
+      $(this).parents($dropdown).data('closable', true);
   });
 
   // Disable dropdown-menu closing click
