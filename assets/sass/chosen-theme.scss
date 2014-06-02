@@ -67,9 +67,6 @@
    text-decoration: none;
    white-space: nowrap;
    line-height: 1.2;
-   &:hover {
-     border-color: $venetian-red;
-   }
  }
  .chosen-container-single .chosen-default {
    color: $coal;
@@ -284,7 +281,7 @@
  /* @end */
  /* @group Active  */
  .chosen-container-active .chosen-single {
-   border: 1px solid $venetian-red;
+   border: 1px solid $malibu;
  }
  .chosen-container-active.chosen-with-drop .chosen-single {
    border: 1px solid $coal;
@@ -299,7 +296,7 @@
    background-position: -18px 2px;
  }
  .chosen-container-active .chosen-choices {
-   border: 1px solid $venetian-red;
+   border: 1px solid $malibu;
  }
  .chosen-container-active .chosen-choices li.search-field input[type="text"] {
    color: #111 !important;

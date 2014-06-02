@@ -1,14 +1,14 @@
 /* ==========================================================
  * bootstrap-variables.scss
  * Bootstrap variables with custom values to fits with our project
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 09:38:36
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 // a flag to toggle asset pipeline / compass integration
@@ -201,7 +201,7 @@ $input-border:                   #ccc !default;
 //** `<input>` border radius
 $input-border-radius:            $border-radius-base !default;
 //** Border color for inputs on focus
-$input-border-focus:             #66afe9 !default;
+$input-border-focus:             $malibu !default;
 
 //** Placeholder text color
 $input-color-placeholder:        $gray-light !default;

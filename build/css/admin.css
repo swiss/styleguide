@@ -92,20 +92,15 @@ The red color is used in the red line which marks the bottom of the header, and 
     <div class="col-sm-3"><div style="background:#F7001D"><br><p class="text-center" style="color:white;">#F7001D</p><br></div><pre class="text-center">$red</pre></div>
     <div class="col-sm-3"><div style="background:#006699"><br><p class="text-center" style="color:white;">#006699</p><br></div><pre class="text-center">$cerulean</pre></div>
     <div class="col-sm-3"><div style="background:#e7edef"><br><p class="text-center" style="color:black;">#e7edef</p><br></div><pre class="text-center">$solitude</pre></div>
-  </div>
-  <div class="row">
     <div class="col-sm-3"><div style="background:#f2f7f9"><br><p class="text-center" style="color:black;">#f2f7f9</p><br></div><pre class="text-center">$clear-day</pre></div>
     <div class="col-sm-3"><div style="background:#fffab2"><br><p class="text-center" style="color:black;">#fffab2</p><br></div><pre class="text-center">$mocassin</pre></div>
     <div class="col-sm-3"><div style="background:#D8E8EF"><br><p class="text-center" style="color:black;">#D8E8EF</p><br></div><pre class="text-center">$pattens-blue</pre></div>
+    <div class="col-sm-3"><div style="background:#66afe9"><br><p class="text-center" style="color:black;">#66afe9</p><br></div><pre class="text-center">$malibu</pre></div>
     <div class="col-sm-3"><div style="background:#000000"><br><p class="text-center" style="color:white;">#000000</p><br></div><pre class="text-center">$black</pre></div>
-    </div>
-    <div class="row">
     <div class="col-sm-3"><div style="background:#333333"><br><p class="text-center" style="color:white;">#333333</p><br></div><pre class="text-center">$night-rider</pre></div>
     <div class="col-sm-3"><div style="background:#454545"><br><p class="text-center" style="color:white;">#454545</p><br></div><pre class="text-center">$coal</pre></div>
     <div class="col-sm-3"><div style="background:#757575"><br><p class="text-center" style="color:white;">#757575</p><br></div><pre class="text-center">$empress</pre></div>
     <div class="col-sm-3"><div style="background:#CCCCCC"><br><p class="text-center" style="color:white;">#CCCCCC</p><br></div><pre class="text-center">$silver</pre></div>
-    </div>
-    <div class="row">
     <div class="col-sm-3"><div style="background:#D5D5D5"><br><p class="text-center" style="color:black;">#D5D5D5</p><br></div><pre class="text-center">$light-grey</pre></div>
     <div class="col-sm-3"><div style="background:#E5E5E5"><br><p class="text-center" style="color:black;">#E5E5E5</p><br></div><pre class="text-center">$gainsboro</pre></div>
     <div class="col-sm-3"><div style="background:#F5F5F5"><br><p class="text-center" style="color:black;">#F5F5F5</p><br></div><pre class="text-center">$smoke</pre></div>
@@ -127,7 +122,7 @@ The red color is used in the red line which marks the bottom of the header, and 
 /* ==========================================================
  * bootstrap-variables.scss
  * Bootstrap variables with custom values to fits with our project
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 09:38:36
  *
@@ -2366,7 +2361,7 @@ output {
   line-height: 1.6;
   color: #555555; }
 
-.form-control, .has-warning .form-control, .has-success .form-control, .has-error .form-control {
+.form-control, .has-success .form-control, .has-error .form-control {
   display: block;
   width: 100%;
   height: 36px;
@@ -2387,19 +2382,19 @@ output {
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
-  .form-control::-moz-placeholder, .has-warning .form-control::-moz-placeholder, .has-success .form-control::-moz-placeholder, .has-error .form-control::-moz-placeholder {
+  .form-control::-moz-placeholder, .has-success .form-control::-moz-placeholder, .has-error .form-control::-moz-placeholder {
     color: #999999;
     opacity: 1; }
   .form-control:-ms-input-placeholder {
     color: #999999; }
-  .form-control::-webkit-input-placeholder, .has-warning .form-control::-webkit-input-placeholder, .has-success .form-control::-webkit-input-placeholder, .has-error .form-control::-webkit-input-placeholder {
+  .form-control::-webkit-input-placeholder, .has-success .form-control::-webkit-input-placeholder, .has-error .form-control::-webkit-input-placeholder {
     color: #999999; }
   .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     cursor: not-allowed;
     background-color: #eeeeee;
     opacity: 1; }
 
-textarea.form-control, .has-warning textarea.form-control, .has-success textarea.form-control, .has-error textarea.form-control {
+textarea.form-control, .has-success textarea.form-control, .has-error textarea.form-control {
   height: auto; }
 
 input[type="search"] {
@@ -5426,8 +5421,6 @@ button.close {
   text-decoration: none;
   white-space: nowrap;
   line-height: 1.2; }
-  .chosen-container-single .chosen-single:hover {
-    border-color: #dc0018; }
 
 .chosen-container-single .chosen-default {
   color: #454545; }
@@ -5645,7 +5638,7 @@ button.close {
 /* @end */
 /* @group Active  */
 .chosen-container-active .chosen-single {
-  border: 1px solid #dc0018; }
+  border: 1px solid #66afe9; }
 
 .chosen-container-active.chosen-with-drop .chosen-single {
   border: 1px solid #454545;
@@ -5660,7 +5653,7 @@ button.close {
   background-position: -18px 2px; }
 
 .chosen-container-active .chosen-choices {
-  border: 1px solid #dc0018; }
+  border: 1px solid #66afe9; }
 
 .chosen-container-active .chosen-choices li.search-field input[type="text"] {
   color: #111 !important; }
@@ -5945,7 +5938,7 @@ Use the class `.btn` to create a styled button. You can use it on a `<input>`, `
 /* ==========================================================
  * checkboxes.scss
  * Custom checkbox styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
@@ -6500,17 +6493,15 @@ legend {
   margin-left: 0;
   margin-right: 0; }
 
-.form-control, .has-warning .form-control, .has-success .form-control, .has-error .form-control {
-  border: 1px solid #757575;
+.form-control, .has-success .form-control, .has-error .form-control {
+  border-color: #757575;
   padding: 0.4em 0.3076em;
   line-height: 1.2;
   height: auto; }
-  .form-control:hover {
-    border-color: #dc0018; }
-  .form-control:focus {
-    border-color: #dc0018 !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important; }
+  .form-control[type=file] {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 label {
   font-weight: normal; }
@@ -6524,8 +6515,6 @@ label {
   padding: 6px 0; }
   .has-warning .control-label {
     color: #454545; }
-  .has-warning .form-control {
-    border-color: #454545; }
   .has-warning .help-block {
     color: #dc0018; }
 
