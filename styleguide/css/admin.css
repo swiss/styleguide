@@ -9622,7 +9622,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
         background: -webkit-linear-gradient(top, #f4f4f4 0%, white 10%, white 79%, white 91%, #dbdbdb 100%);
         background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), color-stop(10%, white), color-stop(79%, white), color-stop(91%, white), to(#dbdbdb));
         background: linear-gradient(to bottom, #f4f4f4 0%, white 10%, white 79%, white 91%, #dbdbdb 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#dbdbdb',GradientType=0 ); }
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); }
   .nav-main.yamm .nav + .tab-content {
     padding: 0; }
   .nav-main.yamm .nav .dropdown-menu li {
