@@ -7814,7 +7814,7 @@ hr {
   height: 1px;
   background: #d5d5d5; }
 
-.container-main > .container-fluid > .row {
+div[class*="col"] {
   margin-bottom: 2em; }
 
 /* ==========================================================

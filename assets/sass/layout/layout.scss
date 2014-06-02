@@ -64,6 +64,6 @@ hr {
   background: $light-grey;
 }
 
-.container-main > .container-fluid > .row {
+div[class*="col"] {
   margin-bottom: 2em;
 }
