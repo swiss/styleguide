@@ -48,6 +48,11 @@ gulp.task('vendors', function() {
     .pipe(gulp.dest('build/js/TimelineJS'));
 
   gulp.src([
+      './bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*'
+    ])
+    .pipe(gulp.dest('build/css/bootstrap'));
+
+  gulp.src([
       './bower_components/jquery.socialshareprivacy/socialshareprivacy/images/*'
     ])
     .pipe(gulp.dest('build/css/images'));

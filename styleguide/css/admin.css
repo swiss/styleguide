@@ -392,7 +392,7 @@ th {
   font-family: 'Glyphicons Halflings';
   src: url("bootstrap/glyphicons-halflings-regular.eot");
   src: url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
-.glyphicon {
+.glyphicon, .alert:before {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -457,10 +457,10 @@ th {
 .glyphicon-th-list:before {
   content: "\e012"; }
 
-.glyphicon-ok:before {
+.glyphicon-ok:before, .alert.alert-success:before {
   content: "\e013"; }
 
-.glyphicon-remove:before {
+.glyphicon-remove:before, .alert.alert-danger:before {
   content: "\e014"; }
 
 .glyphicon-zoom-in:before {
@@ -673,7 +673,7 @@ th {
 .glyphicon-question-sign:before {
   content: "\e085"; }
 
-.glyphicon-info-sign:before {
+.glyphicon-info-sign:before, .alert.alert-info:before {
   content: "\e086"; }
 
 .glyphicon-screenshot:before {
@@ -5852,6 +5852,7 @@ Buttons                                                                       | 
 <button type="button" class="btn btn-primary">Primary</button><br>            |  `<button type="button" class="btn btn-primary">Primary</button>`
 <button type="button" class="btn btn-secondary">Secondary</button><br>        |  `<button type="button" class="btn btn-secondary">Secondary</button>`
 <button type="button" class="btn" disabled>Disabled</button><br>              |  `<button type="button" class="btn" disabled>Disabled</button>`
+<button type="button" class="btn btn-link">Button link</button><br>           |  `<button type="button" class="btn btn-link">Button link</button>`
 
 ## Print button
 
@@ -5866,8 +5867,7 @@ Buttons                                                                       | 
   border: 1px solid #757575;
   font-family: "Frutiger Neue Light", Arial, sans-serif; }
   .btn:hover {
-    border-color: #dc0018;
-    color: #757575;
+    background-color: #d5d5d5;
     z-index: 100; }
   .btn:focus, .btn:active {
     outline: none !important; }
@@ -5876,22 +5876,26 @@ Buttons                                                                       | 
     border-color: #006699; }
     .btn.btn-primary:hover {
       color: white;
-      border-color: #dc0018; }
+      background-color: #004b70; }
+    .btn.btn-primary:active {
+      background-color: #00334d; }
     .btn.btn-primary.active {
       color: white;
-      background-color: #00334d;
-      -webkit-box-shadow: none;
-      box-shadow: none; }
+      background-color: #00334d; }
   .btn.btn-secondary {
     background-color: #757575;
     color: white; }
+    .btn.btn-secondary:hover {
+      background-color: #616161; }
+    .btn.btn-secondary:active {
+      background-color: #4f4f4f; }
     .btn.btn-secondary.active {
       color: white;
       background-color: #454545;
       -webkit-box-shadow: none;
       box-shadow: none; }
   .btn.active {
-    color: #dc0018;
+    color: #006699;
     background-color: white;
     -webkit-box-shadow: none;
     box-shadow: none; }
@@ -5900,8 +5904,8 @@ Buttons                                                                       | 
     background-color: transparent;
     float: none; }
     .btn.btn-link:hover {
-      color: #dc0018;
-      text-decoration: none; }
+      color: #005580;
+      background: whitesmoke; }
 
 a.btn {
   color: inherit; }
@@ -8878,25 +8882,38 @@ Alerts are shown when you need to get the attention of the user with something i
 Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
 
 ```html_example
+<div class="alert alert-success">
+  Alert info!
+</div>
+<div class="alert alert-info">
+  Alert info!
+</div>
 <div class="alert alert-warning">
+  Alert info!
+</div>
+<div class="alert alert-danger">
   Alert info!
 </div>
 ```
 
 */
 .alert {
-  color: #454545;
   border: none;
-  padding-left: 35px;
+  padding-left: 55px;
   position: relative; }
-  .alert.alert-warning:before, .alert.alert-danger:before {
+  .alert:before {
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    font-size: 1.5em; }
+  .alert.alert-success:before {
+    top: 13px; }
+  .alert.alert-warning:before {
     font-family: "Admin Icons";
     content: '!';
-    position: absolute;
-    left: 12px;
-    top: 1px;
     font-size: 2em;
-    color: #dc0018; }
+    top: 13px;
+    left: 23px; }
 
 /* ==========================================================
  * anchor-links.scss
@@ -9163,16 +9180,17 @@ It is vital that this element should only be used in cases of emergency – i.e.
 */
 .alert--emergency {
   background-color: #fffab2;
-  border-left: 20px solid #dc0018;
+  border-left: 40px solid #dc0018;
   border-radius: 0;
   padding-left: 15px; }
   .alert--emergency:before {
     position: absolute;
-    top: 0;
-    left: -20px;
-    width: 20px;
+    top: 14px;
+    left: -30px;
+    width: 40px;
     height: auto;
     color: white;
+    font-family: "Admin Icons";
     content: '!';
     font-size: 2em;
     padding-left: 5px; }

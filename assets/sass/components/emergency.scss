@@ -39,16 +39,17 @@ It is vital that this element should only be used in cases of emergency – i.e.
 
 .alert--emergency {
   background-color: $mocassin;
-  border-left: 20px solid $venetian-red;
+  border-left: 40px solid $venetian-red;
   border-radius: 0;
   padding-left: 15px;
   &:before {
     position: absolute;
-    top: 0;
-    left: -20px;
-    width: 20px;
+    top: 14px;
+    left: -30px;
+    width: 40px;
     height: auto;
     color: $white;
+    font-family: $admin-icons;
     content: '!';
     font-size: 2em;
     padding-left: 5px;
