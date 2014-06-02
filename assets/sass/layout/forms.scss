@@ -176,8 +176,11 @@ label {
   margin-top: 1em;
   padding-bottom: 1.3em;
   border-bottom: 2px solid $silver;
+  .control-label {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
   label {
-    padding: 3px 0;
     margin-right: 1.6em;
   }
   input[type="number"] {

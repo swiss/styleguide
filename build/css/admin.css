@@ -6542,8 +6542,10 @@ label {
   margin-top: 1em;
   padding-bottom: 1.3em;
   border-bottom: 2px solid #cccccc; }
+  .form-inline .control-label, .navbar-form .control-label {
+    padding-top: 3px;
+    padding-bottom: 3px; }
   .form-inline label, .navbar-form label {
-    padding: 3px 0;
     margin-right: 1.6em; }
   .form-inline input[type="number"], .navbar-form input[type="number"] {
     width: 50px; }
