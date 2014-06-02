@@ -9423,8 +9423,7 @@ nav li:first-child {
 .nav-main {
   min-height: 70px;
   background: #e4e4e4;
-                                                                                                                    /* Old browsers * navigation.scss
-background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
+  /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
@@ -9616,7 +9615,14 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
         color: #757575;
         font-size: 0.9em; }
       .nav-main.yamm .nav > li > a:hover {
-        color: #dc0018; }
+        color: #dc0018;
+        background: white;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYmRiZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(10%, white), color-stop(79%, white), color-stop(91%, white), color-stop(100%, #dbdbdb));
+        background: -webkit-linear-gradient(top, #f4f4f4 0%, white 10%, white 79%, white 91%, #dbdbdb 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), color-stop(10%, white), color-stop(79%, white), color-stop(91%, white), to(#dbdbdb));
+        background: linear-gradient(to bottom, #f4f4f4 0%, white 10%, white 79%, white 91%, #dbdbdb 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#dbdbdb',GradientType=0 ); }
   .nav-main.yamm .nav + .tab-content {
     padding: 0; }
   .nav-main.yamm .nav .dropdown-menu li {
