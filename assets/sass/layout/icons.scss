@@ -93,8 +93,14 @@ For **inside-icon** element, use the global `.icon` and `.icon--before` or `.ico
 */
 
 .icon {
-  &.icon--before:before {font-family: $admin-icons;}
-  &.icon--after:after {font-family: $admin-icons;}
+  &.icon--before:before {
+    font-family: $admin-icons;
+    display: inline-block; // to enable the possibility of no text-decoration whtn in a link
+  }
+  &.icon--after:after {
+    font-family: $admin-icons;
+    display: inline-block; // to enable the possibility of no text-decoration whtn in a link
+  }
 }
 
 span.icon {

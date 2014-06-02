@@ -1037,7 +1037,7 @@ a {
   color: #006699;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #00334d;
+    color: #006699;
     text-decoration: underline; }
   a:focus {
     outline: thin dotted;
@@ -2884,7 +2884,7 @@ select[multiple].input-lg,
   .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
     border-color: transparent; }
   .btn-link:hover, .btn-link:focus {
-    color: #00334d;
+    color: #006699;
     text-decoration: underline;
     background-color: transparent; }
   .btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
@@ -3851,7 +3851,7 @@ tbody.collapse.in {
   .pagination > li > a:hover, .pagination > li > a:focus,
   .pagination > li > span:hover,
   .pagination > li > span:focus {
-    color: #00334d;
+    color: #006699;
     background-color: #eeeeee;
     border-color: #dddddd; }
   .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
@@ -6699,9 +6699,11 @@ For **inside-icon** element, use the global `.icon` and `.icon--before` or `.ico
 
 */
 .icon.icon--before:before, a[data-toggle="collapse"]:before {
-  font-family: "Admin Icons"; }
+  font-family: "Admin Icons";
+  display: inline-block; }
 .icon.icon--after:after, a.icon--after[data-toggle="collapse"]:after {
-  font-family: "Admin Icons"; }
+  font-family: "Admin Icons";
+  display: inline-block; }
 
 span.icon {
   font-family: "Admin Icons";
@@ -7869,8 +7871,8 @@ a {
   color: #006699;
   line-height: 1.5; }
   a:hover {
-    color: #dc0018;
-    text-decoration: none; }
+    color: #005580;
+    text-decoration: underline; }
   a:active, a:visited {
     text-decoration: none; }
   p a {
@@ -7881,10 +7883,8 @@ a {
   small a ~ span {
     display: block;
     margin-top: -5px; }
-  a.icon, a[data-toggle="collapse"] {
+  a.icon:hover:before, a[data-toggle="collapse"]:hover:before, a.icon:hover:after, a[data-toggle="collapse"]:hover:after {
     text-decoration: none; }
-    a.icon:hover, a[data-toggle="collapse"]:hover {
-      text-decoration: none; }
 
 /*doc
 ---
