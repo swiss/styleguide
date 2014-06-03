@@ -204,11 +204,11 @@ function carouselInit ($) {
 function mobileTable ($) {
   $(".table-bordered").each(function () {
     if ($(window).width() < 767){
-      if($(this).find('tbody tr th:first-child').length !== 0){
+      // Fix caption height
+      var captionHeight = $(this).find("caption").height();
+      captionHeight += 10;
 
-        // Fix caption height
-        var captionHeight = $(this).find("caption").height();
-        captionHeight += 10;
+      if($(this).find('tbody tr th:first-child').length !== 0){
 
         // Wrap table with helper class
         $(this).addClass('table-fixed').wrap('<div class="table-fixed-wrapper" style="padding-top: '+captionHeight+'px;"><div class="table-fixed-container"></div></div>');
@@ -229,7 +229,7 @@ function mobileTable ($) {
           $(this).find("td, th").height(maxHeight);
         });
       } else {
-
+        $(this).addClass('table-fixed').wrap('<div class="mobile-table" style="padding-top: '+captionHeight+'px;"><div></div></div>');
       }
     }
   });
