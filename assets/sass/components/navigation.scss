@@ -480,7 +480,6 @@ On smartphones the language selection is always included in a drawer section abo
   **2.1.0:**
 
   - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
-  - added the `.select-lang` [element](http://adminch.antistatique.net/navigation_modules_-_header.html#c-lang-select) after the `.nav-lang`
 </div>
 
 ```html_example
@@ -499,15 +498,6 @@ On smartphones the language selection is always included in a drawer section abo
           <li><a class="disabled" href="#">RM</a></li>
           <li><a href="#">EN</a></li>
         </ul>
-      </nav>
-      <nav class="select-lang pull-right">
-        <select class="form-control select-lang">
-          <option>DE</option>
-          <option>FR</option>
-          <option>IT</option>
-          <option>RM</option>
-          <option>EN</option>
-        </select>
       </nav>
       <nav class="nav-service">
         <ul>
@@ -549,7 +539,7 @@ On smartphones the language selection is always included in a drawer section abo
     h2 {
       display: block;
       font-size: 1em;
-      margin: 6px 0 0 0;
+      margin: 0;
       float: left;
       font-family: $font-family-sans-serif-bold;
     }
@@ -566,7 +556,7 @@ On smartphones the language selection is always included in a drawer section abo
     border-left: 1px solid $gainsboro;
   }
   @media only screen and (max-width: $screen-xs-max) {
-    display: none;
+    margin-bottom: 0;
   }
   li {
     padding: 0;
@@ -575,8 +565,13 @@ On smartphones the language selection is always included in a drawer section abo
   a {
     color: $coal;
     padding: 4px;
-    &:hover {color: $venetian-red;}
-    &.active {background: $gainsboro;}
+    &:hover {color: $cerulean;}
+    &.active {
+      background: $gainsboro;
+      @media only screen and (max-width: $screen-xs-max) {
+        background: $silver;
+      }
+    }
     &.disabled {color: $silver;}
     &.disabled:hover {cursor: default;}
   }

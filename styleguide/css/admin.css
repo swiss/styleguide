@@ -6581,9 +6581,6 @@ header {
   width: 100%;
   background: #dc0018; }
 
-@media only screen and (max-width: 767px) {
-  .download-link {
-    display: none; } }
 /* ==========================================================
  * icons.scss
  * Icons elements styles
@@ -9853,7 +9850,6 @@ On smartphones the language selection is always included in a drawer section abo
   **2.1.0:**
 
   - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
-  - added the `.select-lang` [element](http://adminch.antistatique.net/navigation_modules_-_header.html#c-lang-select) after the `.nav-lang`
 </div>
 
 ```html_example
@@ -9872,15 +9868,6 @@ On smartphones the language selection is always included in a drawer section abo
           <li><a class="disabled" href="#">RM</a></li>
           <li><a href="#">EN</a></li>
         </ul>
-      </nav>
-      <nav class="select-lang pull-right">
-        <select class="form-control select-lang">
-          <option>DE</option>
-          <option>FR</option>
-          <option>IT</option>
-          <option>RM</option>
-          <option>EN</option>
-        </select>
       </nav>
       <nav class="nav-service">
         <ul>
@@ -9927,7 +9914,7 @@ On smartphones the language selection is always included in a drawer section abo
       .nav-services h2 {
         display: block;
         font-size: 1em;
-        margin: 6px 0 0 0;
+        margin: 0;
         float: left;
         font-family: "Frutiger Neue Bold", Arial, sans-serif; } }
 
@@ -9942,7 +9929,7 @@ On smartphones the language selection is always included in a drawer section abo
       border-left: 1px solid #e5e5e5; } }
   @media only screen and (max-width: 767px) {
     .nav-lang {
-      display: none; } }
+      margin-bottom: 0; } }
   .nav-lang li {
     padding: 0;
     margin: 0; }
@@ -9950,9 +9937,12 @@ On smartphones the language selection is always included in a drawer section abo
     color: #454545;
     padding: 4px; }
     .nav-lang a:hover {
-      color: #dc0018; }
+      color: #006699; }
     .nav-lang a.active {
       background: #e5e5e5; }
+      @media only screen and (max-width: 767px) {
+        .nav-lang a.active {
+          background: #cccccc; } }
     .nav-lang a.disabled {
       color: #cccccc; }
     .nav-lang a.disabled:hover {
