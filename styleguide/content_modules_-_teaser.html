@@ -22,7 +22,7 @@
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.min.css">
-    <link rel="stylesheet" href="./theme-build/css/cortana.min.css">
+    <link rel="stylesheet" href="./theme-build/css/admin-theme.min.css">
 
     <!-- Source CSS -->
     
@@ -66,7 +66,7 @@
             </nav>
             <br><br>
             <form class="form-horizontal form-search pull-right" role="form">
-              <input id="cortana-search" class="form-control search-field" type="text" placeholder="Search">
+              <input id="admin-search" class="form-control search-field" type="text" placeholder="Search">
             </form>
           </div>
         </div>
@@ -8840,7 +8840,7 @@
   </script>
   <script src="theme-build/js/main.js"></script>
   <script>
-    var cortanaSearchData =
+    var searchData =
     [
       
         
@@ -9801,13 +9801,13 @@
     {}];
 
     (function($) {
-      $('#cortana-search').typeahead({
-        name: 'cortana_search',
-        local: cortanaSearchData,
+      $('#admin-search').typeahead({
+        name: 'admin_search',
+        local: searchData,
         template: [
           '<a href="{{path}}">',
-          '<p class="cortana-search-title">{{title}}</p>',
-          '<p class="cortana-search-path">{{breadcrumb}}</p>',
+          '<p class="admin-search-title">{{title}}</p>',
+          '<p class="admin-search-path">{{breadcrumb}}</p>',
           '</a>'
         ].join(''),
         updater: function () {
@@ -9818,7 +9818,7 @@
       }).on('typeahead:selected', function(event, data) {
         window.location.replace(data.path);
       });
-      $('<span class="icon icon--close" onclick="$(\'#cortana-search\').focus().val(\'\');"></span>').insertAfter('#cortana-search');
+      $('<span class="icon icon--close" onclick="$(\'#admin-search\').focus().val(\'\');"></span>').insertAfter('#admin-search');
       $('.form-search').append('<span class="icon icon--search"></span>');
     }) (jQuery_no_conflict);
   </script>
