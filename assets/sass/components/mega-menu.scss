@@ -24,6 +24,9 @@
     box-shadow: 0 4px 4px fade-out($black, 0.7);
     li {display: block;}
   }
+  .dropdown-backdrop {
+    display: none;
+  }
   .no-ie &.nav-open {
     z-index: 9999;
   }
@@ -43,5 +46,8 @@
   color: $empress;
   &:hover {
     color: $venetian-red;
+  }
+  .nav-page-list & {
+    width: 100px;
   }
 }

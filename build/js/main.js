@@ -100,15 +100,16 @@ function carouselInit ($) {
 
   var $toggleButton = $('button[data-toggle="collapse"]');
 
-  checkCollapseStatus();
+  checkCollapseStatusInit();
 
   $toggleButton.click(function () {
+    var $that = $(this);
     setTimeout(function(){
-      checkCollapseStatus();
-    }, 360);
+      checkCollapseStatus($that);
+    }, 500);
   });
 
-  function checkCollapseStatus() {
+  function checkCollapseStatusInit() {
     $toggleButton.each(function () {
       var $collapseTarget = $(this).data('target');
       $(this).removeClass('active').removeClass('icon--root').addClass('icon--greater');
@@ -116,6 +117,14 @@ function carouselInit ($) {
         $(this).addClass('active').addClass('icon--root').removeClass('icon--greater');
       }
     });
+  }
+
+  function checkCollapseStatus($that) {
+    var $collapseTarget = $that.data('target');
+    $that.removeClass('active').removeClass('icon--root').addClass('icon--greater');
+    if($($collapseTarget).hasClass('in')){
+      $that.addClass('active').addClass('icon--root').removeClass('icon--greater');
+    }
   }
 
   // Table Collapse
@@ -142,6 +151,65 @@ function carouselInit ($) {
 
 }) (jQuery);
 /* ==========================================================
+ * drilldown.js
+ * Drilldown plugin scripts. For page-list-nav element
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-30 09:02:09
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+ (function($) {
+
+  var options = {
+    event: 'click', // * View note below
+    selector: 'a',  // * View note below
+    speed: 100,
+    cssClass: {
+      container: 'drilldown-container',
+      root: 'nav-page-list',
+      sub: 'drilldown-sub',
+      back: 'drilldown-back'
+    }
+  };
+
+  $('.drilldown').drilldown(options);
+
+ }) (jQuery);
+/* ==========================================================
+ * global-nav.js
+ * Global Navigation syripts
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-27 16:36:15
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+ (function($) {
+
+  // Handle scroll to position nav as fixed
+
+  var top = $('.nav-mobile').offset().top;
+
+
+  $(window).scroll(function (event) {
+
+    var y = $(this).scrollTop();
+
+    if (y >= top) {
+      $('.nav-mobile').addClass('fixed');
+    }
+    else {
+      $('.nav-mobile').removeClass('fixed');
+    }
+
+  });
+ }) (jQuery);
+/* ==========================================================
  * rich-menu.js
  * Add overlay when openning a rich yamm menu and define open/close events
  *
@@ -165,7 +233,7 @@ function carouselInit ($) {
   // Toggle overlay
   $yamm.each(function () {
     var $that = $(this);
-    $that.find($dropdownToggle).click(function () {
+    $that.on('click', '.dropdown-toggle', function () {
       if ($(this).parent().hasClass('open')){
         $('.overlay').hide();
         $that.removeClass('nav-open');
@@ -183,12 +251,13 @@ function carouselInit ($) {
       "shown.bs.dropdown": function() {
           $(this).data('closable', false);
        },
-      "click": function() {
-          $(this).data('closable', true);
-      },
       "hide.bs.dropdown": function() {
           return $(this).data('closable');
       }
+  });
+
+  $yamm.on("click", '.yamm-close, .yamm-close-bottom, .dropdown-toggle', function() {
+      $(this).parents($dropdown).data('closable', true);
   });
 
   // Disable dropdown-menu closing click

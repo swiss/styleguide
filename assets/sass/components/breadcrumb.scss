@@ -57,14 +57,12 @@ On smartphones there is always a link at the end of the page to the home page an
 
 .breadcrumb {
   margin: 0;
-  li {
-    margin: 0 10px;
-    &:first-child {margin-left: 0;}
-  }
+  li {margin: 0 10px 0 0;}
+  .icon {margin-right: 10px;}
   a {
-    color: $cerulean;
     font-size: 0.85em;
     margin-top: 0;
+
   }
   span.icon {
     position: relative;
@@ -72,10 +70,13 @@ On smartphones there is always a link at the end of the page to the home page an
   }
   li.active {
     color: $coal;
-    font-size: 0.85em
+    font-size: 0.935em
   }
   &.breadcrumb--search {
     margin: 0.8em 0;
+  }
+  @media only screen and (max-width: $screen-sm) {
+    display: none;
   }
 }
 

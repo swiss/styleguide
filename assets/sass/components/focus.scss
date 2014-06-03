@@ -97,7 +97,9 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
 
 .nav-tabs.nav-tabs-focus {
   position: relative;
-  border: 1px solid $silver;
+  border-top: 1px solid $silver;
+  border-right: 1px solid $silver;
+  border-left: 1px solid $silver;
   margin-top: 0;
 }
 
@@ -107,34 +109,46 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   clear: both;
 }
 
+.nav-tabs.nav-justified.nav-tabs-focus>.active>a,
+.nav-tabs.nav-justified.nav-tabs-focus>.active>a:hover {
+  height: 70px;
+  border-bottom: 3px solid $venetian-red;
+}
+
 .nav-tabs.nav-tabs-focus li {
-  height: 100%;
-  background: $smoke;
   border-left: 1px solid $silver;
+  border-bottom: none !important;
   position: relative;
   &:first-child {border-left: none;}
   a {
-    border: none !important;
+    background: $smoke;
+    height: 69px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid $silver;
     padding-bottom: 10px;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.1em;
     text-align: center;
     border-radius: 0;
-    background: transparent !important;
+    color: $night-rider;
+  }
+  a:hover  {
+    height: 69px;
+    // padding-bottom: 9px !important;
+    border-bottom: 3px solid $venetian-red;
+    color: $black;
+  }
+  &.active a, &.active a:hover {
+    border-right: none;
+    border-left: none;
+    padding-bottom: 10px !important;
+    border-bottom: 3px solid $venetian-red;
+    background: $gainsboro;
+    color: $black;
   }
   &:hover a {
-    border-right-color: $silver;
-    padding-bottom: 8px !important;
-    color: $coal;
-  }
-  &.active a, &.active:hover a {
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-    padding-bottom: 8px !important;
-  }
-  &.active, &.active:hover, &:hover {
-    background: $gainsboro;
-    border-bottom: 3px solid $venetian-red;
+    padding-top: 10px !important; // override nav-tabs behaviour
   }
 }
 
@@ -142,4 +156,22 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   padding: 0;
   border-bottom: none;
   border-top: 1px solid $silver;
+  h2 {
+    font-family: $font-family-sans-serif-bold;
+  }
+  div[class*="col"]:last-child {
+    padding-left: 0;
+  }
+  @media only screen and (max-width: $screen-sm) {
+    div[class*="col"]:last-child {
+      padding: 20px 30px;
+    }
+  }
 }
+
+.nav-justified>li>a, .nav-tabs.nav-justified>li>a {
+  @media only screen and (max-width: $screen-sm) {
+    margin-bottom: 1px;
+  }
+}
+

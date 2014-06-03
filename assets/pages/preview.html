@@ -67,27 +67,29 @@
           </ul>
         </nav>
 
-        <nav class="nav-lang">
-          <ul>
-            <li><a class="active" href="#">DE</a></li>
-            <li><a href="#">FR</a></li>
-            <li><a href="#">IT</a></li>
-            <li><a class="disabled" href="#">RM</a></li>
-            <li><a href="#">EN</a></li>
-          </ul>
-        </nav>
-        <nav class="nav-service">
-          <ul>
-            <li><a href="#">Emergencies</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Media</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+        <section class="nav-services clearfix">
+          <nav class="nav-lang">
+            <ul>
+              <li><a class="active" href="#">DE</a></li>
+              <li><a href="#">FR</a></li>
+              <li><a href="#">IT</a></li>
+              <li><a class="disabled" href="#">RM</a></li>
+              <li><a href="#">EN</a></li>
+            </ul>
+          </nav>
+          <nav class="nav-service">
+            <ul>
+              <li><a href="#">Emergencies</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Media</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </section>
       </div>
 
       <a href="#" class="brand hidden-xs">
-        <img src="../img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+        <img src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
         <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
       </a>
 
@@ -122,6 +124,54 @@
     </header>
 
     <nav class="nav-main yamm navbar" role="navigation">
+      <section class="nav-mobile">
+        <div class="table-row">
+          <div class="nav-mobile-header">
+            <div class="table-row">
+              <span class="nav-mobile-logo">
+                  <img src="../img/swiss.svg" onerror="this.onerror=null; this.src='../img/swiss.png'" alt="Confederatio Helvetica" />
+                </span>
+              <h1><a href="#">Main Title</a></h1>
+            </div>
+          </div>
+          <div class="table-cell dropdown">
+            <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--menu"></span></a>
+            <div class="drilldown dropdown-menu" role="menu">
+              <div class="drilldown-container">
+                <nav class="nav-page-list">
+                  <ul>
+                    <li class="list-sub">
+                      <a href="#">Drinks</a>
+                      <nav class="drilldown-sub">
+                        <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                        <ul>
+                          <li><a href="#">Test</a></li>
+                          <li><a href="#">Test2</a></li>
+                          <li><a href="#">Test3</a></li>
+                        </ul>
+                      </nav>
+                    </li>
+                    <li><a href="#">Mineral water</a></li>
+                    <li><a href="#">Wine</a></li>
+                    <li><a href="#">Beer</a></li>
+                    <li><a href="#">Spirits</a></li>
+                  </ul>
+                  <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="table-cell dropdown">
+            <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
+            <div class="dropdown-menu" role="menu">
+              <form class="form" role="form">
+                <input class="form-control" type="text" placeholder="Search">
+                <span class="icon icon--search"></span>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- The tab navigation -->
       <ul class="nav navbar-nav">
         <li class="dropdown yamm-fw">
@@ -190,7 +240,8 @@
 
     <br>
 
-    <div class="row">
+    <div class="container-fluid">
+      <div class="row">
       <div class="col-sm-3">
         <nav class="nav-page-list">
           <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
@@ -254,6 +305,7 @@
 
         </div>
       </div>
+      </div>
     </div>
 
     <footer>
@@ -265,77 +317,93 @@
           <div class="row">
             <div class="col-sm-3">
               <h3>Einreise & Aufenthalt in der Schweiz</h3>
-              <a href="#">Einreise in die Schweiz</a>
-              <a href="#">Visabestimmungen</a>
-              <a href="#">Aufenthalt in der Schweiz</a>
-              <a href="#">Geschäftstätigkeit in der Schweiz</a>
-              <a href="#">Ausländische Vertretungen in der Schweiz</a>
-              <a href="#">Informationen zur Schweiz</a>
+              <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
             </div>
             <div class="col-sm-3">
               <h3>Einreise & Aufenthalt in der Schweiz</h3>
-              <a href="#">Einreise in die Schweiz</a>
-              <a href="#">Visabestimmungen</a>
-              <a href="#">Aufenthalt in der Schweiz</a>
-              <a href="#">Geschäftstätigkeit in der Schweiz</a>
-              <a href="#">Ausländische Vertretungen in der Schweiz</a>
-              <a href="#">Informationen zur Schweiz</a>
+              <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
             </div>
             <div class="col-sm-3">
               <h3>Einreise & Aufenthalt in der Schweiz</h3>
-              <a href="#">Einreise in die Schweiz</a>
-              <a href="#">Visabestimmungen</a>
-              <a href="#">Aufenthalt in der Schweiz</a>
-              <a href="#">Geschäftstätigkeit in der Schweiz</a>
-              <a href="#">Ausländische Vertretungen in der Schweiz</a>
-              <a href="#">Informationen zur Schweiz</a>
+              <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
             </div>
             <div class="col-sm-3">
               <h3>Einreise & Aufenthalt in der Schweiz</h3>
-              <a href="#">Einreise in die Schweiz</a>
-              <a href="#">Visabestimmungen</a>
-              <a href="#">Aufenthalt in der Schweiz</a>
-              <a href="#">Geschäftstätigkeit in der Schweiz</a>
-              <a href="#">Ausländische Vertretungen in der Schweiz</a>
-              <a href="#">Informationen zur Schweiz</a>
+              <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-3">
               <h3>Einreise & Aufenthalt in der Schweiz</h3>
-              <a href="#">Einreise in die Schweiz</a>
-              <a href="#">Visabestimmungen</a>
-              <a href="#">Aufenthalt in der Schweiz</a>
-              <a href="#">Geschäftstätigkeit in der Schweiz</a>
-              <a href="#">Ausländische Vertretungen in der Schweiz</a>
-              <a href="#">Informationen zur Schweiz</a>
+              <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
             </div>
             <div class="col-sm-3">
               <h3>Einreise & Aufenthalt in der Schweiz</h3>
-              <a href="#">Einreise in die Schweiz</a>
-              <a href="#">Visabestimmungen</a>
-              <a href="#">Aufenthalt in der Schweiz</a>
-              <a href="#">Geschäftstätigkeit in der Schweiz</a>
-              <a href="#">Ausländische Vertretungen in der Schweiz</a>
-              <a href="#">Informationen zur Schweiz</a>
+              <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
             </div>
             <div class="col-sm-3">
               <h3>Einreise & Aufenthalt in der Schweiz</h3>
-              <a href="#">Einreise in die Schweiz</a>
-              <a href="#">Visabestimmungen</a>
-              <a href="#">Aufenthalt in der Schweiz</a>
-              <a href="#">Geschäftstätigkeit in der Schweiz</a>
-              <a href="#">Ausländische Vertretungen in der Schweiz</a>
-              <a href="#">Informationen zur Schweiz</a>
+              <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
             </div>
             <div class="col-sm-3">
               <h3>Einreise & Aufenthalt in der Schweiz</h3>
-              <a href="#">Einreise in die Schweiz</a>
-              <a href="#">Visabestimmungen</a>
-              <a href="#">Aufenthalt in der Schweiz</a>
-              <a href="#">Geschäftstätigkeit in der Schweiz</a>
-              <a href="#">Ausländische Vertretungen in der Schweiz</a>
-              <a href="#">Informationen zur Schweiz</a>
+              <ul class="list-unstyled">
+            <li><a href="#">Einreise in die Schweiz</a></li>
+            <li><a href="#">Visabestimmungen</a></li>
+            <li><a href="#">Aufenthalt in der Schweiz</a></li>
+            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+            <li><a href="#">Informationen zur Schweiz</a></li>
+          </ul>
             </div>
           </div>
         </div>
@@ -382,6 +450,7 @@
 
 
   </div>
+  <div class="overlay"></div>
   <script type="text/javascript" src="../js/vendors.min.js"></script>
   <script type="text/javascript" src="../js/main.min.js"></script>
 </body>

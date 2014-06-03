@@ -78,7 +78,8 @@ gulp.task('vendors', function() {
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js',
       './bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js',
       './bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
-      './bower_components/jquery.socialshareprivacy/jquery.socialshareprivacy.min.js'
+      './bower_components/jquery.socialshareprivacy/jquery.socialshareprivacy.min.js',
+      './bower_components/jquery-drilldown/jquery.drilldown.min.js'
     ])
     .pipe(concat('vendors.min.js'))
     .pipe(uglify())
@@ -109,7 +110,6 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('hologram', shell.task([
-  'LC_ALL="en_US.UTF-8"',
   'hologram'
 ]));
 

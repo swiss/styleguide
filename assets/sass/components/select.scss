@@ -165,13 +165,28 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
   </header>
   <nav class="nav-main"></nav>
 
+  <br><br><br><br><br><br><br><br><br>
+
 </div>
 ```
 
 */
 
+.navbar.yamm--select {
+  @media only screen and (max-width: $screen-xs-max) {
+    display: none;
+  }
+}
+
 .yamm--select {
   height: 0px;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: -20px;
+  float: right;
+  @media only screen and (max-width: $screen-sm-max) {
+    margin-top: -15px;
+  }
   &.pull-right .dropdown-menu {right: 0;}
   .dropdown-toggle {
     color: $coal;
@@ -186,8 +201,6 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     box-sizing: border-box;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     background: $white;
-    position: relative;
-    top: -25px;
     &:hover, &:active {
       text-decoration: none;
       color: $venetian-red;
@@ -203,12 +216,16 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
   }
   .dropdown.open .dropdown-toggle {
     border-color: $white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     color: $venetian-red;
     position: relative;
     z-index: 1000;
   }
-  .dropdown-menu {margin-top: -4px;}
+  .dropdown-menu {
+    top: 22px;
+  }
 }
 
 
@@ -253,6 +270,10 @@ On smartphones the language selection is always included in a drawer section abo
 
 .select-lang {
   width: 60px;
+  display: none;
+  @media only screen and (max-width: $screen-xs-max) {
+    display: inline-block;
+  }
 }
 
 
