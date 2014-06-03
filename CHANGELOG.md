@@ -3,7 +3,7 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
-* 2.1.0 (2014-05-22)
+* 2.1.0 (2014-06-03)
  * #52 fix side navigation
  * #52 fix breadcrumb
  * #52 #37 fix nav-lang and nav-services
@@ -20,6 +20,7 @@ This changelog references the relevant changes and bug fixes.
  * #53 update global navigation to support mobile view [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
  * add `.list-emphasis` class to `.nav-page-list` [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#d-page-nav-list)
  * add drilldown plugin to handle `.nav-page-list` sub-navigation animations [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#d-page-nav-list)
+ * fix viewport issue on Windows Phone 8
 
 
 * 2.0.1 (2014-05-21)

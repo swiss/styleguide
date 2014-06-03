@@ -1,3 +1,14 @@
 hr {
   @extend .clearfix;
 }
+
+// This is a hack fix for Windows Phone 8
+// It should have been fixed by an update, but you know people... They won't always download the update.
+// This fix is dedicated to them. With love.
+// Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+// And: http://web3canvas.com/simple-solution-for-device-width-issue-in-windows-8-mobile/
+@media screen and (max-width:48em) {
+    @-ms-viewport{
+        width:auto!important;
+    }
+}

@@ -8018,6 +8018,9 @@ dt, dd {
     font-size: 1em;
     margin-left: 0; }
 
+@media screen and (max-width: 48em) {
+  @-ms-viewport {
+    width: auto !important; } }
 /* ==========================================================
  * radios.scss
  * Custom radio input styles
