@@ -103,6 +103,7 @@
                       <li class="list-sub">
                         <a href="#">Example Pages</a>
                         <ul class="drilldown-sub">
+                          <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
                           <% @config['static_page'].each do |static| %>
                             <li>
                               <a href="pages/<%= static.split(' | ').last %>"><%= static.split(' | ').first %></a>
