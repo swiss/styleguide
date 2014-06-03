@@ -22,7 +22,7 @@
   // Toggle overlay
   $yamm.each(function () {
     var $that = $(this);
-    $that.find($dropdownToggle).click(function () {
+    $that.on('click', '.dropdown-toggle', function () {
       if ($(this).parent().hasClass('open')){
         $('.overlay').hide();
         $that.removeClass('nav-open');
@@ -40,12 +40,13 @@
       "shown.bs.dropdown": function() {
           $(this).data('closable', false);
        },
-      "click": function() {
-          $(this).data('closable', true);
-      },
       "hide.bs.dropdown": function() {
           return $(this).data('closable');
       }
+  });
+
+  $yamm.on("click", '.yamm-close, .yamm-close-bottom, .dropdown-toggle', function() {
+      $(this).parents($dropdown).data('closable', true);
   });
 
   // Disable dropdown-menu closing click

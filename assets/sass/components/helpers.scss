@@ -51,3 +51,13 @@
     padding-left: 0 !important;
   }
 }
+
+.table-row {
+  display: table-row;
+  height: 20px;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
