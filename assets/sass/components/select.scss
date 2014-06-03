@@ -172,6 +172,12 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 
 */
 
+.navbar.yamm--select {
+  @media only screen and (max-width: $screen-xs-max) {
+    display: none;
+  }
+}
+
 .yamm--select {
   height: 0px;
   width: 100%;
@@ -264,6 +270,10 @@ On smartphones the language selection is always included in a drawer section abo
 
 .select-lang {
   width: 60px;
+  display: none;
+  @media only screen and (max-width: $screen-xs-max) {
+    display: inline-block;
+  }
 }
 
 

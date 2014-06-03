@@ -63,3 +63,7 @@ hr {
   height: 1px;
   background: $light-grey;
 }
+
+div[class*="col"] {
+  margin-bottom: 2em;
+}
