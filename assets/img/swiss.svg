@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="80px" height="80px" viewBox="0 0 80 80" enable-background="new 0 0 80 80" xml:space="preserve">
-<g id="Wappen">
-	<path id="bg_rot" fill="#FF0000" d="M71.64,10.616c0,0-11.82-5.177-31.607-5.177h-0.006c-19.789,0-31.611,5.177-31.611,5.177
-		s-1.059,22.921,3.43,35.881c7.925,22.786,28.178,29.188,28.178,29.188h0.006h0.006c0,0,20.251-6.401,28.178-29.188
-		C72.7,33.537,71.64,10.616,71.64,10.616"/>
-	<polyline id="Kreuz" fill="#FFFFFF" points="61.035,30.375 61.035,43.002 46.302,43.002 46.302,57.736 33.674,57.736 
-		33.674,43.002 18.94,43.002 18.94,30.375 33.674,30.375 33.674,15.645 46.298,15.645 46.302,30.375 61.035,30.375 	"/>
-</g>
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="33.572px" height="36.867px" viewBox="-35.863 -2.397 33.572 36.867" enable-background="new -35.863 -2.397 33.572 36.867"
+	 xml:space="preserve" preserveAspectRatio="xMinYMin meet">
+<path fill="#DC0018" d="M-2.348,0.32c0,0-6.255-2.717-16.727-2.717h-0.003c-10.471,0-16.727,2.717-16.727,2.717
+	s-0.56,12.03,1.814,18.831C-29.797,31.112-19.08,34.47-19.08,34.47h0.003h0.005c0,0,10.714-3.36,14.91-15.319
+	C-1.788,12.349-2.348,0.32-2.348,0.32"/>
+<polyline fill="#FFFFFF" points="-7.959,10.69 -7.959,17.318 -15.757,17.318 -15.757,25.052 -22.439,25.052 -22.439,17.318
+	-30.234,17.318 -30.234,10.69 -22.439,10.69 -22.439,2.96 -15.759,2.96 -15.757,10.69 -7.959,10.69 "/>
 </svg>

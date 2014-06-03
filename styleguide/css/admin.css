@@ -9200,7 +9200,8 @@ It is vital that this element should only be used in cases of emergency – i.e.
   padding-left: 0 !important; }
 
 .table-row {
-  display: table-row; }
+  display: table-row;
+  height: 20px; }
 
 .table-cell {
   display: table-cell;
@@ -9644,7 +9645,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     margin: 0 1em; }
     .nav-mobile .nav-mobile-logo img {
       vertical-align: middle;
-      max-width: 24px; }
+      width: 24px; }
   .nav-mobile .table-cell {
     border-left: 1px solid #cccccc; }
     .nav-mobile .table-cell > a {
