@@ -25,6 +25,7 @@ This changelog references the relevant changes and bug fixes.
  * fix social links in footer on mobile [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_footer.html#b-social-media)
  * #80 #81 #82 #83 #84 fix accessibility issues with colors
  * #85 fix issue with checkbox alignment in inline forms
+ * #26 remove all cortana prefixes
 
 
 * 2.0.1 (2014-05-21)
