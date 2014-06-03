@@ -41,11 +41,15 @@
 }
 
 .nopadding-right {
-  padding-right: 0 !important;
+  @media only screen and (min-width: $screen-sm-min) {
+    padding-right: 0 !important;
+  }
 }
 
 .nopadding-left {
-  padding-left: 0 !important;
+  @media only screen and (min-width: $screen-sm-min) {
+    padding-left: 0 !important;
+  }
 }
 
 .table-row {

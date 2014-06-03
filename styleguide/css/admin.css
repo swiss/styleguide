@@ -7824,6 +7824,9 @@ hr {
   height: 1px;
   background: #d5d5d5; }
 
+div[class*="col"] {
+  margin-bottom: 2em; }
+
 /* ==========================================================
  * links.scss
  * Links element styles
@@ -9247,11 +9250,13 @@ It is vital that this element should only be used in cases of emergency – i.e.
 .scroll-y {
   overflow-y: scroll; }
 
-.nopadding-right {
-  padding-right: 0 !important; }
+@media only screen and (min-width: 768px) {
+  .nopadding-right {
+    padding-right: 0 !important; } }
 
-.nopadding-left {
-  padding-left: 0 !important; }
+@media only screen and (min-width: 768px) {
+  .nopadding-left {
+    padding-left: 0 !important; } }
 
 .table-row {
   display: table-row;
