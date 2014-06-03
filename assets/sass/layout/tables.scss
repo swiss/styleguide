@@ -33,7 +33,6 @@ A simple example without `id` and `headers` attributes :
   <thead>
     <tr>
       <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
       <th>2000</th>
       <th>2010</th>
       <th>2011</th>
@@ -42,21 +41,18 @@ A simple example without `id` and `headers` attributes :
   </thead>
   <tbody>
     <tr>
-      <th class="text-left">Boars</th>
       <td>4'160</td>
       <td>7'647</td>
       <td>4'726</td>
       <td>10'650</td>
     </tr>
     <tr>
-      <th class="text-left">Chamois</th>
       <td>16'625</td>
       <td>13'427</td>
       <td>13'413</td>
       <td>13'350</td>
     </tr>
     <tr>
-      <th class="text-left">Fox</th>
       <td>42'221</td>
       <td>31'044</td>
       <td>27'094</td>
@@ -66,7 +62,6 @@ A simple example without `id` and `headers` attributes :
   <tfoot>
     <tr>
       <!-- In <tfoot> : td => $smoke / th => $white -->
-      <th></th>
       <td>63'006</td>
       <td>52'118</td>
       <td>45'233</td>
@@ -119,6 +114,52 @@ tr, td, th {
 }
 tr, td, th {
   &.text-left {text-align: left;}
+}
+
+
+// Mobile class
+
+.table-fixed-wrapper {
+  position: relative;
+}
+
+.table-fixed-container {
+  margin-left: 40%;
+  width: 60%;
+  overflow-x: auto;
+  overflow-y: visible;
+  width: auto !important;
+  padding-left: 0 !important;
+  box-shadow: inset -5px 0 10px -3px rgba(0, 0, 0, 0.1);
+  caption {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    display: block;
+  }
+  thead tr:first-child td:first-child, thead tr:first-child th:first-child {
+    border-top: 1px solid $light-grey !important;
+    margin-top: 0 !important;
+  }
+}
+
+.table-fixed {
+  border-left: none !important;
+  margin: 0;
+  tr td:nth-child(2), tr th:nth-child(2) {
+    border-left: none !important;
+  }
+}
+
+.cell-fixed {
+  position: absolute;
+  top: auto;
+  left: 0%;
+  border-top: none !important;
+  margin-top: 2px;
+  width: 40% !important;
+  word-break:break-all;
 }
 
 

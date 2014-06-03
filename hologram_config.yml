@@ -20,7 +20,7 @@ css_include:
 # List all js to include for the styleguide render examples
 js_include:
   - 'js/vendors.min.js'
-  - 'js/main.min.js'
+  - 'js/main.js'
 
 # String who is used to split the category name and create category wrapper
 name_scope: ' - '
