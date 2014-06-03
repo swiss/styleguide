@@ -21,7 +21,16 @@ Alerts are shown when you need to get the attention of the user with something i
 Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
 
 ```html_example
+<div class="alert alert-success">
+  Alert info!
+</div>
+<div class="alert alert-info">
+  Alert info!
+</div>
 <div class="alert alert-warning">
+  Alert info!
+</div>
+<div class="alert alert-danger">
   Alert info!
 </div>
 ```
@@ -29,19 +38,34 @@ Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
 */
 
 .alert {
-  color: $coal;
+  // color: $coal;
   border: none;
-  padding-left: 35px;
+  padding-left: 55px;
   position: relative;
 
-  &.alert-warning:before,
-  &.alert-danger:before {
+  &:before {
+    @extend .glyphicon;
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    font-size: 1.5em;
+  }
+
+  &.alert-success:before {
+    @extend .glyphicon-ok;
+    top: 13px;
+  }
+  &.alert-info:before {
+    @extend .glyphicon-info-sign;
+  }
+  &.alert-warning:before {
     font-family: $admin-icons;
     content: '!';
-    position: absolute;
-    left: 12px;
-    top: 1px;
     font-size: 2em;
-    color: $venetian-red;
+    top: 13px;
+    left: 23px;
+  }
+  &.alert-danger:before {
+    @extend .glyphicon-remove;
   }
 }

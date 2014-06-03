@@ -1,14 +1,14 @@
 /* ==========================================================
  * bootstrap-variables.scss
  * Bootstrap variables with custom values to fits with our project
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 09:38:36
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 // a flag to toggle asset pipeline / compass integration
@@ -49,7 +49,7 @@ $text-color:            $coal !default;
 //** Global textual link color.
 $link-color:            $brand-primary !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color:      $brand-primary !default;
 
 
 //== Typography
@@ -201,7 +201,7 @@ $input-border:                   #ccc !default;
 //** `<input>` border radius
 $input-border-radius:            $border-radius-base !default;
 //** Border color for inputs on focus
-$input-border-focus:             #66afe9 !default;
+$input-border-focus:             $malibu !default;
 
 //** Placeholder text color
 $input-color-placeholder:        $gray-light !default;

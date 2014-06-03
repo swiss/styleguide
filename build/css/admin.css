@@ -15,30 +15,35 @@
   src: url("../fonts/AdminCH_Symbols.eot?#iefix") format("embedded-opentype"), url("../fonts/AdminCH_Symbols.woff?v2") format("woff"), url("../fonts/AdminCH_Symbols.ttf?v2") format("truetype"), url("../fonts/AdminCH_Symbols.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Frutiger Neue Bold';
   src: url("../fonts/FrutigerNeueW02-Bd.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Bd.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Bd.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Bd.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Frutiger Neue Italic';
   src: url("../fonts/FrutigerNeueW02-It.eot?v2");
   src: url("../fonts/FrutigerNeueW02-It.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-It.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-It.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-It.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Frutiger Neue Regular';
   src: url("../fonts/FrutigerNeueW02-Regular.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Regular.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Regular.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Regular.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Frutiger Neue Light';
   src: url("../fonts/FrutigerNeueW02-Light.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Light.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Light.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Light.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 /* ==========================================================
  * admin-mixins.scss
  * Our project mixins
@@ -92,20 +97,15 @@ The red color is used in the red line which marks the bottom of the header, and 
     <div class="col-sm-3"><div style="background:#F7001D"><br><p class="text-center" style="color:white;">#F7001D</p><br></div><pre class="text-center">$red</pre></div>
     <div class="col-sm-3"><div style="background:#006699"><br><p class="text-center" style="color:white;">#006699</p><br></div><pre class="text-center">$cerulean</pre></div>
     <div class="col-sm-3"><div style="background:#e7edef"><br><p class="text-center" style="color:black;">#e7edef</p><br></div><pre class="text-center">$solitude</pre></div>
-  </div>
-  <div class="row">
     <div class="col-sm-3"><div style="background:#f2f7f9"><br><p class="text-center" style="color:black;">#f2f7f9</p><br></div><pre class="text-center">$clear-day</pre></div>
     <div class="col-sm-3"><div style="background:#fffab2"><br><p class="text-center" style="color:black;">#fffab2</p><br></div><pre class="text-center">$mocassin</pre></div>
     <div class="col-sm-3"><div style="background:#D8E8EF"><br><p class="text-center" style="color:black;">#D8E8EF</p><br></div><pre class="text-center">$pattens-blue</pre></div>
+    <div class="col-sm-3"><div style="background:#66afe9"><br><p class="text-center" style="color:black;">#66afe9</p><br></div><pre class="text-center">$malibu</pre></div>
     <div class="col-sm-3"><div style="background:#000000"><br><p class="text-center" style="color:white;">#000000</p><br></div><pre class="text-center">$black</pre></div>
-    </div>
-    <div class="row">
     <div class="col-sm-3"><div style="background:#333333"><br><p class="text-center" style="color:white;">#333333</p><br></div><pre class="text-center">$night-rider</pre></div>
     <div class="col-sm-3"><div style="background:#454545"><br><p class="text-center" style="color:white;">#454545</p><br></div><pre class="text-center">$coal</pre></div>
     <div class="col-sm-3"><div style="background:#757575"><br><p class="text-center" style="color:white;">#757575</p><br></div><pre class="text-center">$empress</pre></div>
     <div class="col-sm-3"><div style="background:#CCCCCC"><br><p class="text-center" style="color:white;">#CCCCCC</p><br></div><pre class="text-center">$silver</pre></div>
-    </div>
-    <div class="row">
     <div class="col-sm-3"><div style="background:#D5D5D5"><br><p class="text-center" style="color:black;">#D5D5D5</p><br></div><pre class="text-center">$light-grey</pre></div>
     <div class="col-sm-3"><div style="background:#E5E5E5"><br><p class="text-center" style="color:black;">#E5E5E5</p><br></div><pre class="text-center">$gainsboro</pre></div>
     <div class="col-sm-3"><div style="background:#F5F5F5"><br><p class="text-center" style="color:black;">#F5F5F5</p><br></div><pre class="text-center">$smoke</pre></div>
@@ -127,7 +127,7 @@ The red color is used in the red line which marks the bottom of the header, and 
 /* ==========================================================
  * bootstrap-variables.scss
  * Bootstrap variables with custom values to fits with our project
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-30 09:38:36
  *
@@ -397,7 +397,8 @@ th {
   font-family: 'Glyphicons Halflings';
   src: url("bootstrap/glyphicons-halflings-regular.eot");
   src: url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
-.glyphicon {
+
+.glyphicon, .alert:before {
   position: relative;
   top: 1px;
   display: inline-block;
@@ -462,10 +463,10 @@ th {
 .glyphicon-th-list:before {
   content: "\e012"; }
 
-.glyphicon-ok:before {
+.glyphicon-ok:before, .alert.alert-success:before {
   content: "\e013"; }
 
-.glyphicon-remove:before {
+.glyphicon-remove:before, .alert.alert-danger:before {
   content: "\e014"; }
 
 .glyphicon-zoom-in:before {
@@ -678,7 +679,7 @@ th {
 .glyphicon-question-sign:before {
   content: "\e085"; }
 
-.glyphicon-info-sign:before {
+.glyphicon-info-sign:before, .alert.alert-info:before {
   content: "\e086"; }
 
 .glyphicon-screenshot:before {
@@ -1021,7 +1022,7 @@ th {
 
 html {
   font-size: 62.5%;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
   font-family: "Frutiger Neue Regular", Arial, sans-serif;
@@ -1042,7 +1043,7 @@ a {
   color: #006699;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #00334d;
+    color: #006699;
     text-decoration: underline; }
   a:focus {
     outline: thin dotted;
@@ -2366,7 +2367,7 @@ output {
   line-height: 1.6;
   color: #555555; }
 
-.form-control, .has-warning .form-control, .has-success .form-control, .has-error .form-control {
+.form-control, .has-success .form-control, .has-error .form-control {
   display: block;
   width: 100%;
   height: 36px;
@@ -2387,19 +2388,19 @@ output {
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
-  .form-control::-moz-placeholder, .has-warning .form-control::-moz-placeholder, .has-success .form-control::-moz-placeholder, .has-error .form-control::-moz-placeholder {
+  .form-control::-moz-placeholder, .has-success .form-control::-moz-placeholder, .has-error .form-control::-moz-placeholder {
     color: #999999;
     opacity: 1; }
   .form-control:-ms-input-placeholder {
     color: #999999; }
-  .form-control::-webkit-input-placeholder, .has-warning .form-control::-webkit-input-placeholder, .has-success .form-control::-webkit-input-placeholder, .has-error .form-control::-webkit-input-placeholder {
+  .form-control::-webkit-input-placeholder, .has-success .form-control::-webkit-input-placeholder, .has-error .form-control::-webkit-input-placeholder {
     color: #999999; }
   .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     cursor: not-allowed;
     background-color: #eeeeee;
     opacity: 1; }
 
-textarea.form-control, .has-warning textarea.form-control, .has-success textarea.form-control, .has-error textarea.form-control {
+textarea.form-control, .has-success textarea.form-control, .has-error textarea.form-control {
   height: auto; }
 
 input[type="search"] {
@@ -2889,7 +2890,7 @@ select[multiple].input-lg,
   .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
     border-color: transparent; }
   .btn-link:hover, .btn-link:focus {
-    color: #00334d;
+    color: #006699;
     text-decoration: underline;
     background-color: transparent; }
   .btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
@@ -3856,7 +3857,7 @@ tbody.collapse.in {
   .pagination > li > a:hover, .pagination > li > a:focus,
   .pagination > li > span:hover,
   .pagination > li > span:focus {
-    color: #00334d;
+    color: #006699;
     background-color: #eeeeee;
     border-color: #dddddd; }
   .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
@@ -4154,6 +4155,7 @@ a.thumbnail.active {
 
   to {
     background-position: 0 0; } }
+
 .progress {
   overflow: hidden;
   height: 22px;
@@ -5102,7 +5104,7 @@ button.close {
     border-radius: 10px;
     cursor: pointer;
     background-color: #000 \9;
-    background-color: transparent; }
+    background-color: rgba(0, 0, 0, 0); }
   .carousel-indicators .active {
     margin: 0;
     width: 12px;
@@ -5188,6 +5190,7 @@ button.close {
 
 @-ms-viewport {
   width: device-width; }
+
 .visible-xs, .visible-sm, .visible-md, .visible-lg {
   display: none !important; }
 
@@ -5426,8 +5429,6 @@ button.close {
   text-decoration: none;
   white-space: nowrap;
   line-height: 1.2; }
-  .chosen-container-single .chosen-single:hover {
-    border-color: #dc0018; }
 
 .chosen-container-single .chosen-default {
   color: #454545; }
@@ -5645,7 +5646,7 @@ button.close {
 /* @end */
 /* @group Active  */
 .chosen-container-active .chosen-single {
-  border: 1px solid #dc0018; }
+  border: 1px solid #66afe9; }
 
 .chosen-container-active.chosen-with-drop .chosen-single {
   border: 1px solid #454545;
@@ -5660,7 +5661,7 @@ button.close {
   background-position: -18px 2px; }
 
 .chosen-container-active .chosen-choices {
-  border: 1px solid #dc0018; }
+  border: 1px solid #66afe9; }
 
 .chosen-container-active .chosen-choices li.search-field input[type="text"] {
   color: #111 !important; }
@@ -5859,6 +5860,7 @@ Buttons                                                                       | 
 <button type="button" class="btn btn-primary">Primary</button><br>            |  `<button type="button" class="btn btn-primary">Primary</button>`
 <button type="button" class="btn btn-secondary">Secondary</button><br>        |  `<button type="button" class="btn btn-secondary">Secondary</button>`
 <button type="button" class="btn" disabled>Disabled</button><br>              |  `<button type="button" class="btn" disabled>Disabled</button>`
+<button type="button" class="btn btn-link">Button link</button><br>           |  `<button type="button" class="btn btn-link">Button link</button>`
 
 ## Print button
 
@@ -5873,8 +5875,7 @@ Buttons                                                                       | 
   border: 1px solid #757575;
   font-family: "Frutiger Neue Light", Arial, sans-serif; }
   .btn:hover {
-    border-color: #dc0018;
-    color: #757575;
+    background-color: #d5d5d5;
     z-index: 100; }
   .btn:focus, .btn:active {
     outline: none !important; }
@@ -5883,22 +5884,26 @@ Buttons                                                                       | 
     border-color: #006699; }
     .btn.btn-primary:hover {
       color: white;
-      border-color: #dc0018; }
+      background-color: #004b70; }
+    .btn.btn-primary:active {
+      background-color: #00334d; }
     .btn.btn-primary.active {
       color: white;
-      background-color: #00334d;
-      -webkit-box-shadow: none;
-      box-shadow: none; }
+      background-color: #00334d; }
   .btn.btn-secondary {
     background-color: #757575;
     color: white; }
+    .btn.btn-secondary:hover {
+      background-color: #616161; }
+    .btn.btn-secondary:active {
+      background-color: #4f4f4f; }
     .btn.btn-secondary.active {
       color: white;
       background-color: #454545;
       -webkit-box-shadow: none;
       box-shadow: none; }
   .btn.active {
-    color: #dc0018;
+    color: #006699;
     background-color: white;
     -webkit-box-shadow: none;
     box-shadow: none; }
@@ -5907,8 +5912,8 @@ Buttons                                                                       | 
     background-color: transparent;
     float: none; }
     .btn.btn-link:hover {
-      color: #dc0018;
-      text-decoration: none; }
+      color: #005580;
+      background: whitesmoke; }
 
 a.btn {
   color: inherit; }
@@ -5945,7 +5950,7 @@ Use the class `.btn` to create a styled button. You can use it on a `<input>`, `
 /* ==========================================================
  * checkboxes.scss
  * Custom checkbox styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
@@ -6102,106 +6107,113 @@ On smartphones, some of the functions from the header, e.g. service navigation o
   **2.1.0:**
 
   - placed links in a `ul.list-unstyled` list
+  - changed `.col-sm-3` in `.col-sm-4.col-md-3` for more readability on small size and removed useless `.row` wrapper
+  - added ``
 </div>
 
 ```html_example
 <footer>
 
+  <nav class="footer-service">
+    <ul>
+      <li><a href="#">Emergencies</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">Media</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
   <div class="site-map">
 
     <!-- Use normal `container` instead of `container-fluid` -->
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
       </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
       </div>
     </div>
   </div><!-- End of Site-map -->
@@ -6268,6 +6280,9 @@ address {
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid white;
   padding-bottom: 30px; }
+  @media only screen and (max-width: 767px) {
+    .site-map {
+      display: none; } }
   .site-map + div {
     border-bottom: 1px solid white;
     padding-bottom: 10px; }
@@ -6275,6 +6290,22 @@ address {
     font-size: 13px;
     display: inline-block;
     padding: 3px 0; }
+
+.footer-service, .links-social {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .footer-service, .links-social {
+      display: block; }
+      .footer-service ul, .links-social ul {
+        padding: 0;
+        border-bottom: 1px solid #cccccc;
+        margin-left: -15px;
+        margin-right: -15px; }
+      .footer-service li, .links-social li {
+        display: block;
+        margin-left: 0;
+        padding: 9px;
+        border-top: 1px solid #cccccc; } }
 
 /*doc
 ---
@@ -6287,6 +6318,13 @@ category: Navigation modules - Footer
 
 The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) are listed in a separate section of the footer.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - added the `.links-social` class to the `<nav/>` element containing the social links
+</div>
+
 ```html_example
 <footer>
 
@@ -6294,7 +6332,7 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
     <br>
-    <nav>
+    <nav class="links-social">
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
         <li><a class="icon icon--before icon--facebook" href="#">Facebook</a></li>
@@ -6319,6 +6357,13 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
 </footer>
 ```
 */
+footer img {
+  max-width: 204px;
+  margin: 15px 0; }
+
+.links-social {
+  display: block; }
+
 /*doc
 ---
 title: Footbar
@@ -6460,17 +6505,15 @@ legend {
   margin-left: 0;
   margin-right: 0; }
 
-.form-control, .has-warning .form-control, .has-success .form-control, .has-error .form-control {
-  border: 1px solid #757575;
+.form-control, .has-success .form-control, .has-error .form-control {
+  border-color: #757575;
   padding: 0.4em 0.3076em;
   line-height: 1.2;
   height: auto; }
-  .form-control:hover {
-    border-color: #dc0018; }
-  .form-control:focus {
-    border-color: #dc0018 !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important; }
+  .form-control[type=file] {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 label {
   font-weight: normal; }
@@ -6484,8 +6527,6 @@ label {
   padding: 6px 0; }
   .has-warning .control-label {
     color: #454545; }
-  .has-warning .form-control {
-    border-color: #454545; }
   .has-warning .help-block {
     color: #dc0018; }
 
@@ -6509,8 +6550,10 @@ label {
   margin-top: 1em;
   padding-bottom: 1.3em;
   border-bottom: 2px solid #cccccc; }
+  .form-inline .control-label, .navbar-form .control-label {
+    padding-top: 3px;
+    padding-bottom: 3px; }
   .form-inline label, .navbar-form label {
-    padding: 3px 0;
     margin-right: 1.6em; }
   .form-inline input[type="number"], .navbar-form input[type="number"] {
     width: 50px; }
@@ -6672,9 +6715,11 @@ For **inside-icon** element, use the global `.icon` and `.icon--before` or `.ico
 
 */
 .icon.icon--before:before, a[data-toggle="collapse"]:before {
-  font-family: "Admin Icons"; }
+  font-family: "Admin Icons";
+  display: inline-block; }
 .icon.icon--after:after, a.icon--after[data-toggle="collapse"]:after {
-  font-family: "Admin Icons"; }
+  font-family: "Admin Icons";
+  display: inline-block; }
 
 span.icon {
   font-family: "Admin Icons";
@@ -7842,8 +7887,8 @@ a {
   color: #006699;
   line-height: 1.5; }
   a:hover {
-    color: #dc0018;
-    text-decoration: none; }
+    color: #005580;
+    text-decoration: underline; }
   a:active, a:visited {
     text-decoration: none; }
   p a {
@@ -7854,10 +7899,8 @@ a {
   small a ~ span {
     display: block;
     margin-top: -5px; }
-  a.icon, a[data-toggle="collapse"] {
+  a.icon:hover:before, a[data-toggle="collapse"]:hover:before, a.icon:hover:after, a[data-toggle="collapse"]:hover:after {
     text-decoration: none; }
-    a.icon:hover, a[data-toggle="collapse"]:hover {
-      text-decoration: none; }
 
 /*doc
 ---
@@ -8854,25 +8897,38 @@ Alerts are shown when you need to get the attention of the user with something i
 Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
 
 ```html_example
+<div class="alert alert-success">
+  Alert info!
+</div>
+<div class="alert alert-info">
+  Alert info!
+</div>
 <div class="alert alert-warning">
+  Alert info!
+</div>
+<div class="alert alert-danger">
   Alert info!
 </div>
 ```
 
 */
 .alert {
-  color: #454545;
   border: none;
-  padding-left: 35px;
+  padding-left: 55px;
   position: relative; }
-  .alert.alert-warning:before, .alert.alert-danger:before {
+  .alert:before {
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    font-size: 1.5em; }
+  .alert.alert-success:before {
+    top: 13px; }
+  .alert.alert-warning:before {
     font-family: "Admin Icons";
     content: '!';
-    position: absolute;
-    left: 12px;
-    top: 1px;
     font-size: 2em;
-    color: #dc0018; }
+    top: 13px;
+    left: 23px; }
 
 /* ==========================================================
  * anchor-links.scss
@@ -9139,16 +9195,17 @@ It is vital that this element should only be used in cases of emergency – i.e.
 */
 .alert--emergency {
   background-color: #fffab2;
-  border-left: 20px solid #dc0018;
+  border-left: 40px solid #dc0018;
   border-radius: 0;
   padding-left: 15px; }
   .alert--emergency:before {
     position: absolute;
-    top: 0;
-    left: -20px;
-    width: 20px;
+    top: 14px;
+    left: -30px;
+    width: 40px;
     height: auto;
     color: white;
+    font-family: "Admin Icons";
     content: '!';
     font-size: 2em;
     padding-left: 5px; }
@@ -9407,6 +9464,21 @@ nav li {
   display: inline; }
 nav li:first-child {
   margin-left: 0; }
+
+.nav-main {
+  min-height: 70px;
+  background: #e4e4e4;
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
+  /* IE10+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), to(#bebebe));
+  /* IE10+ */
+  background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 );
+  /* IE6-9 */ }
 
 /*doc
 ---
@@ -9729,7 +9801,14 @@ background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d
         color: #757575;
         font-size: 0.9em; }
       .nav-main.yamm .nav > li > a:hover {
-        color: #dc0018; }
+        color: #dc0018;
+        background: white;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYmRiZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(10%, white), color-stop(79%, white), color-stop(91%, white), color-stop(100%, #dbdbdb));
+        background: -webkit-linear-gradient(top, #f4f4f4 0%, white 10%, white 79%, white 91%, #dbdbdb 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), color-stop(10%, white), color-stop(79%, white), color-stop(91%, white), to(#dbdbdb));
+        background: linear-gradient(to bottom, #f4f4f4 0%, white 10%, white 79%, white 91%, #dbdbdb 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); }
   .nav-main.yamm .nav + .tab-content {
     padding: 0; }
   .nav-main.yamm .nav .dropdown-menu li {
@@ -10511,6 +10590,16 @@ In the news teaser, various snippets of news items are arranged chronologically.
   margin-bottom: 0; }
 .news-feed .list-group-item {
   padding: 5px 0; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .news-feed .list-group-item {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px; } }
+    @media only screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
+      .news-feed .list-group-item {
+        float: left;
+        width: 25%; } }
 .news-feed .list-group-item:last-child {
   border-bottom: none; }
 
@@ -10702,43 +10791,6 @@ Process navigation is used in connection with forms that are spread over several
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
-/*doc
----
-title: Site Search
-name: -site-search
-category: Navigation modules - Header
----
-
-<span class="label label-admin">CD</span>
-
-The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
-
-On smartphones, the search function can be accessed via an icon in the Header.
-
-```html_example
-<!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-
-  <header>
-    <form class="form-horizontal form-search pull-right" role="form">
-      <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-    </form>
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-```
-
-```js_example
-// You have to store all your data inside `searchData` and define it globaly
-var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
-  "Basel-Landschaft", "Basel-Stadt", "Bern", "Fribourg", "Genève",
-  "Glarus", "Graubünden", "Jura", "Lucerne", "Neuchâtel", "Nidwalden",
-  "Obwalden", "Schaffhausen", "Schwyz", "Solothurn", "St. Gallen",
-  "Thurgau", "Ticino", "Uri", "Valais", "Vaud", "Zug", "Zurich"
-];
-```
-*/
 .form-search {
   display: inline-block;
   position: relative; }
@@ -11225,8 +11277,8 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     border-color: white;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    -webkit-box-shadow: 0 0 0 0 transparent;
-    box-shadow: 0 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     color: #dc0018;
     position: relative;
     z-index: 1000; }
@@ -11568,13 +11620,22 @@ By default, the shopping cart is not shown. Only after an object has been added 
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .bordered {
+    padding: 15px;
+    background: whitesmoke; }
+    .bordered img {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px; } }
+
 .well {
   border: none;
   border-radius: 0;
   padding: 10px;
   margin: 0;
-  -webkit-box-shadow: 0 0 0 0 transparent;
-  box-shadow: 0 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   background: whitesmoke !important; }
   .well.well-freeboard {
     padding: 0;
@@ -11598,7 +11659,7 @@ By default, the shopping cart is not shown. Only after an object has been added 
   color: #006699;
   font-size: 13px;
   opacity: 1;
-  text-shadow: 0 0 0 transparent; }
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
   .close:hover {
     opacity: 1;
     font-style: 13px;
@@ -11888,7 +11949,7 @@ The carousel consists of various information blocks, each of which contains a la
   background-image: none !important; }
   .carousel-control.right:before, .carousel-control.left:before {
     color: #454545;
-    text-shadow: 0 0 0 transparent; }
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
 
 .carousel-indicators {
   bottom: auto; }

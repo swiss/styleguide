@@ -32,6 +32,7 @@ Buttons                                                                       | 
 <button type="button" class="btn btn-primary">Primary</button><br>            |  `<button type="button" class="btn btn-primary">Primary</button>`
 <button type="button" class="btn btn-secondary">Secondary</button><br>        |  `<button type="button" class="btn btn-secondary">Secondary</button>`
 <button type="button" class="btn" disabled>Disabled</button><br>              |  `<button type="button" class="btn" disabled>Disabled</button>`
+<button type="button" class="btn btn-link">Button link</button><br>           |  `<button type="button" class="btn btn-link">Button link</button>`
 
 ## Print button
 
@@ -47,8 +48,7 @@ Buttons                                                                       | 
   border: 1px solid $empress;
   font-family: $font-family-sans-serif-light;
   &:hover {
-    border-color: $venetian-red;
-    color: $empress;
+    background-color: $light-grey;
     z-index: 100;
   }
   &:focus, &:active {
@@ -60,18 +60,26 @@ Buttons                                                                       | 
     border-color: $cerulean;
     &:hover {
       color: $white;
-      border-color: $venetian-red;
+      background-color: darken($cerulean, 8%);
+    }
+    &:active {
+      background-color: darken($cerulean, 15%);
     }
     &.active {
       color: $white;
       background-color: darken($cerulean, 15%);
-      box-shadow: none;
     }
   }
 
   &.btn-secondary {
     background-color: $empress;
     color: $white;
+    &:hover {
+      background-color: darken($empress, 8%);
+    }
+    &:active {
+      background-color: darken($empress, 15%);
+    }
     &.active {
       color: $white;
       background-color: $coal;
@@ -80,7 +88,7 @@ Buttons                                                                       | 
   }
 
   &.active {
-    color: $venetian-red;
+    color: $cerulean;
     background-color: $white;
     box-shadow: none;
   }
@@ -90,8 +98,8 @@ Buttons                                                                       | 
     background-color: transparent;
     float: none;
     &:hover {
-      color: $venetian-red;
-      text-decoration: none;
+      color: darken($cerulean, 5%);
+      background: $smoke;
     }
   }
 }

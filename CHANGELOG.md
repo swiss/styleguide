@@ -22,6 +22,9 @@ This changelog references the relevant changes and bug fixes.
  * add drilldown plugin to handle `.nav-page-list` sub-navigation animations [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#d-page-nav-list)
  * fix viewport issue on Windows Phone
  * fix svg fallbacks and svg issues on IE
+ * fix social links in footer on mobile [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_footer.html#b-social-media)
+ * #80 #81 #82 #83 #84 fix accessibility issues with colors
+ * #85 fix issue with checkbox alignment in inline forms
 
 
 * 2.0.1 (2014-05-21)
