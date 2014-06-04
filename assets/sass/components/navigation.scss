@@ -231,6 +231,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
 .nav-mobile {
   position: relative;
+  z-index: 1; // fix for Android Browser 4.1
   display: table;
   width: 100%;
   background: $white;
@@ -239,6 +240,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   }
   &.fixed {
     position: fixed;
+    z-index: 100; // fix for Android Browser 4.1
     box-shadow: 0 0 40px 0 fade-out($coal, 0.3);
     top: 0;
     left: 0;
@@ -278,8 +280,8 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   }
   .table-cell {
     border-left: 1px solid $silver;
-      & > a {
-      display: table-cell;
+    display: table-cell;
+    & > a {
       vertical-align: middle;
       text-align: center;
       height: 100%;

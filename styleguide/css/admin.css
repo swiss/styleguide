@@ -9673,6 +9673,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
 .nav-mobile {
   position: relative;
+  z-index: 1;
   display: table;
   width: 100%;
   background: white; }
@@ -9681,6 +9682,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
       display: none; } }
   .nav-mobile.fixed {
     position: fixed;
+    z-index: 100;
     -webkit-box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
     box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
     top: 0;
@@ -9718,9 +9720,9 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
       min-width: 24px;
       width: 24px; }
   .nav-mobile .table-cell {
-    border-left: 1px solid #cccccc; }
+    border-left: 1px solid #cccccc;
+    display: table-cell; }
     .nav-mobile .table-cell > a {
-      display: table-cell;
       vertical-align: middle;
       text-align: center;
       height: 100%;
