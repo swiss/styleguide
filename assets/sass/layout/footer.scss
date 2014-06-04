@@ -32,106 +32,113 @@ On smartphones, some of the functions from the header, e.g. service navigation o
   **2.1.0:**
 
   - placed links in a `ul.list-unstyled` list
+  - changed `.col-sm-3` in `.col-sm-4.col-md-3` for more readability on small size and removed useless `.row` wrapper
+  - added ``
 </div>
 
 ```html_example
 <footer>
 
+  <nav class="footer-service">
+    <ul>
+      <li><a href="#">Emergencies</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">Media</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
   <div class="site-map">
 
     <!-- Use normal `container` instead of `container-fluid` -->
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
       </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h3>Einreise & Aufenthalt in der Schweiz</h3>
-          <ul class="list-unstyled">
-            <li><a href="#">Einreise in die Schweiz</a></li>
-            <li><a href="#">Visabestimmungen</a></li>
-            <li><a href="#">Aufenthalt in der Schweiz</a></li>
-            <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
-            <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
-            <li><a href="#">Informationen zur Schweiz</a></li>
-          </ul>
-        </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <h3>Einreise & Aufenthalt in der Schweiz</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Einreise in die Schweiz</a></li>
+          <li><a href="#">Visabestimmungen</a></li>
+          <li><a href="#">Aufenthalt in der Schweiz</a></li>
+          <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+          <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+          <li><a href="#">Informationen zur Schweiz</a></li>
+        </ul>
       </div>
     </div>
   </div><!-- End of Site-map -->
@@ -193,6 +200,7 @@ address {
 }
 
 .site-map {
+  @media only screen and (max-width: $screen-xs-max) {display: none;}
   background: $smoke;
   background: -moz-linear-gradient(top, $smoke 0%, $white 6%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$smoke), color-stop(6%,$white));
@@ -215,6 +223,25 @@ address {
   }
 }
 
+.footer-service {
+  display: none;
+  @media only screen and (max-width: $screen-xs-max) {
+    display: block;
+    ul {
+      padding: 0;
+      border-bottom: 1px solid $silver;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    li {
+      display: block;
+      margin-left: 0;
+      padding: 9px;
+      border-top: 1px solid $silver;
+    }
+  }
+}
+
 
 
 /*doc
@@ -228,6 +255,13 @@ category: Navigation modules - Footer
 
 The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) are listed in a separate section of the footer.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.0:**
+
+  - added the `.links-social` class to the `<nav/>` element containing the social links
+</div>
+
 ```html_example
 <footer>
 
@@ -235,7 +269,7 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
     <br>
-    <nav>
+    <nav class="links-social">
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
         <li><a class="icon icon--before icon--facebook" href="#">Facebook</a></li>
@@ -260,6 +294,19 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
 </footer>
 ```
 */
+
+
+footer {
+  img {
+    max-width: 204px;
+    margin: 15px 0;
+  }
+}
+
+.links-social {
+  @extend .footer-service;
+  display: block;
+}
 
 
 

@@ -105,6 +105,9 @@ In the news teaser, various snippets of news items are arranged chronologically.
   }
   .list-group-item {
     padding: 5px 0;
+    @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      @include make-sm-column(3);
+    }
   }
   .list-group-item:last-child {
     border-bottom: none;

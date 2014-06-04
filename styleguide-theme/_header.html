@@ -11,12 +11,12 @@
 <!--[if gt IE 9 ]><!--><html class="no-js no-ie"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1;">
+    <meta name="viewport" content="width=device-width, initial-scale=1;">
     <title><%= title %></title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.min.css">
-    <link rel="stylesheet" href="./theme-build/css/cortana.min.css">
+    <link rel="stylesheet" href="./theme-build/css/admin-theme.min.css">
 
     <!-- Source CSS -->
     <% @config['css_include'].each do |css| %>
@@ -42,7 +42,7 @@
                 <li><a href="#">DE</a></li>
                 <li><a href="#">FR</a></li>
                 <li><a href="#">IT</a></li>
-                <li><a class="d#isabled" href="#">RM</a></li>
+                <li><a class="disabled" href="#">RM</a></li>
                 <li><a class="active" href="#">EN</a></li>
               </ul>
             </nav>
@@ -58,9 +58,8 @@
           <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
           <h1>Swiss Confederation<br>Web Guidelines</h1>
         </a>
-
         <form class="form-horizontal form-search pull-right" role="form">
-          <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+          <input id="admin-search" class="form-control search-field" type="text" placeholder="Search">
         </form>
 
       </header>

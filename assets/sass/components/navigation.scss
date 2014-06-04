@@ -20,6 +20,18 @@ nav {
   li:first-child {margin-left: 0;}
 }
 
+.nav-main {
+  // min-height: 70px;
+  background: #e4e4e4; /* Old browsers * navigation.scss */
+  background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(39%,#e2e2e2), color-stop(79%,#dddddd), color-stop(91%,#d5d5d5), color-stop(95%,#cfcfcf), color-stop(99%,#bebebe)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* IE10+ */
+  background: linear-gradient(to bottom, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 ); /* IE6-9 */
+}
+
 /*doc
 ---
 title: Global Navigation
@@ -219,6 +231,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
 .nav-mobile {
   position: relative;
+  z-index: 1; // fix for Android Browser 4.1
   display: table;
   width: 100%;
   background: $white;
@@ -227,8 +240,10 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   }
   &.fixed {
     position: fixed;
+    z-index: 100; // fix for Android Browser 4.1
     box-shadow: 0 0 40px 0 fade-out($coal, 0.3);
     top: 0;
+    left: 0;
     box-sizing: content-box; // so that the border goes below the box
     border-bottom: 5px solid $venetian-red;
   }
@@ -245,6 +260,10 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     font-family: $font-family-sans-serif;
     color: $coal;
     display: inline-block;
+    @media only screen and (max-width: $screen-xs-max) {
+      margin-top: 4px;
+      font-size: 1em;
+    }
     a {color: inherit;}
   }
   .nav-mobile-logo {
@@ -255,19 +274,20 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     margin: 0 1em;
     img {
       vertical-align: middle;
+      min-width: 24px;
       width: 24px;
     }
   }
   .table-cell {
     border-left: 1px solid $silver;
-      & > a {
-      display: table-cell;
+    display: table-cell;
+    & > a {
       vertical-align: middle;
       text-align: center;
       height: 100%;
       padding: 10px 15px;
       color: inherit;
-      &:focus {
+      &:focus, &:hover {
         text-decoration: none;
       }
     }
@@ -346,6 +366,19 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
       }
       &:hover {
         color: $venetian-red;
+        background: $white;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYmRiZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top,  #f4f4f4 0%, #ffffff 10%, #ffffff 79%, #ffffff 91%, #dbdbdb 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(10%,#ffffff), color-stop(79%,#ffffff), color-stop(91%,#ffffff), color-stop(100%,#dbdbdb));
+        background: -webkit-linear-gradient(top,  #f4f4f4 0%,#ffffff 10%,#ffffff 79%,#ffffff 91%,#dbdbdb 100%);
+        background: -o-linear-gradient(top,  #f4f4f4 0%,#ffffff 10%,#ffffff 79%,#ffffff 91%,#dbdbdb 100%);
+        background: -ms-linear-gradient(top,  #f4f4f4 0%,#ffffff 10%,#ffffff 79%,#ffffff 91%,#dbdbdb 100%);
+        background: linear-gradient(to bottom,  #f4f4f4 0%,#ffffff 10%,#ffffff 79%,#ffffff 91%,#dbdbdb 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 );
+
+
+
+
       }
     }
   }

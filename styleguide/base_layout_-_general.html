@@ -17,12 +17,12 @@
 <!--[if gt IE 9 ]><!--><html class="no-js no-ie"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1;">
+    <meta name="viewport" content="width=device-width, initial-scale=1;">
     <title>Base Layout - General</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.min.css">
-    <link rel="stylesheet" href="./theme-build/css/cortana.min.css">
+    <link rel="stylesheet" href="./theme-build/css/admin-theme.min.css">
 
     <!-- Source CSS -->
     
@@ -50,7 +50,7 @@
                 <li><a href="#">DE</a></li>
                 <li><a href="#">FR</a></li>
                 <li><a href="#">IT</a></li>
-                <li><a class="d#isabled" href="#">RM</a></li>
+                <li><a class="disabled" href="#">RM</a></li>
                 <li><a class="active" href="#">EN</a></li>
               </ul>
             </nav>
@@ -66,9 +66,8 @@
           <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
           <h1>Swiss Confederation<br>Web Guidelines</h1>
         </a>
-
         <form class="form-horizontal form-search pull-right" role="form">
-          <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+          <input id="admin-search" class="form-control search-field" type="text" placeholder="Search">
         </form>
 
       </header>
@@ -8399,20 +8398,15 @@
     <div class="col-sm-3"><div style="background:#F7001D"><br><p class="text-center" style="color:white;">#F7001D</p><br></div><pre class="text-center">$red</pre></div>
     <div class="col-sm-3"><div style="background:#006699"><br><p class="text-center" style="color:white;">#006699</p><br></div><pre class="text-center">$cerulean</pre></div>
     <div class="col-sm-3"><div style="background:#e7edef"><br><p class="text-center" style="color:black;">#e7edef</p><br></div><pre class="text-center">$solitude</pre></div>
-  </div>
-  <div class="row">
     <div class="col-sm-3"><div style="background:#f2f7f9"><br><p class="text-center" style="color:black;">#f2f7f9</p><br></div><pre class="text-center">$clear-day</pre></div>
     <div class="col-sm-3"><div style="background:#fffab2"><br><p class="text-center" style="color:black;">#fffab2</p><br></div><pre class="text-center">$mocassin</pre></div>
     <div class="col-sm-3"><div style="background:#D8E8EF"><br><p class="text-center" style="color:black;">#D8E8EF</p><br></div><pre class="text-center">$pattens-blue</pre></div>
+    <div class="col-sm-3"><div style="background:#66afe9"><br><p class="text-center" style="color:black;">#66afe9</p><br></div><pre class="text-center">$malibu</pre></div>
     <div class="col-sm-3"><div style="background:#000000"><br><p class="text-center" style="color:white;">#000000</p><br></div><pre class="text-center">$black</pre></div>
-    </div>
-    <div class="row">
     <div class="col-sm-3"><div style="background:#333333"><br><p class="text-center" style="color:white;">#333333</p><br></div><pre class="text-center">$night-rider</pre></div>
     <div class="col-sm-3"><div style="background:#454545"><br><p class="text-center" style="color:white;">#454545</p><br></div><pre class="text-center">$coal</pre></div>
     <div class="col-sm-3"><div style="background:#757575"><br><p class="text-center" style="color:white;">#757575</p><br></div><pre class="text-center">$empress</pre></div>
     <div class="col-sm-3"><div style="background:#CCCCCC"><br><p class="text-center" style="color:white;">#CCCCCC</p><br></div><pre class="text-center">$silver</pre></div>
-    </div>
-    <div class="row">
     <div class="col-sm-3"><div style="background:#D5D5D5"><br><p class="text-center" style="color:black;">#D5D5D5</p><br></div><pre class="text-center">$light-grey</pre></div>
     <div class="col-sm-3"><div style="background:#E5E5E5"><br><p class="text-center" style="color:black;">#E5E5E5</p><br></div><pre class="text-center">$gainsboro</pre></div>
     <div class="col-sm-3"><div style="background:#F5F5F5"><br><p class="text-center" style="color:black;">#F5F5F5</p><br></div><pre class="text-center">$smoke</pre></div>
@@ -8843,7 +8837,7 @@
   </script>
   <script src="theme-build/js/main.js"></script>
   <script>
-    var cortanaSearchData =
+    var adminSearchData =
     [
       
         
@@ -9804,13 +9798,13 @@
     {}];
 
     (function($) {
-      $('#cortana-search').typeahead({
-        name: 'cortana_search',
-        local: cortanaSearchData,
+      $('#admin-search').typeahead({
+        name: 'admin_search',
+        local: adminSearchData,
         template: [
           '<a href="{{path}}">',
-          '<p class="cortana-search-title">{{title}}</p>',
-          '<p class="cortana-search-path">{{breadcrumb}}</p>',
+          '<p class="admin-search-title">{{title}}</p>',
+          '<p class="admin-search-path">{{breadcrumb}}</p>',
           '</a>'
         ].join(''),
         updater: function () {
@@ -9821,7 +9815,7 @@
       }).on('typeahead:selected', function(event, data) {
         window.location.replace(data.path);
       });
-      $('<span class="icon icon--close" onclick="$(\'#cortana-search\').focus().val(\'\');"></span>').insertAfter('#cortana-search');
+      $('<span class="icon icon--close" onclick="$(\'#admin-search\').focus().val(\'\');"></span>').insertAfter('#admin-search');
       $('.form-search').append('<span class="icon icon--search"></span>');
     }) (jQuery_no_conflict);
   </script>

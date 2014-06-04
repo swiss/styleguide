@@ -1,9 +1,9 @@
-.cortana-body, #sb-site {
+.admin-body, #sb-site {
   background: $softBlue !important;
   z-index: auto !important;
 }
 
-.cortana-header {
+.admin-header {
   background: $white !important;
   padding: 15px 0 !important;
   position: fixed !important;
@@ -38,7 +38,7 @@
   }
 }
 
-.cortana-container {
+.admin-container {
   max-width: 900px !important;
   margin: 0 auto !important;
   padding-bottom: 90px !important;
@@ -48,7 +48,7 @@
   }
 }
 
-.cortana-content-wrapper {
+.admin-content-wrapper {
   padding: 15px 0 !important;
   padding-bottom: 40px !important;
   background: $white !important;
