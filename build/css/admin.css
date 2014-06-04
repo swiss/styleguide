@@ -9915,18 +9915,29 @@ category: Navigation modules - Header
 
 <span class="label label-admin">CD</span>
 
-The languages available are shown as links at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.). The following rules apply:
+The languages available are shown as links, placed side by side, at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.).
 
-The language selection can be presented in the form of a space-saving dropdown list box. This solution must be chosen if more than four languages have to be supported.
-
-The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian. It is also possible to show the four official languages as links next to one another. There are as yet no finalized design guidelines for this.
-Romansh and English are only shown if the content is available in these languages.
+The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages German, French, and Italian. Additionally their can be information in Romansh and English.
 
 Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.
 
-If no content in one of the languages is available on only some of the pages, the language link is shown as `disabled. In the navigation the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
+The following rules apply for the language navigation:
+
+German, Frech and English are mandatory. Therefore the abbrevations DE, FR and IT are always and on each page visible.
+
+The active language is indicated with a light grey background.
+
+Inactive languages are indicated as disabled with a light-grey font colour.
+
+The abbrevations for Romansh (RM) and English (EN) are shown, if their is content in this languages available.
+
+If no content in one of the languages is available or only some, the language link is shown as `disabled. In the navigation, the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
+
+This rules apply for smartphones as well.
 
 On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
+
+The design of the language navigation for cases, where their are more then five langugages, has yet to be specified.
 
 <br>
 <div class="alert alert-warning">
