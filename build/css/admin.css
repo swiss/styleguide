@@ -9463,7 +9463,6 @@ nav li:first-child {
   margin-left: 0; }
 
 .nav-main {
-  min-height: 70px;
   background: #e4e4e4;
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
@@ -9721,7 +9720,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
       height: 100%;
       padding: 10px 15px;
       color: inherit; }
-      .nav-mobile .table-cell > a:focus {
+      .nav-mobile .table-cell > a:focus, .nav-mobile .table-cell > a:hover {
         text-decoration: none; }
   .nav-mobile .dropdown-menu {
     margin-top: 5px;

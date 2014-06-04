@@ -8412,7 +8412,7 @@ On mobile devices the search function can be accessed via an icon in the header.
   </script>
   <script src="theme-build/js/main.js"></script>
   <script>
-    var searchData =
+    var adminSearchData =
     [
       
         
@@ -9375,7 +9375,7 @@ On mobile devices the search function can be accessed via an icon in the header.
     (function($) {
       $('#admin-search').typeahead({
         name: 'admin_search',
-        local: searchData,
+        local: adminSearchData,
         template: [
           '<a href="{{path}}">',
           '<p class="admin-search-title">{{title}}</p>',

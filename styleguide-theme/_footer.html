@@ -21,7 +21,7 @@
   </script>
   <script src="theme-build/js/main.js"></script>
   <script>
-    var searchData =
+    var adminSearchData =
     <%= "[" %>
       <% @pages.each do |file_name, page| %>
         <% if not page[:blocks].empty? %>
@@ -42,7 +42,7 @@
     (function($) {
       $('#admin-search').typeahead({
         name: 'admin_search',
-        local: searchData,
+        local: adminSearchData,
         template: [
           '<a href="{{path}}">',
           '<p class="admin-search-title">{{title}}</p>',
