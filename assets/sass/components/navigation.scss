@@ -241,6 +241,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     position: fixed;
     box-shadow: 0 0 40px 0 fade-out($coal, 0.3);
     top: 0;
+    left: 0;
     box-sizing: content-box; // so that the border goes below the box
     border-bottom: 5px solid $venetian-red;
   }
@@ -257,6 +258,10 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     font-family: $font-family-sans-serif;
     color: $coal;
     display: inline-block;
+    @media only screen and (max-width: $screen-xs-max) {
+      margin-top: 4px;
+      font-size: 1em;
+    }
     a {color: inherit;}
   }
   .nav-mobile-logo {
@@ -267,6 +272,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     margin: 0 1em;
     img {
       vertical-align: middle;
+      min-width: 24px;
       width: 24px;
     }
   }

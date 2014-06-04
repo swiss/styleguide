@@ -9684,6 +9684,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     -webkit-box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
     box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
     top: 0;
+    left: 0;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -9700,6 +9701,10 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     font-family: "Frutiger Neue Regular", Arial, sans-serif;
     color: #454545;
     display: inline-block; }
+    @media only screen and (max-width: 767px) {
+      .nav-mobile h1 {
+        margin-top: 4px;
+        font-size: 1em; } }
     .nav-mobile h1 a {
       color: inherit; }
   .nav-mobile .nav-mobile-logo {
@@ -9710,6 +9715,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     margin: 0 1em; }
     .nav-mobile .nav-mobile-logo img {
       vertical-align: middle;
+      min-width: 24px;
       width: 24px; }
   .nav-mobile .table-cell {
     border-left: 1px solid #cccccc; }
