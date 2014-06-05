@@ -139,9 +139,13 @@
             <div class="drilldown dropdown-menu" role="menu">
               <div class="drilldown-container">
                 <nav class="nav-page-list">
+                  <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
                   <ul>
-                    <li class="list-sub">
-                      <a href="#">Drinks</a>
+                    <!-- the .list-emphasis class is optionnal -->
+                    <li class="list-emphasis"><a href="#">Drinks</a></li>
+                    <!-- add the .list-sub class if the list has some sub-lists -->
+                    <li class="list-sub"><a href="#">Mineral water</a>
+                      <!-- sub-list element -->
                       <nav class="drilldown-sub">
                         <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
                         <ul>
@@ -151,8 +155,7 @@
                         </ul>
                       </nav>
                     </li>
-                    <li><a href="#">Mineral water</a></li>
-                    <li><a href="#">Wine</a></li>
+                    <li class="active"><a href="#">Wine</a></li>
                     <li><a href="#">Beer</a></li>
                     <li><a href="#">Spirits</a></li>
                   </ul>
@@ -242,18 +245,31 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3">
-          <nav class="nav-page-list">
-            <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
-            <ul>
-              <li><a href="#">Drinks</a></li>
-              <li><a href="#">Mineral water</a></li>
-              <li class="active"><a href="#">Wine</a></li>
-              <li><a href="#">Beer</a></li>
-              <li><a href="#">Spirits</a></li>
-            </ul>
-          </nav>
-
+        <div class="col-sm-3 drilldown">
+          <div class="drilldown-container">
+            <nav class="nav-page-list">
+              <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+              <ul>
+                <!-- the .list-emphasis class is optionnal -->
+                <li class="list-emphasis"><a href="#">Drinks</a></li>
+                <!-- add the .list-sub class if the list has some sub-lists -->
+                <li class="list-sub"><a href="#">Mineral water</a>
+                  <!-- sub-list element -->
+                  <nav class="drilldown-sub">
+                    <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                    <ul>
+                      <li><a href="#">Test</a></li>
+                      <li><a href="#">Test2</a></li>
+                      <li><a href="#">Test3</a></li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="active"><a href="#">Wine</a></li>
+                <li><a href="#">Beer</a></li>
+                <li><a href="#">Spirits</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <div class="col-sm-9">
 
