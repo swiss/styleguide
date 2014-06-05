@@ -9,7 +9,7 @@
  * Licensed under MIT
  =========================================================== */
 
-.vco-storyjs {
+.vco-storyjs, .vco-storyjs .vco-feature h1, .vco-storyjs .vco-feature h2, .vco-storyjs .vco-feature h3, .vco-storyjs .vco-feature h4, .vco-storyjs .vco-feature h5, .vco-storyjs .vco-feature h6 {
   font-family: $frutiger-light !important;
 }
 .vco-storyjs .twitter,
@@ -97,9 +97,13 @@
   /* float: left; */
 }
 
+.vco-timeline .vco-navigation .timenav .content .marker .flag .flag-content h3, .vco-timeline .vco-navigation .timenav .content .marker .flag-small .flag-content h3 {
+  margin-left: 28px;
+}
+
 .vco-timeline .vco-navigation .vco-toolbar .back-home .icon {
   background: none;
-  font-family: 'AdminCH_Symbols';
+  font-family: $admin-icons;
   width: 1.5em;
 }
 .vco-timeline .vco-navigation .vco-toolbar .back-home .icon:hover {
@@ -108,30 +112,37 @@
 
 .vco-timeline .vco-navigation .vco-toolbar .back-home .icon:before {
   content: '<';
-  font-family: 'AdminCH_Symbols';
+  font-family: $admin-icons;
   font-size: 2em;
 }
 
 .vco-skinny.vco-notouch .vco-slider .nav-next .icon,
 .vco-skinny.vco-notouch .vco-slider .nav-previous .icon {
   background: none;
-  font-family: 'AdminCH_Symbols';
+  font-family: $admin-icons;
   height: 36px;
 }
 .vco-skinny.vco-notouch .vco-slider .nav-next .icon:before {
   content: '>';
-  font-family: 'AdminCH_Symbols';
+  font-family: $admin-icons;
   font-size: 4em;
   color: #BBBBBB;
 }
 .vco-skinny.vco-notouch .vco-slider .nav-previous .icon:before {
   content: '<';
-  font-family: 'AdminCH_Symbols';
+  font-family: $admin-icons;
   font-size: 4em;
   color: #BBBBBB;
 }
 
 .vco-skinny.vco-notouch .vco-slider .nav-previous .nav-container .icon, .vco-skinny.vco-notouch .vco-slider .nav-next .nav-container .icon {
   /* opacity: 0.01; */
+}
+
+.thumbnail {
+  background-image: url('../img/timeline.png?v4.4');
+  background-color: transparent;
+  background-size: 352px 260px;
+  margin-left: 3px !important;
 }
 
