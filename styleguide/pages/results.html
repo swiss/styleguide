@@ -139,9 +139,13 @@
             <div class="drilldown dropdown-menu" role="menu">
               <div class="drilldown-container">
                 <nav class="nav-page-list">
+                  <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
                   <ul>
-                    <li class="list-sub">
-                      <a href="#">Drinks</a>
+                    <!-- the .list-emphasis class is optionnal -->
+                    <li class="list-emphasis"><a href="#">Drinks</a></li>
+                    <!-- add the .list-sub class if the list has some sub-lists -->
+                    <li class="list-sub"><a href="#">Mineral water</a>
+                      <!-- sub-list element -->
                       <nav class="drilldown-sub">
                         <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
                         <ul>
@@ -151,8 +155,7 @@
                         </ul>
                       </nav>
                     </li>
-                    <li><a href="#">Mineral water</a></li>
-                    <li><a href="#">Wine</a></li>
+                    <li class="active"><a href="#">Wine</a></li>
                     <li><a href="#">Beer</a></li>
                     <li><a href="#">Spirits</a></li>
                   </ul>

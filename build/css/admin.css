@@ -9519,7 +9519,18 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
               <nav class="nav-page-list">
                 <ul>
                   <li><a href="#">Drinks</a></li>
-                  <li><a href="#">Mineral water</a></li>
+                  <!-- add the .list-sub class if the list has some sub-lists -->
+                  <li class="list-sub"><a href="#">Mineral water</a>
+                    <!-- sub-list element -->
+                    <nav class="drilldown-sub">
+                      <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                      <ul>
+                        <li><a href="#">Test</a></li>
+                        <li><a href="#">Test2</a></li>
+                        <li><a href="#">Test3</a></li>
+                      </ul>
+                    </nav>
+                  </li>
                   <li><a href="#">Wine</a></li>
                   <li><a href="#">Beer</a></li>
                   <li><a href="#">Spirits</a></li>

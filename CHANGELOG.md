@@ -22,7 +22,7 @@ This changelog references the relevant changes and bug fixes.
  * fix global navigation to display more elements without problems
  * #53 update global navigation to support mobile view [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
  * add `.list-emphasis` class to `.nav-page-list`
- * add drilldown plugin to handle `.nav-page-list` sub-navigation animations [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#d-page-nav-list)
+ * add drilldown plugin to handle `.nav-page-list` sub-navigation animations [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
  * fix viewport issue on Windows Phone
  * fix svg fallbacks and svg issues on IE
  * fix social links in footer on mobile [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_footer.html#b-social-media)
