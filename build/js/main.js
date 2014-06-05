@@ -242,6 +242,9 @@ function carouselInit ($) {
         $that.find($dropdown).removeClass('active');
         $('.overlay').show();
         $that.addClass('nav-open');
+
+        var dropdownHeight = $(window).height() - 49;
+        $that.find('.drilldown-container').height( dropdownHeight );
       }
     });
   });

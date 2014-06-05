@@ -9759,6 +9759,9 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   .nav-mobile .open a > .icon--search:after {
     content: 'x'; }
 
+.drilldown-container {
+  overflow-y: scroll; }
+
 .nav-main {
   background: #e4e4e4;
                                                                                                                     /* Old browsers * navigation.scss
