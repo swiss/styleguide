@@ -9655,6 +9655,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 */
 .navbar {
   border-radius: 0;
+  border: none;
   margin-bottom: 10px; }
 
 .nav-mobile {
