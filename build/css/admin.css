@@ -6500,6 +6500,9 @@ legend {
   margin-left: 0;
   margin-right: 0; }
 
+.form-group .control-label {
+  padding-top: 4px; }
+
 .form-control, .has-success .form-control, .has-error .form-control {
   border-color: #757575;
   padding: 0.4em 0.3076em;
