@@ -8851,6 +8851,15 @@
 <p>In order to place particular emphasis on an individual topic, a maximum of one person teaser may be used on a home page. It is used, for example, on department web pages for a portrait of the responsible Federal Councillor.</p>
 
 <p>Like the dossier teaser, the person teaser consists of a 16:10 format image, the title of the topic, and a brief introductory text. Both the title and the image are linked to the appropriate page with a detailed presentation of the topic. In addition, the teaser has a gray background.</p>
+
+<p><br>
+<div class="alert alert-warning">
+  <strong>2.1.1:</strong></p>
+
+<ul>
+<li>wrapped the <code>.well</code> element in <code>&lt;div class=&quot;bordered-well&quot;&gt;&lt;/div&gt;</code>
+</div></li>
+</ul>
 <div class="codeExample"><div class="exampleOutput"><div class="row">
   <div class="col-sm-3">
 
@@ -8862,7 +8871,8 @@
 
       <div class="row">
         <div class="col-sm-12">
-          <img src="http://placehold.it/282x176" alt="Image description">
+          <div class="bordered-well">
+            <img src="http://placehold.it/282x176" alt="Image description">
             <div class="well">
               <h3><a href="#">Title in H3</a></h3>
               <p>
@@ -8874,6 +8884,7 @@
                 <li><a href="#">Link n°3</a></li>
               </ul>
             </div>
+          </div>
         </div>
       </div>
 
@@ -8891,7 +8902,8 @@
 
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-12&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/282x176&quot;</span> <span class="na">alt=</span><span class="s">&quot;Image description&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bordered-well&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://placehold.it/282x176&quot;</span> <span class="na">alt=</span><span class="s">&quot;Image description&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
               <span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Title in H3<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
               <span class="nt">&lt;p&gt;</span>
@@ -8903,6 +8915,7 @@
                 <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Link n°3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
               <span class="nt">&lt;/ul&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
 
