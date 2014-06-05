@@ -306,6 +306,9 @@ footer {
 .links-social {
   @extend .footer-service;
   display: block;
+  @media only screen and (max-width: $screen-xs-max) {
+    display: none;
+  }
 }
 
 

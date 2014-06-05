@@ -318,8 +318,15 @@ function carouselInit ($) {
 
  At the moment, Facebook, Twitter, and Google Plus are supported.
 
+ <br>
+ <div class="alert alert-warning">
+   **2.1.1:**
+
+   - added the `.social-sharing` class to the `#social-sharing` element
+ </div>
+
  ```html_example
- <div id="social-sharing"></div>
+ <div class="social-sharing" id="social-sharing"></div>
  ```
  */
 

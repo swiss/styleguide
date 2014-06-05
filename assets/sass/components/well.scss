@@ -11,7 +11,8 @@
 
 @charset "UTF-8";
 
-.bordered {
+.bordered-well {
+  border: 1px solid $silver;
   @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
     padding: 15px;
     background: $smoke;

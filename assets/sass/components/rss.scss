@@ -44,5 +44,10 @@ The title always consists of an RSS icon and the letters “RSS”. A list of li
 
 .rss {
   padding-top: 0;
+  &.well {
+    @media only screen and (max-width: $screen-sm-max) {
+      padding: 0;
+    }
+  }
 }
 

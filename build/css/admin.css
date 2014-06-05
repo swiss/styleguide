@@ -6363,6 +6363,9 @@ footer img {
 
 .links-social {
   display: block; }
+  @media only screen and (max-width: 767px) {
+    .links-social {
+      display: none; } }
 
 /*doc
 ---
@@ -7922,6 +7925,13 @@ The “back to overview” link appears before the page title at the top of the 
 <a href="#" class="icon icon--before icon--less">Back to Overview</a>
 ```
 */
+/**
+ * Social sharing (see social.js file for doc)
+ */
+@media only screen and (max-width: 991px) {
+  .social-sharing {
+    display: none; } }
+
 /* ==========================================================
  * lists.scss
  * List element styles
@@ -9238,8 +9248,9 @@ It is vital that this element should only be used in cases of emergency – i.e.
   border-left: 1px solid #d5d5d5;
   border-right: 1px solid #d5d5d5; }
 
-.bordered {
-  border: 1px solid #cccccc; }
+@media only screen and (min-width: 992px) {
+  .bordered {
+    border: 1px solid #cccccc; } }
 
 .spacer {
   height: 40px; }
@@ -11347,9 +11358,11 @@ By default, the shopping cart is not shown. Only after an object has been added 
 
 */
 .cart {
-  border: 1px solid #cccccc;
-  padding: 0 0.8em 0.8em 0.8em;
   font-size: 0.8em; }
+  @media only screen and (min-width: 992px) {
+    .cart {
+      border: 1px solid #cccccc;
+      padding: 0 0.8em 0.8em 0.8em; } }
   .cart h4 {
     font-size: 1.2em; }
   .cart ul {
@@ -11603,14 +11616,16 @@ By default, the shopping cart is not shown. Only after an object has been added 
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
-@media only screen and (max-width: 991px) and (min-width: 768px) {
-  .bordered {
-    padding: 15px;
-    background: whitesmoke; }
-    .bordered img {
-      float: left;
-      margin-right: 15px;
-      margin-bottom: 15px; } }
+.bordered-well {
+  border: 1px solid #cccccc; }
+  @media only screen and (max-width: 991px) and (min-width: 768px) {
+    .bordered-well {
+      padding: 15px;
+      background: whitesmoke; }
+      .bordered-well img {
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 15px; } }
 
 .well {
   border: none;
@@ -11985,3 +12000,6 @@ The title always consists of an RSS icon and the letters “RSS”. A list of li
 */
 .rss {
   padding-top: 0; }
+  @media only screen and (max-width: 991px) {
+    .rss.well {
+      padding: 0; } }
