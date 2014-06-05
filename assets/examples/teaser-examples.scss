@@ -189,6 +189,13 @@ In order to place particular emphasis on an individual topic, a maximum of one p
 
 Like the dossier teaser, the person teaser consists of a 16:10 format image, the title of the topic, and a brief introductory text. Both the title and the image are linked to the appropriate page with a detailed presentation of the topic. In addition, the teaser has a gray background.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.1:**
+
+  - wrapped the `.well` element in `<div class="bordered-well"></div>`
+</div>
+
 ```html_example
 <div class="row">
   <div class="col-sm-3">
@@ -201,7 +208,8 @@ Like the dossier teaser, the person teaser consists of a 16:10 format image, the
 
       <div class="row">
         <div class="col-sm-12">
-          <img src="http://placehold.it/282x176" alt="Image description">
+          <div class="bordered-well">
+            <img src="http://placehold.it/282x176" alt="Image description">
             <div class="well">
               <h3><a href="#">Title in H3</a></h3>
               <p>
@@ -213,6 +221,7 @@ Like the dossier teaser, the person teaser consists of a 16:10 format image, the
                 <li><a href="#">Link n°3</a></li>
               </ul>
             </div>
+          </div>
         </div>
       </div>
 

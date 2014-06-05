@@ -27,7 +27,9 @@
 }
 
 .bordered {
-  border: 1px solid $silver;
+  @media only screen and (min-width: $screen-md-min) {
+    border: 1px solid $silver;
+  }
 }
 
 .spacer {
