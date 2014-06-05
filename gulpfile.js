@@ -43,7 +43,7 @@ gulp.task('scripts', function() {
 gulp.task('vendors', function() {
 
   gulp.src([
-      './bower_components/TimelineJS/compiled/**/*'
+      './bower_components/TimelineJS/build/**/*'
     ])
     .pipe(gulp.dest('build/js/TimelineJS'));
 
