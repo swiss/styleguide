@@ -6,6 +6,7 @@ This changelog references the relevant changes and bug fixes.
 * 2.1.1 (2014-06-05)
  * #70 add german LICENSE file to fonts folder
  * wrapped `.well` element  `.bordered-well` div [**! Markup changes**](http://adminch.antistatique.net/content_modules_-_teaser.html#f-person-teaser)
+ * #98 fixed some responsive columns size in example page
 
 * 2.1.0 (2014-06-03)
  * #52 fix side navigation
