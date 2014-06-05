@@ -1,4 +1,4 @@
-.cortana-header .twitter-typeahead {
+.admin-header .twitter-typeahead {
   position: absolute !important;
   right: 25px !important;
   top: 18px !important;
@@ -37,7 +37,7 @@
 
 /* custom styles for the typeahead */
 
-.cortana-header .tt-dropdown-menu {
+.admin-header .tt-dropdown-menu {
   width: 230px !important;
   margin-top: 12px !important;
   padding: 8px 0 !important;
@@ -47,32 +47,32 @@
   box-shadow: 0 5px 10px rgba(0,0,0,.2) !important;
 }
 
-.cortana-header .tt-suggestion {
+.admin-header .tt-suggestion {
   padding: 8px 15px !important;
   font-family: $mainFont !important;
   border-top: 1px solid $silver !important;
   &:first-child {border: none !important;}
 }
 
-.cortana-header .tt-suggestion a {
+.admin-header .tt-suggestion a {
   text-decoration: none !important;
   color: $mine !important;
 }
 
-.cortana-search-title {
+.admin-search-title {
   font-weight: bold !important;
   font-size: 14px !important;
   margin: 0 !important;
   margin-bottom: 5px !important;
 }
 
-.cortana-search-path {
+.admin-search-path {
   font-weight: normal !important;
   font-size: 12px !important;
   margin: 0 !important;
 }
 
-.cortana-header .tt-suggestion.tt-is-under-cursor {
+.admin-header .tt-suggestion.tt-is-under-cursor {
   a {color: $white !important;}
   background-color: $alizarin !important;
 }

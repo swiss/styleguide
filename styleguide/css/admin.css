@@ -15,35 +15,30 @@
   src: url("../fonts/AdminCH_Symbols.eot?#iefix") format("embedded-opentype"), url("../fonts/AdminCH_Symbols.woff?v2") format("woff"), url("../fonts/AdminCH_Symbols.ttf?v2") format("truetype"), url("../fonts/AdminCH_Symbols.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Bold';
   src: url("../fonts/FrutigerNeueW02-Bd.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Bd.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Bd.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Bd.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Italic';
   src: url("../fonts/FrutigerNeueW02-It.eot?v2");
   src: url("../fonts/FrutigerNeueW02-It.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-It.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-It.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-It.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Regular';
   src: url("../fonts/FrutigerNeueW02-Regular.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Regular.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Regular.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Regular.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Light';
   src: url("../fonts/FrutigerNeueW02-Light.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Light.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Light.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Light.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /* ==========================================================
  * admin-mixins.scss
  * Our project mixins
@@ -397,7 +392,6 @@ th {
   font-family: 'Glyphicons Halflings';
   src: url("bootstrap/glyphicons-halflings-regular.eot");
   src: url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
-
 .glyphicon, .alert:before {
   position: relative;
   top: 1px;
@@ -1022,7 +1016,7 @@ th {
 
 html {
   font-size: 62.5%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: transparent; }
 
 body {
   font-family: "Frutiger Neue Regular", Arial, sans-serif;
@@ -4155,7 +4149,6 @@ a.thumbnail.active {
 
   to {
     background-position: 0 0; } }
-
 .progress {
   overflow: hidden;
   height: 22px;
@@ -5104,7 +5097,7 @@ button.close {
     border-radius: 10px;
     cursor: pointer;
     background-color: #000 \9;
-    background-color: rgba(0, 0, 0, 0); }
+    background-color: transparent; }
   .carousel-indicators .active {
     margin: 0;
     width: 12px;
@@ -5190,7 +5183,6 @@ button.close {
 
 @-ms-viewport {
   width: device-width; }
-
 .visible-xs, .visible-sm, .visible-md, .visible-lg {
   display: none !important; }
 
@@ -7883,7 +7875,7 @@ The link at the end of the page is a special top link. Each page (with the excep
 <small><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small>
 ```
 
-For a print button, check the [buttons section](base_layout_%3E_forms.html#a-buttons).
+For a print button, check the [buttons section](base_layout_-_forms_elements.html#f-buttons).
 
 */
 a {
@@ -7902,7 +7894,7 @@ a {
   small a ~ span {
     display: block;
     margin-top: -5px; }
-  a.icon:hover:before, a[data-toggle="collapse"]:hover:before, a.icon:hover:after, a[data-toggle="collapse"]:hover:after {
+  a.icon, a[data-toggle="collapse"], a.icon:before, a[data-toggle="collapse"]:before, a.icon:after, a[data-toggle="collapse"]:after, a.icon:hover:before, a[data-toggle="collapse"]:hover:before, a.icon:hover:after, a[data-toggle="collapse"]:hover:after {
     text-decoration: none; }
 
 /*doc
@@ -9470,21 +9462,6 @@ nav li {
 nav li:first-child {
   margin-left: 0; }
 
-.nav-main {
-  min-height: 70px;
-  background: #e4e4e4;
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
-  /* IE10+ */
-  background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), to(#bebebe));
-  /* IE10+ */
-  background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 );
-  /* IE6-9 */ }
-
 /*doc
 ---
 title: Global Navigation
@@ -9678,10 +9655,12 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 */
 .navbar {
   border-radius: 0;
+  border: none;
   margin-bottom: 10px; }
 
 .nav-mobile {
   position: relative;
+  z-index: 1;
   display: table;
   width: 100%;
   background: white; }
@@ -9690,9 +9669,11 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
       display: none; } }
   .nav-mobile.fixed {
     position: fixed;
+    z-index: 100;
     -webkit-box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
     box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
     top: 0;
+    left: 0;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -9709,6 +9690,10 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     font-family: "Frutiger Neue Regular", Arial, sans-serif;
     color: #454545;
     display: inline-block; }
+    @media only screen and (max-width: 767px) {
+      .nav-mobile h1 {
+        margin-top: 4px;
+        font-size: 1em; } }
     .nav-mobile h1 a {
       color: inherit; }
   .nav-mobile .nav-mobile-logo {
@@ -9719,17 +9704,18 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     margin: 0 1em; }
     .nav-mobile .nav-mobile-logo img {
       vertical-align: middle;
+      min-width: 24px;
       width: 24px; }
   .nav-mobile .table-cell {
-    border-left: 1px solid #cccccc; }
+    border-left: 1px solid #cccccc;
+    display: table-cell; }
     .nav-mobile .table-cell > a {
-      display: table-cell;
       vertical-align: middle;
       text-align: center;
       height: 100%;
       padding: 10px 15px;
       color: inherit; }
-      .nav-mobile .table-cell > a:focus {
+      .nav-mobile .table-cell > a:focus, .nav-mobile .table-cell > a:hover {
         text-decoration: none; }
   .nav-mobile .dropdown-menu {
     margin-top: 5px;
@@ -9759,9 +9745,7 @@ background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d
   background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), to(#bebebe));
   /* IE10+ */
   background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 );
-  /* IE6-9 */ }
+  /* W3C */ }
   @media only screen and (max-width: 767px) {
     .nav-main {
       background: white;
@@ -9916,18 +9900,29 @@ category: Navigation modules - Header
 
 <span class="label label-admin">CD</span>
 
-The languages available are shown as links at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.). The following rules apply:
+The languages available are shown as links, placed side by side, at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.).
 
-The language selection can be presented in the form of a space-saving dropdown list box. This solution must be chosen if more than four languages have to be supported.
-
-The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian. It is also possible to show the four official languages as links next to one another. There are as yet no finalized design guidelines for this.
-Romansh and English are only shown if the content is available in these languages.
+The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages German, French, and Italian. Additionally their can be information in Romansh and English.
 
 Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.
 
-If no content in one of the languages is available on only some of the pages, the language link is shown as `disabled. In the navigation the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
+The following rules apply for the language navigation:
+
+German, Frech and English are mandatory. Therefore the abbrevations DE, FR and IT are always and on each page visible.
+
+The active language is indicated with a light grey background.
+
+Inactive languages are indicated as disabled with a light-grey font colour.
+
+The abbrevations for Romansh (RM) and English (EN) are shown, if their is content in this languages available.
+
+If no content in one of the languages is available or only some, the language link is shown as `disabled. In the navigation, the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
+
+This rules apply for smartphones as well.
 
 On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
+
+The design of the language navigation for cases, where their are more then five langugages, has yet to be specified.
 
 <br>
 <div class="alert alert-warning">
@@ -10131,14 +10126,14 @@ On smartphones, the treecrumb navigation is omitted.
     display: block;
     position: absolute;
     top: -1px;
-    right: -2em;
+    right: -2.1em;
     width: 0;
     height: 0;
     border-color: transparent transparent transparent #cccccc;
     border-style: solid;
     border-width: 1.05em; }
   .treecrumb .dropdown-toggle:after {
-    right: -1.95em;
+    right: -2em;
     border-color: transparent transparent transparent white; }
   .treecrumb .dropdown-toggle span {
     margin-right: 1em; }
@@ -10601,10 +10596,11 @@ In the news teaser, various snippets of news items are arranged chronologically.
       min-height: 1px;
       padding-left: 15px;
       padding-right: 15px; } }
-    @media only screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
-      .news-feed .list-group-item {
-        float: left;
-        width: 25%; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
+    .news-feed .list-group-item {
+      float: left;
+      width: 25%; } }
+
 .news-feed .list-group-item:last-child {
   border-bottom: none; }
 
@@ -10796,6 +10792,43 @@ Process navigation is used in connection with forms that are spread over several
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
+/*doc
+---
+title: Site Search
+name: -site-search
+category: Navigation modules - Header
+---
+
+<span class="label label-admin">CD</span>
+
+The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
+
+On smartphones, the search function can be accessed via an icon in the Header.
+
+```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+    <form class="form-horizontal form-search pull-right" role="form">
+      <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+    </form>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+```
+
+```js_example
+// You have to store all your data inside `searchData` and define it globaly
+var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
+  "Basel-Landschaft", "Basel-Stadt", "Bern", "Fribourg", "Genève",
+  "Glarus", "Graubünden", "Jura", "Lucerne", "Neuchâtel", "Nidwalden",
+  "Obwalden", "Schaffhausen", "Schwyz", "Solothurn", "St. Gallen",
+  "Thurgau", "Ticino", "Uri", "Valais", "Vaud", "Zug", "Zurich"
+];
+```
+*/
 .form-search {
   display: inline-block;
   position: relative; }
@@ -11282,58 +11315,13 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     border-color: white;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 0 transparent;
+    box-shadow: 0 0 0 0 transparent;
     color: #dc0018;
     position: relative;
     z-index: 1000; }
   .yamm--select .dropdown-menu {
     top: 22px; }
-
-/*doc
----
-title: Language Selection via a Dropdown List
-name: c-lang-select
-category: Navigation modules - Header
----
-
-<span class="label label-admin">CD</span>
-
-The language selection can be presented in the form of a space-saving dropdown menu. The two-digit abbreviations as per ISO 639-2/3 are used for this purpose (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, etc.). If the selected is changed, the content of the current web page is also altered. The following rules apply:
-
-* The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian.
-* Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.
-
-On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
-
-```html_example
-<!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-
-  <header>
-
-    <nav class="select-lang pull-right">
-      <select class="form-control select-lang">
-        <option>DE</option>
-        <option>FR</option>
-        <option>IT</option>
-        <option>RM</option>
-        <option>EN</option>
-      </select>
-    </nav>
-
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-```
-*/
-.select-lang {
-  width: 60px;
-  display: none; }
-  @media only screen and (max-width: 767px) {
-    .select-lang {
-      display: inline-block; } }
 
 /*doc
 ---
@@ -11639,8 +11627,8 @@ By default, the shopping cart is not shown. Only after an object has been added 
   border-radius: 0;
   padding: 10px;
   margin: 0;
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
   background: whitesmoke !important; }
   .well.well-freeboard {
     padding: 0;
@@ -11664,7 +11652,7 @@ By default, the shopping cart is not shown. Only after an object has been added 
   color: #006699;
   font-size: 13px;
   opacity: 1;
-  text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+  text-shadow: 0 0 0 transparent; }
   .close:hover {
     opacity: 1;
     font-style: 13px;
@@ -11954,7 +11942,7 @@ The carousel consists of various information blocks, each of which contains a la
   background-image: none !important; }
   .carousel-control.right:before, .carousel-control.left:before {
     color: #454545;
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    text-shadow: 0 0 0 transparent; }
 
 .carousel-indicators {
   bottom: auto; }
