@@ -7875,7 +7875,7 @@ The link at the end of the page is a special top link. Each page (with the excep
 <small><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small>
 ```
 
-For a print button, check the [buttons section](base_layout_%3E_forms.html#a-buttons).
+For a print button, check the [buttons section](base_layout_-_forms_elements.html#f-buttons).
 
 */
 a {
@@ -7894,7 +7894,7 @@ a {
   small a ~ span {
     display: block;
     margin-top: -5px; }
-  a.icon:hover:before, a[data-toggle="collapse"]:hover:before, a.icon:hover:after, a[data-toggle="collapse"]:hover:after {
+  a.icon, a[data-toggle="collapse"], a.icon:before, a[data-toggle="collapse"]:before, a.icon:after, a[data-toggle="collapse"]:after, a.icon:hover:before, a[data-toggle="collapse"]:hover:before, a.icon:hover:after, a[data-toggle="collapse"]:hover:after {
     text-decoration: none; }
 
 /*doc

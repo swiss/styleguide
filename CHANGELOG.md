@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.1.1 (2014-06-05)
+ * #70 add german LICENSE file to fonts folder
+
 * 2.1.0 (2014-06-03)
  * #52 fix side navigation
  * #52 fix breadcrumb

@@ -57,7 +57,7 @@ The link at the end of the page is a special top link. Each page (with the excep
 <small><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small>
 ```
 
-For a print button, check the [buttons section](base_layout_%3E_forms.html#a-buttons).
+For a print button, check the [buttons section](base_layout_-_forms_elements.html#f-buttons).
 
 */
 
@@ -84,7 +84,8 @@ a {
  }
 
  &.icon {
-  // text-decoration: none;
+  &,
+  &:before, &:after,
   &:hover:before, &:hover:after {
     text-decoration: none;
   }
