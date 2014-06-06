@@ -316,6 +316,10 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   }
 }
 
+.drilldown-container {
+  overflow-y: scroll;
+}
+
 .nav-main {
   background: #e4e4e4; /* Old browsers * navigation.scss
   background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
