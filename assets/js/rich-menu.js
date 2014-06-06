@@ -36,6 +36,10 @@
     });
   });
 
+  $(document).on('click', '.yamm .dropdown-menu', function (e) {
+    e.stopPropagation();
+  });
+
   // Trigger close yamm menu
   $dropdown.each(function () {
     var $that = $(this);
