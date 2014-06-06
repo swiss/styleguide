@@ -7517,6 +7517,10 @@ span.icon.icon--arrow-top:after {
   position: relative;
   top: 2px; }
 
+@media only screen and (max-width: 991px) {
+  .icon--print {
+    display: none; } }
+
 /*doc
 ---
 title: Form icons

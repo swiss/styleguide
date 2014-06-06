@@ -180,6 +180,12 @@ $icon-list: (
   }
 }
 
+.icon--print {
+  @media only screen and (max-width: $screen-sm-max) {
+    display: none;
+  }
+}
+
 
 /*doc
 ---
