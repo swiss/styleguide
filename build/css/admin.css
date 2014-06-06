@@ -11474,6 +11474,9 @@ By default, the shopping cart is not shown. Only after an object has been added 
  ```
 
  */
+ul.nav-tabs {
+  margin-top: 0; }
+
 .nav-tabs li {
   margin-left: 0; }
   .nav-tabs li a {
