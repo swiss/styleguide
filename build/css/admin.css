@@ -5791,7 +5791,6 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
   display: inline-block;
   float: left; }
   .brand img {
-    max-width: 268px;
     margin: 0;
     padding-right: 2em;
     border-right: 1px solid #e5e5e5;
