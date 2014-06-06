@@ -11851,8 +11851,10 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   border-top: 1px solid #cccccc; }
   .tab-content.tab-focus h2 {
     font-family: "Frutiger Neue Bold", Arial, sans-serif; }
-  .tab-content.tab-focus div[class*="col"]:last-child {
-    padding-left: 0; }
+  .tab-content.tab-focus div[class*="col"] {
+    margin-bottom: 0; }
+    .tab-content.tab-focus div[class*="col"]:last-child {
+      padding-left: 0; }
   @media only screen and (max-width: 768px) {
     .tab-content.tab-focus div[class*="col"]:last-child {
       padding: 20px 30px; } }
