@@ -235,32 +235,18 @@ function carouselInit ($) {
     var $that = $(this);
     $that.on('click', '.dropdown-toggle', function () {
       if ($(this).parent().hasClass('open')){
-        $('.overlay').hide();
         $that.removeClass('nav-open');
       } else {
         $that.find($dropdown).removeClass('open');
         $that.find($dropdown).removeClass('active');
-        $('.overlay').show();
         $that.addClass('nav-open');
+
+        var dropdownHeight = $(window).height() - 49;
+        $that.find('.drilldown-container').height( dropdownHeight );
       }
     });
   });
 
-  // Disable outside click
-  $yamm.find($dropdown).on({
-      "shown.bs.dropdown": function() {
-          $(this).data('closable', false);
-       },
-      "hide.bs.dropdown": function() {
-          return $(this).data('closable');
-      }
-  });
-
-  $yamm.on("click", '.yamm-close, .yamm-close-bottom, .dropdown-toggle', function() {
-      $(this).parents($dropdown).data('closable', true);
-  });
-
-  // Disable dropdown-menu closing click
   $(document).on('click', '.yamm .dropdown-menu', function (e) {
     e.stopPropagation();
   });
@@ -318,8 +304,15 @@ function carouselInit ($) {
 
  At the moment, Facebook, Twitter, and Google Plus are supported.
 
+ <br>
+ <div class="alert alert-warning">
+   **2.1.1:**
+
+   - added the `.social-sharing` class to the `#social-sharing` element
+ </div>
+
  ```html_example
- <div id="social-sharing"></div>
+ <div class="social-sharing" id="social-sharing"></div>
  ```
  */
 

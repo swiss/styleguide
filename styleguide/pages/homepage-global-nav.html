@@ -222,9 +222,13 @@
               <div class="drilldown dropdown-menu" role="menu">
                 <div class="drilldown-container">
                   <nav class="nav-page-list">
+                    <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
                     <ul>
-                      <li class="list-sub">
-                        <a href="#">Drinks</a>
+                      <!-- the .list-emphasis class is optionnal -->
+                      <li class="list-emphasis"><a href="#">Drinks</a></li>
+                      <!-- add the .list-sub class if the list has some sub-lists -->
+                      <li class="list-sub"><a href="#">Mineral water</a>
+                        <!-- sub-list element -->
                         <nav class="drilldown-sub">
                           <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
                           <ul>
@@ -234,8 +238,7 @@
                           </ul>
                         </nav>
                       </li>
-                      <li><a href="#">Mineral water</a></li>
-                      <li><a href="#">Wine</a></li>
+                      <li class="active"><a href="#">Wine</a></li>
                       <li><a href="#">Beer</a></li>
                       <li><a href="#">Spirits</a></li>
                     </ul>
@@ -297,7 +300,7 @@
               </li><!-- Dropdown `li` end -->
             </ul><!-- Dropdown `ul` end -->
           </li>
-          <li class="dropdown yamm-fw">
+          <li class="dropdown yamm-fw active">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Einreise & Aufenthalt<br>in der Schweiz</a>
             <ul class="dropdown-menu" role="menu">
               <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
@@ -480,9 +483,7 @@
 
             <div class="row">
               <div class="col-sm-4">
-                <p>
-                  <img src="http://placehold.it/282x176" alt="Image description">
-                </p>
+                <img src="http://placehold.it/282x176" alt="Image description">
                 <h3><a href="#">Title in H3</a></h3>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum.
@@ -491,9 +492,7 @@
                 <a href="#" class="icon icon--after icon--external">An external link</a>
               </div>
               <div class="col-sm-4">
-                <p>
-                  <img src="http://placehold.it/282x176" alt="Image description">
-                </p>
+                <img src="http://placehold.it/282x176" alt="Image description">
                 <h3><a href="#">Title in H3</a></h3>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum. Erit enim mecum, si tecum erit. Ne amores quidem sanctos a sapiente alienos esse arbitrantur.
@@ -502,9 +501,7 @@
                 <a href="#" class="icon icon--after icon--external">An external link</a>
               </div>
               <div class="col-sm-4">
-                <p>
-                  <img src="http://placehold.it/282x176" alt="Image description">
-                </p>
+                <img src="http://placehold.it/282x176" alt="Image description">
                 <h3><a href="#">Title in H3</a></h3>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse.
@@ -524,7 +521,7 @@
 
             <div class="row">
               <div class="col-sm-12">
-                <div class="bordered">
+                <div class="bordered-well">
                   <img src="http://placehold.it/282x176" alt="Image description">
                   <div class="well">
                     <h3><a href="#">Title in H3</a></h3>
@@ -785,7 +782,7 @@
 
       <address>
         <div class="container-fluid">
-          Bundesamt für Statistik
+          <span class="hidden-xs">Bundesamt für Statistik</span>
           <nav class="pull-right">
             <ul>
               <li><a href="#">Rechtliches</a></li>
@@ -798,7 +795,6 @@
     </footer>
 
   </div>
-  <div class="overlay"></div>
   <script type="text/javascript" src="../js/vendors.min.js"></script>
   <script type="text/javascript" src="../js/main.min.js"></script>
 </body>

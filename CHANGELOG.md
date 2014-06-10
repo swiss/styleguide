@@ -3,6 +3,27 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.1.1 (2014-06-06)
+ * #70 add german LICENSE file to fonts folder
+ * wrapped `.well` element  `.bordered-well` div [**! Markup changes**](http://adminch.antistatique.net/content_modules_-_teaser.html#f-person-teaser)
+ * #98 fixed some responsive columns size in example page
+ * #72 remove lang selection via dropdown list
+ * #73 replace text in language selection list
+ * #70 add LICENSE file to fonts folder
+ * #93 remove gradient on global nav IE9
+ * #93 fix treecrumb border
+ * #97 add drilldown plugin to all sub-pages-lists
+ * update Timeline.js
+ * fix general responsive issues
+ * #69 remove overlay on navigation
+ * #104 fix logo size
+ * remove print button on mobile
+ * #111 rename dropdown-box to collapsible-panel
+ * #113 remove page name from footer on mobile
+ * #120 fix padding on top of images homepage
+ * #119 remove margin below images in focus element
+ * #110 add background example to styleguide
+
 * 2.1.0 (2014-06-03)
  * #52 fix side navigation
  * #52 fix breadcrumb
@@ -19,7 +40,7 @@ This changelog references the relevant changes and bug fixes.
  * fix global navigation to display more elements without problems
  * #53 update global navigation to support mobile view [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
  * add `.list-emphasis` class to `.nav-page-list`
- * add drilldown plugin to handle `.nav-page-list` sub-navigation animations [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#d-page-nav-list)
+ * add drilldown plugin to handle `.nav-page-list` sub-navigation animations [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
  * fix viewport issue on Windows Phone
  * fix svg fallbacks and svg issues on IE
  * fix social links in footer on mobile [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_footer.html#b-social-media)

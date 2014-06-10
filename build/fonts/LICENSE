@@ -1,0 +1,41 @@
+Hinweis
+
+Schutzmechanismen für die Webfonts 'Frutiger'
+
+Die Schweizerische Bundeskanzlei hat die Webfonts für die Schrift Frutiger für die Internetauftritte der ganzen Bundesverwaltung lizenziert. Hierbei musste die folgende Vertragsbedingung akzeptiert werden:
+
+________________________________
+5. Schutz der Schriften-Software
+
+Die Bestellering und ggf. der Betreiber eines Webfont-Hosting Service sind dafür verantwortlich, dass die Schriften-Software nur hinsichtlich der lizenzierten Websites verwendet werden und nicht durch andere Websites benutzt oder von dort darauf verwiesen wird. Dies beinhaltet unter anderem die Einrichtung von hinreichenden Schutzmassnahmen, die die Verwendung der und/oder den Zugriff auf die Schriften-Software und/oder abgeleiteten Werke beschränken, beispielweise, indem die Nutzung von EOT-Schriften-Software auf die lizenzierten Websites beschränkt wird (Domain-Bindung) oder JavaScript  oder andere Zugriffskontrollmechanismen den Verweise auf die Schriften-Software von nicht lizenzierten Quellen beschränken. Eine Schutzmassnahme, die den vom Browser gelieferten Referrer prüft, ist ebenfalls eine ausreichende Schutzmassnahme.
+Die Verletzung dieser Pflicht stellt eine wesentliche Vertagsverletzung dar, welche die Lieferantin zur ausserordentlichen Kündigung berechtigt, wenn der Verletzung von der Bestellerin nicht innerhalb von vierzehn (14) Tagen nach der schriftlichen Mitteilung über die Verletzung abgeholfen wird.
+_________________________________
+
+
+Im Rahmen der Vertragsverhandlungen wurden die Auflagen vom Lizenzgeber wie folgt erläutert:
+
+   Technisch kann man natürlich alle diese Schutzmaßnahmen auf die eine oder andere Weise umgehen.
+Bisher ging es uns hauptsächlich darum, den direkten Download der Font-Dateien zu verhindern bzw. zu erschweren. Das muss natürlich server-seitig passieren.
+
+   Hier ein Auszug aus einer E-Mail, die ich an einen Kunden gesendet habe:
+
+   Man kann das Herunterladen per Link auf jeden Fall durch HTTP referrer checking erschweren. D.h. ein Web Server liefert einen Web Font nur aus, wenn der vom anfragenden Browser mitgeschickte Referrer eine erlaubte URL ist.
+
+   Im u.a. Fall würde der WebFont also nur ausgeliefert, wenn er von einer HTML-Seite / CSS auf www.xxx.com verlinkt wird (dann ist der im Browser gesetzte Referrer www.xxx.com). Ko-piere ich den Link auf den WebFont heraus und rufe ihn direkt auf (der Browser sendet keinen Referrer) oder integriere den Link in einer anderen Webite (der Referrer wä-re www.anderewebsite.de), antwortet der Server mit einem 403/Forbidden Fehler.
+
+   Referrer checking lässt sich natürlich umgehen. Das nennt sich dann Referrer Spoofing. Dafür muss man aber entsprechendes Fachwissen haben bzw. entsprechende Tools kennen und nutzen.
+
+   So würde man Referrer checking bspw. beim Apache Web Server konfigurieren:
+http://wiki.apache.org/httpd/DisableImageHotLinking
+
+   Ich würde eine solche "Hot-Link-Protection" als wirksame Schutzmaßnahme bezeichnen, die zwischen gültigen (korrekter Referrer) und ungültigen (Referrer ist eine andere Website oder leer) Anfragen unterscheidet.
+
+
+Um die vertraglich eingegangen Auflagen einzuhalten legt die Bundeskanzlei mit der Abgabe der Schriften-Software fest:
+
+• Die Webverantwortlichen der Departemente und der Bundeskanzlei sorgen dafür, dass die technischen Auflagen zum Schutz der Schriften-Software eingehalten werden, indem Sie die bundesinterne Betreiber (IKT-Leistungserbringer) über die zu implementierenden Schutzmechanismen informieren und eine Bestätigung verlangen, dass diese durchgeführt werden. Ist der Betreiber bundesextern, so wird die Auflage unter den besonderen Vertragbedigungen entsprechend vereinbart.
+• Die Webverantwortlichen der Departemente verpflichten sich im Fall der Verletzung der Pflicht das Notwendige zu unternehmen, damit die Pflicht innerhalb von 14 Tagen eingehalten wird und die ausserordentlich Kündigung abgewendet werden kann.
+
+Bern, 28. Februar 2014
+
+Bundeskanzlei, SCI

@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="../css/admin.min.css">
 
   <!--[if lt IE 9]>
-    <script src="../theme-build/polyfill/html5shiv.js"></script>
+    <script src="../theme-build/polyfill/5shiv.js"></script>
     <script src="../theme-build/polyfill/respond.min.js"></script>
   <![endif]-->
   <script>
@@ -139,9 +139,13 @@
             <div class="drilldown dropdown-menu" role="menu">
               <div class="drilldown-container">
                 <nav class="nav-page-list">
+                  <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
                   <ul>
-                    <li class="list-sub">
-                      <a href="#">Drinks</a>
+                    <!-- the .list-emphasis class is optionnal -->
+                    <li class="list-emphasis"><a href="#">Drinks</a></li>
+                    <!-- add the .list-sub class if the list has some sub-lists -->
+                    <li class="list-sub"><a href="#">Mineral water</a>
+                      <!-- sub-list element -->
                       <nav class="drilldown-sub">
                         <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
                         <ul>
@@ -151,8 +155,7 @@
                         </ul>
                       </nav>
                     </li>
-                    <li><a href="#">Mineral water</a></li>
-                    <li><a href="#">Wine</a></li>
+                    <li class="active"><a href="#">Wine</a></li>
                     <li><a href="#">Beer</a></li>
                     <li><a href="#">Spirits</a></li>
                   </ul>
@@ -242,211 +245,233 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3">
-          <nav class="nav-page-list">
-            <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
-            <ul>
-              <li><a href="#">Drinks</a></li>
-              <li><a href="#">Mineral water</a></li>
-              <li class="active"><a href="#">Wine</a></li>
-              <li><a href="#">Beer</a></li>
-              <li><a href="#">Spirits</a></li>
-            </ul>
-          </nav>
 
-        </div>
+        <div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+          <div class="row">
 
-        <div class="col-sm-6">
-          <nav class="nav-process">
-            <ul>
-              <li>
-                <a href="#">Step 1</a>
-              </li>
-              <li>
-                <a href="#">Step 2</a>
-              </li>
-              <li class="active">
-                <a href="#">Step 3</a>
-              </li>
-              <li class="disabled">
-                <a href="#">Step 4</a>
-              </li>
-            </ul>
-          </nav>
-          <br>
-          <form class="form-horizontal" role="form">
-            <fieldset>
-              <legend>Legend of fieldset</legend>
-
-              <div class="alert alert-warning">
-                Alert info!
-              </div>
-
-              <!-- email input -->
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                </div>
-              </div>
-
-              <!-- password input -->
-              <div class="form-group has-warning">
-                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                  <span class="help-block">Warning, this is not a correct info!</span>
-                </div>
-              </div>
-
-              <!-- URL input -->
-              <div class="form-group">
-                <label for="inputURL" class="col-sm-2 control-label">Website</label>
-                <div class="col-sm-10">
-                  <input type="url" class="form-control" id="inputURL" placeholder="URL">
-                  <span class="help-block">Use format "http://www.example.com"</span>
-                </div>
-              </div>
-
-              <!-- file input -->
-              <div class="form-group">
-                <label for="file" class="col-sm-2 control-label">Document</label>
-                <div class="col-sm-10">
-                  <input type="file" class="form-control" id="file" placeholder="URL">
-                </div>
-              </div>
-
-              <!-- checkboxes -->
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <div class="checkbox checkbox--left">
-                    <input id="checkboxform" type="checkbox">
-                    <label for="checkboxform">Remember me</label>
-                  </div>
-                  <div class="checkbox checkbox--left">
-                    <input id="checkboxform2" type="checkbox">
-                    <label for="checkboxform2">Accept terms</label>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Dropdown -->
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="dropdown">Dropdown</label>
-                <div class="col-sm-10">
-                  <select id="dropdown" class="form-control">
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-secondary">x</button>
-                  <button type="submit" class="btn btn-default">Cancel</button>
-                  <button type="button" class="btn btn-primary">Validate</button>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-        <div class="col-sm-3">
-          <!-- Nav tabs -->
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#contact" data-toggle="tab">Contact</a></li>
-              <li><a href="#map" data-toggle="tab">Map</a></li>
-            </ul>
-
-            <!-- Tab panes -->
-            <div class="tab-content tab-border">
-              <div class="tab-pane active" id="contact">
-                <address itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
-                  <strong itemprop="name">UNO-Mission New York</strong>
-                  <span>Permanent Mission of Switzerland to the UN</span><br>
-                  <span itemprop="street-address">633, Third Avenue, 29th floor</span><br>
-                  <span itemprop="locality">New York</span>, <span itemprop="region">NY</span><span itemprop="postal-code">10017-6706</span><br>
-                  <span itemprop="country-name">United States of America</span>
-                </address>
-                <dl class="dl-horizontal">
-                  <dt><abbr title="Phone">Tel.</abbr></dt>
-                  <dd><a href="tel:+41 31 322 31 53">+41 31 322 31 53</a></dd>
-                  <dt>Fax</dt>
-                  <dd>+41 31 322 31 54</dd>
-                </dl>
-                <p>
-                  <a href="#" class="icon icon--before icon--message">Email</a><br>
-                  <a href="#" class="icon icon--before icon--list-alt">Contact form</a>
-                </p>
-                <h4>Visa</h4>
-                <p><a href="#" class="icon icon--before icon--message">Email</a></p>
-                <h4>Opening hours</h4>
-                <p>Monday-Friday<br>
-                09.00-12.00 AM</p>
-                <p>Saturday and Sunday<br>
-                closed</p>
-                <p><a href="#" class="icon icon--before icon--print">Print contact infos</a></p>
-              </div>
-              <div class="tab-pane" id="map">
-                <h3>UNO-Mission New York</h3>
-                <p>633, Third Avenue<br>
-                New York, NY10017-6706</p>
-                <p><img src="http://placehold.it/158x120" alt="Map"></p>
-                <p><a href="#" class="icon icon--after icon--external">See on the map</a></p>
-                <p><a href="#" class="icon icon--before icon--print">Print contact infos</a></p>
-              </div>
-            </div>
-            <br>
-            <aside class="cart">
-              <h4>Shopping Cart (3 items)</h4>
-              <ul class="list-unstyled">
-                <li class="clearfix">
-                  <span class="pull-left">Lorem ipsum product name a bit longer at <b>CHF 45.-</b></span>
-                  <a class="pull-right" href="#">
-                    <span class="icon icon--after icon--trash"></span>
-                  </a>
-                </li>
-                <li class="clearfix">
-                  <span class="pull-left">Lorem ipsum <b>CHF 45.-</b></span>
-                  <a class="pull-right" href="#">
-                    <span class="icon icon--after icon--trash"></span>
-                  </a>
-                </li>
-                <li class="clearfix">
-                  <span class="pull-left">Lorem ipsum <b>CHF 45.-</b></span>
-                  <a class="pull-right" href="#">
-                    <span class="icon icon--after icon--trash"></span>
-                  </a>
-                </li>
-              </ul>
-              <p>Total price <b>CHF 135.-</b></p>
-              <p><a class="icon icon--before icon--cart" href="#">Show Shopping Cart</a></p>
-            </aside>
-            <br>
-            <div class="bordered">
-              <div class="rss well well-white">
-                <h4 class="icon icon--before icon--rss">RSS</h4>
-                <ul class="list-unstyled">
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Agenda</a></li>
-                  <li><a href="#">Events</a></li>
+            <div class="col-md-8">
+              <nav class="nav-process">
+                <ul>
+                  <li>
+                    <a href="#">Step 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Step 2</a>
+                  </li>
+                  <li class="active">
+                    <a href="#">Step 3</a>
+                  </li>
+                  <li class="disabled">
+                    <a href="#">Step 4</a>
+                  </li>
                 </ul>
+              </nav>
+              <br>
+              <form class="form-horizontal" role="form">
+                <fieldset>
+                  <legend>Legend of fieldset</legend>
+
+                  <div class="alert alert-warning">
+                    Alert info!
+                  </div>
+
+                  <!-- email input -->
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+
+                  <!-- password input -->
+                  <div class="form-group has-warning">
+                    <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      <span class="help-block">Warning, this is not a correct info!</span>
+                    </div>
+                  </div>
+
+                  <!-- URL input -->
+                  <div class="form-group">
+                    <label for="inputURL" class="col-sm-3 control-label">Website</label>
+                    <div class="col-sm-9">
+                      <input type="url" class="form-control" id="inputURL" placeholder="URL">
+                      <span class="help-block">Use format "http://www.example.com"</span>
+                    </div>
+                  </div>
+
+                  <!-- file input -->
+                  <div class="form-group">
+                    <label for="file" class="col-sm-3 control-label">Document</label>
+                    <div class="col-sm-9">
+                      <input type="file" class="form-control" id="file" placeholder="URL">
+                    </div>
+                  </div>
+
+                  <!-- checkboxes -->
+                  <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                      <div class="checkbox checkbox--left">
+                        <input id="checkboxform" type="checkbox">
+                        <label for="checkboxform">Remember me</label>
+                      </div>
+                      <div class="checkbox checkbox--left">
+                        <input id="checkboxform2" type="checkbox">
+                        <label for="checkboxform2">Accept terms</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Dropdown -->
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label" for="dropdown">Dropdown</label>
+                    <div class="col-sm-9">
+                      <select id="dropdown" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                      <button type="submit" class="btn btn-secondary"><span class="icon icon--close"></span></button>
+                      <button type="submit" class="btn btn-default">Cancel</button>
+                      <button type="button" class="btn btn-primary">Validate</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+
+            <div class="col-md-4">
+              <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#contact" data-toggle="tab">Contact</a></li>
+                  <li><a href="#map" data-toggle="tab">Map</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content tab-border">
+                  <div class="tab-pane active" id="contact">
+                    <address itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
+                      <strong itemprop="name">UNO-Mission New York</strong>
+                      <span>Permanent Mission of Switzerland to the UN</span><br>
+                      <span itemprop="street-address">633, Third Avenue, 29th floor</span><br>
+                      <span itemprop="locality">New York</span>, <span itemprop="region">NY</span><span itemprop="postal-code">10017-6706</span><br>
+                      <span itemprop="country-name">United States of America</span>
+                    </address>
+                    <dl class="dl-horizontal">
+                      <dt><abbr title="Phone">Tel.</abbr></dt>
+                      <dd><a href="tel:+41 31 322 31 53">+41 31 322 31 53</a></dd>
+                      <dt>Fax</dt>
+                      <dd>+41 31 322 31 54</dd>
+                    </dl>
+                    <p>
+                      <a href="#" class="icon icon--before icon--message">Email</a><br>
+                      <a href="#" class="icon icon--before icon--list-alt">Contact form</a>
+                    </p>
+                    <h4>Visa</h4>
+                    <p><a href="#" class="icon icon--before icon--message">Email</a></p>
+                    <h4>Opening hours</h4>
+                    <p>Monday-Friday<br>
+                    09.00-12.00 AM</p>
+                    <p>Saturday and Sunday<br>
+                    closed</p>
+                    <p><a href="#" class="icon icon--before icon--print">Print contact infos</a></p>
+                  </div>
+                  <div class="tab-pane" id="map">
+                    <h3>UNO-Mission New York</h3>
+                    <p>633, Third Avenue<br>
+                    New York, NY10017-6706</p>
+                    <p><img src="http://placehold.it/158x120" alt="Map"></p>
+                    <p><a href="#" class="icon icon--after icon--external">See on the map</a></p>
+                    <p><a href="#" class="icon icon--before icon--print">Print contact infos</a></p>
+                  </div>
+                </div>
+                <br>
+                <aside class="cart">
+                  <h4>Shopping Cart (3 items)</h4>
+                  <ul class="list-unstyled">
+                    <li class="clearfix">
+                      <span class="pull-left">Lorem ipsum product name a bit longer at <b>CHF 45.-</b></span>
+                      <a class="pull-right" href="#">
+                        <span class="icon icon--after icon--trash"></span>
+                      </a>
+                    </li>
+                    <li class="clearfix">
+                      <span class="pull-left">Lorem ipsum <b>CHF 45.-</b></span>
+                      <a class="pull-right" href="#">
+                        <span class="icon icon--after icon--trash"></span>
+                      </a>
+                    </li>
+                    <li class="clearfix">
+                      <span class="pull-left">Lorem ipsum <b>CHF 45.-</b></span>
+                      <a class="pull-right" href="#">
+                        <span class="icon icon--after icon--trash"></span>
+                      </a>
+                    </li>
+                  </ul>
+                  <p>Total price <b>CHF 135.-</b></p>
+                  <p><a class="icon icon--before icon--cart" href="#">Show Shopping Cart</a></p>
+                </aside>
+                <br>
+                <div class="bordered">
+                  <div class="rss well well-white">
+                    <h4 class="icon icon--before icon--rss">RSS</h4>
+                    <ul class="list-unstyled">
+                      <li><a href="#">News</a></li>
+                      <li><a href="#">Agenda</a></li>
+                      <li><a href="#">Events</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <br>
+                <div class="well">
+                  <h4>Title in H4</h4>
+                  <img src="http://placehold.it/240x140" alt="image description">
+                  <p>
+                    Lorem ipsum dolor sit amet, consect.
+                  </p>
+                  <ul>
+                    <li><a href="#">Link n°1</a></li>
+                    <li><a href="#">Link n°2</a></li>
+                    <li><a href="#">Link n°3</a></li>
+                  </ul>
               </div>
             </div>
-            <br>
-            <div class="well">
-              <h4>Title in H4</h4>
-              <img src="http://placehold.it/240x140" alt="image description">
-              <p>
-                Lorem ipsum dolor sit amet, consect.
-              </p>
-              <ul>
-                <li><a href="#">Link n°1</a></li>
-                <li><a href="#">Link n°2</a></li>
-                <li><a href="#">Link n°3</a></li>
-              </ul>
+
           </div>
         </div>
+
+        <div class="col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9 drilldown">
+          <div class="drilldown-container">
+            <nav class="nav-page-list">
+              <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+              <ul>
+                <!-- the .list-emphasis class is optionnal -->
+                <li class="list-emphasis"><a href="#">Drinks</a></li>
+                <!-- add the .list-sub class if the list has some sub-lists -->
+                <li class="list-sub"><a href="#">Mineral water</a>
+                  <!-- sub-list element -->
+                  <nav class="drilldown-sub">
+                    <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                    <ul>
+                      <li><a href="#">Test</a></li>
+                      <li><a href="#">Test2</a></li>
+                      <li><a href="#">Test3</a></li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="active"><a href="#">Wine</a></li>
+                <li><a href="#">Beer</a></li>
+                <li><a href="#">Spirits</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
       </div>
     <footer>
 
@@ -573,7 +598,7 @@
 
       <address>
         <div class="container-fluid">
-          Bundesamt für Statistik
+          <span class="hidden-xs">Bundesamt für Statistik</span>
           <nav class="pull-right">
             <ul>
               <li><a href="#">Rechtliches</a></li>
@@ -587,7 +612,6 @@
 
 
   </div>
-  <div class="overlay"></div>
   <script type="text/javascript" src="../js/vendors.min.js"></script>
   <script type="text/javascript" src="../js/main.min.js"></script>
 </body>

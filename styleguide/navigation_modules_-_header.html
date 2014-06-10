@@ -543,8 +543,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -863,8 +861,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -1150,8 +1146,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -1463,8 +1457,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -1750,8 +1742,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -2063,8 +2053,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -2363,8 +2351,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -2650,8 +2636,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -2987,8 +2971,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -3308,8 +3290,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -3658,8 +3638,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -4022,8 +4000,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -4400,12 +4376,6 @@
                                     
                                       
                                       
-                                      <li><a href="navigation_modules_-_header.html#c-lang-select">Language Selection via a Dropdown List</a></li>
-                                    
-                                  
-                                    
-                                      
-                                      
                                       <li><a href="navigation_modules_-_header.html#d-lang-navigation-list">Language Selection via a Link List</a></li>
                                     
                                   
@@ -4714,8 +4684,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -5055,8 +5023,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -5364,8 +5330,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -5727,8 +5691,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -6043,8 +6005,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -6076,7 +6036,7 @@
                                     
                                       
                                       
-                                      <li><a href="content_modules_-_content_containers.html#c-dropdown-box">Drop-Down Box</a></li>
+                                      <li><a href="content_modules_-_content_containers.html#c-dropdown-box">Collapsible Panel</a></li>
                                     
                                   
                                 
@@ -6344,8 +6304,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -6703,8 +6661,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -6998,8 +6954,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -7325,8 +7279,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -7637,8 +7589,6 @@
                                   
                                     
                                   
-                                    
-                                  
                                 
                               
                                 
@@ -7936,8 +7886,6 @@
                                 
                               
                                 
-                                  
-                                    
                                   
                                     
                                   
@@ -8349,10 +8297,6 @@
           
         
       
-        
-          
-        
-      
       <div class="row">
           
         <div class="col-sm-12">
@@ -8473,73 +8417,33 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 
 <span class="nt">&lt;/div&gt;</span>
 </pre></div></div></div>
-<h1 id="c-lang-select">Language Selection via a Dropdown List</h1>
-
-<p><span class="label label-admin">CD</span></p>
-
-<p>The language selection can be presented in the form of a space-saving dropdown menu. The two-digit abbreviations as per ISO 639-2/3 are used for this purpose (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, etc.). If the selected is changed, the content of the current web page is also altered. The following rules apply:</p>
-
-<ul>
-<li>The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian.</li>
-<li>Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.</li>
-</ul>
-
-<p>On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.</p>
-<div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-
-  <header>
-
-    <nav class="select-lang pull-right">
-      <select class="form-control select-lang">
-        <option>DE</option>
-        <option>FR</option>
-        <option>IT</option>
-        <option>RM</option>
-        <option>EN</option>
-      </select>
-    </nav>
-
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
-
-  <span class="nt">&lt;header&gt;</span>
-
-    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;select-lang pull-right&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;select</span> <span class="na">class=</span><span class="s">&quot;form-control select-lang&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;option&gt;</span>DE<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>FR<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>IT<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>RM<span class="nt">&lt;/option&gt;</span>
-        <span class="nt">&lt;option&gt;</span>EN<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;/select&gt;</span>
-    <span class="nt">&lt;/nav&gt;</span>
-
-  <span class="nt">&lt;/header&gt;</span>
-  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main&quot;</span><span class="nt">&gt;&lt;/nav&gt;</span>
-
-<span class="nt">&lt;/div&gt;</span>
-</pre></div></div></div>
 <h1 id="d-lang-navigation-list">Language Selection via a Link List</h1>
 
 <p><span class="label label-admin">CD</span></p>
 
-<p>The languages available are shown as links at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.). The following rules apply:</p>
+<p>The languages available are shown as links, placed side by side, at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.).</p>
 
-<p>The language selection can be presented in the form of a space-saving dropdown list box. This solution must be chosen if more than four languages have to be supported.</p>
-
-<p>The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian. It is also possible to show the four official languages as links next to one another. There are as yet no finalized design guidelines for this.
-Romansh and English are only shown if the content is available in these languages.</p>
+<p>The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages German, French, and Italian. Additionally their can be information in Romansh and English.</p>
 
 <p>Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.</p>
 
-<p>If no content in one of the languages is available on only some of the pages, the language link is shown as `disabled. In the navigation the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).</p>
+<p>The following rules apply for the language navigation:</p>
+
+<p>German, Frech and English are mandatory. Therefore the abbrevations DE, FR and IT are always and on each page visible.</p>
+
+<p>The active language is indicated with a light grey background.</p>
+
+<p>Inactive languages are indicated as disabled with a light-grey font colour.</p>
+
+<p>The abbrevations for Romansh (RM) and English (EN) are shown, if their is content in this languages available.</p>
+
+<p>If no content in one of the languages is available or only some, the language link is shown as `disabled. In the navigation, the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).</p>
+
+<p>This rules apply for smartphones as well.</p>
 
 <p>On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.</p>
+
+<p>The design of the language navigation for cases, where their are more then five langugages, has yet to be specified.</p>
 
 <p><br>
 <div class="alert alert-warning">
@@ -8958,8 +8862,6 @@ Romansh and English are only shown if the content is available in these language
     </footer>
   </div>
 
-  <div class="overlay"></div>
-
   <!-- Styleguide JS -->
   <script src="theme-build/js/vendors.min.js"></script>
   <script type="text/javascript">
@@ -9000,15 +8902,6 @@ Romansh and English are only shown if the content is available in these language
             "breadcrumb": "Navigation modules - Header > Service Navigation",
             "path": "navigation_modules_-_header.html#b-service-navigation",
             "tokens": ["Navigation modules - Header","Service Navigation"]
-            },
-          
-            
-            
-            {
-            "title": "Language Selection via a Dropdown List",
-            "breadcrumb": "Navigation modules - Header > Language Selection via a Dropdown List",
-            "path": "navigation_modules_-_header.html#c-lang-select",
-            "tokens": ["Navigation modules - Header","Language Selection via a Dropdown List"]
             },
           
             
@@ -9103,10 +8996,10 @@ Romansh and English are only shown if the content is available in these language
             
             
             {
-            "title": "Drop-Down Box",
-            "breadcrumb": "Content Modules - Content Containers > Drop-Down Box",
+            "title": "Collapsible Panel",
+            "breadcrumb": "Content Modules - Content Containers > Collapsible Panel",
             "path": "content_modules_-_content_containers.html#c-dropdown-box",
-            "tokens": ["Content Modules - Content Containers","Drop-Down Box"]
+            "tokens": ["Content Modules - Content Containers","Collapsible Panel"]
             },
           
         

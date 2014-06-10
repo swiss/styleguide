@@ -20,18 +20,6 @@ nav {
   li:first-child {margin-left: 0;}
 }
 
-.nav-main {
-  // min-height: 70px;
-  background: #e4e4e4; /* Old browsers * navigation.scss */
-  background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(39%,#e2e2e2), color-stop(79%,#dddddd), color-stop(91%,#d5d5d5), color-stop(95%,#cfcfcf), color-stop(99%,#bebebe)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* IE10+ */
-  background: linear-gradient(to bottom, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 ); /* IE6-9 */
-}
-
 /*doc
 ---
 title: Global Navigation
@@ -89,7 +77,18 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
               <nav class="nav-page-list">
                 <ul>
                   <li><a href="#">Drinks</a></li>
-                  <li><a href="#">Mineral water</a></li>
+                  <!-- add the .list-sub class if the list has some sub-lists -->
+                  <li class="list-sub"><a href="#">Mineral water</a>
+                    <!-- sub-list element -->
+                    <nav class="drilldown-sub">
+                      <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                      <ul>
+                        <li><a href="#">Test</a></li>
+                        <li><a href="#">Test2</a></li>
+                        <li><a href="#">Test3</a></li>
+                      </ul>
+                    </nav>
+                  </li>
                   <li><a href="#">Wine</a></li>
                   <li><a href="#">Beer</a></li>
                   <li><a href="#">Spirits</a></li>
@@ -226,6 +225,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
 .navbar {
   border-radius: 0;
+  border: none;
   margin-bottom: 10px;
 }
 
@@ -316,6 +316,10 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   }
 }
 
+.drilldown-container {
+  overflow-y: scroll;
+}
+
 .nav-main {
   background: #e4e4e4; /* Old browsers * navigation.scss
   background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
@@ -324,7 +328,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   background: -o-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* IE10+ */
   background: linear-gradient(to bottom, #e4e4e4 0%,#e2e2e2 39%,#dddddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 ); /* IE6-9 */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 ); /* IE6-9 */
   @media only screen and (max-width: $screen-xs-max) {
     background: $white;
     border: none;
@@ -495,18 +499,29 @@ category: Navigation modules - Header
 
 <span class="label label-admin">CD</span>
 
-The languages available are shown as links at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.). The following rules apply:
+The languages available are shown as links, placed side by side, at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.).
 
-The language selection can be presented in the form of a space-saving dropdown list box. This solution must be chosen if more than four languages have to be supported.
-
-The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian. It is also possible to show the four official languages as links next to one another. There are as yet no finalized design guidelines for this.
-Romansh and English are only shown if the content is available in these languages.
+The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages German, French, and Italian. Additionally their can be information in Romansh and English.
 
 Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.
 
-If no content in one of the languages is available on only some of the pages, the language link is shown as `disabled. In the navigation the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
+The following rules apply for the language navigation:
+
+German, Frech and English are mandatory. Therefore the abbrevations DE, FR and IT are always and on each page visible.
+
+The active language is indicated with a light grey background.
+
+Inactive languages are indicated as disabled with a light-grey font colour.
+
+The abbrevations for Romansh (RM) and English (EN) are shown, if their is content in this languages available.
+
+If no content in one of the languages is available or only some, the language link is shown as `disabled. In the navigation, the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
+
+This rules apply for smartphones as well.
 
 On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
+
+The design of the language navigation for cases, where their are more then five langugages, has yet to be specified.
 
 <br>
 <div class="alert alert-warning">
@@ -712,7 +727,7 @@ On smartphones, the treecrumb navigation is omitted.
       display: block;
       position: absolute;
       top: -1px;
-      right: -2em;
+      right: -2.1em;
       width: 0;
       height: 0;
       border-color: transparent transparent transparent $silver;
@@ -720,7 +735,7 @@ On smartphones, the treecrumb navigation is omitted.
       border-width: 1.05em;
     }
     &:after {
-      right: -1.95em;
+      right: -2em;
       border-color: transparent transparent transparent $white;
     }
     span {

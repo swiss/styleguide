@@ -5791,7 +5791,6 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
   display: inline-block;
   float: left; }
   .brand img {
-    max-width: 268px;
     margin: 0;
     padding-right: 2em;
     border-right: 1px solid #e5e5e5;
@@ -6355,6 +6354,9 @@ footer img {
 
 .links-social {
   display: block; }
+  @media only screen and (max-width: 767px) {
+    .links-social {
+      display: none; } }
 
 /*doc
 ---
@@ -6496,6 +6498,9 @@ legend {
 .form-horizontal .form-group {
   margin-left: 0;
   margin-right: 0; }
+
+.form-group .control-label {
+  padding-top: 4px; }
 
 .form-control, .has-success .form-control, .has-error .form-control {
   border-color: #757575;
@@ -7512,6 +7517,10 @@ span.icon.icon--arrow-top:after {
   position: relative;
   top: 2px; }
 
+@media only screen and (max-width: 991px) {
+  .icon--print {
+    display: none; } }
+
 /*doc
 ---
 title: Form icons
@@ -7779,13 +7788,27 @@ category: Base Layout - General
 
 The background color is a light shade of gray.
 
+<div class="codeExample">
+  <div class="exampleOutput body">
+    <div class="container-main clearfix">
+      <div class="col-sm-12">
+        <p>Lorem ipsum dolor sit  amet, consectetur adipisicing elit. Pariatur dolores adipisci minus nesciunt facilis. Iure, error, facilis, modi, soluta deleniti maiores corporis impedit ducimus laboriosam porro fugiat et esse blanditiis.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 ```
 <body>
-  <!-- your page content -->
+  <div class="container-main">
+    <div class="col-sm-12">
+      <!-- your page content -->
+    </div>
+  </div>
 </body>
 ```
 */
-body {
+body, .body {
   background: url("../img/bg-striped.png") repeat; }
 
 .overlay {
@@ -7875,7 +7898,7 @@ The link at the end of the page is a special top link. Each page (with the excep
 <small><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small>
 ```
 
-For a print button, check the [buttons section](base_layout_%3E_forms.html#a-buttons).
+For a print button, check the [buttons section](base_layout_-_forms_elements.html#f-buttons).
 
 */
 a {
@@ -7894,7 +7917,7 @@ a {
   small a ~ span {
     display: block;
     margin-top: -5px; }
-  a.icon:hover:before, a[data-toggle="collapse"]:hover:before, a.icon:hover:after, a[data-toggle="collapse"]:hover:after {
+  a.icon, a[data-toggle="collapse"], a.icon:before, a[data-toggle="collapse"]:before, a.icon:after, a[data-toggle="collapse"]:after, a.icon:hover:before, a[data-toggle="collapse"]:hover:before, a.icon:hover:after, a[data-toggle="collapse"]:hover:after {
     text-decoration: none; }
 
 /*doc
@@ -7914,6 +7937,13 @@ The “back to overview” link appears before the page title at the top of the 
 <a href="#" class="icon icon--before icon--less">Back to Overview</a>
 ```
 */
+/**
+ * Social sharing (see social.js file for doc)
+ */
+@media only screen and (max-width: 991px) {
+  .social-sharing {
+    display: none; } }
+
 /* ==========================================================
  * lists.scss
  * List element styles
@@ -9036,14 +9066,14 @@ On smartphones there is always a link at the end of the page to the home page an
 
 /*doc
 ---
-title: Drop-Down Box
+title: Collapsible Panel
 name: c-dropdown-box
 category: Content Modules - Content Containers
 ---
 
 <span class="label label-admin">FLEX</span>
 
-The drop-down box is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.
+The collapsible panel is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.
 
 Add `.collapsed` to link for it to change the icon direction when collapsing.
 
@@ -9230,8 +9260,9 @@ It is vital that this element should only be used in cases of emergency – i.e.
   border-left: 1px solid #d5d5d5;
   border-right: 1px solid #d5d5d5; }
 
-.bordered {
-  border: 1px solid #cccccc; }
+@media only screen and (min-width: 992px) {
+  .bordered {
+    border: 1px solid #cccccc; } }
 
 .spacer {
   height: 40px; }
@@ -9462,20 +9493,6 @@ nav li {
 nav li:first-child {
   margin-left: 0; }
 
-.nav-main {
-  background: #e4e4e4;
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
-  /* IE10+ */
-  background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), to(#bebebe));
-  /* IE10+ */
-  background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 );
-  /* IE6-9 */ }
-
 /*doc
 ---
 title: Global Navigation
@@ -9533,7 +9550,18 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
               <nav class="nav-page-list">
                 <ul>
                   <li><a href="#">Drinks</a></li>
-                  <li><a href="#">Mineral water</a></li>
+                  <!-- add the .list-sub class if the list has some sub-lists -->
+                  <li class="list-sub"><a href="#">Mineral water</a>
+                    <!-- sub-list element -->
+                    <nav class="drilldown-sub">
+                      <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                      <ul>
+                        <li><a href="#">Test</a></li>
+                        <li><a href="#">Test2</a></li>
+                        <li><a href="#">Test3</a></li>
+                      </ul>
+                    </nav>
+                  </li>
                   <li><a href="#">Wine</a></li>
                   <li><a href="#">Beer</a></li>
                   <li><a href="#">Spirits</a></li>
@@ -9669,6 +9697,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 */
 .navbar {
   border-radius: 0;
+  border: none;
   margin-bottom: 10px; }
 
 .nav-mobile {
@@ -9747,6 +9776,9 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   .nav-mobile .open a > .icon--search:after {
     content: 'x'; }
 
+.drilldown-container {
+  overflow-y: scroll; }
+
 .nav-main {
   background: #e4e4e4;
                                                                                                                     /* Old browsers * navigation.scss
@@ -9758,9 +9790,7 @@ background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d
   background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), to(#bebebe));
   /* IE10+ */
   background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 );
-  /* IE6-9 */ }
+  /* W3C */ }
   @media only screen and (max-width: 767px) {
     .nav-main {
       background: white;
@@ -9915,18 +9945,29 @@ category: Navigation modules - Header
 
 <span class="label label-admin">CD</span>
 
-The languages available are shown as links at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.). The following rules apply:
+The languages available are shown as links, placed side by side, at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.).
 
-The language selection can be presented in the form of a space-saving dropdown list box. This solution must be chosen if more than four languages have to be supported.
-
-The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian. It is also possible to show the four official languages as links next to one another. There are as yet no finalized design guidelines for this.
-Romansh and English are only shown if the content is available in these languages.
+The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages German, French, and Italian. Additionally their can be information in Romansh and English.
 
 Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.
 
-If no content in one of the languages is available on only some of the pages, the language link is shown as `disabled. In the navigation the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
+The following rules apply for the language navigation:
+
+German, Frech and English are mandatory. Therefore the abbrevations DE, FR and IT are always and on each page visible.
+
+The active language is indicated with a light grey background.
+
+Inactive languages are indicated as disabled with a light-grey font colour.
+
+The abbrevations for Romansh (RM) and English (EN) are shown, if their is content in this languages available.
+
+If no content in one of the languages is available or only some, the language link is shown as `disabled. In the navigation, the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
+
+This rules apply for smartphones as well.
 
 On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
+
+The design of the language navigation for cases, where their are more then five langugages, has yet to be specified.
 
 <br>
 <div class="alert alert-warning">
@@ -10130,14 +10171,14 @@ On smartphones, the treecrumb navigation is omitted.
     display: block;
     position: absolute;
     top: -1px;
-    right: -2em;
+    right: -2.1em;
     width: 0;
     height: 0;
     border-color: transparent transparent transparent #cccccc;
     border-style: solid;
     border-width: 1.05em; }
   .treecrumb .dropdown-toggle:after {
-    right: -1.95em;
+    right: -2em;
     border-color: transparent transparent transparent white; }
   .treecrumb .dropdown-toggle span {
     margin-right: 1em; }
@@ -11329,51 +11370,6 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 
 /*doc
 ---
-title: Language Selection via a Dropdown List
-name: c-lang-select
-category: Navigation modules - Header
----
-
-<span class="label label-admin">CD</span>
-
-The language selection can be presented in the form of a space-saving dropdown menu. The two-digit abbreviations as per ISO 639-2/3 are used for this purpose (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, etc.). If the selected is changed, the content of the current web page is also altered. The following rules apply:
-
-* The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages of German, French, and Italian.
-* Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.
-
-On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
-
-```html_example
-<!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-
-  <header>
-
-    <nav class="select-lang pull-right">
-      <select class="form-control select-lang">
-        <option>DE</option>
-        <option>FR</option>
-        <option>IT</option>
-        <option>RM</option>
-        <option>EN</option>
-      </select>
-    </nav>
-
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-```
-*/
-.select-lang {
-  width: 60px;
-  display: none; }
-  @media only screen and (max-width: 767px) {
-    .select-lang {
-      display: inline-block; } }
-
-/*doc
----
 title: Shopping Cart
 name: b-shoppingcart
 category: Content Modules - Ordering and Check-out
@@ -11415,9 +11411,11 @@ By default, the shopping cart is not shown. Only after an object has been added 
 
 */
 .cart {
-  border: 1px solid #cccccc;
-  padding: 0 0.8em 0.8em 0.8em;
   font-size: 0.8em; }
+  @media only screen and (min-width: 992px) {
+    .cart {
+      border: 1px solid #cccccc;
+      padding: 0 0.8em 0.8em 0.8em; } }
   .cart h4 {
     font-size: 1.2em; }
   .cart ul {
@@ -11476,6 +11474,9 @@ By default, the shopping cart is not shown. Only after an object has been added 
  ```
 
  */
+ul.nav-tabs {
+  margin-top: 0; }
+
 .nav-tabs li {
   margin-left: 0; }
   .nav-tabs li a {
@@ -11540,8 +11541,8 @@ By default, the shopping cart is not shown. Only after an object has been added 
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
-.vco-storyjs {
-  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif; }
+.vco-storyjs, .vco-storyjs .vco-feature h1, .vco-storyjs .vco-feature h2, .vco-storyjs .vco-feature h3, .vco-storyjs .vco-feature h4, .vco-storyjs .vco-feature h5, .vco-storyjs .vco-feature h6 {
+  font-family: "Frutiger Neue Light" !important; }
 
 .vco-storyjs .twitter,
 .vco-storyjs .vcard,
@@ -11554,16 +11555,16 @@ By default, the shopping cart is not shown. Only after an object has been added 
 .vco-storyjs .time-interval div,
 .vco-storyjs .time-interval-major div,
 .vco-storyjs .nav-container {
-  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif; }
+  font-family: "Frutiger Neue Light" !important; }
 
 .vco-storyjs .vco-feature h1.date, .vco-storyjs .vco-feature h2.date, .vco-storyjs .vco-feature h3.date, .vco-storyjs .vco-feature h4.date, .vco-storyjs .vco-feature h5.date, .vco-storyjs .vco-feature h6.date {
-  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif; }
+  font-family: "Frutiger Neue Light" !important; }
 
 .vco-storyjs .timenav h1, .vco-storyjs .flag-content h1, .vco-storyjs .era h1, .vco-storyjs .timenav h2, .vco-storyjs .flag-content h2, .vco-storyjs .era h2, .vco-storyjs .timenav h3, .vco-storyjs .flag-content h3, .vco-storyjs .era h3, .vco-storyjs .timenav h4, .vco-storyjs .flag-content h4, .vco-storyjs .era h4, .vco-storyjs .timenav h5, .vco-storyjs .flag-content h5, .vco-storyjs .era h5, .vco-storyjs .timenav h6, .vco-storyjs .flag-content h6, .vco-storyjs .era h6 {
-  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif; }
+  font-family: "Frutiger Neue Light" !important; }
 
 .vco-storyjs p, .vco-storyjs blockquote, .vco-storyjs blockquote p, .vco-storyjs .twitter blockquote p {
-  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif !important; }
+  font-family: "Frutiger Neue Light" !important; }
 
 .vco-storyjs blockquote, .vco-storyjs blockquote p, .vco-storyjs .twitter blockquote p {
   font-style: normal; }
@@ -11572,7 +11573,7 @@ By default, the shopping cart is not shown. Only after an object has been added 
   font-family: 'Frutiger Neue W02 Light', Arial, sans-serif; }
 
 .timeline-tooltip {
-  font-family: 'FrutigerNeueW02-Regular', Arial, sans-serif; }
+  font-family: "Frutiger Neue Light" !important; }
 
 .vco-slider .slider-item .content .pad-top .text .container {
   padding: 0;
@@ -11617,9 +11618,12 @@ By default, the shopping cart is not shown. Only after an object has been added 
 .vco-storyjs .vcard  {
   /* float: left; */ }
 
+.vco-timeline .vco-navigation .timenav .content .marker .flag .flag-content h3, .vco-timeline .vco-navigation .timenav .content .marker .flag-small .flag-content h3 {
+  margin-left: 28px; }
+
 .vco-timeline .vco-navigation .vco-toolbar .back-home .icon, .vco-timeline .vco-navigation .vco-toolbar .back-home a[data-toggle="collapse"] {
   background: none;
-  font-family: 'AdminCH_Symbols';
+  font-family: "Admin Icons";
   width: 1.5em; }
 
 .vco-timeline .vco-navigation .vco-toolbar .back-home .icon:hover, .vco-timeline .vco-navigation .vco-toolbar .back-home a[data-toggle="collapse"]:hover {
@@ -11627,30 +11631,36 @@ By default, the shopping cart is not shown. Only after an object has been added 
 
 .vco-timeline .vco-navigation .vco-toolbar .back-home .icon:before, .vco-timeline .vco-navigation .vco-toolbar .back-home a[data-toggle="collapse"]:before {
   content: '<';
-  font-family: 'AdminCH_Symbols';
+  font-family: "Admin Icons";
   font-size: 2em; }
 
 .vco-skinny.vco-notouch .vco-slider .nav-next .icon, .vco-skinny.vco-notouch .vco-slider .nav-next a[data-toggle="collapse"],
 .vco-skinny.vco-notouch .vco-slider .nav-previous .icon,
 .vco-skinny.vco-notouch .vco-slider .nav-previous a[data-toggle="collapse"] {
   background: none;
-  font-family: 'AdminCH_Symbols';
+  font-family: "Admin Icons";
   height: 36px; }
 
 .vco-skinny.vco-notouch .vco-slider .nav-next .icon:before, .vco-skinny.vco-notouch .vco-slider .nav-next a[data-toggle="collapse"]:before {
   content: '>';
-  font-family: 'AdminCH_Symbols';
+  font-family: "Admin Icons";
   font-size: 4em;
   color: #BBBBBB; }
 
 .vco-skinny.vco-notouch .vco-slider .nav-previous .icon:before, .vco-skinny.vco-notouch .vco-slider .nav-previous a[data-toggle="collapse"]:before {
   content: '<';
-  font-family: 'AdminCH_Symbols';
+  font-family: "Admin Icons";
   font-size: 4em;
   color: #BBBBBB; }
 
 .vco-skinny.vco-notouch .vco-slider .nav-previous .nav-container .icon, .vco-skinny.vco-notouch .vco-slider .nav-previous .nav-container a[data-toggle="collapse"], .vco-skinny.vco-notouch .vco-slider .nav-next .nav-container .icon, .vco-skinny.vco-notouch .vco-slider .nav-next .nav-container a[data-toggle="collapse"] {
   /* opacity: 0.01; */ }
+
+.thumbnail {
+  background-image: url("../img/timeline.png?v4.4");
+  background-color: transparent;
+  background-size: 352px 260px;
+  margin-left: 3px !important; }
 
 /* ==========================================================
  * well.scss
@@ -11662,14 +11672,16 @@ By default, the shopping cart is not shown. Only after an object has been added 
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
-@media only screen and (max-width: 991px) and (min-width: 768px) {
-  .bordered {
-    padding: 15px;
-    background: whitesmoke; }
-    .bordered img {
-      float: left;
-      margin-right: 15px;
-      margin-bottom: 15px; } }
+.bordered-well {
+  border: 1px solid #cccccc; }
+  @media only screen and (max-width: 991px) and (min-width: 768px) {
+    .bordered-well {
+      padding: 15px;
+      background: whitesmoke; }
+      .bordered-well img {
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 15px; } }
 
 .well {
   border: none;
@@ -11865,8 +11877,10 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
   border-top: 1px solid #cccccc; }
   .tab-content.tab-focus h2 {
     font-family: "Frutiger Neue Bold", Arial, sans-serif; }
-  .tab-content.tab-focus div[class*="col"]:last-child {
-    padding-left: 0; }
+  .tab-content.tab-focus div[class*="col"] {
+    margin-bottom: 0; }
+    .tab-content.tab-focus div[class*="col"]:last-child {
+      padding-left: 0; }
   @media only screen and (max-width: 768px) {
     .tab-content.tab-focus div[class*="col"]:last-child {
       padding: 20px 30px; } }
@@ -12044,3 +12058,6 @@ The title always consists of an RSS icon and the letters “RSS”. A list of li
 */
 .rss {
   padding-top: 0; }
+  @media only screen and (max-width: 991px) {
+    .rss.well {
+      padding: 0; } }

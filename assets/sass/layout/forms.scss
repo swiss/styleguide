@@ -113,6 +113,12 @@ legend {
   margin-right: 0;
 }
 
+.form-group {
+  .control-label {
+    padding-top: 4px;
+  }
+}
+
 .form-control {
   border-color: $empress;
   padding: 0.4em 0.3076em;
