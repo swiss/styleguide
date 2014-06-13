@@ -11,6 +11,7 @@ This changelog references the relevant changes and bug fixes.
  * #107 General Issue Resposiveness Phone-Landscape/Portrait does not work as original enhancement
  * #106 Navigation bar to high enhancement
  * #105 Select (List) examples missing enhancement Styleguide
+ * #145 Accessibility WCAG 2.4.7 Focus in elements is not visible
 
 * 2.1.1 (2014-06-06)
  * #70 add german LICENSE file to fonts folder
