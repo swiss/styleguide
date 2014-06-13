@@ -3,6 +3,16 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.1.1 (2014-06-17)
+ * #109 Several Examples Checkboxes and radiobuttons missing
+ * #125 add highlight on current menu item [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
+ * #134 Accessibility - WCAG 1.3.1 Heading, there are no invisible headings anymore
+ * #127 Hover changes the "inlining" of the text bug
+ * #107 General Issue Resposiveness Phone-Landscape/Portrait does not work as original enhancement
+ * #106 Navigation bar to high enhancement
+ * #105 Select (List) examples missing enhancement Styleguide
+ * #145 Accessibility WCAG 2.4.7 Focus in elements is not visible
+
 * 2.1.1 (2014-06-06)
  * #70 add german LICENSE file to fonts folder
  * wrapped `.well` element  `.bordered-well` div [**! Markup changes**](http://adminch.antistatique.net/content_modules_-_teaser.html#f-person-teaser)
@@ -24,7 +34,7 @@ This changelog references the relevant changes and bug fixes.
  * #119 remove margin below images in focus element
  * #110 add background example to styleguide
  * #106 fix main navigation height
- * #125 add highlight on current menu item [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
+
 
 * 2.1.0 (2014-06-03)
  * #52 fix side navigation
