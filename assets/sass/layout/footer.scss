@@ -151,8 +151,8 @@ On smartphones, some of the functions from the header, e.g. service navigation o
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
         <li><a class="icon icon--before icon--facebook" href="#">Facebook</a></li>
-        <li><a class="icon icon--before icon--rss" href="#">RSS</a></li>
-        <li><a class="icon icon--before icon--message" href="#">feed</a></li>
+        <li><a class="icon icon--before icon--rss" href="#">RSS Feed</a></li>
+        <li><a class="icon icon--before icon--message" href="#">Newsletter</a></li>
       </ul>
     </nav>
 
@@ -160,12 +160,14 @@ On smartphones, some of the functions from the header, e.g. service navigation o
     <p>
       Besuchen Sie die Websites der Schweizer Kooperationsbüros.
     </p>
-    <select name="country">
-      <option value="Switzerland">Switzerland</option>
-      <option value="France">France</option>
-      <option value="Deutchland">Deutchland</option>
-      <option value="...">...</option>
-    </select>
+    <p>
+      <select name="country">
+        <option value="Switzerland">Switzerland</option>
+        <option value="France">France</option>
+        <option value="Deutchland">Deutchland</option>
+        <option value="...">...</option>
+      </select>
+    </p>
   </div>
 
   <address>
