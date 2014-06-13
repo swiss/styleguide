@@ -57,6 +57,7 @@
 
   if($('#social-sharing').length > 0){
     $('#social-sharing').socialSharePrivacy({
+      css_path: '',
       services: setme
     });
   }
