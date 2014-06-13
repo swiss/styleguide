@@ -13,6 +13,12 @@ This changelog references the relevant changes and bug fixes.
  * #105 Select (List) examples missing enhancement Styleguide
  * #145 Accessibility WCAG 2.4.7 Focus in elements is not visible
  * #107 Revert small font size on mobile see ticket for more informations
+ * #140 add lang="en" to html tag
+ * #141 add missing alt tags in some img
+ * #144 add missing labels to selects and inputs for screen readers
+ * #126 add favicon
+ * #124 fix social plugin
+ * #101 #102 fix tabbing issues
 
 * 2.1.1 (2014-06-06)
  * #70 add german LICENSE file to fonts folder
