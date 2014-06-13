@@ -54,6 +54,14 @@ The topics A-Z section is positioned on the right-hand side of the header. When 
 
 On smartphones, the A-Z navigation is accessed via an icon together with the search function.
 
+
+<br>
+<div class="alert alert-warning">
+  **2.1.1:**
+
+    - added `h2.sr-only` for more screen reader clarity
+</div>
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
@@ -61,6 +69,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 
     <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
     <nav class="navbar yamm yamm--select" role="navigation">
+      <h2 class="sr-only">By Topics</h2>
       <ul>
         <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
         <li class="dropdown pull-right">
