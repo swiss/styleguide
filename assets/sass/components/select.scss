@@ -26,8 +26,16 @@ With more than 10 options in the select, a search field is setup at the top of t
 
 You can also add the `multiple` attribute to `<select>` and allow the user to select more than one option at a time, displaying them as tags in the input field.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.2:**
+
+  - added a label before select for screen readers
+</div>
+
 ```html_example
-<select class="form-control">
+<label for="select" class="sr-only">Select:</select>
+<select id="select" class="form-control">
   <option>Option 1</option>
   <option>Option 2</option>
 </select>

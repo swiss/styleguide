@@ -8318,6 +8318,7 @@
 <div class="alert alert-warning">
   <strong>2.1.1:</strong></p>
 <div class="codeBlock"><div class="highlight"><pre><span class="o">-</span> <span class="n">added</span> <span class="err">`</span><span class="n">h2</span><span class="p">.</span><span class="n">sr</span><span class="o">-</span><span class="n">only</span><span class="err">`</span> <span class="k">for</span> <span class="n">more</span> <span class="n">screen</span> <span class="n">reader</span> <span class="n">clarity</span>
+<span class="o">-</span> <span class="n">added</span> <span class="n">label</span> <span class="n">before</span> <span class="n">input</span> <span class="k">for</span> <span class="n">screen</span> <span class="n">readers</span>
 </pre></div></div>
 <p></div></p>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
@@ -8326,6 +8327,7 @@
   <header>
     <form class="form-horizontal form-search pull-right" role="form">
       <h2 class="sr-only">Search</h2>
+      <label for="search-field" class="sr-only">Search:</label>
       <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
     </form>
   </header>
@@ -8338,6 +8340,7 @@
   <span class="nt">&lt;header&gt;</span>
     <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-horizontal form-search pull-right&quot;</span> <span class="na">role=</span><span class="s">&quot;form&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;search-field&quot;</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Search:<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;search-field&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control search-field&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/form&gt;</span>
   <span class="nt">&lt;/header&gt;</span>

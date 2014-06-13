@@ -56,6 +56,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
   - changed `.active` class to `.current` for current page highlight in the menu
   - added `h2.sr-only` for more screen reader clarity
+  - added h2 and label to search field on mobile
 </div>
 
 ```html_example
@@ -107,7 +108,9 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
           <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
           <div class="dropdown-menu" role="menu">
             <form class="form" role="form">
-              <input class="form-control" type="text" placeholder="Search">
+              <h2 class="sr-only">Search</h2>
+              <label for="search-field-mobile" class="sr-only">Search:</label>
+              <input id="search-field-mobile" class="form-control" type="text" placeholder="Search">
               <span class="icon icon--search"></span>
             </form>
           </div>

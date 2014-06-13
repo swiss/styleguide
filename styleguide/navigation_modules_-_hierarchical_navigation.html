@@ -8335,7 +8335,8 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
 
 <ul>
 <li>changed <code>.active</code> class to <code>.current</code> for current page highlight in the menu</li>
-<li>added <code>h2.sr-only</code> for more screen reader clarity
+<li>added <code>h2.sr-only</code> for more screen reader clarity</li>
+<li>added h2 and label to search field on mobile
 </div></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
@@ -8386,7 +8387,9 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
           <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
           <div class="dropdown-menu" role="menu">
             <form class="form" role="form">
-              <input class="form-control" type="text" placeholder="Search">
+              <h2 class="sr-only">Search</h2>
+              <label for="search-field-mobile" class="sr-only">Search:</label>
+              <input id="search-field-mobile" class="form-control" type="text" placeholder="Search">
               <span class="icon icon--search"></span>
             </form>
           </div>
@@ -8551,7 +8554,9 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
           <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;nav-mobile-menu dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--search&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form&quot;</span> <span class="na">role=</span><span class="s">&quot;form&quot;</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/h2&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;search-field-mobile&quot;</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Search:<span class="nt">&lt;/label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;search-field-mobile&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--search&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;/form&gt;</span>
           <span class="nt">&lt;/div&gt;</span>

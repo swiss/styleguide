@@ -30,6 +30,7 @@ On smartphones, the search function can be accessed via an icon in the Header.
   **2.1.1:**
 
     - added `h2.sr-only` for more screen reader clarity
+    - added label before input for screen readers
 </div>
 
 ```html_example
@@ -39,6 +40,7 @@ On smartphones, the search function can be accessed via an icon in the Header.
   <header>
     <form class="form-horizontal form-search pull-right" role="form">
       <h2 class="sr-only">Search</h2>
+      <label for="search-field" class="sr-only">Search:</label>
       <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
     </form>
   </header>
