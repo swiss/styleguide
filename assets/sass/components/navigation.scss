@@ -55,6 +55,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 **2.1.1:**
 
   - changed `.active` class to `.current` for current page highlight in the menu
+  - added `h2.sr-only` for more screen reader clarity
 </div>
 
 ```html_example
@@ -64,7 +65,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
   </header>
   <nav class="nav-main yamm navbar" role="navigation">
-
+    <h2 class="sr-only">Navigation</h2>
     <!-- Mobile Navigation (hidden on desktop) -->
     <section class="nav-mobile">
       <div class="table-row">
@@ -372,7 +373,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
         color: $empress;
         font-size: 0.9em;
       }
-      &:hover {
+      &:hover, &:focus {
         color: $venetian-red;
         background: #dbdbdb;
         background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYmRiZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -460,12 +461,21 @@ The service navigation is positioned at the top right of the header next to the 
 
 On mobile devices the links in the service navigation are moved to the footer.
 
+
+<br>
+<div class="alert alert-warning">
+  **2.1.1:**
+
+    - added `h2.sr-only` for more screen reader clarity
+</div>
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
   <header>
     <nav class="nav-service">
+      <h2 class="sr-only">Services navigation</h2>
       <ul>
         <li><a href="#">Emergencies</a></li>
         <li><a href="#">Jobs</a></li>
@@ -535,6 +545,10 @@ The design of the language navigation for cases, where their are more then five 
   **2.1.0:**
 
   - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
+
+**2.1.1:**
+
+  - added `h2.sr-only` for more screen reader clarity
 </div>
 
 ```html_example
@@ -545,6 +559,7 @@ The design of the language navigation for cases, where their are more then five 
 
     <section class="nav-services clearfix">
       <h2>Title of page</h2>
+      <h2 class="sr-only">Language selection</h2>
       <nav class="nav-lang">
         <ul>
           <li><a class="active" href="#">DE</a></li>
@@ -647,6 +662,14 @@ When closed, the treecrumb navigation presents the hierarchical organization of 
 
 On smartphones, the treecrumb navigation is omitted.
 
+
+<br>
+<div class="alert alert-warning">
+**2.1.1:**
+
+  - added `h2.sr-only` for more screen reader clarity
+</div>
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
@@ -655,6 +678,7 @@ On smartphones, the treecrumb navigation is omitted.
 
     <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
     <nav class="navbar treecrumb" role="navigation">
+      <h2 class="sr-only">Orientation in the website</h2>
       <ul class="nav navbar-nav">
 
         <!-- Treecrumb dropdown element -->
@@ -724,11 +748,10 @@ On smartphones, the treecrumb navigation is omitted.
     border: 1px solid $silver;
     border-left-color: transparent;
     position: relative;
-    &:hover {
+    &:hover, &:focus {
       background: transparent;
       color: $venetian-red;
     }
-    &:focus {background: transparent;}
     &:before, &:after {
       content: '';
       display: block;
