@@ -12074,6 +12074,16 @@ The carousel consists of various information blocks, each of which contains a la
 .carousel-indicators .active {
   background: #dc0018; }
 
+.social_share_privacy_area li .switch {
+  background: none;
+  background-image: url(../img/form-icons.svg);
+  height: 15px;
+  width: 15px; }
+  .social_share_privacy_area li .switch.off {
+    background-position: 0 -90px; }
+  .social_share_privacy_area li .switch.on {
+    background-position: 0 0; }
+
 /* ==========================================================
  * rss.scss
  * RSS component

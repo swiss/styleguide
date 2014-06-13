@@ -339,8 +339,6 @@ function carouselInit ($) {
 
   if($('#social-sharing').length > 0){
     $('#social-sharing').socialSharePrivacy({
-      order: ['gplus', 'twitter','facebook'],
-      css_path: '',
       services: setme
     });
   }
