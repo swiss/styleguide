@@ -12,6 +12,7 @@ This changelog references the relevant changes and bug fixes.
  * #106 Navigation bar to high enhancement
  * #105 Select (List) examples missing enhancement Styleguide
  * #145 Accessibility WCAG 2.4.7 Focus in elements is not visible
+ * #107 Revert small font size on mobile see ticket for more informations
 
 * 2.1.1 (2014-06-06)
  * #70 add german LICENSE file to fonts folder
