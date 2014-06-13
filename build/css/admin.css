@@ -9803,7 +9803,7 @@ background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d
         display: none; } }
   @media only screen and (min-width: 768px) {
     .nav-main {
-      min-height: 70px;
+      min-height: 65px;
       border-top: 5px solid #dc0018; }
       .nav-main .nav-page-list  {
         display: none; } }

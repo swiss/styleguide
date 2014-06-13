@@ -337,7 +337,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     .navbar-nav {display: none;}
   }
   @media only screen and (min-width: $screen-sm-min) {
-    min-height: 70px;
+    min-height: 65px;
     border-top: 5px solid $venetian-red;
     .nav-page-list {display: none;}
   }
