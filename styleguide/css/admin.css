@@ -9451,8 +9451,8 @@ The elements list is a very generic element that groups content elements in a li
     width: 100%;
     border-radius: 0;
     border: none;
-    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); }
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); }
     .yamm .dropdown-menu li {
       display: block; }
   .yamm .dropdown-backdrop {
@@ -9526,6 +9526,10 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   **2.1.0:**
 
   - added the `.nav-mobile` section to the beginning of the `.list-group` element
+
+**2.1.1:**
+
+  - changed `.active` class to `.current` for current page highlight in the menu
 </div>
 
 ```html_example
@@ -9646,7 +9650,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
           </li>
         </ul><!-- Dropdown `ul` end -->
       </li>
-      <li class="active dropdown yamm-fw">
+      <li class="current dropdown yamm-fw">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
         <ul class="dropdown-menu" role="menu">
           <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
@@ -9865,12 +9869,17 @@ background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d
   .ie9 .nav-main.yamm .nav > .open > a {
     background: white;
     opacity: 1; }
-  .nav-main.yamm .nav .dropdown.active > a {
-    z-index: 9999;
+  .nav-main.yamm .nav .dropdown.active > a,
+  .nav-main.yamm .nav .dropdown.current > a {
     background: white;
     border-top: 5px solid #f7001d;
     margin-top: -5px;
     height: 75px; }
+  .nav-main.yamm .nav .dropdown.current > a {
+    z-index: 999; }
+  .nav-main.yamm .nav .dropdown.active > a,
+  .nav-main.yamm .nav .dropdown.current.open > a {
+    z-index: 9999; }
 
 .grid-demo .col-sm-1,
 .grid-demo .col-sm-2,

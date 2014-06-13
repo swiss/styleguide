@@ -23,6 +23,8 @@ This changelog references the relevant changes and bug fixes.
  * #120 fix padding on top of images homepage
  * #119 remove margin below images in focus element
  * #110 add background example to styleguide
+ * #106 fix main navigation height
+ * #125 add highlight on current menu item [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
 
 * 2.1.0 (2014-06-03)
  * #52 fix side navigation

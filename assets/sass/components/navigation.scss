@@ -51,6 +51,10 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   **2.1.0:**
 
   - added the `.nav-mobile` section to the beginning of the `.list-group` element
+
+**2.1.1:**
+
+  - changed `.active` class to `.current` for current page highlight in the menu
 </div>
 
 ```html_example
@@ -171,7 +175,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
           </li>
         </ul><!-- Dropdown `ul` end -->
       </li>
-      <li class="active dropdown yamm-fw">
+      <li class="current dropdown yamm-fw">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
         <ul class="dropdown-menu" role="menu">
           <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
@@ -379,10 +383,6 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
         background: -ms-linear-gradient(top,  #f4f4f4 0%,#ffffff 10%,#ffffff 79%,#ffffff 91%,#dbdbdb 100%);
         background: linear-gradient(to bottom,  #f4f4f4 0%,#ffffff 10%,#ffffff 79%,#ffffff 91%,#dbdbdb 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 );
-
-
-
-
       }
     }
   }
@@ -410,12 +410,19 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     background: $white;
     opacity: 1;
   }
-  .dropdown.active > a {
-    z-index: 9999;
+  .dropdown.active > a,
+  .dropdown.current > a {
     background: $white;
     border-top: 5px solid $red;
     margin-top: -5px;
     height: 75px;
+  }
+  .dropdown.current > a {
+    z-index: 999;
+  }
+  .dropdown.active > a,
+  .dropdown.current.open > a {
+    z-index: 9999;
   }
 }
 
