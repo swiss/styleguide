@@ -8388,9 +8388,10 @@ The name of the form and the form box must be linked to a label. A label ID may 
       </div>
     </div>
 
-    <!-- checkboxes -->
+    <!-- Checkboxes Vertical -->
     <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
+      <label class="col-sm-2 control-label">Checkbox Vertical</label>
+      <div class="col-sm-10">
         <div class="checkbox checkbox--left">
           <input id="checkboxform" type="checkbox">
           <label for="checkboxform">Remember me</label>
@@ -8399,6 +8400,55 @@ The name of the form and the form box must be linked to a label. A label ID may 
           <input id="checkboxform2" type="checkbox">
           <label for="checkboxform2">Accept terms</label>
         </div>
+      </div>
+    </div>
+
+    <!-- Checkboxes Horizontal -->
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Checkbox Horizontal</label>
+      <div class="col-sm-10">
+        <label class="checkbox-inline">
+          <div class="checkbox checkbox--left">
+            <input id="checkboxform-v" type="checkbox" name="checkbox-v"> <label for="checkboxform-v">Remember me</label>
+          </div>
+        </label>
+        <label class="checkbox-inline">
+          <div class="checkbox checkbox--left">
+            <input id="checkboxform2-v" type="checkbox" name="checkbox-v"> <label for="checkboxform2-v">Remember me</label>
+          </div>
+        </label>
+      </div>
+    </div>
+
+   <!-- Radio buttons horizontal -->
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Radio Horizontal</label>
+      <div class="col-sm-10">
+        <div class="radio radio--left">
+          <input id="radioform" type="radio" name="radio-h">
+          <label for="radioform">Remember me</label>
+        </div>
+        <div class="radio radio--left">
+          <input id="radioform2" type="radio" name="radio-h">
+          <label for="radioform2">Don't remember me</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Radio buttons vertical -->
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Radio Vertical</label>
+      <div class="col-sm-10">
+        <label class="radio-inline">
+          <div class="radio radio--left">
+            <input id="radioform-v" type="radio" name="radio-v"> <label for="radioform-v">Remember me</label>
+          </div>
+        </label>
+        <label class="radio-inline">
+          <div class="radio radio--left">
+            <input id="radioform2-v" type="radio" name="radio-v"> <label for="radioform2-v">Don't remember me</label>
+          </div>
+        </label>
       </div>
     </div>
 
@@ -8456,9 +8506,10 @@ The name of the form and the form box must be linked to a label. A label ID may 
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
-    <span class="c">&lt;!-- checkboxes --&gt;</span>
+    <span class="c">&lt;!-- Checkboxes Vertical --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-offset-2 col-sm-10&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;col-sm-2 control-label&quot;</span><span class="nt">&gt;</span>Checkbox Vertical<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox checkbox--left&quot;</span><span class="nt">&gt;</span>
           <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;checkboxform&quot;</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
           <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkboxform&quot;</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
@@ -8467,6 +8518,55 @@ The name of the form and the form box must be linked to a label. A label ID may 
           <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;checkboxform2&quot;</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
           <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkboxform2&quot;</span><span class="nt">&gt;</span>Accept terms<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="c">&lt;!-- Checkboxes Horizontal --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;col-sm-2 control-label&quot;</span><span class="nt">&gt;</span>Checkbox Horizontal<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;checkbox-inline&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox checkbox--left&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;checkboxform-v&quot;</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name=</span><span class="s">&quot;checkbox-v&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkboxform-v&quot;</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;checkbox-inline&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox checkbox--left&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;checkboxform2-v&quot;</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name=</span><span class="s">&quot;checkbox-v&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;checkboxform2-v&quot;</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+   <span class="c">&lt;!-- Radio buttons horizontal --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;col-sm-2 control-label&quot;</span><span class="nt">&gt;</span>Radio Horizontal<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;radio radio--left&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;radioform&quot;</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;radio-h&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;radioform&quot;</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;radio radio--left&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;radioform2&quot;</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;radio-h&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;radioform2&quot;</span><span class="nt">&gt;</span>Don&#39;t remember me<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    <span class="c">&lt;!-- Radio buttons vertical --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;col-sm-2 control-label&quot;</span><span class="nt">&gt;</span>Radio Vertical<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-10&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;radio-inline&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;radio radio--left&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;radioform-v&quot;</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;radio-v&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;radioform-v&quot;</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">&quot;radio-inline&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;radio radio--left&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;radioform2-v&quot;</span> <span class="na">type=</span><span class="s">&quot;radio&quot;</span> <span class="na">name=</span><span class="s">&quot;radio-v&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;radioform2-v&quot;</span><span class="nt">&gt;</span>Don&#39;t remember me<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 

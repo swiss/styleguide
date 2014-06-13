@@ -68,9 +68,10 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
       </div>
     </div>
 
-    <!-- checkboxes -->
+    <!-- Checkboxes Vertical -->
     <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
+      <label class="col-sm-2 control-label">Checkbox Vertical</label>
+      <div class="col-sm-10">
         <div class="checkbox checkbox--left">
           <input id="checkboxform" type="checkbox">
           <label for="checkboxform">Remember me</label>
@@ -79,6 +80,55 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
           <input id="checkboxform2" type="checkbox">
           <label for="checkboxform2">Accept terms</label>
         </div>
+      </div>
+    </div>
+
+    <!-- Checkboxes Horizontal -->
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Checkbox Horizontal</label>
+      <div class="col-sm-10">
+        <label class="checkbox-inline">
+          <div class="checkbox checkbox--left">
+            <input id="checkboxform-v" type="checkbox" name="checkbox-v"> <label for="checkboxform-v">Remember me</label>
+          </div>
+        </label>
+        <label class="checkbox-inline">
+          <div class="checkbox checkbox--left">
+            <input id="checkboxform2-v" type="checkbox" name="checkbox-v"> <label for="checkboxform2-v">Remember me</label>
+          </div>
+        </label>
+      </div>
+    </div>
+
+   <!-- Radio buttons horizontal -->
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Radio Horizontal</label>
+      <div class="col-sm-10">
+        <div class="radio radio--left">
+          <input id="radioform" type="radio" name="radio-h">
+          <label for="radioform">Remember me</label>
+        </div>
+        <div class="radio radio--left">
+          <input id="radioform2" type="radio" name="radio-h">
+          <label for="radioform2">Don't remember me</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Radio buttons vertical -->
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Radio Vertical</label>
+      <div class="col-sm-10">
+        <label class="radio-inline">
+          <div class="radio radio--left">
+            <input id="radioform-v" type="radio" name="radio-v"> <label for="radioform-v">Remember me</label>
+          </div>
+        </label>
+        <label class="radio-inline">
+          <div class="radio radio--left">
+            <input id="radioform2-v" type="radio" name="radio-v"> <label for="radioform2-v">Don't remember me</label>
+          </div>
+        </label>
       </div>
     </div>
 
@@ -197,4 +247,22 @@ label {
       width: 150px;
     }
   }
+}
+
+// Override Bootstrap behavior
+.radio-inline,
+.checkbox-inline {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.form-horizontal{
+  .radio-inline,
+  .checkbox-inline {
+    margin-top: -10px;
+  }
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-right: 10px; // space out consecutive inline controls
+  margin-left: 0;
 }
