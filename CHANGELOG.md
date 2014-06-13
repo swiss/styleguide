@@ -3,7 +3,7 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
-* 2.1.1 (2014-06-17)
+* 2.1.2 (2014-06-17)
  * #109 Several Examples Checkboxes and radiobuttons missing
  * #125 add highlight on current menu item [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
  * #134 Accessibility - WCAG 1.3.1 Heading, there are no invisible headings anymore

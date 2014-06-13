@@ -9595,7 +9595,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
   - added the `.nav-mobile` section to the beginning of the `.list-group` element
 
-**2.1.1:**
+**2.1.2:**
 
   - changed `.active` class to `.current` for current page highlight in the menu
   - added `h2.sr-only` for more screen reader clarity
@@ -9985,7 +9985,7 @@ On mobile devices the links in the service navigation are moved to the footer.
 
 <br>
 <div class="alert alert-warning">
-  **2.1.1:**
+  **2.1.2:**
 
     - added `h2.sr-only` for more screen reader clarity
 </div>
@@ -10065,7 +10065,7 @@ The design of the language navigation for cases, where their are more then five 
 
   - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
 
-**2.1.1:**
+**2.1.2:**
 
   - added `h2.sr-only` for more screen reader clarity
 </div>
@@ -10185,7 +10185,7 @@ On smartphones, the treecrumb navigation is omitted.
 
 <br>
 <div class="alert alert-warning">
-**2.1.1:**
+**2.1.2:**
 
   - added `h2.sr-only` for more screen reader clarity
 </div>
@@ -10955,7 +10955,7 @@ On smartphones, the search function can be accessed via an icon in the Header.
 
 <br>
 <div class="alert alert-warning">
-  **2.1.1:**
+  **2.1.2:**
 
     - added `h2.sr-only` for more screen reader clarity
     - added label before input for screen readers
@@ -11322,7 +11322,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 
 <br>
 <div class="alert alert-warning">
-  **2.1.1:**
+  **2.1.2:**
 
     - added `h2.sr-only` for more screen reader clarity
 </div>
