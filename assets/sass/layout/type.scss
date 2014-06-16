@@ -188,8 +188,11 @@ blockquote {
 
 
 // Responsive titles
-h1 {
-  @media only screen and (max-width: $screen-sm-max) {
+@media only screen and (max-width: $screen-sm-max) {
+  h1 {
     font-size: 2em;
+  }
+  h2 {
+    font-size: 1.3em;
   }
 }
