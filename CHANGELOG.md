@@ -19,6 +19,12 @@ This changelog references the relevant changes and bug fixes.
  * #126 add favicon
  * #124 fix social plugin
  * #101 #102 fix tabbing issues
+ * #155 fix pagination and breadcrumb on page results
+ * #154 fix search box button size on mobile
+ * #114 change look of phone link on mobile
+ * #152 fix emergency banner red band width
+ * #153 fix typo weight on news feed elements and other elements
+ * #148 fix logo size on mobile on navbar
 
 * 2.1.1 (2014-06-06)
  * #70 add german LICENSE file to fonts folder
