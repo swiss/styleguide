@@ -7986,6 +7986,26 @@ a {
   a.icon, a[data-toggle="collapse"], a.icon:before, a[data-toggle="collapse"]:before, a.icon:after, a[data-toggle="collapse"]:after, a.icon:hover:before, a[data-toggle="collapse"]:hover:before, a.icon:hover:after, a[data-toggle="collapse"]:hover:after {
     text-decoration: none; }
 
+@media only screen and (max-width: 767px) {
+  .dl-horizontal .phone-number {
+    margin-left: 0; }
+  .phone-number a {
+    display: block;
+    margin-bottom: 1em;
+    padding: 10px 20px;
+    width: 100%;
+    border: 1px solid #454545;
+    border-radius: 3px;
+    background: #eeeeee;
+    color: #454545;
+    text-align: center;
+    text-decoration: none; }
+    .phone-number a span {
+      display: inline; }
+
+  .dl-horizontal dt {
+    float: left;
+    clear: left; } }
 /*doc
 ---
 title: Back to Overview
@@ -9366,6 +9386,12 @@ It is vital that this element should only be used in cases of emergency – i.e.
   display: table-cell;
   vertical-align: middle; }
 
+@media screen and (max-width: 767px) {
+  .visible-xs-inline {
+    display: inline-block !important; } }
+@media screen and (min-width: 768px) {
+  .visible-xs-inline {
+    display: none !important; } }
 /* ==========================================================
  * list-group.scss
  * List group widget
