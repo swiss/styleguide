@@ -9858,7 +9858,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     @media only screen and (max-width: 767px) {
       .nav-mobile h1 {
         margin-top: 4px;
-        font-size: 1em; } }
+        font-size: 1.2em; } }
     .nav-mobile h1 a {
       color: inherit; }
   .nav-mobile .nav-mobile-logo {
@@ -9869,8 +9869,8 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     margin: 0 1em; }
     .nav-mobile .nav-mobile-logo img {
       vertical-align: middle;
-      min-width: 24px;
-      width: 24px; }
+      min-width: 19px;
+      width: 19px; }
   .nav-mobile .table-cell {
     border-left: 1px solid #cccccc;
     display: table-cell; }

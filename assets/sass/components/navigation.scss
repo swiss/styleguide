@@ -270,7 +270,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     display: inline-block;
     @media only screen and (max-width: $screen-xs-max) {
       margin-top: 4px;
-      font-size: 1em;
+      font-size: 1.2em;
     }
     a {color: inherit;}
   }
@@ -282,8 +282,8 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     margin: 0 1em;
     img {
       vertical-align: middle;
-      min-width: 24px;
-      width: 24px;
+      min-width: 19px;
+      width: 19px;
     }
   }
   .table-cell {
