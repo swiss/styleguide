@@ -9130,8 +9130,15 @@ On smartphones there is always a link at the end of the page to the home page an
     font-size: 0.935em; }
   .breadcrumb.breadcrumb--search {
     margin: 0.8em 0; }
-  @media only screen and (max-width: 768px) {
-    .breadcrumb {
+    @media only screen and (max-width: 767px) {
+      .breadcrumb.breadcrumb--search {
+        font-size: 0.7em; }
+        .breadcrumb.breadcrumb--search li {
+          margin: 0 3px 0 0; }
+        .breadcrumb.breadcrumb--search .icon, .breadcrumb.breadcrumb--search a[data-toggle="collapse"] {
+          margin-right: 3px; } }
+  @media only screen and (max-width: 991px) {
+    .breadcrumb:not(.breadcrumb--search) {
       display: none; } }
 
 /*doc
@@ -10780,7 +10787,8 @@ The paging function allows the user to browse through a large number of elements
     <li class="separator"><a href="#">Previous</a></li>
     <li><a href="#">1</a></li>
     <li class="active"><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
+    <li>...</li>
+    <li><a href="#">17</a></li>
     <li class="separator-left"><a href="#">Next</a></li>
     <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
   </ul>
@@ -10810,6 +10818,9 @@ The paging function allows the user to browse through a large number of elements
     margin-left: 0;
     padding: 0 8px;
     float: left; }
+    @media only screen and (max-width: 767px) {
+      .pagination > li {
+        padding: 0 4px; } }
     .pagination > li > a {
       border: none;
       background: none;
@@ -10817,7 +10828,7 @@ The paging function allows the user to browse through a large number of elements
       line-height: 1; }
       .pagination > li > a:hover {
         background: none;
-        color: #dc0018; }
+        color: #005580; }
   .pagination > .active > a {
     background: #e5e5e5;
     color: #454545; }
@@ -10831,6 +10842,9 @@ The paging function allows the user to browse through a large number of elements
         float: none !important; }
       .pagination li a {
         font-size: 12px; } }
+  @media only screen and (max-width: 767px) {
+    .pagination li:first-child, .pagination li:last-child {
+      display: none; } }
 
 /* ==========================================================
  * progression.scss
