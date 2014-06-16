@@ -61,5 +61,12 @@ It is vital that this element should only be used in cases of emergency – i.e.
   p {
     margin-top: 0;
   }
-
+  @media only screen and (max-width: $screen-xs-max) {
+    border-left-width: 20px;
+    padding-left: 5px;
+    &:before {
+      left: -20px;
+      width: 20px;
+    }
+  }
 }

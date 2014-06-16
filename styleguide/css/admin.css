@@ -9336,6 +9336,13 @@ It is vital that this element should only be used in cases of emergency – i.e.
     font-family: "Frutiger Neue Bold", Arial, sans-serif; }
   .alert--emergency p {
     margin-top: 0; }
+  @media only screen and (max-width: 767px) {
+    .alert--emergency {
+      border-left-width: 20px;
+      padding-left: 5px; }
+      .alert--emergency:before {
+        left: -20px;
+        width: 20px; } }
 
 /* ==========================================================
  * helpers.scss
