@@ -9516,7 +9516,8 @@ The elements list is a very generic element that groups content elements in a li
 ```
 */
 .list-group h2 {
-  font-family: "Frutiger Neue Bold", Arial, sans-serif; }
+  font-family: "Frutiger Neue Bold", Arial, sans-serif;
+  font-size: 1.3em; }
 
 .list-group-header {
   min-height: 30px;
