@@ -11082,6 +11082,9 @@ The search box is a simple form which can be used to enter a search term on a se
   border-top: 1px solid #cccccc;
   border-bottom: 2px solid #cccccc;
   padding: 1em 0 1.5em 0; }
+  @media only screen and (max-width: 767px) {
+    .search-box input[type=submit] {
+      width: 100%; } }
 
 /*doc
 ---
