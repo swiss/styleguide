@@ -6368,7 +6368,6 @@ On smartphones, some of the functions from the header, e.g. service navigation o
   <!-- Use normal `container` instead of `container-fluid` -->
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
-    <br>
     <nav>
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
@@ -6414,6 +6413,9 @@ footer {
   margin-top: 20px; }
   footer select {
     min-width: 200px; }
+  footer h3 {
+    margin-top: 1em;
+    margin-bottom: 1em; }
 
 address {
   margin-bottom: 0;
@@ -6456,10 +6458,7 @@ address {
         border-top: 1px solid #cccccc; }
       .footer-service a, .links-social a {
         display: block;
-        padding: 9px 15px; }
-      .footer-service h3, .links-social h3 {
-        margin-top: 1em;
-        margin-bottom: 1em; } }
+        padding: 9px 15px; } }
 
 /*doc
 ---
@@ -6485,7 +6484,6 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
   <!-- Use normal `container` instead of `container-fluid` -->
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
-    <br>
     <nav class="links-social">
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
@@ -6517,9 +6515,6 @@ footer img {
 
 .links-social {
   display: block; }
-  @media only screen and (max-width: 767px) {
-    .links-social {
-      display: none; } }
 
 /*doc
 ---

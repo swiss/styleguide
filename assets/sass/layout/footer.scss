@@ -146,7 +146,6 @@ On smartphones, some of the functions from the header, e.g. service navigation o
   <!-- Use normal `container` instead of `container-fluid` -->
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
-    <br>
     <nav>
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
@@ -193,6 +192,10 @@ footer {
   margin-top: 20px;
   select {
     min-width: 200px;
+  }
+  h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 }
 
@@ -244,10 +247,6 @@ address {
       display: block;
       padding: 9px 15px;
     }
-    h3 {
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
   }
 }
 
@@ -277,7 +276,6 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
   <!-- Use normal `container` instead of `container-fluid` -->
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
-    <br>
     <nav class="links-social">
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
@@ -316,7 +314,7 @@ footer {
   @extend .footer-service;
   display: block;
   @media only screen and (max-width: $screen-xs-max) {
-    display: none;
+
   }
 }
 
