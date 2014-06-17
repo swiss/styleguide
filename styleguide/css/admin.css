@@ -6453,8 +6453,13 @@ address {
       .footer-service li, .links-social li {
         display: block;
         margin-left: 0;
-        padding: 9px 15px;
-        border-top: 1px solid #cccccc; } }
+        border-top: 1px solid #cccccc; }
+      .footer-service a, .links-social a {
+        display: block;
+        padding: 9px 15px; }
+      .footer-service h3, .links-social h3 {
+        margin-top: 1em;
+        margin-bottom: 1em; } }
 
 /*doc
 ---
@@ -10447,23 +10452,31 @@ Navigation below the content level on a smartphone with links to the home page, 
 </div>
 ```
 */
+@media only screen and (min-width: 768px) {
+  .nav-page-list {
+    padding-left: 15px;
+    padding-right: 15px; } }
 .nav-page-list a {
   display: block;
   width: 100%; }
-.nav-page-list .icon--less {
+.nav-page-list .icon--less,
+.nav-page-list .icon--power {
   background: whitesmoke;
   color: black;
   padding: 0px 10px 5px 10px;
   font-size: 11px;
   border-bottom: 1px solid #cccccc; }
-  .nav-page-list .icon--less:before {
+  .nav-page-list .icon--less:before,
+  .nav-page-list .icon--power:before {
     font-size: 20px;
     position: relative;
     top: 5px;
     left: -3px; }
-  .nav-page-list .icon--less:hover, .nav-page-list .icon--less:hover:before {
-    color: #dc0018; }
-  .nav-page-list .icon--less:hover:before {
+  .nav-page-list .icon--less:hover,
+  .nav-page-list .icon--power:hover {
+    text-decoration: underline; }
+  .nav-page-list .icon--less:hover:before,
+  .nav-page-list .icon--power:hover:before {
     background: none; }
 .nav-page-list li {
   display: block;
@@ -10507,13 +10520,32 @@ Navigation below the content level on a smartphone with links to the home page, 
   background: #dc0018; }
 .nav-mobile .nav-page-list {
   padding-bottom: 40px; }
+@media only screen and (max-width: 767px) {
+  .nav-page-list a,
+  .nav-page-list .icon--less,
+  .nav-page-list .icon--power,
+  .nav-page-list li.active a,
+  .nav-page-list li a,
+  .nav-page-list ul ul li:first-child a {
+    color: #006699; }
+  .nav-page-list .icon--less,
+  .nav-page-list .icon--power {
+    background: none; }
+  .nav-page-list .icon--power {
+    border-top: 1px solid #cccccc; } }
 
 .drilldown {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0; }
   .drilldown .drilldown-sub {
     display: none; }
   .drilldown.dropdown-menu {
     padding-top: 0; }
+  @media only screen and (max-width: 767px) {
+    .drilldown[class*=col] {
+      margin-bottom: -20px;
+      border-bottom: 1px solid #cccccc; } }
 
 /*doc
 ---

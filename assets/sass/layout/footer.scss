@@ -238,8 +238,15 @@ address {
     li {
       display: block;
       margin-left: 0;
-      padding: 9px 15px;
       border-top: 1px solid $silver;
+    }
+    a {
+      display: block;
+      padding: 9px 15px;
+    }
+    h3 {
+      margin-top: 1em;
+      margin-bottom: 1em;
     }
   }
 }
