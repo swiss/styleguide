@@ -24,12 +24,23 @@ The global search function allows the user to search the entire website. When th
 
 On smartphones, the search function can be accessed via an icon in the Header.
 
+
+<br>
+<div class="alert alert-warning">
+  **2.1.2:**
+
+    - added `h2.sr-only` for more screen reader clarity
+    - added label before input for screen readers
+</div>
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
   <header>
     <form class="form-horizontal form-search pull-right" role="form">
+      <h2 class="sr-only">Search</h2>
+      <label for="search-field" class="sr-only">Search:</label>
       <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
     </form>
   </header>
@@ -120,7 +131,7 @@ The search box is a simple form which can be used to enter a search term on a se
 <form action="#" class="form-inline row search-box">
   <fieldset class="clearfix">
     <div class="form-group">
-      <label for="inputSearch" class="control-label pull-left">Search</label>
+      <label for="inputSearch" class="control-label">Search</label>
       <input type="text" class="form-control" id="inputSearch" placeholder="Search">
     </div>
     <input class="btn btn-primary" aria-label="Search" type="submit" value="Search">
@@ -134,6 +145,11 @@ The search box is a simple form which can be used to enter a search term on a se
   border-top: 1px solid $silver;
   border-bottom: 2px solid $silver;
   padding: 1em 0 1.5em 0;
+  @media only screen and (max-width: $screen-xs-max) {
+    input[type=submit] {
+      width: 100%;
+    }
+  }
 }
 
 

@@ -3,6 +3,33 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.1.2 (2014-06-17)
+ * #109 Several Examples Checkboxes and radiobuttons missing
+ * #125 add highlight on current menu item [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)
+ * #134 Accessibility - WCAG 1.3.1 Heading, there are no invisible headings anymore
+ * #127 Hover changes the "inlining" of the text bug
+ * #107 General Issue Resposiveness Phone-Landscape/Portrait does not work as original enhancement
+ * #106 Navigation bar to high enhancement
+ * #105 Select (List) examples missing enhancement Styleguide
+ * #145 Accessibility WCAG 2.4.7 Focus in elements is not visible
+ * #107 Revert small font size on mobile see ticket for more informations
+ * #140 add lang="en" to html tag
+ * #141 add missing alt tags in some img
+ * #144 add missing labels to selects and inputs for screen readers
+ * #126 add favicon
+ * #124 fix social plugin
+ * #101 #102 fix tabbing issues
+ * #155 fix pagination and breadcrumb on page results
+ * #154 fix search box button size on mobile
+ * #114 change look of phone link on mobile
+ * #152 fix emergency banner red band width
+ * #153 fix typo weight on news feed elements and other elements
+ * #148 fix logo size on mobile on navbar
+ * #158 remove .pull-left class from search form
+ * #159 fix container not closed on forms.html
+ * #150 fix footer mobile
+ * #107 fix font sizes
+
 * 2.1.1 (2014-06-06)
  * #70 add german LICENSE file to fonts folder
  * wrapped `.well` element  `.bordered-well` div [**! Markup changes**](http://adminch.antistatique.net/content_modules_-_teaser.html#f-person-teaser)
@@ -23,6 +50,8 @@ This changelog references the relevant changes and bug fixes.
  * #120 fix padding on top of images homepage
  * #119 remove margin below images in focus element
  * #110 add background example to styleguide
+ * #106 fix main navigation height
+
 
 * 2.1.0 (2014-06-03)
  * #52 fix side navigation

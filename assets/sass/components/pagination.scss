@@ -30,7 +30,8 @@ The paging function allows the user to browse through a large number of elements
     <li class="separator"><a href="#">Previous</a></li>
     <li><a href="#">1</a></li>
     <li class="active"><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
+    <li>...</li>
+    <li><a href="#">17</a></li>
     <li class="separator-left"><a href="#">Next</a></li>
     <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
   </ul>
@@ -63,6 +64,7 @@ The paging function allows the user to browse through a large number of elements
     margin-left: 0;
     padding: 0 8px;
     float: left;
+    @media only screen and (max-width: $screen-xs-max) {padding: 0 4px;}
     > a {
       border: none;
       background: none;
@@ -70,7 +72,7 @@ The paging function allows the user to browse through a large number of elements
       line-height: 1;
       &:hover {
         background: none;
-        color: $venetian-red;
+        color: darken($cerulean, 5%);
       }
     }
   }
@@ -91,6 +93,11 @@ The paging function allows the user to browse through a large number of elements
     }
     li a {
       font-size: 12px;
+    }
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    li:first-child, li:last-child {
+      display: none;
     }
   }
 }

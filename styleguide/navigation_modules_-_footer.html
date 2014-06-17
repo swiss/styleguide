@@ -10,11 +10,11 @@
   
 
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="no-js ie6 oldie"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7 oldie"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8 oldie"> <![endif]-->
-<!--[if IE 9 ]>    <html class="no-js ie9"> <![endif]-->
-<!--[if gt IE 9 ]><!--><html class="no-js no-ie"><!--<![endif]-->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1;">
@@ -30,6 +30,10 @@
     
       <link rel="stylesheet" href="css/admin.min.css">
     
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="img/ico/favicon.ico">
 
     <!--[if lt IE 9]>
       <script src="theme-build/polyfill/html5shiv.js"></script>
@@ -8419,13 +8423,12 @@
   <!-- Use normal `container` instead of `container-fluid` -->
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
-    <br>
     <nav>
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
         <li><a class="icon icon--before icon--facebook" href="#">Facebook</a></li>
-        <li><a class="icon icon--before icon--rss" href="#">RSS</a></li>
-        <li><a class="icon icon--before icon--message" href="#">feed</a></li>
+        <li><a class="icon icon--before icon--rss" href="#">RSS Feed</a></li>
+        <li><a class="icon icon--before icon--message" href="#">Newsletter</a></li>
       </ul>
     </nav>
 
@@ -8433,12 +8436,14 @@
     <p>
       Besuchen Sie die Websites der Schweizer Kooperationsbüros.
     </p>
-    <select name="country">
-      <option value="Switzerland">Switzerland</option>
-      <option value="France">France</option>
-      <option value="Deutchland">Deutchland</option>
-      <option value="...">...</option>
-    </select>
+    <p>
+      <select name="country">
+        <option value="Switzerland">Switzerland</option>
+        <option value="France">France</option>
+        <option value="Deutchland">Deutchland</option>
+        <option value="...">...</option>
+      </select>
+    </p>
   </div>
 
   <address>
@@ -8563,13 +8568,12 @@
   <span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h3&gt;</span>Informiert bleiben<span class="nt">&lt;/h3&gt;</span>
-    <span class="nt">&lt;br&gt;</span>
     <span class="nt">&lt;nav&gt;</span>
       <span class="nt">&lt;ul&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--twitter&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Twitter<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--facebook&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Facebook<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--rss&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>RSS<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--message&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>feed<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--rss&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>RSS Feed<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--message&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Newsletter<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/nav&gt;</span>
 
@@ -8577,12 +8581,14 @@
     <span class="nt">&lt;p&gt;</span>
       Besuchen Sie die Websites der Schweizer Kooperationsbüros.
     <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">&quot;country&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Switzerland&quot;</span><span class="nt">&gt;</span>Switzerland<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;France&quot;</span><span class="nt">&gt;</span>France<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Deutchland&quot;</span><span class="nt">&gt;</span>Deutchland<span class="nt">&lt;/option&gt;</span>
-      <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/option&gt;</span>
-    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">&quot;country&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Switzerland&quot;</span><span class="nt">&gt;</span>Switzerland<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;France&quot;</span><span class="nt">&gt;</span>France<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;Deutchland&quot;</span><span class="nt">&gt;</span>Deutchland<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">&quot;...&quot;</span><span class="nt">&gt;</span>...<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 
   <span class="nt">&lt;address&gt;</span>
@@ -8618,7 +8624,6 @@
   <!-- Use normal `container` instead of `container-fluid` -->
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
-    <br>
     <nav class="links-social">
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
@@ -8647,7 +8652,6 @@
   <span class="c">&lt;!-- Use normal `container` instead of `container-fluid` --&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h3&gt;</span>Informiert bleiben<span class="nt">&lt;/h3&gt;</span>
-    <span class="nt">&lt;br&gt;</span>
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;links-social&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;ul&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon--before icon--twitter&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Twitter<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>

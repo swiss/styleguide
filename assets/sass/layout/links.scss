@@ -92,6 +92,33 @@ a {
  }
 }
 
+@media only screen and (max-width: $screen-xs-max) {
+  .phone-number {
+    .dl-horizontal & {
+      margin-left: 0;
+    }
+    a {
+      display: block;
+      margin-bottom: 1em;
+      padding: 10px 20px;
+      width: 100%;
+      border: 1px solid $coal;
+      border-radius: 3px;
+      background: $gray-lighter;
+      color: $coal;
+      text-align: center;
+      text-decoration: none;
+      span {
+        display: inline;
+      }
+    }
+  }
+  .dl-horizontal dt {
+    float: left;
+    clear: left;
+  }
+}
+
 
 /*doc
 ---

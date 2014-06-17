@@ -10,11 +10,11 @@
   
 
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="no-js ie6 oldie"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7 oldie"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8 oldie"> <![endif]-->
-<!--[if IE 9 ]>    <html class="no-js ie9"> <![endif]-->
-<!--[if gt IE 9 ]><!--><html class="no-js no-ie"><!--<![endif]-->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1;">
@@ -30,6 +30,10 @@
     
       <link rel="stylesheet" href="css/admin.min.css">
     
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="img/ico/favicon.ico">
 
     <!--[if lt IE 9]>
       <script src="theme-build/polyfill/html5shiv.js"></script>
@@ -8324,7 +8328,15 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
   <strong>2.1.0:</strong></p>
 
 <ul>
-<li>added the <code>.nav-mobile</code> section to the beginning of the <code>.list-group</code> element
+<li>added the <code>.nav-mobile</code> section to the beginning of the <code>.list-group</code> element</li>
+</ul>
+
+<p><strong>2.1.2:</strong></p>
+
+<ul>
+<li>changed <code>.active</code> class to <code>.current</code> for current page highlight in the menu</li>
+<li>added <code>h2.sr-only</code> for more screen reader clarity</li>
+<li>added h2 and label to search field on mobile
 </div></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
@@ -8333,7 +8345,7 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
 
   </header>
   <nav class="nav-main yamm navbar" role="navigation">
-
+    <h2 class="sr-only">Navigation</h2>
     <!-- Mobile Navigation (hidden on desktop) -->
     <section class="nav-mobile">
       <div class="table-row">
@@ -8375,7 +8387,9 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
           <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
           <div class="dropdown-menu" role="menu">
             <form class="form" role="form">
-              <input class="form-control" type="text" placeholder="Search">
+              <h2 class="sr-only">Search</h2>
+              <label for="search-field-mobile" class="sr-only">Search:</label>
+              <input id="search-field-mobile" class="form-control" type="text" placeholder="Search">
               <span class="icon icon--search"></span>
             </form>
           </div>
@@ -8444,7 +8458,7 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
           </li>
         </ul><!-- Dropdown `ul` end -->
       </li>
-      <li class="active dropdown yamm-fw">
+      <li class="current dropdown yamm-fw">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
         <ul class="dropdown-menu" role="menu">
           <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
@@ -8498,7 +8512,7 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
 
   <span class="nt">&lt;/header&gt;</span>
   <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-main yamm navbar&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
-
+    <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Navigation<span class="nt">&lt;/h2&gt;</span>
     <span class="c">&lt;!-- Mobile Navigation (hidden on desktop) --&gt;</span>
     <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">&quot;nav-mobile&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;table-row&quot;</span><span class="nt">&gt;</span>
@@ -8540,7 +8554,9 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
           <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;nav-mobile-menu dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--search&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form&quot;</span> <span class="na">role=</span><span class="s">&quot;form&quot;</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/h2&gt;</span>
+              <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;search-field-mobile&quot;</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Search:<span class="nt">&lt;/label&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;search-field-mobile&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
               <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon--search&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
             <span class="nt">&lt;/form&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
@@ -8609,7 +8625,7 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
           <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;/ul&gt;</span><span class="c">&lt;!-- Dropdown `ul` end --&gt;</span>
       <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active dropdown yamm-fw&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;current dropdown yamm-fw&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span><span class="nt">&gt;</span>News<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span> <span class="na">role=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
           <span class="c">&lt;!-- The `li` presence heritated from the classic dropdown structure, only one in that case --&gt;</span>

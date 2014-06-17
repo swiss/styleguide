@@ -10,11 +10,11 @@
   
 
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="no-js ie6 oldie"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7 oldie"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8 oldie"> <![endif]-->
-<!--[if IE 9 ]>    <html class="no-js ie9"> <![endif]-->
-<!--[if gt IE 9 ]><!--><html class="no-js no-ie"><!--<![endif]-->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1;">
@@ -30,6 +30,10 @@
     
       <link rel="stylesheet" href="css/admin.min.css">
     
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="img/ico/favicon.ico">
 
     <!--[if lt IE 9]>
       <script src="theme-build/polyfill/html5shiv.js"></script>
@@ -8309,11 +8313,21 @@
 <p>The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.</p>
 
 <p>On smartphones, the search function can be accessed via an icon in the Header.</p>
+
+<p><br>
+<div class="alert alert-warning">
+  <strong>2.1.2:</strong></p>
+<div class="codeBlock"><div class="highlight"><pre><span class="o">-</span> <span class="n">added</span> <span class="err">`</span><span class="n">h2</span><span class="p">.</span><span class="n">sr</span><span class="o">-</span><span class="n">only</span><span class="err">`</span> <span class="k">for</span> <span class="n">more</span> <span class="n">screen</span> <span class="n">reader</span> <span class="n">clarity</span>
+<span class="o">-</span> <span class="n">added</span> <span class="n">label</span> <span class="n">before</span> <span class="n">input</span> <span class="k">for</span> <span class="n">screen</span> <span class="n">readers</span>
+</pre></div></div>
+<p></div></p>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
   <header>
     <form class="form-horizontal form-search pull-right" role="form">
+      <h2 class="sr-only">Search</h2>
+      <label for="search-field" class="sr-only">Search:</label>
       <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
     </form>
   </header>
@@ -8325,6 +8339,8 @@
 
   <span class="nt">&lt;header&gt;</span>
     <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;form-horizontal form-search pull-right&quot;</span> <span class="na">role=</span><span class="s">&quot;form&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;search-field&quot;</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Search:<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;search-field&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control search-field&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;/form&gt;</span>
   <span class="nt">&lt;/header&gt;</span>
@@ -8384,11 +8400,19 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 <p>The service navigation is positioned at the top right of the header next to the language selection. It contains links that are of overriding importance (e.g. Contact, Jobs, Media and Contact). Ideally, there should be three, but in no case should there be more than five links in the service navigation.</p>
 
 <p>On mobile devices the links in the service navigation are moved to the footer.</p>
+
+<p><br>
+<div class="alert alert-warning">
+  <strong>2.1.2:</strong></p>
+<div class="codeBlock"><div class="highlight"><pre><span class="o">-</span> <span class="n">added</span> <span class="err">`</span><span class="n">h2</span><span class="p">.</span><span class="n">sr</span><span class="o">-</span><span class="n">only</span><span class="err">`</span> <span class="k">for</span> <span class="n">more</span> <span class="n">screen</span> <span class="n">reader</span> <span class="n">clarity</span>
+</pre></div></div>
+<p></div></p>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
   <header>
     <nav class="nav-service">
+      <h2 class="sr-only">Services navigation</h2>
       <ul>
         <li><a href="#">Emergencies</a></li>
         <li><a href="#">Jobs</a></li>
@@ -8405,6 +8429,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 
   <span class="nt">&lt;header&gt;</span>
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-service&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Services navigation<span class="nt">&lt;/h2&gt;</span>
       <span class="nt">&lt;ul&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Emergencies<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Jobs<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -8450,7 +8475,13 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
   <strong>2.1.0:</strong></p>
 
 <ul>
-<li>wrapped <code>.nav-lang</code> and <code>.nav-service</code> in <code>&lt;section class=&quot;nav-services clearfix&quot;&gt;&lt;/section&gt;</code>
+<li>wrapped <code>.nav-lang</code> and <code>.nav-service</code> in <code>&lt;section class=&quot;nav-services clearfix&quot;&gt;&lt;/section&gt;</code></li>
+</ul>
+
+<p><strong>2.1.2:</strong></p>
+
+<ul>
+<li>added <code>h2.sr-only</code> for more screen reader clarity
 </div></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
@@ -8460,6 +8491,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 
     <section class="nav-services clearfix">
       <h2>Title of page</h2>
+      <h2 class="sr-only">Language selection</h2>
       <nav class="nav-lang">
         <ul>
           <li><a class="active" href="#">DE</a></li>
@@ -8490,6 +8522,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 
     <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">&quot;nav-services clearfix&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h2&gt;</span>Title of page<span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Language selection<span class="nt">&lt;/h2&gt;</span>
       <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;nav-lang&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;ul&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>DE<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -8523,12 +8556,20 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 <p>The topics A-Z section is positioned on the right-hand side of the header. When it is clicked on, a flyout opens which contains an A-Z tab navigation. The topics can also be grouped in other tabs, e.g. according to organizational unit.</p>
 
 <p>On smartphones, the A-Z navigation is accessed via an icon together with the search function.</p>
+
+<p><br>
+<div class="alert alert-warning">
+  <strong>2.1.2:</strong></p>
+<div class="codeBlock"><div class="highlight"><pre><span class="o">-</span> <span class="n">added</span> <span class="err">`</span><span class="n">h2</span><span class="p">.</span><span class="n">sr</span><span class="o">-</span><span class="n">only</span><span class="err">`</span> <span class="k">for</span> <span class="n">more</span> <span class="n">screen</span> <span class="n">reader</span> <span class="n">clarity</span>
+</pre></div></div>
+<p></div></p>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
   <header>
 
     <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
     <nav class="navbar yamm yamm--select" role="navigation">
+      <h2 class="sr-only">By Topics</h2>
       <ul>
         <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
         <li class="dropdown pull-right">
@@ -8642,6 +8683,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 
     <span class="c">&lt;!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library --&gt;</span>
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar yamm yamm--select&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>By Topics<span class="nt">&lt;/h2&gt;</span>
       <span class="nt">&lt;ul&gt;</span>
         <span class="c">&lt;!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right --&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown pull-right&quot;</span><span class="nt">&gt;</span>
@@ -8759,6 +8801,15 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 <p>When closed, the treecrumb navigation presents the hierarchical organization of the Federal Administration as a path. When a hierarchical level is clicked on, a menu opens with a collection of links pertinent to the selected hierarchical level.</p>
 
 <p>On smartphones, the treecrumb navigation is omitted.</p>
+
+<p><br>
+<div class="alert alert-warning">
+<strong>2.1.2:</strong></p>
+
+<ul>
+<li>added <code>h2.sr-only</code> for more screen reader clarity
+</div></li>
+</ul>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
@@ -8766,6 +8817,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 
     <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
     <nav class="navbar treecrumb" role="navigation">
+      <h2 class="sr-only">Orientation in the website</h2>
       <ul class="nav navbar-nav">
 
         <!-- Treecrumb dropdown element -->
@@ -8811,6 +8863,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 
     <span class="c">&lt;!-- Standard Bootstrap `navbar` structure with the `treecrumb` class --&gt;</span>
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar treecrumb&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Orientation in the website<span class="nt">&lt;/h2&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav&quot;</span><span class="nt">&gt;</span>
 
         <span class="c">&lt;!-- Treecrumb dropdown element --&gt;</span>

@@ -63,8 +63,10 @@ body, .body {
   padding: 0;
   background: $white;
   margin-top: 0;
-  margin-bottom: 90px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
+  @media only screen and (min-width: $screen-sm-min) {
+    margin-bottom: 90px;
+  }
 }
 
 .container-fluid h1:first-child {

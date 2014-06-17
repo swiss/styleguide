@@ -71,6 +71,7 @@
 @import 'chosen-theme';
 
 // Layout
+@import 'layout/type.scss';
 @import 'layout/brand.scss';
 @import 'layout/buttons.scss';
 @import 'layout/checkboxes.scss';
@@ -87,7 +88,6 @@
 @import 'layout/radios.scss';
 @import 'layout/tables.scss';
 @import 'layout/titles.scss';
-@import 'layout/type.scss';
 
 // Components
 @import 'components/alerts.scss';
@@ -112,4 +112,5 @@
 @import 'components/modal.scss';
 @import 'components/focus.scss';
 @import 'components/carousel.scss';
+@import 'components/social.scss';
 @import 'components/rss.scss';

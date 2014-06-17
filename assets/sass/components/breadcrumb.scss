@@ -74,9 +74,16 @@ On smartphones there is always a link at the end of the page to the home page an
   }
   &.breadcrumb--search {
     margin: 0.8em 0;
+    @media only screen and (max-width: $screen-xs-max) {
+      font-size: 0.7em;
+      li {margin: 0 3px 0 0;}
+      .icon {margin-right: 3px;}
+    }
   }
-  @media only screen and (max-width: $screen-sm) {
-    display: none;
+  @media only screen and (max-width: $screen-sm-max) {
+    &:not(.breadcrumb--search) {
+      display: none;
+    }
   }
 }
 

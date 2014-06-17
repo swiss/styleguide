@@ -180,11 +180,11 @@ abbr[title] {
 b,
 strong,
 .chosen-container .chosen-results li.group-result,
-dt,
 .lead,
 b,
 mark,
-samp {
+samp,
+dt {
   font-weight: bold; }
 
 dfn {
@@ -1160,7 +1160,7 @@ h2, .h2 {
   font-size: 23px; }
 
 h3, .h3 {
-  font-size: 19px; }
+  font-size: 17px; }
 
 h4, .h4 {
   font-size: 15px; }
@@ -5411,7 +5411,7 @@ button.close {
   position: relative;
   display: block;
   overflow: hidden;
-  padding: 5px 25px 5px 4px;
+  padding: 5px 20px 5px 4px;
   height: 28px;
   border: 1px solid #454545;
   border-radius: 3px;
@@ -5750,6 +5750,162 @@ button.close {
     background-size: 52px 37px !important;
     background-repeat: no-repeat !important; } }
 /* @end */
+/* ==========================================================
+ * type.scss
+ * Global typographic styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+/*doc
+---
+title: Paragraphs
+name: b-paragraphs
+category: Base Layout - Typography
+---
+
+<span class="label label-admin">CD</span>
+
+## Lead
+A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text.
+
+A lead of this sort is formatted bold.
+
+element                          | Effect
+--------------------------------:| -----------------
+`<p class="lead"></p>`           | Leading emphasized paragraph
+`<strong></strong>`              | Emphasized bold element in the text
+`<em></em>`                      | Emphasized italic element in the text
+
+```html_example
+<p class="lead">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.
+</p>
+
+<p>
+  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Quam, <em>sapiente</em>, fuga provident illum adipisci tenetur nisi vero minima. Id, molestias, assumenda hic minima perspiciatis dolorem repellendus vero maiores beatae enim?
+</p>
+```
+
+*/
+@media only screen and (max-width: 991px) {
+  body {
+    font-size: 12px; } }
+p {
+  font-size: 1.1em;
+  line-height: 1.5; }
+
+strong, .chosen-container .chosen-results li.group-result, .lead, b, mark, samp, dt {
+  font-family: "Frutiger Neue Bold", Arial, sans-serif;
+  font-weight: normal; }
+
+.lead {
+  font-weight: normal;
+  line-height: 1.6;
+  font-size: 14px; }
+
+em, cite, i, dfn, q, var {
+  font-family: "Frutiger Neue Italic", Arial, sans-serif;
+  font-style: normal; }
+
+/*doc
+---
+title: Text elements
+name: c-text-elements
+category: Base Layout - Typography
+---
+
+<span class="label label-admin">CD</span>
+
+The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.
+
+```html_example
+<p>
+   The <a href="#">a element</a> example<br>
+   The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
+   The <b>b element</b> example<br>
+   The <cite>cite element</cite> example<br>
+   The <code>code element</code> example<br>
+   The <del>del element</del> example<br>
+   The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
+   The <em>em element</em> example<br>
+   The <i>i element</i> example<br>
+   The img element <img src="http://placehold.it/120x25" alt="image description"> example<br>
+   The <ins>ins element</ins> example<br>
+   The <kbd>kbd element</kbd> example<br>
+   The <mark>mark element</mark> example<br>
+   The <q>q element <q>inside</q> a q element</q> example<br>
+   The <s>s element</s> example<br>
+   The <samp>samp element</samp> example<br>
+   The <small>small element</small> example<br>
+   The <span>span element</span> example<br>
+   The <strong>strong element</strong> example<br>
+   The <sub>sub element</sub> example<br>
+   The <sup>sup element</sup> example<br>
+   The <var>var element</var> example<br>
+   The <u>u element</u> example
+ </p>
+```
+
+*/
+abbr {
+  border-bottom: 1px #aaa dotted;
+  letter-spacing: .07em; }
+  abbr[title] {
+    border-bottom: 1px dotted; }
+
+pre, code {
+  color: #800; }
+
+q q {
+  font-family: "Frutiger Neue Regular", Arial, sans-serif;
+  font-style: normal; }
+
+ins {
+  background: #ff9;
+  color: black;
+  text-decoration: none; }
+
+mark {
+  background: #FE57A1;
+  padding: 0; }
+
+samp {
+  color: #555555; }
+
+var {
+  color: gray; }
+
+.text-dimmed {
+  color: #757575; }
+
+/*doc
+---
+title: Blockquote
+name: d-blockquote
+category: Base Layout - Typography
+---
+
+<span class="label label-admin">CD</span>
+
+```html_example
+<blockquote>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</blockquote>
+```
+
+*/
+blockquote {
+  margin: 1.5em 0 0 1.6em;
+  color: #757575; }
+  blockquote::before {
+    content: "\00ab"; }
+  blockquote::after {
+    content: "\00bb"; }
+
 /* ==========================================================
  * brand.scss
  * Brand and logo display styles
@@ -6212,13 +6368,12 @@ On smartphones, some of the functions from the header, e.g. service navigation o
   <!-- Use normal `container` instead of `container-fluid` -->
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
-    <br>
     <nav>
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
         <li><a class="icon icon--before icon--facebook" href="#">Facebook</a></li>
-        <li><a class="icon icon--before icon--rss" href="#">RSS</a></li>
-        <li><a class="icon icon--before icon--message" href="#">feed</a></li>
+        <li><a class="icon icon--before icon--rss" href="#">RSS Feed</a></li>
+        <li><a class="icon icon--before icon--message" href="#">Newsletter</a></li>
       </ul>
     </nav>
 
@@ -6226,12 +6381,14 @@ On smartphones, some of the functions from the header, e.g. service navigation o
     <p>
       Besuchen Sie die Websites der Schweizer Kooperationsbüros.
     </p>
-    <select name="country">
-      <option value="Switzerland">Switzerland</option>
-      <option value="France">France</option>
-      <option value="Deutchland">Deutchland</option>
-      <option value="...">...</option>
-    </select>
+    <p>
+      <select name="country">
+        <option value="Switzerland">Switzerland</option>
+        <option value="France">France</option>
+        <option value="Deutchland">Deutchland</option>
+        <option value="...">...</option>
+      </select>
+    </p>
   </div>
 
   <address>
@@ -6256,6 +6413,9 @@ footer {
   margin-top: 20px; }
   footer select {
     min-width: 200px; }
+  footer h3 {
+    margin-top: 1em;
+    margin-bottom: 1em; }
 
 address {
   margin-bottom: 0;
@@ -6295,8 +6455,10 @@ address {
       .footer-service li, .links-social li {
         display: block;
         margin-left: 0;
-        padding: 9px;
-        border-top: 1px solid #cccccc; } }
+        border-top: 1px solid #cccccc; }
+      .footer-service a, .links-social a {
+        display: block;
+        padding: 9px 15px; } }
 
 /*doc
 ---
@@ -6322,7 +6484,6 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
   <!-- Use normal `container` instead of `container-fluid` -->
   <div class="container-fluid">
     <h3>Informiert bleiben</h3>
-    <br>
     <nav class="links-social">
       <ul>
         <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
@@ -6354,9 +6515,6 @@ footer img {
 
 .links-social {
   display: block; }
-  @media only screen and (max-width: 767px) {
-    .links-social {
-      display: none; } }
 
 /*doc
 ---
@@ -6457,9 +6615,10 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
       </div>
     </div>
 
-    <!-- checkboxes -->
+    <!-- Checkboxes Vertical -->
     <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
+      <label class="col-sm-2 control-label">Checkbox Vertical</label>
+      <div class="col-sm-10">
         <div class="checkbox checkbox--left">
           <input id="checkboxform" type="checkbox">
           <label for="checkboxform">Remember me</label>
@@ -6468,6 +6627,55 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
           <input id="checkboxform2" type="checkbox">
           <label for="checkboxform2">Accept terms</label>
         </div>
+      </div>
+    </div>
+
+    <!-- Checkboxes Horizontal -->
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Checkbox Horizontal</label>
+      <div class="col-sm-10">
+        <label class="checkbox-inline">
+          <div class="checkbox checkbox--left">
+            <input id="checkboxform-v" type="checkbox" name="checkbox-v"> <label for="checkboxform-v">Remember me</label>
+          </div>
+        </label>
+        <label class="checkbox-inline">
+          <div class="checkbox checkbox--left">
+            <input id="checkboxform2-v" type="checkbox" name="checkbox-v"> <label for="checkboxform2-v">Remember me</label>
+          </div>
+        </label>
+      </div>
+    </div>
+
+   <!-- Radio buttons horizontal -->
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Radio Horizontal</label>
+      <div class="col-sm-10">
+        <div class="radio radio--left">
+          <input id="radioform" type="radio" name="radio-h">
+          <label for="radioform">Remember me</label>
+        </div>
+        <div class="radio radio--left">
+          <input id="radioform2" type="radio" name="radio-h">
+          <label for="radioform2">Don't remember me</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Radio buttons vertical -->
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Radio Vertical</label>
+      <div class="col-sm-10">
+        <label class="radio-inline">
+          <div class="radio radio--left">
+            <input id="radioform-v" type="radio" name="radio-v"> <label for="radioform-v">Remember me</label>
+          </div>
+        </label>
+        <label class="radio-inline">
+          <div class="radio radio--left">
+            <input id="radioform2-v" type="radio" name="radio-v"> <label for="radioform2-v">Don't remember me</label>
+          </div>
+        </label>
       </div>
     </div>
 
@@ -6557,6 +6765,20 @@ label {
   @media only screen and (min-width: 768px) {
     .form-inline .form-control, .navbar-form .form-control {
       width: 150px; } }
+
+.radio-inline,
+.checkbox-inline {
+  padding-right: 20px;
+  padding-left: 0; }
+
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-top: -10px; }
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-right: 10px;
+  margin-left: 0; }
 
 /* ==========================================================
  * header.scss
@@ -7826,9 +8048,11 @@ body, .body {
   padding: 0;
   background: white;
   margin-top: 0;
-  margin-bottom: 90px;
   -webkit-box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6); }
+  @media only screen and (min-width: 768px) {
+    .container-main {
+      margin-bottom: 90px; } }
 
 .container-fluid h1:first-child {
   margin-top: 0; }
@@ -7920,6 +8144,26 @@ a {
   a.icon, a[data-toggle="collapse"], a.icon:before, a[data-toggle="collapse"]:before, a.icon:after, a[data-toggle="collapse"]:after, a.icon:hover:before, a[data-toggle="collapse"]:hover:before, a.icon:hover:after, a[data-toggle="collapse"]:hover:after {
     text-decoration: none; }
 
+@media only screen and (max-width: 767px) {
+  .dl-horizontal .phone-number {
+    margin-left: 0; }
+  .phone-number a {
+    display: block;
+    margin-bottom: 1em;
+    padding: 10px 20px;
+    width: 100%;
+    border: 1px solid #454545;
+    border-radius: 3px;
+    background: #eeeeee;
+    color: #454545;
+    text-align: center;
+    text-decoration: none; }
+    .phone-number a span {
+      display: inline; }
+
+  .dl-horizontal dt {
+    float: left;
+    clear: left; } }
 /*doc
 ---
 title: Back to Overview
@@ -8715,27 +8959,10 @@ Headings can also have links and are then formatted in blue.
 
 */
 h1 {
-  font-family: "Frutiger Neue Light", Arial, sans-serif;
-  margin: 0.5em 0 0 0; }
-
-h2 {
-  line-height: 1.3;
-  margin: 1.5em 0 0 0; }
-
-h3 {
-  line-height: 1.4;
-  margin: 0.938em 0 0 0; }
+  font-family: "Frutiger Neue Light", Arial, sans-serif; }
 
 h4 {
   font-family: "Frutiger Neue Bold", Arial, sans-serif; }
-
-h4, h5 {
-  line-height: 1.5;
-  margin: 1.154em 0 0 0; }
-
-h6 {
-  line-height: 1.4;
-  margin: 1.25em 0 0 0; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   line-height: 1;
@@ -8743,162 +8970,20 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   padding: 0;
   margin: 0; }
 
+@media only screen and (max-width: 1199px) {
+  h1 {
+    font-size: 2.3em; } }
+@media only screen and (max-width: 991px) {
+  h1 {
+    font-size: 2em; }
+
+  h2 {
+    font-size: 1.3em; }
+
+  h3 {
+    font-size: 1.2em; } }
 .page-title {
   margin: .4em 1.6em 0 0; }
-
-/* ==========================================================
- * type.scss
- * Global typographic styles
- *
- * Author: Yann Gouffon, yann@antistatique.net
- * Date:   2014-04-28 17:17:40
- *
- * Copyright 2014 Federal Chancellery of Switzerland
- * Licensed under MIT
- =========================================================== */
-/*doc
----
-title: Paragraphs
-name: b-paragraphs
-category: Base Layout - Typography
----
-
-<span class="label label-admin">CD</span>
-
-## Lead
-A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text.
-
-A lead of this sort is formatted bold.
-
-element                          | Effect
---------------------------------:| -----------------
-`<p class="lead"></p>`           | Leading emphasized paragraph
-`<strong></strong>`              | Emphasized bold element in the text
-`<em></em>`                      | Emphasized italic element in the text
-
-```html_example
-<p class="lead">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.
-</p>
-
-<p>
-  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Quam, <em>sapiente</em>, fuga provident illum adipisci tenetur nisi vero minima. Id, molestias, assumenda hic minima perspiciatis dolorem repellendus vero maiores beatae enim?
-</p>
-```
-
-*/
-p {
-  font-size: 1.1em;
-  line-height: 1.5;
-  margin: .8em 0 0 0; }
-
-strong, .chosen-container .chosen-results li.group-result, dt, .lead, b, mark, samp {
-  font-family: "Frutiger Neue Bold", Arial, sans-serif;
-  font-weight: normal; }
-
-.lead {
-  font-weight: normal;
-  line-height: 1.6;
-  font-size: 14px; }
-
-em, cite, i, dfn, q, var {
-  font-family: "Frutiger Neue Italic", Arial, sans-serif;
-  font-style: normal; }
-
-/*doc
----
-title: Text elements
-name: c-text-elements
-category: Base Layout - Typography
----
-
-<span class="label label-admin">CD</span>
-
-The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.
-
-```html_example
-<p>
-   The <a href="#">a element</a> example<br>
-   The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
-   The <b>b element</b> example<br>
-   The <cite>cite element</cite> example<br>
-   The <code>code element</code> example<br>
-   The <del>del element</del> example<br>
-   The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
-   The <em>em element</em> example<br>
-   The <i>i element</i> example<br>
-   The img element <img src="http://placehold.it/120x25" alt="image description"> example<br>
-   The <ins>ins element</ins> example<br>
-   The <kbd>kbd element</kbd> example<br>
-   The <mark>mark element</mark> example<br>
-   The <q>q element <q>inside</q> a q element</q> example<br>
-   The <s>s element</s> example<br>
-   The <samp>samp element</samp> example<br>
-   The <small>small element</small> example<br>
-   The <span>span element</span> example<br>
-   The <strong>strong element</strong> example<br>
-   The <sub>sub element</sub> example<br>
-   The <sup>sup element</sup> example<br>
-   The <var>var element</var> example<br>
-   The <u>u element</u> example
- </p>
-```
-
-*/
-abbr {
-  border-bottom: 1px #aaa dotted;
-  letter-spacing: .07em; }
-  abbr[title] {
-    border-bottom: 1px dotted; }
-
-pre, code {
-  color: #800; }
-
-q q {
-  font-family: "Frutiger Neue Regular", Arial, sans-serif;
-  font-style: normal; }
-
-ins {
-  background: #ff9;
-  color: black;
-  text-decoration: none; }
-
-mark {
-  background: #FE57A1;
-  padding: 0; }
-
-samp {
-  color: #555555; }
-
-var {
-  color: gray; }
-
-.text-dimmed {
-  color: #757575; }
-
-/*doc
----
-title: Blockquote
-name: d-blockquote
-category: Base Layout - Typography
----
-
-<span class="label label-admin">CD</span>
-
-```html_example
-<blockquote>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-</blockquote>
-```
-
-*/
-blockquote {
-  margin: 1.5em 0 0 1.6em;
-  color: #757575; }
-  blockquote::before {
-    content: "\00ab"; }
-  blockquote::after {
-    content: "\00bb"; }
 
 /* ==========================================================
  * alerts.scss
@@ -9060,8 +9145,15 @@ On smartphones there is always a link at the end of the page to the home page an
     font-size: 0.935em; }
   .breadcrumb.breadcrumb--search {
     margin: 0.8em 0; }
-  @media only screen and (max-width: 768px) {
-    .breadcrumb {
+    @media only screen and (max-width: 767px) {
+      .breadcrumb.breadcrumb--search {
+        font-size: 0.7em; }
+        .breadcrumb.breadcrumb--search li {
+          margin: 0 3px 0 0; }
+        .breadcrumb.breadcrumb--search .icon, .breadcrumb.breadcrumb--search a[data-toggle="collapse"] {
+          margin-right: 3px; } }
+  @media only screen and (max-width: 991px) {
+    .breadcrumb:not(.breadcrumb--search) {
       display: none; } }
 
 /*doc
@@ -9177,7 +9269,7 @@ On tablets the contact information is shown under the content of the page in a t
 ```
 
 */
-address strong, address .chosen-container .chosen-results li.group-result, .chosen-container .chosen-results address li.group-result, address dt, address .lead, address b, address mark, address samp {
+address strong, address .chosen-container .chosen-results li.group-result, .chosen-container .chosen-results address li.group-result, address .lead, address b, address mark, address samp, address dt {
   font-family: "Frutiger Neue Regular", Arial, sans-serif;
   display: block; }
 
@@ -9239,6 +9331,13 @@ It is vital that this element should only be used in cases of emergency – i.e.
     font-family: "Frutiger Neue Bold", Arial, sans-serif; }
   .alert--emergency p {
     margin-top: 0; }
+  @media only screen and (max-width: 767px) {
+    .alert--emergency {
+      border-left-width: 20px;
+      padding-left: 5px; }
+      .alert--emergency:before {
+        left: -20px;
+        width: 20px; } }
 
 /* ==========================================================
  * helpers.scss
@@ -9289,6 +9388,12 @@ It is vital that this element should only be used in cases of emergency – i.e.
   display: table-cell;
   vertical-align: middle; }
 
+@media screen and (max-width: 767px) {
+  .visible-xs-inline {
+    display: inline-block !important; } }
+@media screen and (min-width: 768px) {
+  .visible-xs-inline {
+    display: none !important; } }
 /* ==========================================================
  * list-group.scss
  * List group widget
@@ -9319,7 +9424,7 @@ The elements list is a very generic element that groups content elements in a li
       <!-- News list example -->
       <div class="list-group">
         <div class="list-group-header">
-          <h3 class="pull-left">News</h3>
+          <h2 class="pull-left">News</h2>
           <a href="#" class="pull-right icon icon--before icon--list">All News</a>
         </div>
         <div class="list-group-item">
@@ -9357,7 +9462,7 @@ The elements list is a very generic element that groups content elements in a li
       <!-- Publications list example -->
       <div class="list-group">
         <div class="list-group-header">
-          <h3 class="pull-left">Publications</h3>
+          <h2 class="pull-left">Publications</h2>
           <a href="#" class="pull-right icon icon--before icon--list">All</a>
         </div>
         <div class="list-group-item">
@@ -9403,6 +9508,10 @@ The elements list is a very generic element that groups content elements in a li
 </div>
 ```
 */
+.list-group h2 {
+  font-family: "Frutiger Neue Bold", Arial, sans-serif;
+  font-size: 1.3em; }
+
 .list-group-header {
   min-height: 30px;
   border-bottom: 2px solid #cccccc;
@@ -9449,8 +9558,8 @@ The elements list is a very generic element that groups content elements in a li
     width: 100%;
     border-radius: 0;
     border: none;
-    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); }
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); }
     .yamm .dropdown-menu li {
       display: block; }
   .yamm .dropdown-backdrop {
@@ -9524,6 +9633,12 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   **2.1.0:**
 
   - added the `.nav-mobile` section to the beginning of the `.list-group` element
+
+**2.1.2:**
+
+  - changed `.active` class to `.current` for current page highlight in the menu
+  - added `h2.sr-only` for more screen reader clarity
+  - added h2 and label to search field on mobile
 </div>
 
 ```html_example
@@ -9533,7 +9648,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
   </header>
   <nav class="nav-main yamm navbar" role="navigation">
-
+    <h2 class="sr-only">Navigation</h2>
     <!-- Mobile Navigation (hidden on desktop) -->
     <section class="nav-mobile">
       <div class="table-row">
@@ -9575,7 +9690,9 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
           <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
           <div class="dropdown-menu" role="menu">
             <form class="form" role="form">
-              <input class="form-control" type="text" placeholder="Search">
+              <h2 class="sr-only">Search</h2>
+              <label for="search-field-mobile" class="sr-only">Search:</label>
+              <input id="search-field-mobile" class="form-control" type="text" placeholder="Search">
               <span class="icon icon--search"></span>
             </form>
           </div>
@@ -9644,7 +9761,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
           </li>
         </ul><!-- Dropdown `ul` end -->
       </li>
-      <li class="active dropdown yamm-fw">
+      <li class="current dropdown yamm-fw">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
         <ul class="dropdown-menu" role="menu">
           <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
@@ -9735,7 +9852,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     @media only screen and (max-width: 767px) {
       .nav-mobile h1 {
         margin-top: 4px;
-        font-size: 1em; } }
+        font-size: 1.2em; } }
     .nav-mobile h1 a {
       color: inherit; }
   .nav-mobile .nav-mobile-logo {
@@ -9746,8 +9863,8 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     margin: 0 1em; }
     .nav-mobile .nav-mobile-logo img {
       vertical-align: middle;
-      min-width: 24px;
-      width: 24px; }
+      min-width: 19px;
+      width: 19px; }
   .nav-mobile .table-cell {
     border-left: 1px solid #cccccc;
     display: table-cell; }
@@ -9781,8 +9898,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
 .nav-main {
   background: #e4e4e4;
-                                                                                                                    /* Old browsers * navigation.scss
-background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%); /* FF3.6+ */
+  /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
@@ -9801,7 +9917,7 @@ background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d
         display: none; } }
   @media only screen and (min-width: 768px) {
     .nav-main {
-      min-height: 70px;
+      min-height: 65px;
       border-top: 5px solid #dc0018; }
       .nav-main .nav-page-list  {
         display: none; } }
@@ -9823,7 +9939,7 @@ background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d
       color: #454545;
       font-size: 0.8em;
       line-height: 1.2;
-      padding: 10px; }
+      padding: 10px 9px; }
       .nav-main.yamm .nav > li > a:after {
         content: ',';
         font-family: "Admin Icons";
@@ -9834,15 +9950,14 @@ background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d
         text-align: center;
         color: #757575;
         font-size: 0.9em; }
-      .nav-main.yamm .nav > li > a:hover {
+      .nav-main.yamm .nav > li > a:hover, .nav-main.yamm .nav > li > a:focus {
         color: #dc0018;
-        background: white;
+        background: #dbdbdb;
         background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYmRiZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(10%, white), color-stop(79%, white), color-stop(91%, white), color-stop(100%, #dbdbdb));
         background: -webkit-linear-gradient(top, #f4f4f4 0%, white 10%, white 79%, white 91%, #dbdbdb 100%);
         background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), color-stop(10%, white), color-stop(79%, white), color-stop(91%, white), to(#dbdbdb));
-        background: linear-gradient(to bottom, #f4f4f4 0%, white 10%, white 79%, white 91%, #dbdbdb 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); }
+        background: linear-gradient(to bottom, #f4f4f4 0%, white 10%, white 79%, white 91%, #dbdbdb 100%); }
   .nav-main.yamm .nav + .tab-content {
     padding: 0; }
   .nav-main.yamm .nav .dropdown-menu li {
@@ -9863,12 +9978,17 @@ background: -moz-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d
   .ie9 .nav-main.yamm .nav > .open > a {
     background: white;
     opacity: 1; }
-  .nav-main.yamm .nav .dropdown.active > a {
-    z-index: 9999;
+  .nav-main.yamm .nav .dropdown.active > a,
+  .nav-main.yamm .nav .dropdown.current > a {
     background: white;
     border-top: 5px solid #f7001d;
     margin-top: -5px;
     height: 75px; }
+  .nav-main.yamm .nav .dropdown.current > a {
+    z-index: 999; }
+  .nav-main.yamm .nav .dropdown.active > a,
+  .nav-main.yamm .nav .dropdown.current.open > a {
+    z-index: 9999; }
 
 .grid-demo .col-sm-1,
 .grid-demo .col-sm-2,
@@ -9901,12 +10021,21 @@ The service navigation is positioned at the top right of the header next to the 
 
 On mobile devices the links in the service navigation are moved to the footer.
 
+
+<br>
+<div class="alert alert-warning">
+  **2.1.2:**
+
+    - added `h2.sr-only` for more screen reader clarity
+</div>
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
   <header>
     <nav class="nav-service">
+      <h2 class="sr-only">Services navigation</h2>
       <ul>
         <li><a href="#">Emergencies</a></li>
         <li><a href="#">Jobs</a></li>
@@ -9974,6 +10103,10 @@ The design of the language navigation for cases, where their are more then five 
   **2.1.0:**
 
   - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
+
+**2.1.2:**
+
+  - added `h2.sr-only` for more screen reader clarity
 </div>
 
 ```html_example
@@ -9984,6 +10117,7 @@ The design of the language navigation for cases, where their are more then five 
 
     <section class="nav-services clearfix">
       <h2>Title of page</h2>
+      <h2 class="sr-only">Language selection</h2>
       <nav class="nav-lang">
         <ul>
           <li><a class="active" href="#">DE</a></li>
@@ -10087,6 +10221,14 @@ When closed, the treecrumb navigation presents the hierarchical organization of 
 
 On smartphones, the treecrumb navigation is omitted.
 
+
+<br>
+<div class="alert alert-warning">
+**2.1.2:**
+
+  - added `h2.sr-only` for more screen reader clarity
+</div>
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
@@ -10095,6 +10237,7 @@ On smartphones, the treecrumb navigation is omitted.
 
     <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
     <nav class="navbar treecrumb" role="navigation">
+      <h2 class="sr-only">Orientation in the website</h2>
       <ul class="nav navbar-nav">
 
         <!-- Treecrumb dropdown element -->
@@ -10161,11 +10304,9 @@ On smartphones, the treecrumb navigation is omitted.
   border: 1px solid #cccccc;
   border-left-color: transparent;
   position: relative; }
-  .treecrumb .dropdown-toggle:hover {
+  .treecrumb .dropdown-toggle:hover, .treecrumb .dropdown-toggle:focus {
     background: transparent;
     color: #dc0018; }
-  .treecrumb .dropdown-toggle:focus {
-    background: transparent; }
   .treecrumb .dropdown-toggle:before, .treecrumb .dropdown-toggle:after {
     content: '';
     display: block;
@@ -10306,23 +10447,31 @@ Navigation below the content level on a smartphone with links to the home page, 
 </div>
 ```
 */
+@media only screen and (min-width: 768px) {
+  .nav-page-list {
+    padding-left: 15px;
+    padding-right: 15px; } }
 .nav-page-list a {
   display: block;
   width: 100%; }
-.nav-page-list .icon--less {
+.nav-page-list .icon--less,
+.nav-page-list .icon--power {
   background: whitesmoke;
   color: black;
   padding: 0px 10px 5px 10px;
   font-size: 11px;
   border-bottom: 1px solid #cccccc; }
-  .nav-page-list .icon--less:before {
+  .nav-page-list .icon--less:before,
+  .nav-page-list .icon--power:before {
     font-size: 20px;
     position: relative;
     top: 5px;
     left: -3px; }
-  .nav-page-list .icon--less:hover, .nav-page-list .icon--less:hover:before {
-    color: #dc0018; }
-  .nav-page-list .icon--less:hover:before {
+  .nav-page-list .icon--less:hover,
+  .nav-page-list .icon--power:hover {
+    text-decoration: underline; }
+  .nav-page-list .icon--less:hover:before,
+  .nav-page-list .icon--power:hover:before {
     background: none; }
 .nav-page-list li {
   display: block;
@@ -10366,13 +10515,32 @@ Navigation below the content level on a smartphone with links to the home page, 
   background: #dc0018; }
 .nav-mobile .nav-page-list {
   padding-bottom: 40px; }
+@media only screen and (max-width: 767px) {
+  .nav-page-list a,
+  .nav-page-list .icon--less,
+  .nav-page-list .icon--power,
+  .nav-page-list li.active a,
+  .nav-page-list li a,
+  .nav-page-list ul ul li:first-child a {
+    color: #006699; }
+  .nav-page-list .icon--less,
+  .nav-page-list .icon--power {
+    background: none; }
+  .nav-page-list .icon--power {
+    border-top: 1px solid #cccccc; } }
 
 .drilldown {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0; }
   .drilldown .drilldown-sub {
     display: none; }
   .drilldown.dropdown-menu {
     padding-top: 0; }
+  @media only screen and (max-width: 767px) {
+    .drilldown[class*=col] {
+      margin-bottom: -20px;
+      border-bottom: 1px solid #cccccc; } }
 
 /*doc
 ---
@@ -10571,7 +10739,7 @@ In the news teaser, various snippets of news items are arranged chronologically.
     <!-- News list example -->
     <div class="list-group news-feed">
       <div class="list-group-header">
-        <h3 class="pull-left">News</h3>
+        <h2 class="pull-left">News</h2>
         <a href="#" class="pull-right icon icon--before icon--list">All News</a>
       </div>
       <div class="scroll-y">
@@ -10678,7 +10846,8 @@ The paging function allows the user to browse through a large number of elements
     <li class="separator"><a href="#">Previous</a></li>
     <li><a href="#">1</a></li>
     <li class="active"><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
+    <li>...</li>
+    <li><a href="#">17</a></li>
     <li class="separator-left"><a href="#">Next</a></li>
     <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
   </ul>
@@ -10708,6 +10877,9 @@ The paging function allows the user to browse through a large number of elements
     margin-left: 0;
     padding: 0 8px;
     float: left; }
+    @media only screen and (max-width: 767px) {
+      .pagination > li {
+        padding: 0 4px; } }
     .pagination > li > a {
       border: none;
       background: none;
@@ -10715,7 +10887,7 @@ The paging function allows the user to browse through a large number of elements
       line-height: 1; }
       .pagination > li > a:hover {
         background: none;
-        color: #dc0018; }
+        color: #005580; }
   .pagination > .active > a {
     background: #e5e5e5;
     color: #454545; }
@@ -10729,6 +10901,9 @@ The paging function allows the user to browse through a large number of elements
         float: none !important; }
       .pagination li a {
         font-size: 12px; } }
+  @media only screen and (max-width: 767px) {
+    .pagination li:first-child, .pagination li:last-child {
+      display: none; } }
 
 /* ==========================================================
  * progression.scss
@@ -10850,12 +11025,23 @@ The global search function allows the user to search the entire website. When th
 
 On smartphones, the search function can be accessed via an icon in the Header.
 
+
+<br>
+<div class="alert alert-warning">
+  **2.1.2:**
+
+    - added `h2.sr-only` for more screen reader clarity
+    - added label before input for screen readers
+</div>
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
 
   <header>
     <form class="form-horizontal form-search pull-right" role="form">
+      <h2 class="sr-only">Search</h2>
+      <label for="search-field" class="sr-only">Search:</label>
       <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
     </form>
   </header>
@@ -10942,7 +11128,7 @@ The search box is a simple form which can be used to enter a search term on a se
 <form action="#" class="form-inline row search-box">
   <fieldset class="clearfix">
     <div class="form-group">
-      <label for="inputSearch" class="control-label pull-left">Search</label>
+      <label for="inputSearch" class="control-label">Search</label>
       <input type="text" class="form-control" id="inputSearch" placeholder="Search">
     </div>
     <input class="btn btn-primary" aria-label="Search" type="submit" value="Search">
@@ -10955,6 +11141,9 @@ The search box is a simple form which can be used to enter a search term on a se
   border-top: 1px solid #cccccc;
   border-bottom: 2px solid #cccccc;
   padding: 1em 0 1.5em 0; }
+  @media only screen and (max-width: 767px) {
+    .search-box input[type=submit] {
+      width: 100%; } }
 
 /*doc
 ---
@@ -11175,8 +11364,16 @@ With more than 10 options in the select, a search field is setup at the top of t
 
 You can also add the `multiple` attribute to `<select>` and allow the user to select more than one option at a time, displaying them as tags in the input field.
 
+<br>
+<div class="alert alert-warning">
+  **2.1.2:**
+
+  - added a label before select for screen readers
+</div>
+
 ```html_example
-<select class="form-control">
+<label for="select" class="sr-only">Select:</select>
+<select id="select" class="form-control">
   <option>Option 1</option>
   <option>Option 2</option>
 </select>
@@ -11198,6 +11395,14 @@ The topics A-Z section is positioned on the right-hand side of the header. When 
 
 On smartphones, the A-Z navigation is accessed via an icon together with the search function.
 
+
+<br>
+<div class="alert alert-warning">
+  **2.1.2:**
+
+    - added `h2.sr-only` for more screen reader clarity
+</div>
+
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
@@ -11205,6 +11410,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 
     <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
     <nav class="navbar yamm yamm--select" role="navigation">
+      <h2 class="sr-only">By Topics</h2>
       <ul>
         <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
         <li class="dropdown pull-right">
@@ -11315,6 +11521,11 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 ```
 
 */
+select.form-control, .has-success select.form-control, .has-error select.form-control,
+.form-inline select.form-control,
+.navbar-form select.form-control {
+  width: auto; }
+
 @media only screen and (max-width: 767px) {
   .navbar.yamm--select {
     display: none; } }
@@ -11346,7 +11557,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
     -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     background: white; }
-    .yamm--select .dropdown-toggle:hover, .yamm--select .dropdown-toggle:active {
+    .yamm--select .dropdown-toggle:hover, .yamm--select .dropdown-toggle:active, .yamm--select .dropdown-toggle:focus {
       text-decoration: none;
       color: #dc0018; }
     .yamm--select .dropdown-toggle span {
@@ -11410,25 +11621,21 @@ By default, the shopping cart is not shown. Only after an object has been added 
 ```
 
 */
-.cart {
-  font-size: 0.8em; }
-  @media only screen and (min-width: 992px) {
-    .cart {
-      border: 1px solid #cccccc;
-      padding: 0 0.8em 0.8em 0.8em; } }
-  .cart h4 {
-    font-size: 1.2em; }
-  .cart ul {
-    border-top: 1px solid #cccccc; }
-  .cart li {
-    margin-left: 0;
-    margin-top: 0.4em;
-    border-bottom: 1px solid #cccccc;
-    min-height: 25px;
-    padding-bottom: 3px; }
-    .cart li > span {
-      display: block;
-      width: 80%; }
+@media only screen and (min-width: 992px) {
+  .cart {
+    border: 1px solid #cccccc;
+    padding: 0 0.8em 0.8em 0.8em; } }
+.cart ul {
+  border-top: 1px solid #cccccc; }
+.cart li {
+  margin-left: 0;
+  margin-top: 0.4em;
+  border-bottom: 1px solid #cccccc;
+  min-height: 25px;
+  padding-bottom: 3px; }
+  .cart li > span {
+    display: block;
+    width: 80%; }
 
 /* ==========================================================
  * tab.scss
@@ -11953,7 +12160,7 @@ The carousel consists of various information blocks, each of which contains a la
             <div class="item">
               <h3>Entwicklungspolitik 2</h3>
               <p>
-                <img class="carousel-img" src="http://placehold.it/588x331">
+                <img class="carousel-img" src="http://placehold.it/588x331" alt="image description">
               </p>
               <div class="spacer"></div>
               <figure class="pull-left">
@@ -11969,7 +12176,7 @@ The carousel consists of various information blocks, each of which contains a la
             <div class="item">
               <h3>Entwicklungspolitik 3</h3>
               <p>
-                <img class="carousel-img" src="http://placehold.it/588x331">
+                <img class="carousel-img" src="http://placehold.it/588x331" alt="image description">
               </p>
               <div class="spacer"></div>
               <figure class="pull-left">
@@ -12016,6 +12223,16 @@ The carousel consists of various information blocks, each of which contains a la
 
 .carousel-indicators .active {
   background: #dc0018; }
+
+.social_share_privacy_area li .switch {
+  background: none;
+  background-image: url(../img/form-icons.svg);
+  height: 15px;
+  width: 15px; }
+  .social_share_privacy_area li .switch.off {
+    background-position: 0 -90px; }
+  .social_share_privacy_area li .switch.on {
+    background-position: 0 0; }
 
 /* ==========================================================
  * rss.scss
