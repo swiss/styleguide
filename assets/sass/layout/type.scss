@@ -43,10 +43,13 @@ element                          | Effect
 
 */
 
+@media only screen and (max-width: $screen-sm-max) {
+  body {font-size: 12px;}
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.5;
-  margin: .8em 0 0 0;
 }
 
 strong {
@@ -183,16 +186,5 @@ blockquote {
   }
   &::after {
     content: "\00bb";
-  }
-}
-
-
-// Responsive titles
-@media only screen and (max-width: $screen-sm-max) {
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.3em;
   }
 }

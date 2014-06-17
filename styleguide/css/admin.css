@@ -180,11 +180,11 @@ abbr[title] {
 b,
 strong,
 .chosen-container .chosen-results li.group-result,
-dt,
 .lead,
 b,
 mark,
-samp {
+samp,
+dt {
   font-weight: bold; }
 
 dfn {
@@ -1160,7 +1160,7 @@ h2, .h2 {
   font-size: 23px; }
 
 h3, .h3 {
-  font-size: 19px; }
+  font-size: 17px; }
 
 h4, .h4 {
   font-size: 15px; }
@@ -5411,7 +5411,7 @@ button.close {
   position: relative;
   display: block;
   overflow: hidden;
-  padding: 5px 25px 5px 4px;
+  padding: 5px 20px 5px 4px;
   height: 28px;
   border: 1px solid #454545;
   border-radius: 3px;
@@ -5750,6 +5750,162 @@ button.close {
     background-size: 52px 37px !important;
     background-repeat: no-repeat !important; } }
 /* @end */
+/* ==========================================================
+ * type.scss
+ * Global typographic styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+/*doc
+---
+title: Paragraphs
+name: b-paragraphs
+category: Base Layout - Typography
+---
+
+<span class="label label-admin">CD</span>
+
+## Lead
+A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text.
+
+A lead of this sort is formatted bold.
+
+element                          | Effect
+--------------------------------:| -----------------
+`<p class="lead"></p>`           | Leading emphasized paragraph
+`<strong></strong>`              | Emphasized bold element in the text
+`<em></em>`                      | Emphasized italic element in the text
+
+```html_example
+<p class="lead">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.
+</p>
+
+<p>
+  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Quam, <em>sapiente</em>, fuga provident illum adipisci tenetur nisi vero minima. Id, molestias, assumenda hic minima perspiciatis dolorem repellendus vero maiores beatae enim?
+</p>
+```
+
+*/
+@media only screen and (max-width: 991px) {
+  body {
+    font-size: 12px; } }
+p {
+  font-size: 1.1em;
+  line-height: 1.5; }
+
+strong, .chosen-container .chosen-results li.group-result, .lead, b, mark, samp, dt {
+  font-family: "Frutiger Neue Bold", Arial, sans-serif;
+  font-weight: normal; }
+
+.lead {
+  font-weight: normal;
+  line-height: 1.6;
+  font-size: 14px; }
+
+em, cite, i, dfn, q, var {
+  font-family: "Frutiger Neue Italic", Arial, sans-serif;
+  font-style: normal; }
+
+/*doc
+---
+title: Text elements
+name: c-text-elements
+category: Base Layout - Typography
+---
+
+<span class="label label-admin">CD</span>
+
+The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.
+
+```html_example
+<p>
+   The <a href="#">a element</a> example<br>
+   The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
+   The <b>b element</b> example<br>
+   The <cite>cite element</cite> example<br>
+   The <code>code element</code> example<br>
+   The <del>del element</del> example<br>
+   The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
+   The <em>em element</em> example<br>
+   The <i>i element</i> example<br>
+   The img element <img src="http://placehold.it/120x25" alt="image description"> example<br>
+   The <ins>ins element</ins> example<br>
+   The <kbd>kbd element</kbd> example<br>
+   The <mark>mark element</mark> example<br>
+   The <q>q element <q>inside</q> a q element</q> example<br>
+   The <s>s element</s> example<br>
+   The <samp>samp element</samp> example<br>
+   The <small>small element</small> example<br>
+   The <span>span element</span> example<br>
+   The <strong>strong element</strong> example<br>
+   The <sub>sub element</sub> example<br>
+   The <sup>sup element</sup> example<br>
+   The <var>var element</var> example<br>
+   The <u>u element</u> example
+ </p>
+```
+
+*/
+abbr {
+  border-bottom: 1px #aaa dotted;
+  letter-spacing: .07em; }
+  abbr[title] {
+    border-bottom: 1px dotted; }
+
+pre, code {
+  color: #800; }
+
+q q {
+  font-family: "Frutiger Neue Regular", Arial, sans-serif;
+  font-style: normal; }
+
+ins {
+  background: #ff9;
+  color: black;
+  text-decoration: none; }
+
+mark {
+  background: #FE57A1;
+  padding: 0; }
+
+samp {
+  color: #555555; }
+
+var {
+  color: gray; }
+
+.text-dimmed {
+  color: #757575; }
+
+/*doc
+---
+title: Blockquote
+name: d-blockquote
+category: Base Layout - Typography
+---
+
+<span class="label label-admin">CD</span>
+
+```html_example
+<blockquote>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</blockquote>
+```
+
+*/
+blockquote {
+  margin: 1.5em 0 0 1.6em;
+  color: #757575; }
+  blockquote::before {
+    content: "\00ab"; }
+  blockquote::after {
+    content: "\00bb"; }
+
 /* ==========================================================
  * brand.scss
  * Brand and logo display styles
@@ -6297,7 +6453,7 @@ address {
       .footer-service li, .links-social li {
         display: block;
         margin-left: 0;
-        padding: 9px;
+        padding: 9px 15px;
         border-top: 1px solid #cccccc; } }
 
 /*doc
@@ -7892,9 +8048,11 @@ body, .body {
   padding: 0;
   background: white;
   margin-top: 0;
-  margin-bottom: 90px;
   -webkit-box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6); }
+  @media only screen and (min-width: 768px) {
+    .container-main {
+      margin-bottom: 90px; } }
 
 .container-fluid h1:first-child {
   margin-top: 0; }
@@ -8801,27 +8959,10 @@ Headings can also have links and are then formatted in blue.
 
 */
 h1 {
-  font-family: "Frutiger Neue Light", Arial, sans-serif;
-  margin: 0.5em 0 0 0; }
-
-h2 {
-  line-height: 1.3;
-  margin: 1.5em 0 0 0; }
-
-h3 {
-  line-height: 1.4;
-  margin: 0.938em 0 0 0; }
+  font-family: "Frutiger Neue Light", Arial, sans-serif; }
 
 h4 {
   font-family: "Frutiger Neue Bold", Arial, sans-serif; }
-
-h4, h5 {
-  line-height: 1.5;
-  margin: 1.154em 0 0 0; }
-
-h6 {
-  line-height: 1.4;
-  margin: 1.25em 0 0 0; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   line-height: 1;
@@ -8829,169 +8970,21 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   padding: 0;
   margin: 0; }
 
-.page-title {
-  margin: .4em 1.6em 0 0; }
-
-/* ==========================================================
- * type.scss
- * Global typographic styles
- *
- * Author: Yann Gouffon, yann@antistatique.net
- * Date:   2014-04-28 17:17:40
- *
- * Copyright 2014 Federal Chancellery of Switzerland
- * Licensed under MIT
- =========================================================== */
-/*doc
----
-title: Paragraphs
-name: b-paragraphs
-category: Base Layout - Typography
----
-
-<span class="label label-admin">CD</span>
-
-## Lead
-A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text.
-
-A lead of this sort is formatted bold.
-
-element                          | Effect
---------------------------------:| -----------------
-`<p class="lead"></p>`           | Leading emphasized paragraph
-`<strong></strong>`              | Emphasized bold element in the text
-`<em></em>`                      | Emphasized italic element in the text
-
-```html_example
-<p class="lead">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.
-</p>
-
-<p>
-  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Quam, <em>sapiente</em>, fuga provident illum adipisci tenetur nisi vero minima. Id, molestias, assumenda hic minima perspiciatis dolorem repellendus vero maiores beatae enim?
-</p>
-```
-
-*/
-p {
-  font-size: 1.1em;
-  line-height: 1.5;
-  margin: .8em 0 0 0; }
-
-strong, .chosen-container .chosen-results li.group-result, dt, .lead, b, mark, samp {
-  font-family: "Frutiger Neue Bold", Arial, sans-serif;
-  font-weight: normal; }
-
-.lead {
-  font-weight: normal;
-  line-height: 1.6;
-  font-size: 14px; }
-
-em, cite, i, dfn, q, var {
-  font-family: "Frutiger Neue Italic", Arial, sans-serif;
-  font-style: normal; }
-
-/*doc
----
-title: Text elements
-name: c-text-elements
-category: Base Layout - Typography
----
-
-<span class="label label-admin">CD</span>
-
-The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.
-
-```html_example
-<p>
-   The <a href="#">a element</a> example<br>
-   The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
-   The <b>b element</b> example<br>
-   The <cite>cite element</cite> example<br>
-   The <code>code element</code> example<br>
-   The <del>del element</del> example<br>
-   The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
-   The <em>em element</em> example<br>
-   The <i>i element</i> example<br>
-   The img element <img src="http://placehold.it/120x25" alt="image description"> example<br>
-   The <ins>ins element</ins> example<br>
-   The <kbd>kbd element</kbd> example<br>
-   The <mark>mark element</mark> example<br>
-   The <q>q element <q>inside</q> a q element</q> example<br>
-   The <s>s element</s> example<br>
-   The <samp>samp element</samp> example<br>
-   The <small>small element</small> example<br>
-   The <span>span element</span> example<br>
-   The <strong>strong element</strong> example<br>
-   The <sub>sub element</sub> example<br>
-   The <sup>sup element</sup> example<br>
-   The <var>var element</var> example<br>
-   The <u>u element</u> example
- </p>
-```
-
-*/
-abbr {
-  border-bottom: 1px #aaa dotted;
-  letter-spacing: .07em; }
-  abbr[title] {
-    border-bottom: 1px dotted; }
-
-pre, code {
-  color: #800; }
-
-q q {
-  font-family: "Frutiger Neue Regular", Arial, sans-serif;
-  font-style: normal; }
-
-ins {
-  background: #ff9;
-  color: black;
-  text-decoration: none; }
-
-mark {
-  background: #FE57A1;
-  padding: 0; }
-
-samp {
-  color: #555555; }
-
-var {
-  color: gray; }
-
-.text-dimmed {
-  color: #757575; }
-
-/*doc
----
-title: Blockquote
-name: d-blockquote
-category: Base Layout - Typography
----
-
-<span class="label label-admin">CD</span>
-
-```html_example
-<blockquote>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-</blockquote>
-```
-
-*/
-blockquote {
-  margin: 1.5em 0 0 1.6em;
-  color: #757575; }
-  blockquote::before {
-    content: "\00ab"; }
-  blockquote::after {
-    content: "\00bb"; }
-
+@media only screen and (max-width: 1199px) {
+  h1 {
+    font-size: 2.3em; } }
 @media only screen and (max-width: 991px) {
   h1 {
     font-size: 2em; }
 
   h2 {
-    font-size: 1.3em; } }
+    font-size: 1.3em; }
+
+  h3 {
+    font-size: 1.2em; } }
+.page-title {
+  margin: .4em 1.6em 0 0; }
+
 /* ==========================================================
  * alerts.scss
  * Alert element styles
@@ -9276,7 +9269,7 @@ On tablets the contact information is shown under the content of the page in a t
 ```
 
 */
-address strong, address .chosen-container .chosen-results li.group-result, .chosen-container .chosen-results address li.group-result, address dt, address .lead, address b, address mark, address samp {
+address strong, address .chosen-container .chosen-results li.group-result, .chosen-container .chosen-results address li.group-result, address .lead, address b, address mark, address samp, address dt {
   font-family: "Frutiger Neue Regular", Arial, sans-serif;
   display: block; }
 
@@ -11501,6 +11494,11 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 ```
 
 */
+select.form-control, .has-success select.form-control, .has-error select.form-control,
+.form-inline select.form-control,
+.navbar-form select.form-control {
+  width: auto; }
+
 @media only screen and (max-width: 767px) {
   .navbar.yamm--select {
     display: none; } }
@@ -11596,25 +11594,21 @@ By default, the shopping cart is not shown. Only after an object has been added 
 ```
 
 */
-.cart {
-  font-size: 0.8em; }
-  @media only screen and (min-width: 992px) {
-    .cart {
-      border: 1px solid #cccccc;
-      padding: 0 0.8em 0.8em 0.8em; } }
-  .cart h4 {
-    font-size: 1.2em; }
-  .cart ul {
-    border-top: 1px solid #cccccc; }
-  .cart li {
-    margin-left: 0;
-    margin-top: 0.4em;
-    border-bottom: 1px solid #cccccc;
-    min-height: 25px;
-    padding-bottom: 3px; }
-    .cart li > span {
-      display: block;
-      width: 80%; }
+@media only screen and (min-width: 992px) {
+  .cart {
+    border: 1px solid #cccccc;
+    padding: 0 0.8em 0.8em 0.8em; } }
+.cart ul {
+  border-top: 1px solid #cccccc; }
+.cart li {
+  margin-left: 0;
+  margin-top: 0.4em;
+  border-bottom: 1px solid #cccccc;
+  min-height: 25px;
+  padding-bottom: 3px; }
+  .cart li > span {
+    display: block;
+    width: 80%; }
 
 /* ==========================================================
  * tab.scss
