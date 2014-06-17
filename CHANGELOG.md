@@ -25,6 +25,10 @@ This changelog references the relevant changes and bug fixes.
  * #152 fix emergency banner red band width
  * #153 fix typo weight on news feed elements and other elements
  * #148 fix logo size on mobile on navbar
+ * #158 remove .pull-left class from search form
+ * #159 fix container not closed on forms.html
+ * #150 fix footer mobile
+ * #107 fix font sizes
 
 * 2.1.1 (2014-06-06)
  * #70 add german LICENSE file to fonts folder
