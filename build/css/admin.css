@@ -11128,7 +11128,7 @@ The search box is a simple form which can be used to enter a search term on a se
 <form action="#" class="form-inline row search-box">
   <fieldset class="clearfix">
     <div class="form-group">
-      <label for="inputSearch" class="control-label pull-left">Search</label>
+      <label for="inputSearch" class="control-label">Search</label>
       <input type="text" class="form-control" id="inputSearch" placeholder="Search">
     </div>
     <input class="btn btn-primary" aria-label="Search" type="submit" value="Search">
