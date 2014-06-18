@@ -95,6 +95,9 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
 ```
 */
 
+
+@media only screen and (min-width: $screen-sm-min) {
+
 .nav-tabs.nav-tabs-focus {
   position: relative;
   border-top: 1px solid $silver;
@@ -165,6 +168,32 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
       padding-left: 0;
     }
   }
+}
+
+} // End of media queries
+
+.tab-focus.carousel {
+  margin-bottom: 55px !important;
+  .item {
+    padding: 0 !important;
+  }
+  .col-sm-5 {
+    padding: 0 30px !important;
+  }
+  .carousel-indicators {
+    top: auto !important;
+    bottom: -35px !important;
+    li {
+      margin: 0 10px;
+    }
+  }
+  .carousel-control {
+    top: auto !important;
+    bottom: -40px !important;
+  }
+}
+
+.tab-content.tab-focus {
   @media only screen and (max-width: $screen-sm) {
     div[class*="col"]:last-child {
       padding: 20px 30px;
