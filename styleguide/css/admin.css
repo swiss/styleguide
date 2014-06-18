@@ -7743,6 +7743,9 @@ span.icon.icon--arrow-top:after {
   .icon--print {
     display: none; } }
 
+a.icon:hover, a[data-toggle="collapse"]:hover {
+  text-decoration: underline; }
+
 /*doc
 ---
 title: Form icons
