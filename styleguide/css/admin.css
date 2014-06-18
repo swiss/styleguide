@@ -9897,7 +9897,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     content: 'x'; }
 
 .drilldown-container {
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .nav-main {
   background: #e4e4e4;
