@@ -284,7 +284,7 @@ function carouselInit ($) {
 }) (jQuery);
 /* ==========================================================
  * shame.js
- * DOM rewritting on mobile
+ * DOM rewritting on mobile, issue #160
  *
  * Author: Yann, yann@antistatique.net
  * Date:   2014-06-18 15:57:23
@@ -298,6 +298,7 @@ function carouselInit ($) {
   $(document).ready(function () {
     var id;
     carouselify();
+    collapsify();
 
     $(window).resize(function() {
         clearTimeout(id);
@@ -328,7 +329,7 @@ function carouselInit ($) {
 
           $that.append( "<a class=\"left carousel-control icon icon--before icon--less\" href=\"#tab-focus-"+focusIndex+"\" data-slide=\"prev\"></a><a class=\"right carousel-control icon icon--before icon--greater\" href=\"#tab-focus-"+focusIndex+"\" data-slide=\"next\"></a>" );
         });
-      }else {
+      }else if($tabFocus) {
         $tabFocus.each(function () {
           var $that = $(this);
           focusIndex -= 1;
@@ -347,6 +348,16 @@ function carouselInit ($) {
           }
 
           $that.find('.carousel-control').remove();
+        });
+      }
+    }
+
+    function collapsify() {
+      var $navTab = $(".nav-tabs"),
+          tabIndex = 0;
+      if($navTab && $(window).width() < 767 ) {
+        $navTab.each(function (){
+
         });
       }
     }
