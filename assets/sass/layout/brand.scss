@@ -32,8 +32,8 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 
 ```html_example
 <a href="#" class="brand hidden-xs">
-  <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
-  <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
+  <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+  <h1>Swiss Confederation<br>Web Guidelines</h1>
 </a>
 ```
 

@@ -5945,8 +5945,8 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 
 ```html_example
 <a href="#" class="brand hidden-xs">
-  <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
-  <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
+  <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+  <h1>Swiss Confederation<br>Web Guidelines</h1>
 </a>
 ```
 
@@ -10506,10 +10506,6 @@ Navigation below the content level on a smartphone with links to the home page, 
 </div>
 ```
 */
-@media only screen and (min-width: 768px) {
-  .nav-page-list {
-    padding-left: 15px;
-    padding-right: 15px; } }
 .nav-page-list a {
   display: block;
   width: 100%; }
@@ -10517,7 +10513,7 @@ Navigation below the content level on a smartphone with links to the home page, 
 .nav-page-list .icon--power {
   background: whitesmoke;
   color: black;
-  padding: 0px 10px 5px 10px;
+  padding: 0px 10px 8px 10px;
   border-bottom: 1px solid #cccccc; }
   @media only screen and (min-width: 768px) {
     .nav-page-list .icon--less,
@@ -10544,10 +10540,13 @@ Navigation below the content level on a smartphone with links to the home page, 
 .nav-page-list li.active a {
   color: black; }
 @media only screen and (min-width: 768px) {
-  .nav-page-list li.list-emphasis a {
-    color: black;
-    font-weight: bold;
-    border-color: #454545; } }
+  .nav-page-list {
+    padding-left: 15px;
+    padding-right: 15px; }
+    .nav-page-list li.list-emphasis a {
+      color: black;
+      font-weight: bold;
+      border-color: #454545; } }
 .nav-page-list .list-sub {
   position: relative; }
   .nav-page-list .list-sub:after {
@@ -10588,7 +10587,7 @@ Navigation below the content level on a smartphone with links to the home page, 
   .nav-page-list li a,
   .nav-page-list ul ul li:first-child a {
     color: #006699; }
-  .nav-page-list .icon--less,
+  .nav-page-list .icon--less:not(.drilldown-back),
   .nav-page-list .icon--power {
     background: none; }
   .nav-page-list .icon--power {
