@@ -6417,17 +6417,61 @@ On smartphones, some of the functions from the header, e.g. service navigation o
 footer {
   border-top: 1px solid #d5d5d5;
   background: whitesmoke;
-  padding-bottom: 10px;
   margin-top: 20px; }
+  @media only screen and (max-width: 767px) {
+    footer {
+      background: #efefef;
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efefef), color-stop(100%, #f7f7f7));
+      background: -webkit-linear-gradient(top, #efefef 0%, #f7f7f7 100%);
+      background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#f7f7f7));
+      background: linear-gradient(to bottom, #efefef 0%, #f7f7f7 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#f7f7f7',GradientType=0 ); } }
   footer select {
     min-width: 200px; }
   footer h3 {
-    margin-top: 1em;
-    margin-bottom: 1em; }
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em; }
+    @media only screen and (max-width: 767px) {
+      footer h3:not(:first-child) {
+        background: #efefef;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efefef), color-stop(100%, #f7f7f7));
+        background: -webkit-linear-gradient(top, #efefef 0%, #f7f7f7 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#f7f7f7));
+        background: linear-gradient(to bottom, #efefef 0%, #f7f7f7 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#f7f7f7',GradientType=0 ); }
+      footer h3 + p {
+        padding-top: 1em; } }
+  @media only screen and (max-width: 767px) {
+    footer .border-bottom {
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #d5d5d5; } }
 
 address {
+  border-top: 1px solid white;
   margin-bottom: 0;
-  padding-top: 10px; }
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media only screen and (max-width: 767px) {
+    address {
+      padding-top: 0;
+      padding-bottom: 0;
+      border-color: #d5d5d5; }
+      address .container-fluid {
+        padding-right: 0; }
+      address ul li {
+        margin: 0; }
+      address ul a {
+        display: inline-block;
+        border-left: 1px solid #d5d5d5;
+        padding: 10px;
+        background: rgba(229, 229, 229, 0.3); } }
 
 .site-map {
   background: whitesmoke;
@@ -6443,7 +6487,6 @@ address {
     .site-map {
       display: none; } }
   .site-map + div {
-    border-bottom: 1px solid white;
     padding-bottom: 10px; }
   .site-map a {
     font-size: 13px;
@@ -6520,6 +6563,11 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
 footer img {
   max-width: 204px;
   margin: 15px 0; }
+footer .footer-line {
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
+  background: white; }
 
 .links-social {
   display: block; }
@@ -9905,7 +9953,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     content: 'x'; }
 
 .drilldown-container {
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .nav-main {
   background: #e4e4e4;
@@ -10470,8 +10518,14 @@ Navigation below the content level on a smartphone with links to the home page, 
   background: whitesmoke;
   color: black;
   padding: 0px 10px 5px 10px;
-  font-size: 11px;
   border-bottom: 1px solid #cccccc; }
+  @media only screen and (min-width: 768px) {
+    .nav-page-list .icon--less,
+    .nav-page-list .icon--power {
+      font-size: 11px; } }
+  .nav-page-list .icon--less:first-child,
+  .nav-page-list .icon--power:first-child {
+    border-top: 1px solid #cccccc; }
   .nav-page-list .icon--less:before,
   .nav-page-list .icon--power:before {
     font-size: 20px;
