@@ -83,8 +83,12 @@
             $( '<div class="collapse" id="collapse-'+linkIndex+'">'+$($target).html()+'</div>' ).insertAfter(this);
             $(this).attr('data-toggle', 'collapse');
             $(this).attr('data-target', '#collapse-'+linkIndex );
-            $( "<p>Test</p>" ).insertAfter( ".inner" );
+            $(this).addClass('collapse-closed');
+            $(this).click(function(){
+                $(this).toggleClass('collapse-closed');
+            });
           });
+          //$that.find('a:first-child').removeClass('collapse-closed').next('.collapse').addClass('in');
         });
       }
     }
