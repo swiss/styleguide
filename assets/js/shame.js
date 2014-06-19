@@ -105,7 +105,7 @@
             var $target = $(this).attr('href');
             linkIndex -= 1;
             $(this).wrap('<li></li>');
-            $(this).next('.collapse').remove();
+            $(this).parent().next('.collapse').remove();
             $(this).attr('data-toggle', 'tab');
             $(this).attr('data-target', '');
             $(this).removeClass('collapse-closed');
