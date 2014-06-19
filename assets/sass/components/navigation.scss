@@ -907,11 +907,17 @@ Navigation below the content level on a smartphone with links to the home page, 
 */
 
 .nav-page-list {
+  @media only screen and (min-width: $screen-sm-min) {
+    // adding this padding for compensating the padding we removed from .drilldown
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   a {
     display: block;
     width: 100%;
   }
-  .icon--less {
+  .icon--less,
+  .icon--power {
     background: $smoke;
     color: $black;
     padding: 0px 10px 5px 10px;
@@ -923,8 +929,8 @@ Navigation below the content level on a smartphone with links to the home page, 
       top: 5px;
       left: -3px;
     }
-    &:hover, &:hover:before {
-      color: $venetian-red;
+    &:hover {
+      text-decoration: underline;
     }
     &:hover:before {background: none;}
   }
@@ -975,15 +981,40 @@ Navigation below the content level on a smartphone with links to the home page, 
   .nav-mobile & {
     padding-bottom: 40px;
   }
+  @media only screen and (max-width: $screen-xs-max) {
+    a,
+    .icon--less,
+    .icon--power,
+    li.active a,
+    li a,
+    ul ul li:first-child a {
+      color: $cerulean;
+    }
+    .icon--less,
+    .icon--power {
+      background: none;
+    }
+    .icon--power {
+      border-top: 1px solid $silver;
+    }
+  }
 }
 
 .drilldown {
   overflow: hidden;
+  padding-left: 0; // removing padding here for little red bar on hover
+  padding-right: 0; // removing padding here for little red bar on hover
   .drilldown-sub {
     display: none;
   }
   &.dropdown-menu {
     padding-top: 0;
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    &[class*=col] {
+      margin-bottom: -20px;
+      border-bottom: 1px solid $silver;
+    }
   }
 }
 
