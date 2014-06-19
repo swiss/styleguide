@@ -11795,6 +11795,42 @@ ul.nav-tabs {
     padding-left: 0;
     text-align: center; }
 
+.collapsify a {
+  border-top: 3px solid #dc0018;
+  border-bottom: 1px solid white;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  font-size: 16px;
+  padding: 12px 25px;
+  color: black;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  .collapsify a:before {
+    color: black; }
+  .collapsify a:hover {
+    text-decoration: none; }
+  .collapsify a:first-child {
+    border-top: 3px solid #dc0018; }
+.collapsify a.collapse-closed {
+  border-top: 0px solid white;
+  border-bottom: 1px solid #cccccc;
+  color: #757575; }
+  .collapsify a.collapse-closed:before {
+    content: ':';
+    color: #757575; }
+  .collapsify a.collapse-closed:first-child {
+    border-top: 1px solid #cccccc; }
+.collapsify div[class*="col"], .collapsify .collapse {
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  margin: 0 !important;
+  padding: 0 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+.collapsify .collapse.in {
+  padding-bottom: 20px; }
+
 /* ==========================================================
  * timeline.scss
  * Theme for timelineJS
@@ -12086,68 +12122,84 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
 </div>
 ```
 */
-.nav-tabs.nav-tabs-focus {
-  position: relative;
-  border-top: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
-  margin-top: 0; }
+@media only screen and (min-width: 768px) {
+  .nav-tabs.nav-tabs-focus {
+    position: relative;
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    margin-top: 0; }
 
-.nav-tabs.nav-tabs-focus:after {
-  content: '';
-  display: block;
-  clear: both; }
-
-.nav-tabs.nav-tabs-focus.nav-justified > .active > a,
-.nav-tabs.nav-tabs-focus.nav-justified > .active > a:hover {
-  height: 70px;
-  border-bottom: 3px solid #dc0018; }
-
-.nav-tabs.nav-tabs-focus li {
-  border-left: 1px solid #cccccc;
-  border-bottom: none !important;
-  position: relative; }
-  .nav-tabs.nav-tabs-focus li:first-child {
-    border-left: none; }
-  .nav-tabs.nav-tabs-focus li a {
-    background: whitesmoke;
-    height: 69px;
+  .nav-tabs.nav-tabs-focus:after {
+    content: '';
     display: block;
-    border: none;
-    border-bottom: 1px solid #cccccc;
-    padding-bottom: 10px;
-    font-size: 15px;
-    line-height: 1.1em;
-    text-align: center;
-    border-radius: 0;
-    color: #333333; }
-  .nav-tabs.nav-tabs-focus li a:hover {
-    height: 69px;
-    border-bottom: 3px solid #dc0018;
-    color: black; }
-  .nav-tabs.nav-tabs-focus li.active a, .nav-tabs.nav-tabs-focus li.active a:hover {
-    border-right: none;
-    border-left: none;
-    padding-bottom: 10px !important;
-    border-bottom: 3px solid #dc0018;
-    background: #e5e5e5;
-    color: black; }
-  .nav-tabs.nav-tabs-focus li:hover a {
-    padding-top: 10px !important; }
+    clear: both; }
 
-.tab-content.tab-focus {
-  padding: 0;
-  border-bottom: none;
-  border-top: 1px solid #cccccc; }
-  .tab-content.tab-focus h2 {
-    font-family: "Frutiger Neue Bold", Arial, sans-serif; }
-  .tab-content.tab-focus div[class*="col"] {
-    margin-bottom: 0; }
-    .tab-content.tab-focus div[class*="col"]:last-child {
-      padding-left: 0; }
-  @media only screen and (max-width: 768px) {
-    .tab-content.tab-focus div[class*="col"]:last-child {
-      padding: 20px 30px; } }
+  .nav-tabs.nav-tabs-focus.nav-justified > .active > a,
+  .nav-tabs.nav-tabs-focus.nav-justified > .active > a:hover {
+    height: 70px;
+    border-bottom: 3px solid #dc0018; }
+
+  .nav-tabs.nav-tabs-focus li {
+    border-left: 1px solid #cccccc;
+    border-bottom: none !important;
+    position: relative; }
+    .nav-tabs.nav-tabs-focus li:first-child {
+      border-left: none; }
+    .nav-tabs.nav-tabs-focus li a {
+      background: whitesmoke;
+      height: 69px;
+      display: block;
+      border: none;
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 10px;
+      font-size: 15px;
+      line-height: 1.1em;
+      text-align: center;
+      border-radius: 0;
+      color: #333333; }
+    .nav-tabs.nav-tabs-focus li a:hover {
+      height: 69px;
+      border-bottom: 3px solid #dc0018;
+      color: black; }
+    .nav-tabs.nav-tabs-focus li.active a, .nav-tabs.nav-tabs-focus li.active a:hover {
+      border-right: none;
+      border-left: none;
+      padding-bottom: 10px !important;
+      border-bottom: 3px solid #dc0018;
+      background: #e5e5e5;
+      color: black; }
+    .nav-tabs.nav-tabs-focus li:hover a {
+      padding-top: 10px !important; }
+
+  .tab-content.tab-focus {
+    padding: 0;
+    border-bottom: none;
+    border-top: 1px solid #cccccc; }
+    .tab-content.tab-focus h2 {
+      font-family: "Frutiger Neue Bold", Arial, sans-serif; }
+    .tab-content.tab-focus div[class*="col"] {
+      margin-bottom: 0; }
+      .tab-content.tab-focus div[class*="col"]:last-child {
+        padding-left: 0; } }
+.tab-focus.carousel {
+  margin-bottom: 55px !important; }
+  .tab-focus.carousel .item {
+    padding: 0 !important; }
+  .tab-focus.carousel .col-sm-5 {
+    padding: 0 30px !important; }
+  .tab-focus.carousel .carousel-indicators {
+    top: auto !important;
+    bottom: -35px !important; }
+    .tab-focus.carousel .carousel-indicators li {
+      margin: 0 10px; }
+  .tab-focus.carousel .carousel-control {
+    top: auto !important;
+    bottom: -40px !important; }
+
+@media only screen and (max-width: 768px) {
+  .tab-content.tab-focus div[class*="col"]:last-child {
+    padding: 20px 30px; } }
 
 @media only screen and (max-width: 768px) {
   .nav-justified > li > a, .nav-tabs.nav-justified > li > a, .nav-tabs.nav-justified > li > a {
