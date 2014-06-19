@@ -12110,6 +12110,9 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
       height: 69px;
       display: block;
       border: none;
+      -webkit-box-sizing: border-box !important;
+      -moz-box-sizing: border-box !important;
+      box-sizing: border-box !important;
       border-bottom: 1px solid #cccccc;
       padding-bottom: 10px;
       font-size: 15px;

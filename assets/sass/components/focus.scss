@@ -128,6 +128,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     height: 69px;
     display: block;
     border: none;
+    box-sizing: border-box !important;
     border-bottom: 1px solid $silver;
     padding-bottom: 10px;
     font-size: 15px;
