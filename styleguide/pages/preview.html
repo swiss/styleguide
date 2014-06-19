@@ -135,7 +135,7 @@
     </header>
 
     <nav class="nav-main yamm navbar" role="navigation">
-  <h2 class="sr-only">Navigation</h2>
+      <h2 class="sr-only">Navigation</h2>
       <section class="nav-mobile">
         <div class="table-row">
           <div class="nav-mobile-header">
@@ -259,34 +259,8 @@
 
     <div class="container-fluid">
       <div class="row">
-      <div class="col-sm-4 col-md-3 drilldown">
-        <div class="drilldown-container">
-          <nav class="nav-page-list">
-            <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
-            <ul>
-              <!-- the .list-emphasis class is optionnal -->
-              <li class="list-emphasis"><a href="#">Drinks</a></li>
-              <!-- add the .list-sub class if the list has some sub-lists -->
-              <li class="list-sub"><a href="#">Mineral water</a>
-                <!-- sub-list element -->
-                <nav class="drilldown-sub">
-                  <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
-                  <ul>
-                    <li><a href="#">Test</a></li>
-                    <li><a href="#">Test2</a></li>
-                    <li><a href="#">Test3</a></li>
-                  </ul>
-                </nav>
-              </li>
-              <li class="active"><a href="#">Wine</a></li>
-              <li><a href="#">Beer</a></li>
-              <li><a href="#">Spirits</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
 
-      <div class="col-sm-8 col-md-7">
+      <div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
 
         <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
         <div class="row">
@@ -332,10 +306,49 @@
           </div>
         </div>
       </div>
+      <div class="col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9 drilldown">
+        <div class="drilldown-container">
+          <nav class="nav-page-list">
+            <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
+            <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+            <ul>
+              <!-- the .list-emphasis class is optionnal -->
+              <li class="list-emphasis"><a href="#">Drinks</a></li>
+              <!-- add the .list-sub class if the list has some sub-lists -->
+              <li class="list-sub"><a href="#">Mineral water</a>
+                <!-- sub-list element -->
+                <nav class="drilldown-sub">
+                  <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                  <ul>
+                    <li><a href="#">Test</a></li>
+                    <li><a href="#">Test2</a></li>
+                    <li><a href="#">Test3</a></li>
+                  </ul>
+                </nav>
+              </li>
+              <li class="active"><a href="#">Wine</a></li>
+              <li><a href="#">Beer</a></li>
+              <li><a href="#">Spirits</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       </div>
     </div>
 
     <footer>
+
+      <div class="container-fluid footer-service">
+        <h3>Statistik Schweiz</h3>
+        <nav>
+          <ul>
+            <li><a href="#">Emergencies</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
 
       <div class="site-map">
 
@@ -435,7 +448,6 @@
       <!-- Use normal `container` instead of `container-fluid` -->
       <div class="container-fluid">
         <h3>Informiert bleiben</h3>
-        <br>
         <nav class="links-social">
           <ul>
             <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
@@ -445,7 +457,7 @@
           </ul>
         </nav>
 
-        <h3>DEZA – Weltweit vor Ort</h3>
+        <h3 class="border-bottom">DEZA – Weltweit vor Ort</h3>
         <p>
           Besuchen Sie die Websites der Schweizer Kooperationsbüros.
         </p>
@@ -458,6 +470,7 @@
             <option value="...">...</option>
           </select>
         </p>
+        <hr class="footer-line visible-xs">
         <img class="visible-xs" src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
       </div>
 
@@ -466,8 +479,7 @@
           <span class="hidden-xs">Bundesamt für Statistik</span>
           <nav class="pull-right">
             <ul>
-              <li><a href="#">Rechtliches</a></li>
-              <li><a href="#">Impressum</a></li>
+              <li><a href="#">Rechtliches</a></li><li><a href="#">Impressum</a></li>
             </ul>
           </nav>
         </div>

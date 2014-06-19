@@ -921,8 +921,11 @@ Navigation below the content level on a smartphone with links to the home page, 
     background: $smoke;
     color: $black;
     padding: 0px 10px 5px 10px;
-    font-size: 11px;
     border-bottom: 1px solid $silver;
+    @media only screen and (min-width: $screen-sm-min) {font-size: 11px;}
+    &:first-child {
+      border-top: 1px solid $silver;
+    }
     &:before {
       font-size: 20px;
       position: relative;
