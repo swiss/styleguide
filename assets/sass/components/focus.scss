@@ -85,7 +85,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
 
   <!-- focus tabs -->
   <ul class="nav nav-tabs nav-tabs-focus nav-justified">
-    <li class="active"><a href="#home" data-toggle="tab">Title in H2 uns extra lang, weil es eigentlich schon fast ein Leadtext ist.</a></li>
+    <li class="active"><a href="#home" data-toggle="tab">Title longer than usual</a></li>
     <li><a href="#profile" data-toggle="tab">Title 2</a></li>
     <li><a href="#messages" data-toggle="tab">Das ist der Megateaser</a></li>
     <li><a href="#settings" data-toggle="tab">Lorem ipsum dolor sit amet</a></li>
@@ -94,6 +94,9 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
 </div>
 ```
 */
+
+
+@media only screen and (min-width: $screen-sm-min) {
 
 .nav-tabs.nav-tabs-focus {
   position: relative;
@@ -125,6 +128,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     height: 69px;
     display: block;
     border: none;
+    box-sizing: border-box !important;
     border-bottom: 1px solid $silver;
     padding-bottom: 10px;
     font-size: 15px;
@@ -165,6 +169,32 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
       padding-left: 0;
     }
   }
+}
+
+} // End of media queries
+
+.tab-focus.carousel {
+  margin-bottom: 55px !important;
+  .item {
+    padding: 0 !important;
+  }
+  .col-sm-5 {
+    padding: 0 30px !important;
+  }
+  .carousel-indicators {
+    top: auto !important;
+    bottom: -35px !important;
+    li {
+      margin: 0 10px;
+    }
+  }
+  .carousel-control {
+    top: auto !important;
+    bottom: -40px !important;
+  }
+}
+
+.tab-content.tab-focus {
   @media only screen and (max-width: $screen-sm) {
     div[class*="col"]:last-child {
       padding: 20px 30px;

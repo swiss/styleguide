@@ -3,6 +3,17 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.1.3 (2014-06-19)
+ * #158 Search bar on XS - width should be less
+ * #160 fix responsive navigation paradigm
+ * #167 fix typo in main navigation mobile
+ * #168 removed vertical scrollbar
+ * #164 #163 #165 fix detail page
+ * #150 fix links in footer mobile
+ * #126 add favicons
+ * #161 fix links hover to underline
+ * #174 Tab caroussel text too long in the caption
+
 * 2.1.2 (2014-06-17)
  * #109 Several Examples Checkboxes and radiobuttons missing
  * #125 add highlight on current menu item [**! Markup changes**](http://adminch.antistatique.net/navigation_modules_-_hierarchical_navigation.html#a-globalnavigation)

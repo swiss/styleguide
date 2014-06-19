@@ -325,7 +325,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 }
 
 .drilldown-container {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .nav-main {
@@ -907,11 +907,6 @@ Navigation below the content level on a smartphone with links to the home page, 
 */
 
 .nav-page-list {
-  @media only screen and (min-width: $screen-sm-min) {
-    // adding this padding for compensating the padding we removed from .drilldown
-    padding-left: 15px;
-    padding-right: 15px;
-  }
   a {
     display: block;
     width: 100%;
@@ -920,9 +915,12 @@ Navigation below the content level on a smartphone with links to the home page, 
   .icon--power {
     background: $smoke;
     color: $black;
-    padding: 0px 10px 5px 10px;
-    font-size: 11px;
+    padding: 0px 10px 8px 10px;
     border-bottom: 1px solid $silver;
+    @media only screen and (min-width: $screen-sm-min) {font-size: 11px;}
+    &:first-child {
+      border-top: 1px solid $silver;
+    }
     &:before {
       font-size: 20px;
       position: relative;
@@ -940,6 +938,9 @@ Navigation below the content level on a smartphone with links to the home page, 
   }
   li.active a {color: $black;}
   @media only screen and (min-width: $screen-sm-min) {
+    // adding this padding for compensating the padding we removed from .drilldown
+    padding-left: 15px;
+    padding-right: 15px;
     li.list-emphasis a {
       color: $black;
       font-weight: bold;
@@ -990,7 +991,7 @@ Navigation below the content level on a smartphone with links to the home page, 
     ul ul li:first-child a {
       color: $cerulean;
     }
-    .icon--less,
+    .icon--less:not(.drilldown-back),
     .icon--power {
       background: none;
     }

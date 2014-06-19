@@ -15,30 +15,35 @@
   src: url("../fonts/AdminCH_Symbols.eot?#iefix") format("embedded-opentype"), url("../fonts/AdminCH_Symbols.woff?v2") format("woff"), url("../fonts/AdminCH_Symbols.ttf?v2") format("truetype"), url("../fonts/AdminCH_Symbols.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Frutiger Neue Bold';
   src: url("../fonts/FrutigerNeueW02-Bd.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Bd.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Bd.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Bd.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Frutiger Neue Italic';
   src: url("../fonts/FrutigerNeueW02-It.eot?v2");
   src: url("../fonts/FrutigerNeueW02-It.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-It.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-It.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-It.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Frutiger Neue Regular';
   src: url("../fonts/FrutigerNeueW02-Regular.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Regular.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Regular.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Regular.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: 'Frutiger Neue Light';
   src: url("../fonts/FrutigerNeueW02-Light.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Light.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Light.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Light.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 /* ==========================================================
  * admin-mixins.scss
  * Our project mixins
@@ -392,6 +397,7 @@ th {
   font-family: 'Glyphicons Halflings';
   src: url("bootstrap/glyphicons-halflings-regular.eot");
   src: url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+
 .glyphicon, .alert:before {
   position: relative;
   top: 1px;
@@ -1016,7 +1022,7 @@ th {
 
 html {
   font-size: 62.5%;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
   font-family: "Frutiger Neue Regular", Arial, sans-serif;
@@ -4149,6 +4155,7 @@ a.thumbnail.active {
 
   to {
     background-position: 0 0; } }
+
 .progress {
   overflow: hidden;
   height: 22px;
@@ -5097,7 +5104,7 @@ button.close {
     border-radius: 10px;
     cursor: pointer;
     background-color: #000 \9;
-    background-color: transparent; }
+    background-color: rgba(0, 0, 0, 0); }
   .carousel-indicators .active {
     margin: 0;
     width: 12px;
@@ -5183,6 +5190,7 @@ button.close {
 
 @-ms-viewport {
   width: device-width; }
+
 .visible-xs, .visible-sm, .visible-md, .visible-lg {
   display: none !important; }
 
@@ -5937,8 +5945,8 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 
 ```html_example
 <a href="#" class="brand hidden-xs">
-  <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
-  <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
+  <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+  <h1>Swiss Confederation<br>Web Guidelines</h1>
 </a>
 ```
 
@@ -6409,17 +6417,61 @@ On smartphones, some of the functions from the header, e.g. service navigation o
 footer {
   border-top: 1px solid #d5d5d5;
   background: whitesmoke;
-  padding-bottom: 10px;
   margin-top: 20px; }
+  @media only screen and (max-width: 767px) {
+    footer {
+      background: #efefef;
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efefef), color-stop(100%, #f7f7f7));
+      background: -webkit-linear-gradient(top, #efefef 0%, #f7f7f7 100%);
+      background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#f7f7f7));
+      background: linear-gradient(to bottom, #efefef 0%, #f7f7f7 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#f7f7f7',GradientType=0 ); } }
   footer select {
     min-width: 200px; }
   footer h3 {
-    margin-top: 1em;
-    margin-bottom: 1em; }
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em; }
+    @media only screen and (max-width: 767px) {
+      footer h3:not(:first-child) {
+        background: #efefef;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efefef), color-stop(100%, #f7f7f7));
+        background: -webkit-linear-gradient(top, #efefef 0%, #f7f7f7 100%);
+        background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#f7f7f7));
+        background: linear-gradient(to bottom, #efefef 0%, #f7f7f7 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#f7f7f7',GradientType=0 ); }
+      footer h3 + p {
+        padding-top: 1em; } }
+  @media only screen and (max-width: 767px) {
+    footer .border-bottom {
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #d5d5d5; } }
 
 address {
+  border-top: 1px solid white;
   margin-bottom: 0;
-  padding-top: 10px; }
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media only screen and (max-width: 767px) {
+    address {
+      padding-top: 0;
+      padding-bottom: 0;
+      border-color: #d5d5d5; }
+      address .container-fluid {
+        padding-right: 0; }
+      address ul li {
+        margin: 0; }
+      address ul a {
+        display: inline-block;
+        border-left: 1px solid #d5d5d5;
+        padding: 10px;
+        background: rgba(229, 229, 229, 0.3); } }
 
 .site-map {
   background: whitesmoke;
@@ -6435,7 +6487,6 @@ address {
     .site-map {
       display: none; } }
   .site-map + div {
-    border-bottom: 1px solid white;
     padding-bottom: 10px; }
   .site-map a {
     font-size: 13px;
@@ -6512,6 +6563,11 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
 footer img {
   max-width: 204px;
   margin: 15px 0; }
+footer .footer-line {
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
+  background: white; }
 
 .links-social {
   display: block; }
@@ -7742,6 +7798,9 @@ span.icon.icon--arrow-top:after {
 @media only screen and (max-width: 991px) {
   .icon--print {
     display: none; } }
+
+a.icon:hover, a[data-toggle="collapse"]:hover {
+  text-decoration: underline; }
 
 /*doc
 ---
@@ -9894,7 +9953,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     content: 'x'; }
 
 .drilldown-container {
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .nav-main {
   background: #e4e4e4;
@@ -10447,10 +10506,6 @@ Navigation below the content level on a smartphone with links to the home page, 
 </div>
 ```
 */
-@media only screen and (min-width: 768px) {
-  .nav-page-list {
-    padding-left: 15px;
-    padding-right: 15px; } }
 .nav-page-list a {
   display: block;
   width: 100%; }
@@ -10458,9 +10513,15 @@ Navigation below the content level on a smartphone with links to the home page, 
 .nav-page-list .icon--power {
   background: whitesmoke;
   color: black;
-  padding: 0px 10px 5px 10px;
-  font-size: 11px;
+  padding: 0px 10px 8px 10px;
   border-bottom: 1px solid #cccccc; }
+  @media only screen and (min-width: 768px) {
+    .nav-page-list .icon--less,
+    .nav-page-list .icon--power {
+      font-size: 11px; } }
+  .nav-page-list .icon--less:first-child,
+  .nav-page-list .icon--power:first-child {
+    border-top: 1px solid #cccccc; }
   .nav-page-list .icon--less:before,
   .nav-page-list .icon--power:before {
     font-size: 20px;
@@ -10479,10 +10540,13 @@ Navigation below the content level on a smartphone with links to the home page, 
 .nav-page-list li.active a {
   color: black; }
 @media only screen and (min-width: 768px) {
-  .nav-page-list li.list-emphasis a {
-    color: black;
-    font-weight: bold;
-    border-color: #454545; } }
+  .nav-page-list {
+    padding-left: 15px;
+    padding-right: 15px; }
+    .nav-page-list li.list-emphasis a {
+      color: black;
+      font-weight: bold;
+      border-color: #454545; } }
 .nav-page-list .list-sub {
   position: relative; }
   .nav-page-list .list-sub:after {
@@ -10523,7 +10587,7 @@ Navigation below the content level on a smartphone with links to the home page, 
   .nav-page-list li a,
   .nav-page-list ul ul li:first-child a {
     color: #006699; }
-  .nav-page-list .icon--less,
+  .nav-page-list .icon--less:not(.drilldown-back),
   .nav-page-list .icon--power {
     background: none; }
   .nav-page-list .icon--power {
@@ -10809,11 +10873,10 @@ In the news teaser, various snippets of news items are arranged chronologically.
       min-height: 1px;
       padding-left: 15px;
       padding-right: 15px; } }
-  @media only screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
-    .news-feed .list-group-item {
-      float: left;
-      width: 25%; } }
-
+    @media only screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
+      .news-feed .list-group-item {
+        float: left;
+        width: 25%; } }
 .news-feed .list-group-item:last-child {
   border-bottom: none; }
 
@@ -11012,54 +11075,6 @@ Process navigation is used in connection with forms that are spread over several
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
-/*doc
----
-title: Site Search
-name: -site-search
-category: Navigation modules - Header
----
-
-<span class="label label-admin">CD</span>
-
-The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
-
-On smartphones, the search function can be accessed via an icon in the Header.
-
-
-<br>
-<div class="alert alert-warning">
-  **2.1.2:**
-
-    - added `h2.sr-only` for more screen reader clarity
-    - added label before input for screen readers
-</div>
-
-```html_example
-<!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-
-  <header>
-    <form class="form-horizontal form-search pull-right" role="form">
-      <h2 class="sr-only">Search</h2>
-      <label for="search-field" class="sr-only">Search:</label>
-      <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-    </form>
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-```
-
-```js_example
-// You have to store all your data inside `searchData` and define it globaly
-var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
-  "Basel-Landschaft", "Basel-Stadt", "Bern", "Fribourg", "Genève",
-  "Glarus", "Graubünden", "Jura", "Lucerne", "Neuchâtel", "Nidwalden",
-  "Obwalden", "Schaffhausen", "Schwyz", "Solothurn", "St. Gallen",
-  "Thurgau", "Ticino", "Uri", "Valais", "Vaud", "Zug", "Zurich"
-];
-```
-*/
 .form-search {
   display: inline-block;
   position: relative; }
@@ -11571,8 +11586,8 @@ select.form-control, .has-success select.form-control, .has-error select.form-co
     border-color: white;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    -webkit-box-shadow: 0 0 0 0 transparent;
-    box-shadow: 0 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     color: #dc0018;
     position: relative;
     z-index: 1000; }
@@ -11738,6 +11753,42 @@ ul.nav-tabs {
     padding-left: 0;
     text-align: center; }
 
+.collapsify a[data-toggle="collapse"] {
+  border-top: 3px solid #dc0018;
+  border-bottom: 1px solid white;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  font-size: 16px;
+  padding: 12px 25px;
+  color: black;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  .collapsify a[data-toggle="collapse"]:before {
+    color: black; }
+  .collapsify a[data-toggle="collapse"]:hover {
+    text-decoration: none; }
+  .collapsify a[data-toggle="collapse"]:first-child {
+    border-top: 3px solid #dc0018; }
+.collapsify a[data-toggle="collapse"].collapse-closed {
+  border-top: 0px solid white;
+  border-bottom: 1px solid #cccccc;
+  color: #757575; }
+  .collapsify a[data-toggle="collapse"].collapse-closed:before {
+    content: ':';
+    color: #757575; }
+  .collapsify a[data-toggle="collapse"].collapse-closed:first-child {
+    border-top: 1px solid #cccccc; }
+.collapsify div[class*="col"], .collapsify .collapse {
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  margin: 0 !important;
+  padding: 0 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+.collapsify .collapse.in {
+  padding-bottom: 20px; }
+
 /* ==========================================================
  * timeline.scss
  * Theme for timelineJS
@@ -11895,8 +11946,8 @@ ul.nav-tabs {
   border-radius: 0;
   padding: 10px;
   margin: 0;
-  -webkit-box-shadow: 0 0 0 0 transparent;
-  box-shadow: 0 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   background: whitesmoke !important; }
   .well.well-freeboard {
     padding: 0;
@@ -11920,7 +11971,7 @@ ul.nav-tabs {
   color: #006699;
   font-size: 13px;
   opacity: 1;
-  text-shadow: 0 0 0 transparent; }
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
   .close:hover {
     opacity: 1;
     font-style: 13px;
@@ -12020,7 +12071,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
 
   <!-- focus tabs -->
   <ul class="nav nav-tabs nav-tabs-focus nav-justified">
-    <li class="active"><a href="#home" data-toggle="tab">Title in H2 uns extra lang, weil es eigentlich schon fast ein Leadtext ist.</a></li>
+    <li class="active"><a href="#home" data-toggle="tab">Title longer than usual</a></li>
     <li><a href="#profile" data-toggle="tab">Title 2</a></li>
     <li><a href="#messages" data-toggle="tab">Das ist der Megateaser</a></li>
     <li><a href="#settings" data-toggle="tab">Lorem ipsum dolor sit amet</a></li>
@@ -12029,68 +12080,87 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
 </div>
 ```
 */
-.nav-tabs.nav-tabs-focus {
-  position: relative;
-  border-top: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
-  border-left: 1px solid #cccccc;
-  margin-top: 0; }
+@media only screen and (min-width: 768px) {
+  .nav-tabs.nav-tabs-focus {
+    position: relative;
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    margin-top: 0; }
 
-.nav-tabs.nav-tabs-focus:after {
-  content: '';
-  display: block;
-  clear: both; }
-
-.nav-tabs.nav-tabs-focus.nav-justified > .active > a,
-.nav-tabs.nav-tabs-focus.nav-justified > .active > a:hover {
-  height: 70px;
-  border-bottom: 3px solid #dc0018; }
-
-.nav-tabs.nav-tabs-focus li {
-  border-left: 1px solid #cccccc;
-  border-bottom: none !important;
-  position: relative; }
-  .nav-tabs.nav-tabs-focus li:first-child {
-    border-left: none; }
-  .nav-tabs.nav-tabs-focus li a {
-    background: whitesmoke;
-    height: 69px;
+  .nav-tabs.nav-tabs-focus:after {
+    content: '';
     display: block;
-    border: none;
-    border-bottom: 1px solid #cccccc;
-    padding-bottom: 10px;
-    font-size: 15px;
-    line-height: 1.1em;
-    text-align: center;
-    border-radius: 0;
-    color: #333333; }
-  .nav-tabs.nav-tabs-focus li a:hover {
-    height: 69px;
-    border-bottom: 3px solid #dc0018;
-    color: black; }
-  .nav-tabs.nav-tabs-focus li.active a, .nav-tabs.nav-tabs-focus li.active a:hover {
-    border-right: none;
-    border-left: none;
-    padding-bottom: 10px !important;
-    border-bottom: 3px solid #dc0018;
-    background: #e5e5e5;
-    color: black; }
-  .nav-tabs.nav-tabs-focus li:hover a {
-    padding-top: 10px !important; }
+    clear: both; }
 
-.tab-content.tab-focus {
-  padding: 0;
-  border-bottom: none;
-  border-top: 1px solid #cccccc; }
-  .tab-content.tab-focus h2 {
-    font-family: "Frutiger Neue Bold", Arial, sans-serif; }
-  .tab-content.tab-focus div[class*="col"] {
-    margin-bottom: 0; }
-    .tab-content.tab-focus div[class*="col"]:last-child {
-      padding-left: 0; }
-  @media only screen and (max-width: 768px) {
-    .tab-content.tab-focus div[class*="col"]:last-child {
-      padding: 20px 30px; } }
+  .nav-tabs.nav-tabs-focus.nav-justified > .active > a,
+  .nav-tabs.nav-tabs-focus.nav-justified > .active > a:hover {
+    height: 70px;
+    border-bottom: 3px solid #dc0018; }
+
+  .nav-tabs.nav-tabs-focus li {
+    border-left: 1px solid #cccccc;
+    border-bottom: none !important;
+    position: relative; }
+    .nav-tabs.nav-tabs-focus li:first-child {
+      border-left: none; }
+    .nav-tabs.nav-tabs-focus li a {
+      background: whitesmoke;
+      height: 69px;
+      display: block;
+      border: none;
+      -webkit-box-sizing: border-box !important;
+      -moz-box-sizing: border-box !important;
+      box-sizing: border-box !important;
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 10px;
+      font-size: 15px;
+      line-height: 1.1em;
+      text-align: center;
+      border-radius: 0;
+      color: #333333; }
+    .nav-tabs.nav-tabs-focus li a:hover {
+      height: 69px;
+      border-bottom: 3px solid #dc0018;
+      color: black; }
+    .nav-tabs.nav-tabs-focus li.active a, .nav-tabs.nav-tabs-focus li.active a:hover {
+      border-right: none;
+      border-left: none;
+      padding-bottom: 10px !important;
+      border-bottom: 3px solid #dc0018;
+      background: #e5e5e5;
+      color: black; }
+    .nav-tabs.nav-tabs-focus li:hover a {
+      padding-top: 10px !important; }
+
+  .tab-content.tab-focus {
+    padding: 0;
+    border-bottom: none;
+    border-top: 1px solid #cccccc; }
+    .tab-content.tab-focus h2 {
+      font-family: "Frutiger Neue Bold", Arial, sans-serif; }
+    .tab-content.tab-focus div[class*="col"] {
+      margin-bottom: 0; }
+      .tab-content.tab-focus div[class*="col"]:last-child {
+        padding-left: 0; } }
+.tab-focus.carousel {
+  margin-bottom: 55px !important; }
+  .tab-focus.carousel .item {
+    padding: 0 !important; }
+  .tab-focus.carousel .col-sm-5 {
+    padding: 0 30px !important; }
+  .tab-focus.carousel .carousel-indicators {
+    top: auto !important;
+    bottom: -35px !important; }
+    .tab-focus.carousel .carousel-indicators li {
+      margin: 0 10px; }
+  .tab-focus.carousel .carousel-control {
+    top: auto !important;
+    bottom: -40px !important; }
+
+@media only screen and (max-width: 768px) {
+  .tab-content.tab-focus div[class*="col"]:last-child {
+    padding: 20px 30px; } }
 
 @media only screen and (max-width: 768px) {
   .nav-justified > li > a, .nav-tabs.nav-justified > li > a, .nav-tabs.nav-justified > li > a {
@@ -12212,7 +12282,7 @@ The carousel consists of various information blocks, each of which contains a la
   background-image: none !important; }
   .carousel-control.right:before, .carousel-control.left:before {
     color: #454545;
-    text-shadow: 0 0 0 transparent; }
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
 
 .carousel-indicators {
   bottom: auto; }
