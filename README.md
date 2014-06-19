@@ -173,3 +173,10 @@ This bug an Hologram bug that should be fix in the next release. The workaround 
 $ LC_ALL="en_US.UTF-8" gulp
 ```
 
+Or you can edit your .zshrc file with the following configuration
+````
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+````
+
