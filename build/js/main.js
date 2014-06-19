@@ -302,8 +302,13 @@ function carouselInit ($) {
 
     $(window).resize(function() {
         clearTimeout(id);
-        id = setTimeout(carouselify, 500);
+        id = setTimeout(resizeLauncher, 500);
     });
+
+    function resizeLauncher() {
+      carouselify();
+      collapsify();
+    }
 
     function carouselify() {
       var $tabFocus = $(".tab-focus"),
@@ -329,7 +334,7 @@ function carouselInit ($) {
 
           $that.append( "<a class=\"left carousel-control icon icon--before icon--less\" href=\"#tab-focus-"+focusIndex+"\" data-slide=\"prev\"></a><a class=\"right carousel-control icon icon--before icon--greater\" href=\"#tab-focus-"+focusIndex+"\" data-slide=\"next\"></a>" );
         });
-      }else if($tabFocus) {
+      } else if($tabFocus) {
         $tabFocus.each(function () {
           var $that = $(this);
           focusIndex -= 1;
@@ -354,9 +359,10 @@ function carouselInit ($) {
 
     function collapsify() {
       var $navTab = $(".nav-tabs"),
+          $collapsify = $(".collapsify"),
           linkIndex = 0;
       if($navTab && $(window).width() < 767 ) {
-        $navTab.each(function (){
+        $navTab.not('.tab-focus').each(function (){
           var $that = $(this);
           $that.removeClass("nav-tabs").addClass('collapsify');
           $that.next('.tab-content').hide();
@@ -373,6 +379,27 @@ function carouselInit ($) {
             });
           });
           //$that.find('a:first-child').removeClass('collapse-closed').next('.collapse').addClass('in');
+        });
+      } else if($collapsify) {
+        $collapsify.each(function (){
+          var $that = $(this);
+          $that.addClass("nav-tabs").removeClass('collapsify');
+          $that.next('.tab-content').show();
+          $that.find('a').each(function (){
+            var $target = $(this).attr('href');
+            linkIndex -= 1;
+            $(this).wrap('<li></li>');
+            $(this).next('.collapse').remove();
+            $(this).attr('data-toggle', 'tab');
+            $(this).attr('data-target', '');
+            $(this).removeClass('collapse-closed');
+          });
+          $that.find('li a').each(function () {
+            var $tabTarget = $(this).attr('href');
+            if($($tabTarget).hasClass('active')){
+              $(this).parent().addClass('active');
+            }
+          });
         });
       }
     }
