@@ -12,6 +12,7 @@ This changelog references the relevant changes and bug fixes.
  * #150 fix links in footer mobile
  * #126 add favicons
  * #161 fix links hover to underline
+ * #174 Tab caroussel text too long in the caption
 
 * 2.1.2 (2014-06-17)
  * #109 Several Examples Checkboxes and radiobuttons missing
