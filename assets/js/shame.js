@@ -70,10 +70,21 @@
 
     function collapsify() {
       var $navTab = $(".nav-tabs"),
-          tabIndex = 0;
+          linkIndex = 0;
       if($navTab && $(window).width() < 767 ) {
         $navTab.each(function (){
-
+          var $that = $(this);
+          $that.removeClass("nav-tabs").addClass('collapsify');
+          $that.next('.tab-content').hide();
+          $that.find('a').each(function (){
+            var $target = $(this).attr('href');
+            linkIndex += 1;
+            $(this).unwrap();
+            $( '<div class="collapse" id="collapse-'+linkIndex+'">'+$($target).html()+'</div>' ).insertAfter(this);
+            $(this).attr('data-toggle', 'collapse');
+            $(this).attr('data-target', '#collapse-'+linkIndex );
+            $( "<p>Test</p>" ).insertAfter( ".inner" );
+          });
         });
       }
     }
