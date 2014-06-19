@@ -186,6 +186,10 @@ $icon-list: (
   }
 }
 
+a.icon:hover {
+  text-decoration: underline; // fix to override normal bootstrap behaviour
+}
+
 
 /*doc
 ---

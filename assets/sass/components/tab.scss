@@ -112,3 +112,40 @@ ul.nav-tabs {
     text-align: center;
   }
 }
+
+.collapsify {
+  a {
+    border-top: 3px solid $venetian-red;
+    border-bottom: 1px solid $white;
+    border-right: 1px solid $silver;
+    border-left: 1px solid $silver;
+    font-size: 16px;
+    padding: 12px 25px;
+    color: $black;
+    transition: all 0.2s;
+    &:before {color: $black;}
+    &:hover {text-decoration: none;}
+    &:first-child {border-top: 3px solid $venetian-red;}
+  }
+  a.collapse-closed {
+    border-top: 0px solid $white;
+    border-bottom: 1px solid $silver;
+    color: $empress;
+    &:before {
+      content: ':';
+      color: $empress;
+    }
+    &:first-child {border-top: 1px solid $silver;}
+  }
+  div[class*="col"], .collapse {
+    border-bottom: 1px solid $silver;
+    border-right: 1px solid $silver;
+    border-left: 1px solid $silver;
+    margin: 0 !important;
+    padding: 0 20px;
+    transition: all 0.2s;
+  }
+  .collapse.in {
+    padding-bottom: 20px;
+  }
+}

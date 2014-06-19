@@ -14,8 +14,20 @@
 <link rel="stylesheet" href="../css/admin.min.css">
 
 <!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/ico/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="../img/ico/favicon.ico">
+    <link rel="shortcut icon" href="../img/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/ico/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/ico/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/ico/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/ico/apple-touch-icon-76x76.png">
+    <link rel="icon" type="image/png" href="../img/ico/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="../img/ico/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../img/ico/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../img/ico/mstile-144x144.png">
+    <meta name="msapplication-config" content="../img/ico/browserconfig.xml">
 
   <!--[if lt IE 9]>
     <script src="../theme-build/polyfill/html5shiv.js"></script>
@@ -462,6 +474,18 @@
 
     <footer>
 
+      <div class="container-fluid footer-service">
+        <h3>Statistik Schweiz</h3>
+        <nav>
+          <ul>
+            <li><a href="#">Emergencies</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
       <div class="site-map">
 
         <!-- Use normal `container` instead of `container-fluid` -->
@@ -569,7 +593,7 @@
           </ul>
         </nav>
 
-        <h3>DEZA – Weltweit vor Ort</h3>
+        <h3 class="border-bottom">DEZA – Weltweit vor Ort</h3>
         <p>
           Besuchen Sie die Websites der Schweizer Kooperationsbüros.
         </p>
@@ -582,6 +606,7 @@
             <option value="...">...</option>
           </select>
         </p>
+        <hr class="footer-line visible-xs">
         <img class="visible-xs" src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
       </div>
 
@@ -590,8 +615,7 @@
           <span class="hidden-xs">Bundesamt für Statistik</span>
           <nav class="pull-right">
             <ul>
-              <li><a href="#">Rechtliches</a></li>
-              <li><a href="#">Impressum</a></li>
+              <li><a href="#">Rechtliches</a></li><li><a href="#">Impressum</a></li>
             </ul>
           </nav>
         </div>
