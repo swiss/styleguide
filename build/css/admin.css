@@ -12382,3 +12382,6 @@ The title always consists of an RSS icon and the letters “RSS”. A list of li
   @media only screen and (max-width: 991px) {
     .rss.well {
       padding: 0; } }
+
+.ie8 body {
+  font-size: 14px !important; }
