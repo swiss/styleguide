@@ -24,8 +24,7 @@
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     shell = require('gulp-shell'),
-    stylish = require('jshint-stylish'),
-    clean = require('gulp-clean');
+    stylish = require('jshint-stylish');
 
 // JS task
 gulp.task('scripts', function() {
