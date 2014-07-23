@@ -1,0 +1,24 @@
+/*
+Formatierung Chrome und IE
+
+unbedingt Reihenfolge behalten
+*/
+@media print {
+  .nav-mobile,
+  .drilldown,
+  header,
+  .header-separator,
+  footer {
+    display: none; }
+
+  .row .row {
+    margin-left: -20px !important; }
+
+  table.table {
+    width: 100%; }
+
+  a:after {
+    content: "" !important; }
+
+  .row .col-sm-9 {
+    width: 100%; } }
