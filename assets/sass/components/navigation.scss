@@ -949,6 +949,7 @@ Navigation below the content level on a smartphone with links to the home page, 
   }
   .list-sub {
     position: relative;
+    & > a {padding-right: 20px;}
     &:after {
       font-family: $admin-icons;
       content: '>';
