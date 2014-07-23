@@ -1,1 +1,1 @@
-@media print{.drilldown,.header-separator,.nav-mobile,footer,header{display:none}.row .row{margin-left:-20px!important}table.table{width:100%}a:after{content:""!important}.row .col-sm-9{width:100%}}
+@media print{.alert,.drilldown,.form-search,.header-separator,.icon--print,.nav-lang,.nav-main,.nav-mobile,.nav-service,.social-sharing,.yamm--select,footer,header>div:first-child{display:none}header{margin-bottom:40px}.row .row{margin-left:-20px!important}.codeExample,.exampleOutput,table.table{width:100%}a:after{content:""!important}a{color:#00f;text-decoration:underline}}

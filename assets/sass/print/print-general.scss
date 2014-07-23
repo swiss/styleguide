@@ -3,6 +3,7 @@ Formatierung Chrome und IE
 
 unbedingt Reihenfolge behalten
 */
+
 @media print {
   .nav-mobile,
   .drilldown,
@@ -17,22 +18,22 @@ unbedingt Reihenfolge behalten
   .alert,
   .icon--print,
   .social-sharing {
-    display: none; }
-
+    display: none;
+  }
   header {
-    margin-bottom: 40px; }
-
+    margin-bottom: 40px;
+  }
   .row .row {
-    margin-left: -20px !important; }
-
+    margin-left: -20px !important;
+  }
   table.table,
   .codeExample,
   .exampleOutput {
-    width: 100%; }
-
-  a:after {
-    content: "" !important; }
-
+    width: 100%;
+  }
+  a:after{content:""!important}
   a {
     color: blue;
-    text-decoration: underline; } }
+    text-decoration: underline;
+  }
+}
