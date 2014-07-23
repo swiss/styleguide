@@ -25,5 +25,8 @@
     "jquery.socialshareprivacy": "~1.4.5",
     "jquery-drilldown": "~0.1.4"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "jquery": "1.10.2"
+  }
 }
