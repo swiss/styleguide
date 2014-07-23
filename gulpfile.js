@@ -105,10 +105,12 @@ gulp.task('styles', function() {
 
 
 gulp.task('browser-sync', function() {
-    browserSync.init(['./styleguide/**/*.html'], {
-      proxy: 'localhost',
+    browserSync.init({
       open: false,
-      debounce: 400
+      reloadDelay: 2000,
+      server: {
+          baseDir: "styleguide"
+      }
     });
 });
 
