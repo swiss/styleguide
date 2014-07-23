@@ -1,0 +1,39 @@
+/*
+Formatierung Chrome und IE
+
+unbedingt Reihenfolge behalten
+*/
+
+@media print {
+  .nav-mobile,
+  .drilldown,
+  .nav-main,
+  .header-separator,
+  .nav-service,
+  .nav-lang,
+  .form-search,
+  .yamm--select,
+  header > div:first-child,
+  footer,
+  .alert,
+  .icon--print,
+  .social-sharing {
+    display: none;
+  }
+  header {
+    margin-bottom: 40px;
+  }
+  .row .row {
+    margin-left: -20px !important;
+  }
+  table.table,
+  .codeExample,
+  .exampleOutput {
+    width: 100%;
+  }
+  a:after{content:""!important}
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+}
