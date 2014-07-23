@@ -90,6 +90,18 @@ gulp.task('vendors', function() {
     .pipe(gulp.dest('build/js'));
 });
 
+gulp.task('polyfills', function() {
+  return gulp.src([
+      './bower_components/html5shiv/dist/html5shiv.min.js',
+      './bower_components/html5shiv/dist/html5shiv-printshiv.min.js',
+      './bower_components/respond/dest/respond.min.js'
+    ])
+    .pipe(concat('polyfills.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'));
+});
+
+
 // SASS compile, autoprefix and minify task
 gulp.task('styles', function() {
   return gulp.src('assets/sass/admin.scss')
@@ -134,7 +146,7 @@ gulp.task('build-pages', function() {
     .pipe(gulp.dest('styleguide/pages'));
 });
 
-gulp.task('default', ['styles', 'watch', 'vendors', 'browser-sync', 'scripts', 'build-images', 'build-fonts', 'build-pages']);
+gulp.task('default', ['styles', 'watch', 'polyfills', 'vendors', 'browser-sync', 'scripts', 'build-images', 'build-fonts', 'build-pages']);
 gulp.task('build', ['styles', 'scripts', 'vendors', 'build-images', 'build-fonts', 'build-pages']);
 
 gulp.task('watch',['styles', 'scripts', 'vendors', 'build-images', 'build-fonts', 'build-pages'], function() {
