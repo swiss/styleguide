@@ -15,35 +15,30 @@
   src: url("../fonts/AdminCH_Symbols.eot?#iefix") format("embedded-opentype"), url("../fonts/AdminCH_Symbols.woff?v2") format("woff"), url("../fonts/AdminCH_Symbols.ttf?v2") format("truetype"), url("../fonts/AdminCH_Symbols.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Bold';
   src: url("../fonts/FrutigerNeueW02-Bd.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Bd.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Bd.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Bd.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Italic';
   src: url("../fonts/FrutigerNeueW02-It.eot?v2");
   src: url("../fonts/FrutigerNeueW02-It.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-It.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-It.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-It.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Regular';
   src: url("../fonts/FrutigerNeueW02-Regular.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Regular.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Regular.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Regular.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Frutiger Neue Light';
   src: url("../fonts/FrutigerNeueW02-Light.eot?v2");
   src: url("../fonts/FrutigerNeueW02-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FrutigerNeueW02-Light.woff?v2") format("woff"), url("../fonts/FrutigerNeueW02-Light.ttf?v2") format("truetype"), url("../fonts/FrutigerNeueW02-Light.svg#fnb") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 /* ==========================================================
  * admin-mixins.scss
  * Our project mixins
@@ -229,9 +224,8 @@ figure {
   margin: 1em 40px; }
 
 hr {
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   height: 0; }
 
 pre {
@@ -282,8 +276,7 @@ input {
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0; }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -292,7 +285,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
@@ -329,7 +321,7 @@ th {
     color: #000 !important;
     background: transparent !important;
     -webkit-box-shadow: none !important;
-    box-shadow: none !important; }
+            box-shadow: none !important; }
 
   a,
   a:visited {
@@ -397,7 +389,6 @@ th {
   font-family: 'Glyphicons Halflings';
   src: url("bootstrap/glyphicons-halflings-regular.eot");
   src: url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
-
 .glyphicon, .alert:before {
   position: relative;
   top: 1px;
@@ -1011,18 +1002,16 @@ th {
 
 * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html {
   font-size: 62.5%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: transparent; }
 
 body {
   font-family: "Frutiger Neue Regular", Arial, sans-serif;
@@ -1417,7 +1406,7 @@ kbd {
   background-color: #333333;
   border-radius: 3px;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
 
 pre {
   display: block;
@@ -2333,7 +2322,6 @@ label {
 
 input[type="search"] {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 input[type="radio"],
@@ -3488,7 +3476,7 @@ tbody.collapse.in {
   padding-left: 15px;
   border-top: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch; }
   .navbar-collapse:before, .navbar-collapse:after {
     content: " ";
@@ -3502,7 +3490,7 @@ tbody.collapse.in {
       width: auto;
       border-top: 0;
       -webkit-box-shadow: none;
-      box-shadow: none; }
+              box-shadow: none; }
       .navbar-collapse.collapse {
         display: block !important;
         height: auto !important;
@@ -3614,7 +3602,7 @@ tbody.collapse.in {
       background-color: transparent;
       border: 0;
       -webkit-box-shadow: none;
-      box-shadow: none; }
+              box-shadow: none; }
       .navbar-nav .open .dropdown-menu > li > a,
       .navbar-nav .open .dropdown-menu .dropdown-header {
         padding: 5px 15px 5px 25px; }
@@ -4155,7 +4143,6 @@ a.thumbnail.active {
 
   to {
     background-position: 0 0; } }
-
 .progress {
   overflow: hidden;
   height: 22px;
@@ -4196,7 +4183,7 @@ a.thumbnail.active {
   background-color: transparent;
   background-image: none;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+          box-shadow: none; }
 
 .progress-bar-success {
   background-color: #5cb85c; }
@@ -5104,7 +5091,7 @@ button.close {
     border-radius: 10px;
     cursor: pointer;
     background-color: #000 \9;
-    background-color: rgba(0, 0, 0, 0); }
+    background-color: transparent; }
   .carousel-indicators .active {
     margin: 0;
     width: 12px;
@@ -5190,7 +5177,6 @@ button.close {
 
 @-ms-viewport {
   width: device-width; }
-
 .visible-xs, .visible-sm, .visible-md, .visible-lg {
   display: none !important; }
 
@@ -5388,9 +5374,9 @@ button.close {
   zoom: 1;
   *display: inline;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 .chosen-container .chosen-drop {
   position: absolute;
@@ -5398,14 +5384,13 @@ button.close {
   left: -9999px;
   z-index: 1010;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   border: 1px solid #454545;
   border-top: 0;
   background: #fff;
   -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15); }
+          box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15); }
 
 .chosen-container.chosen-with-drop .chosen-drop {
   left: 0; }
@@ -5555,8 +5540,7 @@ button.close {
   position: relative;
   overflow: hidden;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -5564,7 +5548,7 @@ button.close {
   height: 1%;
   border: 1px solid #454545;
   background-color: #fff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(white));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #eeeeee), color-stop(15%, white));
   background-image: -webkit-linear-gradient(#eeeeee 1%, white 15%);
   background-image: linear-gradient(#eeeeee 1%, white 15%);
   cursor: text; }
@@ -5586,7 +5570,7 @@ button.close {
   border: 0 !important;
   background: transparent !important;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   color: #666;
   font-size: 100%;
   line-height: normal;
@@ -5623,7 +5607,7 @@ button.close {
   padding-right: 5px;
   border: 1px solid #ccc;
   background-color: #e4e4e4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), to(#eeeeee));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), to(#eeeeee));
   background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
   background-image: linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
   color: #666; }
@@ -5955,6 +5939,8 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
   display: inline-block;
   float: left; }
   .brand img {
+    max-width: 400px;
+    height: auto;
     margin: 0;
     padding-right: 2em;
     border-right: 1px solid #e5e5e5;
@@ -5964,7 +5950,6 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
         max-height: 50px; } }
   .brand h1 {
     color: black;
-    display: inline;
     font-family: "Frutiger Neue Bold";
     font-weight: normal;
     font-size: 1em;
@@ -6056,12 +6041,12 @@ Buttons                                                                       | 
       color: white;
       background-color: #454545;
       -webkit-box-shadow: none;
-      box-shadow: none; }
+              box-shadow: none; }
   .btn.active {
     color: #006699;
     background-color: white;
     -webkit-box-shadow: none;
-    box-shadow: none; }
+            box-shadow: none; }
   .btn.btn-link {
     border: none;
     background-color: transparent;
@@ -6477,7 +6462,7 @@ address {
   background: whitesmoke;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(6%, white));
   background: -webkit-linear-gradient(top, whitesmoke 0%, white 6%);
-  background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(white));
+  background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), color-stop(6%, white));
   background: linear-gradient(to bottom, whitesmoke 0%, white 6%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#fcfcfc',GradientType=0 );
   border-bottom: 1px solid #cccccc;
@@ -6774,7 +6759,7 @@ legend {
   .form-control[type=file] {
     border: none;
     -webkit-box-shadow: none;
-    box-shadow: none; }
+            box-shadow: none; }
 
 label {
   font-weight: normal; }
@@ -6874,13 +6859,15 @@ The Confederation logo with the coat of arms and the four-language wordmark as w
 */
 header {
   background: white;
+  /* Old browsers */
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(7%, white), color-stop(100%, white));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, whitesmoke 0%, white 7%, white 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
   /* IE10+ */
   background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), color-stop(7%, white), to(white));
-  /* IE10+ */
   background: linear-gradient(to bottom, whitesmoke 0%, white 7%, white 100%);
   /* W3C */
   position: relative; }
@@ -8108,7 +8095,7 @@ body, .body {
   background: white;
   margin-top: 0;
   -webkit-box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6); }
+          box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6); }
   @media only screen and (min-width: 768px) {
     .container-main {
       margin-bottom: 90px; } }
@@ -9618,7 +9605,7 @@ The elements list is a very generic element that groups content elements in a li
     border-radius: 0;
     border: none;
     -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); }
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); }
     .yamm .dropdown-menu li {
       display: block; }
   .yamm .dropdown-backdrop {
@@ -9889,12 +9876,11 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     position: fixed;
     z-index: 100;
     -webkit-box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
-    box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
+            box-shadow: 0 0 40px 0 rgba(69, 69, 69, 0.7);
     top: 0;
     left: 0;
     -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+            box-sizing: content-box;
     border-bottom: 5px solid #dc0018; }
   .nav-mobile .nav-mobile-header {
     display: table-cell;
@@ -9957,13 +9943,15 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
 .nav-main {
   background: #e4e4e4;
+  /* Old browsers */
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
   /* IE10+ */
-  background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), to(#bebebe));
-  /* IE10+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
   background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
   /* W3C */ }
   @media only screen and (max-width: 767px) {
@@ -10217,13 +10205,15 @@ The design of the language navigation for cases, where their are more then five 
       padding: 10px;
       margin-bottom: 0;
       background: #e4e4e4;
+      /* Old browsers * navigation.scss */
       /* FF3.6+ */
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
       /* Chrome,Safari4+ */
       background: -webkit-linear-gradient(top, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
+      /* Chrome10+,Safari5.1+ */
+      /* Opera 11.10+ */
       /* IE10+ */
-      background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), to(#bebebe));
-      /* IE10+ */
+      background: -webkit-gradient(linear, left top, left bottom, from(#e4e4e4), color-stop(39%, #e2e2e2), color-stop(79%, #dddddd), color-stop(91%, #d5d5d5), color-stop(95%, #cfcfcf), color-stop(99%, #bebebe));
       background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
       /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#bebebe',GradientType=0 );
@@ -10389,7 +10379,7 @@ On smartphones, the treecrumb navigation is omitted.
   border-left-color: #cccccc; }
 .treecrumb .dropdown-menu {
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   border-radius: 0;
   top: 97%;
   padding-left: 1em;
@@ -10873,10 +10863,11 @@ In the news teaser, various snippets of news items are arranged chronologically.
       min-height: 1px;
       padding-left: 15px;
       padding-right: 15px; } }
-    @media only screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
-      .news-feed .list-group-item {
-        float: left;
-        width: 25%; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
+    .news-feed .list-group-item {
+      float: left;
+      width: 25%; } }
+
 .news-feed .list-group-item:last-child {
   border-bottom: none; }
 
@@ -11075,6 +11066,54 @@ Process navigation is used in connection with forms that are spread over several
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  ========================================================== */
+/*doc
+---
+title: Site Search
+name: -site-search
+category: Navigation modules - Header
+---
+
+<span class="label label-admin">CD</span>
+
+The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
+
+On smartphones, the search function can be accessed via an icon in the Header.
+
+
+<br>
+<div class="alert alert-warning">
+  **2.1.2:**
+
+    - added `h2.sr-only` for more screen reader clarity
+    - added label before input for screen readers
+</div>
+
+```html_example
+<!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+    <form class="form-horizontal form-search pull-right" role="form">
+      <h2 class="sr-only">Search</h2>
+      <label for="search-field" class="sr-only">Search:</label>
+      <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+    </form>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+```
+
+```js_example
+// You have to store all your data inside `searchData` and define it globaly
+var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
+  "Basel-Landschaft", "Basel-Stadt", "Bern", "Fribourg", "Genève",
+  "Glarus", "Graubünden", "Jura", "Lucerne", "Neuchâtel", "Nidwalden",
+  "Obwalden", "Schaffhausen", "Schwyz", "Solothurn", "St. Gallen",
+  "Thurgau", "Ticino", "Uri", "Valais", "Vaud", "Zug", "Zurich"
+];
+```
+*/
 .form-search {
   display: inline-block;
   position: relative; }
@@ -11093,7 +11132,7 @@ Process navigation is used in connection with forms that are spread over several
   .form-search .icon--close {
     color: white;
     -webkit-transition: color 0.3s;
-    transition: color 0.3s;
+            transition: color 0.3s;
     right: 10px; }
 
 .search-field {
@@ -11102,7 +11141,7 @@ Process navigation is used in connection with forms that are spread over several
   height: 25px;
   width: 200px;
   -webkit-transition: width 0.4s;
-  transition: width 0.4s; }
+          transition: width 0.4s; }
   .search-field:focus {
     width: 250px; }
 
@@ -11112,7 +11151,7 @@ Process navigation is used in connection with forms that are spread over several
 .tt-dropdown-menu {
   background: white;
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   border-radius: 0;
   padding: 0;
   font-size: 13px;
@@ -11567,10 +11606,9 @@ select.form-control, .has-success select.form-control, .has-error select.form-co
     text-decoration: none;
     width: 200px;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+            box-sizing: border-box;
     -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
     background: white; }
     .yamm--select .dropdown-toggle:hover, .yamm--select .dropdown-toggle:active, .yamm--select .dropdown-toggle:focus {
       text-decoration: none;
@@ -11586,8 +11624,8 @@ select.form-control, .has-success select.form-control, .has-error select.form-co
     border-color: white;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 0 0 transparent;
+            box-shadow: 0 0 0 0 transparent;
     color: #dc0018;
     position: relative;
     z-index: 1000; }
@@ -11704,8 +11742,7 @@ ul.nav-tabs {
   .nav-tabs li a {
     border-radius: 0;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+            box-sizing: border-box;
     background: whitesmoke;
     color: #757575;
     border-right: 1px solid #cccccc;
@@ -11725,8 +11762,7 @@ ul.nav-tabs {
     padding-top: 10px !important;
     padding-bottom: 8px !important;
     -webkit-box-sizing: padding-box;
-    -moz-box-sizing: padding-box;
-    box-sizing: padding-box; }
+            box-sizing: padding-box; }
   .nav-tabs li.active a, .nav-tabs li.active:hover a, .nav-tabs li:hover a {
     border-top: 3px solid #dc0018; }
 
@@ -11762,7 +11798,7 @@ ul.nav-tabs {
   padding: 12px 25px;
   color: black;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+          transition: all 0.2s; }
   .collapsify a[data-toggle="collapse"]:before {
     color: black; }
   .collapsify a[data-toggle="collapse"]:hover {
@@ -11785,7 +11821,7 @@ ul.nav-tabs {
   margin: 0 !important;
   padding: 0 20px;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+          transition: all 0.2s; }
 .collapsify .collapse.in {
   padding-bottom: 20px; }
 
@@ -11946,8 +11982,8 @@ ul.nav-tabs {
   border-radius: 0;
   padding: 10px;
   margin: 0;
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 0 transparent;
+          box-shadow: 0 0 0 0 transparent;
   background: whitesmoke !important; }
   .well.well-freeboard {
     padding: 0;
@@ -11971,7 +12007,7 @@ ul.nav-tabs {
   color: #006699;
   font-size: 13px;
   opacity: 1;
-  text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+  text-shadow: 0 0 0 transparent; }
   .close:hover {
     opacity: 1;
     font-style: 13px;
@@ -12110,8 +12146,7 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
       display: block;
       border: none;
       -webkit-box-sizing: border-box !important;
-      -moz-box-sizing: border-box !important;
-      box-sizing: border-box !important;
+              box-sizing: border-box !important;
       border-bottom: 1px solid #cccccc;
       padding-bottom: 10px;
       font-size: 15px;
@@ -12282,7 +12317,7 @@ The carousel consists of various information blocks, each of which contains a la
   background-image: none !important; }
   .carousel-control.right:before, .carousel-control.left:before {
     color: #454545;
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    text-shadow: 0 0 0 transparent; }
 
 .carousel-indicators {
   bottom: auto; }
@@ -12348,3 +12383,6 @@ The title always consists of an RSS icon and the letters “RSS”. A list of li
   @media only screen and (max-width: 991px) {
     .rss.well {
       padding: 0; } }
+
+.ie8 body {
+  font-size: 14px !important; }

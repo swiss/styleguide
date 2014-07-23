@@ -41,7 +41,6 @@
   });
 
   $dropdown.on('hide.bs.dropdown', function () {
-    console.log('click dehors');
     $yamm.removeClass('nav-open');
   });
 
