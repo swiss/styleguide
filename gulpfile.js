@@ -90,6 +90,18 @@ gulp.task('vendors', function() {
     .pipe(gulp.dest('build/js'));
 });
 
+gulp.task('polyfills', function() {
+  return gulp.src([
+      './bower_components/html5shiv/dist/html5shiv.min.js',
+      './bower_components/html5shiv/dist/html5shiv-printshiv.min.js',
+      './bower_components/respond/dest/respond.min.js'
+    ])
+    .pipe(concat('polyfills.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'));
+});
+
+
 // SASS compile, autoprefix and minify task
 gulp.task('styles', function() {
   return gulp.src('assets/sass/admin.scss')
