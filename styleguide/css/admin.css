@@ -6458,6 +6458,7 @@ address {
         background: rgba(229, 229, 229, 0.3); } }
 
 .site-map {
+  position: relative;
   background: whitesmoke;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(6%, white));
   background: -webkit-linear-gradient(top, whitesmoke 0%, white 6%);
@@ -6470,6 +6471,19 @@ address {
   @media only screen and (max-width: 767px) {
     .site-map {
       display: none; } }
+  .site-map .site-map-toggle {
+    display: none; }
+  @media only screen and (max-width: 991px) {
+    .site-map .container-fluid:not(.in) {
+      display: none; }
+    .site-map .in {
+      padding-top: 20px; }
+    .site-map .site-map-toggle {
+      position: absolute;
+      display: inline-block;
+      right: 15px;
+      top: 0;
+      z-index: 200; } }
   .site-map + div {
     padding-bottom: 10px; }
   .site-map a {
