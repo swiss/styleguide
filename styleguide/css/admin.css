@@ -6459,6 +6459,7 @@ address {
         background: rgba(229, 229, 229, 0.3); } }
 
 .site-map {
+  position: relative;
   background: whitesmoke;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(6%, white));
   background: -webkit-linear-gradient(top, whitesmoke 0%, white 6%);
@@ -6471,6 +6472,19 @@ address {
   @media only screen and (max-width: 767px) {
     .site-map {
       display: none; } }
+  .site-map .site-map-toggle {
+    display: none; }
+  @media only screen and (max-width: 991px) {
+    .site-map .container-fluid:not(.in) {
+      display: none; }
+    .site-map .in {
+      padding-top: 20px; }
+    .site-map .site-map-toggle {
+      position: absolute;
+      display: inline-block;
+      right: 15px;
+      top: 0;
+      z-index: 200; } }
   .site-map + div {
     padding-bottom: 10px; }
   .site-map a {
@@ -10539,6 +10553,8 @@ Navigation below the content level on a smartphone with links to the home page, 
       border-color: #454545; } }
 .nav-page-list .list-sub {
   position: relative; }
+  .nav-page-list .list-sub > a {
+    padding-right: 20px; }
   .nav-page-list .list-sub:after {
     font-family: "Admin Icons";
     content: '>';
@@ -11578,7 +11594,8 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 select.form-control, .has-success select.form-control, .has-error select.form-control,
 .form-inline select.form-control,
 .navbar-form select.form-control {
-  width: auto; }
+  width: auto;
+  max-width: 100%; }
 
 @media only screen and (max-width: 767px) {
   .navbar.yamm--select {
