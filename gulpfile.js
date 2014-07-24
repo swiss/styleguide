@@ -147,13 +147,12 @@ gulp.task('build-pages', function() {
 });
 
 gulp.task('default', ['styles', 'print', 'watch', 'vendors', 'browser-sync', 'scripts', 'build-images', 'build-fonts', 'build-pages']);
-gulp.task('build', ['styles', 'scripts', 'vendors', 'build-images', 'build-fonts', 'build-pages']);
+gulp.task('build', ['styles', 'print', 'scripts', 'vendors', 'build-images', 'build-fonts', 'build-pages']);
 
-gulp.task('watch',['styles', 'scripts', 'vendors', 'build-images', 'build-fonts', 'build-pages'], function() {
+gulp.task('watch',['styles', 'print', 'scripts', 'vendors', 'build-images', 'build-fonts', 'build-pages'], function() {
   gulp.watch('assets/sass/**/*.scss', ['styles', 'print']);
   gulp.watch('assets/js/*.js', ['scripts']);
   gulp.watch('build/**/*.{js,css}', ['hologram']);
-  gulp.watch('assets/**/*.{js,scss}', ['hologram']);
   gulp.watch('styleguide-theme/**/*.{html,css}', ['hologram']);
   gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], ['build-images']);
   gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], ['build-fonts']);

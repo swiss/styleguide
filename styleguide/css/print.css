@@ -30,9 +30,17 @@ unbedingt Reihenfolge behalten
   .exampleOutput {
     width: 100%; }
 
-  a:after {
-    content: "" !important; }
-
   a {
-    color: blue;
-    text-decoration: underline; } }
+    color: blue !important;
+    text-decoration: underline; }
+
+  a:after {
+    content: " (" attr(href) ") " !important;
+    font-size: 0.8em;
+    font-weight: normal; }
+
+  .breadcrumb li:not(:nth-last-child(3)) a:after,
+  a.carousel-control:after,
+  a[data-toggle=tab]:after,
+  a.icon--trash:after {
+    content: '' !important; } }
