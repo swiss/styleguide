@@ -23,7 +23,9 @@
     "typeahead.js": "~0.10.2",
     "tablesorter": "https://github.com/Mottie/tablesorter",
     "jquery.socialshareprivacy": "~1.4.5",
-    "jquery-drilldown": "~0.1.4"
+    "jquery-drilldown": "~0.1.4",
+    "respond": "~1.4.2",
+    "html5shiv": "~3.7.2"
   },
   "devDependencies": {},
   "resolutions": {

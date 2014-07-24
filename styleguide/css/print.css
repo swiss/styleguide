@@ -1,0 +1,46 @@
+/*
+Formatierung Chrome und IE
+
+unbedingt Reihenfolge behalten
+*/
+@media print {
+  .nav-mobile,
+  .drilldown,
+  .nav-main,
+  .header-separator,
+  .nav-service,
+  .nav-lang,
+  .form-search,
+  .yamm--select,
+  header > div:first-child,
+  footer,
+  .alert,
+  .icon--print,
+  .social-sharing {
+    display: none; }
+
+  header {
+    margin-bottom: 40px; }
+
+  .row .row {
+    margin-left: -20px !important; }
+
+  table.table,
+  .codeExample,
+  .exampleOutput {
+    width: 100%; }
+
+  a {
+    color: blue !important;
+    text-decoration: underline; }
+
+  a:after {
+    content: " (" attr(href) ") " !important;
+    font-size: 0.8em;
+    font-weight: normal; }
+
+  .breadcrumb li:not(:nth-last-child(3)) a:after,
+  a.carousel-control:after,
+  a[data-toggle=tab]:after,
+  a.icon--trash:after {
+    content: '' !important; } }

@@ -5939,6 +5939,8 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
   display: inline-block;
   float: left; }
   .brand img {
+    max-width: 400px;
+    height: auto;
     margin: 0;
     padding-right: 2em;
     border-right: 1px solid #e5e5e5;
@@ -5948,7 +5950,6 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
         max-height: 50px; } }
   .brand h1 {
     color: black;
-    display: inline;
     font-family: "Frutiger Neue Bold";
     font-weight: normal;
     font-size: 1em;
@@ -12399,3 +12400,6 @@ The title always consists of an RSS icon and the letters “RSS”. A list of li
   @media only screen and (max-width: 991px) {
     .rss.well {
       padding: 0; } }
+
+.ie8 body {
+  font-size: 14px !important; }
