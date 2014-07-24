@@ -3,6 +3,13 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.1.4 (2014-07-24)
+ * #190 Fix IE8 compatibility
+ * #175 add site-map toggle for collapse on tablet fix
+ * #186 add search box to page without navigation fix
+ * #183 navigation list text overflow fix
+ * #188 Focus teaser - missing lines in tablet/smartphone format
+
 * 2.1.3 (2014-06-19)
  * #158 Search bar on XS - width should be less
  * #160 fix responsive navigation paradigm

@@ -192,6 +192,7 @@ On smartphones, the A-Z navigation is accessed via an icon together with the sea
 select.form-control,
 .form-inline select.form-control {
   width: auto;
+  max-width: 100%;
 }
 
 .navbar.yamm--select {

@@ -246,6 +246,7 @@ address {
 
 .site-map {
   @media only screen and (max-width: $screen-xs-max) {display: none;}
+  position: relative;
   background: $smoke;
   background: -moz-linear-gradient(top, $smoke 0%, $white 6%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$smoke), color-stop(6%,$white));
@@ -257,6 +258,24 @@ address {
   border-bottom: 1px solid $silver;
   border-top: 1px solid $white;
   padding-bottom: 30px;
+  .site-map-toggle {
+    display: none;
+  }
+  @media only screen and (max-width: $screen-sm-max) {
+    .container-fluid:not(.in) {
+      display: none;
+    }
+    .in {
+      padding-top: 20px;
+    }
+    .site-map-toggle {
+      position: absolute;
+      display: inline-block;
+      right: 15px;
+      top: 0;
+      z-index: 200;
+    }
+  }
   & + div {
     padding-bottom: 10px;
   }

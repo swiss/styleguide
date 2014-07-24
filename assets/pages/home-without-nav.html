@@ -11,7 +11,8 @@
   <title>Admin.ch - Homepage with Global Nav Example</title>
 
   <link rel="stylesheet" href="../css/vendors.min.css">
-<link rel="stylesheet" href="../css/admin.min.css">
+  <link rel="stylesheet" href="../css/admin.min.css">
+  <link rel="stylesheet" href="../css/print.min.css">
 
 <!-- Favicons -->
     <link rel="shortcut icon" href="../img/ico/favicon.ico">
@@ -30,8 +31,7 @@
     <meta name="msapplication-config" content="../img/ico/browserconfig.xml">
 
   <!--[if lt IE 9]>
-    <script src="../theme-build/polyfill/html5shiv.js"></script>
-    <script src="../theme-build/polyfill/respond.min.js"></script>
+    <script src="../js/polyfills.min.js"></script>
   <![endif]-->
   <script>
   // You have to store all your data inside `searchData` and define it globaly
@@ -145,6 +145,30 @@
       </nav><!-- Navbar end -->
 
     </header>
+
+    <section class="nav-mobile yamm">
+      <div class="table-row">
+        <div class="nav-mobile-header">
+          <div class="table-row">
+            <span class="nav-mobile-logo">
+              <img src="../img/swiss.svg" onerror="this.onerror=null; this.src='../img/swiss.png'" alt="Confederatio Helvetica" />
+            </span>
+            <h1><a href="#">Main Title</a></h1>
+          </div>
+        </div>
+        <div class="table-cell dropdown">
+          <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
+          <div class="dropdown-menu" role="menu">
+            <form class="form" role="form">
+              <h2 class="sr-only">Search</h2>
+              <label for="search-field" class="sr-only">Search:</label>
+              <input class="form-control" type="text" placeholder="Search">
+              <span class="icon icon--search"></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Red line when there is no global nav -->
     <div class="header-separator"></div>
@@ -324,8 +348,10 @@
 
       <div class="site-map">
 
-        <!-- Use normal `container` instead of `container-fluid` -->
-        <div class="container-fluid">
+        <a href="#site-map" data-target="#site-map" data-toggle="collapse" class="site-map-toggle collapsed">Sitemap</a>
+
+        <script src="../js/polyfills.min.js"></script>
+        <div class="container-fluid" id="site-map">
           <div class="col-sm-4 col-md-3">
             <h3>Einreise & Aufenthalt in der Schweiz</h3>
             <ul class="list-unstyled">
@@ -417,7 +443,7 @@
         </div>
       </div><!-- End of Site-map -->
 
-      <!-- Use normal `container` instead of `container-fluid` -->
+      <script src="../js/polyfills.min.js"></script>
       <div class="container-fluid">
         <h3>Informiert bleiben</h3>
         <nav class="links-social">

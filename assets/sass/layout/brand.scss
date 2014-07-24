@@ -43,7 +43,8 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
   display: inline-block;
   float: left;
   img {
-    // max-width: 224px;
+    max-width: 400px;
+    height: auto;
     @media only screen and (max-width: $screen-sm-max) {
       max-height: 50px;
     }
@@ -54,7 +55,6 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
   }
   h1 {
     color: $black;
-    display: inline;
     font-family: $frutiger-bold;
     font-weight: normal;
     font-size: 1em;

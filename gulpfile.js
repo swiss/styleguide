@@ -24,8 +24,7 @@
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     shell = require('gulp-shell'),
-    stylish = require('jshint-stylish'),
-    clean = require('gulp-clean');
+    stylish = require('jshint-stylish');
 
 // JS task
 gulp.task('scripts', function() {
@@ -91,6 +90,18 @@ gulp.task('vendors', function() {
     .pipe(gulp.dest('build/js'));
 });
 
+gulp.task('polyfills', function() {
+  return gulp.src([
+      './bower_components/html5shiv/dist/html5shiv.min.js',
+      './bower_components/html5shiv/dist/html5shiv-printshiv.min.js',
+      './bower_components/respond/dest/respond.min.js'
+    ])
+    .pipe(concat('polyfills.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'));
+});
+
+
 // SASS compile, autoprefix and minify task
 gulp.task('styles', function() {
   return gulp.src('assets/sass/admin.scss')
@@ -104,12 +115,26 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('build/css'));
 });
 
+gulp.task('print', function() {
+  return gulp.src('assets/sass/print/print.scss')
+    .pipe(sass())
+      .on('error', gutil.beep)
+      .on('error', notify.onError("Error: <%= error.message %>"))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(minifycss())
+    .pipe(rename('print.min.css'))
+    .pipe(gulp.dest('build/css'));
+});
+
 
 gulp.task('browser-sync', function() {
-    browserSync.init(['./styleguide/**/*.html'], {
-      proxy: 'localhost',
+    browserSync.init({
       open: false,
-      debounce: 400
+      reloadDelay: 2000,
+      server: {
+          baseDir: "styleguide"
+      }
     });
 });
 
@@ -133,14 +158,13 @@ gulp.task('build-pages', function() {
     .pipe(gulp.dest('styleguide/pages'));
 });
 
-gulp.task('default', ['styles', 'watch', 'vendors', 'browser-sync', 'scripts', 'build-images', 'build-fonts', 'build-pages']);
-gulp.task('build', ['styles', 'scripts', 'vendors', 'build-images', 'build-fonts', 'build-pages']);
+gulp.task('default', ['styles', 'print', 'watch', 'vendors', 'browser-sync', 'scripts', 'build-images', 'build-fonts', 'build-pages']);
+gulp.task('build', ['styles', 'print', 'scripts', 'vendors', 'build-images', 'build-fonts', 'build-pages']);
 
-gulp.task('watch',['styles', 'scripts', 'vendors', 'build-images', 'build-fonts', 'build-pages'], function() {
-  gulp.watch('assets/sass/**/*.scss', ['styles']);
+gulp.task('watch',['styles', 'print', 'scripts', 'vendors', 'build-images', 'build-fonts', 'build-pages'], function() {
+  gulp.watch('assets/sass/**/*.scss', ['styles', 'print']);
   gulp.watch('assets/js/*.js', ['scripts']);
   gulp.watch('build/**/*.{js,css}', ['hologram']);
-  gulp.watch('assets/**/*.{js,scss}', ['hologram']);
   gulp.watch('styleguide-theme/**/*.{html,css}', ['hologram']);
   gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], ['build-images']);
   gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], ['build-fonts']);
