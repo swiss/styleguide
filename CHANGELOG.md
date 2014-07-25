@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.1.5 ()
+ * #183 navigation list text overflow fix demonstrate in exemple page
+
 * 2.1.4 (2014-07-24)
  * #190 Fix IE8 compatibility
  * #175 add site-map toggle for collapse on tablet fix
