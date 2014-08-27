@@ -8487,14 +8487,14 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
   <strong>2.1.0:</strong></p>
 
 <ul>
-<li>wrapped <code>.nav-lang</code> and <code>.nav-service</code> in <code>&lt;section class=&quot;nav-services clearfix&quot;&gt;&lt;/section&gt;</code></li>
-</ul>
+<li><p>wrapped <code>.nav-lang</code> and <code>.nav-service</code> in <code>&lt;section class=&quot;nav-services clearfix&quot;&gt;&lt;/section&gt;</code></p>
 
-<p><strong>2.1.2:</strong></p>
+<p><strong>2.1.2:</strong></p></li>
+<li><p>added <code>h2.sr-only</code> for more screen reader clarity</p>
 
-<ul>
-<li>added <code>h2.sr-only</code> for more screen reader clarity
-</div></li>
+<p><strong>3.0.0</strong></p></li>
+<li><p>added <code>aria-selected=&quot;true&quot;</code> for active accessibility
+</div></p></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
@@ -8506,7 +8506,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
       <h2 class="sr-only">Language selection</h2>
       <nav class="nav-lang">
         <ul>
-          <li><a class="active" href="#">DE</a></li>
+          <li><a class="active" aria-selected="true" href="#">DE</a></li>
           <li><a href="#">FR</a></li>
           <li><a href="#">IT</a></li>
           <li><a class="disabled" href="#">RM</a></li>
@@ -8537,7 +8537,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
       <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Language selection<span class="nt">&lt;/h2&gt;</span>
       <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav-lang"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;ul&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>DE<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>DE<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>FR<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>IT<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>RM<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -8572,9 +8572,11 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 <p><br>
 <div class="alert alert-warning">
   <strong>2.1.2:</strong></p>
-<div class="codeBlock"><div class="highlight"><pre>- added `h2.sr-only` for more screen reader clarity
-</pre></div></div>
-<p></div></p>
+
+<ul>
+<li>added <code>h2.sr-only</code> for more screen reader clarity
+</div></li>
+</ul>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
 <div class="container-fluid">
   <header>

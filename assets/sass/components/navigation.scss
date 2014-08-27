@@ -549,9 +549,13 @@ The design of the language navigation for cases, where their are more then five 
 
   - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
 
-**2.1.2:**
+  **2.1.2:**
 
   - added `h2.sr-only` for more screen reader clarity
+
+  **3.0.0**
+  
+  - added `aria-selected="true"` for active accessibility
 </div>
 
 ```html_example
@@ -565,7 +569,7 @@ The design of the language navigation for cases, where their are more then five 
       <h2 class="sr-only">Language selection</h2>
       <nav class="nav-lang">
         <ul>
-          <li><a class="active" href="#">DE</a></li>
+          <li><a class="active" aria-selected="true" href="#">DE</a></li>
           <li><a href="#">FR</a></li>
           <li><a href="#">IT</a></li>
           <li><a class="disabled" href="#">RM</a></li>
