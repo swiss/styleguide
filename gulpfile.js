@@ -99,6 +99,17 @@ gulp.task('vendors', function() {
     .pipe(gulp.dest('build/fonts'));
 });
 
+gulp.task('polyfills', function() {
+  return gulp.src([
+      'bower_components/html5shiv/dist/html5shiv.min.js',
+      'bower_components/html5shiv/dist/html5shiv-printshiv.min.js',
+      'bower_components/respond/dest/respond.min.js'
+    ])
+    .pipe($.concat('polyfills.min.js'))
+    .pipe($.uglify())
+    .pipe(gulp.dest('build/js'));
+});
+
 /**
  * Build styles from SCSS files
  * With error reporting on compiling (so that there's no crash)
@@ -214,6 +225,6 @@ gulp.task('serve', ['styles'], function () {
  * Default task
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'styles', 'print', 'jshint', 'scripts', 'build-images', 'build-fonts', 'build-pages', 'styleguide', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'jshint', 'scripts', 'build-images', 'build-fonts', 'build-pages', 'styleguide', cb);
 });
 
