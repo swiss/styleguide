@@ -26,6 +26,13 @@ When the user clicks on an image, a detailed view is opened either in a lightbox
 
 @TODO : buggy vertical img (CSS)
 
+<br>
+<div class="alert alert-warning">
+**3.0.0**
+  
+  - added `aria-selected="true"` and `aria-disabled="true"` for accessibility
+</div>
+
 ```html_example
 <h1>Title of gallery</h1>
 <br>
@@ -33,11 +40,12 @@ When the user clicks on an image, a detailed view is opened either in a lightbox
 <nav class="pagination-container">
   <span>Object - 2 of 3</span>
   <ul class="pull-right pagination">
-    <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
-    <li class="separator"><a href="#">Previous</a></li>
-    <li><a href="#">1</a></li>
-    <li class="active"><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
+    <li class="separator disabled"><a aria-disabled="true" href="#"><span class="icon icon--step-backward"></span></a></li>
+    <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+    <li class="active"><a aria-selected="true" href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li>...</li>
+    <li><a href="#">17</a></li>
     <li class="separator-left"><a href="#">Next</a></li>
     <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
   </ul>
@@ -181,11 +189,12 @@ When the user clicks on an image, a detailed view is opened either in a lightbox
 <nav class="pagination-container">
   <span>Object - 2 of 3</span>
   <ul class="pull-right pagination">
-    <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
-    <li class="separator"><a href="#">Previous</a></li>
-    <li><a href="#">1</a></li>
-    <li class="active"><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
+    <li class="separator disabled"><a aria-disabled="true" href="#"><span class="icon icon--step-backward"></span></a></li>
+    <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+    <li class="active"><a aria-selected="true" href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li>...</li>
+    <li><a href="#">17</a></li>
     <li class="separator-left"><a href="#">Next</a></li>
     <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
   </ul>

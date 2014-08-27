@@ -49,7 +49,8 @@ gulp.task('vendors', function() {
    */
   gulp.src([
         'bower_components/yamm3/yamm/yamm.css',
-        'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css'
+        'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css',
+        'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css'
       ])
       .pipe($.concat('vendors.css'))
       .pipe($.minifyCss())
@@ -77,6 +78,7 @@ gulp.task('vendors', function() {
       'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js',
       'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js',
       'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js',
+      'bower_components/bootstrapaccessibilityplugin/plugins/js/bootstrap-accessibility.js',
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
       'bower_components/jquery.socialshareprivacy/jquery.socialshareprivacy.min.js',
       'bower_components/jquery-drilldown/jquery.drilldown.min.js'

@@ -8316,17 +8316,27 @@
 <p>When the user clicks on an image, a detailed view is opened either in a lightbox or in single view mode for the images.</p>
 
 <p>@TODO : buggy vertical img (CSS)</p>
+
+<p><br>
+<div class="alert alert-warning">
+<strong>3.0.0</strong></p>
+
+<ul>
+<li>added <code>aria-selected=&quot;true&quot;</code> and <code>aria-disabled=&quot;true&quot;</code> for accessibility
+</div></li>
+</ul>
 <div class="codeExample"><div class="exampleOutput"><h1>Title of gallery</h1>
 <br>
 <hr>
 <nav class="pagination-container">
   <span>Object - 2 of 3</span>
   <ul class="pull-right pagination">
-    <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
-    <li class="separator"><a href="#">Previous</a></li>
-    <li><a href="#">1</a></li>
-    <li class="active"><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
+    <li class="separator disabled"><a aria-disabled="true" href="#"><span class="icon icon--step-backward"></span></a></li>
+    <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+    <li class="active"><a aria-selected="true" href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li>...</li>
+    <li><a href="#">17</a></li>
     <li class="separator-left"><a href="#">Next</a></li>
     <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
   </ul>
@@ -8470,11 +8480,12 @@
 <nav class="pagination-container">
   <span>Object - 2 of 3</span>
   <ul class="pull-right pagination">
-    <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
-    <li class="separator"><a href="#">Previous</a></li>
-    <li><a href="#">1</a></li>
-    <li class="active"><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
+    <li class="separator disabled"><a aria-disabled="true" href="#"><span class="icon icon--step-backward"></span></a></li>
+    <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+    <li class="active"><a aria-selected="true" href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li>...</li>
+    <li><a href="#">17</a></li>
     <li class="separator-left"><a href="#">Next</a></li>
     <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
   </ul>
@@ -8485,11 +8496,12 @@
 <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"pagination-container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;span&gt;</span>Object - 2 of 3<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"pull-right pagination"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--step-backward"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator disabled"</span><span class="nt">&gt;&lt;a</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--step-backward"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator disabled"</span><span class="nt">&gt;&lt;a</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>17<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator-left"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator-left"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--step-forward"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
@@ -8633,11 +8645,12 @@
 <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"pagination-container"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;span&gt;</span>Object - 2 of 3<span class="nt">&lt;/span&gt;</span>
   <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"pull-right pagination"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--step-backward"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator disabled"</span><span class="nt">&gt;&lt;a</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--step-backward"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator disabled"</span><span class="nt">&gt;&lt;a</span> <span class="na">aria-disabled=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>17<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator-left"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"separator-left"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--step-forward"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;/ul&gt;</span>
