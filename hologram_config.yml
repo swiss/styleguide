@@ -14,9 +14,9 @@ index: README
 
 # List all css to include for the styleguide render examples
 css_include:
-  - 'css/vendors.min.css'
-  - 'css/admin.min.css'
-  - 'css/print.min.css'
+  - 'css/vendors.css'
+  - 'css/admin.css'
+  - 'css/print.css'
 
 # List all js to include for the styleguide render examples
 js_include:

@@ -27,8 +27,5 @@
     "respond": "~1.4.2",
     "html5shiv": "~3.7.2"
   },
-  "devDependencies": {},
-  "resolutions": {
-    "jquery": "1.10.2"
-  }
+  "devDependencies": {}
 }
