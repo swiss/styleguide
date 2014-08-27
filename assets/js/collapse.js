@@ -13,7 +13,7 @@
 
   // Normal Collapse
 
-  var $toggleButton = $('button[data-toggle="collapse"], a[data-toggle="collapse"]');
+  var $toggleButton = $('button[data-toggle="collapse"], th[data-toggle="collapse"], a[data-toggle="collapse"]');
 
   checkCollapseStatusInit();
 
