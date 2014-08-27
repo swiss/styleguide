@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 3.0.0
+ * #225 add `aria-selected="true"`for active navigation`
+
 * 2.1.5 ()
  * #183 navigation list text overflow fix demonstrate in exemple page
 
