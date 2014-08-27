@@ -4,6 +4,7 @@ CHANGELOG
 This changelog references the relevant changes and bug fixes.
 
 * 3.0.0
+ * #224 add Paypal access plugin and fix all collapse elements
  * #225 add `aria-selected="true"`for active navigation`
 
 * 2.1.5 ()
