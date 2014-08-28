@@ -31,6 +31,13 @@ You can use the `.has-error`, `.has-warning` or `.has-success` classes to send f
 
 HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, and `color`
 
+<br>
+<div class="alert alert-warning">
+**3.0.0**
+  
+  - added ids to label and help text, `aria-labelledby` and `role` to buttons for a better accessibility
+</div>
+
 ```html_example
 <form class="form-horizontal" role="form">
 
