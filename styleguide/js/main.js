@@ -36,7 +36,7 @@ if (typeof searchData != "undefined") {
 
     // Insert the icons
     $('<span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>').insertAfter($searchField);
-    $('.form-search').append('<span class="icon icon--search"></span>');
+    $('.form-search').append('<button class="icon icon--search icon--before"></button>');
 
   }) (jQuery, searchData);
 }

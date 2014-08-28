@@ -68,16 +68,21 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
       display: none;
     }
   }
+  button {
+    background: transparent;
+    border: none;
+  }
   .icon {
     display: inline-block;
     position: absolute;
-    top: 2px;
+    top: -1px;
     z-index: 999;
     &:hover {
       cursor: pointer;
     }
   }
-  .icon--search {left: 10px;}
+  .icon--search {left: 3px;}
+  span.icon--search {display: none;}
   .icon--close {
     color: $white;
     transition: color 0.3s;
