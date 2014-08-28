@@ -27,6 +27,13 @@ Add `.table-bordered` for borders on all sides of the table and cells. The stand
 
 A simple example :
 
+<br>
+<div class="alert alert-warning">
+**3.0.0**
+  
+  - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+</div>
+
 ```html_example
 <table class="table table-bordered text-right">
   <caption>Game animals shot in Switzerland</caption>
@@ -135,6 +142,13 @@ The zebra stripes are shown when the `table-striped` class is added to the `<tab
 
 A simple example :
 
+<br>
+<div class="alert alert-warning">
+**3.0.0**
+  
+  - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+</div>
+
 ```html_example
 <table class="table table-bordered table-striped text-right">
   <caption>Game animals shot in Switzerland</caption>
@@ -220,6 +234,13 @@ category: Base Layout - Tables
 This table is based on the standard table but with `active` class on cells or on row.
 
 A simple example :
+
+<br>
+<div class="alert alert-warning">
+**3.0.0**
+  
+  - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+</div>
 
 ```html_example
 <table class="table table-bordered text-right">
@@ -381,6 +402,13 @@ category: Base Layout - Tables
 
 Some tables can be expanded to show details of a data set
 
+<br>
+<div class="alert alert-warning">
+**3.0.0**
+  
+  - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+</div>
+
 ```html_example
 
 <table class="table table-bordered text-right">
@@ -470,6 +498,13 @@ category: Base Layout - Tables
 
 Ruled tables are particularly suitable for presenting simple 1:1 relationships. The ruled format is set by adding the `table-simple` to the table tag.
 
+<br>
+<div class="alert alert-warning">
+**3.0.0**
+  
+  - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+</div>
+
 ```html_example
 <table class="table table-simple">
   <caption>Contact</caption>
@@ -526,6 +561,13 @@ category: Base Layout - Tables
 <span class="label label-admin">FLEX</span>
 
 Unruled tables are suitable for presenting properties, e.g. of a publication. A simple unruled table is formatted with the class `table-naked`.
+
+<br>
+<div class="alert alert-warning">
+**3.0.0**
+  
+  - added `columnheader` and `aria-describedby` for better accessibility
+</div>
 
 ```html_example
 <div class="container-fluid">
