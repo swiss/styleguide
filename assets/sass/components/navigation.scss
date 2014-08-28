@@ -61,6 +61,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 **3.0.0:**
   
   - added `aria-selected="true"` for current active link
+  - added `id="main-navigation"`for accessibility nav
 </div>
 
 ```html_example
@@ -69,7 +70,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   <header>
 
   </header>
-  <nav class="nav-main yamm navbar" role="navigation">
+  <nav class="nav-main yamm navbar" role="navigation" id="main-navigation">
     <h2 class="sr-only">Navigation</h2>
     <!-- Mobile Navigation (hidden on desktop) -->
     <section class="nav-mobile">
