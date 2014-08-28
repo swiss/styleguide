@@ -4,6 +4,7 @@ CHANGELOG
 This changelog references the relevant changes and bug fixes.
 
 * 3.0.0
+ * #204 review form accessibility with label and help text
  * #207 add access nav with accesskeys
  * #209 remove useless br tag
  * #211 Fix breadcrumb accessibility
