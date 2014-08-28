@@ -33,7 +33,7 @@ On smartphones there is always a link at the end of the page to the home page an
 <div class="container-fluid">
 
   <header>
-    <ol class="breadcrumb">
+    <ol class="breadcrumb" role="navigation" aria-label="breadcrumbs">
       <li><a href="#">Home page EDA</a></li>
       <span class="icon icon--greater"></span>
       <li><a href="#">Country & Travel Information</a></li>
@@ -46,7 +46,7 @@ On smartphones there is always a link at the end of the page to the home page an
       <span class="icon icon--greater"></span>
       <li><a href="#">Bilateral Relations</a></li>
       <span class="icon icon--greater"></span>
-      <li class="active">Title of the active page</li>
+      <li class="active" aria-selected="true">Title of the active page</li>
     </ol>
   </header>
   <nav class="nav-main"></nav>
