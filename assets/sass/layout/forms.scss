@@ -36,20 +36,26 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
 **3.0.0**
   
   - added **IDs** to label and help text, `aria-labelledby` and `role` to buttons for a better accessibility
+  - added `<fieldset>` and `<legend class="hidden">` around `.form-group` for a better accessibility
 </div>
 
 ```html_example
 <form class="form-horizontal" role="form">
 
-    <!-- email input -->
+  <!-- email input -->
+  <fieldset>
+    <legend class="hidden-legend">Email</legend>
     <div class="form-group">
       <label for="inputEmail3" class="col-sm-2 control-label" id="email">Email</label>
       <div class="col-sm-10">
         <input type="email" class="form-control" id="inputEmail3" placeholder="Email" aria-labelledby="email">
       </div>
     </div>
+  </fieldset>
 
-    <!-- password input -->
+  <!-- password input -->
+  <fieldset>
+    <legend class="hidden-legend">Password</legend>
     <div class="form-group has-warning">
       <label for="inputPassword3" class="col-sm-2 control-label" id="password">Password</label>
       <div class="col-sm-10">
@@ -57,8 +63,11 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
         <span class="help-block" id="error-password" role="alert">Warning, this is not a correct info!</span>
       </div>
     </div>
+  </fieldset>
 
-    <!-- URL input -->
+  <!-- URL input -->
+  <fieldset>
+    <legend class="hidden-legend">Website</legend>
     <div class="form-group">
       <label for="inputURL" class="col-sm-2 control-label" id="website">Website</label>
       <div class="col-sm-10">
@@ -66,18 +75,24 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
         <span class="help-block" id="url-format">Use format "http://www.example.com"</span>
       </div>
     </div>
+  </fieldset>
 
-    <!-- file input -->
+  <!-- file input -->
+  <fieldset>
+    <legend class="hidden-legend">Document</legend>
     <div class="form-group">
       <label for="file" class="col-sm-2 control-label" id="document">Document</label>
       <div class="col-sm-10">
         <input type="file" class="form-control" id="file" placeholder="URL" aria-labelledby="document">
       </div>
     </div>
+  </fieldset>
 
-    <!-- Checkboxes Vertical -->
+  <!-- Checkboxes Vertical -->
+  <fieldset>
+    <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label" id="check-group-1">Checkbox Vertical</label>
+      <label class="col-sm-2 control-label" id="check-group-1">Terms</label>
       <div class="col-sm-10">
         <div class="checkbox checkbox--left">
           <input id="checkboxform" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1">
@@ -89,10 +104,13 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
         </div>
       </div>
     </div>
+  </fieldset>
 
-    <!-- Checkboxes Horizontal -->
+  <!-- Checkboxes Horizontal -->
+  <fieldset>
+    <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label" id="check-group-2">Checkbox Horizontal</label>
+      <label class="col-sm-2 control-label" id="check-group-2">Terms</label>
       <div class="col-sm-10">
         <label class="checkbox-inline">
           <div class="checkbox checkbox--left">
@@ -108,10 +126,13 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
         </label>
       </div>
     </div>
+  </fieldset>
 
-   <!-- Radio buttons horizontal -->
+ <!-- Radio buttons horizontal -->
+  <fieldset>
+    <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label" id="radio-group-1">Radio Horizontal</label>
+      <label class="col-sm-2 control-label" id="radio-group-1">Terms</label>
       <div class="col-sm-10">
         <div class="radio radio--left">
           <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1">
@@ -123,10 +144,13 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
         </div>
       </div>
     </div>
+  </fieldset>
 
-    <!-- Radio buttons vertical -->
+  <!-- Radio buttons vertical -->
+  <fieldset>
+    <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label" id="radio-group-2">Radio Vertical</label>
+      <label class="col-sm-2 control-label" id="radio-group-2">Terms</label>
       <div class="col-sm-10">
         <label class="radio-inline">
           <div class="radio radio--left">
@@ -142,8 +166,11 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
         </label>
       </div>
     </div>
+  </fieldset>
 
-    <!-- Dropdown -->
+  <!-- Dropdown -->
+  <fieldset>
+    <legend class="hidden-legend">Dropdown</legend>
     <div class="form-group">
       <label class="col-sm-2 control-label" for="dropdown">Dropdown</label>
       <div class="col-sm-10">
@@ -153,12 +180,14 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
         </select>
       </div>
     </div>
+  </fieldset>
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" role="button" class="btn btn-default">Sign in</button>
       </div>
     </div>
+  </fieldset>
 
 </form>
 ```
@@ -167,6 +196,16 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
 
 legend {
   font-size: 1.1em;
+}
+
+.hidden-legend {
+  display: inline-block;
+  position: absolute;
+  top: -6000px;
+  left: -6000px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .form-horizontal .form-group {
