@@ -4,6 +4,7 @@ CHANGELOG
 This changelog references the relevant changes and bug fixes.
 
 * 3.0.0
+ * #200 Add button insted of meanless span for site search field
  * #202 add `<fieldset>` and `<legend class="hidden">` around `.form-group`
  * #203 add ARIA roles on form error
  * #204 review form accessibility with label and help text
