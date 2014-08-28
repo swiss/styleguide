@@ -25,52 +25,52 @@ The standard table consists of the table title `<caption>`, the table head `<the
 Add `.table-bordered` for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.
 
 
-A simple example without `id` and `headers` attributes :
+A simple example :
 
 ```html_example
 <table class="table table-bordered text-right">
   <caption>Game animals shot in Switzerland</caption>
   <thead>
-    <tr>
+    <tr role="columnheader">
       <!-- In <thead> : td => $white / th => $smoke -->
       <td></td>
-      <th>2000</th>
-      <th>2010</th>
-      <th>2011</th>
-      <th>2012</th>
+      <th id="year-2000">2000</th>
+      <th id="year-2010">2010</th>
+      <th id="year-2011">2011</th>
+      <th id="year-2012">2012</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th class="text-left">Boars</th>
-      <td>4'160</td>
-      <td>7'647</td>
-      <td>4'726</td>
-      <td>10'650</td>
+      <th class="text-left" role="rowheader">Boars</th>
+      <td headers="year-2000" aria-describedby="year-2000">4'160</td>
+      <td headers="year-2010" aria-describedby="year-2010">7'647</td>
+      <td headers="year-2011" aria-describedby="year-2011">4'726</td>
+      <td headers="year-2012" aria-describedby="year-2012">10'650</td>
     </tr>
     <tr>
-      <th class="text-left">Chamois</th>
-      <td>16'625</td>
-      <td>13'427</td>
-      <td>13'413</td>
-      <td>13'350</td>
+      <th class="text-left" role="rowheader">Chamois</th>
+      <td headers="year-2000" aria-describedby="year-2000">16'625</td>
+      <td headers="year-2010" aria-describedby="year-2010">13'427</td>
+      <td headers="year-2011" aria-describedby="year-2011">13'413</td>
+      <td headers="year-2012" aria-describedby="year-2012">13'350</td>
     </tr>
     <tr>
-      <th class="text-left">Fox</th>
-      <td>42'221</td>
-      <td>31'044</td>
-      <td>27'094</td>
-      <td>35'616</td>
+      <th class="text-left" role="rowheader">Fox</th>
+      <td headers="year-2000" aria-describedby="year-2000">42'221</td>
+      <td headers="year-2010" aria-describedby="year-2010">31'044</td>
+      <td headers="year-2011" aria-describedby="year-2011">27'094</td>
+      <td headers="year-2012" aria-describedby="year-2012">35'616</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
       <!-- In <tfoot> : td => $smoke / th => $white -->
       <th></th>
-      <td>63'006</td>
-      <td>52'118</td>
-      <td>45'233</td>
-      <td>59'616</td>
+      <td headers="year-2000">2000</td>
+      <td headers="year-2010">2010</td>
+      <td headers="year-2011">2011</td>
+      <td headers="year-2012">2012</td>
     </tr>
   </tfoot>
 </table>
@@ -133,50 +133,52 @@ category: Base Layout - Tables
 
 The zebra stripes are shown when the `table-striped` class is added to the `<table>`.
 
-A simple example without `id` and `headers` attributes :
+A simple example :
 
 ```html_example
-<table class="table table-bordered text-right table-striped">
+<table class="table table-bordered table-striped text-right">
   <caption>Game animals shot in Switzerland</caption>
   <thead>
-    <tr>
-      <th></th>
-      <th>2000</th>
-      <th>2010</th>
-      <th>2011</th>
-      <th>2012</th>
+    <tr role="columnheader">
+      <!-- In <thead> : td => $white / th => $smoke -->
+      <td></td>
+      <th id="year-2000">2000</th>
+      <th id="year-2010">2010</th>
+      <th id="year-2011">2011</th>
+      <th id="year-2012">2012</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th class="text-left">Boars</th>
-      <td>4'160</td>
-      <td>7'647</td>
-      <td>4'726</td>
-      <td>10'650</td>
+      <th class="text-left" role="rowheader">Boars</th>
+      <td headers="year-2000" aria-describedby="year-2000">4'160</td>
+      <td headers="year-2010" aria-describedby="year-2010">7'647</td>
+      <td headers="year-2011" aria-describedby="year-2011">4'726</td>
+      <td headers="year-2012" aria-describedby="year-2012">10'650</td>
     </tr>
     <tr>
-      <th class="text-left">Chamois</th>
-      <td>16'625</td>
-      <td>13'427</td>
-      <td>13'413</td>
-      <td>13'350</td>
+      <th class="text-left" role="rowheader">Chamois</th>
+      <td headers="year-2000" aria-describedby="year-2000">16'625</td>
+      <td headers="year-2010" aria-describedby="year-2010">13'427</td>
+      <td headers="year-2011" aria-describedby="year-2011">13'413</td>
+      <td headers="year-2012" aria-describedby="year-2012">13'350</td>
     </tr>
     <tr>
-      <th class="text-left">Fox</th>
-      <td>42'221</td>
-      <td>31'044</td>
-      <td>27'094</td>
-      <td>35'616</td>
+      <th class="text-left" role="rowheader">Fox</th>
+      <td headers="year-2000" aria-describedby="year-2000">42'221</td>
+      <td headers="year-2010" aria-describedby="year-2010">31'044</td>
+      <td headers="year-2011" aria-describedby="year-2011">27'094</td>
+      <td headers="year-2012" aria-describedby="year-2012">35'616</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
-      <td></td>
-      <td>63'006</td>
-      <td>52'118</td>
-      <td>45'233</td>
-      <td>59'616</td>
+      <!-- In <tfoot> : td => $smoke / th => $white -->
+      <th></th>
+      <td headers="year-2000">2000</td>
+      <td headers="year-2010">2010</td>
+      <td headers="year-2011">2011</td>
+      <td headers="year-2012">2012</td>
     </tr>
   </tfoot>
 </table>
@@ -217,50 +219,52 @@ category: Base Layout - Tables
 
 This table is based on the standard table but with `active` class on cells or on row.
 
-A simple example without `id` and `headers` attributes :
+A simple example :
 
 ```html_example
 <table class="table table-bordered text-right">
   <caption>Game animals shot in Switzerland</caption>
   <thead>
-    <tr>
+    <tr role="columnheader">
+      <!-- In <thead> : td => $white / th => $smoke -->
       <td></td>
-      <th>2000</th>
-      <th>2010</th>
-      <th class="active">2011</th>
-      <th>2012</th>
+      <th id="year-2000">2000</th>
+      <th id="year-2010">2010</th>
+      <th id="year-2011" class="active">2011</th>
+      <th id="year-2012">2012</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th class="text-left">Boars</th>
-      <td>4'160</td>
-      <td>7'647</td>
-      <td class="active">4'726</td>
-      <td>10'650</td>
+      <th class="text-left" role="rowheader">Boars</th>
+      <td headers="year-2000" aria-describedby="year-2000">4'160</td>
+      <td headers="year-2010" aria-describedby="year-2010">7'647</td>
+      <td headers="year-2011" aria-describedby="year-2011" class="active">4'726</td>
+      <td headers="year-2012" aria-describedby="year-2012">10'650</td>
     </tr>
     <tr>
-      <th class="text-left">Chamois</th>
-      <td>16'625</td>
-      <td>13'427</td>
-      <td class="active">13'413</td>
-      <td>13'350</td>
+      <th class="text-left" role="rowheader">Chamois</th>
+      <td headers="year-2000" aria-describedby="year-2000">16'625</td>
+      <td headers="year-2010" aria-describedby="year-2010">13'427</td>
+      <td headers="year-2011" aria-describedby="year-2011" class="active">13'413</td>
+      <td headers="year-2012" aria-describedby="year-2012">13'350</td>
     </tr>
     <tr class="active">
-      <th class="text-left">Fox</th>
-      <td>42'221</td>
-      <td>31'044</td>
-      <td class="active">27'094</td>
-      <td>35'616</td>
+      <th class="text-left" role="rowheader">Fox</th>
+      <td headers="year-2000" aria-describedby="year-2000">42'221</td>
+      <td headers="year-2010" aria-describedby="year-2010">31'044</td>
+      <td headers="year-2011" aria-describedby="year-2011" class="active">27'094</td>
+      <td headers="year-2012" aria-describedby="year-2012">35'616</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
+      <!-- In <tfoot> : td => $smoke / th => $white -->
       <th></th>
-      <td>63'006</td>
-      <td>52'118</td>
-      <td class="active">45'233</td>
-      <td>59'616</td>
+      <td headers="year-2000">2000</td>
+      <td headers="year-2010">2010</td>
+      <td headers="year-2011" class="active">2011</td>
+      <td headers="year-2012">2012</td>
     </tr>
   </tfoot>
 </table>
@@ -295,44 +299,46 @@ The sortable table automatically formats the column in which the data has been s
 <table class="table table-bordered table-sort text-right">
   <caption>Game animals shot in Switzerland</caption>
   <thead>
-    <tr>
+    <tr role="columnheader">
+      <!-- In <thead> : td => $white / th => $smoke -->
       <td></td>
-      <th id="2000">2000</th>
-      <th id="2010">2010</th>
-      <th id="2011">2011</th>
-      <th id="2012">2012</th>
+      <th id="year-2000">2000</th>
+      <th id="year-2010">2010</th>
+      <th id="year-2011">2011</th>
+      <th id="year-2012">2012</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th class="text-left">Boars</th>
-      <td headers="2000">4'160</td>
-      <td headers="2010">7'647</td>
-      <td headers="2011">4'726</td>
-      <td headers="2012">10'650</td>
+      <th class="text-left" role="rowheader">Boars</th>
+      <td headers="year-2000" aria-describedby="year-2000">4'160</td>
+      <td headers="year-2010" aria-describedby="year-2010">7'647</td>
+      <td headers="year-2011" aria-describedby="year-2011">4'726</td>
+      <td headers="year-2012" aria-describedby="year-2012">10'650</td>
     </tr>
     <tr>
-      <th class="text-left">Chamois</th>
-      <td headers="2000">16'625</td>
-      <td headers="2010">13'427</td>
-      <td headers="2011">13'413</td>
-      <td headers="2012">13'350</td>
+      <th class="text-left" role="rowheader">Chamois</th>
+      <td headers="year-2000" aria-describedby="year-2000">16'625</td>
+      <td headers="year-2010" aria-describedby="year-2010">13'427</td>
+      <td headers="year-2011" aria-describedby="year-2011">13'413</td>
+      <td headers="year-2012" aria-describedby="year-2012">13'350</td>
     </tr>
     <tr>
-      <th class="text-left">Fox</th>
-      <td headers="2000">42'221</td>
-      <td headers="2010">31'044</td>
-      <td headers="2011">27'094</td>
-      <td headers="2012">35'616</td>
+      <th class="text-left" role="rowheader">Fox</th>
+      <td headers="year-2000" aria-describedby="year-2000">42'221</td>
+      <td headers="year-2010" aria-describedby="year-2010">31'044</td>
+      <td headers="year-2011" aria-describedby="year-2011">27'094</td>
+      <td headers="year-2012" aria-describedby="year-2012">35'616</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
+      <!-- In <tfoot> : td => $smoke / th => $white -->
       <th></th>
-      <td headers="2000">63'006</td>
-      <td headers="2010">52'118</td>
-      <td headers="2011">45'233</td>
-      <td headers="2012">59'616</td>
+      <td headers="year-2000">2000</td>
+      <td headers="year-2010">2010</td>
+      <td headers="year-2011">2011</td>
+      <td headers="year-2012">2012</td>
     </tr>
   </tfoot>
 </table>
@@ -380,53 +386,54 @@ Some tables can be expanded to show details of a data set
 <table class="table table-bordered text-right">
   <caption>Game animals shot in Switzerland</caption>
   <thead>
-    <tr>
+    <tr role="columnheader">
+      <!-- In <thead> : td => $white / th => $smoke -->
       <td></td>
-      <th>2000</th>
-      <th>2010</th>
-      <th>2011</th>
-      <th>2012</th>
+      <th id="year-2000">2000</th>
+      <th id="year-2010">2010</th>
+      <th id="year-2011">2011</th>
+      <th id="year-2012">2012</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th class="text-left icon icon--before icon--right" data-toggle="collapse" data-target="#animals">Animals</th>
-      <td>63'006</td>
-      <td>52'118</td>
-      <td>45'233</td>
-      <td>59'616</td>
+      <th role="rowheader" class="text-left icon icon--before icon--right" data-toggle="collapse" data-target="#animals">Animals</th>
+      <td headers="year-2000" aria-describedby="year-2000">63'006</td>
+      <td headers="year-2010" aria-describedby="year-2010">52'118</td>
+      <td headers="year-2011" aria-describedby="year-2011">45'233</td>
+      <td headers="year-2012" aria-describedby="year-2012">59'616</td>
     </tr>
     <tbody id="animals" class="collapse">
       <tr>
-        <th class="text-left">Boars</th>
-        <td>4'160</td>
-        <td>7'647</td>
-        <td>4'726</td>
-        <td>10'650</td>
+        <th class="text-left" role="rowheader">Boars</th>
+        <td headers="animals year-2000" aria-describedby="animals year-2000">4'160</td>
+        <td headers="animals year-2010" aria-describedby="animals year-2010">7'647</td>
+        <td headers="animals year-2011" aria-describedby="animals year-2011">4'726</td>
+        <td headers="animals year-2012" aria-describedby="animals year-2012">10'650</td>
       </tr>
       <tr>
-        <th class="text-left">Chamois</th>
-        <td>16'625</td>
-        <td>13'427</td>
-        <td>13'413</td>
-        <td>13'350</td>
+        <th class="text-left" role="rowheader">Chamois</th>
+        <td headers="animals year-2000" aria-describedby="animals year-2000">16'625</td>
+        <td headers="animals year-2010" aria-describedby="animals year-2010">13'427</td>
+        <td headers="animals year-2011" aria-describedby="animals year-2011">13'413</td>
+        <td headers="animals year-2012" aria-describedby="animals year-2012">13'350</td>
       </tr>
       <tr>
-        <th class="text-left">Fox</th>
-        <td>42'221</td>
-        <td>31'044</td>
-        <td>27'094</td>
-        <td>35'616</td>
+        <th class="text-left" role="rowheader">Fox</th>
+        <td headers="animals year-2000" aria-describedby="animals year-2000">42'221</td>
+        <td headers="animals year-2010" aria-describedby="animals year-2010">31'044</td>
+        <td headers="animals year-2011" aria-describedby="animals year-2011">27'094</td>
+        <td headers="animals year-2012" aria-describedby="animals year-2012">35'616</td>
       </tr>
     </tbody>
   </tbody>
   <tfoot>
     <tr>
       <th></th>
-      <td>63'006</td>
-      <td>52'118</td>
-      <td>45'233</td>
-      <td>59'616</td>
+      <td headers="year-2000">2000</td>
+      <td headers="year-2010">2010</td>
+      <td headers="year-2011">2011</td>
+      <td headers="year-2012">2012</td>
     </tr>
   </tfoot>
 </table>
@@ -467,23 +474,23 @@ Ruled tables are particularly suitable for presenting simple 1:1 relationships. 
 <table class="table table-simple">
   <caption>Contact</caption>
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>E-mail</th>
+    <tr role="columnheader">
+      <th id="name">Name</th>
+      <th id="mail">E-mail</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Hans Muster</td>
-      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+      <td headers="name" aria-describedby="name">Hans Muster</td>
+      <td headers="mail" aria-describedby="mail"><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
     </tr>
     <tr>
-      <td>Hans Muster</td>
-      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+      <td headers="name" aria-describedby="name">Hans Muster</td>
+      <td headers="mail" aria-describedby="mail"><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
     </tr>
     <tr>
-      <td>Hans Muster</td>
-      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+      <td headers="name" aria-describedby="name">Hans Muster</td>
+      <td headers="mail" aria-describedby="mail"><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
     </tr>
   </tbody>
 </table>
@@ -526,14 +533,16 @@ Unruled tables are suitable for presenting properties, e.g. of a publication. A 
     <div class="col-sm-5">
 
       <table class="table table-naked">
+        <thead>
+          <tr role="columnheader">
+            <th id="name">Name</th>
+            <th id="mail">E-mail</th>
+          </tr>
+        </thead>
         <tbody>
           <tr>
-            <th>Name</th>
-            <td>Hans Muster</td>
-          </tr>
-          <tr>
-            <th>E-mail</th>
-            <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+            <td headers="name" aria-describedby="name">Hans Muster</td>
+            <td headers="mail" aria-describedby="mail"><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
           </tr>
         </tbody>
       </table>

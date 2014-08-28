@@ -190,11 +190,11 @@ category: Base Layout - Tables
   <tfoot>
     <tr>
       <th></th>
-      <td class="highlight right">2007</td>
-      <td class="highlight right">2008</td>
-      <td class="highlight right">2009</td>
-      <td class="highlight right">2010</td>
-      <td class="highlight right">2011</td>
+      <td class="highlight right" headers="year-2007">2007</td>
+      <td class="highlight right" headers="year-2008">2008</td>
+      <td class="highlight right" headers="year-2009">2009</td>
+      <td class="highlight right" headers="year-2010">2010</td>
+      <td class="highlight right" headers="year-2011">2011</td>
     </tr>
   </tfoot>
 </table>
@@ -300,18 +300,18 @@ category: Base Layout - Tables
   <tfoot>
     <tr class="pairwise">
       <th></th>
-      <td class="text-center" colspan="2">2011</td>
-      <td class="text-center" colspan="2">2012</td>
-      <td class="text-center" colspan="2">2013</td>
+      <td class="text-center" colspan="2" headers="year-2011">2011</td>
+      <td class="text-center" colspan="2" headers="year-2012">2012</td>
+      <td class="text-center" colspan="2" headers="year-2013">2013</td>
     </tr>
     <tr>
       <th></th>
-      <td class="text-left">GAV</td>
-      <td class="text-left">unterstellte Arbeit-<br>nehmende</td>
-      <td class="text-left">GAV</td>
-      <td class="text-left">unterstellte Arbeit-<br>nehmende</td>
-      <td class="text-left">GAV</td>
-      <td class="text-left">unterstellte Arbeit-<br>nehmende</td>
+      <td class="text-left" headers="gav-2011">GAV</td>
+      <td class="text-left" headers="labor-participating-2011">unterstellte Arbeit-<br>nehmende</td>
+      <td class="text-left" headers="gav-2012">GAV</td>
+      <td class="text-left" headers="labor-participating-2012">unterstellte Arbeit-<br>nehmende</td>
+      <td class="text-left" headers="gav-2013">GAV</td>
+      <td class="text-left" headers="labor-participating-2013">unterstellte Arbeit-<br>nehmende</td>
     </tr>
   </tfoot>
 </table>
@@ -331,7 +331,7 @@ category: Base Layout - Tables
   <caption>Table with caption (standard table)</caption>
   <thead>
     <tr role="columnheader">
-      <th>Artist</th>
+      <th id="artist">Artist</th>
       <th id="album">Album</th>
       <th id="year" class="text-right">Year</th>
       <th id="price" class="text-right">Price in USD</th>
@@ -390,15 +390,15 @@ category: Base Layout - Tables
   </tbody>
   <tfoot>
     <tr>
-      <td>Artist</td>
-      <td>Album</td>
-      <td class="text-right">Year</td>
-      <td class="text-right">Price in USD</td>
-      <td>Label</td>
-      <td class="text-right">Tracks</td>
-      <td class="text-right"> Length</td>
-      <td>Producer</td>
-      <td>Recorded</td>
+      <td headers="artist">Artist</td>
+      <td headers="album">Album</td>
+      <td headers="year" class="text-right">Year</td>
+      <td headers="price" class="text-right">Price in USD</td>
+      <td headers="label">Label</td>
+      <td headers="tracks" class="text-right">Tracks</td>
+      <td headers="length" class="text-right"> Length</td>
+      <td headers="producer">Producer</td>
+      <td headers="recorded">Recorded</td>
     </tr>
   </tfoot>
 </table>
