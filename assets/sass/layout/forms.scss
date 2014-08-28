@@ -53,8 +53,8 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
     <div class="form-group has-warning">
       <label for="inputPassword3" class="col-sm-2 control-label" id="password">Password</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" aria-labelledby="password error-password">
-        <span class="help-block" id="error-password">Warning, this is not a correct info!</span>
+        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" aria-labelledby="password error-password" aria-invalid="true">
+        <span class="help-block" id="error-password" role="alert">Warning, this is not a correct info!</span>
       </div>
     </div>
 
