@@ -31,7 +31,7 @@ The full form of the Confederation logo is given in the Footer.
 The logo is a CD element. Its use is mandatory, and its representation may not be changed in any way.
 
 ```html_example
-<a href="#" class="brand hidden-xs">
+<a href="#" class="brand hidden-xs" title="go to homepage">
   <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
   <h1>Swiss Confederation<br>Web Guidelines</h1>
 </a>
