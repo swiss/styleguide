@@ -8425,65 +8425,67 @@ The name of the form and the form box must be linked to a label. A label ID may 
 
     <!-- email input -->
     <div class="form-group">
-      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+      <label for="inputEmail3" class="col-sm-2 control-label" id="email">Email</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email" aria-labelledby="email">
       </div>
     </div>
 
     <!-- password input -->
     <div class="form-group has-warning">
-      <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+      <label for="inputPassword3" class="col-sm-2 control-label" id="password">Password</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-        <span class="help-block">Warning, this is not a correct info!</span>
+        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" aria-labelledby="password error-password">
+        <span class="help-block" id="error-password">Warning, this is not a correct info!</span>
       </div>
     </div>
 
     <!-- URL input -->
     <div class="form-group">
-      <label for="inputURL" class="col-sm-2 control-label">Website</label>
+      <label for="inputURL" class="col-sm-2 control-label" id="website">Website</label>
       <div class="col-sm-10">
-        <input type="url" class="form-control" id="inputURL" placeholder="URL">
-        <span class="help-block">Use format "http://www.example.com"</span>
+        <input type="url" class="form-control" id="inputURL" placeholder="URL" aria-labelledby="website url-format">
+        <span class="help-block" id="url-format">Use format "http://www.example.com"</span>
       </div>
     </div>
 
     <!-- file input -->
     <div class="form-group">
-      <label for="file" class="col-sm-2 control-label">Document</label>
+      <label for="file" class="col-sm-2 control-label" id="document">Document</label>
       <div class="col-sm-10">
-        <input type="file" class="form-control" id="file" placeholder="URL">
+        <input type="file" class="form-control" id="file" placeholder="URL" aria-labelledby="document">
       </div>
     </div>
 
     <!-- Checkboxes Vertical -->
     <div class="form-group">
-      <label class="col-sm-2 control-label">Checkbox Vertical</label>
+      <label class="col-sm-2 control-label" id="check-group-1">Checkbox Vertical</label>
       <div class="col-sm-10">
         <div class="checkbox checkbox--left">
-          <input id="checkboxform" type="checkbox">
-          <label for="checkboxform">Remember me</label>
+          <input id="checkboxform" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1">
+          <label id="checkbox-label-1" for="checkboxform">Remember me</label>
         </div>
         <div class="checkbox checkbox--left">
-          <input id="checkboxform2" type="checkbox">
-          <label for="checkboxform2">Accept terms</label>
+          <input id="checkboxform2" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2">
+          <label id="checkbox-label-2" for="checkboxform2">Accept terms</label>
         </div>
       </div>
     </div>
 
     <!-- Checkboxes Horizontal -->
     <div class="form-group">
-      <label class="col-sm-2 control-label">Checkbox Horizontal</label>
+      <label class="col-sm-2 control-label" id="check-group-2">Checkbox Horizontal</label>
       <div class="col-sm-10">
         <label class="checkbox-inline">
           <div class="checkbox checkbox--left">
-            <input id="checkboxform-v" type="checkbox" name="checkbox-v"> <label for="checkboxform-v">Remember me</label>
+            <input id="checkboxform3" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3">
+            <label id="checkbox-label-3" for="checkboxform3">Remember me</label>
           </div>
         </label>
         <label class="checkbox-inline">
           <div class="checkbox checkbox--left">
-            <input id="checkboxform2-v" type="checkbox" name="checkbox-v"> <label for="checkboxform2-v">Remember me</label>
+            <input id="checkboxform4" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4">
+            <label id="checkbox-label-4" for="checkboxform4">Accept terms</label>
           </div>
         </label>
       </div>
@@ -8491,31 +8493,33 @@ The name of the form and the form box must be linked to a label. A label ID may 
 
    <!-- Radio buttons horizontal -->
     <div class="form-group">
-      <label class="col-sm-2 control-label">Radio Horizontal</label>
+      <label class="col-sm-2 control-label" id="radio-group-1">Radio Horizontal</label>
       <div class="col-sm-10">
         <div class="radio radio--left">
-          <input id="radioform" type="radio" name="radio-h">
-          <label for="radioform">Remember me</label>
+          <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1">
+          <label for="radioform" id="radio-label-1">Remember me</label>
         </div>
         <div class="radio radio--left">
-          <input id="radioform2" type="radio" name="radio-h">
-          <label for="radioform2">Don't remember me</label>
+          <input id="radioform2" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-2">
+          <label for="radioform2" id="radio-label-2">Don't remember me</label>
         </div>
       </div>
     </div>
 
     <!-- Radio buttons vertical -->
     <div class="form-group">
-      <label class="col-sm-2 control-label">Radio Vertical</label>
+      <label class="col-sm-2 control-label" id="radio-group-2">Radio Vertical</label>
       <div class="col-sm-10">
         <label class="radio-inline">
           <div class="radio radio--left">
-            <input id="radioform-v" type="radio" name="radio-v"> <label for="radioform-v">Remember me</label>
+            <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-3">
+            <label for="radioform" id="radio-label-3">Remember me</label>
           </div>
         </label>
         <label class="radio-inline">
           <div class="radio radio--left">
-            <input id="radioform2-v" type="radio" name="radio-v"> <label for="radioform2-v">Don't remember me</label>
+            <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-4">
+            <label for="radioform" id="radio-label-4">Remember me</label>
           </div>
         </label>
       </div>
@@ -8534,7 +8538,7 @@ The name of the form and the form box must be linked to a label. A label ID may 
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Sign in</button>
+        <button type="submit" role="button" class="btn btn-default">Sign in</button>
       </div>
     </div>
 
@@ -8543,65 +8547,67 @@ The name of the form and the form box must be linked to a label. A label ID may 
 
     <span class="c">&lt;!-- email input --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputEmail3"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputEmail3"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span> <span class="na">id=</span><span class="s">"email"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputEmail3"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputEmail3"</span> <span class="na">placeholder=</span><span class="s">"Email"</span> <span class="na">aria-labelledby=</span><span class="s">"email"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
     <span class="c">&lt;!-- password input --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group has-warning"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword3"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputPassword3"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span> <span class="na">id=</span><span class="s">"password"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputPassword3"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"help-block"</span><span class="nt">&gt;</span>Warning, this is not a correct info!<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputPassword3"</span> <span class="na">placeholder=</span><span class="s">"Password"</span> <span class="na">aria-labelledby=</span><span class="s">"password error-password"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"help-block"</span> <span class="na">id=</span><span class="s">"error-password"</span><span class="nt">&gt;</span>Warning, this is not a correct info!<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
     <span class="c">&lt;!-- URL input --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputURL"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Website<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"inputURL"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span> <span class="na">id=</span><span class="s">"website"</span><span class="nt">&gt;</span>Website<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"url"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputURL"</span> <span class="na">placeholder=</span><span class="s">"URL"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"help-block"</span><span class="nt">&gt;</span>Use format "http://www.example.com"<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"url"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"inputURL"</span> <span class="na">placeholder=</span><span class="s">"URL"</span> <span class="na">aria-labelledby=</span><span class="s">"website url-format"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"help-block"</span> <span class="na">id=</span><span class="s">"url-format"</span><span class="nt">&gt;</span>Use format "http://www.example.com"<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
     <span class="c">&lt;!-- file input --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Document<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span> <span class="na">id=</span><span class="s">"document"</span><span class="nt">&gt;</span>Document<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"file"</span> <span class="na">placeholder=</span><span class="s">"URL"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"file"</span> <span class="na">placeholder=</span><span class="s">"URL"</span> <span class="na">aria-labelledby=</span><span class="s">"document"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
     <span class="c">&lt;!-- Checkboxes Vertical --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Checkbox Vertical<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span> <span class="na">id=</span><span class="s">"check-group-1"</span><span class="nt">&gt;</span>Checkbox Vertical<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox checkbox--left"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkboxform"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkboxform"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkboxform"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">aria-labelledby=</span><span class="s">"check-group-1 checkbox-label-1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">id=</span><span class="s">"checkbox-label-1"</span> <span class="na">for=</span><span class="s">"checkboxform"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox checkbox--left"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkboxform2"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkboxform2"</span><span class="nt">&gt;</span>Accept terms<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkboxform2"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">aria-labelledby=</span><span class="s">"check-group-1 checkbox-label-2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">id=</span><span class="s">"checkbox-label-2"</span> <span class="na">for=</span><span class="s">"checkboxform2"</span><span class="nt">&gt;</span>Accept terms<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
     <span class="c">&lt;!-- Checkboxes Horizontal --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Checkbox Horizontal<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span> <span class="na">id=</span><span class="s">"check-group-2"</span><span class="nt">&gt;</span>Checkbox Horizontal<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox-inline"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox checkbox--left"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkboxform-v"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox-v"</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkboxform-v"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkboxform3"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">aria-labelledby=</span><span class="s">"check-group-2 checkbox-label-3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">id=</span><span class="s">"checkbox-label-3"</span> <span class="na">for=</span><span class="s">"checkboxform3"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox-inline"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox checkbox--left"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkboxform2-v"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"checkbox-v"</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"checkboxform2-v"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"checkboxform4"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">aria-labelledby=</span><span class="s">"check-group-2 checkbox-label-4"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">id=</span><span class="s">"checkbox-label-4"</span> <span class="na">for=</span><span class="s">"checkboxform4"</span><span class="nt">&gt;</span>Accept terms<span class="nt">&lt;/label&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
@@ -8609,31 +8615,33 @@ The name of the form and the form box must be linked to a label. A label ID may 
 
    <span class="c">&lt;!-- Radio buttons horizontal --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Radio Horizontal<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span> <span class="na">id=</span><span class="s">"radio-group-1"</span><span class="nt">&gt;</span>Radio Horizontal<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio radio--left"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radioform"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-h"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radioform"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radioform"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-h"</span> <span class="na">aria-labelledby=</span><span class="s">"radio-group-1 radio-label-1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radioform"</span> <span class="na">id=</span><span class="s">"radio-label-1"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio radio--left"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radioform2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-h"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radioform2"</span><span class="nt">&gt;</span>Don't remember me<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radioform2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-h"</span> <span class="na">aria-labelledby=</span><span class="s">"radio-group-1 radio-label-2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radioform2"</span> <span class="na">id=</span><span class="s">"radio-label-2"</span><span class="nt">&gt;</span>Don't remember me<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
     <span class="c">&lt;!-- Radio buttons vertical --&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span><span class="nt">&gt;</span>Radio Vertical<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"col-sm-2 control-label"</span> <span class="na">id=</span><span class="s">"radio-group-2"</span><span class="nt">&gt;</span>Radio Vertical<span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-10"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"radio-inline"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio radio--left"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radioform-v"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-v"</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radioform-v"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radioform"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-h"</span> <span class="na">aria-labelledby=</span><span class="s">"radio-group-2 radio-label-3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radioform"</span> <span class="na">id=</span><span class="s">"radio-label-3"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"radio-inline"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio radio--left"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radioform2-v"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-v"</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radioform2-v"</span><span class="nt">&gt;</span>Don't remember me<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"radioform"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio-h"</span> <span class="na">aria-labelledby=</span><span class="s">"radio-group-2 radio-label-4"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"radioform"</span> <span class="na">id=</span><span class="s">"radio-label-4"</span><span class="nt">&gt;</span>Remember me<span class="nt">&lt;/label&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/label&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
@@ -8652,7 +8660,7 @@ The name of the form and the form box must be linked to a label. A label ID may 
 
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-offset-2 col-sm-10"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/button&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 
