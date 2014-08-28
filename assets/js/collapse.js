@@ -28,7 +28,7 @@
     $toggleButton.each(function () {
       var $collapseTarget = $(this).data('target');
       if ($collapseTarget === undefined) {
-        var $collapseTarget = $(this).attr('href');
+        $collapseTarget = $(this).attr('href');
       }
       $(this).removeClass('active').removeClass('icon--root').addClass('icon--greater').attr('aria-selected', 'false').attr('aria-expended', 'false');
       if($($collapseTarget).hasClass('in')){
@@ -40,7 +40,7 @@
   function checkCollapseStatus($that) {
     var $collapseTarget = $that.data('target');
     if ($collapseTarget === undefined) {
-      var $collapseTarget = $that.attr('href');
+      $collapseTarget = $that.attr('href');
     }
     $that.removeClass('active').removeClass('icon--root').addClass('icon--greater').attr('aria-selected', 'false').attr('aria-expended', 'false');
     if($($collapseTarget).hasClass('in')){
