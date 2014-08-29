@@ -28,11 +28,12 @@ The paging function allows the user to browse through a large number of elements
   
   - added `aria-selected="true"` and `aria-disabled="true"` for accessibility
   - added `title`to empty link (link only with icon)
+  - added `.clearfix`and `.pull-left`inside of `.pagination-container`
 </div>
 
 ```html_example
-<nav class="pagination-container">
-  <span>Object - 2 of 3</span>
+<nav class="pagination-container clearfix">
+  <span class="pull-left">Object - 2 of 3</span>
   <ul class="pull-right pagination">
     <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
     <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>

@@ -37,8 +37,8 @@ When the user clicks on an image, a detailed view is opened either in a lightbox
 <h1>Title of gallery</h1>
 <br>
 <hr>
-<nav class="pagination-container">
-  <span>Object - 2 of 3</span>
+<nav class="pagination-container clearfix">
+  <span class="pull-left">Object - 2 of 3</span>
   <ul class="pull-right pagination">
     <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
     <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
@@ -186,8 +186,8 @@ When the user clicks on an image, a detailed view is opened either in a lightbox
 
 </div>
 <hr>
-<nav class="pagination-container">
-  <span>Object - 2 of 3</span>
+<nav class="pagination-container clearfix">
+  <span class="pull-left">Object - 2 of 3</span>
   <ul class="pull-right pagination">
     <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
     <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
