@@ -19,7 +19,9 @@ unbedingt Reihenfolge behalten
   .icon--print,
   .social-sharing,
   form,
-  .nav-process {
+  .nav-process,
+  .carousel-indicators,
+  .carousel-control {
     display: none;
   }
   header {
@@ -46,4 +48,11 @@ unbedingt Reihenfolge behalten
   tr, img {
     page-break-inside: avoid;
   }
+  .carousel {
+    overflow: visible;
+    .item {
+      height: auto !important;
+    }
+  }
+  .carousel-inner {overflow: visible;}
 }
