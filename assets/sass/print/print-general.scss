@@ -40,4 +40,7 @@ unbedingt Reihenfolge behalten
   a.carousel-control:after,
   a[data-toggle=tab]:after,
   a.icon--trash:after {content: '' !important;}
+  tr, img {
+    page-break-inside: avoid;
+  }
 }
