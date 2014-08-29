@@ -3,7 +3,7 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
-* 3.0.0
+* 2.1.5
  * #198 Add title to brand link for accessibility
  * #199 Add title to empty link
  * #200 Add button insted of meanless span for site search field
