@@ -55,4 +55,8 @@ unbedingt Reihenfolge behalten
     }
   }
   .carousel-inner {overflow: visible;}
+  .scroll-y, .news-feed .scroll-y {
+    overflow: visible !important;
+    max-height: auto !important;
+  }
 }
