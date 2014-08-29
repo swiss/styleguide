@@ -38,6 +38,7 @@ unbedingt Reihenfolge behalten
     text-decoration: underline;
   }
   a:after{content:" (" attr(href) ") " !important;font-size:0.8em;font-weight:normal; }
+  a[href*="tel:"]:after {content: none !important;}
   .breadcrumb li:not(:nth-last-child(3)) a:after,
   a.carousel-control:after,
   a[data-toggle=tab]:after,
