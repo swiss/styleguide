@@ -27,7 +27,7 @@ The Confederation logo with the coat of arms and the four-language wordmark as w
 <div class="container-fluid">
 
   <header>
-    <a href="#" class="brand hidden-xs">
+    <a href="#" class="brand hidden-xs" title="go to homepage">
       <img src="img/logo-CH.png" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
       <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
     </a>
@@ -63,4 +63,89 @@ header {
   height: 5px;
   width: 100%;
   background: $venetian-red;
+}
+
+/*doc
+---
+title: Accessibility navigation
+name: aa-access-nav
+category: Navigation modules - Header
+---
+
+The accessibility navigation has to be placed right after the body tag. It is used to give quick access to pages and page areas. It is invisible, except when the link is focused.
+
+<br>
+<div class="alert alert-warning">
+**3.0.0**
+  
+  - added `.access-keys` for better accessibility
+  - added `#content`to main page content
+  - added `#main-navigation` to main page navigation
+</div>
+
+```html
+<ul class="access-keys" role="navigation">
+  <li><a href="index.html" accesskey="0">Homepage</a></li> <!-- Link to home page -->
+  <li><a href="#main-navigation" accesskey="1">Main navigation</a></li> <!-- Link to main navigation -->
+  <li><a href="#content" accesskey="2">Content</a></li> <!-- Link to page content -->
+  <li><a href="contact.html" accesskey="3">Contact page</a></li> <!-- Link to contact page -->
+  <li><a href="sitemap.html" accesskey="4">Sitemap</a></li> <!-- Link to sitemap page or page area -->
+  <li><a href="#search-field" accesskey="5">Search</a></li> <!-- Link to search field -->
+  <!-- Other smart links can be added for main website functionalities -->
+</ul>
+```
+
+```html_example
+<!-- Right after body tag -->
+<ul class="access-keys" role="navigation">
+  <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
+  <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
+  <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
+  <li><a href="contact.html" accesskey="3">Contact page</a></li><!-- Link to contact page -->
+  <li><a href="sitemap.html" accesskey="4">Sitemap</a></li><!-- Link to sitemap page or page area -->
+  <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
+  <!-- Other smart links can be added for main website functionalities -->
+</ul>
+
+<!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+  <header>
+    <!-- All header stuff -->
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
+```
+*/
+
+.access-keys {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  li {display: inline;}
+  li a, li a:visited {
+    display: block;
+    position: absolute;
+    left: -3000px;
+    top: -2000px;
+    width: 0px;
+    height: 0px;
+    z-index: 200;
+  }
+  li a:focus {
+    position: absolute;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: block;
+    font-size: 1.3em;
+    height: auto;
+    width: auto;
+    top: 0;
+    left: 0;
+    line-height: 1.2em;
+    padding: 5px 8px;
+    z-index: 10000000;
+    text-decoration: none;
+  }
 }

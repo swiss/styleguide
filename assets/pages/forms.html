@@ -10,9 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin.ch - Homepage with Global Nav Example</title>
 
-  <link rel="stylesheet" href="../css/vendors.min.css">
-  <link rel="stylesheet" href="../css/admin.min.css">
-  <link rel="stylesheet" href="../css/print.min.css">
+  <link rel="stylesheet" href="../css/vendors.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/print.css">
 
 <!-- Favicons -->
     <link rel="shortcut icon" href="../img/ico/favicon.ico">
@@ -45,6 +45,15 @@
   </script>
 </head>
 <body>
+  <ul class="access-keys" role="navigation">
+    <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
+    <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
+    <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
+    <li><a href="contact.html" accesskey="3">Contact page</a></li><!-- Link to contact page -->
+    <li><a href="sitemap.html" accesskey="4">Sitemap</a></li><!-- Link to sitemap page or page area -->
+    <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
+    <!-- Other smart links can be added for main website functionalities -->
+  </ul>
   <div class="container container-main">
     <header>
       <div class="clearfix">
@@ -90,7 +99,7 @@
           <h2 class="sr-only">Language selection</h2>
           <nav class="nav-lang">
             <ul>
-              <li><a class="active" href="#">DE</a></li>
+              <li><a class="active" aria-selected="true" href="#">DE</a></li>
               <li><a href="#">FR</a></li>
               <li><a href="#">IT</a></li>
               <li><a class="disabled" href="#">RM</a></li>
@@ -109,7 +118,7 @@
         </section>
       </div>
 
-      <a href="#" class="brand hidden-xs">
+      <a href="#" class="brand hidden-xs" title="go to homepage">
         <img src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
         <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
       </a>
@@ -147,7 +156,7 @@
 
     </header>
 
-    <nav class="nav-main yamm navbar" role="navigation">
+    <nav class="nav-main yamm navbar" role="navigation" id="main-navigation">
       <h2 class="sr-only">Navigation</h2>
       <section class="nav-mobile">
         <div class="table-row">
@@ -169,7 +178,7 @@
                     <!-- the .list-emphasis class is optionnal -->
                     <li class="list-emphasis"><a href="#">Drinks</a></li>
                     <!-- add the .list-sub class if the list has some sub-lists -->
-                    <li class="list-sub"><a href="#">Mineral water</a>
+                    <li class="list-sub"><a href="#">Mineral water or a longer title will work</a>
                       <!-- sub-list element -->
                       <nav class="drilldown-sub">
                         <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
@@ -180,7 +189,7 @@
                         </ul>
                       </nav>
                     </li>
-                    <li class="active"><a href="#">Wine</a></li>
+                    <li class="active"><a aria-selected="true" href="#">Wine</a></li>
                     <li><a href="#">Beer</a></li>
                     <li><a href="#">Spirits</a></li>
                   </ul>
@@ -205,7 +214,7 @@
       <!-- The tab navigation -->
       <ul class="nav navbar-nav">
         <li class="dropdown current yamm-fw">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+          <a href="#" aria-selected="true" class="dropdown-toggle" data-toggle="dropdown">News</a>
           <ul class="dropdown-menu" role="menu">
             <li>
               <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
@@ -249,7 +258,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <ol class="breadcrumb">
+          <ol class="breadcrumb" role="navigation" aria-label="breadcrumbs">
             <li><a href="#">Home page EDA</a></li>
             <span class="icon icon--greater"></span>
             <li><a href="#">Country & Travel Information</a></li>
@@ -262,7 +271,7 @@
             <span class="icon icon--greater"></span>
             <li><a href="#">Bilateral Relations</a></li>
             <span class="icon icon--greater"></span>
-            <li class="active">Title of the active page</li>
+            <li class="active" aria-selected="true">Title of the active page</li>
           </ol>
         </div>
       </div>
@@ -273,7 +282,7 @@
     <div class="container-fluid">
       <div class="row">
 
-        <div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+        <div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3" id="content">
           <div class="row">
 
             <div class="col-md-8">
@@ -295,80 +304,156 @@
               </nav>
               <br>
               <form class="form-horizontal" role="form">
+
+                <!-- email input -->
                 <fieldset>
-                  <legend>Legend of fieldset</legend>
-
-                  <div class="alert alert-warning">
-                    Alert info!
-                  </div>
-
-                  <!-- email input -->
+                  <legend class="hidden-legend">Email</legend>
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
-                    <div class="col-sm-9">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    <label for="inputEmail3" class="col-sm-2 control-label" id="email">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email" aria-labelledby="email">
                     </div>
                   </div>
+                </fieldset>
 
-                  <!-- password input -->
+                <!-- password input -->
+                <fieldset>
+                  <legend class="hidden-legend">Password</legend>
                   <div class="form-group has-warning">
-                    <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
-                    <div class="col-sm-9">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                      <span class="help-block">Warning, this is not a correct info!</span>
+                    <label for="inputPassword3" class="col-sm-2 control-label" id="password">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password" aria-labelledby="password error-password" aria-invalid="true">
+                      <span class="help-block" id="error-password" role="alert">Warning, this is not a correct info!</span>
                     </div>
                   </div>
+                </fieldset>
 
-                  <!-- URL input -->
+                <!-- URL input -->
+                <fieldset>
+                  <legend class="hidden-legend">Website</legend>
                   <div class="form-group">
-                    <label for="inputURL" class="col-sm-3 control-label">Website</label>
-                    <div class="col-sm-9">
-                      <input type="url" class="form-control" id="inputURL" placeholder="URL">
-                      <span class="help-block">Use format "http://www.example.com"</span>
+                    <label for="inputURL" class="col-sm-2 control-label" id="website">Website</label>
+                    <div class="col-sm-10">
+                      <input type="url" class="form-control" id="inputURL" placeholder="URL" aria-labelledby="website url-format">
+                      <span class="help-block" id="url-format">Use format "http://www.example.com"</span>
                     </div>
                   </div>
+                </fieldset>
 
-                  <!-- file input -->
+                <!-- file input -->
+                <fieldset>
+                  <legend class="hidden-legend">Document</legend>
                   <div class="form-group">
-                    <label for="file" class="col-sm-3 control-label">Document</label>
-                    <div class="col-sm-9">
-                      <input type="file" class="form-control" id="file" placeholder="URL">
+                    <label for="file" class="col-sm-2 control-label" id="document">Document</label>
+                    <div class="col-sm-10">
+                      <input type="file" class="form-control" id="file" placeholder="URL" aria-labelledby="document">
                     </div>
                   </div>
+                </fieldset>
 
-                  <!-- checkboxes -->
+                <!-- Checkboxes Vertical -->
+                <fieldset>
+                  <legend class="hidden-legend">Terms</legend>
                   <div class="form-group">
-                    <div class="col-sm-offset-3 col-sm-9">
+                    <label class="col-sm-2 control-label" id="check-group-1">Terms</label>
+                    <div class="col-sm-10">
                       <div class="checkbox checkbox--left">
-                        <input id="checkboxform" type="checkbox">
-                        <label for="checkboxform">Remember me</label>
+                        <input id="checkboxform" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1">
+                        <label id="checkbox-label-1" for="checkboxform">Remember me</label>
                       </div>
                       <div class="checkbox checkbox--left">
-                        <input id="checkboxform2" type="checkbox">
-                        <label for="checkboxform2">Accept terms</label>
+                        <input id="checkboxform2" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2">
+                        <label id="checkbox-label-2" for="checkboxform2">Accept terms</label>
                       </div>
                     </div>
                   </div>
+                </fieldset>
 
-                  <!-- Dropdown -->
+                <!-- Checkboxes Horizontal -->
+                <fieldset>
+                  <legend class="hidden-legend">Terms</legend>
                   <div class="form-group">
-                    <label class="col-sm-3 control-label" for="dropdown">Dropdown</label>
-                    <div class="col-sm-9">
+                    <label class="col-sm-2 control-label" id="check-group-2">Terms</label>
+                    <div class="col-sm-10">
+                      <label class="checkbox-inline">
+                        <div class="checkbox checkbox--left">
+                          <input id="checkboxform3" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3">
+                          <label id="checkbox-label-3" for="checkboxform3">Remember me</label>
+                        </div>
+                      </label>
+                      <label class="checkbox-inline">
+                        <div class="checkbox checkbox--left">
+                          <input id="checkboxform4" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4">
+                          <label id="checkbox-label-4" for="checkboxform4">Accept terms</label>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+               <!-- Radio buttons horizontal -->
+                <fieldset>
+                  <legend class="hidden-legend">Terms</legend>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" id="radio-group-1">Terms</label>
+                    <div class="col-sm-10">
+                      <div class="radio radio--left">
+                        <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1">
+                        <label for="radioform" id="radio-label-1">Remember me</label>
+                      </div>
+                      <div class="radio radio--left">
+                        <input id="radioform2" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-2">
+                        <label for="radioform2" id="radio-label-2">Don't remember me</label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- Radio buttons vertical -->
+                <fieldset>
+                  <legend class="hidden-legend">Terms</legend>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" id="radio-group-2">Terms</label>
+                    <div class="col-sm-10">
+                      <label class="radio-inline">
+                        <div class="radio radio--left">
+                          <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-3">
+                          <label for="radioform" id="radio-label-3">Remember me</label>
+                        </div>
+                      </label>
+                      <label class="radio-inline">
+                        <div class="radio radio--left">
+                          <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-4">
+                          <label for="radioform" id="radio-label-4">Remember me</label>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- Dropdown -->
+                <fieldset>
+                  <legend class="hidden-legend">Dropdown</legend>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="dropdown">Dropdown</label>
+                    <div class="col-sm-10">
                       <select id="dropdown" class="form-control">
                         <option>Option 1</option>
                         <option>Option 2</option>
                       </select>
                     </div>
                   </div>
+                </fieldset>
 
                   <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-9">
-                      <button type="submit" class="btn btn-secondary"><span class="icon icon--close"></span></button>
-                      <button type="submit" class="btn btn-default">Cancel</button>
-                      <button type="button" class="btn btn-primary">Validate</button>
+                      <button type="submit" role="button" class="btn btn-secondary"><span class="icon icon--close"></span></button>
+                      <button type="submit" role="button" class="btn btn-default">Cancel</button>
+                      <button type="button" role="button" class="btn btn-primary">Validate</button>
                     </div>
                   </div>
                 </fieldset>
+
               </form>
             </div>
 
@@ -481,7 +566,7 @@
                 <!-- the .list-emphasis class is optionnal -->
                 <li class="list-emphasis"><a href="#">Drinks</a></li>
                 <!-- add the .list-sub class if the list has some sub-lists -->
-                <li class="list-sub"><a href="#">Mineral water</a>
+                <li class="list-sub"><a href="#">Mineral water or a longer title will work</a>
                   <!-- sub-list element -->
                   <nav class="drilldown-sub">
                     <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
@@ -492,7 +577,7 @@
                     </ul>
                   </nav>
                 </li>
-                <li class="active"><a href="#">Wine</a></li>
+                <li class="active"><a aria-selected="true" href="#">Wine</a></li>
                 <li><a href="#">Beer</a></li>
                 <li><a href="#">Spirits</a></li>
               </ul>

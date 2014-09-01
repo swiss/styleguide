@@ -126,10 +126,16 @@ Finnaly you will have to rebuild some gems
 
 ### Build the stylguide
 
-Run gulp
+Run gulp once
 
 ```
 $ gulp
+```
+
+Run gulp during development process
+
+```
+$ gulp serve
 ```
 
 ## Grid System

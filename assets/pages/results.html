@@ -10,9 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin.ch - Homepage with Global Nav Example</title>
 
-  <link rel="stylesheet" href="../css/vendors.min.css">
-  <link rel="stylesheet" href="../css/admin.min.css">
-  <link rel="stylesheet" href="../css/print.min.css">
+  <link rel="stylesheet" href="../css/vendors.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/print.css">
 
 <!-- Favicons -->
     <link rel="shortcut icon" href="../img/ico/favicon.ico">
@@ -44,6 +44,15 @@
   </script>
 </head>
 <body>
+  <ul class="access-keys" role="navigation">
+    <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
+    <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
+    <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
+    <li><a href="contact.html" accesskey="3">Contact page</a></li><!-- Link to contact page -->
+    <li><a href="sitemap.html" accesskey="4">Sitemap</a></li><!-- Link to sitemap page or page area -->
+    <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
+    <!-- Other smart links can be added for main website functionalities -->
+  </ul>
   <div class="container container-main">
     <header>
       <div class="clearfix">
@@ -89,7 +98,7 @@
           <h2 class="sr-only">Language selection</h2>
           <nav class="nav-lang">
             <ul>
-              <li><a class="active" href="#">DE</a></li>
+              <li><a class="active" aria-selected="true" href="#">DE</a></li>
               <li><a href="#">FR</a></li>
               <li><a href="#">IT</a></li>
               <li><a class="disabled" href="#">RM</a></li>
@@ -108,7 +117,7 @@
         </section>
       </div>
 
-      <a href="#" class="brand hidden-xs">
+      <a href="#" class="brand hidden-xs" title="go to homepage">
         <img src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
         <h1>Department of the Environment,<br> Transport, Energy and Communications</h1>
       </a>
@@ -146,7 +155,7 @@
 
     </header>
 
-    <nav class="nav-main yamm navbar" role="navigation">
+    <nav class="nav-main yamm navbar" role="navigation" id="main-navigation">
   <h2 class="sr-only">Navigation</h2>
       <section class="nav-mobile">
         <div class="table-row">
@@ -168,7 +177,7 @@
                     <!-- the .list-emphasis class is optionnal -->
                     <li class="list-emphasis"><a href="#">Drinks</a></li>
                     <!-- add the .list-sub class if the list has some sub-lists -->
-                    <li class="list-sub"><a href="#">Mineral water</a>
+                    <li class="list-sub"><a href="#">Mineral water or a longer title will work</a>
                       <!-- sub-list element -->
                       <nav class="drilldown-sub">
                         <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
@@ -179,7 +188,7 @@
                         </ul>
                       </nav>
                     </li>
-                    <li class="active"><a href="#">Wine</a></li>
+                    <li class="active"><a aria-selected="true" href="#">Wine</a></li>
                     <li><a href="#">Beer</a></li>
                     <li><a href="#">Spirits</a></li>
                   </ul>
@@ -204,7 +213,7 @@
       <!-- The tab navigation -->
       <ul class="nav navbar-nav">
         <li class="dropdown current yamm-fw">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+          <a href="#" aria-selected="true" class="dropdown-toggle" data-toggle="dropdown">News</a>
           <ul class="dropdown-menu" role="menu">
             <li>
               <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
@@ -248,7 +257,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <ol class="breadcrumb">
+          <ol class="breadcrumb" role="navigation" aria-label="breadcrumbs">
             <li><a href="#">Home page EDA</a></li>
             <span class="icon icon--greater"></span>
             <li><a href="#">Country & Travel Information</a></li>
@@ -261,7 +270,7 @@
             <span class="icon icon--greater"></span>
             <li><a href="#">Bilateral Relations</a></li>
             <span class="icon icon--greater"></span>
-            <li class="active">Title of the active page</li>
+            <li class="active" aria-selected="true">Title of the active page</li>
           </ol>
         </div>
       </div>
@@ -271,7 +280,7 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-8" id="content">
           <a href="#" onclick="window.print()" class="icon icon--before icon--print pull-right"></a>
           <h1 class="text-inline">Search</h1>
 
@@ -301,18 +310,17 @@
             <div class="tab-pane active" id="contentPages">
 
               <!-- Header pagination -->
-              <nav class="pagination-container">
-                <span>Object - 2 of 28</span>
+              <nav class="pagination-container clearfix">
+                <span class="pull-left">Object - 2 of 3</span>
                 <ul class="pull-right pagination">
-                  <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
-                  <li class="separator"><a href="#">Previous</a></li>
-                  <li><a href="#">1</a></li>
-                  <li class="active"><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
+                  <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
+                  <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+                  <li class="active"><a aria-selected="true" href="#">1</a></li>
+                  <li><a href="#">2</a></li>
                   <li>...</li>
-                  <li><a href="#">28</a></li>
+                  <li><a href="#">17</a></li>
                   <li class="separator-left"><a href="#">Next</a></li>
-                  <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
+                  <li class="separator-left"><a href="#" title="step forward"><span class="icon icon--step-forward"></span></a></li>
                 </ul>
               </nav>
 
@@ -342,17 +350,16 @@
 
               <!-- Footer pagination -->
               <nav class="pagination-container pagination-end">
-                <span>Object - 2 of 28</span>
+                <span class="pull-left">Object - 2 of 3</span>
                 <ul class="pull-right pagination">
-                  <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
-                  <li class="separator"><a href="#">Previous</a></li>
-                  <li><a href="#">1</a></li>
-                  <li class="active"><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
+                  <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
+                  <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+                  <li class="active"><a aria-selected="true" href="#">1</a></li>
+                  <li><a href="#">2</a></li>
                   <li>...</li>
-                  <li><a href="#">28</a></li>
+                  <li><a href="#">17</a></li>
                   <li class="separator-left"><a href="#">Next</a></li>
-                  <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
+                  <li class="separator-left"><a href="#" title="step forward"><span class="icon icon--step-forward"></span></a></li>
                 </ul>
               </nav>
 
@@ -360,18 +367,17 @@
             <div class="tab-pane" id="newsPages">
 
               <!-- Header pagination -->
-              <nav class="pagination-container">
-                <span>Object - 2 of 28</span>
+              <nav class="pagination-container clearfix">
+                <span class="pull-left">Object - 2 of 3</span>
                 <ul class="pull-right pagination">
-                  <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
-                  <li class="separator"><a href="#">Previous</a></li>
-                  <li><a href="#">1</a></li>
-                  <li class="active"><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
+                  <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
+                  <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+                  <li class="active"><a aria-selected="true" href="#">1</a></li>
+                  <li><a href="#">2</a></li>
                   <li>...</li>
-                  <li><a href="#">28</a></li>
+                  <li><a href="#">17</a></li>
                   <li class="separator-left"><a href="#">Next</a></li>
-                  <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
+                  <li class="separator-left"><a href="#" title="step forward"><span class="icon icon--step-forward"></span></a></li>
                 </ul>
               </nav>
 
@@ -392,17 +398,16 @@
 
               <!-- Footer pagination -->
               <nav class="pagination-container pagination-end">
-                <span>Object - 2 of 28</span>
+                <span class="pull-left">Object - 2 of 3</span>
                 <ul class="pull-right pagination">
-                  <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
-                  <li class="separator"><a href="#">Previous</a></li>
-                  <li><a href="#">1</a></li>
-                  <li class="active"><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
+                  <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
+                  <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+                  <li class="active"><a aria-selected="true" href="#">1</a></li>
+                  <li><a href="#">2</a></li>
                   <li>...</li>
-                  <li><a href="#">28</a></li>
+                  <li><a href="#">17</a></li>
                   <li class="separator-left"><a href="#">Next</a></li>
-                  <li class="separator-left"><a href="#"><span class="icon icon--step-forward"></span></a></li>
+                  <li class="separator-left"><a href="#" title="step forward"><span class="icon icon--step-forward"></span></a></li>
                 </ul>
               </nav>
             </div>

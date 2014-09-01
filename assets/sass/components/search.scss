@@ -14,7 +14,7 @@
 /*doc
 ---
 title: Site Search
-name: -site-search
+name: c-site-search
 category: Navigation modules - Header
 ---
 
@@ -68,16 +68,21 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
       display: none;
     }
   }
+  button {
+    background: transparent;
+    border: none;
+  }
   .icon {
     display: inline-block;
     position: absolute;
-    top: 2px;
+    top: -1px;
     z-index: 999;
     &:hover {
       cursor: pointer;
     }
   }
-  .icon--search {left: 10px;}
+  .icon--search {left: 3px;}
+  span.icon--search {display: none;}
   .icon--close {
     color: $white;
     transition: color 0.3s;
@@ -177,10 +182,10 @@ Search results are shown in semantically grouped tabs. The categories (groupings
   <div class="tab-pane active" id="contentPages">
 
     <!-- Header pagination -->
-    <nav class="pagination-container">
+    <nav class="pagination-container clearfix">
       <span>Object - 2 of 28</span>
       <ul class="pull-right pagination">
-        <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
+        <li class="separator"><a href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
         <li class="separator"><a href="#">Previous</a></li>
         <li><a href="#">1</a></li>
         <li class="active"><a href="#">2</a></li>
@@ -220,7 +225,7 @@ Search results are shown in semantically grouped tabs. The categories (groupings
     <nav class="pagination-container pagination-end">
       <span>Object - 2 of 28</span>
       <ul class="pull-right pagination">
-        <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
+        <li class="separator"><a href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
         <li class="separator"><a href="#">Previous</a></li>
         <li><a href="#">1</a></li>
         <li class="active"><a href="#">2</a></li>
@@ -236,10 +241,10 @@ Search results are shown in semantically grouped tabs. The categories (groupings
   <div class="tab-pane" id="newsPages">
 
     <!-- Header pagination -->
-    <nav class="pagination-container">
+    <nav class="pagination-container clearfix">
       <span>Object - 2 of 28</span>
       <ul class="pull-right pagination">
-        <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
+        <li class="separator"><a href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
         <li class="separator"><a href="#">Previous</a></li>
         <li><a href="#">1</a></li>
         <li class="active"><a href="#">2</a></li>
@@ -270,7 +275,7 @@ Search results are shown in semantically grouped tabs. The categories (groupings
     <nav class="pagination-container pagination-end">
       <span>Object - 2 of 28</span>
       <ul class="pull-right pagination">
-        <li class="separator"><a href="#"><span class="icon icon--step-backward"></span></a></li>
+        <li class="separator"><a href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
         <li class="separator"><a href="#">Previous</a></li>
         <li><a href="#">1</a></li>
         <li class="active"><a href="#">2</a></li>

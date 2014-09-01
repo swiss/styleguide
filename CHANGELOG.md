@@ -3,6 +3,24 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.1.5
+ * #182 Fix print stuff
+ * #198 Add title to brand link for accessibility
+ * #199 Add title to empty link
+ * #200 Add button insted of meanless span for site search field
+ * #202 add `<fieldset>` and `<legend class="hidden">` around `.form-group`
+ * #203 add ARIA roles on form error
+ * #204 review form accessibility with label and help text
+ * #207 add access nav with accesskeys
+ * #209 remove useless br tag
+ * #211 Fix breadcrumb accessibility
+ * #219 tables fit to accessbility standards
+ * #224 add Paypal access plugin and fix all collapse elements
+ * #225 add `aria-selected="true"`for active navigation`
+
+* 2.1.5 ()
+ * #183 navigation list text overflow fix demonstrate in exemple page
+
 * 2.1.4 (2014-07-24)
  * #190 Fix IE8 compatibility
  * #175 add site-map toggle for collapse on tablet fix

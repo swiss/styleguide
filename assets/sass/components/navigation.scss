@@ -48,7 +48,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
 <br>
 <div class="alert alert-warning">
-  **2.1.0:**
+**2.1.0:**
 
   - added the `.nav-mobile` section to the beginning of the `.list-group` element
 
@@ -57,6 +57,11 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   - changed `.active` class to `.current` for current page highlight in the menu
   - added `h2.sr-only` for more screen reader clarity
   - added h2 and label to search field on mobile
+
+**3.0.0:**
+  
+  - added `aria-selected="true"` for current active link
+  - added `id="main-navigation"`for accessibility nav
 </div>
 
 ```html_example
@@ -65,7 +70,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   <header>
 
   </header>
-  <nav class="nav-main yamm navbar" role="navigation">
+  <nav class="nav-main yamm navbar" role="navigation" id="main-navigation">
     <h2 class="sr-only">Navigation</h2>
     <!-- Mobile Navigation (hidden on desktop) -->
     <section class="nav-mobile">
@@ -180,7 +185,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
         </ul><!-- Dropdown `ul` end -->
       </li>
       <li class="current dropdown yamm-fw">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+        <a aria-selected="true" href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
         <ul class="dropdown-menu" role="menu">
           <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
           <li>
@@ -549,9 +554,13 @@ The design of the language navigation for cases, where their are more then five 
 
   - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
 
-**2.1.2:**
+  **2.1.2:**
 
   - added `h2.sr-only` for more screen reader clarity
+
+  **3.0.0**
+  
+  - added `aria-selected="true"` for active accessibility
 </div>
 
 ```html_example
@@ -565,7 +574,7 @@ The design of the language navigation for cases, where their are more then five 
       <h2 class="sr-only">Language selection</h2>
       <nav class="nav-lang">
         <ul>
-          <li><a class="active" href="#">DE</a></li>
+          <li><a class="active" aria-selected="true" href="#">DE</a></li>
           <li><a href="#">FR</a></li>
           <li><a href="#">IT</a></li>
           <li><a class="disabled" href="#">RM</a></li>
@@ -865,6 +874,10 @@ Navigation below the content level on a smartphone with links to the home page, 
 
   - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
   - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
+
+**3.0.0:**
+  
+  - added `aria-selected="true"` for current link
 </div>
 
 ```html_example
@@ -892,7 +905,7 @@ Navigation below the content level on a smartphone with links to the home page, 
                 </ul>
               </nav>
             </li>
-            <li class="active"><a href="#">Wine</a></li>
+            <li class="active"><a aria-selected="true" href="#">Wine</a></li>
             <li><a href="#">Beer</a></li>
             <li><a href="#">Spirits</a></li>
           </ul>
@@ -1046,6 +1059,13 @@ The contents of the page are adapted to show the selection made in the faceted n
 
 On smartphones, the navigation is accessed via a filter link, and it behaves in the same way as the faceted navigation for desktop computers. Unlike in the desktop version, the contents of the page are only updated when the user closes the faceted navigation.
 
+<br>
+<div class="alert alert-warning">
+**3.0.0:**
+  
+  - added `aria-selected="true"` for current link
+</div>
+
 ```html_example
 <div class="container-fluid">
   <div class="row">
@@ -1061,7 +1081,7 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
               <li>
                 <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#images">Images <span class="badge">1285</span></button>
                 <ul id="images" class="collapse in">
-                  <li class="active"><a href="#">Aerial image</a>  <button type="button" class="close">&times;</button></li>
+                  <li class="active"><a aria-selected="true" href="#">Aerial image</a>  <button type="button" class="close">&times;</button></li>
                 </ul>
               </li>
               <li><a href="#">Landscape models</a> <span class="badge">245</span></li>

@@ -36,7 +36,7 @@ if (typeof searchData != "undefined") {
 
     // Insert the icons
     $('<span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>').insertAfter($searchField);
-    $('.form-search').append('<span class="icon icon--search"></span>');
+    $('.form-search').append('<button class="icon icon--search icon--before"></button>');
 
   }) (jQuery, searchData);
 }
@@ -98,7 +98,7 @@ function carouselInit ($) {
 
   // Normal Collapse
 
-  var $toggleButton = $('button[data-toggle="collapse"]');
+  var $toggleButton = $('button[data-toggle="collapse"], th[data-toggle="collapse"], a[data-toggle="collapse"]');
 
   checkCollapseStatusInit();
 
@@ -112,18 +112,24 @@ function carouselInit ($) {
   function checkCollapseStatusInit() {
     $toggleButton.each(function () {
       var $collapseTarget = $(this).data('target');
-      $(this).removeClass('active').removeClass('icon--root').addClass('icon--greater');
+      if ($collapseTarget === undefined) {
+        $collapseTarget = $(this).attr('href');
+      }
+      $(this).removeClass('active').removeClass('icon--root').addClass('icon--greater').attr('aria-selected', 'false').attr('aria-expended', 'false');
       if($($collapseTarget).hasClass('in')){
-        $(this).addClass('active').addClass('icon--root').removeClass('icon--greater');
+        $(this).addClass('active').addClass('icon--root').removeClass('icon--greater').attr('aria-selected', 'true').attr('aria-expended', 'true');
       }
     });
   }
 
   function checkCollapseStatus($that) {
     var $collapseTarget = $that.data('target');
-    $that.removeClass('active').removeClass('icon--root').addClass('icon--greater');
+    if ($collapseTarget === undefined) {
+      $collapseTarget = $that.attr('href');
+    }
+    $that.removeClass('active').removeClass('icon--root').addClass('icon--greater').attr('aria-selected', 'false').attr('aria-expended', 'false');
     if($($collapseTarget).hasClass('in')){
-      $that.addClass('active').addClass('icon--root').removeClass('icon--greater');
+      $that.addClass('active').addClass('icon--root').removeClass('icon--greater').attr('aria-selected', 'true').attr('aria-expended', 'true');
     }
   }
 

@@ -31,108 +31,146 @@ You can use the `.has-error`, `.has-warning` or `.has-success` classes to send f
 
 HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, and `color`
 
+<br>
+<div class="alert alert-warning">
+**3.0.0**
+  
+  - added **IDs** to label and help text, `aria-labelledby` and `role` to buttons for a better accessibility
+  - added `<fieldset>` and `<legend class="hidden">` around `.form-group` for a better accessibility
+</div>
+
 ```html_example
 <form class="form-horizontal" role="form">
 
-    <!-- email input -->
+  <!-- email input -->
+  <fieldset>
+    <legend class="hidden-legend">Email</legend>
     <div class="form-group">
-      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+      <label for="inputEmail3" class="col-sm-2 control-label" id="email">Email</label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email" aria-labelledby="email">
       </div>
     </div>
+  </fieldset>
 
-    <!-- password input -->
+  <!-- password input -->
+  <fieldset>
+    <legend class="hidden-legend">Password</legend>
     <div class="form-group has-warning">
-      <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+      <label for="inputPassword3" class="col-sm-2 control-label" id="password">Password</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-        <span class="help-block">Warning, this is not a correct info!</span>
+        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" aria-labelledby="password error-password" aria-invalid="true">
+        <span class="help-block" id="error-password" role="alert">Warning, this is not a correct info!</span>
       </div>
     </div>
+  </fieldset>
 
-    <!-- URL input -->
+  <!-- URL input -->
+  <fieldset>
+    <legend class="hidden-legend">Website</legend>
     <div class="form-group">
-      <label for="inputURL" class="col-sm-2 control-label">Website</label>
+      <label for="inputURL" class="col-sm-2 control-label" id="website">Website</label>
       <div class="col-sm-10">
-        <input type="url" class="form-control" id="inputURL" placeholder="URL">
-        <span class="help-block">Use format "http://www.example.com"</span>
+        <input type="url" class="form-control" id="inputURL" placeholder="URL" aria-labelledby="website url-format">
+        <span class="help-block" id="url-format">Use format "http://www.example.com"</span>
       </div>
     </div>
+  </fieldset>
 
-    <!-- file input -->
+  <!-- file input -->
+  <fieldset>
+    <legend class="hidden-legend">Document</legend>
     <div class="form-group">
-      <label for="file" class="col-sm-2 control-label">Document</label>
+      <label for="file" class="col-sm-2 control-label" id="document">Document</label>
       <div class="col-sm-10">
-        <input type="file" class="form-control" id="file" placeholder="URL">
+        <input type="file" class="form-control" id="file" placeholder="URL" aria-labelledby="document">
       </div>
     </div>
+  </fieldset>
 
-    <!-- Checkboxes Vertical -->
+  <!-- Checkboxes Vertical -->
+  <fieldset>
+    <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label">Checkbox Vertical</label>
+      <label class="col-sm-2 control-label" id="check-group-1">Terms</label>
       <div class="col-sm-10">
         <div class="checkbox checkbox--left">
-          <input id="checkboxform" type="checkbox">
-          <label for="checkboxform">Remember me</label>
+          <input id="checkboxform" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1">
+          <label id="checkbox-label-1" for="checkboxform">Remember me</label>
         </div>
         <div class="checkbox checkbox--left">
-          <input id="checkboxform2" type="checkbox">
-          <label for="checkboxform2">Accept terms</label>
+          <input id="checkboxform2" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2">
+          <label id="checkbox-label-2" for="checkboxform2">Accept terms</label>
         </div>
       </div>
     </div>
+  </fieldset>
 
-    <!-- Checkboxes Horizontal -->
+  <!-- Checkboxes Horizontal -->
+  <fieldset>
+    <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label">Checkbox Horizontal</label>
+      <label class="col-sm-2 control-label" id="check-group-2">Terms</label>
       <div class="col-sm-10">
         <label class="checkbox-inline">
           <div class="checkbox checkbox--left">
-            <input id="checkboxform-v" type="checkbox" name="checkbox-v"> <label for="checkboxform-v">Remember me</label>
+            <input id="checkboxform3" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3">
+            <label id="checkbox-label-3" for="checkboxform3">Remember me</label>
           </div>
         </label>
         <label class="checkbox-inline">
           <div class="checkbox checkbox--left">
-            <input id="checkboxform2-v" type="checkbox" name="checkbox-v"> <label for="checkboxform2-v">Remember me</label>
+            <input id="checkboxform4" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4">
+            <label id="checkbox-label-4" for="checkboxform4">Accept terms</label>
           </div>
         </label>
       </div>
     </div>
+  </fieldset>
 
-   <!-- Radio buttons horizontal -->
+ <!-- Radio buttons horizontal -->
+  <fieldset>
+    <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label">Radio Horizontal</label>
+      <label class="col-sm-2 control-label" id="radio-group-1">Terms</label>
       <div class="col-sm-10">
         <div class="radio radio--left">
-          <input id="radioform" type="radio" name="radio-h">
-          <label for="radioform">Remember me</label>
+          <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1">
+          <label for="radioform" id="radio-label-1">Remember me</label>
         </div>
         <div class="radio radio--left">
-          <input id="radioform2" type="radio" name="radio-h">
-          <label for="radioform2">Don't remember me</label>
+          <input id="radioform2" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-2">
+          <label for="radioform2" id="radio-label-2">Don't remember me</label>
         </div>
       </div>
     </div>
+  </fieldset>
 
-    <!-- Radio buttons vertical -->
+  <!-- Radio buttons vertical -->
+  <fieldset>
+    <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label">Radio Vertical</label>
+      <label class="col-sm-2 control-label" id="radio-group-2">Terms</label>
       <div class="col-sm-10">
         <label class="radio-inline">
           <div class="radio radio--left">
-            <input id="radioform-v" type="radio" name="radio-v"> <label for="radioform-v">Remember me</label>
+            <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-3">
+            <label for="radioform" id="radio-label-3">Remember me</label>
           </div>
         </label>
         <label class="radio-inline">
           <div class="radio radio--left">
-            <input id="radioform2-v" type="radio" name="radio-v"> <label for="radioform2-v">Don't remember me</label>
+            <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-4">
+            <label for="radioform" id="radio-label-4">Remember me</label>
           </div>
         </label>
       </div>
     </div>
+  </fieldset>
 
-    <!-- Dropdown -->
+  <!-- Dropdown -->
+  <fieldset>
+    <legend class="hidden-legend">Dropdown</legend>
     <div class="form-group">
       <label class="col-sm-2 control-label" for="dropdown">Dropdown</label>
       <div class="col-sm-10">
@@ -142,12 +180,14 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
         </select>
       </div>
     </div>
+  </fieldset>
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Sign in</button>
+        <button type="submit" role="button" class="btn btn-default">Sign in</button>
       </div>
     </div>
+  </fieldset>
 
 </form>
 ```
@@ -156,6 +196,16 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
 
 legend {
   font-size: 1.1em;
+}
+
+.hidden-legend {
+  display: inline-block;
+  position: absolute;
+  top: -6000px;
+  left: -6000px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .form-horizontal .form-group {

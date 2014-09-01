@@ -17,7 +17,11 @@ unbedingt Reihenfolge behalten
   footer,
   .alert,
   .icon--print,
-  .social-sharing {
+  .social-sharing,
+  form,
+  .nav-process,
+  .carousel-indicators,
+  .carousel-control {
     display: none;
   }
   header {
@@ -36,8 +40,23 @@ unbedingt Reihenfolge behalten
     text-decoration: underline;
   }
   a:after{content:" (" attr(href) ") " !important;font-size:0.8em;font-weight:normal; }
+  a[href*="tel:"]:after {content: none !important;}
   .breadcrumb li:not(:nth-last-child(3)) a:after,
   a.carousel-control:after,
   a[data-toggle=tab]:after,
   a.icon--trash:after {content: '' !important;}
+  tr, img {
+    page-break-inside: avoid;
+  }
+  .carousel {
+    overflow: visible;
+    .item {
+      height: auto !important;
+    }
+  }
+  .carousel-inner {overflow: visible;}
+  .scroll-y, .news-feed .scroll-y {
+    overflow: visible !important;
+    max-height: auto !important;
+  }
 }
