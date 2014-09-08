@@ -5,6 +5,7 @@ This changelog references the relevant changes and bug fixes.
 
 * 2.1.6 (2014-09-08)
  * #229 remove build files from repo
+ * #230 remove TimelineJS from project
 
 * 2.1.5 (2014-09-01)
  * #182 Fix print stuff
