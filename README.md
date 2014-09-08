@@ -26,6 +26,7 @@ The styleguide is located in the `/styleguide` directory. You can open `/stylegu
 There are several ways to get started:
 
   - Use the provided build. Download the [latest release](https://github.com/antistatique/Swiss-Admin-web-guidelines/archive/master.zip) and include `/build` directory in your project.
+  - Use the Github Pages generated styleguide only. Just download the [gh-pages branch](https://github.com/antistatique/Swiss-Admin-web-guidelines/archive/gh-pages.zip).
   - Clone the repo `git clone https://github.com/antistatique/Swiss-Admin-web-guidelines.git`
   - Install with bower `bower install Swiss-Admin-web-guidelines` (soon)
 
