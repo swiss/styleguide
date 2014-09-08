@@ -3,7 +3,10 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
-* 2.1.5
+* 2.1.6 (2014-09-08)
+ * #229 remove build files from repo
+
+* 2.1.5 (2014-09-01)
  * #182 Fix print stuff
  * #198 Add title to brand link for accessibility
  * #199 Add title to empty link
@@ -17,8 +20,6 @@ This changelog references the relevant changes and bug fixes.
  * #219 tables fit to accessbility standards
  * #224 add Paypal access plugin and fix all collapse elements
  * #225 add `aria-selected="true"`for active navigation`
-
-* 2.1.5 ()
  * #183 navigation list text overflow fix demonstrate in exemple page
 
 * 2.1.4 (2014-07-24)
