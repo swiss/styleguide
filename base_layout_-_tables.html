@@ -64,10 +64,6 @@
             <h2>Styleguide</h2>
             <nav class="nav-lang">
               <ul>
-                <li><a href="#">DE</a></li>
-                <li><a href="#">FR</a></li>
-                <li><a href="#">IT</a></li>
-                <li><a class="disabled" href="#">RM</a></li>
                 <li><a class="active" href="#">EN</a></li>
               </ul>
             </nav>
@@ -8345,7 +8341,7 @@
 
 <p><span class="label label-admin">FLEX</span></p>
 
-<p>The standard table consists of the table title <code>&lt;caption&gt;</code>, the table head <code>&lt;thead&gt;</code>, the table body <code>&lt;tbody&gt;</code>, and the table foot <code>&lt;tfoot&gt;</code>. </p>
+<p>The standard table consists of the table title <code>&lt;caption&gt;</code>, the table head <code>&lt;thead&gt;</code>, the table body <code>&lt;tbody&gt;</code>, and the table foot <code>&lt;tfoot&gt;</code>.</p>
 
 <p>Add <code>.table-bordered</code> for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.</p>
 
@@ -8363,8 +8359,7 @@
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr role="columnheader">
-      <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
+      <th></th>
       <th id="year-2000">2000</th>
       <th id="year-2010">2010</th>
       <th id="year-2011">2011</th>
@@ -8396,8 +8391,8 @@
   </tbody>
   <tfoot>
     <tr>
-      <!-- In <tfoot> : td => $smoke / th => $white -->
-      <th></th>
+
+      <td></td>
       <td headers="year-2000">2000</td>
       <td headers="year-2010">2010</td>
       <td headers="year-2011">2011</td>
@@ -8409,8 +8404,7 @@
   <span class="nt">&lt;caption&gt;</span>Game animals shot in Switzerland<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- In &lt;thead&gt; : td =&gt; $white / th =&gt; $smoke --&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2000"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2010"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/th&gt;</span>
@@ -8442,8 +8436,8 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="c">&lt;!-- In &lt;tfoot&gt; : td =&gt; $smoke / th =&gt; $white --&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2000"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2010"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/td&gt;</span>
@@ -8457,7 +8451,7 @@
   <caption>Inlandkonzept, in 1000</caption>
   <thead>
     <tr role="columnheader">
-      <td></td>
+      <th></th>
       <th id="year-2007">2007</th>
       <th id="year-2008">2008</th>
       <th id="year-2009">2009</th>
@@ -8622,7 +8616,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <th></th>
+      <td></td>
       <td class="highlight right" headers="year-2007">2007</td>
       <td class="highlight right" headers="year-2008">2008</td>
       <td class="highlight right" headers="year-2009">2009</td>
@@ -8635,7 +8629,7 @@
   <span class="nt">&lt;caption&gt;</span>Inlandkonzept, in 1000<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2007"</span><span class="nt">&gt;</span>2007<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2008"</span><span class="nt">&gt;</span>2008<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2009"</span><span class="nt">&gt;</span>2009<span class="nt">&lt;/th&gt;</span>
@@ -8800,7 +8794,7 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"highlight right"</span> <span class="na">headers=</span><span class="s">"year-2007"</span><span class="nt">&gt;</span>2007<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"highlight right"</span> <span class="na">headers=</span><span class="s">"year-2008"</span><span class="nt">&gt;</span>2008<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"highlight right"</span> <span class="na">headers=</span><span class="s">"year-2009"</span><span class="nt">&gt;</span>2009<span class="nt">&lt;/td&gt;</span>
@@ -8815,13 +8809,13 @@
   <caption>Tabelle mit Titelzeile (Standardtabelle)</caption>
   <thead>
     <tr class="pairwise">
-      <td></td>
+      <th></th>
       <th id="year-2011" colspan="2" class="text-center">2011</th>
       <th id="year-2012" colspan="2" class="text-center">2012</th>
       <th id="year-2013" colspan="2" class="text-center">2013</th>
     </tr>
     <tr>
-      <td></td>
+      <th></th>
       <th class="text-left" role="rowheader" id="gav-2011" headers="year-2011">GAV</th>
       <th class="text-left" role="rowheader" id="labor-participating-2011" headers="year-2011">unterstellte Arbeit-<br>nehmende</th>
       <th class="text-left" role="rowheader" id="gav-2012" headers="year-2012">GAV</th>
@@ -8900,13 +8894,13 @@
   </tbody>
   <tfoot>
     <tr class="pairwise">
-      <th></th>
+      <td></td>
       <td class="text-center" colspan="2" headers="year-2011">2011</td>
       <td class="text-center" colspan="2" headers="year-2012">2012</td>
       <td class="text-center" colspan="2" headers="year-2013">2013</td>
     </tr>
     <tr>
-      <th></th>
+      <td></td>
       <td class="text-left" headers="gav-2011">GAV</td>
       <td class="text-left" headers="labor-participating-2011">unterstellte Arbeit-<br>nehmende</td>
       <td class="text-left" headers="gav-2012">GAV</td>
@@ -8920,13 +8914,13 @@
   <span class="nt">&lt;caption&gt;</span>Tabelle mit Titelzeile (Standardtabelle)<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"pairwise"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2011"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2012"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2013"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>2013<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span> <span class="na">id=</span><span class="s">"gav-2011"</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>GAV<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span> <span class="na">id=</span><span class="s">"labor-participating-2011"</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>unterstellte Arbeit-<span class="nt">&lt;br&gt;</span>nehmende<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span> <span class="na">id=</span><span class="s">"gav-2012"</span> <span class="na">headers=</span><span class="s">"year-2012"</span><span class="nt">&gt;</span>GAV<span class="nt">&lt;/th&gt;</span>
@@ -9005,13 +8999,13 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"pairwise"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-center"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-center"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"year-2012"</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-center"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"year-2013"</span><span class="nt">&gt;</span>2013<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">headers=</span><span class="s">"gav-2011"</span><span class="nt">&gt;</span>GAV<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">headers=</span><span class="s">"labor-participating-2011"</span><span class="nt">&gt;</span>unterstellte Arbeit-<span class="nt">&lt;br&gt;</span>nehmende<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">headers=</span><span class="s">"gav-2012"</span><span class="nt">&gt;</span>GAV<span class="nt">&lt;/td&gt;</span>
@@ -9194,8 +9188,7 @@
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr role="columnheader">
-      <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
+      <th></th>
       <th id="year-2000">2000</th>
       <th id="year-2010">2010</th>
       <th id="year-2011">2011</th>
@@ -9227,8 +9220,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <!-- In <tfoot> : td => $smoke / th => $white -->
-      <th></th>
+      <td></td>
       <td headers="year-2000">2000</td>
       <td headers="year-2010">2010</td>
       <td headers="year-2011">2011</td>
@@ -9240,8 +9232,7 @@
   <span class="nt">&lt;caption&gt;</span>Game animals shot in Switzerland<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- In &lt;thead&gt; : td =&gt; $white / th =&gt; $smoke --&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2000"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2010"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/th&gt;</span>
@@ -9273,8 +9264,7 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="c">&lt;!-- In &lt;tfoot&gt; : td =&gt; $smoke / th =&gt; $white --&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2000"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2010"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/td&gt;</span>
@@ -9288,7 +9278,7 @@
   <caption>Inlandkonzept, in 1000</caption>
   <thead>
     <tr role="columnheader">
-      <td></td>
+      <th></th>
       <th id="year-2007">2007</th>
       <th id="year-2008">2008</th>
       <th id="year-2009">2009</th>
@@ -9453,7 +9443,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <th></th>
+      <td></td>
       <td class="highlight right" headers="year-2007">2007</td>
       <td class="highlight right" headers="year-2008">2008</td>
       <td class="highlight right" headers="year-2009">2009</td>
@@ -9466,7 +9456,7 @@
   <span class="nt">&lt;caption&gt;</span>Inlandkonzept, in 1000<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2007"</span><span class="nt">&gt;</span>2007<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2008"</span><span class="nt">&gt;</span>2008<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2009"</span><span class="nt">&gt;</span>2009<span class="nt">&lt;/th&gt;</span>
@@ -9631,7 +9621,7 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"highlight right"</span> <span class="na">headers=</span><span class="s">"year-2007"</span><span class="nt">&gt;</span>2007<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"highlight right"</span> <span class="na">headers=</span><span class="s">"year-2008"</span><span class="nt">&gt;</span>2008<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"highlight right"</span> <span class="na">headers=</span><span class="s">"year-2009"</span><span class="nt">&gt;</span>2009<span class="nt">&lt;/td&gt;</span>
@@ -9646,13 +9636,13 @@
   <caption>Tabelle mit Titelzeile (Standardtabelle)</caption>
   <thead>
     <tr class="pairwise">
-      <td></td>
+      <th></th>
       <th id="year-2011" colspan="2" class="text-center">2011</th>
       <th id="year-2012" colspan="2" class="text-center">2012</th>
       <th id="year-2013" colspan="2" class="text-center">2013</th>
     </tr>
     <tr>
-      <td></td>
+      <th></th>
       <th class="text-left" role="rowheader" id="gav-2011" headers="year-2011">GAV</th>
       <th class="text-left" role="rowheader" id="labor-participating-2011" headers="year-2011">unterstellte Arbeit-<br>nehmende</th>
       <th class="text-left" role="rowheader" id="gav-2012" headers="year-2012">GAV</th>
@@ -9731,7 +9721,7 @@
   </tbody>
   <tfoot>
     <tr class="pairwise">
-      <th></th>
+      <td></td>
       <td class="text-center" colspan="2" headers="year-2011">2011</td>
       <td class="text-center" colspan="2" headers="year-2012">2012</td>
       <td class="text-center" colspan="2" headers="year-2013">2013</td>
@@ -9751,13 +9741,13 @@
   <span class="nt">&lt;caption&gt;</span>Tabelle mit Titelzeile (Standardtabelle)<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"pairwise"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2011"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2012"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2013"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>2013<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span> <span class="na">id=</span><span class="s">"gav-2011"</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>GAV<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span> <span class="na">id=</span><span class="s">"labor-participating-2011"</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>unterstellte Arbeit-<span class="nt">&lt;br&gt;</span>nehmende<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span> <span class="na">id=</span><span class="s">"gav-2012"</span> <span class="na">headers=</span><span class="s">"year-2012"</span><span class="nt">&gt;</span>GAV<span class="nt">&lt;/th&gt;</span>
@@ -9836,7 +9826,7 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"pairwise"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-center"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-center"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"year-2012"</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-center"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"year-2013"</span><span class="nt">&gt;</span>2013<span class="nt">&lt;/td&gt;</span>
@@ -10025,8 +10015,7 @@
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr role="columnheader">
-      <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
+      <th></th>
       <th id="year-2000">2000</th>
       <th id="year-2010">2010</th>
       <th id="year-2011" class="active">2011</th>
@@ -10058,8 +10047,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <!-- In <tfoot> : td => $smoke / th => $white -->
-      <th></th>
+      <td></td>
       <td headers="year-2000">2000</td>
       <td headers="year-2010">2010</td>
       <td headers="year-2011" class="active">2011</td>
@@ -10071,8 +10059,7 @@
   <span class="nt">&lt;caption&gt;</span>Game animals shot in Switzerland<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- In &lt;thead&gt; : td =&gt; $white / th =&gt; $smoke --&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2000"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2010"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2011"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/th&gt;</span>
@@ -10104,8 +10091,7 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="c">&lt;!-- In &lt;tfoot&gt; : td =&gt; $smoke / th =&gt; $white --&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2000"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2010"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2011"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/td&gt;</span>
@@ -10119,7 +10105,7 @@
   <caption>Inlandkonzept, in 1000</caption>
   <thead>
     <tr role="columnheader">
-      <td></td>
+      <th></th>
       <th id="year-2007">2007</th>
       <th id="year-2008">2008</th>
       <th id="year-2009">2009</th>
@@ -10284,7 +10270,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <th></th>
+      <td></td>
       <td class="highlight right" headers="year-2007">2007</td>
       <td class="highlight right" headers="year-2008">2008</td>
       <td class="highlight right" headers="year-2009">2009</td>
@@ -10297,7 +10283,7 @@
   <span class="nt">&lt;caption&gt;</span>Inlandkonzept, in 1000<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2007"</span><span class="nt">&gt;</span>2007<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2008"</span><span class="nt">&gt;</span>2008<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2009"</span><span class="nt">&gt;</span>2009<span class="nt">&lt;/th&gt;</span>
@@ -10462,7 +10448,7 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"highlight right"</span> <span class="na">headers=</span><span class="s">"year-2007"</span><span class="nt">&gt;</span>2007<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"highlight right"</span> <span class="na">headers=</span><span class="s">"year-2008"</span><span class="nt">&gt;</span>2008<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"highlight right"</span> <span class="na">headers=</span><span class="s">"year-2009"</span><span class="nt">&gt;</span>2009<span class="nt">&lt;/td&gt;</span>
@@ -10477,13 +10463,13 @@
   <caption>Tabelle mit Titelzeile (Standardtabelle)</caption>
   <thead>
     <tr class="pairwise">
-      <td></td>
+      <th></th>
       <th id="year-2011" colspan="2" class="text-center">2011</th>
       <th id="year-2012" colspan="2" class="text-center">2012</th>
       <th id="year-2013" colspan="2" class="text-center active">2013</th>
     </tr>
     <tr>
-      <td></td>
+      <th></th>
       <th class="text-left" role="rowheader" id="gav-2011" headers="year-2011">GAV</th>
       <th class="text-left" role="rowheader" id="labor-participating-2011" headers="year-2011">unterstellte Arbeit-<br>nehmende</th>
       <th class="text-left" role="rowheader" id="gav-2012" headers="year-2012">GAV</th>
@@ -10562,13 +10548,13 @@
   </tbody>
   <tfoot>
     <tr class="pairwise">
-      <th></th>
+      <td></td>
       <td class="text-center" colspan="2" headers="year-2011">2011</td>
       <td class="text-center" colspan="2" headers="year-2012">2012</td>
       <td class="text-center active" colspan="2" headers="year-2013">2013</td>
     </tr>
     <tr>
-      <th></th>
+      <td></td>
       <td class="text-left" headers="gav-2011">GAV</td>
       <td class="text-left" headers="labor-participating-2011">unterstellte Arbeit-<br>nehmende</td>
       <td class="text-left" headers="gav-2012">GAV</td>
@@ -10582,13 +10568,13 @@
   <span class="nt">&lt;caption&gt;</span>Tabelle mit Titelzeile (Standardtabelle)<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"pairwise"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2011"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2012"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2013"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"text-center active"</span><span class="nt">&gt;</span>2013<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span> <span class="na">id=</span><span class="s">"gav-2011"</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>GAV<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span> <span class="na">id=</span><span class="s">"labor-participating-2011"</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>unterstellte Arbeit-<span class="nt">&lt;br&gt;</span>nehmende<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span> <span class="na">id=</span><span class="s">"gav-2012"</span> <span class="na">headers=</span><span class="s">"year-2012"</span><span class="nt">&gt;</span>GAV<span class="nt">&lt;/th&gt;</span>
@@ -10667,13 +10653,13 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">class=</span><span class="s">"pairwise"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-center"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-center"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"year-2012"</span><span class="nt">&gt;</span>2012<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-center active"</span> <span class="na">colspan=</span><span class="s">"2"</span> <span class="na">headers=</span><span class="s">"year-2013"</span><span class="nt">&gt;</span>2013<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">headers=</span><span class="s">"gav-2011"</span><span class="nt">&gt;</span>GAV<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">headers=</span><span class="s">"labor-participating-2011"</span><span class="nt">&gt;</span>unterstellte Arbeit-<span class="nt">&lt;br&gt;</span>nehmende<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">headers=</span><span class="s">"gav-2012"</span><span class="nt">&gt;</span>GAV<span class="nt">&lt;/td&gt;</span>
@@ -10845,8 +10831,7 @@
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr role="columnheader">
-      <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
+      <th></th>
       <th id="year-2000">2000</th>
       <th id="year-2010">2010</th>
       <th id="year-2011">2011</th>
@@ -10878,8 +10863,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <!-- In <tfoot> : td => $smoke / th => $white -->
-      <th></th>
+      <td></td>
       <td headers="year-2000">2000</td>
       <td headers="year-2010">2010</td>
       <td headers="year-2011">2011</td>
@@ -10891,8 +10875,7 @@
   <span class="nt">&lt;caption&gt;</span>Game animals shot in Switzerland<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- In &lt;thead&gt; : td =&gt; $white / th =&gt; $smoke --&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2000"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2010"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/th&gt;</span>
@@ -10924,8 +10907,7 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="c">&lt;!-- In &lt;tfoot&gt; : td =&gt; $smoke / th =&gt; $white --&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2000"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2010"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/td&gt;</span>
@@ -10953,8 +10935,7 @@
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr role="columnheader">
-      <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
+      <th></th>
       <th id="year-2000">2000</th>
       <th id="year-2010">2010</th>
       <th id="year-2011">2011</th>
@@ -10995,7 +10976,7 @@
   </tbody>
   <tfoot>
     <tr>
-      <th></th>
+      <td></td>
       <td headers="year-2000">2000</td>
       <td headers="year-2010">2010</td>
       <td headers="year-2011">2011</td>
@@ -11009,8 +10990,7 @@
   <span class="nt">&lt;caption&gt;</span>Game animals shot in Switzerland<span class="nt">&lt;/caption&gt;</span>
   <span class="nt">&lt;thead&gt;</span>
     <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- In &lt;thead&gt; : td =&gt; $white / th =&gt; $smoke --&gt;</span>
-      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
+      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2000"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2010"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/th&gt;</span>
       <span class="nt">&lt;th</span> <span class="na">id=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/th&gt;</span>
@@ -11051,7 +11031,7 @@
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th&gt;&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2000"</span><span class="nt">&gt;</span>2000<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2010"</span><span class="nt">&gt;</span>2010<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td</span> <span class="na">headers=</span><span class="s">"year-2011"</span><span class="nt">&gt;</span>2011<span class="nt">&lt;/td&gt;</span>
