@@ -63,8 +63,15 @@ Process navigation is used in connection with forms that are spread over several
     line-height: 35px;
     position: relative;
   }
-  li.active a, li a:hover, li a:active, li a:focus {background: $venetian-red;}
-  li.disabled a:hover, li.disabled a:active, li.disabled a:focus {background: $light-grey;}
+  li.active a, li a:hover, li a:active, li a:focus {
+    background: $venetian-red;
+    font-family: $frutiger-bold;
+  }
+  li.disabled a:hover, li.disabled a:active, li.disabled a:focus {
+    background: $light-grey;
+    cursor: not-allowed;
+    text-decoration: none;
+  }
   li:first-child a {margin-left: 0;}
   li:last-child a {margin-right: 0;}
   li a:before {
@@ -93,4 +100,16 @@ Process navigation is used in connection with forms that are spread over several
   li.active a:after, li a:hover:after, li a:active:after, li a:focus:after {border-left-color: $venetian-red;}
   li.disabled a:hover:after, li.disabled a:active:after, li.disabled a:focus:after {border-left-color: $light-grey;}
   li:last-child a:after {display: none;}
+  li.active a {
+    margin-top: -2px;
+    height: 10px;
+    padding-top: 2px;
+  }
+  li.active a:after {
+    border-width: 5px;
+    right: -5px;
+  }
+  li.active a:before {
+    border-width: 5px;
+  }
 }
