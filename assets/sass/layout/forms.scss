@@ -33,8 +33,12 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
 
 <br>
 <div class="alert alert-warning">
+**2.2.0**
+
+  - <span class="label label-danger">DEPRECATED</span> Checkboxes and radio buttons' markup changed to comply with Bootstrap
+
 **3.0.0**
-  
+
   - added **IDs** to label and help text, `aria-labelledby` and `role` to buttons for a better accessibility
   - added `<fieldset>` and `<legend class="hidden">` around `.form-group` for a better accessibility
 </div>
@@ -92,15 +96,12 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
   <fieldset>
     <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label" id="check-group-1">Terms</label>
-      <div class="col-sm-10">
-        <div class="checkbox checkbox--left">
-          <input id="checkboxform" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1">
-          <label id="checkbox-label-1" for="checkboxform">Remember me</label>
+      <div class="col-sm-10 col-sm-offset-2">
+        <div class="checkbox">
+          <label id="checkbox-label-1" for="checkboxform"><input id="checkboxform" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1">Remember me</label>
         </div>
-        <div class="checkbox checkbox--left">
-          <input id="checkboxform2" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2">
-          <label id="checkbox-label-2" for="checkboxform2">Accept terms</label>
+        <div class="checkbox">
+          <label id="checkbox-label-2" for="checkboxform2"><input id="checkboxform2" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2">Accept terms</label>
         </div>
       </div>
     </div>
@@ -110,59 +111,42 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
   <fieldset>
     <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label" id="check-group-2">Terms</label>
-      <div class="col-sm-10">
+      <div class="col-sm-10 col-sm-offset-2">
         <label class="checkbox-inline">
-          <div class="checkbox checkbox--left">
-            <input id="checkboxform3" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3">
-            <label id="checkbox-label-3" for="checkboxform3">Remember me</label>
-          </div>
+          <input id="checkboxform3" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3">Remember me
         </label>
         <label class="checkbox-inline">
-          <div class="checkbox checkbox--left">
-            <input id="checkboxform4" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4">
-            <label id="checkbox-label-4" for="checkboxform4">Accept terms</label>
-          </div>
+          <input id="checkboxform4" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4">Accept terms
         </label>
       </div>
     </div>
   </fieldset>
 
- <!-- Radio buttons horizontal -->
+ <!-- Radio buttons vertical -->
   <fieldset>
     <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label" id="radio-group-1">Terms</label>
-      <div class="col-sm-10">
-        <div class="radio radio--left">
-          <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1">
-          <label for="radioform" id="radio-label-1">Remember me</label>
+      <div class="col-sm-10 col-sm-offset-2">
+        <div class="radio">
+          <label for="radioform" id="radio-label-1"><input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1">Remember me</label>
         </div>
-        <div class="radio radio--left">
-          <input id="radioform2" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-2">
-          <label for="radioform2" id="radio-label-2">Don't remember me</label>
+        <div class="radio">
+          <label for="radioform2" id="radio-label-2"><input id="radioform2" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-2">Don't remember me</label>
         </div>
       </div>
     </div>
   </fieldset>
 
-  <!-- Radio buttons vertical -->
+  <!-- Radio buttons horizontal -->
   <fieldset>
     <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label" id="radio-group-2">Terms</label>
-      <div class="col-sm-10">
+      <div class="col-sm-10 col-sm-offset-2">
         <label class="radio-inline">
-          <div class="radio radio--left">
-            <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-3">
-            <label for="radioform" id="radio-label-3">Remember me</label>
-          </div>
+          <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-3">Remember me
         </label>
         <label class="radio-inline">
-          <div class="radio radio--left">
-            <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-4">
-            <label for="radioform" id="radio-label-4">Remember me</label>
-          </div>
+          <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-4">Remember me
         </label>
       </div>
     </div>
@@ -293,22 +277,4 @@ label {
       width: 150px;
     }
   }
-}
-
-// Override Bootstrap behavior
-.radio-inline,
-.checkbox-inline {
-  padding-right: 20px;
-  padding-left: 0;
-}
-.form-horizontal{
-  .radio-inline,
-  .checkbox-inline {
-    margin-top: -10px;
-  }
-}
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
-  margin-right: 10px; // space out consecutive inline controls
-  margin-left: 0;
 }

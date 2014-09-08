@@ -1,14 +1,14 @@
 /* ==========================================================
  * radios.scss
  * Custom radio input styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
@@ -22,50 +22,34 @@ category: Base Layout - Forms Elements
 
 Radio buttons allow the user to make an unequivocal choice from a predefined list. Radio buttons can also be structured in groups. Only one element in a group may be selected.
 
+<br>
+<div class="alert alert-warning">
+**2.2.0**
+
+  - <span class="label label-danger">DEPRECATED</span> `.radio--left` and `.radio--right` have been deprecated and the markup changed a little to comply with Bootstrap.
+</div>
+
 ```html_example
 <div class="radio radio--left">
-  <input type="radio" name ="radios" id="radio" value="radio1" checked>
-  <label for="radio">Option 1</label>
+  <label for="radio"><input type="radio" name ="radios" id="radio" value="radio1" checked>Deprecated</label>
 </div>
 
 <div class="radio radio--right">
-  <input type="radio" name ="radios" id="radio2" value="radio2">
-  <label for="radio2">Option 2</label>
+  <label for="radio2"><input type="radio" name ="radios" id="radio2" value="radio2">Deprecated</label>
 </div>
+
+<!-- As of 2.2.0, please use this markup -->
+<label class="radio-inline">
+  <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-4">Remember me
+</label>
+<!-- or -->
+<div class="radio">
+  <label for="radioform" id="radio-label-1">
+    <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1">Remember me
+  </label>
+</div>
+
 ```
 
 */
 
-.radio {
-  @extend .checkbox;
-}
-
-.radio--left {
-  input {
-    &:focus + label:before {background-position: 0 -315px;}
-    &:checked + label:before {background-position: 0 -225px;}
-    &:checked:focus + label:before {background-position: 0 -180px;}
-    &:disabled + label:before {background-position: 0 -405px;}
-    &:checked:disabled + label:before {background-position: 0 -495px;}
-  }
-  label:before {
-    @include form-button(radio, left);
-  }
-}
-
-.radio--right {
-  input {
-    &:focus + label:after {background-position: 0 -315px;}
-    &:checked + label:after {background-position: 0 -225px;}
-    &:checked:focus + label:after {background-position: 0 -180px;}
-    &:disabled + label:after {background-position: 0 -405px;}
-    &:checked:disabled + label:after {background-position: 0 -495px;}
-  }
-  label {
-    padding-right: 20px;
-    padding-left: 0;
-    &:after {
-      @include form-button(radio, right);
-    }
-  }
-}
