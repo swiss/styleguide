@@ -220,6 +220,14 @@ gulp.task('serve', ['styles'], function () {
   });
 });
 
+/**
+ * Deploy to GH pages
+ */
+
+gulp.task('deploy', function () {
+  return gulp.src("styleguide/**/*")
+    .pipe($.ghPages());
+});
 
 /**
  * Default task
