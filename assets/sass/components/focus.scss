@@ -24,6 +24,8 @@ The focus teaser contains two to four articles selected by the editorial team an
 
 On tablets and smartphones, the tab bar is replaced by a series of dots.
 
+Please be careful about the length of the text in the tabs, the height is fixed.
+
 ```html_example
  <div class="col-sm-10 col-sm-offset-1">
 
@@ -114,15 +116,15 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
 
 .nav-tabs.nav-justified.nav-tabs-focus>.active>a,
 .nav-tabs.nav-justified.nav-tabs-focus>.active>a:hover {
-  height: 70px;
   border-bottom: 3px solid $venetian-red;
 }
 
 .nav-tabs.nav-tabs-focus li {
+  border: none;
   border-left: 1px solid $silver;
   border-bottom: none !important;
   position: relative;
-  &:first-child {border-left: none;}
+  &:first-child, &:first-child:not(.active):hover a {border-left: none;}
   a {
     background: $smoke;
     height: 69px;
@@ -136,20 +138,26 @@ On tablets and smartphones, the tab bar is replaced by a series of dots.
     text-align: center;
     border-radius: 0;
     color: $night-rider;
+    overflow: hidden;
   }
   a:hover  {
     height: 69px;
-    // padding-bottom: 9px !important;
+    border: none;
     border-bottom: 3px solid $venetian-red;
     color: $black;
   }
   &.active a, &.active a:hover {
-    border-right: none;
-    border-left: none;
+    border: none;
     padding-bottom: 10px !important;
     border-bottom: 3px solid $venetian-red;
     background: $gainsboro;
     color: $black;
+  }
+  &.active a:focus, a:focus {
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
   }
   &:hover a {
     padding-top: 10px !important; // override nav-tabs behaviour
