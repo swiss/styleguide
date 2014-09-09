@@ -240,7 +240,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 .nav {
   > li {
     > a {
-      &:hover {
+      &:hover, &:focus {
         outline: none;
       }
     }
