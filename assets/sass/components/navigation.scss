@@ -892,6 +892,9 @@ Navigation below the content level on a smartphone with links to the home page, 
 **3.0.0:**
 
   - added `aria-selected="true"` for current link
+  - removed first button in the list (looked like a back link)
+  - changed label of back button in drilldown sub from "Back" to title
+    of section
 </div>
 
 ```html_example
@@ -903,15 +906,14 @@ Navigation below the content level on a smartphone with links to the home page, 
       <div class="drilldown-container">
 
         <nav class="nav-page-list">
-          <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
           <ul>
             <!-- the .list-emphasis class is optionnal -->
             <li class="list-emphasis"><a href="#">Drinks</a></li>
             <!-- add the .list-sub class if the list has some sub-lists -->
             <li class="list-sub"><a href="#">Mineral water</a>
               <!-- sub-list element -->
-              <nav class="drilldown-sub">
-                <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+              <nav class="drilldown-sub" aria-expanded="false">
+                <a href="#" class="icon icon--before icon--less drilldown-back"><span class="sr-only">Back to </span>Mineral Water</a>
                 <ul>
                   <li><a href="#">Test</a></li>
                   <li><a href="#">Test2</a></li>
