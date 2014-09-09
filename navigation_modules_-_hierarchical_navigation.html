@@ -8705,7 +8705,8 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
 <div class="container-fluid">
 
   <header>
-    <ol class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+    <h2 id="br1" class="hidden">Breadcrumbs</h2>
+    <ol class="breadcrumb" role="navigation" aria-labelledby="br1">
       <li><a href="#">Home page EDA</a></li>
       <span class="icon icon--greater"></span>
       <li><a href="#">Country & Travel Information</a></li>
@@ -8718,7 +8719,7 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
       <span class="icon icon--greater"></span>
       <li><a href="#">Bilateral Relations</a></li>
       <span class="icon icon--greater"></span>
-      <li class="active" aria-selected="true">Title of the active page</li>
+      <li class="active" aria-selected="true" aria-label="current page">Title of the active page</li>
     </ol>
   </header>
   <nav class="nav-main"></nav>
@@ -8728,7 +8729,8 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
 
   <span class="nt">&lt;header&gt;</span>
-    <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-label=</span><span class="s">"breadcrumbs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"br1"</span> <span class="na">class=</span><span class="s">"hidden"</span><span class="nt">&gt;</span>Breadcrumbs<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">aria-labelledby=</span><span class="s">"br1"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home page EDA<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--greater"</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Country <span class="err">&amp;</span> Travel Information<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -8741,7 +8743,7 @@ Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The bac
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--greater"</span><span class="nt">&gt;&lt;/span&gt;</span>
       <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Bilateral Relations<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--greater"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">aria-selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>Title of the active page<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">aria-label=</span><span class="s">"current page"</span><span class="nt">&gt;</span>Title of the active page<span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ol&gt;</span>
   <span class="nt">&lt;/header&gt;</span>
   <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav-main"</span><span class="nt">&gt;&lt;/nav&gt;</span>
