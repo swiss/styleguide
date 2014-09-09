@@ -118,6 +118,8 @@ The carousel consists of various information blocks, each of which contains a la
 
 .carousel-control.right, .carousel-control.left {
   background-image: none !important;
+  background: none;
+  filter: none; // fix for IE
   &:before {
     color: $coal;
     text-shadow: 0 0 0 rgba(0, 0, 0, 0);
