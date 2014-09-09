@@ -405,6 +405,9 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
         // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 );
       }
     }
+    &.open a:focus {
+      background: #fff;
+    }
   }
   & + .tab-content {
     padding: 0;
