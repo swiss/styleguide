@@ -1,14 +1,14 @@
 /* ==========================================================
  * tables.scss
  * Table styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
@@ -20,7 +20,7 @@ category: Base Layout - Tables
 
 <span class="label label-admin">FLEX</span>
 
-The standard table consists of the table title `<caption>`, the table head `<thead>`, the table body `<tbody>`, and the table foot `<tfoot>`. 
+The standard table consists of the table title `<caption>`, the table head `<thead>`, the table body `<tbody>`, and the table foot `<tfoot>`.
 
 Add `.table-bordered` for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.
 
@@ -30,7 +30,7 @@ A simple example :
 <br>
 <div class="alert alert-warning">
 **3.0.0**
-  
+
   - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
 </div>
 
@@ -39,8 +39,7 @@ A simple example :
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr role="columnheader">
-      <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
+      <th></th>
       <th id="year-2000">2000</th>
       <th id="year-2010">2010</th>
       <th id="year-2011">2011</th>
@@ -72,8 +71,8 @@ A simple example :
   </tbody>
   <tfoot>
     <tr>
-      <!-- In <tfoot> : td => $smoke / th => $white -->
-      <th></th>
+
+      <td></td>
       <td headers="year-2000">2000</td>
       <td headers="year-2010">2010</td>
       <td headers="year-2011">2011</td>
@@ -145,7 +144,7 @@ A simple example :
 <br>
 <div class="alert alert-warning">
 **3.0.0**
-  
+
   - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
 </div>
 
@@ -154,8 +153,7 @@ A simple example :
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr role="columnheader">
-      <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
+      <th></th>
       <th id="year-2000">2000</th>
       <th id="year-2010">2010</th>
       <th id="year-2011">2011</th>
@@ -187,8 +185,7 @@ A simple example :
   </tbody>
   <tfoot>
     <tr>
-      <!-- In <tfoot> : td => $smoke / th => $white -->
-      <th></th>
+      <td></td>
       <td headers="year-2000">2000</td>
       <td headers="year-2010">2010</td>
       <td headers="year-2011">2011</td>
@@ -238,7 +235,7 @@ A simple example :
 <br>
 <div class="alert alert-warning">
 **3.0.0**
-  
+
   - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
 </div>
 
@@ -247,8 +244,7 @@ A simple example :
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr role="columnheader">
-      <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
+      <th></th>
       <th id="year-2000">2000</th>
       <th id="year-2010">2010</th>
       <th id="year-2011" class="active">2011</th>
@@ -280,8 +276,7 @@ A simple example :
   </tbody>
   <tfoot>
     <tr>
-      <!-- In <tfoot> : td => $smoke / th => $white -->
-      <th></th>
+      <td></td>
       <td headers="year-2000">2000</td>
       <td headers="year-2010">2010</td>
       <td headers="year-2011" class="active">2011</td>
@@ -321,8 +316,7 @@ The sortable table automatically formats the column in which the data has been s
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr role="columnheader">
-      <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
+      <th></th>
       <th id="year-2000">2000</th>
       <th id="year-2010">2010</th>
       <th id="year-2011">2011</th>
@@ -354,8 +348,7 @@ The sortable table automatically formats the column in which the data has been s
   </tbody>
   <tfoot>
     <tr>
-      <!-- In <tfoot> : td => $smoke / th => $white -->
-      <th></th>
+      <td></td>
       <td headers="year-2000">2000</td>
       <td headers="year-2010">2010</td>
       <td headers="year-2011">2011</td>
@@ -405,7 +398,7 @@ Some tables can be expanded to show details of a data set
 <br>
 <div class="alert alert-warning">
 **3.0.0**
-  
+
   - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
 </div>
 
@@ -415,8 +408,7 @@ Some tables can be expanded to show details of a data set
   <caption>Game animals shot in Switzerland</caption>
   <thead>
     <tr role="columnheader">
-      <!-- In <thead> : td => $white / th => $smoke -->
-      <td></td>
+      <th></th>
       <th id="year-2000">2000</th>
       <th id="year-2010">2010</th>
       <th id="year-2011">2011</th>
@@ -457,7 +449,7 @@ Some tables can be expanded to show details of a data set
   </tbody>
   <tfoot>
     <tr>
-      <th></th>
+      <td></td>
       <td headers="year-2000">2000</td>
       <td headers="year-2010">2010</td>
       <td headers="year-2011">2011</td>
@@ -501,7 +493,7 @@ Ruled tables are particularly suitable for presenting simple 1:1 relationships. 
 <br>
 <div class="alert alert-warning">
 **3.0.0**
-  
+
   - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
 </div>
 
@@ -565,7 +557,7 @@ Unruled tables are suitable for presenting properties, e.g. of a publication. A 
 <br>
 <div class="alert alert-warning">
 **3.0.0**
-  
+
   - added `columnheader` and `aria-describedby` for better accessibility
 </div>
 

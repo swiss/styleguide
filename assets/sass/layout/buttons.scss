@@ -47,7 +47,7 @@ Buttons                                                                       | 
   background-color: $smoke;
   border: 1px solid $empress;
   font-family: $font-family-sans-serif-light;
-  &:hover {
+  &:hover, &:focus {
     background-color: $light-grey;
     z-index: 100;
   }
@@ -58,7 +58,7 @@ Buttons                                                                       | 
   &.btn-primary {
     background-color: $cerulean;
     border-color: $cerulean;
-    &:hover {
+    &:hover, &:focus {
       color: $white;
       background-color: darken($cerulean, 8%);
     }
@@ -74,7 +74,7 @@ Buttons                                                                       | 
   &.btn-secondary {
     background-color: $empress;
     color: $white;
-    &:hover {
+    &:hover, &:focus {
       background-color: darken($empress, 8%);
     }
     &:active {
@@ -97,7 +97,7 @@ Buttons                                                                       | 
     border: none;
     background-color: transparent;
     float: none;
-    &:hover {
+    &:hover, &:focus {
       color: darken($cerulean, 5%);
       background: $smoke;
     }

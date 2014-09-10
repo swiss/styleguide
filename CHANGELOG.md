@@ -3,7 +3,23 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
-* 2.1.5
+* 2.1.6 (2014-09-10)
+ * #229 remove build files from repo
+ * #230 remove TimelineJS from project
+ * #216 process navigation - active state should be more visible accessibility
+ * #231 Cleanup branches
+ * #228 Focus Element does not change automatically enhancement
+ * #219 Check accessibility of data-table accessibility
+ * #213 Carousel navigation accessibiltiy accessibility
+ * #209 Remove <br> in global nav links accessibility
+ * #207 Add accesskeys accessibility
+ * #206 Input number too small (browser issue) Not valid ? accessibility
+ * #189 Text about browser compatibility should be updated enhancement
+ * #187 Shouldn't the magnifying glass initiate a search? Function is missing bug
+ * #177 Carousel wrong styling
+ * #172 Alignement of titles
+
+* 2.1.5 (2014-09-01)
  * #182 Fix print stuff
  * #198 Add title to brand link for accessibility
  * #199 Add title to empty link
@@ -17,8 +33,6 @@ This changelog references the relevant changes and bug fixes.
  * #219 tables fit to accessbility standards
  * #224 add Paypal access plugin and fix all collapse elements
  * #225 add `aria-selected="true"`for active navigation`
-
-* 2.1.5 ()
  * #183 navigation list text overflow fix demonstrate in exemple page
 
 * 2.1.4 (2014-07-24)

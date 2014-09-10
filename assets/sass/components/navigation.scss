@@ -59,7 +59,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   - added h2 and label to search field on mobile
 
 **3.0.0:**
-  
+
   - added `aria-selected="true"` for current active link
   - added `id="main-navigation"`for accessibility nav
 </div>
@@ -236,6 +236,17 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
 */
 
+// remove outline on hover, added by bootstrap-accessibility
+.nav {
+  > li {
+    > a {
+      &:hover, &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
 .navbar {
   border-radius: 0;
   border: none;
@@ -394,6 +405,9 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
         // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 );
       }
     }
+    &.open a:focus {
+      background: #fff;
+    }
   }
   & + .tab-content {
     padding: 0;
@@ -472,9 +486,9 @@ On mobile devices the links in the service navigation are moved to the footer.
 
 <br>
 <div class="alert alert-warning">
-  **2.1.2:**
+**2.1.2:**
 
-    - added `h2.sr-only` for more screen reader clarity
+  - added `h2.sr-only` for more screen reader clarity
 </div>
 
 ```html_example
@@ -559,7 +573,7 @@ The design of the language navigation for cases, where their are more then five 
   - added `h2.sr-only` for more screen reader clarity
 
   **3.0.0**
-  
+
   - added `aria-selected="true"` for active accessibility
 </div>
 
@@ -876,8 +890,11 @@ Navigation below the content level on a smartphone with links to the home page, 
   - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
 
 **3.0.0:**
-  
+
   - added `aria-selected="true"` for current link
+  - removed first button in the list (looked like a back link)
+  - changed label of back button in drilldown sub from "Back" to title
+    of section
 </div>
 
 ```html_example
@@ -889,15 +906,14 @@ Navigation below the content level on a smartphone with links to the home page, 
       <div class="drilldown-container">
 
         <nav class="nav-page-list">
-          <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
           <ul>
             <!-- the .list-emphasis class is optionnal -->
             <li class="list-emphasis"><a href="#">Drinks</a></li>
             <!-- add the .list-sub class if the list has some sub-lists -->
             <li class="list-sub"><a href="#">Mineral water</a>
               <!-- sub-list element -->
-              <nav class="drilldown-sub">
-                <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+              <nav class="drilldown-sub" aria-expanded="false">
+                <a href="#" class="icon icon--before icon--less drilldown-back"><span class="sr-only">Back to </span>Mineral Water</a>
                 <ul>
                   <li><a href="#">Test</a></li>
                   <li><a href="#">Test2</a></li>
@@ -1062,7 +1078,7 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
 <br>
 <div class="alert alert-warning">
 **3.0.0:**
-  
+
   - added `aria-selected="true"` for current link
 </div>
 

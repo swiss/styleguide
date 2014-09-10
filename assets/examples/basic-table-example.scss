@@ -24,7 +24,7 @@ category: Base Layout - Tables
   <caption>Inlandkonzept, in 1000</caption>
   <thead>
     <tr role="columnheader">
-      <td></td>
+      <th></th>
       <th id="year-2007">2007</th>
       <th id="year-2008">2008</th>
       <th id="year-2009">2009</th>
@@ -189,7 +189,7 @@ category: Base Layout - Tables
   </tbody>
   <tfoot>
     <tr>
-      <th></th>
+      <td></td>
       <td class="highlight right" headers="year-2007">2007</td>
       <td class="highlight right" headers="year-2008">2008</td>
       <td class="highlight right" headers="year-2009">2009</td>
@@ -214,13 +214,13 @@ category: Base Layout - Tables
   <caption>Tabelle mit Titelzeile (Standardtabelle)</caption>
   <thead>
     <tr class="pairwise">
-      <td></td>
+      <th></th>
       <th id="year-2011" colspan="2" class="text-center">2011</th>
       <th id="year-2012" colspan="2" class="text-center">2012</th>
       <th id="year-2013" colspan="2" class="text-center">2013</th>
     </tr>
     <tr>
-      <td></td>
+      <th></th>
       <th class="text-left" role="rowheader" id="gav-2011" headers="year-2011">GAV</th>
       <th class="text-left" role="rowheader" id="labor-participating-2011" headers="year-2011">unterstellte Arbeit-<br>nehmende</th>
       <th class="text-left" role="rowheader" id="gav-2012" headers="year-2012">GAV</th>
@@ -299,13 +299,13 @@ category: Base Layout - Tables
   </tbody>
   <tfoot>
     <tr class="pairwise">
-      <th></th>
+      <td></td>
       <td class="text-center" colspan="2" headers="year-2011">2011</td>
       <td class="text-center" colspan="2" headers="year-2012">2012</td>
       <td class="text-center" colspan="2" headers="year-2013">2013</td>
     </tr>
     <tr>
-      <th></th>
+      <td></td>
       <td class="text-left" headers="gav-2011">GAV</td>
       <td class="text-left" headers="labor-participating-2011">unterstellte Arbeit-<br>nehmende</td>
       <td class="text-left" headers="gav-2012">GAV</td>

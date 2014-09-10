@@ -30,11 +30,6 @@ var gulp = require('gulp'),
 gulp.task('vendors', function() {
 
   gulp.src([
-      'bower_components/TimelineJS/build/**/*'
-    ])
-    .pipe(gulp.dest('build/js/TimelineJS'));
-
-  gulp.src([
       'bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*'
     ])
     .pipe(gulp.dest('build/css/bootstrap'));
@@ -220,6 +215,14 @@ gulp.task('serve', ['styles'], function () {
   });
 });
 
+/**
+ * Deploy to GH pages
+ */
+
+gulp.task('deploy', function () {
+  return gulp.src("styleguide/**/*")
+    .pipe($.ghPages());
+});
 
 /**
  * Default task

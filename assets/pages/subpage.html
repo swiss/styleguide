@@ -44,7 +44,7 @@
   </script>
 </head>
 <body>
-  <ul class="access-keys" role="navigation">
+  <ul class="access-keys sr-only" role="navigation">
     <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
     <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
     <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
@@ -257,7 +257,8 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-12">
-          <ol class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+          <h2 id="br1" class="hidden">Breadcrumbs</h2>
+          <ol class="breadcrumb" role="navigation" aria-labelledby="br1">
             <li><a href="#">Home page EDA</a></li>
             <span class="icon icon--greater"></span>
             <li><a href="#">Country & Travel Information</a></li>
@@ -270,7 +271,7 @@
             <span class="icon icon--greater"></span>
             <li><a href="#">Bilateral Relations</a></li>
             <span class="icon icon--greater"></span>
-            <li class="active" aria-selected="true">Title of the active page</li>
+            <li class="active" aria-selected="true" aria-label="current page">Title of the active page</li>
           </ol>
         </div>
       </div>
