@@ -98,6 +98,14 @@ ul.nav-tabs {
    }
 }
 
+.nav-tabs>li.active>a:focus {
+  border-top: 3px solid $venetian-red;
+}
+
+.nav-tabs>li.active:not(:first-child)>a:focus {
+  border-left-color: transparent;
+}
+
 .nav-tabs li:first-child, .nav-tabs li:first-child:hover {
   a {
     border-left: 1px solid $silver;
