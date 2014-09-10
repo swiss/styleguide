@@ -4,6 +4,9 @@ CHANGELOG
 This changelog references the relevant changes and bug fixes.
 
 * 2.1.6 (2014-09-10)
+ * Update Gemfile and gulp-hologram
+
+* 2.1.6 (2014-09-10)
  * #229 remove build files from repo
  * #230 remove TimelineJS from project
  * #216 process navigation - active state should be more visible accessibility
