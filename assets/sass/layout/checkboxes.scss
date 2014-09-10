@@ -22,33 +22,57 @@ category: Base Layout - Forms Elements
 
 Checkboxes are used when one or more elements are to be selected from a predefined list of items.
 
-<br>
-<div class="alert alert-warning">
-**2.2.0**
-
-  - <span class="label label-danger">DEPRECATED</span> `.checkbox--left` and `.checkbox--right` have been deprecated and the markup changed a little to comply with Bootstrap.
-</div>
-
 ```html_example
-<div class="checkbox">
-  <label for="checkbox"><input type="checkbox" id="checkbox" value="checkbox1">Remember me</label>
-</div>
-<div class="checkbox">
-  <label for="checkbox2"><input type="checkbox" id="checkbox2" value="checkbox1">Remember me</label>
-</div>
-<div class="checkbox">
-  <label for="checkbox3"><input type="checkbox" id="checkbox3" value="checkbox1">Remember me</label>
+<div class="checkbox checkbox--right">
+  <input type="checkbox" id="checkbox" value="checkbox1">
+  <label for="checkbox">Remember me</label>
 </div>
 
-<!-- As of 2.2.0, please use this markup -->
-<label class="checkbox-inline">
-  <input id="checkboxform4" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4">Accept terms
-</label>
-<!-- or -->
-<div class="checkbox">
-  <label id="checkbox-label-2" for="checkboxform2"><input id="checkboxform2" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2">Accept terms</label>
+<div class="checkbox checkbox--left">
+  <input type="checkbox" id="checkbox2" value="checkbox2">
+  <label for="checkbox2">Remember me</label>
 </div>
-
 ```
 
 */
+
+.checkbox {
+  position: relative;
+  input {
+    position: absolute;
+    left: -999999999%;
+  }
+  label {
+    position: relative;
+  }
+}
+
+.checkbox--left {
+  input {
+    &:focus + label:before {background-position: 0 -360px;}
+    &:checked + label:before {background-position: 0 -45px;}
+    &:checked:focus + label:before {background-position: 0 0;}
+    &:disabled + label:before {background-position: 0 -450px;}
+    &:checked:disabled + label:before {background-position: 0 -540px;}
+  }
+  label:before {
+    @include form-button(checkbox, left);
+  }
+}
+
+.checkbox--right {
+  input {
+    &:checked + label:after {background-position: 0 -45px;}
+    &:focus + label:after {background-position: 0 -360px;}
+    &:checked:focus + label:after {background-position: 0 0;}
+    &:disabled + label:after {background-position: 0 -450px;}
+    &:checked:disabled + label:after {background-position: 0 -540px;}
+  }
+  label {
+    padding-right: 20px;
+    padding-left: 0;
+    &:after {
+      @include form-button(checkbox, right);
+    }
+  }
+}
