@@ -65,6 +65,7 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
     font-family: $frutiger-bold;
     font-weight: normal;
     font-size: 1em;
+    width: 49%; // Firefox fix
     @media only screen and (max-width: $screen-md-max) {
       font-size: 0.85em;
     }
@@ -74,11 +75,4 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
     float: left;
   }
   &:hover {text-decoration: none;}
-  &:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
 }
