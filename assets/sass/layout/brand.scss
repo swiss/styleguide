@@ -47,8 +47,6 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 */
 
 .brand {
-  display: inline-block;
-  float: left;
   img {
     max-width: 400px;
     height: auto;
@@ -65,7 +63,6 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
     font-family: $frutiger-bold;
     font-weight: normal;
     font-size: 1em;
-    width: 49%; // Firefox fix
     @media only screen and (max-width: $screen-md-max) {
       font-size: 0.85em;
     }
