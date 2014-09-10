@@ -102,6 +102,8 @@ Process navigation is used in connection with forms that are spread over several
   li:last-child a:after {display: none;}
   li.active a {
     margin-top: -2px;
+    margin-left: .4%;
+    margin-right: .6%;
     height: 10px;
     padding-top: 2px;
   }
