@@ -15,7 +15,7 @@
   var $yamm = $('.yamm'),
       $yammClose = $('.yamm-close, .yamm-close-bottom'),
       $body = $('body'),
-      $dropdown = $('.dropdown'),
+      $dropdown = $('.yamm .dropdown'),
       $dropdownToggle = $('.dropdown-toggle'),
       $dropdownMenu = $('.dropdown-menu');
 
