@@ -819,6 +819,7 @@ On smartphones, the treecrumb navigation is omitted.
       &:hover {
         background: $white;
         color: $venetian-red;
+        text-decoration: underline;
       }
     }
   }
