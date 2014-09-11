@@ -16,7 +16,7 @@
   "dependencies": {
     "jquery": "1.10.2",
     "bootstrap-sass-official": "~3.1.1",
-    "bootstrapaccessibilityplugin": "1.0.2",
+    "bootstrapaccessibilityplugin": "https://github.com/antistatique/bootstrap-accessibility-plugin.git#dev",
     "jquery.tablesorter": "2.16.2",
     "yamm3": "1.0.*",
     "chosen_v1.1.0": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip",
