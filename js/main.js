@@ -217,7 +217,7 @@ function carouselInit ($) {
   var $yamm = $('.yamm'),
       $yammClose = $('.yamm-close, .yamm-close-bottom'),
       $body = $('body'),
-      $dropdown = $('.dropdown'),
+      $dropdown = $('.yamm .dropdown'),
       $dropdownToggle = $('.dropdown-toggle'),
       $dropdownMenu = $('.dropdown-menu');
 
@@ -238,8 +238,21 @@ function carouselInit ($) {
     });
   });
 
-  $(document).on('click', '.yamm .dropdown-menu', function (e) {
-    e.stopPropagation();
+  $dropdownToggle.on('click', function() {
+    $(this).parents($dropdown).trigger('get.hidden');
+  });
+
+  $dropdown.on({
+      "shown.bs.dropdown": function() { this.closable = false; },
+      "get.hidden":        function() { this.closable = true; },
+      "hide.bs.dropdown":  function() { return this.closable; }
+  });
+
+  $(document).on('click', function(e) {
+    // hide dropdown if dropdown is open and target is not in dropdown
+    if ($('.dropdown.open').length > 0 && $(e.target).parents('.dropdown').length === 0) {
+        $('.dropdown.open .dropdown-toggle').trigger('click');
+    }
   });
 
   $dropdown.on('hide.bs.dropdown', function () {
@@ -529,7 +542,7 @@ function carouselInit ($) {
         next = active.next('li'),
         toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
 
-    toClick.trigger('click');
+    toClick.tab('show');
   }
 
 }) (jQuery);
