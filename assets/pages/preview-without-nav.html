@@ -97,7 +97,7 @@
           <h2 class="sr-only">Language selection</h2>
           <nav class="nav-lang">
             <ul>
-              <li><a class="active" aria-selected="true" href="#">DE</a></li>
+              <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
               <li><a href="#">FR</a></li>
               <li><a href="#">IT</a></li>
               <li><a class="disabled" href="#">RM</a></li>
@@ -187,11 +187,11 @@
                         </ul>
                       </nav>
                     </li>
-                    <li class="active"><a aria-selected="true" href="#">Wine</a></li>
+                    <li class="active"><a href="#">Wine <span class="sr-only">selected</span></a></li>
                     <li><a href="#">Beer</a></li>
                     <li><a href="#">Spirits</a></li>
                   </ul>
-                  <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+                  <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
                 </nav>
               </div>
             </div>
@@ -210,9 +210,9 @@
         </div>
       </section>
       <!-- The tab navigation -->
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" role="menubar">
         <li class="dropdown current yamm-fw">
-          <a href="#" aria-selected="true" class="dropdown-toggle" data-toggle="dropdown">News</a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">News <span class="sr-only">current page</span></a>
           <ul class="dropdown-menu" role="menu">
             <li>
               <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->

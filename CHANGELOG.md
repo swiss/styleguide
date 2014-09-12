@@ -3,7 +3,20 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
-* 2.1.6 (2014-09-10)
+* 2.1.8
+ * #233 Improve README file enhancement Styleguide
+ * #225 Add text indication for selected links on screen readers
+ * #222 Social buttons are not accessible
+ * #221 General Contrast issues
+ * #218 Check ids and headers of Cycle Table
+ * #217 Timeline Color contrast accessibility
+ * #215 Page navigation list element accessibility
+ * #211 Enhance Breadcrumb accessibility
+ * #210 Use an HTML5 accessible player in timeline.js
+ * #185 Page Navigation List - Wrong behavior
+ * #224 Indicate open status
+
+* 2.1.7 HOTFIX (2014-09-10)
  * Update Gemfile and gulp-hologram
 
 * 2.1.6 (2014-09-10)
