@@ -10,32 +10,32 @@ The Confederation Web Guidelines are aimed at both internal Federal project mana
 The design specifications described for use on the Internet or in intranets can also be used for other digital channels, such as for the creation of apps.
 
 
-[Live version of the guidelines](http://adminch.antistatique.net/).
+The latest release of the styleguide is available here: http://adminch.antistatique.net
+
+If you want to collaborate or review the next release, go to the gh-pages here: http://antistatique.github.io/Swiss-Admin-web-guidelines
 
 
 ## The Swiss Federal Administration on the Internet
 
+### Styleguide
 
+The styleguide is located in the `/styleguide` directory. You can open `/styleguide/index.html` directly in your browser. (If you can't find it, you have to build all the assets).
 
-## Styleguide
-
-The styleguide is located in the `/styleguide` directory. You can open `/styleguide/index.html` directly in your browser.
-
-## How to use it in your project
+#### How to use it in your project
 
 There are several ways to get started:
 
-  - Use the provided build. Download the [latest release](https://github.com/antistatique/Swiss-Admin-web-guidelines/archive/master.zip) and include `/build` directory in your project.
+  - Use the provided build. Download the [latest release](https://github.com/antistatique/Swiss-Admin-web-guidelines/releases/latest) and include all the built assets in your project.
   - Use the Github Pages generated styleguide only. Just download the [gh-pages branch](https://github.com/antistatique/Swiss-Admin-web-guidelines/archive/gh-pages.zip).
   - Clone the repo `git clone https://github.com/antistatique/Swiss-Admin-web-guidelines.git`
-  - Install with bower `bower install Swiss-Admin-web-guidelines` (soon)
+  - Install with bower `bower install Swiss-Admin-web-guidelines`
 
 
-## Installation (development tools)
+#### Installation (development tools)
 This is not needed to use the styleguide, only if you want to modify it to fix some bugs and contribute.
 
 
-### Installation on OSX/Unix
+#### Installation on OSX/Unix
 
 > We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [Hologram](https://github.com/trulia/hologram).
 
@@ -44,63 +44,42 @@ Make sure you have [Node.js](http://nodejs.org) installed.
 
 Install all the dependencies you need:
 
-```
+```shell
 $ npm install -g gulp
 $ npm install
 $ bower install
 ```
 
-NOTE: Until hologram release a version > 1.1.0 you have to build and install the gem manually.
-
-```
-$ git clone https://github.com/trulia/hologram.git
-$ cd hologram
-$ gem build hologram.gemspec
-$ gem install hologram-1.1.0.gem // 1.1.0 but actually the head of master
-```
-
 Install Hologram from the Gemfile (for version > 1.1.0):
 
-```
+```shell
 $ bundle
-$ cd ..
 ```
 
-Build project using Gulp:
+[Browser-sync](http://www.browsersync.io) is automatically set up and will allow you to make changes and see them in real time.
 
-[Browser-sync](http://www.browsersync.io) is automatically set up on `localhost` and will allow you to make changes and see them in real time.
-
-### Installation on Windows
+#### Installation on Windows
 
 This is the not the recommended OS. If you have a choice, use OSX.
 
-Warning: This was tested on the [Windows PowerShell](﻿http://en.wikipedia.org/wiki/Windows_PowerShell) but should work on any shell that support UTF8.
+*Warning: This was tested on the [Windows PowerShell](﻿http://en.wikipedia.org/wiki/Windows_PowerShell) but should work on any shell that support UTF8.*
 
-Downlad and Install [Ruby](http://rubyinstaller.org)
+- Download and Install [Ruby](http://rubyinstaller.org)
 
-Install DevKit. Follow [those instructions](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
+- Install DevKit. Follow [those instructions](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
 
-[Install Ruby & DevKit](http://rubyinstaller.org)
+- [Install Ruby & DevKit](http://rubyinstaller.org)
 
-[Configure DevKit](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
+- [Configure DevKit](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
 
-Download and install [Node.js](http://nodejs.org)
+- Download and install [Node.js](http://nodejs.org)
 
-Install [Git for Windows](http://msysgit.github.io/) (recommended) or alternatively [Github for Windows](https://windows.github.com)`
+- Install [Git for Windows](http://msysgit.github.io/) (recommended) or alternatively [Github for Windows](https://windows.github.com)`
 
-Install SASS & Bundle
+Then install SASS, Hologram & Bundle
 
-```
-gem install sass bundle
-```
-
-NOTE: Until hologram release a version > 1.1.0 you have to build and install the gem manually.
-
-```
-$ git clone https://github.com/trulia/hologram.git
-$ cd hologram
-$ gem build hologram.gemspec
-$ gem install hologram-1.1.0.gem // 1.1.0 but actually the head of master
+```shell
+$ gem install sass bundle hologram
 ```
 
 
@@ -112,30 +91,24 @@ C:\\projectPath> npm install
 C:\\projectPath> node_module\.bin\bower install
 ```
 
-Install SASS & Bundle:
+Finally you will have to rebuild some gems:
 
-```
-$ gem install sass bundle
-```
-
-Finnaly you will have to rebuild some gems
-
-````
-﻿gem uninstal yajl-ruby
-﻿gem install yajl-ruby --version=1.1.0 --platform=ruby
+````shell
+$ gem uninstal yajl-ruby
+$ gem install yajl-ruby --version=1.1.0 --platform=ruby
 ````
 
-### Build the stylguide
+### Build the styleguide
 
-Run gulp once
+First run gulp:
 
-```
+```shell
 $ gulp
 ```
 
-Run gulp during development process
+Run gulp during development process: (with `watch` tasks and browser-sync)
 
-```
+```shell
 $ gulp serve
 ```
 
@@ -157,9 +130,10 @@ The stylguide theme is in `styleguide-theme`. It's a theme for Trulia's [Hologra
 It was based on [Cortana](https://github.com/Yago31/Cortana).
 
 ## How is it included?
+
 The `hologram_config.yml` has a reference  to the styleguide theme:
 
-```
+```yaml
 source: ./path/to/your/source
 destination: ./path/to/output
 documentation_assets: ./path/to/theme
@@ -167,28 +141,29 @@ documentation_assets: ./path/to/theme
 
 ## Build the Styleguide Theme
 
-The theme has his own gulpfile (for the moment). So you have to do the following command to build the assets to then generate the styleguide with `hologram`:
+The theme has his own gulpfile (for the moment). So you have to do the following command to build the assets to then generate the styleguide with `$ hologram`:
 
-```
+```shell
 $ cd styleguide-theme
 $ gulp
 ```
 
 ## FAQ
 
-### Why the Styleguide Theme (styleguide-theme) as so many !important?
+### Why are there a lot of `!important` in the CSS?
 
-The theme is their for the presentation. It's not part of the styleguide. To avoid conflict with other style we have
+The theme is used only to present all the styles. It's not part of the styleguide. All the `!important`s were added to avoid conflict with other styles, for a better presentation.
 
-### When I try to build with gulp I have the following error `Syntax error: Invalid US-ASCII character "\xC3"`
+### When I try to build with gulp I have the following error: `Syntax error: Invalid US-ASCII character "\xC3"`
 
-This bug an Hologram bug that should be fix in the next release. The workaround is to force UTF8:
+This bug is caused by Hologram and should be fixed in the next release. The workaround is to force UTF8 by running:
 
-```
+```shell
 $ LC_ALL="en_US.UTF-8" gulp
 ```
 
-Or you can edit your .zshrc file with the following configuration
+Or you can edit your .zshrc file with the following configuration:
+
 ````
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
