@@ -62,6 +62,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
   - added ` <span class="sr-only">current page</span>` for current active link
   - added `id="main-navigation"`for accessibility nav
+  - added `aria-hidden="true"` to close button
 </div>
 
 ```html_example
@@ -104,7 +105,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
                   <li><a href="#">Beer</a></li>
                   <li><a href="#">Spirits</a></li>
                 </ul>
-                <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+                <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
               </nav>
             </div>
           </div>
@@ -178,7 +179,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
               </div>
 
               <!-- The `yamm-close-bottom` should always be at the end of the `yamm-content` to close the mega-menu -->
-              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
 
             </div>
           </li>
@@ -199,7 +200,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, quae, ut, numquam tempora facilis mollitia temporibus error dolorem vel ea debitis perspiciatis doloremque necessitatibus dignissimos pariatur minima molestiae aliquid voluptatibus.</p>
 
-              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
 
             </div><!-- `yamm-content` end -->
           </li><!-- Dropdown `li` end -->
@@ -220,7 +221,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, quae, ut, numquam tempora facilis mollitia temporibus error dolorem vel ea debitis perspiciatis doloremque necessitatibus dignissimos pariatur minima molestiae aliquid voluptatibus.</p>
 
-              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
 
             </div><!-- `yamm-content` end -->
           </li><!-- Dropdown `li` end -->
