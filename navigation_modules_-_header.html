@@ -8565,7 +8565,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 <p><strong>3.0.0</strong></p>
 
 <ul>
-<li>added <code>aria-selected=&quot;true&quot;</code> for active accessibility
+<li>added <code>&lt;span class=&quot;sr-only&quot;&gt;selected&lt;/span&gt;</code> for active accessibility
 </div></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
@@ -8578,7 +8578,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
       <h2 class="sr-only">Language selection</h2>
       <nav class="nav-lang">
         <ul>
-          <li><a class="active" aria-selected="true" href="#">DE</a></li>
+          <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
           <li><a href="#">FR</a></li>
           <li><a href="#">IT</a></li>
           <li><a class="disabled" href="#">RM</a></li>
@@ -8609,7 +8609,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
       <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Language selection<span class="nt">&lt;/h2&gt;</span>
       <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav-lang"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;ul&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>DE<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>DE <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>selected<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>FR<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>IT<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>RM<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
