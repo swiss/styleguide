@@ -140,24 +140,18 @@ Please be careful about the length of the text in the tabs, the height is fixed.
     color: $night-rider;
     overflow: hidden;
   }
-  a:hover  {
+  a:hover, a:focus  {
     height: 69px;
     border: none;
     border-bottom: 3px solid $venetian-red;
     color: $black;
   }
-  &.active a, &.active a:hover {
+  &.active a, &.active a:hover, &.active a:focus {
     border: none;
     padding-bottom: 10px !important;
     border-bottom: 3px solid $venetian-red;
     background: $gainsboro;
     color: $black;
-  }
-  &.active a:focus, a:focus {
-    outline: none;
-    border-left: none;
-    border-right: none;
-    border-top: none;
   }
   &:hover a {
     padding-top: 10px !important; // override nav-tabs behaviour

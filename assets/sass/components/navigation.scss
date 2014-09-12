@@ -60,8 +60,9 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
 **3.0.0:**
 
-  - added `aria-selected="true"` for current active link
+  - added ` <span class="sr-only">current page</span>` for current active link
   - added `id="main-navigation"`for accessibility nav
+  - added `aria-hidden="true"` to close button
 </div>
 
 ```html_example
@@ -104,7 +105,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
                   <li><a href="#">Beer</a></li>
                   <li><a href="#">Spirits</a></li>
                 </ul>
-                <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+                <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
               </nav>
             </div>
           </div>
@@ -125,7 +126,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
     <!-- Standard menu layout -->
     <!-- The tab navigation -->
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav" role="menubar">
       <li class="dropdown yamm-fw">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
         <ul class="dropdown-menu" role="menu">
@@ -178,14 +179,14 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
               </div>
 
               <!-- The `yamm-close-bottom` should always be at the end of the `yamm-content` to close the mega-menu -->
-              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
 
             </div>
           </li>
         </ul><!-- Dropdown `ul` end -->
       </li>
       <li class="current dropdown yamm-fw">
-        <a aria-selected="true" href="#" class="dropdown-toggle" data-toggle="dropdown">News</a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News <span class="sr-only">current page</span></a>
         <ul class="dropdown-menu" role="menu">
           <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
           <li>
@@ -199,7 +200,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, quae, ut, numquam tempora facilis mollitia temporibus error dolorem vel ea debitis perspiciatis doloremque necessitatibus dignissimos pariatur minima molestiae aliquid voluptatibus.</p>
 
-              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
 
             </div><!-- `yamm-content` end -->
           </li><!-- Dropdown `li` end -->
@@ -220,7 +221,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, quae, ut, numquam tempora facilis mollitia temporibus error dolorem vel ea debitis perspiciatis doloremque necessitatibus dignissimos pariatur minima molestiae aliquid voluptatibus.</p>
 
-              <a href="#" class="yamm-close-bottom"><span class="icon icon--top"></span></a>
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
 
             </div><!-- `yamm-content` end -->
           </li><!-- Dropdown `li` end -->
@@ -572,9 +573,9 @@ The design of the language navigation for cases, where their are more then five 
 
   - added `h2.sr-only` for more screen reader clarity
 
-  **3.0.0**
+  **2.1.8**
 
-  - added `aria-selected="true"` for active accessibility
+  - added `<span class="sr-only">selected</span>` for active accessibility
 </div>
 
 ```html_example
@@ -588,7 +589,7 @@ The design of the language navigation for cases, where their are more then five 
       <h2 class="sr-only">Language selection</h2>
       <nav class="nav-lang">
         <ul>
-          <li><a class="active" aria-selected="true" href="#">DE</a></li>
+          <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
           <li><a href="#">FR</a></li>
           <li><a href="#">IT</a></li>
           <li><a class="disabled" href="#">RM</a></li>
@@ -819,6 +820,7 @@ On smartphones, the treecrumb navigation is omitted.
       &:hover {
         background: $white;
         color: $venetian-red;
+        text-decoration: underline;
       }
     }
   }
@@ -921,7 +923,7 @@ Navigation below the content level on a smartphone with links to the home page, 
                 </ul>
               </nav>
             </li>
-            <li class="active"><a aria-selected="true" href="#">Wine</a></li>
+            <li class="active"><a href="#">Wine <span class="sr-only"></span></a></li>
             <li><a href="#">Beer</a></li>
             <li><a href="#">Spirits</a></li>
           </ul>
