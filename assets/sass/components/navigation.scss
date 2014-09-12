@@ -60,7 +60,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
 
 **3.0.0:**
 
-  - added `aria-selected="true"` for current active link
+  - added ` <span class="sr-only">current page</span>` for current active link
   - added `id="main-navigation"`for accessibility nav
 </div>
 
@@ -574,7 +574,7 @@ The design of the language navigation for cases, where their are more then five 
 
   **3.0.0**
 
-  - added `aria-selected="true"` for active accessibility
+  - added `<span class="sr-only">selected</span>` for active accessibility
 </div>
 
 ```html_example
@@ -588,7 +588,7 @@ The design of the language navigation for cases, where their are more then five 
       <h2 class="sr-only">Language selection</h2>
       <nav class="nav-lang">
         <ul>
-          <li><a class="active" aria-selected="true" href="#">DE</a></li>
+          <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
           <li><a href="#">FR</a></li>
           <li><a href="#">IT</a></li>
           <li><a class="disabled" href="#">RM</a></li>
@@ -922,7 +922,7 @@ Navigation below the content level on a smartphone with links to the home page, 
                 </ul>
               </nav>
             </li>
-            <li class="active"><a aria-selected="true" href="#">Wine</a></li>
+            <li class="active"><a href="#">Wine <span class="sr-only"></span></a></li>
             <li><a href="#">Beer</a></li>
             <li><a href="#">Spirits</a></li>
           </ul>
