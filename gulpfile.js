@@ -30,7 +30,7 @@ var gulp = require('gulp'),
 gulp.task('vendors', function() {
 
   gulp.src([
-      'bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*'
+      'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*'
     ])
     .pipe(gulp.dest('build/css/bootstrap'));
 
@@ -61,18 +61,18 @@ gulp.task('vendors', function() {
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
       'bower_components/chosen_v1.1.0/chosen.jquery.min.js',
       'bower_components/typeahead.js/dist/typeahead.bundle.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js',
-      'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
+      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
       'bower_components/bootstrapaccessibilityplugin/plugins/js/bootstrap-accessibility.js',
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
       'bower_components/jquery.socialshareprivacy/jquery.socialshareprivacy.min.js',
@@ -88,7 +88,7 @@ gulp.task('vendors', function() {
    * Important to add the bootstrap fonts to avoid issues with the fonts include path
    */
   gulp.src([
-      'bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*',
+      'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
       'assets/fonts/*'
     ])
     .pipe(gulp.dest('build/fonts'));
