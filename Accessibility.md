@@ -74,6 +74,8 @@ Please refer to the
 [Accessibility Checklist](http://www.accessibility-checklist.ch/) for a good
 starting point. 
 
+Another checklist from webaim.org: [http://webaim.org/standards/wcag/checklist](http://webaim.org/standards/wcag/checklist).
+
 ### Bootstrap
 
 Bootstrap has a few starting classes and indicate some good references you
