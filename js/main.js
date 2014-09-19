@@ -525,23 +525,7 @@ function carouselInit ($) {
 
 (function($) {
 
-  var $tables = $('.table-sort');
-
-  $tables.tablesorter();
-
-  $tables.each(function () {
-    $table = $(this);
-    $table.find('thead th').click(function () {
-      var $headers = $(this).attr('id');
-      $table.find('td, th').each(function () {
-        if ($(this).attr('headers') === $headers || $(this).attr('id') === $headers) {
-          $(this).addClass('active');
-        } else {
-          $(this).removeClass('active');
-        }
-      });
-    });
-  });
+  $('.table-sort').tablesorter();
 
 }) (jQuery);
  /* ==========================================================
@@ -595,16 +579,16 @@ function carouselInit ($) {
 
   $treecrumb.each(function () {
     var $that = $(this);
-    $that.find($dropdownToggle).click(function () {
-      if ($(this).parent().hasClass('open')){
-        $that.find('.dropdown-toggle span').removeClass('icon--bottom');
-        $that.find('.dropdown-toggle span').addClass('icon--right');
-      } else {
-        $that.find('.dropdown-toggle span').removeClass('icon--bottom');
-        $that.find('.dropdown-toggle span').addClass('icon--right');
-        $(this).find('span').removeClass('icon--right');
-        $(this).find('span').addClass('icon--bottom');
-      }
+    $that.on('hide.bs.dropdown', function(e) {
+      $that.find('.dropdown-toggle span').removeClass('icon--bottom');
+      $that.find('.dropdown-toggle span').addClass('icon--right');
+    });
+    $that.on('show.bs.dropdown', function(e) {
+      var target = e.relatedTarget;
+      $that.find('.dropdown-toggle span').removeClass('icon--bottom');
+      $that.find('.dropdown-toggle span').addClass('icon--right');
+      $(target).find('span').removeClass('icon--right');
+      $(target).find('span').addClass('icon--bottom');
     });
   });
 
