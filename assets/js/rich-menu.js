@@ -19,17 +19,11 @@
       $dropdownToggle = $('.dropdown-toggle'),
       $dropdownMenu = $('.dropdown-menu');
 
-  // Toggle overlay
+  // Toggle dropdown and fix z-index errors
   $yamm.each(function () {
     var $that = $(this);
     $that.on('click', '.dropdown-toggle', function () {
-      if ($(this).parent().hasClass('open')){
-        $that.removeClass('nav-open');
-      } else {
-        $that.find($dropdown).removeClass('open');
-        $that.find($dropdown).removeClass('active');
-        $that.addClass('nav-open');
-
+      if (!$(this).parent().hasClass('open')){
         var dropdownHeight = $(window).height() - 49;
         $that.find('.drilldown-container').height( dropdownHeight );
       }
@@ -42,8 +36,20 @@
 
   $dropdown.on({
       "shown.bs.dropdown": function() { this.closable = false; },
-      "get.hidden":        function() { this.closable = true; },
-      "hide.bs.dropdown":  function() { return this.closable; }
+      "get.hidden":        function() { this.closable = true; }
+  });
+
+  $dropdown.on('show.bs.dropdown', function () {
+    $dropdown.removeClass('open');
+    $yamm.addClass('nav-open');
+  });
+
+  $dropdown.on('hide.bs.dropdown', function () {
+    // only remove the nav-open class if effectively closing dropdown
+    if (this.closable) {
+      $yamm.removeClass('nav-open');
+    }
+    return this.closable;
   });
 
   $(document).on('click', function(e) {
@@ -51,10 +57,6 @@
     if ($('.dropdown.open').length > 0 && $(e.target).parents('.dropdown').length === 0) {
         $('.dropdown.open .dropdown-toggle').trigger('click');
     }
-  });
-
-  $dropdown.on('hide.bs.dropdown', function () {
-    $yamm.removeClass('nav-open');
   });
 
   // Trigger close yamm menu
