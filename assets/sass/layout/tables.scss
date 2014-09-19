@@ -396,8 +396,10 @@ The sortable table automatically formats the column in which the data has been s
   &.tablesorter-headerAsc:after {
     content: "\5E";
   }
-  &.tablesorter-headerAsc div, &.tablesorter-headerDesc div {
-    color: $empress !important;
+  &.tablesorter-headerAsc, &.tablesorter-headerDesc {
+    div, &:after {
+      color: $venetian-red !important;
+    }
   }
 }
 
