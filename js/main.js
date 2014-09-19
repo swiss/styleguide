@@ -241,10 +241,10 @@ function carouselInit ($) {
       "get.hidden":        function() { this.closable = true; }
   });
 
-  $dropdown.on('show.bs.dropdown', function () {
-    console.log('trigger show');
+  $('.dropdown').on('show.bs.dropdown', function () {
     $dropdown.removeClass('open');
-    $yamm.addClass('nav-open');
+    $yamm.removeClass('nav-open');
+    $(this).parents($yamm).addClass('nav-open');
   });
 
   $dropdown.on('hide.bs.dropdown', function () {
