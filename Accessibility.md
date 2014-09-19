@@ -44,6 +44,39 @@ Accessibility is required on websites for the Swiss Administration. All the
 good practices and standards from [WCAG](http://www.w3.org/WAI/intro/wcag.php)
 should be used. 
 
+### WAI-ARIA standards
+
+The styleguide includes all the `aria-` attributes that should be used. Keep
+in mind to always update them accordingly and to run some tests.
+More documentation on `aria-` attributes can be found on
+[www.w3.org](http://www.w3.org/TR/wai-aria/).
+
+### Screen Readers
+
+We optimized the styleguide for the [NVDA](http://www.nvaccess.org/) screen
+reader. It is the most used screen reader and is fully free and open source.
+We suggest testing every component with this tool. All these requirements
+should be met.
+
+- Tabbing through the page is smooth and logical.
+- No useless element (eg: an icon before a link) is being read by the screen
+reader
+- All navigations or unclear buttons/links/info should be preceded by a title
+with the standard Bootstrap class `sr-only` that explains what the following
+element is about. 
+- All table rows and columns should be clearly read by the screen reader
+- All key events should behave as you'd expect.
+
+
+### Checklist
+
 Please refer to the
 [Accessibility Checklist](http://www.accessibility-checklist.ch/) for a good
 starting point. 
+
+### Bootstrap
+
+Bootstrap has a few starting classes and indicate some good references you
+can find on their
+[site](http://getbootstrap.com/getting-started/#accessibility).
+Please refer to them and don't create new classes or behaviors.
