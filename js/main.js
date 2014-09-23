@@ -221,11 +221,17 @@ function carouselInit ($) {
       $dropdownToggle = $('.dropdown-toggle'),
       $dropdownMenu = $('.dropdown-menu');
 
-  // Toggle dropdown and fix z-index errors
+  // Toggle overlay
   $yamm.each(function () {
     var $that = $(this);
     $that.on('click', '.dropdown-toggle', function () {
-      if (!$(this).parent().hasClass('open')){
+      if ($(this).parent().hasClass('open')){
+        $that.removeClass('nav-open');
+      } else {
+        $that.find($dropdown).removeClass('open');
+        $that.find($dropdown).removeClass('active');
+        $that.addClass('nav-open');
+
         var dropdownHeight = $(window).height() - 49;
         $that.find('.drilldown-container').height( dropdownHeight );
       }
@@ -238,21 +244,8 @@ function carouselInit ($) {
 
   $dropdown.on({
       "shown.bs.dropdown": function() { this.closable = false; },
-      "get.hidden":        function() { this.closable = true; }
-  });
-
-  $('.dropdown').on('show.bs.dropdown', function () {
-    $dropdown.removeClass('open');
-    $yamm.removeClass('nav-open');
-    $(this).parents($yamm).addClass('nav-open');
-  });
-
-  $dropdown.on('hide.bs.dropdown', function () {
-    // only remove the nav-open class if effectively closing dropdown
-    if (this.closable) {
-      $yamm.removeClass('nav-open');
-    }
-    return this.closable;
+      "get.hidden":        function() { this.closable = true; },
+      "hide.bs.dropdown":  function() { return this.closable; }
   });
 
   $(document).on('click', function(e) {
@@ -260,6 +253,10 @@ function carouselInit ($) {
     if ($('.dropdown.open').length > 0 && $(e.target).parents('.dropdown').length === 0) {
         $('.dropdown.open .dropdown-toggle').trigger('click');
     }
+  });
+
+  $dropdown.on('hide.bs.dropdown', function () {
+    $yamm.removeClass('nav-open');
   });
 
   // Trigger close yamm menu
@@ -528,7 +525,23 @@ function carouselInit ($) {
 
 (function($) {
 
-  $('.table-sort').tablesorter();
+  var $tables = $('.table-sort');
+
+  $tables.tablesorter();
+
+  $tables.each(function () {
+    $table = $(this);
+    $table.find('thead th').click(function () {
+      var $headers = $(this).attr('id');
+      $table.find('td, th').each(function () {
+        if ($(this).attr('headers') === $headers || $(this).attr('id') === $headers) {
+          $(this).addClass('active');
+        } else {
+          $(this).removeClass('active');
+        }
+      });
+    });
+  });
 
 }) (jQuery);
  /* ==========================================================
@@ -582,16 +595,16 @@ function carouselInit ($) {
 
   $treecrumb.each(function () {
     var $that = $(this);
-    $that.on('hide.bs.dropdown', function(e) {
-      $that.find('.dropdown-toggle span').removeClass('icon--bottom');
-      $that.find('.dropdown-toggle span').addClass('icon--right');
-    });
-    $that.on('show.bs.dropdown', function(e) {
-      var target = e.relatedTarget;
-      $that.find('.dropdown-toggle span').removeClass('icon--bottom');
-      $that.find('.dropdown-toggle span').addClass('icon--right');
-      $(target).find('span').removeClass('icon--right');
-      $(target).find('span').addClass('icon--bottom');
+    $that.find($dropdownToggle).click(function () {
+      if ($(this).parent().hasClass('open')){
+        $that.find('.dropdown-toggle span').removeClass('icon--bottom');
+        $that.find('.dropdown-toggle span').addClass('icon--right');
+      } else {
+        $that.find('.dropdown-toggle span').removeClass('icon--bottom');
+        $that.find('.dropdown-toggle span').addClass('icon--right');
+        $(this).find('span').removeClass('icon--right');
+        $(this).find('span').addClass('icon--bottom');
+      }
     });
   });
 
