@@ -1,6 +1,6 @@
 {
   "name": "admin2.0",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "homepage": "http://swiss.github.io/styleguide",
   "authors": "Antistatique.net",
   "description": "Swiss Admin Styleguide",
@@ -14,7 +14,7 @@
   "dependencies": {},
   "devDependencies": {
     "jquery": "1.10.2",
-    "bootstrap-sass-official": "~3.2.0+2",
+    "bootstrap-sass-official": "~3.2.0",
     "bootstrapaccessibilityplugin": "https://github.com/antistatique/bootstrap-accessibility-plugin.git#dev",
     "jquery.tablesorter": "2.16.2",
     "yamm3": "1.0.*",
