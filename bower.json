@@ -1,16 +1,15 @@
 {
   "name": "admin2.0",
   "version": "2.1.8",
-  "homepage": "https://github.com/antistatique/Swiss-Admin-web-guidelines",
+  "homepage": "http://swiss.github.io/styleguide",
   "authors": "Antistatique.net",
-  "description": "Swiss Admin web guidelines",
+  "description": "Swiss Admin Styleguide",
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "styleguide"
   ],
   "dependencies": {},
   "devDependencies": {
