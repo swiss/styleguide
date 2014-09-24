@@ -1021,7 +1021,6 @@ Navigation below the content level on a smartphone with links to the home page, 
   }
   @media only screen and (max-width: $screen-xs-max) {
     &[class*=col] {
-      margin-bottom: -20px;
       border-bottom: 1px solid $silver;
     }
   }
