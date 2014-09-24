@@ -44,7 +44,7 @@
   </script>
 </head>
 <body>
-  <ul class="access-keys sr-only" role="navigation">
+  <ul class="access-keys" role="navigation">
     <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
     <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
     <li><a href="contact.html" accesskey="3">Contact page</a></li><!-- Link to contact page -->
@@ -185,8 +185,35 @@
 
     <div class="container-fluid">
       <div class="row">
-
-        <div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+        <div class="col-sm-4 col-md-3 drilldown" id="content">
+          <a href="#collapseSubNav" data-toggle="collapse" class="collapsed visible-xs">Sub-Navigation</a>
+          <div class="drilldown-container">
+            <nav class="nav-page-list">
+              <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
+              <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+              <ul>
+                <!-- the .list-emphasis class is optionnal -->
+                <li class="list-emphasis"><a href="#">Drinks</a></li>
+                <!-- add the .list-sub class if the list has some sub-lists -->
+                <li class="list-sub"><a href="#">Mineral water or a longer title will work</a>
+                  <!-- sub-list element -->
+                  <nav class="drilldown-sub">
+                    <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                    <ul>
+                      <li><a href="#">Test</a></li>
+                      <li><a href="#">Test2</a></li>
+                      <li><a href="#">Test3</a></li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="active"><a href="#">Wine <span class="sr-only">selected</span></a></li>
+                <li><a href="#">Beer</a></li>
+                <li><a href="#">Spirits</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
 
             <div class="row">
               <div class="col-sm-12">
@@ -308,34 +335,6 @@
               </div>
             </div>
 
-        </div>
-
-        <div class="col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9 drilldown" id="content">
-          <div class="drilldown-container">
-            <nav class="nav-page-list">
-              <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
-              <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
-              <ul>
-                <!-- the .list-emphasis class is optionnal -->
-                <li class="list-emphasis"><a href="#">Drinks</a></li>
-                <!-- add the .list-sub class if the list has some sub-lists -->
-                <li class="list-sub"><a href="#">Mineral water or a longer title will work</a>
-                  <!-- sub-list element -->
-                  <nav class="drilldown-sub">
-                    <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
-                    <ul>
-                      <li><a href="#">Test</a></li>
-                      <li><a href="#">Test2</a></li>
-                      <li><a href="#">Test3</a></li>
-                    </ul>
-                  </nav>
-                </li>
-                <li class="active"><a href="#">Wine <span class="sr-only">selected</span></a></li>
-                <li><a href="#">Beer</a></li>
-                <li><a href="#">Spirits</a></li>
-              </ul>
-            </nav>
-          </div>
         </div>
       </div>
     </div>
