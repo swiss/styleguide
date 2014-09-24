@@ -56,3 +56,12 @@ a[data-toggle="collapse"] {
   }
 }
 
+.drilldown a[data-toggle="collapse"] {
+  padding: 0 10px 10px 10px;
+}
+
+.drilldown-container.collapse.in,
+.drilldown-container.collapsing {
+  margin-left: 0;
+  margin-bottom: 0;
+}

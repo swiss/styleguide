@@ -3,6 +3,17 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.1.9 (2014-09-24)
+ * #244 Create page about accessibility
+ * #242 Fix navigation lists accessibility
+ * #240 #223 Set first item of Treecrumb list to be a link and improvements
+ * #239 Improve global navigation on mobile
+ * #238 #220 Fix tables accessibility
+ * #212 fix lightbox issues
+ * #162 fix keyboard navigation with sub-navigation
+ * #142 add fieldset around checkboxes and radios
+ * #181 #180 Alignements page title and copyright
+
 * 2.1.8
  * #233 Improve README file enhancement Styleguide
  * #225 Add text indication for selected links on screen readers
