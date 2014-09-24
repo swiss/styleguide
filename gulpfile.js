@@ -29,11 +29,7 @@ var gulp = require('gulp'),
  */
 gulp.task('vendors', function() {
 
-  gulp.src([
-      'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*'
-    ])
-    .pipe(gulp.dest('build/css/bootstrap'));
-
+  // DEPREACATED, to be removed in 3.0.0
   gulp.src([
       'bower_components/jquery.socialshareprivacy/socialshareprivacy/images/*'
     ])
