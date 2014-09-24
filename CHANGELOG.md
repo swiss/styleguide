@@ -12,6 +12,7 @@ This changelog references the relevant changes and bug fixes.
  * #212 fix lightbox issues
  * #162 fix keyboard navigation with sub-navigation
  * #142 add fieldset around checkboxes and radios
+ * #181 #180 Alignements page title and copyright
 
 * 2.1.8
  * #233 Improve README file enhancement Styleguide
