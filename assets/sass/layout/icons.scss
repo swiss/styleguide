@@ -180,6 +180,10 @@ $icon-list: (
   }
 }
 
+.icon--before.pull-right.icon--print:before, a.pull-right.icon--print[data-toggle=collapse]:before {
+  padding-right: 0;
+}
+
 .icon--print {
   @media only screen and (max-width: $screen-sm-max) {
     display: none;
