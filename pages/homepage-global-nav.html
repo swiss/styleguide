@@ -69,7 +69,7 @@
               <!-- Dropdown list element -->
               <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
                 <!-- Dropdown title, can ben place anywhere in the list -->
-                <li class="dropdown-header">Federal Administration admin.ch</li>
+                <li class="dropdown-header"><a href="http://www.admin.ch">Federal Administration admin.ch</a></li>
                 <!-- Dropdown element link -->
                 <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
                 <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
@@ -84,7 +84,7 @@
             <li class="dropdown">
               <a href="#" id="service-dropdown" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Departement: EDI</a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="service-dropdown">
-                <li class="dropdown-header">Departement: EDI</li>
+                <li class="dropdown-header"><a href="#">Departement: EDI</a></li>
                 <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
                 <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
                 <li><a href="#">Integrationsbüros</a></li>
@@ -106,7 +106,7 @@
               <li><a href="#">EN</a></li>
             </ul>
           </nav>
-          <nav class="nav-service">
+          <nav class="nav-service" role="navigation">
             <h2 class="sr-only">Services navigation</h2>
             <ul>
               <li><a href="#">Emergencies</a></li>
@@ -236,7 +236,7 @@
 
     </header>
 
-      <nav class="nav-main yamm navbar" role="navigation" id="main-navigation">
+      <nav class="nav-main yamm navbar" id="main-navigation">
         <h2 class="sr-only">Navigation</h2>
         <section class="nav-mobile">
           <div class="table-row">
@@ -253,12 +253,10 @@
               <div class="drilldown dropdown-menu" role="menu">
                 <div class="drilldown-container">
                   <nav class="nav-page-list">
-                    <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
                     <ul>
-                      <!-- the .list-emphasis class is optionnal -->
-                      <li class="list-emphasis"><a href="#">Drinks</a></li>
-                      <!-- add the .list-sub class if the list has some sub-lists -->
-                      <li class="list-sub"><a href="#">Mineral water or a longer title will work</a>
+                      <li><a href="#">Aktuell</a></li>
+                      <li><a href="#">Aussenpolitik</a></li>
+                      <li class="list-sub"><a href="#">Länder- & Reise-informationen</a>
                         <!-- sub-list element -->
                         <nav class="drilldown-sub">
                           <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
@@ -269,9 +267,10 @@
                           </ul>
                         </nav>
                       </li>
-                      <li class="active"><a href="#">Wine <span class="sr-only">selected</span></a></li>
-                      <li><a href="#">Beer</a></li>
-                      <li><a href="#">Spirits</a></li>
+                      <li><a href="#">Leben im Ausland</a></li>
+                      <li><a href="#">Einreise & Aufenthalt in der Schweiz</a></li>
+                      <li><a href="#">Publikationen & Service</a></li>
+                      <li><a href="#">Über uns</a></li>
                     </ul>
                     <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
                   </nav>
@@ -293,14 +292,15 @@
         </section>
 
         <!-- The tab navigation -->
-        <ul class="nav navbar-nav" role="menubar">
+        <ul class="nav navbar-nav" role="navigation">
           <li class="dropdown current yamm-fw">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aktuell <span class="sr-only">current page</span></a>
             <ul class="dropdown-menu" role="menu">
+              <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
               <li>
                 <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
-                <div class="yamm-content container-fluid"></div>
-              </li>
+                <div class="yamm-content container-fluid"></div><!-- `yamm-content` end -->
+              </li><!-- Dropdown `li` end -->
             </ul><!-- Dropdown `ul` end -->
           </li>
           <li class="dropdown yamm-fw">
