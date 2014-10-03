@@ -1021,7 +1021,7 @@ Navigation below the content level on a smartphone with links to the home page, 
     padding-top: 0;
   }
   @media only screen and (max-width: $screen-xs-max) {
-    &[class*=col] {
+    &[class*=col-] {
       border-bottom: 1px solid $silver;
     }
   }
