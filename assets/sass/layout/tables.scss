@@ -29,9 +29,15 @@ A simple example :
 
 <br>
 <div class="alert alert-warning">
-**3.0.0**
+
+**2.1.8**
 
   - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
+<br>**2.1.9**
+
+  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
 </div>
 
 ```html_example
@@ -49,34 +55,34 @@ A simple example :
   <tbody>
     <tr>
       <th class="text-left" role="rowheader">Boars</th>
-      <td headers="year-2000" aria-describedby="year-2000">4'160</td>
-      <td headers="year-2010" aria-describedby="year-2010">7'647</td>
-      <td headers="year-2011" aria-describedby="year-2011">4'726</td>
-      <td headers="year-2012" aria-describedby="year-2012">10'650</td>
+      <td>4'160</td>
+      <td>7'647</td>
+      <td>4'726</td>
+      <td>10'650</td>
     </tr>
     <tr>
       <th class="text-left" role="rowheader">Chamois</th>
-      <td headers="year-2000" aria-describedby="year-2000">16'625</td>
-      <td headers="year-2010" aria-describedby="year-2010">13'427</td>
-      <td headers="year-2011" aria-describedby="year-2011">13'413</td>
-      <td headers="year-2012" aria-describedby="year-2012">13'350</td>
+      <td>16'625</td>
+      <td>13'427</td>
+      <td>13'413</td>
+      <td>13'350</td>
     </tr>
     <tr>
       <th class="text-left" role="rowheader">Fox</th>
-      <td headers="year-2000" aria-describedby="year-2000">42'221</td>
-      <td headers="year-2010" aria-describedby="year-2010">31'044</td>
-      <td headers="year-2011" aria-describedby="year-2011">27'094</td>
-      <td headers="year-2012" aria-describedby="year-2012">35'616</td>
+      <td>42'221</td>
+      <td>31'044</td>
+      <td>27'094</td>
+      <td>35'616</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
 
       <td></td>
-      <td headers="year-2000">2000</td>
-      <td headers="year-2010">2010</td>
-      <td headers="year-2011">2011</td>
-      <td headers="year-2012">2012</td>
+      <td>2000</td>
+      <td>2010</td>
+      <td>2011</td>
+      <td>2012</td>
     </tr>
   </tfoot>
 </table>
@@ -91,7 +97,7 @@ table caption {
 
 table.table-bordered {
   font-size: 1em;
-  thead th, tfoot td {background: $smoke;}
+  thead th, thead td, tfoot td {background: $smoke;}
   tbody td {color: $night-rider;}
   th {color: $black;}
 }
@@ -143,9 +149,15 @@ A simple example :
 
 <br>
 <div class="alert alert-warning">
-**3.0.0**
+
+**2.1.8**
 
   - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
+<br>**2.1.9**
+
+  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
 </div>
 
 ```html_example
@@ -163,33 +175,33 @@ A simple example :
   <tbody>
     <tr>
       <th class="text-left" role="rowheader">Boars</th>
-      <td headers="year-2000" aria-describedby="year-2000">4'160</td>
-      <td headers="year-2010" aria-describedby="year-2010">7'647</td>
-      <td headers="year-2011" aria-describedby="year-2011">4'726</td>
-      <td headers="year-2012" aria-describedby="year-2012">10'650</td>
+      <td>4'160</td>
+      <td>7'647</td>
+      <td>4'726</td>
+      <td>10'650</td>
     </tr>
     <tr>
       <th class="text-left" role="rowheader">Chamois</th>
-      <td headers="year-2000" aria-describedby="year-2000">16'625</td>
-      <td headers="year-2010" aria-describedby="year-2010">13'427</td>
-      <td headers="year-2011" aria-describedby="year-2011">13'413</td>
-      <td headers="year-2012" aria-describedby="year-2012">13'350</td>
+      <td>16'625</td>
+      <td>13'427</td>
+      <td>13'413</td>
+      <td>13'350</td>
     </tr>
     <tr>
       <th class="text-left" role="rowheader">Fox</th>
-      <td headers="year-2000" aria-describedby="year-2000">42'221</td>
-      <td headers="year-2010" aria-describedby="year-2010">31'044</td>
-      <td headers="year-2011" aria-describedby="year-2011">27'094</td>
-      <td headers="year-2012" aria-describedby="year-2012">35'616</td>
+      <td>42'221</td>
+      <td>31'044</td>
+      <td>27'094</td>
+      <td>35'616</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
       <td></td>
-      <td headers="year-2000">2000</td>
-      <td headers="year-2010">2010</td>
-      <td headers="year-2011">2011</td>
-      <td headers="year-2012">2012</td>
+      <td>2000</td>
+      <td>2010</td>
+      <td>2011</td>
+      <td>2012</td>
     </tr>
   </tfoot>
 </table>
@@ -234,9 +246,15 @@ A simple example :
 
 <br>
 <div class="alert alert-warning">
-**3.0.0**
+
+**2.1.8**
 
   - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
+<br>**2.1.9**
+
+  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
 </div>
 
 ```html_example
@@ -254,33 +272,33 @@ A simple example :
   <tbody>
     <tr>
       <th class="text-left" role="rowheader">Boars</th>
-      <td headers="year-2000" aria-describedby="year-2000">4'160</td>
-      <td headers="year-2010" aria-describedby="year-2010">7'647</td>
-      <td headers="year-2011" aria-describedby="year-2011" class="active">4'726</td>
-      <td headers="year-2012" aria-describedby="year-2012">10'650</td>
+      <td>4'160</td>
+      <td>7'647</td>
+      <td class="active">4'726</td>
+      <td>10'650</td>
     </tr>
     <tr>
       <th class="text-left" role="rowheader">Chamois</th>
-      <td headers="year-2000" aria-describedby="year-2000">16'625</td>
-      <td headers="year-2010" aria-describedby="year-2010">13'427</td>
-      <td headers="year-2011" aria-describedby="year-2011" class="active">13'413</td>
-      <td headers="year-2012" aria-describedby="year-2012">13'350</td>
+      <td>16'625</td>
+      <td>13'427</td>
+      <td class="active">13'413</td>
+      <td>13'350</td>
     </tr>
     <tr class="active">
       <th class="text-left" role="rowheader">Fox</th>
-      <td headers="year-2000" aria-describedby="year-2000">42'221</td>
-      <td headers="year-2010" aria-describedby="year-2010">31'044</td>
-      <td headers="year-2011" aria-describedby="year-2011" class="active">27'094</td>
-      <td headers="year-2012" aria-describedby="year-2012">35'616</td>
+      <td>42'221</td>
+      <td>31'044</td>
+      <td class="active">27'094</td>
+      <td>35'616</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
       <td></td>
-      <td headers="year-2000">2000</td>
-      <td headers="year-2010">2010</td>
-      <td headers="year-2011" class="active">2011</td>
-      <td headers="year-2012">2012</td>
+      <td>2000</td>
+      <td>2010</td>
+      <td class="active">2011</td>
+      <td>2012</td>
     </tr>
   </tfoot>
 </table>
@@ -326,33 +344,33 @@ The sortable table automatically formats the column in which the data has been s
   <tbody>
     <tr>
       <th class="text-left" role="rowheader">Boars</th>
-      <td headers="year-2000" aria-describedby="year-2000">4'160</td>
-      <td headers="year-2010" aria-describedby="year-2010">7'647</td>
-      <td headers="year-2011" aria-describedby="year-2011">4'726</td>
-      <td headers="year-2012" aria-describedby="year-2012">10'650</td>
+      <td>4'160</td>
+      <td>7'647</td>
+      <td>4'726</td>
+      <td>10'650</td>
     </tr>
     <tr>
       <th class="text-left" role="rowheader">Chamois</th>
-      <td headers="year-2000" aria-describedby="year-2000">16'625</td>
-      <td headers="year-2010" aria-describedby="year-2010">13'427</td>
-      <td headers="year-2011" aria-describedby="year-2011">13'413</td>
-      <td headers="year-2012" aria-describedby="year-2012">13'350</td>
+      <td>16'625</td>
+      <td>13'427</td>
+      <td>13'413</td>
+      <td>13'350</td>
     </tr>
     <tr>
       <th class="text-left" role="rowheader">Fox</th>
-      <td headers="year-2000" aria-describedby="year-2000">42'221</td>
-      <td headers="year-2010" aria-describedby="year-2010">31'044</td>
-      <td headers="year-2011" aria-describedby="year-2011">27'094</td>
-      <td headers="year-2012" aria-describedby="year-2012">35'616</td>
+      <td>42'221</td>
+      <td>31'044</td>
+      <td>27'094</td>
+      <td>35'616</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
       <td></td>
-      <td headers="year-2000">2000</td>
-      <td headers="year-2010">2010</td>
-      <td headers="year-2011">2011</td>
-      <td headers="year-2012">2012</td>
+      <td>2000</td>
+      <td>2010</td>
+      <td>2011</td>
+      <td>2012</td>
     </tr>
   </tfoot>
 </table>
@@ -378,8 +396,10 @@ The sortable table automatically formats the column in which the data has been s
   &.tablesorter-headerAsc:after {
     content: "\5E";
   }
-  &.tablesorter-headerAsc div, &.tablesorter-headerDesc div {
-    color: $empress !important;
+  &.tablesorter-headerAsc, &.tablesorter-headerDesc {
+    div, &:after {
+      color: $venetian-red !important;
+    }
   }
 }
 
@@ -397,9 +417,15 @@ Some tables can be expanded to show details of a data set
 
 <br>
 <div class="alert alert-warning">
-**3.0.0**
+
+**2.1.8**
 
   - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
+<br>**2.1.9**
+
+  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
 </div>
 
 ```html_example
@@ -418,42 +444,42 @@ Some tables can be expanded to show details of a data set
   <tbody>
     <tr>
       <th role="rowheader" class="text-left icon icon--before icon--right" data-toggle="collapse" data-target="#animals">Animals</th>
-      <td headers="year-2000" aria-describedby="year-2000">63'006</td>
-      <td headers="year-2010" aria-describedby="year-2010">52'118</td>
-      <td headers="year-2011" aria-describedby="year-2011">45'233</td>
-      <td headers="year-2012" aria-describedby="year-2012">59'616</td>
+      <td>63'006</td>
+      <td>52'118</td>
+      <td>45'233</td>
+      <td>59'616</td>
     </tr>
     <tbody id="animals" class="collapse">
       <tr>
         <th class="text-left" role="rowheader">Boars</th>
-        <td headers="animals year-2000" aria-describedby="animals year-2000">4'160</td>
-        <td headers="animals year-2010" aria-describedby="animals year-2010">7'647</td>
-        <td headers="animals year-2011" aria-describedby="animals year-2011">4'726</td>
-        <td headers="animals year-2012" aria-describedby="animals year-2012">10'650</td>
+        <td>4'160</td>
+        <td>7'647</td>
+        <td>4'726</td>
+        <td>10'650</td>
       </tr>
       <tr>
         <th class="text-left" role="rowheader">Chamois</th>
-        <td headers="animals year-2000" aria-describedby="animals year-2000">16'625</td>
-        <td headers="animals year-2010" aria-describedby="animals year-2010">13'427</td>
-        <td headers="animals year-2011" aria-describedby="animals year-2011">13'413</td>
-        <td headers="animals year-2012" aria-describedby="animals year-2012">13'350</td>
+        <td>16'625</td>
+        <td>13'427</td>
+        <td>13'413</td>
+        <td>13'350</td>
       </tr>
       <tr>
         <th class="text-left" role="rowheader">Fox</th>
-        <td headers="animals year-2000" aria-describedby="animals year-2000">42'221</td>
-        <td headers="animals year-2010" aria-describedby="animals year-2010">31'044</td>
-        <td headers="animals year-2011" aria-describedby="animals year-2011">27'094</td>
-        <td headers="animals year-2012" aria-describedby="animals year-2012">35'616</td>
+        <td>42'221</td>
+        <td>31'044</td>
+        <td>27'094</td>
+        <td>35'616</td>
       </tr>
     </tbody>
   </tbody>
   <tfoot>
     <tr>
       <td></td>
-      <td headers="year-2000">2000</td>
-      <td headers="year-2010">2010</td>
-      <td headers="year-2011">2011</td>
-      <td headers="year-2012">2012</td>
+      <td>2000</td>
+      <td>2010</td>
+      <td>2011</td>
+      <td>2012</td>
     </tr>
   </tfoot>
 </table>
@@ -492,9 +518,15 @@ Ruled tables are particularly suitable for presenting simple 1:1 relationships. 
 
 <br>
 <div class="alert alert-warning">
-**3.0.0**
+
+**2.1.8**
 
   - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
+<br>**2.1.9**
+
+  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
 </div>
 
 ```html_example
@@ -508,16 +540,16 @@ Ruled tables are particularly suitable for presenting simple 1:1 relationships. 
   </thead>
   <tbody>
     <tr>
-      <td headers="name" aria-describedby="name">Hans Muster</td>
-      <td headers="mail" aria-describedby="mail"><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+      <td>Hans Muster</td>
+      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
     </tr>
     <tr>
-      <td headers="name" aria-describedby="name">Hans Muster</td>
-      <td headers="mail" aria-describedby="mail"><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+      <td>Hans Muster</td>
+      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
     </tr>
     <tr>
-      <td headers="name" aria-describedby="name">Hans Muster</td>
-      <td headers="mail" aria-describedby="mail"><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+      <td>Hans Muster</td>
+      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
     </tr>
   </tbody>
 </table>
@@ -556,9 +588,15 @@ Unruled tables are suitable for presenting properties, e.g. of a publication. A 
 
 <br>
 <div class="alert alert-warning">
-**3.0.0**
+
+**2.1.8**
 
   - added `columnheader` and `aria-describedby` for better accessibility
+
+<br>**2.1.9**
+
+  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
 </div>
 
 ```html_example
@@ -575,8 +613,8 @@ Unruled tables are suitable for presenting properties, e.g. of a publication. A 
         </thead>
         <tbody>
           <tr>
-            <td headers="name" aria-describedby="name">Hans Muster</td>
-            <td headers="mail" aria-describedby="mail"><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+            <td>Hans Muster</td>
+            <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
           </tr>
         </tbody>
       </table>

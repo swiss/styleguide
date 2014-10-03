@@ -15,33 +15,49 @@
   var $yamm = $('.yamm'),
       $yammClose = $('.yamm-close, .yamm-close-bottom'),
       $body = $('body'),
-      $dropdown = $('.dropdown'),
+      $dropdown = $('.yamm .dropdown'),
       $dropdownToggle = $('.dropdown-toggle'),
       $dropdownMenu = $('.dropdown-menu');
 
-  // Toggle overlay
+  // Toggle dropdown and fix z-index errors
   $yamm.each(function () {
     var $that = $(this);
     $that.on('click', '.dropdown-toggle', function () {
-      if ($(this).parent().hasClass('open')){
-        $that.removeClass('nav-open');
-      } else {
-        $that.find($dropdown).removeClass('open');
-        $that.find($dropdown).removeClass('active');
-        $that.addClass('nav-open');
-
+      if (!$(this).parent().hasClass('open')){
         var dropdownHeight = $(window).height() - 49;
         $that.find('.drilldown-container').height( dropdownHeight );
       }
     });
   });
 
-  $(document).on('click', '.yamm .dropdown-menu', function (e) {
-    e.stopPropagation();
+  $dropdownToggle.on('click', function() {
+    $(this).parents($dropdown).trigger('get.hidden');
+  });
+
+  $dropdown.on({
+      "shown.bs.dropdown": function() { this.closable = false; },
+      "get.hidden":        function() { this.closable = true; }
+  });
+
+  $('.dropdown').on('show.bs.dropdown', function () {
+    $dropdown.removeClass('open');
+    $yamm.removeClass('nav-open');
+    $(this).parents($yamm).addClass('nav-open');
   });
 
   $dropdown.on('hide.bs.dropdown', function () {
-    $yamm.removeClass('nav-open');
+    // only remove the nav-open class if effectively closing dropdown
+    if (this.closable) {
+      $yamm.removeClass('nav-open');
+    }
+    return this.closable;
+  });
+
+  $(document).on('click', function(e) {
+    // hide dropdown if dropdown is open and target is not in dropdown
+    if ($('.dropdown.open').length > 0 && $(e.target).parents('.dropdown').length === 0) {
+        $('.dropdown.open .dropdown-toggle').trigger('click');
+    }
   });
 
   // Trigger close yamm menu

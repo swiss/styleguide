@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=$start">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin.ch - Homepage with Global Nav Example</title>
+  <title>Admin.ch - Homepage without Global Nav Example</title>
 
   <link rel="stylesheet" href="../css/vendors.css">
   <link rel="stylesheet" href="../css/admin.css">
@@ -44,7 +44,7 @@
   </script>
 </head>
 <body>
-  <ul class="access-keys sr-only" role="navigation">
+  <ul class="access-keys" role="navigation">
     <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
     <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
     <li><a href="contact.html" accesskey="3">Contact page</a></li><!-- Link to contact page -->
@@ -67,7 +67,7 @@
               <!-- Dropdown list element -->
               <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
                 <!-- Dropdown title, can ben place anywhere in the list -->
-                <li class="dropdown-header">Federal Administration admin.ch</li>
+                <li class="dropdown-header"><a href="http://www.admin.ch">Federal Administration admin.ch</a></li>
                 <!-- Dropdown element link -->
                 <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
                 <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
@@ -82,7 +82,7 @@
             <li class="dropdown">
               <a href="#" id="service-dropdown" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Departement: EDI</a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="service-dropdown">
-                <li class="dropdown-header">Departement: EDI</li>
+                <li class="dropdown-header"><a href="#">Departement: EDI</a></li>
                 <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
                 <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
                 <li><a href="#">Integrationsbüros</a></li>
@@ -97,14 +97,14 @@
           <h2 class="sr-only">Language selection</h2>
           <nav class="nav-lang">
             <ul>
-              <li><a class="active" aria-selected="true" href="#">DE</a></li>
+              <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
               <li><a href="#">FR</a></li>
               <li><a href="#">IT</a></li>
               <li><a class="disabled" href="#">RM</a></li>
               <li><a href="#">EN</a></li>
             </ul>
           </nav>
-          <nav class="nav-service">
+          <nav class="nav-service" role="navigation">
             <h2 class="sr-only">Services navigation</h2>
             <ul>
               <li><a href="#">Emergencies</a></li>
@@ -185,14 +185,41 @@
 
     <div class="container-fluid">
       <div class="row">
-
-        <div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+        <div class="col-sm-4 col-md-3 drilldown" id="content">
+          <a href="#collapseSubNav" data-toggle="collapse" class="collapsed visible-xs">Sub-Navigation</a>
+          <div class="drilldown-container">
+            <nav class="nav-page-list">
+              <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
+              <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+              <ul>
+                <!-- the .list-emphasis class is optionnal -->
+                <li class="list-emphasis"><a href="#">Drinks</a></li>
+                <!-- add the .list-sub class if the list has some sub-lists -->
+                <li class="list-sub"><a href="#">Mineral water or a longer title will work</a>
+                  <!-- sub-list element -->
+                  <nav class="drilldown-sub">
+                    <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+                    <ul>
+                      <li><a href="#">Test</a></li>
+                      <li><a href="#">Test2</a></li>
+                      <li><a href="#">Test3</a></li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="active"><a href="#">Wine <span class="sr-only">selected</span></a></li>
+                <li><a href="#">Beer</a></li>
+                <li><a href="#">Spirits</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-sm-8 col-md-9">
 
             <div class="row">
               <div class="col-sm-12">
                 <!-- focus panes -->
                 <div class="tab-content tab-border tab-focus">
-                  <div class="tab-pane fade active in" id="home">
+                  <div class="tab-pane active in" id="home">
                     <div class="row">
                       <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
                       <div class="col-sm-5">
@@ -205,7 +232,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="profile">
+                  <div class="tab-pane" id="profile">
                     <div class="row">
                       <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
                       <div class="col-sm-5">
@@ -218,7 +245,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="messages">
+                  <div class="tab-pane" id="messages">
                     <div class="row">
                       <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
                       <div class="col-sm-5">
@@ -231,7 +258,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="settings">
+                  <div class="tab-pane" id="settings">
                     <div class="row">
                       <div class="col-sm-7"><img src="http://placehold.it/588x368" alt="image description"></div>
                       <div class="col-sm-5">
@@ -308,34 +335,6 @@
               </div>
             </div>
 
-        </div>
-
-        <div class="col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9 drilldown" id="content">
-          <div class="drilldown-container">
-            <nav class="nav-page-list">
-              <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
-              <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
-              <ul>
-                <!-- the .list-emphasis class is optionnal -->
-                <li class="list-emphasis"><a href="#">Drinks</a></li>
-                <!-- add the .list-sub class if the list has some sub-lists -->
-                <li class="list-sub"><a href="#">Mineral water or a longer title will work</a>
-                  <!-- sub-list element -->
-                  <nav class="drilldown-sub">
-                    <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
-                    <ul>
-                      <li><a href="#">Test</a></li>
-                      <li><a href="#">Test2</a></li>
-                      <li><a href="#">Test3</a></li>
-                    </ul>
-                  </nav>
-                </li>
-                <li class="active"><a aria-selected="true" href="#">Wine</a></li>
-                <li><a href="#">Beer</a></li>
-                <li><a href="#">Spirits</a></li>
-              </ul>
-            </nav>
-          </div>
         </div>
       </div>
     </div>

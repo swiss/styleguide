@@ -13,18 +13,22 @@
 
   // Handle scroll to position nav as fixed
 
-  var top = $('.nav-mobile').offset().top;
-
+  var top = 36;
 
   $(window).scroll(function (event) {
 
     var y = $(this).scrollTop();
 
     if (y >= top) {
-      $('.nav-mobile').addClass('fixed');
+      if (!$('.nav-mobile').hasClass('fixed')) {
+        $('.nav-mobile').addClass('fixed').after('<div id="spacer" style="height:36px;"></div>');
+      }
     }
     else {
-      $('.nav-mobile').removeClass('fixed');
+      if ($('.nav-mobile').hasClass('fixed')) {
+        $('.nav-mobile').removeClass('fixed');
+        $('#spacer').remove();
+      }
     }
 
   });

@@ -1,14 +1,14 @@
 /* ==========================================================
  * radios.scss
  * Custom radio input styles
- * 
+ *
  * Author: Yann Gouffon, yann@antistatique.net
  * Date:   2014-04-28 17:17:40
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
  =========================================================== */
- 
+
  @charset "UTF-8";
 
 /*doc
@@ -23,15 +23,19 @@ category: Base Layout - Forms Elements
 Radio buttons allow the user to make an unequivocal choice from a predefined list. Radio buttons can also be structured in groups. Only one element in a group may be selected.
 
 ```html_example
-<div class="radio radio--left">
-  <input type="radio" name ="radios" id="radio" value="radio1" checked>
-  <label for="radio">Option 1</label>
-</div>
+<fieldset>
+  <legend class="sr-only">(Optional) Question</legend>
 
-<div class="radio radio--right">
-  <input type="radio" name ="radios" id="radio2" value="radio2">
-  <label for="radio2">Option 2</label>
-</div>
+  <div class="radio radio--left">
+    <input type="radio" name ="radios" id="radio" value="radio1" checked>
+    <label for="radio">Option 1</label>
+  </div>
+
+  <div class="radio radio--right">
+    <input type="radio" name ="radios" id="radio2" value="radio2">
+    <label for="radio2">Option 2</label>
+  </div>
+</fieldset>
 ```
 
 */

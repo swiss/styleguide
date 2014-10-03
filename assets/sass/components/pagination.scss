@@ -24,9 +24,9 @@ The paging function allows the user to browse through a large number of elements
 
 <br>
 <div class="alert alert-warning">
-**3.0.0**
-  
-  - added `aria-selected="true"` and `aria-disabled="true"` for accessibility
+**2.1.8**
+
+  - added ` <span class="sr-only">current page</span>` and `aria-disabled="true"` for accessibility
   - added `title`to empty link (link only with icon)
   - added `.clearfix`and `.pull-left` inside of `.pagination-container
 </div>
@@ -37,7 +37,7 @@ The paging function allows the user to browse through a large number of elements
   <ul class="pull-right pagination">
     <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
     <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
-    <li class="active"><a aria-selected="true" href="#">1</a></li>
+    <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
     <li><a href="#">2</a></li>
     <li>...</li>
     <li><a href="#">17</a></li>
@@ -82,6 +82,7 @@ The paging function allows the user to browse through a large number of elements
       &:hover {
         background: none;
         color: darken($cerulean, 5%);
+        text-decoration: underline;
       }
     }
   }

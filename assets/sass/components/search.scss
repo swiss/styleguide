@@ -27,10 +27,10 @@ On smartphones, the search function can be accessed via an icon in the Header.
 
 <br>
 <div class="alert alert-warning">
-  **2.1.2:**
+**2.1.2:**
 
-    - added `h2.sr-only` for more screen reader clarity
-    - added label before input for screen readers
+  - added `h2.sr-only` for more screen reader clarity
+  - added label before input for screen readers
 </div>
 
 ```html_example
@@ -87,6 +87,8 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
     color: $white;
     transition: color 0.3s;
     right: 10px;
+    top: 4px;
+    font-size: 11px;
   }
 }
 

@@ -32,8 +32,8 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 
 <br>
 <div class="alert alert-warning">
-**3.0.0**
-  
+**2.1.8**
+
   - added `title` to brand link for accessibility
 </div>
 
@@ -47,8 +47,6 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
 */
 
 .brand {
-  display: inline-block;
-  float: left;
   img {
     max-width: 400px;
     height: auto;
@@ -74,11 +72,4 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
     float: left;
   }
   &:hover {text-decoration: none;}
-  &:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  }
 }

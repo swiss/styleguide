@@ -3,9 +3,48 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
-* 2.1.6 (2014-09-08)
+* 2.1.9 (2014-09-24)
+ * #244 Create page about accessibility
+ * #242 Fix navigation lists accessibility
+ * #240 #223 Set first item of Treecrumb list to be a link and improvements
+ * #239 Improve global navigation on mobile
+ * #238 #220 Fix tables accessibility
+ * #212 fix lightbox issues
+ * #162 fix keyboard navigation with sub-navigation
+ * #142 add fieldset around checkboxes and radios
+ * #181 #180 Alignements page title and copyright
+
+* 2.1.8
+ * #233 Improve README file enhancement Styleguide
+ * #225 Add text indication for selected links on screen readers
+ * #222 Social buttons are not accessible
+ * #221 General Contrast issues
+ * #218 Check ids and headers of Cycle Table
+ * #217 Timeline Color contrast accessibility
+ * #215 Page navigation list element accessibility
+ * #211 Enhance Breadcrumb accessibility
+ * #210 Use an HTML5 accessible player in timeline.js
+ * #185 Page Navigation List - Wrong behavior
+ * #224 Indicate open status
+
+* 2.1.7 HOTFIX (2014-09-10)
+ * Update Gemfile and gulp-hologram
+
+* 2.1.6 (2014-09-10)
  * #229 remove build files from repo
  * #230 remove TimelineJS from project
+ * #216 process navigation - active state should be more visible accessibility
+ * #231 Cleanup branches
+ * #228 Focus Element does not change automatically enhancement
+ * #219 Check accessibility of data-table accessibility
+ * #213 Carousel navigation accessibiltiy accessibility
+ * #209 Remove <br> in global nav links accessibility
+ * #207 Add accesskeys accessibility
+ * #206 Input number too small (browser issue) Not valid ? accessibility
+ * #189 Text about browser compatibility should be updated enhancement
+ * #187 Shouldn't the magnifying glass initiate a search? Function is missing bug
+ * #177 Carousel wrong styling
+ * #172 Alignement of titles
 
 * 2.1.5 (2014-09-01)
  * #182 Fix print stuff

@@ -20,20 +20,51 @@
 
  With the social sharing function, contents can be shared on social networks. In order to protect the privacy of the users, the function contains an activation mechanism. The user first has to activate the service before being able to share contents via his or her social network.
 
- At the moment, Facebook, Twitter, and Google Plus are supported.
+ At the moment, Facebook, Twitter, and Google Plus are supported. Just add the correct [Open Graph](http://ogp.me/) meta tags to get the preview images and descriptions.
 
  <br>
  <div class="alert alert-warning">
    **2.1.1:**
 
    - added the `.social-sharing` class to the `#social-sharing` element
+   **2.1.7**
+
+   - <span class="label label-danger">DEPRECATED</span> The `<div class="social-sharing" id="social-sharing"></div>` is now deprecated. Please update with the new way to display social links.
  </div>
 
  ```html_example
- <div class="social-sharing" id="social-sharing"></div>
+ <div class="social-sharing">
+   <a href="#" aria-label="Facebook"
+     onclick="
+       window.open(
+         'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+         'facebook-share-dialog',
+         'width=626,height=436');
+       return false;">
+      <img src="img/FB-f-Logo__blue_29.png" width="16px" height="16px" alt="Share on Facebook">
+   </a>
+   <a href="#" aria-label="Twitter"
+     onclick="
+       window.open(
+         'http://twitter.com/share?text=You text here.&url='+encodeURIComponent(location.href),
+         'facebook-share-dialog',
+         'width=626,height=436');
+       return false;">
+     <img src="img/Twitter_logo_blue.png" width="16px" height="16px" alt="Share on Twitter">
+   </a>
+   <a href="#"
+      onclick="
+        window.open(
+          'https://plus.google.com/share?url=encodeURIComponent(location.href)',
+          '',
+          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+        return false;">
+      <img src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/></a>
+ </div>
  ```
  */
 
+ // DEPRECATED, to remove in 3.0.0
  $(function() {
 
    var setme = {
