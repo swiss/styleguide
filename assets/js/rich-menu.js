@@ -16,7 +16,7 @@
       $yammClose = $('.yamm-close, .yamm-close-bottom'),
       $body = $('body'),
       $dropdown = $('.yamm .dropdown'),
-      $dropdownToggle = $('.dropdown-toggle'),
+      $dropdownToggle = $('.yamm .dropdown-toggle'),
       $dropdownMenu = $('.dropdown-menu');
 
   // Toggle dropdown and fix z-index errors
