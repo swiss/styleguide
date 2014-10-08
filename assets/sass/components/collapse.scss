@@ -49,10 +49,10 @@ Add `.collapsed` to link for it to change the icon direction when collapsing.
 a[data-toggle="collapse"] {
   @extend .icon;
   @extend .icon--before;
-  @extend .icon--bottom;
+  @extend .icon--root;
   display: block;
   &.collapsed {
-    @extend .icon--right;
+    @extend .icon--greater;
   }
 }
 

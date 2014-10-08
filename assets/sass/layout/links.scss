@@ -70,6 +70,7 @@ a {
    text-decoration: underline;
  }
  &:active, &:visited {text-decoration: none;}
+ &:visited {color: $cadillac;}
  p & {
    line-height: 1;
    text-decoration: underline;

@@ -22,9 +22,11 @@ category: Base Layout - General
 
 The icons used are one-color and two-dimensional. They are provided as a web font which is to be found in the resources as a TrueType font.
 
-For * icons.scss
+For an **only-icon** element, add the class to an empty `<span>`.
 
-For **inside-icon** element, use the global `.icon` and `.icon--before` or `.icon--after` class followed by the more specific class.
+For an **inside-icon** element, use the global `.icon` and `.icon--before` or `.icon--after` class followed by the more specific class.
+
+**Accessibility**: If the element should be readable by a screen reader and/or is semantically important, be sure to add the appropriate `aria-` attribute. Otherwise, add an `aria-hidden="true"` attribute to hide it and avoid useless clutter of informations.
 
 ```html_example
 <!-- only-icon element -->
