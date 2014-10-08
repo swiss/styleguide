@@ -3,6 +3,24 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.2.0 (2014-10-08)
+ * #243  Heading not in a logical sequence bug
+ * #215 Page navigation list element accessibility waiting for answer
+ * #216 Process navigation - active state should be more visible accessibility
+ * #247 Visited links enhancement invalid
+ * #249 Alternative text of icons accessibility
+ * #248 Alternative text of the Confederation logo accessibility
+ * #254 keyboard focus not visible well enough accessibility duplicate
+ * #259 faceted page navigation - add visually hidden texts accessibility
+ * #258 collapsible elements not working correctly with screenreaders accessibility
+ * #255 error messages are not accessible accessibility
+ * #250 Hierarchy of titles accessibility duplicate
+ * #252 Title of the website without <br> accessibility
+ * #256 dropdown lists are not accessible accessibility duplicate
+ * #69 News feed should not be scrollable on mobile duplicate UX
+ * #146 Accessibility - WCAG 2.4.7 Focus visible, skip links not visible accessibility
+ * #143 Accessibility - WCAG 2.4.1.Bypass Blocks, skiplinks missing accessibility
+
 * 2.1.9 (2014-09-24)
  * #244 Create page about accessibility
  * #242 Fix navigation lists accessibility
