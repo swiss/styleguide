@@ -21,16 +21,16 @@ Alerts are shown when you need to get the attention of the user with something i
 Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
 
 ```html_example
-<div class="alert alert-success">
+<div class="alert alert-success" role="alert">
   Alert info!
 </div>
-<div class="alert alert-info">
+<div class="alert alert-info" role="alert">
   Alert info!
 </div>
-<div class="alert alert-warning">
+<div class="alert alert-warning" role="alert">
   Alert info!
 </div>
-<div class="alert alert-danger">
+<div class="alert alert-danger" role="alert">
   Alert info!
 </div>
 ```

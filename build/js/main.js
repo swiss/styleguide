@@ -104,7 +104,7 @@ function carouselInit ($) {
       .removeClass('icon--greater')
       .attr({
         'aria-selected': 'true',
-        'aria-expended': 'true'
+        'aria-expanded': 'true'
       });
   });
   $('.collapse').on('hide.bs.collapse', function () {
@@ -114,7 +114,7 @@ function carouselInit ($) {
       .addClass('icon--greater')
       .attr( {
         'aria-selected': 'false',
-        'aria-expended': 'false'
+        'aria-expanded': 'false'
       });
   });
 
@@ -222,7 +222,7 @@ function carouselInit ($) {
       $yammClose = $('.yamm-close, .yamm-close-bottom'),
       $body = $('body'),
       $dropdown = $('.yamm .dropdown'),
-      $dropdownToggle = $('.dropdown-toggle'),
+      $dropdownToggle = $('.yamm .dropdown-toggle'),
       $dropdownMenu = $('.dropdown-menu');
 
   // Toggle dropdown and fix z-index errors
@@ -544,7 +544,7 @@ function carouselInit ($) {
 }) (jQuery);
 
 function subNavInit($) {
-  $drilldown = $('.drilldown[class*=col]');
+  $drilldown = $('.drilldown[class*=col-]');
   if ($(window).width() <= 767 && !$drilldown.hasClass('collapse-enabled')) {
     $drilldown
       .addClass('collapse-enabled')

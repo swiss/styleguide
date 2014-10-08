@@ -19,7 +19,7 @@
       .removeClass('icon--greater')
       .attr({
         'aria-selected': 'true',
-        'aria-expended': 'true'
+        'aria-expanded': 'true'
       });
   });
   $('.collapse').on('hide.bs.collapse', function () {
@@ -29,7 +29,7 @@
       .addClass('icon--greater')
       .attr( {
         'aria-selected': 'false',
-        'aria-expended': 'false'
+        'aria-expanded': 'false'
       });
   });
 

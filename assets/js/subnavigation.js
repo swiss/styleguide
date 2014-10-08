@@ -24,7 +24,7 @@
 }) (jQuery);
 
 function subNavInit($) {
-  $drilldown = $('.drilldown[class*=col]');
+  $drilldown = $('.drilldown[class*=col-]');
   if ($(window).width() <= 767 && !$drilldown.hasClass('collapse-enabled')) {
     $drilldown
       .addClass('collapse-enabled')

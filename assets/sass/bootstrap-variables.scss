@@ -47,7 +47,7 @@ $body-bg:               #fff !default;
 $text-color:            $coal !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            $sherpa-blue !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      $brand-primary !default;
 
@@ -90,7 +90,7 @@ $headings-color:          $black !default;
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
 //** Load fonts from this directory.
-$icon-font-path: "bootstrap/" !default;
+$icon-font-path: "../fonts/" !default;
 //** File name for all font files.
 $icon-font-name:          "glyphicons-halflings-regular" !default;
 //** Element ID within SVG icon file.

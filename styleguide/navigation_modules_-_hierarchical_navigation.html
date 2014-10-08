@@ -77,7 +77,7 @@
 
         <a href="index.html" class="brand hidden-xs">
           <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
-          <h1>Swiss Confederation<br>Web Guidelines</h1>
+          <h1>Swiss Confederation Web Guidelines</h1>
         </a>
         <form class="form-horizontal form-search pull-right" role="form">
           <h2 class="sr-only">Search</h2>
@@ -8862,18 +8862,11 @@ of section
       <nav class="nav-page-list nav-page-list--facette">
         <a href="#" class="icon icon--before icon--less">Home page swisstopo</a>
         <ul>
-          <li class="active"><a href="#">Products <span class="badge">4245</span></a></li>
-          <li>
-            <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#geodata">Geodata</button>
+            <button class="icon icon--before icon--root active" id="geodata-collapse" data-toggle="collapse" data-target="#geodata">Geodata</button>
             <ul id="geodata" class="collapse in">
-              <li>
-                <button class="icon icon--before icon--greater" data-toggle="collapse" data-target="#images">Images <span class="badge">1285</span></button>
-                <ul id="images" class="collapse in">
-                  <li class="active"><a aria-selected="true" href="#">Aerial image</a>  <button type="button" class="close">&times;</button></li>
-                </ul>
-              </li>
+              <li><a href="#">Images</a> <span class="badge">1285</span></li>
               <li><a href="#">Landscape models</a> <span class="badge">245</span></li>
-              <li><a href="#">Elevation models</a> <span class="badge">45</span></li>
+              <li class="active"><a href="#">Elevation models</a> <span class="badge">45</span></li>
               <li><a href="#">Map data</a> <span class="badge">27</span></li>
               <li><a href="#">Geological models</a> <span class="badge">238</span></li>
             </ul>
@@ -8923,18 +8916,11 @@ of section
       <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav-page-list nav-page-list--facette"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"icon icon--before icon--less"</span><span class="nt">&gt;</span>Home page swisstopo<span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;ul&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Products <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>4245<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"icon icon--before icon--greater"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#geodata"</span><span class="nt">&gt;</span>Geodata<span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"icon icon--before icon--root active"</span> <span class="na">id=</span><span class="s">"geodata-collapse"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#geodata"</span><span class="nt">&gt;</span>Geodata<span class="nt">&lt;/button&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"geodata"</span> <span class="na">class=</span><span class="s">"collapse in"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;li&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"icon icon--before icon--greater"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#images"</span><span class="nt">&gt;</span>Images <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>1285<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
-                <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"images"</span> <span class="na">class=</span><span class="s">"collapse in"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">aria-selected=</span><span class="s">"true"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Aerial image<span class="nt">&lt;/a&gt;</span>  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
-                <span class="nt">&lt;/ul&gt;</span>
-              <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Images<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>1285<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
               <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Landscape models<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>245<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
-              <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Elevation models<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>45<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Elevation models<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>45<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
               <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Map data<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>27<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
               <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Geological models<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"badge"</span><span class="nt">&gt;</span>238<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
             <span class="nt">&lt;/ul&gt;</span>
