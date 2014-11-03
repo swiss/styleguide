@@ -134,6 +134,15 @@ dl {
   dd {
     margin-left: 3em;
   }
+    @media (min-width: $grid-float-breakpoint) {
+    dt {
+      width: 2em;
+      text-align: left;
+    }
+    dd {
+      margin-left: 3em;
+    }
+  }
 }
 
 dt {
