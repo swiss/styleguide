@@ -202,10 +202,8 @@ Search results are shown in semantically grouped tabs. The categories (groupings
     <!-- Results -->
     <article class="search-result">
       <ol class="breadcrumb breadcrumb--search">
-        <li><a href="#">Home page EDA</a></li>
-        <span class="icon icon--greater"></span>
-        <li><a href="#">Country & Travel Information</a></li>
-        <span class="icon icon--greater"></span>
+        <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
+        <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
         <li class="active">Country Selection</li>
       </ol>
       <h4><a href="#">Title of the first result</a></h4>
@@ -213,10 +211,8 @@ Search results are shown in semantically grouped tabs. The categories (groupings
     </article>
     <article class="search-result">
       <ol class="breadcrumb breadcrumb--search">
-        <li><a href="#">Home page EDA</a></li>
-        <span class="icon icon--greater"></span>
-        <li><a href="#">Country & Travel Information</a></li>
-        <span class="icon icon--greater"></span>
+        <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
+        <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
         <li class="active">Country Selection</li>
       </ol>
       <h4><a href="#">Title of the second result</a></h4>
