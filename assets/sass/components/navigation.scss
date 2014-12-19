@@ -312,6 +312,12 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   }
 }
 
+.nav-mobile-spacer {
+  @media only screen and (min-width: $screen-sm-min) {
+    display: none;
+  }
+}
+
 .drilldown-container {
   overflow-y: auto;
 }
