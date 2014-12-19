@@ -613,8 +613,7 @@ The design of the language navigation for cases, where their are more then five 
     h2 {
       display: block;
       font-size: 1em;
-      margin: 0;
-      margin-top: 2px;
+      margin: 2px 0 6px;
       float: left;
       font-family: $font-family-sans-serif-bold;
     }
@@ -632,6 +631,8 @@ The design of the language navigation for cases, where their are more then five 
   }
   @media only screen and (max-width: $screen-xs-max) {
     margin-bottom: 0;
+    margin-left: 5px;
+    padding-left: 0;
   }
   li {
     padding: 0;
