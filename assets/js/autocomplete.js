@@ -9,11 +9,9 @@
  * Licensed under MIT
  ========================================================== */
 
-if (typeof searchData != "undefined") {
-  (function($, data) {
-
-    var $searchField = $('#search-field');
-
+(function($, data) {
+  var $searchField = $('#search-field');
+  if (data) {
     // Init the Bloodhound suggestion engine
     var bloodhound = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
@@ -33,10 +31,10 @@ if (typeof searchData != "undefined") {
       displayKey: 'value',
       source: bloodhound.ttAdapter()
     });
+  }
 
-    // Insert the icons
-    $('<span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>').insertAfter($searchField);
-    $('.form-search').append('<button class="icon icon--search icon--before"></button>');
+  // Insert the icons
+  $('<span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>').insertAfter($searchField);
+  $('.form-search').append('<button class="icon icon--search icon--before"></button>');
 
-  }) (jQuery, searchData);
-}
+}) (jQuery, (typeof searchData === 'undefined' ? false : searchData));
