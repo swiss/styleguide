@@ -10,7 +10,7 @@
  ========================================================== */
 
 (function($, data) {
-  var $searchField = $('#search-field');
+  var $searchFields = $('.form-search .search-field');
   if (data) {
     // Init the Bloodhound suggestion engine
     var bloodhound = new Bloodhound({
@@ -21,7 +21,7 @@
     bloodhound.initialize();
 
     // Init Typeahead on search-fields
-    $searchField.typeahead({
+    $searchFields.typeahead({
       hint: true,
       highlight: true,
       minLength: 1,
@@ -34,7 +34,11 @@
   }
 
   // Insert the icons
-  $('<span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>').insertAfter($searchField);
+  $searchFields.after('<span class="icon icon--close" data-form-search-clear></span>');
   $('.form-search').append('<button class="icon icon--search icon--before"></button>');
+
+  $('body').on('click', '[data-form-search-clear]', function () {
+    $(this).siblings('.search-field').focus().val('');
+  });
 
 }) (jQuery, (typeof searchData === 'undefined' ? false : searchData));
