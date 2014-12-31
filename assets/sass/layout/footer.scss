@@ -170,16 +170,15 @@ On smartphones, some of the functions from the header, e.g. service navigation o
   </div>
 
   <address>
-    <div class="container-fluid">
-      Bundesamt für Statistik
-      <nav class="pull-right">
-        <ul>
-          <li><a href="#">Rechtliches</a></li>
-          <li><a href="#">Impressum</a></li>
-        </ul>
-      </nav>
-    </div>
+    <span class="hidden-xs">Bundesamt für Statistik</span>
+    <nav class="pull-right">
+      <ul>
+        <li><a href="#">Rechtliches</a></li>
+        <li><a href="#">Impressum</a></li>
+      </ul>
+    </nav>
   </address>
+
 
 </footer>
 ```
@@ -221,17 +220,17 @@ footer {
 }
 
 address {
+  // The table-cell and width force the address to get the
+  // height of it's floated elements.
+  display: table-cell;
+  width: 10000px;
+
   border-top: 1px solid $white;
   margin-bottom: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 15px;
   @media only screen and (max-width: $screen-xs-max) {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
     border-color: $light-grey;
-    .container-fluid {
-      padding-right: 0;
-    }
     ul {
       li {margin: 0;}
       a {
@@ -345,15 +344,13 @@ The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) ar
   </div>
 
   <address>
-    <div class="container-fluid">
-      Bundesamt für Statistik
-      <nav class="pull-right">
-        <ul>
-          <li><a href="#">Rechtliches</a></li>
-          <li><a href="#">Impressum</a></li>
-        </ul>
-      </nav>
-    </div>
+    <span class="hidden-xs">Bundesamt für Statistik</span>
+    <nav class="pull-right">
+      <ul>
+        <li><a href="#">Rechtliches</a></li>
+        <li><a href="#">Impressum</a></li>
+      </ul>
+    </nav>
   </address>
 
 </footer>
@@ -401,16 +398,13 @@ The footbar is a CD element. Its use is mandatory, and its representation may no
 <footer>
 
   <address>
-    <!-- Use normal `container` instead of `container-fluid` -->
-    <div class="container-fluid">
-      Bundesamt für Statistik
-      <nav class="pull-right">
-        <ul>
-          <li><a href="#">Rechtliches</a></li>
-          <li><a href="#">Impressum</a></li>
-        </ul>
-      </nav>
-    </div>
+    <span class="hidden-xs">Bundesamt für Statistik</span>
+    <nav class="pull-right">
+      <ul>
+        <li><a href="#">Rechtliches</a></li>
+        <li><a href="#">Impressum</a></li>
+      </ul>
+    </nav>
   </address>
 
 </footer>

@@ -21,7 +21,8 @@
 
     if (y >= top) {
       if (!$('.nav-mobile').hasClass('fixed')) {
-        $('.nav-mobile').addClass('fixed').after('<div id="spacer" style="height:36px;"></div>');
+        $('.nav-mobile').addClass('fixed')
+          .after('<div class="nav-mobile-spacer" id="spacer" style="height:36px;"></div>');
       }
     }
     else {
