@@ -72,7 +72,8 @@ gulp.task('vendors', function() {
       'bower_components/bootstrapaccessibilityplugin/plugins/js/bootstrap-accessibility.js',
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
       'bower_components/jquery.socialshareprivacy/jquery.socialshareprivacy.min.js',
-      'bower_components/jquery-drilldown/jquery.drilldown.min.js'
+      'bower_components/jquery-drilldown/jquery.drilldown.min.js',
+      'bower_components/placeholdr/placeholdr.js'
     ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())

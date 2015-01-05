@@ -48,6 +48,11 @@ Checkboxes are used when one or more elements are to be selected from a predefin
   }
   label {
     position: relative;
+
+    .form-inline & {
+      padding-left: 20px;
+    }
+
   }
 }
 
