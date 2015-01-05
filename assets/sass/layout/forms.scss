@@ -64,6 +64,17 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
     </div>
   </fieldset>
 
+<!-- URL input -->
+  <fieldset>
+    <legend class="hidden-legend">Select date</legend>
+    <div class="form-group">
+      <label for="select-date" class="col-sm-2 control-label" id="date">Date</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" id="select-date" aria-labelledby="Date DD/MM/YYYY">
+      </div>
+    </div>
+  </fieldset>
+
   <!-- URL input -->
   <fieldset>
     <legend class="hidden-legend">Website</legend>
@@ -228,6 +239,13 @@ legend {
     box-shadow: none;
   }
 }
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  line-height: 1.2;
+}
+
 
 label {
   font-weight: normal;
