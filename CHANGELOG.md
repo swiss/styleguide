@@ -3,6 +3,20 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.4.0 (2015-01-05)
+ * #327 Anchor link for context information when placed at the bottom
+ * #319 [icons] Icon in download list are shown twice. 
+ * #318 Distance in between checkboxes and text is wrong in search results. 
+ * #307 Social Sharing layout is moving on browser zoom 
+ * #306 Resetting of search value doesn't work. 
+ * #305 Search input field will only be initialised when typeahead values are available. 
+ * #295 Language navigation covers name of the organizational unit 
+ * #292 Invalid HTML in footer links. 
+ * #291 Invalid HTML in breadcrumb. 
+ * #290 Missing preset number at one-line order form. 
+ * #289 Global Navigation slipped down when scrolling. 
+ * #283 Single images will not be scaled and overlays their boxes. 
+
 * 2.2.0 (2014-10-08)
  * #243  Heading not in a logical sequence bug
  * #215 Page navigation list element accessibility waiting for answer

@@ -9,11 +9,9 @@
  * Licensed under MIT
  ========================================================== */
 
-if (typeof searchData != "undefined") {
-  (function($, data) {
-
-    var $searchField = $('#search-field');
-
+(function($, data) {
+  var $searchFields = $('.form-search .search-field');
+  if (data) {
     // Init the Bloodhound suggestion engine
     var bloodhound = new Bloodhound({
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
@@ -23,7 +21,7 @@ if (typeof searchData != "undefined") {
     bloodhound.initialize();
 
     // Init Typeahead on search-fields
-    $searchField.typeahead({
+    $searchFields.typeahead({
       hint: true,
       highlight: true,
       minLength: 1,
@@ -33,13 +31,18 @@ if (typeof searchData != "undefined") {
       displayKey: 'value',
       source: bloodhound.ttAdapter()
     });
+  }
 
-    // Insert the icons
-    $('<span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>').insertAfter($searchField);
-    $('.form-search').append('<button class="icon icon--search icon--before"></button>');
+  // Insert the icons
+  $searchFields.after('<span class="icon icon--close" data-form-search-clear></span>');
+  $('.form-search').append('<button class="icon icon--search icon--before"></button>');
 
-  }) (jQuery, searchData);
-}
+  $('body').on('click', '[data-form-search-clear]', function () {
+    $(this).siblings('.search-field').focus().val('');
+  });
+
+}) (jQuery, (typeof searchData === 'undefined' ? false : searchData));
+
 /* ==========================================================
  * carousel.js
  * Carousel helper
@@ -192,7 +195,8 @@ function carouselInit ($) {
 
     if (y >= top) {
       if (!$('.nav-mobile').hasClass('fixed')) {
-        $('.nav-mobile').addClass('fixed').after('<div id="spacer" style="height:36px;"></div>');
+        $('.nav-mobile').addClass('fixed')
+          .after('<div class="nav-mobile-spacer" id="spacer" style="height:36px;"></div>');
       }
     }
     else {
