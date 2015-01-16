@@ -24,6 +24,10 @@ In a rotating carousel a topic can be presented from different perspectives. The
 
 The carousel consists of various information blocks, each of which contains a large image, an optional small image, a brief teaser headline, a text, and a "more" link.
 
+**Accessibility issue**
+
+The carousel component is not totally compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.
+
 ```html_example
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">

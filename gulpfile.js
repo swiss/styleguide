@@ -194,7 +194,6 @@ gulp.task('serve', ['styles'], function () {
     },
     open: false
   });
-  gulp.watch(['**/*.html'], reload);
   gulp.watch(['assets/sass/**/*.scss'], function() {
     runSequence('styles', 'print', 'styleguide', reload);
   });
