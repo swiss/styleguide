@@ -3,6 +3,11 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.4.1 (2015-01-16)
+ * #327 responsive adjustment
+ * #264 add comment about carousel accessibility
+ * #342 remove useless watch in gulp file set smaller max-width on title on screen-sm to avoid bug seen in #327
+
 * 2.4.0 (2015-01-05)
  * #327 Anchor link for context information when placed at the bottom
  * #319 [icons] Icon in download list are shown twice. 
