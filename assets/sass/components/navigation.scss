@@ -253,7 +253,6 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     width: auto;
     margin: 0 0 0 6px;
     font-size: 1.5em;
-    font-family: $font-family-sans-serif;
     color: $coal;
     display: inline-block;
     @media only screen and (max-width: $screen-xs-max) {
@@ -421,7 +420,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   .dropdown.current > a {
     z-index: 999;
     color: $night-rider;
-    font-family: 'Frutiger Neue Bold'; // should be FIXED!!!! We have to be able to set font-weight..................
+    font-weight: 700;
   }
   .dropdown.active > a,
   .dropdown.current.open > a {
@@ -617,7 +616,7 @@ The design of the language navigation for cases, where their are more then five 
       font-size: 1em;
       margin: 2px 0 6px;
       float: left;
-      font-family: $font-family-sans-serif-bold;
+      font-weight: 700;
     }
   }
 }
@@ -810,7 +809,7 @@ On smartphones, the treecrumb navigation is omitted.
       display: block;
       width: 100%;
       color: $coal;
-      font-weight: bold;
+      font-weight: 700;
     }
     a {
       padding: 0;
@@ -960,7 +959,7 @@ Navigation below the content level on a smartphone with links to the home page, 
     padding-right: 15px;
     li.list-emphasis a {
       color: $black;
-      font-weight: bold;
+      font-weight: 700;
       border-color: $coal;
     }
   }

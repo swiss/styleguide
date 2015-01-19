@@ -53,20 +53,13 @@ p {
 }
 
 strong {
-  font-family: $font-family-sans-serif-bold;
-  font-weight: normal;
+  font-weight: 700;
 }
 
 .lead {
   @extend strong;
-  font-weight: normal;
   line-height: $line-height-base;
   font-size: ceil(($font-size-base * 1));
-}
-
-em {
-  font-family: $font-family-sans-serif-italic;
-  font-style: normal;
 }
 
 /*doc
@@ -130,9 +123,9 @@ The font size, line length, and line spacing for the copy body have been selecte
   @extend em;
  }
 
- q q {
-  font-family: $font-family-sans-serif;
-  font-style: normal;
+ q {
+  font-style: italic;
+  q { font-style: normal; }
  }
 
  ins {

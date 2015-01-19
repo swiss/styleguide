@@ -46,7 +46,7 @@ Buttons                                                                       | 
   line-height: 1.2;
   background-color: $smoke;
   border: 1px solid $empress;
-  font-family: $font-family-sans-serif-light;
+  font-weight: 100;
   &:hover, &:focus {
     background-color: $light-grey;
     z-index: 100;

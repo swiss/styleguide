@@ -90,7 +90,7 @@ A simple example :
 */
 
 table caption {
-  font-family: $font-family-sans-serif-bold;
+  font-weight: 700;
   text-align: left;
   padding-bottom: 0.5em;
 }
@@ -224,7 +224,7 @@ A simple example :
   }
   > thead td, > thead th, > tfoot td, > tfoot th {
     background: $smoke;
-    font-weight: bold;
+    font-weight: 700;
     color: $black;
   }
 }
