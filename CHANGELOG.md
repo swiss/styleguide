@@ -9,6 +9,7 @@ This changelog references the relevant changes and bug fixes.
  * #235 Fix `bower.json`
  * #266 Fix headings `font-size` on small devices
  * #268 Display version number on homepage of styleguide
+ * #287 Implement better collapsibles examples
 
 * 2.4.1 (2015-01-16)
  * #327 responsive adjustment
