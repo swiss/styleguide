@@ -8,6 +8,7 @@ This changelog references the relevant changes and bug fixes.
  * #241 Update Bootstrap to 3.3.1
  * #235 Fix `bower.json`
  * #266 Fix headings `font-size` on small devices
+ * #268 Display version number on homepage of styleguide
 
 * 2.4.1 (2015-01-16)
  * #327 responsive adjustment
