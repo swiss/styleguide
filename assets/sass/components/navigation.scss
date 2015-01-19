@@ -908,7 +908,7 @@ Navigation below the content level on a smartphone with links to the home page, 
                 </ul>
               </nav>
             </li>
-            <li class="active"><a href="#">Wine <span class="sr-only"></span></a></li>
+            <li class="active">Wine <span class="sr-only"></span></li>
             <li><a href="#">Beer</a></li>
             <li><a href="#">Spirits</a></li>
           </ul>
@@ -923,6 +923,16 @@ Navigation below the content level on a smartphone with links to the home page, 
 */
 
 .nav-page-list {
+  @media only screen and (min-width: $screen-sm-min) {
+    // adding this padding for compensating the padding we removed from .drilldown
+    padding-left: 15px;
+    padding-right: 15px;
+    li.list-emphasis a {
+      color: $black;
+      font-weight: 700;
+      border-color: $coal;
+    }
+  }
   a {
     display: block;
     width: 100%;
@@ -934,33 +944,55 @@ Navigation below the content level on a smartphone with links to the home page, 
     padding: 0px 10px 8px 10px;
     border-bottom: 1px solid $silver;
     @media only screen and (min-width: $screen-sm-min) {font-size: 11px;}
-    &:first-child {
-      border: 1px solid $silver;
-    }
+    &:first-child { border: 1px solid $silver; }
     &:before {
       font-size: 20px;
       position: relative;
       top: 5px;
       left: -3px;
     }
-    &:hover {
-      text-decoration: underline;
-    }
+    &:hover { text-decoration: underline; }
     &:hover:before {background: none;}
   }
   li {
+    border-bottom: 1px solid $silver;
     display: block;
     margin: 0;
-  }
-  li.active a {color: $black;}
-  @media only screen and (min-width: $screen-sm-min) {
-    // adding this padding for compensating the padding we removed from .drilldown
-    padding-left: 15px;
-    padding-right: 15px;
-    li.list-emphasis a {
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -15px;
+      width: 5px;
+    }
+    &.active {
       color: $black;
-      font-weight: 700;
-      border-color: $coal;
+      padding: 10px 0;
+      position: relative;
+      &:before {
+        background: $venetian-red;
+      }
+      a:before,
+      a:hover:before {background: $venetian-red;}
+      .nav-mobile & { padding-bottom: 40px; }
+    }
+    a {
+      color: $empress;
+      padding: 10px 0;
+      @media only screen and (max-width: $screen-xs-max) { padding: 10px; }
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -15px;
+        width: 5px;
+      }
+      &:active {color: $black;}
     }
   }
   .list-sub {
@@ -974,30 +1006,6 @@ Navigation below the content level on a smartphone with links to the home page, 
       top: 10px;
       right: 5px;
     }
-  }
-  li a {
-    color: $empress;
-    border-bottom: 1px solid $silver;
-    padding: 10px 0;
-    @media only screen and (max-width: $screen-xs-max) {
-      padding: 10px;
-    }
-    position: relative;
-    font-weight: normal;
-    &:active {color: $black;}
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -15px;
-      width: 5px;
-    }
-  }
-  li.active a:before, li a:hover:before {background: $venetian-red;}
-  .nav-mobile & {
-    padding-bottom: 40px;
   }
   @media only screen and (max-width: $screen-xs-max) {
     a,
