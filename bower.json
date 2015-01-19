@@ -1,15 +1,15 @@
 {
   "name": "swiss-styleguide",
-  "version": "2.1.9",
+  "version": "2.5.0",
   "homepage": "http://swiss.github.io/styleguide",
   "authors": "Antistatique.net",
   "description": "Swiss Admin Styleguide",
   "license": "MIT",
+  "main": "styleguide/index.html",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "styleguide"
+    "bower_components"
   ],
   "dependencies": {},
   "devDependencies": {
