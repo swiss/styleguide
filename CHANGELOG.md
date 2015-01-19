@@ -6,7 +6,8 @@ This changelog references the relevant changes and bug fixes.
 * 2.5.0 (2015-01-20)
  * #325 [CONTRAST] fix contrast in carets
  * #241 Update Bootstrap to 3.3.1
- * #235 Fix bower.json
+ * #235 Fix `bower.json`
+ * #266 Fix headings `font-size` on small devices
 
 * 2.4.1 (2015-01-16)
  * #327 responsive adjustment
