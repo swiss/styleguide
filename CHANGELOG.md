@@ -7,6 +7,7 @@ This changelog references the relevant changes and bug fixes.
  * #325 [CONTRAST] fix contrast in carets
  * #279 [CONTRAST] fix input placeholders color
  * #324 [CONTRAST] fix tabs background contrast
+ * #280 [CONTRAST] fix badge color bin nav-page-list
  * #241 Update Bootstrap to 3.3.1
  * #235 Fix `bower.json`
  * #266 Fix headings `font-size` on small devices
