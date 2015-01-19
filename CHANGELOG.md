@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.5.0 (2015-01-20)
+ * #325 [CONTRAST] fix contrast in carets
+
 * 2.4.1 (2015-01-16)
  * #327 responsive adjustment
  * #264 add comment about carousel accessibility

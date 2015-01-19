@@ -47,9 +47,10 @@
   border-left: 1px solid $silver;
   border-right: 1px solid $silver;
   text-align: center;
-  color: $empress;
+  color: $coal;
   &:hover {
     color: $venetian-red;
+    text-decoration: none;
   }
   .nav-page-list & {
     width: 100px;
