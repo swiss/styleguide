@@ -420,6 +420,8 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   }
   .dropdown.current > a {
     z-index: 999;
+    color: $night-rider;
+    font-family: 'Frutiger Neue Bold'; // should be FIXED!!!! We have to be able to set font-weight..................
   }
   .dropdown.active > a,
   .dropdown.current.open > a {
