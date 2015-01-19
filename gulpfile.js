@@ -22,6 +22,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
     runSequence = require('run-sequence'),
+    argv = require('yargs').argv,
     del = require('del');
 
 /**
@@ -107,26 +108,41 @@ gulp.task('polyfills', function() {
  * With error reporting on compiling (so that there's no crash)
  */
 gulp.task('styles', function() {
+  if (argv.production) { console.log('[styles] Processing styles for production env.' ); }
+  else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
+
   return gulp.src('assets/sass/admin.scss')
-    .pipe($.rubySass())
-      .on('error', $.util.beep)
-      .on('error', $.notify.onError(function (error) {
+    .pipe($.sass())
+    .pipe($.if(!argv.production, $.sourcemaps.init()))
+    .on('error', $.notify.onError(function (error) {
+      console.log('Error', error.message);
+      if (!argv.production) {
         return 'Message to the notifier: ' + error.message;
-      }))
-    .pipe($.autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-    .pipe($.minifyCss())
+      }
+    }))
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
+    }))
+    .pipe($.if(!argv.production, $.sourcemaps.write()))
+    .pipe($.if(argv.production, $.minifyCss()))
     .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('print', function() {
   return gulp.src('assets/sass/print/print.scss')
-    .pipe($.rubySass())
-      .on('error', $.util.beep)
-      .on('error', $.notify.onError(function (error) {
+    .pipe($.sass())
+    .pipe($.if(!argv.production, $.sourcemaps.init()))
+    .on('error', $.notify.onError(function (error) {
+      console.log('Error', error.message);
+      if (!argv.production) {
         return 'Message to the notifier: ' + error.message;
-      }))
-    .pipe($.autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-    .pipe($.minifyCss())
+      }
+    }))
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
+    }))
+    .pipe($.if(!argv.production, $.sourcemaps.write()))
+    .pipe($.if(argv.production, $.minifyCss()))
     .pipe(gulp.dest('build/css'));
 });
 
@@ -137,23 +153,14 @@ gulp.task('print', function() {
  */
 gulp.task('scripts', function() {
   return gulp.src('assets/js/*.js')
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.concat('main.js'))
     .pipe(gulp.dest('build/js'))
     .pipe($.rename({ suffix: '.min' }))
     .pipe($.uglify())
     .pipe(gulp.dest('build/js'));
 });
-
-/**
- * Lint JS
- */
-
- gulp.task('jshint', function () {
-   return gulp.src('assets/js/*js')
-     .pipe($.jshint())
-     .pipe($.jshint.reporter('jshint-stylish'))
-     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
- });
 
 /**
  * Build Hologram Styleguide
@@ -187,7 +194,7 @@ gulp.task('clean', del.bind(null, ['build', 'styleguide']));
 /**
  * Serve
  */
-gulp.task('serve', ['styles'], function () {
+gulp.task('serve', ['styles', 'scripts'], function () {
   browserSync({
     server: {
       baseDir: ['styleguide'],
@@ -224,6 +231,6 @@ gulp.task('deploy', function () {
  * Default task
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'jshint', 'scripts', 'build-images', 'build-fonts', 'build-pages', 'styleguide', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'build-images', 'build-fonts', 'build-pages', 'styleguide', cb);
 });
 
