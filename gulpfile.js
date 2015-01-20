@@ -197,7 +197,7 @@ gulp.task('serve', ['styles', 'scripts'], function () {
     runSequence('styles', 'print', 'styleguide', reload);
   });
   gulp.watch(['assets/js/*.js'], function() {
-    runSequence('jshint', 'scripts', 'styleguide', reload);
+    runSequence('scripts', 'styleguide', reload);
   });
   gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], function() {
     runSequence('build-images', 'styleguide', reload);
