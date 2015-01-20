@@ -19,6 +19,7 @@ This changelog references the relevant changes and bug fixes.
  * #297 Treecrumb uses nested lists now
  * #299 Fix collapsible row in table
  * #323 Update README file
+ * #340 #301 Update loads of aria-tags
 
 * 2.4.1 (2015-01-16)
  * #327 responsive adjustment

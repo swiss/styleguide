@@ -554,6 +554,10 @@ The design of the language navigation for cases, where their are more then five 
   **2.1.8**
 
   - added `<span class="sr-only">selected</span>` for active accessibility
+
+  **2.5.0**
+
+  - added `<span class="sr-only">disabled</span>` for disabled accessibility
 </div>
 
 ```html_example
@@ -570,7 +574,7 @@ The design of the language navigation for cases, where their are more then five 
           <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
           <li><a href="#">FR</a></li>
           <li><a href="#">IT</a></li>
-          <li><a class="disabled" href="#">RM</a></li>
+          <li><a class="disabled" href="#">RM <span class="sr-only">disabled</span></a></li>
           <li><a href="#">EN</a></li>
         </ul>
       </nav>
