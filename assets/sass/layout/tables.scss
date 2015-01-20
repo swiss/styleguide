@@ -426,6 +426,10 @@ Some tables can be expanded to show details of a data set
 
   - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
   - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
+
+<br>**2.5.0**
+
+  - wrapped text in `<a/>` in `<th/>` tag if it is a collapse link
 </div>
 
 ```html_example
@@ -443,35 +447,35 @@ Some tables can be expanded to show details of a data set
   </thead>
   <tbody>
     <tr>
-      <th role="rowheader" class="text-left icon icon--before icon--right" data-toggle="collapse" data-target="#animals">Animals</th>
+      <th role="rowheader"><a href="#animals" class="text-left icon icon--before collapsed" data-toggle="collapse">Animals</a></th>
       <td>63'006</td>
       <td>52'118</td>
       <td>45'233</td>
       <td>59'616</td>
     </tr>
-    <tbody id="animals" class="collapse">
-      <tr>
-        <th class="text-left" role="rowheader">Boars</th>
-        <td>4'160</td>
-        <td>7'647</td>
-        <td>4'726</td>
-        <td>10'650</td>
-      </tr>
-      <tr>
-        <th class="text-left" role="rowheader">Chamois</th>
-        <td>16'625</td>
-        <td>13'427</td>
-        <td>13'413</td>
-        <td>13'350</td>
-      </tr>
-      <tr>
-        <th class="text-left" role="rowheader">Fox</th>
-        <td>42'221</td>
-        <td>31'044</td>
-        <td>27'094</td>
-        <td>35'616</td>
-      </tr>
-    </tbody>
+  </tbody>
+  <tbody id="animals" class="collapse">
+    <tr>
+      <th class="text-left" role="rowheader">Boars</th>
+      <td>4'160</td>
+      <td>7'647</td>
+      <td>4'726</td>
+      <td>10'650</td>
+    </tr>
+    <tr>
+      <th class="text-left" role="rowheader">Chamois</th>
+      <td>16'625</td>
+      <td>13'427</td>
+      <td>13'413</td>
+      <td>13'350</td>
+    </tr>
+    <tr>
+      <th class="text-left" role="rowheader">Fox</th>
+      <td>42'221</td>
+      <td>31'044</td>
+      <td>27'094</td>
+      <td>35'616</td>
+    </tr>
   </tbody>
   <tfoot>
     <tr>
