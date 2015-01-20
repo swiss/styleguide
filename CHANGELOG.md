@@ -16,6 +16,7 @@ This changelog references the relevant changes and bug fixes.
  * #287 Implement better collapsibles examples
  * #322 Fix that fonts mess
  * #288 Remove link on active link in nav-page-list
+ * #297 Treecrumb uses nested lists now
 
 * 2.4.1 (2015-01-16)
  * #327 responsive adjustment
