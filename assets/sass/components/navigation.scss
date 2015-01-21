@@ -898,12 +898,16 @@ Navigation below the content level on a smartphone with links to the home page, 
   - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
   - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
 
-**3.0.0:**
+**2.3.0:**
 
   - added `aria-selected="true"` for current link
   - removed first button in the list (looked like a back link)
   - changed label of back button in drilldown sub from "Back" to title
     of section
+
+**2.5.0:**
+
+  - allow nested `<ul/>` lists in `.nav-page-list` elements
 </div>
 
 ```html_example
@@ -914,25 +918,31 @@ Navigation below the content level on a smartphone with links to the home page, 
     <div class="col-sm-4 drilldown">
       <div class="drilldown-container">
 
-        <nav class="nav-page-list">
+        <nav class="nav-page-list" role="navigation">
+          <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
+          <a href="#" class="icon icon--before icon--less"><span class="sr-only">Back to </span>Comestible Goods</a>
           <ul>
             <!-- the .list-emphasis class is optionnal -->
-            <li class="list-emphasis"><a href="#">Drinks</a></li>
-            <!-- add the .list-sub class if the list has some sub-lists -->
-            <li class="list-sub"><a href="#">Mineral water</a>
-              <!-- sub-list element -->
-              <nav class="drilldown-sub" aria-expanded="false">
-                <a href="#" class="icon icon--before icon--less drilldown-back"><span class="sr-only">Back to </span>Mineral Water</a>
-                <ul>
-                  <li><a href="#">Test</a></li>
-                  <li><a href="#">Test2</a></li>
-                  <li><a href="#">Test3</a></li>
-                </ul>
-              </nav>
+            <li class="list-emphasis">
+              <a href="#">Drinks</a>
+              <ul>
+                <!-- add the .list-sub class if the list has some animated sub-lists -->
+                <li class="list-sub"><a href="#">Mineral water</a>
+                  <!-- sub-list element -->
+                  <nav class="drilldown-sub" aria-expanded="false">
+                    <a href="#" class="icon icon--before icon--less drilldown-back"><span class="sr-only">Back to </span>Mineral Water</a>
+                    <ul>
+                      <li><a href="#">Test</a></li>
+                      <li><a href="#">Test2</a></li>
+                      <li><a href="#">Test3</a></li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="active">Wine <span class="sr-only"></span></li>
+                <li><a href="#">Beer</a></li>
+                <li><a href="#">Spirits</a></li>
+              </ul>
             </li>
-            <li class="active">Wine <span class="sr-only"></span></li>
-            <li><a href="#">Beer</a></li>
-            <li><a href="#">Spirits</a></li>
           </ul>
         </nav>
 
@@ -949,10 +959,12 @@ Navigation below the content level on a smartphone with links to the home page, 
     // adding this padding for compensating the padding we removed from .drilldown
     padding-left: 15px;
     padding-right: 15px;
-    li.list-emphasis a {
-      color: $black;
-      font-weight: 700;
-      border-color: $coal;
+    li.list-emphasis {
+      > a {
+        color: $black;
+        font-weight: 700;
+        border-color: $coal;
+      }
     }
   }
   a {
@@ -977,7 +989,6 @@ Navigation below the content level on a smartphone with links to the home page, 
     &:hover:before {background: none;}
   }
   li {
-    border-bottom: 1px solid $silver;
     display: block;
     margin: 0;
     &:before {
@@ -993,6 +1004,7 @@ Navigation below the content level on a smartphone with links to the home page, 
       color: $black;
       padding: 10px 0;
       position: relative;
+      border-bottom: 1px solid $silver;
       &:before {
         background: $venetian-red;
       }
@@ -1001,6 +1013,7 @@ Navigation below the content level on a smartphone with links to the home page, 
       .nav-mobile & { padding-bottom: 40px; }
     }
     a {
+      border-bottom: 1px solid $silver;
       color: $empress;
       padding: 10px 0;
       @media only screen and (max-width: $screen-xs-max) { padding: 10px; }
@@ -1110,7 +1123,7 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
             <ul id="geodata" class="collapse in">
               <li><a href="#">Images</a> <span class="badge">1285</span></li>
               <li><a href="#">Landscape models</a> <span class="badge">245</span></li>
-              <li class="active"><a href="#">Elevation models</a> <span class="badge">45</span></li>
+              <li class="active">Elevation models <span class="badge">45</span></li>
               <li><a href="#">Map data</a> <span class="badge">27</span></li>
               <li><a href="#">Geological models</a> <span class="badge">238</span></li>
             </ul>
@@ -1230,13 +1243,8 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
       top: 0px;
     }
   }
-  ul ul li.active {
-    a {
-      padding: 10px 20px;
-    }
-    a:before {
-      background: $venetian-red;
-      left: 0;
-    }
+  li.active {
+    padding-left: 20px;
+    &:before {left: 0;}
   }
 }

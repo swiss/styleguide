@@ -20,6 +20,7 @@ This changelog references the relevant changes and bug fixes.
  * #299 Fix collapsible row in table
  * #323 Update README file
  * #340 #301 #275 #274 #276 Update loads of aria-tags
+ * #302 Fix Nav page list with nested lists
 
 * 2.4.1 (2015-01-16)
  * #327 responsive adjustment

@@ -394,26 +394,29 @@
           <div class="drilldown-container">
             <nav class="nav-page-list" role="navigation">
               <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
-              <a href="#" class="icon icon--before icon--less">Comestible Goods</a>
+              <a href="#" class="icon icon--before icon--less"><span class="sr-only">Back to </span>Comestible Goods</a>
               <ul>
                 <!-- the .list-emphasis class is optionnal -->
-                <li class="list-emphasis"><a href="#">Drinks</a></li>
-                <!-- add the .list-sub class if the list has some sub-lists -->
-                <li class="list-sub"><a href="#">Mineral water or a longer title will work</a>
-                  <!-- sub-list element -->
-                  <nav class="drilldown-sub" aria-expanded="false">
-                    <a href="#" class="icon icon--before icon--less drilldown-back" aria-hidden="true">Mineral Water</a>
-                    <ul>
-                      <li class="list-emphasis"><a href="#">Mineral Water</a></li>
-                      <li><a href="#">Test</a></li>
-                      <li><a href="#">Test2</a></li>
-                      <li><a href="#">Test3</a></li>
-                    </ul>
-                  </nav>
+                <li class="list-emphasis">
+                  <a href="#">Drinks</a>
+                  <ul>
+                    <!-- add the .list-sub class if the list has some animated sub-lists -->
+                    <li class="list-sub"><a href="#">Mineral water</a>
+                      <!-- sub-list element -->
+                      <nav class="drilldown-sub" aria-expanded="false">
+                        <a href="#" class="icon icon--before icon--less drilldown-back"><span class="sr-only">Back to </span>Mineral Water</a>
+                        <ul>
+                          <li><a href="#">Test</a></li>
+                          <li><a href="#">Test2</a></li>
+                          <li><a href="#">Test3</a></li>
+                        </ul>
+                      </nav>
+                    </li>
+                    <li class="active">Wine <span class="sr-only"></span></li>
+                    <li><a href="#">Beer</a></li>
+                    <li><a href="#">Spirits</a></li>
+                  </ul>
                 </li>
-                <li class="active">Wine <span class="sr-only">selected</span></li>
-                <li><a href="#">Beer</a></li>
-                <li><a href="#">Spirits</a></li>
               </ul>
             </nav>
           </div>
