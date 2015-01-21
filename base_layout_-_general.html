@@ -1,6 +1,10 @@
 
 
 
+
+
+
+
   
 
   
@@ -18,7 +22,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Base Layout - General</title>
+    <title>Swiss Styleguide</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.min.css">
@@ -62,14 +66,12 @@
         <div class="clearfix">
           <section class="nav-services clearfix">
             <h2>Styleguide</h2>
-            <nav class="nav-lang">
-              <ul>
-                <li><a class="active" href="#">EN</a></li>
-              </ul>
-            </nav>
             <nav class="pull-right">
               <ul class="download-link">
-                <li><a href="https://github.com/swiss/styleguide/releases/latest">Download</a></li>
+                <li>
+                  <a class="btn btn-secondary" href="https://github.com/swiss/styleguide/releases/latest">Styleguide version 2.5.0
+</a>
+                </li>
               </ul>
             </nav>
           </section>
@@ -79,13 +81,6 @@
           <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
           <h1>Swiss Confederation Web Guidelines</h1>
         </a>
-        <form class="form-horizontal form-search pull-right" role="form">
-          <h2 class="sr-only">Search</h2>
-          <label for="search-field" class="sr-only">Search:</label>
-          <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-          <span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>
-          <button class="icon icon--search icon--before"></button>
-        </form>
 
       </header>
 
@@ -98,7 +93,7 @@
                 <span class="nav-mobile-logo">
                   <img src="img/swiss.svg" onerror="this.onerror=null; this.src='img/swiss.png'" alt="Confederatio Helvetica" />
                 </span>
-                <h1><a href="#">Base Layout - General</a></h1>
+                <h1><a href="#">Swiss Styleguide</a></h1>
               </div>
             </div>
             <div class="table-cell dropdown">
@@ -8505,17 +8500,26 @@
 
 <p>For an <strong>inside-icon</strong> element, use the global <code>.icon</code> and <code>.icon--before</code> or <code>.icon--after</code> class followed by the more specific class.</p>
 
-<p><strong>Accessibility</strong>: If the element should be readable by a screen reader and/or is semantically important, be sure to add the appropriate <code>aria-</code> attribute. Otherwise, add an <code>aria-hidden=&quot;true&quot;</code> attribute to hide it and avoid useless clutter of informations.</p>
+<p><br>
+<div class="alert alert-warning"></p>
+
+<p><strong>Accessibility</strong></p>
+
+<p>If the element should be readable by a screen reader and/or is semantically important, be sure to add the appropriate <code>aria-</code> attribute. Otherwise, add an <code>aria-hidden=&quot;true&quot;</code> attribute to hide it and avoid useless clutter of informations.</p>
+
+<p>You could also add a <code>&lt;span class=&quot;sr-only&quot;&gt;icon description&lt;/span&gt;</code> depending on your needs.</p>
+
+<p></div></p>
 <div class="codeExample"><div class="exampleOutput"><!-- only-icon element -->
-<span class="icon icon--pdf"></span> My document <br>
+<span class="icon icon--pdf" aria-hidden="true"></span> My document <br>
 
 <!-- inside-icon element -->
-<a href="doc.pdf" class="icon icon--before icon--pdf">My document</a>
+<a href="doc.pdf" class="icon icon--before icon--pdf" aria-hidden="true">My document</a>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="c">&lt;!-- only-icon element --&gt;</span>
-<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--pdf"</span><span class="nt">&gt;&lt;/span&gt;</span> My document <span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--pdf"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> My document <span class="nt">&lt;br&gt;</span>
 
 <span class="c">&lt;!-- inside-icon element --&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"doc.pdf"</span> <span class="na">class=</span><span class="s">"icon icon--before icon--pdf"</span><span class="nt">&gt;</span>My document<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"doc.pdf"</span> <span class="na">class=</span><span class="s">"icon icon--before icon--pdf"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>My document<span class="nt">&lt;/a&gt;</span>
 </pre></div></div></div>
 <table><thead>
 <tr>
@@ -8742,8 +8746,8 @@
 <p><span class="label label-admin">FLEX</span></p>
 
 <p>Use the global <code>.form-icon</code> class followed by the more specific class</p>
-<div class="codeExample"><div class="exampleOutput"><span class="form-icon form-icon--checkbox-checked"></span> My checkbox
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-icon form-icon--checkbox-checked"</span><span class="nt">&gt;&lt;/span&gt;</span> My checkbox
+<div class="codeExample"><div class="exampleOutput"><span class="form-icon form-icon--checkbox-checked" aria-hidden="true"></span> My checkbox
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"form-icon form-icon--checkbox-checked"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;&lt;/span&gt;</span> My checkbox
 </pre></div></div></div>
 <table><thead>
 <tr>
