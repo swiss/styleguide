@@ -23,6 +23,7 @@ This changelog references the relevant changes and bug fixes.
  * #302 Fix Nav page list with nested lists
  * #337 Fix global navigation error in some examples
  * Switch all template examples to `.twig` files
+ * #350 Add rows in footer to avoid wrong behavior
 
 * 2.4.1 (2015-01-16)
  * #327 responsive adjustment
