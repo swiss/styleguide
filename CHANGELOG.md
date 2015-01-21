@@ -3,7 +3,7 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
-* 2.5.1 (2015-01-21)
+* 2.5.1 (2015-01-21) 
  * #325 [CONTRAST] fix contrast in carets
  * #279 [CONTRAST] fix input placeholders color
  * #324 [CONTRAST] fix tabs background contrast

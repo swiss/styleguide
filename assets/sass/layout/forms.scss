@@ -329,3 +329,8 @@ label {
   margin-right: 10px; // space out consecutive inline controls
   margin-left: 0;
 }
+
+// ie placeholders
+.placeholdr {
+  color: $input-color-placeholder !important;
+}

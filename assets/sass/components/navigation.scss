@@ -253,7 +253,6 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     width: auto;
     margin: 0 0 0 6px;
     font-size: 1.5em;
-    font-family: $font-family-sans-serif;
     color: $coal;
     display: inline-block;
     @media only screen and (max-width: $screen-xs-max) {
@@ -367,7 +366,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
         left: 0;
         width: 100%;
         text-align: center;
-        color: $empress;
+        color: $coal;
         font-size: 0.9em;
       }
       &:hover, &:focus {
@@ -420,6 +419,8 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
   }
   .dropdown.current > a {
     z-index: 999;
+    color: $night-rider;
+    font-weight: 700;
   }
   .dropdown.active > a,
   .dropdown.current.open > a {
@@ -553,6 +554,10 @@ The design of the language navigation for cases, where their are more then five 
   **2.1.8**
 
   - added `<span class="sr-only">selected</span>` for active accessibility
+
+  **2.5.0**
+
+  - added `<span class="sr-only">disabled</span>` for disabled accessibility
 </div>
 
 ```html_example
@@ -569,7 +574,7 @@ The design of the language navigation for cases, where their are more then five 
           <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
           <li><a href="#">FR</a></li>
           <li><a href="#">IT</a></li>
-          <li><a class="disabled" href="#">RM</a></li>
+          <li><a class="disabled" href="#">RM <span class="sr-only">disabled</span></a></li>
           <li><a href="#">EN</a></li>
         </ul>
       </nav>
@@ -615,7 +620,7 @@ The design of the language navigation for cases, where their are more then five 
       font-size: 1em;
       margin: 2px 0 6px;
       float: left;
-      font-family: $font-family-sans-serif-bold;
+      font-weight: 700;
     }
   }
 }
@@ -674,6 +679,10 @@ On smartphones, the treecrumb navigation is omitted.
 **2.1.2:**
 
   - added `h2.sr-only` for more screen reader clarity
+
+**2.5.0:**
+
+  - modified markup of dropdown list. Please refer to how it is in the example below
 </div>
 
 ```html_example
@@ -683,7 +692,7 @@ On smartphones, the treecrumb navigation is omitted.
   <header>
 
     <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
-    <nav class="navbar treecrumb" role="navigation">
+    <nav class="navbar treecrumb pull-left" role="navigation">
       <h2 class="sr-only">Orientation in the website</h2>
       <ul class="nav navbar-nav">
 
@@ -694,25 +703,32 @@ On smartphones, the treecrumb navigation is omitted.
           <!-- Dropdown list element -->
           <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
             <!-- Dropdown title, can ben place anywhere in the list -->
-            <li class="dropdown-header"><a href="http://www.admin.ch">Federal Administration admin.ch</a></li>
-            <!-- Dropdown element link -->
-            <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
-            <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
-            <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
-            <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
-            <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
-            <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
-            <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
+            <li class="dropdown-header">
+              <a href="#">Federal Administration admin.ch</a>
+              <ul>
+                <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
+                <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
+                <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
+                <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
+                <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
+                <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
+                <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
         <li class="dropdown">
           <a href="#" id="service-dropdown" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Departement: EDI</a>
           <ul class="dropdown-menu" role="menu" aria-labelledby="service-dropdown">
-            <li class="dropdown-header"><a href="#">Departement: EDI<a href="http://www.admin.ch"></li>
-            <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
-            <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
-            <li><a href="#">Integrationsbüros</a></li>
+            <li class="dropdown-header">
+              <a href="#">Departement: EDI</a>
+              <ul>
+                <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
+                <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
+                <li><a href="#">Integrationsbüros</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
@@ -736,6 +752,10 @@ On smartphones, the treecrumb navigation is omitted.
     min-height: 0;
   }
   .dropdown {margin: 0;}
+  .nav ul li {
+    display: block;
+    padding: 5px 0;
+  }
   .nav .open a.dropdown-toggle {
     background: $white;
     border: 1px solid $silver;
@@ -752,8 +772,10 @@ On smartphones, the treecrumb navigation is omitted.
     background: transparent;
     color: $coal;
     border: 1px solid $silver;
-    border-left-color: transparent;
+    border-left: 0;
+    border-right: 0;
     position: relative;
+    height: 27px;
     &:hover, &:focus {
       background: transparent;
       color: $venetian-red;
@@ -763,7 +785,7 @@ On smartphones, the treecrumb navigation is omitted.
       display: block;
       position: absolute;
       top: -1px;
-      right: -2.1em;
+      right: -26px;
       width: 0;
       height: 0;
       border-color: transparent transparent transparent $silver;
@@ -771,7 +793,7 @@ On smartphones, the treecrumb navigation is omitted.
       border-width: 1.05em;
     }
     &:after {
-      right: -2em;
+      right: -25px;
       border-color: transparent transparent transparent $white;
     }
     span {
@@ -779,7 +801,7 @@ On smartphones, the treecrumb navigation is omitted.
     }
   }
   .dropdown:first-child .dropdown-toggle {
-    border-left-color: $silver;
+    border-left: 1px solid $silver;
     padding-left: 10px;
   }
   .nav .dropdown.open:first-child a.dropdown-toggle {
@@ -791,7 +813,7 @@ On smartphones, the treecrumb navigation is omitted.
     top: 97%;
     padding-left: 1em;
     padding-right: 1em;
-    li {display: inline-block;}
+    li:first-child {padding-left: 10px;}
     a {
       padding: 5px 15px;
       color: $empress;
@@ -804,14 +826,15 @@ On smartphones, the treecrumb navigation is omitted.
     }
   }
   .dropdown-header {
-    &, a {
+    a {
+      padding: 0;
+    }
+    > a {
       display: block;
       width: 100%;
       color: $coal;
-      font-weight: bold;
-    }
-    a {
-      padding: 0;
+      font-weight: 700;
+      padding-bottom: 5px;
     }
     font-size: 13px;
     padding: 10px 5px;
@@ -875,12 +898,16 @@ Navigation below the content level on a smartphone with links to the home page, 
   - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
   - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
 
-**3.0.0:**
+**2.3.0:**
 
   - added `aria-selected="true"` for current link
   - removed first button in the list (looked like a back link)
   - changed label of back button in drilldown sub from "Back" to title
     of section
+
+**2.5.0:**
+
+  - allow nested `<ul/>` lists in `.nav-page-list` elements
 </div>
 
 ```html_example
@@ -891,25 +918,31 @@ Navigation below the content level on a smartphone with links to the home page, 
     <div class="col-sm-4 drilldown">
       <div class="drilldown-container">
 
-        <nav class="nav-page-list">
+        <nav class="nav-page-list" role="navigation">
+          <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
+          <a href="#" class="icon icon--before icon--less"><span class="sr-only">Back to </span>Comestible Goods</a>
           <ul>
             <!-- the .list-emphasis class is optionnal -->
-            <li class="list-emphasis"><a href="#">Drinks</a></li>
-            <!-- add the .list-sub class if the list has some sub-lists -->
-            <li class="list-sub"><a href="#">Mineral water</a>
-              <!-- sub-list element -->
-              <nav class="drilldown-sub" aria-expanded="false">
-                <a href="#" class="icon icon--before icon--less drilldown-back"><span class="sr-only">Back to </span>Mineral Water</a>
-                <ul>
-                  <li><a href="#">Test</a></li>
-                  <li><a href="#">Test2</a></li>
-                  <li><a href="#">Test3</a></li>
-                </ul>
-              </nav>
+            <li class="list-emphasis">
+              <a href="#">Drinks</a>
+              <ul>
+                <!-- add the .list-sub class if the list has some animated sub-lists -->
+                <li class="list-sub"><a href="#">Mineral water</a>
+                  <!-- sub-list element -->
+                  <nav class="drilldown-sub" aria-expanded="false">
+                    <a href="#" class="icon icon--before icon--less drilldown-back"><span class="sr-only">Back to </span>Mineral Water</a>
+                    <ul>
+                      <li><a href="#">Test</a></li>
+                      <li><a href="#">Test2</a></li>
+                      <li><a href="#">Test3</a></li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="active">Wine <span class="sr-only"></span></li>
+                <li><a href="#">Beer</a></li>
+                <li><a href="#">Spirits</a></li>
+              </ul>
             </li>
-            <li class="active"><a href="#">Wine <span class="sr-only"></span></a></li>
-            <li><a href="#">Beer</a></li>
-            <li><a href="#">Spirits</a></li>
           </ul>
         </nav>
 
@@ -922,6 +955,18 @@ Navigation below the content level on a smartphone with links to the home page, 
 */
 
 .nav-page-list {
+  @media only screen and (min-width: $screen-sm-min) {
+    // adding this padding for compensating the padding we removed from .drilldown
+    padding-left: 15px;
+    padding-right: 15px;
+    li.list-emphasis {
+      > a {
+        color: $black;
+        font-weight: 700;
+        border-color: $coal;
+      }
+    }
+  }
   a {
     display: block;
     width: 100%;
@@ -933,33 +978,56 @@ Navigation below the content level on a smartphone with links to the home page, 
     padding: 0px 10px 8px 10px;
     border-bottom: 1px solid $silver;
     @media only screen and (min-width: $screen-sm-min) {font-size: 11px;}
-    &:first-child {
-      border: 1px solid $silver;
-    }
+    &:first-child { border: 1px solid $silver; }
     &:before {
       font-size: 20px;
       position: relative;
       top: 5px;
       left: -3px;
     }
-    &:hover {
-      text-decoration: underline;
-    }
+    &:hover { text-decoration: underline; }
     &:hover:before {background: none;}
   }
   li {
     display: block;
     margin: 0;
-  }
-  li.active a {color: $black;}
-  @media only screen and (min-width: $screen-sm-min) {
-    // adding this padding for compensating the padding we removed from .drilldown
-    padding-left: 15px;
-    padding-right: 15px;
-    li.list-emphasis a {
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -15px;
+      width: 5px;
+    }
+    &.active {
       color: $black;
-      font-weight: bold;
-      border-color: $coal;
+      padding: 10px 0;
+      position: relative;
+      border-bottom: 1px solid $silver;
+      &:before {
+        background: $venetian-red;
+      }
+      a:before,
+      a:hover:before {background: $venetian-red;}
+      .nav-mobile & { padding-bottom: 40px; }
+    }
+    a {
+      border-bottom: 1px solid $silver;
+      color: $empress;
+      padding: 10px 0;
+      @media only screen and (max-width: $screen-xs-max) { padding: 10px; }
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -15px;
+        width: 5px;
+      }
+      &:active {color: $black;}
     }
   }
   .list-sub {
@@ -973,30 +1041,6 @@ Navigation below the content level on a smartphone with links to the home page, 
       top: 10px;
       right: 5px;
     }
-  }
-  li a {
-    color: $empress;
-    border-bottom: 1px solid $silver;
-    padding: 10px 0;
-    @media only screen and (max-width: $screen-xs-max) {
-      padding: 10px;
-    }
-    position: relative;
-    font-weight: normal;
-    &:active {color: $black;}
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -15px;
-      width: 5px;
-    }
-  }
-  li.active a:before, li a:hover:before {background: $venetian-red;}
-  .nav-mobile & {
-    padding-bottom: 40px;
   }
   @media only screen and (max-width: $screen-xs-max) {
     a,
@@ -1079,7 +1123,7 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
             <ul id="geodata" class="collapse in">
               <li><a href="#">Images</a> <span class="badge">1285</span></li>
               <li><a href="#">Landscape models</a> <span class="badge">245</span></li>
-              <li class="active"><a href="#">Elevation models</a> <span class="badge">45</span></li>
+              <li class="active">Elevation models <span class="badge">45</span></li>
               <li><a href="#">Map data</a> <span class="badge">27</span></li>
               <li><a href="#">Geological models</a> <span class="badge">238</span></li>
             </ul>
@@ -1183,7 +1227,7 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
       right: 0px;
       top: 10px;
       background: $light-grey;
-      color: $empress;
+      color: $coal;
       font-weight: normal;
       font-size: 15px;
       border-radius: 3px;
@@ -1199,13 +1243,8 @@ On smartphones, the navigation is accessed via a filter link, and it behaves in 
       top: 0px;
     }
   }
-  ul ul li.active {
-    a {
-      padding: 10px 20px;
-    }
-    a:before {
-      background: $venetian-red;
-      left: 0;
-    }
+  li.active {
+    padding-left: 20px;
+    &:before {left: 0;}
   }
 }

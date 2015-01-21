@@ -22,6 +22,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
     runSequence = require('run-sequence'),
+    argv = require('yargs').argv,
     del = require('del');
 
 /**
@@ -107,26 +108,33 @@ gulp.task('polyfills', function() {
  * With error reporting on compiling (so that there's no crash)
  */
 gulp.task('styles', function() {
+  if (argv.production) { console.log('[styles] Processing styles for production env.' ); }
+  else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
+
   return gulp.src('assets/sass/admin.scss')
-    .pipe($.rubySass())
-      .on('error', $.util.beep)
-      .on('error', $.notify.onError(function (error) {
-        return 'Message to the notifier: ' + error.message;
-      }))
-    .pipe($.autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-    .pipe($.minifyCss())
+    .pipe($.sass({
+      errLogToConsole: true
+    }))
+    .pipe($.if(!argv.production, $.sourcemaps.init()))
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
+    }))
+    .pipe($.if(!argv.production, $.sourcemaps.write()))
+    .pipe($.if(argv.production, $.minifyCss()))
     .pipe(gulp.dest('build/css'));
 });
 
 gulp.task('print', function() {
   return gulp.src('assets/sass/print/print.scss')
-    .pipe($.rubySass())
-      .on('error', $.util.beep)
-      .on('error', $.notify.onError(function (error) {
-        return 'Message to the notifier: ' + error.message;
-      }))
-    .pipe($.autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-    .pipe($.minifyCss())
+    .pipe($.sass({
+      errLogToConsole: true
+    }))
+    .pipe($.if(!argv.production, $.sourcemaps.init()))
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
+    }))
+    .pipe($.if(!argv.production, $.sourcemaps.write()))
+    .pipe($.if(argv.production, $.minifyCss()))
     .pipe(gulp.dest('build/css'));
 });
 
@@ -137,23 +145,14 @@ gulp.task('print', function() {
  */
 gulp.task('scripts', function() {
   return gulp.src('assets/js/*.js')
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.concat('main.js'))
     .pipe(gulp.dest('build/js'))
     .pipe($.rename({ suffix: '.min' }))
     .pipe($.uglify())
     .pipe(gulp.dest('build/js'));
 });
-
-/**
- * Lint JS
- */
-
- gulp.task('jshint', function () {
-   return gulp.src('assets/js/*js')
-     .pipe($.jshint())
-     .pipe($.jshint.reporter('jshint-stylish'))
-     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
- });
 
 /**
  * Build Hologram Styleguide
@@ -173,11 +172,15 @@ gulp.task('build-fonts', function() {
           .pipe(gulp.dest('build/fonts'));
 });
 
-gulp.task('build-pages', function() {
-  gulp.src(['assets/pages/**'])
-    .pipe(gulp.dest('styleguide/pages'));
-});
+/**
+ * Compile TWIG example pages
+ */
 
+gulp.task('twig', function () {
+    return gulp.src('assets/pages/*.twig')
+        .pipe($.twig())
+        .pipe(gulp.dest('styleguide/pages'));
+});
 
 /**
  * Clean output directories
@@ -187,7 +190,7 @@ gulp.task('clean', del.bind(null, ['build', 'styleguide']));
 /**
  * Serve
  */
-gulp.task('serve', ['styles'], function () {
+gulp.task('serve', ['styles', 'scripts'], function () {
   browserSync({
     server: {
       baseDir: ['styleguide'],
@@ -198,7 +201,7 @@ gulp.task('serve', ['styles'], function () {
     runSequence('styles', 'print', 'styleguide', reload);
   });
   gulp.watch(['assets/js/*.js'], function() {
-    runSequence('jshint', 'scripts', 'styleguide', reload);
+    runSequence('scripts', 'styleguide', reload);
   });
   gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], function() {
     runSequence('build-images', 'styleguide', reload);
@@ -206,8 +209,8 @@ gulp.task('serve', ['styles'], function () {
   gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
     runSequence('build-fonts', 'styleguide', reload);
   });
-  gulp.watch(['assets/pages/**/*.html'], function() {
-    runSequence('build-pages', 'styleguide', reload);
+  gulp.watch(['assets/pages/**/*.twig'], function() {
+    runSequence('twig', reload);
   });
 });
 
@@ -224,6 +227,6 @@ gulp.task('deploy', function () {
  * Default task
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'jshint', 'scripts', 'build-images', 'build-fonts', 'build-pages', 'styleguide', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styleguide', cb);
 });
 
