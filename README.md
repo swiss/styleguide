@@ -174,3 +174,19 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 ````
 
+### Error encoding ruby 2.1.0 with Windows 7 x64
+
+Edit file : C:\Ruby21-64\lib\ruby\2.1.0\registry.rb
+
+````
+Add line 70 == LOCALE = Encoding::UTF_8
+````
+
+### Error SSL certificates rubygems 2.2.2 with Windows 7 x64
+
+Download [rubygems 2.2.3](https://github.com/rubygems/rubygems/releases/tag/v2.2.3)
+
+```shell
+C:\>gem install --local C:\rubygems-update-2.2.3.gem
+C:\>update_rubygems --no-ri --no-rdoc
+```
