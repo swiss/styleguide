@@ -172,11 +172,15 @@ gulp.task('build-fonts', function() {
           .pipe(gulp.dest('build/fonts'));
 });
 
-gulp.task('build-pages', function() {
-  gulp.src(['assets/pages/**'])
-    .pipe(gulp.dest('styleguide/pages'));
-});
+/**
+ * Compile TWIG example pages
+ */
 
+gulp.task('twig', function () {
+    return gulp.src('assets/pages/*.twig')
+        .pipe($.twig())
+        .pipe(gulp.dest('styleguide/pages'));
+});
 
 /**
  * Clean output directories
@@ -205,8 +209,8 @@ gulp.task('serve', ['styles', 'scripts'], function () {
   gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
     runSequence('build-fonts', 'styleguide', reload);
   });
-  gulp.watch(['assets/pages/**/*.html'], function() {
-    runSequence('build-pages', 'styleguide', reload);
+  gulp.watch(['assets/pages/**/*.twig'], function() {
+    runSequence('twig', reload);
   });
 });
 
@@ -223,6 +227,6 @@ gulp.task('deploy', function () {
  * Default task
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'build-images', 'build-fonts', 'build-pages', 'styleguide', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styleguide', cb);
 });
 
