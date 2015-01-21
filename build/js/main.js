@@ -41,10 +41,6 @@
     $(this).siblings('.search-field').focus().val('');
   });
 
-  $('body').on('click', function () {
-    $('#search-field').val('');
-  });
-
 }) (jQuery, (typeof searchData === 'undefined' ? false : searchData));
 
 /* ==========================================================
@@ -104,7 +100,7 @@ function carouselInit ($) {
 (function($) {
 
   // Normal Collapse
-  $('.collapse:not(tbody)').on('show.bs.collapse', function () {
+  $('.collapse').on('show.bs.collapse', function () {
     $(this)
       .prev()
       .addClass('active icon--root')
@@ -114,7 +110,7 @@ function carouselInit ($) {
         'aria-expanded': 'true'
       });
   });
-  $('.collapse:not(tbody)').on('hide.bs.collapse', function () {
+  $('.collapse').on('hide.bs.collapse', function () {
     $(this)
       .prev()
       .removeClass('active icon--root')
@@ -127,24 +123,25 @@ function carouselInit ($) {
 
   // Table Collapse
 
-  $('tbody.collapse').on('show.bs.collapse', function () {
-    $(this)
-      .prev().find('[data-toggle=collapse]')
-      .addClass('active')
-      .attr({
-        'aria-selected': 'true',
-        'aria-expanded': 'true'
-      });
+  var $tableToggle = $('th[data-toggle="collapse"], td[data-toggle="collapse"]');
+
+  checkCollapseTableStatus();
+
+  $tableToggle.click(function () {
+    setTimeout(function(){
+      checkCollapseTableStatus();
+    }, 360);
   });
-  $('tbody.collapse').on('hide.bs.collapse', function () {
-    $(this)
-      .prev().find('[data-toggle=collapse]')
-      .removeClass('active')
-      .attr({
-        'aria-selected': 'false',
-        'aria-expanded': 'false'
-      });
-  });
+
+  function checkCollapseTableStatus() {
+    $tableToggle.each(function () {
+      var $collapseTarget = $(this).data('target');
+      $(this).removeClass('icon--bottom').addClass('icon--right');
+      if($($collapseTarget).hasClass('in')){
+        $(this).addClass('icon--bottom').removeClass('icon--right');
+      }
+    });
+  }
 
 }) (jQuery);
 /* ==========================================================
