@@ -3,6 +3,29 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.5.1 (2015-01-21) 
+ * #325 [CONTRAST] fix contrast in carets
+ * #279 [CONTRAST] fix input placeholders color
+ * #324 [CONTRAST] fix tabs background contrast
+ * #280 [CONTRAST] fix badge color bin nav-page-list
+ * #321 [CONTRAST] fix color and weight in active link from main navbar
+ * #241 Update Bootstrap to 3.3.1
+ * #235 Fix `bower.json`
+ * #266 Fix headings `font-size` on small devices
+ * #268 Display version number on homepage of styleguide
+ * #287 Implement better collapsibles examples
+ * #322 Fix the font-face mess (faux-bold when setting `font-weight`, etc..)
+ * #288 Remove link on active link in nav-page-list
+ * #297 Treecrumb uses nested lists now
+ * #299 Fix collapsible row in table
+ * #323 Update README file
+ * #340 #301 #275 #274 #276 Update loads of aria-tags
+ * #302 Fix Nav page list with nested lists
+ * #337 Fix global navigation error in some examples
+ * Switch all template examples to `.twig` files
+ * #350 Add rows in footer to avoid wrong behavior
+ * Update README with info for Windows contribution config
+
 * 2.4.1 (2015-01-16)
  * #327 responsive adjustment
  * #264 add comment about carousel accessibility

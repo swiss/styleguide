@@ -65,7 +65,7 @@ Process navigation is used in connection with forms that are spread over several
   }
   li.active a, li a:hover, li a:active, li a:focus {
     background: $venetian-red;
-    font-family: $frutiger-bold;
+    font-weight: 700;
   }
   li.disabled a:hover, li.disabled a:active, li.disabled a:focus {
     background: $light-grey;

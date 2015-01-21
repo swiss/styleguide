@@ -26,14 +26,23 @@ For an **only-icon** element, add the class to an empty `<span>`.
 
 For an **inside-icon** element, use the global `.icon` and `.icon--before` or `.icon--after` class followed by the more specific class.
 
-**Accessibility**: If the element should be readable by a screen reader and/or is semantically important, be sure to add the appropriate `aria-` attribute. Otherwise, add an `aria-hidden="true"` attribute to hide it and avoid useless clutter of informations.
+<br>
+<div class="alert alert-warning">
+
+  **Accessibility**
+
+  If the element should be readable by a screen reader and/or is semantically important, be sure to add the appropriate `aria-` attribute. Otherwise, add an `aria-hidden="true"` attribute to hide it and avoid useless clutter of informations.
+
+  You could also add a `<span class="sr-only">icon description</span>` depending on your needs.
+
+</div>
 
 ```html_example
 <!-- only-icon element -->
-<span class="icon icon--pdf"></span> My document <br>
+<span class="icon icon--pdf" aria-hidden="true"></span> My document <br>
 
 <!-- inside-icon element -->
-<a href="doc.pdf" class="icon icon--before icon--pdf">My document</a>
+<a href="doc.pdf" class="icon icon--before icon--pdf" aria-hidden="true">My document</a>
 ```
 
 |  Icon                                                    |  Class                                       |
@@ -210,7 +219,7 @@ category: Base Layout - General
 Use the global `.form-icon` class followed by the more specific class
 
 ```html_example
-<span class="form-icon form-icon--checkbox-checked"></span> My checkbox
+<span class="form-icon form-icon--checkbox-checked" aria-hidden="true"></span> My checkbox
 ```
 
 |  Form icon                                                               |                                                              |

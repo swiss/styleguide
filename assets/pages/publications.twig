@@ -1,0 +1,85 @@
+{% extends "layout.twig" %}
+
+{% block pagetitle %}Publications{% endblock %}
+
+{% block content %}
+    <div class="col-md-8">
+      <div class="visible-xs visible-sm">
+        <p><a href="#context-sidebar" class="icon icon--before icon--root">Context sidebar</a></p>
+      </div>
+      <article>
+        <a href="#" class="icon icon--before icon--less">Back to Overview</a>
+        <button type="button" class="btn btn-link pull-right"><span class="icon icon--print"></span></button>
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+        <br>
+        <div class="row">
+          <div class="col-sm-4">
+            <figure>
+              <img src="http://placehold.it/180x270" alt="image description">
+            </figure>
+          </div>
+          <div class="col-sm-8">
+            <table class="table table-naked">
+              <tbody>
+                <tr>
+                  <th>Row</th>
+                  <td>Politorbis</td>
+                </tr>
+                <tr>
+                  <th>Number</th>
+                  <td>Nr. 51</td>
+                </tr>
+                <tr>
+                  <th>Year</th>
+                  <td>2014</td>
+                </tr>
+                <tr>
+                  <th>Issuer</th>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, perspiciatis, velit, distinctio voluptates quod esse eum sint placeat saepe quae rem repellat necessitatibus eveniet tempora molestiae dolorem delectus et aliquam!</p>
+        <form class="form-inline" role="form">
+
+            <fieldset>
+              <legend>Compact form on one line</legend>
+
+              <!-- Number input -->
+              <div class="form-group">
+                <label for="inputNumber" class="control-label">Number</label>
+                <input type="number" class="form-control" size="2" id="inputNumber" placeholder="5">
+              </div>
+
+              <!-- Dropdown -->
+              <div class="form-group">
+                <label class="control-label hidden" for="dropdown">Dropdown</label>
+                <select id="dropdown" class="form-control">
+                  <option>Choose your language ...</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary pull-right">Add to basket</button>
+
+            </fieldset>
+
+        </form>
+      </article>
+      <article>
+        <h3><a href="#">Title</a></h3>
+        <figure class="pull-left">
+          <img src="http://placehold.it/180x113" alt="image description">
+        </figure>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+        </p>
+        <p><a href="#" class="icon icon--after icon--external">External link</a></p>
+        <p><a href="#" class="icon icon--before icon--less">Back to Overview</a></p>
+        <p><small><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small></p>
+      </article>
+    </div>
+{% endblock %}

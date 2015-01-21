@@ -120,6 +120,13 @@ The carousel component is not totally compliant with accessibility standards. If
   }
 }
 
+.carousel-control {
+  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .carousel-control.right, .carousel-control.left {
   background-image: none !important;
   background: none;
@@ -127,6 +134,9 @@ The carousel component is not totally compliant with accessibility standards. If
   &:before {
     color: $coal;
     text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  &:hover:before {
+    color: $black;
   }
 }
 

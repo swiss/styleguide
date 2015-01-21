@@ -60,8 +60,7 @@ The logo is a CD element. Its use is mandatory, and its representation may not b
   }
   h1 {
     color: $black;
-    font-family: $frutiger-bold;
-    font-weight: normal;
+    font-weight: 700;
     font-size: 1em;
     max-width: 310px;
     @media only screen and (max-width: $screen-md-max) {

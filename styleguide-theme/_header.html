@@ -1,4 +1,8 @@
 <% nameScope = @config['name_scope'] %>
+<% title = @config['title'] %>
+
+<% version = File.open("VERSION").read %>
+
 <% catWrappers = Array.new %>
 <% @config['cat_order'].each do |catWrapperName| %>
   <% catWrappers.push(catWrapperName) %>
@@ -52,14 +56,11 @@
         <div class="clearfix">
           <section class="nav-services clearfix">
             <h2>Styleguide</h2>
-            <nav class="nav-lang">
-              <ul>
-                <li><a class="active" href="#">EN</a></li>
-              </ul>
-            </nav>
             <nav class="pull-right">
               <ul class="download-link">
-                <li><a href="https://github.com/swiss/styleguide/releases/latest">Download</a></li>
+                <li>
+                  <a class="btn btn-secondary" href="https://github.com/swiss/styleguide/releases/latest">Styleguide version <%= version %></a>
+                </li>
               </ul>
             </nav>
           </section>
@@ -69,13 +70,6 @@
           <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
           <h1>Swiss Confederation Web Guidelines</h1>
         </a>
-        <form class="form-horizontal form-search pull-right" role="form">
-          <h2 class="sr-only">Search</h2>
-          <label for="search-field" class="sr-only">Search:</label>
-          <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-          <span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>
-          <button class="icon icon--search icon--before"></button>
-        </form>
 
       </header>
 

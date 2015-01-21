@@ -41,4 +41,8 @@
     $(this).siblings('.search-field').focus().val('');
   });
 
+  $('body').on('click', function () {
+    $('#search-field').val('');
+  });
+
 }) (jQuery, (typeof searchData === 'undefined' ? false : searchData));

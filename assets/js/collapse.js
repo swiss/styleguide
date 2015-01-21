@@ -12,7 +12,7 @@
 (function($) {
 
   // Normal Collapse
-  $('.collapse').on('show.bs.collapse', function () {
+  $('.collapse:not(tbody)').on('show.bs.collapse', function () {
     $(this)
       .prev()
       .addClass('active icon--root')
@@ -22,7 +22,7 @@
         'aria-expanded': 'true'
       });
   });
-  $('.collapse').on('hide.bs.collapse', function () {
+  $('.collapse:not(tbody)').on('hide.bs.collapse', function () {
     $(this)
       .prev()
       .removeClass('active icon--root')
@@ -35,24 +35,23 @@
 
   // Table Collapse
 
-  var $tableToggle = $('th[data-toggle="collapse"], td[data-toggle="collapse"]');
-
-  checkCollapseTableStatus();
-
-  $tableToggle.click(function () {
-    setTimeout(function(){
-      checkCollapseTableStatus();
-    }, 360);
+  $('tbody.collapse').on('show.bs.collapse', function () {
+    $(this)
+      .prev().find('[data-toggle=collapse]')
+      .addClass('active')
+      .attr({
+        'aria-selected': 'true',
+        'aria-expanded': 'true'
+      });
   });
-
-  function checkCollapseTableStatus() {
-    $tableToggle.each(function () {
-      var $collapseTarget = $(this).data('target');
-      $(this).removeClass('icon--bottom').addClass('icon--right');
-      if($($collapseTarget).hasClass('in')){
-        $(this).addClass('icon--bottom').removeClass('icon--right');
-      }
-    });
-  }
+  $('tbody.collapse').on('hide.bs.collapse', function () {
+    $(this)
+      .prev().find('[data-toggle=collapse]')
+      .removeClass('active')
+      .attr({
+        'aria-selected': 'false',
+        'aria-expanded': 'false'
+      });
+  });
 
 }) (jQuery);

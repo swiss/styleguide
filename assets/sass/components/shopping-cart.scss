@@ -7,6 +7,15 @@ category: Content Modules - Ordering and Check-out
 
 By default, the shopping cart is not shown. Only after an object has been added to the shopping cart does the latter appear in the context pane. It then remains visible until it is either completely deleted or the purchase is finalized.
 
+<br>
+<div class="alert alert-warning">
+
+  **2.5.0**
+
+  - added `span.sr-only` to the delete icon
+
+</div>
+
 ```html_example
 <div class="row">
   <div class="col-sm-4 col-sm-offset-8">
@@ -16,19 +25,19 @@ By default, the shopping cart is not shown. Only after an object has been added 
         <li class="clearfix">
           <span class="pull-left">Lorem ipsum product name a bit longer at <b>CHF 45.-</b></span>
           <a class="pull-right" href="#">
-            <span class="icon icon--after icon--trash"></span>
+            <span class="icon icon--after icon--trash"><span class="sr-only">delete</span></span>
           </a>
         </li>
         <li class="clearfix">
           <span class="pull-left">Lorem ipsum <b>CHF 45.-</b></span>
           <a class="pull-right" href="#">
-            <span class="icon icon--after icon--trash"></span>
+            <span class="icon icon--after icon--trash"><span class="sr-only">delete</span></span>
           </a>
         </li>
         <li class="clearfix">
           <span class="pull-left">Lorem ipsum <b>CHF 45.-</b></span>
           <a class="pull-right" href="#">
-            <span class="icon icon--after icon--trash"></span>
+            <span class="icon icon--after icon--trash"><span class="sr-only">delete</span></span>
           </a>
         </li>
       </ul>

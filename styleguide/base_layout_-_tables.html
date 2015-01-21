@@ -1,6 +1,10 @@
 
 
 
+
+
+
+
   
 
   
@@ -18,7 +22,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Base Layout - Tables</title>
+    <title>Swiss Styleguide</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.min.css">
@@ -62,14 +66,12 @@
         <div class="clearfix">
           <section class="nav-services clearfix">
             <h2>Styleguide</h2>
-            <nav class="nav-lang">
-              <ul>
-                <li><a class="active" href="#">EN</a></li>
-              </ul>
-            </nav>
             <nav class="pull-right">
               <ul class="download-link">
-                <li><a href="https://github.com/swiss/styleguide/releases/latest">Download</a></li>
+                <li>
+                  <a class="btn btn-secondary" href="https://github.com/swiss/styleguide/releases/latest">Styleguide version 2.5.0
+</a>
+                </li>
               </ul>
             </nav>
           </section>
@@ -79,13 +81,6 @@
           <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
           <h1>Swiss Confederation Web Guidelines</h1>
         </a>
-        <form class="form-horizontal form-search pull-right" role="form">
-          <h2 class="sr-only">Search</h2>
-          <label for="search-field" class="sr-only">Search:</label>
-          <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-          <span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>
-          <button class="icon icon--search icon--before"></button>
-        </form>
 
       </header>
 
@@ -98,7 +93,7 @@
                 <span class="nav-mobile-logo">
                   <img src="img/swiss.svg" onerror="this.onerror=null; this.src='img/swiss.png'" alt="Confederatio Helvetica" />
                 </span>
-                <h1><a href="#">Base Layout - Tables</a></h1>
+                <h1><a href="#">Swiss Styleguide</a></h1>
               </div>
             </div>
             <div class="table-cell dropdown">
@@ -10979,7 +10974,13 @@
 
 <ul>
 <li>removed <code>columnheader</code>, <code>rowheader</code> and <code>aria-describedby</code> and replaced by <code>scope=&quot;&quot;</code> attributes.</li>
-<li>added the <code>&lt;col&gt;</code> and <code>&lt;colgroup&gt;&lt;/colgroup&gt;</code> tags before the tables on some cases
+<li>added the <code>&lt;col&gt;</code> and <code>&lt;colgroup&gt;&lt;/colgroup&gt;</code> tags before the tables on some cases</li>
+</ul>
+
+<p><br><strong>2.5.0</strong></p>
+
+<ul>
+<li>wrapped text in <code>&lt;a/&gt;</code> in <code>&lt;th/&gt;</code> tag if it is a collapse link
 </div></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput">
@@ -10996,35 +10997,35 @@
   </thead>
   <tbody>
     <tr>
-      <th role="rowheader" class="text-left icon icon--before icon--right" data-toggle="collapse" data-target="#animals">Animals</th>
+      <th role="rowheader"><a href="#animals" class="text-left icon icon--before collapsed" data-toggle="collapse">Animals</a></th>
       <td>63'006</td>
       <td>52'118</td>
       <td>45'233</td>
       <td>59'616</td>
     </tr>
-    <tbody id="animals" class="collapse">
-      <tr>
-        <th class="text-left" role="rowheader">Boars</th>
-        <td>4'160</td>
-        <td>7'647</td>
-        <td>4'726</td>
-        <td>10'650</td>
-      </tr>
-      <tr>
-        <th class="text-left" role="rowheader">Chamois</th>
-        <td>16'625</td>
-        <td>13'427</td>
-        <td>13'413</td>
-        <td>13'350</td>
-      </tr>
-      <tr>
-        <th class="text-left" role="rowheader">Fox</th>
-        <td>42'221</td>
-        <td>31'044</td>
-        <td>27'094</td>
-        <td>35'616</td>
-      </tr>
-    </tbody>
+  </tbody>
+  <tbody id="animals" class="collapse">
+    <tr>
+      <th class="text-left" role="rowheader">Boars</th>
+      <td>4'160</td>
+      <td>7'647</td>
+      <td>4'726</td>
+      <td>10'650</td>
+    </tr>
+    <tr>
+      <th class="text-left" role="rowheader">Chamois</th>
+      <td>16'625</td>
+      <td>13'427</td>
+      <td>13'413</td>
+      <td>13'350</td>
+    </tr>
+    <tr>
+      <th class="text-left" role="rowheader">Fox</th>
+      <td>42'221</td>
+      <td>31'044</td>
+      <td>27'094</td>
+      <td>35'616</td>
+    </tr>
   </tbody>
   <tfoot>
     <tr>
@@ -11051,35 +11052,35 @@
   <span class="nt">&lt;/thead&gt;</span>
   <span class="nt">&lt;tbody&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">role=</span><span class="s">"rowheader"</span> <span class="na">class=</span><span class="s">"text-left icon icon--before icon--right"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#animals"</span><span class="nt">&gt;</span>Animals<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">role=</span><span class="s">"rowheader"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#animals"</span> <span class="na">class=</span><span class="s">"text-left icon icon--before collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>Animals<span class="nt">&lt;/a&gt;&lt;/th&gt;</span>
       <span class="nt">&lt;td&gt;</span>63'006<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>52'118<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>45'233<span class="nt">&lt;/td&gt;</span>
       <span class="nt">&lt;td&gt;</span>59'616<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tbody</span> <span class="na">id=</span><span class="s">"animals"</span> <span class="na">class=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;tr&gt;</span>
-        <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span><span class="nt">&gt;</span>Boars<span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;td&gt;</span>4'160<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td&gt;</span>7'647<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td&gt;</span>4'726<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td&gt;</span>10'650<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;tr&gt;</span>
-        <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span><span class="nt">&gt;</span>Chamois<span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;td&gt;</span>16'625<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td&gt;</span>13'427<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td&gt;</span>13'413<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td&gt;</span>13'350<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;/tr&gt;</span>
-      <span class="nt">&lt;tr&gt;</span>
-        <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span><span class="nt">&gt;</span>Fox<span class="nt">&lt;/th&gt;</span>
-        <span class="nt">&lt;td&gt;</span>42'221<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td&gt;</span>31'044<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td&gt;</span>27'094<span class="nt">&lt;/td&gt;</span>
-        <span class="nt">&lt;td&gt;</span>35'616<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;tbody</span> <span class="na">id=</span><span class="s">"animals"</span> <span class="na">class=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span><span class="nt">&gt;</span>Boars<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>4'160<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>7'647<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>4'726<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>10'650<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span><span class="nt">&gt;</span>Chamois<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>16'625<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>13'427<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>13'413<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>13'350<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"text-left"</span> <span class="na">role=</span><span class="s">"rowheader"</span><span class="nt">&gt;</span>Fox<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>42'221<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>31'044<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>27'094<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>35'616<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;tfoot&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
