@@ -1,26 +1,25 @@
 {
   "name": "swiss-styleguide",
-  "version": "2.1.9",
+  "version": "2.5.0",
   "homepage": "http://swiss.github.io/styleguide",
   "authors": "Antistatique.net",
   "description": "Swiss Admin Styleguide",
   "license": "MIT",
+  "main": "styleguide/index.html",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "styleguide"
+    "bower_components"
   ],
   "dependencies": {},
   "devDependencies": {
     "jquery": "1.10.2",
-    "bootstrap-sass-official": "~3.2.0",
+    "bootstrap-sass-official": "~3.3.3",
     "bootstrapaccessibilityplugin": "https://github.com/antistatique/bootstrap-accessibility-plugin.git#dev",
-    "jquery.tablesorter": "2.16.2",
+    "jquery.tablesorter": "~2.18.4",
     "yamm3": "1.0.*",
     "chosen_v1.1.0": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip",
     "typeahead.js": "~0.10.2",
-    "tablesorter": "https://github.com/Mottie/tablesorter",
     "jquery.socialshareprivacy": "~1.4.5",
     "jquery-drilldown": "~0.1.4",
     "respond": "~1.4.2",

@@ -1,0 +1,202 @@
+{% extends "layout.twig" %}
+
+{% block pagetitle %}Details{% endblock %}
+
+
+{% block content %}
+  <div class="col-md-8">
+      <div class="visible-xs visible-sm">
+        <p><a href="#context-sidebar" class="icon icon--before icon--root">Context sidebar</a></p>
+      </div>
+      <a href="#" onclick="window.print()" class="icon icon--before icon--print pull-right"></a>
+      <h1 class="text-inline">This is the page title, and it can be really quite long.</h1>
+      <figure>
+        <img src="http://placehold.it/588x368" alt="image description">
+        <figcaption>Caption content that can go for quite a long time</figcaption>
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      </p>
+      <br>
+      <a href="#" class="icon icon--after icon--external">External link</a><br>
+      <br>
+      <table class="table table-bordered text-right table-striped">
+        <caption>Game animals shot in Switzerland</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>2000</th>
+            <th>2010</th>
+            <th>2011</th>
+            <th>2012</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-left">Boars</th>
+            <td>4'160</td>
+            <td>7'647</td>
+            <td>4'726</td>
+            <td>10'650</td>
+          </tr>
+          <tr>
+            <th class="text-left">Chamois</th>
+            <td>16'625</td>
+            <td>13'427</td>
+            <td>13'413</td>
+            <td>13'350</td>
+          </tr>
+          <tr>
+            <th class="text-left">Fox</th>
+            <td>42'221</td>
+            <td>31'044</td>
+            <td>27'094</td>
+            <td>35'616</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td>63'006</td>
+            <td>52'118</td>
+            <td>45'233</td>
+            <td>59'616</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="list-group">
+
+        <div class="list-group-header">
+          <h2 class="pull-left">Themes</h2>
+          <a href="#" class="pull-right icon icon--before icon--list">All Themes</a>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>
+              <img src="http://placehold.it/282x176" alt="Image description">
+            </p>
+            <h3><a href="#">Title in H3</a></h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum.
+            </p>
+            <br>
+            <a href="#" class="icon icon--after icon--external">An external link</a>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <img src="http://placehold.it/282x176" alt="Image description">
+            </p>
+            <h3><a href="#">Title in H3</a></h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum. Erit enim mecum, si tecum erit. Ne amores quidem sanctos a sapiente alienos esse arbitrantur.
+            </p>
+            <br>
+            <a href="#" class="icon icon--after icon--external">An external link</a>
+          </div>
+        </div>
+      </div>
+
+      <h3>Argentine flag</h3>
+      <figure class="pull-left">
+        <img src="http://placehold.it/150x90" alt="image description">
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis istud possit, inquit, negare? Non enim quaero quid verum, sed quid cuique dicendum sit. Itaque haec cum illis est dissensio, cum Peripateticis nulla sane.
+      </p>
+
+      <h2>Informations</h2>
+      <br>
+
+      <!-- Contextual information -->
+      <a name="context-sidebar"></a>
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#documents" data-toggle="tab">Documents</a></li>
+        <li><a href="#links" data-toggle="tab">Links</a></li>
+        <li><a href="#news" data-toggle="tab">News</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content tab-border">
+        <div class="tab-pane active" id="documents">
+          <article>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a href="#" class="icon icon--before icon--pdf">link with icon lorem <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></a></p>
+          </article>
+          <hr>
+          <article>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a href="#" class="icon icon--before icon--pdf">link with icon lorem <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></a></p>
+          </article>
+        </div>
+        <div class="tab-pane" id="links">
+          <p><a href="#" class="icon icon--after icon--external">external link</a></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eum amet architecto corporis aut cumque ratione dolores odit et libero impedit ipsa. Enim, deleniti, quae ipsa nostrum doloremque nihil repellendus.</p>
+          <hr>
+          <p><a href="#" class="icon icon--after icon--external">external link</a></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eum amet architecto corporis aut cumque ratione dolores odit et libero impedit ipsa. Enim, deleniti, quae ipsa nostrum doloremque nihil repellendus.</p>
+        </div>
+        <div class="tab-pane" id="news">
+          <!-- Add .clearfix class to prevent errors with floated elements -->
+          <article class="clearfix">
+            <h4><a href="#">Title Lorem ipsum</a></h4>
+            <figure class="pull-left">
+              <img src="http://placehold.it/180x113" alt="image description">
+            </figure>
+            <p><small>13.05.2014 - Lorem</small><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nam est alias voluptas minus libero quo aliquid consectetur ipsum sapiente dicta temporibus repellat odio nisi at laudantium error tempore illum!</p>
+          </article>
+          <hr>
+          <article class="clearfix">
+            <h4><a href="#">Title Lorem ipsum</a></h4>
+            <figure class="pull-left">
+              <img src="http://placehold.it/180x113" alt="image description">
+            </figure>
+            <p><small>13.05.2014 - Lorem</small><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nam est alias voluptas minus libero quo aliquid consectetur ipsum sapiente dicta temporibus repellat odio nisi at laudantium error tempore illum!</p>
+          </article>
+        </div>
+      </div>
+
+      <br>
+
+      <p><small><a href="#" class="icon icon--before icon--less">Back to Overview</a></small></p>
+
+      <!-- End Page Link -->
+      <p><small><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small></p>
+
+      <div class="social-sharing">
+        <a href="#" aria-label="Facebook"
+          onclick="
+            window.open(
+              'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+              'facebook-share-dialog',
+              'width=626,height=436');
+            return false;">
+           <img src="../img/FB-f-Logo__blue_29.png" width="16px" height="16px" alt="Share on Facebook">
+        </a>
+        <a href="#" aria-label="Twitter"
+          onclick="
+            window.open(
+              'http://twitter.com/share?text=You text here.&url='+encodeURIComponent(location.href),
+              'facebook-share-dialog',
+              'width=626,height=436');
+            return false;">
+          <img src="../img/Twitter_logo_blue.png" width="16px" height="16px" alt="Share on Twitter">
+        </a>
+        <a href="#"
+           onclick="
+             window.open(
+               'https://plus.google.com/share?url=encodeURIComponent(location.href)',
+               '',
+               'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+             return false;">
+           <img src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/></a>
+      </div>
+  </div>
+{% endblock %}
