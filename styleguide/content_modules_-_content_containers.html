@@ -1,6 +1,10 @@
 
 
 
+
+
+
+
   
 
   
@@ -18,7 +22,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Content Modules - Content Containers</title>
+    <title>Swiss Styleguide</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.min.css">
@@ -62,14 +66,12 @@
         <div class="clearfix">
           <section class="nav-services clearfix">
             <h2>Styleguide</h2>
-            <nav class="nav-lang">
-              <ul>
-                <li><a class="active" href="#">EN</a></li>
-              </ul>
-            </nav>
             <nav class="pull-right">
               <ul class="download-link">
-                <li><a href="https://github.com/swiss/styleguide/releases/latest">Download</a></li>
+                <li>
+                  <a class="btn btn-secondary" href="https://github.com/swiss/styleguide/releases/latest">Styleguide version 2.5.0
+</a>
+                </li>
               </ul>
             </nav>
           </section>
@@ -79,13 +81,6 @@
           <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
           <h1>Swiss Confederation Web Guidelines</h1>
         </a>
-        <form class="form-horizontal form-search pull-right" role="form">
-          <h2 class="sr-only">Search</h2>
-          <label for="search-field" class="sr-only">Search:</label>
-          <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-          <span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>
-          <button class="icon icon--search icon--before"></button>
-        </form>
 
       </header>
 
@@ -98,7 +93,7 @@
                 <span class="nav-mobile-logo">
                   <img src="img/swiss.svg" onerror="this.onerror=null; this.src='img/swiss.png'" alt="Confederatio Helvetica" />
                 </span>
-                <h1><a href="#">Content Modules - Content Containers</a></h1>
+                <h1><a href="#">Swiss Styleguide</a></h1>
               </div>
             </div>
             <div class="table-cell dropdown">
@@ -8612,8 +8607,8 @@
 <p>The collapsible panel is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.</p>
 
 <p>Add <code>.collapsed</code> to link for it to change the icon direction when collapsing.</p>
-<div class="codeExample"><div class="exampleOutput"><div class="collapse-box">
-  <a data-toggle="collapse" class="collapsed" href="#collapseOne">
+<div class="codeExample"><div class="exampleOutput"><div class="collapse-box" id="accordion1">
+  <a data-toggle="collapse" class="collapsed" href="#collapseOne" data-parent="#accordion1">
     Collapsible Group Item #1
   </a>
   <div id="collapseOne" class="collapse">
@@ -8623,18 +8618,48 @@
       <li><a href="#" class="icon icon--before icon--cart">link with icon</a></li>
     </ul>
   </div>
+  <a data-toggle="collapse" class="collapsed" href="#collapseTwo" data-parent="#accordion1">
+    Collapsible Group Item #2
+  </a>
+  <div id="collapseTwo" class="collapse">
+    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+  </div>
+  <a data-toggle="collapse" class="collapsed" href="#collapseThree" data-parent="#accordion1">
+    Collapsible Group Item #3
+  </a>
+  <div id="collapseThree" class="collapse">
+    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+  </div>
 </div>
 
 <br>
 
-<a data-toggle="collapse" class="collapsed" href="#collapseTwo">
-  Collapsible Group Item #2
-</a>
-<div id="collapseTwo" class="collapse">
-  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+<div id="accordion2">
+  <a data-toggle="collapse" class="collapsed" href="#collapseOneBis" data-parent="#accordion2">
+    Collapsible Group Item #1
+  </a>
+  <div id="collapseOneBis" class="collapse">
+    <ul class="list-unstyled">
+      <li><a href="#" class="icon icon--before icon--cart">link with icon</a></li>
+      <li><a href="#" class="icon icon--before icon--cart">link with icon</a></li>
+      <li><a href="#" class="icon icon--before icon--cart">link with icon</a></li>
+    </ul>
+  </div>
+  <a data-toggle="collapse" class="collapsed" href="#collapseTwoBis" data-parent="#accordion2">
+    Collapsible Group Item #2
+  </a>
+  <div id="collapseTwoBis" class="collapse">
+    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+  </div>
+  <a data-toggle="collapse" class="collapsed" href="#collapseThreeBis" data-parent="#accordion2">
+    Collapsible Group Item #3
+  </a>
+  <div id="collapseThreeBis" class="collapse">
+    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+  </div>
 </div>
-</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-box"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">class=</span><span class="s">"collapsed"</span> <span class="na">href=</span><span class="s">"#collapseOne"</span><span class="nt">&gt;</span>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse-box"</span> <span class="na">id=</span><span class="s">"accordion1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">class=</span><span class="s">"collapsed"</span> <span class="na">href=</span><span class="s">"#collapseOne"</span> <span class="na">data-parent=</span><span class="s">"#accordion1"</span><span class="nt">&gt;</span>
     Collapsible Group Item #1
   <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseOne"</span> <span class="na">class=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>
@@ -8644,15 +8669,45 @@
       <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"icon icon--before icon--cart"</span><span class="nt">&gt;</span>link with icon<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">class=</span><span class="s">"collapsed"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span> <span class="na">data-parent=</span><span class="s">"#accordion1"</span><span class="nt">&gt;</span>
+    Collapsible Group Item #2
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseTwo"</span> <span class="na">class=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">class=</span><span class="s">"collapsed"</span> <span class="na">href=</span><span class="s">"#collapseThree"</span> <span class="na">data-parent=</span><span class="s">"#accordion1"</span><span class="nt">&gt;</span>
+    Collapsible Group Item #3
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseThree"</span> <span class="na">class=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 
 <span class="nt">&lt;br&gt;</span>
 
-<span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">class=</span><span class="s">"collapsed"</span> <span class="na">href=</span><span class="s">"#collapseTwo"</span><span class="nt">&gt;</span>
-  Collapsible Group Item #2
-<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseTwo"</span> <span class="na">class=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"accordion2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">class=</span><span class="s">"collapsed"</span> <span class="na">href=</span><span class="s">"#collapseOneBis"</span> <span class="na">data-parent=</span><span class="s">"#accordion2"</span><span class="nt">&gt;</span>
+    Collapsible Group Item #1
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseOneBis"</span> <span class="na">class=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"icon icon--before icon--cart"</span><span class="nt">&gt;</span>link with icon<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"icon icon--before icon--cart"</span><span class="nt">&gt;</span>link with icon<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"icon icon--before icon--cart"</span><span class="nt">&gt;</span>link with icon<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">class=</span><span class="s">"collapsed"</span> <span class="na">href=</span><span class="s">"#collapseTwoBis"</span> <span class="na">data-parent=</span><span class="s">"#accordion2"</span><span class="nt">&gt;</span>
+    Collapsible Group Item #2
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseTwoBis"</span> <span class="na">class=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">class=</span><span class="s">"collapsed"</span> <span class="na">href=</span><span class="s">"#collapseThreeBis"</span> <span class="na">data-parent=</span><span class="s">"#accordion2"</span><span class="nt">&gt;</span>
+    Collapsible Group Item #3
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapseThreeBis"</span> <span class="na">class=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div></div></div>        </div>
       </div>
