@@ -22,7 +22,8 @@ unbedingt Reihenfolge behalten
   .nav-process,
   .carousel-indicators,
   .carousel-control,
-  .breadcrumb {
+  .breadcrumb,
+  .nav.nav-tabs {
     display: none;
   }
   header {
@@ -59,5 +60,13 @@ unbedingt Reihenfolge behalten
   .scroll-y, .news-feed .scroll-y {
     overflow: visible !important;
     max-height: auto !important;
+  }
+  .tab-content>.tab-pane {
+    display: block;
+    visibility: visible;
+  }
+  .tab-content, .tab-content.tab-border {
+    padding: 0;
+    border: none !important;
   }
 }
