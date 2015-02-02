@@ -1,6 +1,10 @@
 
 
 
+
+
+
+
   
 
   
@@ -18,7 +22,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Navigation modules - Header</title>
+    <title>Swiss Styleguide</title>
 
     <!-- Styleguide CSS -->
     <link rel="stylesheet" href="./theme-build/css/vendors.min.css">
@@ -62,14 +66,11 @@
         <div class="clearfix">
           <section class="nav-services clearfix">
             <h2>Styleguide</h2>
-            <nav class="nav-lang">
-              <ul>
-                <li><a class="active" href="#">EN</a></li>
-              </ul>
-            </nav>
             <nav class="pull-right">
               <ul class="download-link">
-                <li><a href="https://github.com/swiss/styleguide/releases/latest">Download</a></li>
+                <li>
+                  <a class="btn btn-secondary" href="https://github.com/swiss/styleguide/releases/latest">Styleguide version 2.4.1</a>
+                </li>
               </ul>
             </nav>
           </section>
@@ -79,13 +80,6 @@
           <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
           <h1>Swiss Confederation Web Guidelines</h1>
         </a>
-        <form class="form-horizontal form-search pull-right" role="form">
-          <h2 class="sr-only">Search</h2>
-          <label for="search-field" class="sr-only">Search:</label>
-          <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-          <span class="icon icon--close" onclick="$(\'#search-field\').focus().val(\'\');"></span>
-          <button class="icon icon--search icon--before"></button>
-        </form>
 
       </header>
 
@@ -98,7 +92,7 @@
                 <span class="nav-mobile-logo">
                   <img src="img/swiss.svg" onerror="this.onerror=null; this.src='img/swiss.png'" alt="Confederatio Helvetica" />
                 </span>
-                <h1><a href="#">Navigation modules - Header</a></h1>
+                <h1><a href="#">Swiss Styleguide</a></h1>
               </div>
             </div>
             <div class="table-cell dropdown">
@@ -8569,7 +8563,13 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 <p><strong>2.1.8</strong></p>
 
 <ul>
-<li>added <code>&lt;span class=&quot;sr-only&quot;&gt;selected&lt;/span&gt;</code> for active accessibility
+<li>added <code>&lt;span class=&quot;sr-only&quot;&gt;selected&lt;/span&gt;</code> for active accessibility</li>
+</ul>
+
+<p><strong>2.5.0</strong></p>
+
+<ul>
+<li>added <code>&lt;span class=&quot;sr-only&quot;&gt;disabled&lt;/span&gt;</code> for disabled accessibility
 </div></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
@@ -8585,7 +8585,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
           <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
           <li><a href="#">FR</a></li>
           <li><a href="#">IT</a></li>
-          <li><a class="disabled" href="#">RM</a></li>
+          <li><a class="disabled" href="#">RM <span class="sr-only">disabled</span></a></li>
           <li><a href="#">EN</a></li>
         </ul>
       </nav>
@@ -8616,7 +8616,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>DE <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>selected<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>FR<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>IT<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>RM<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"disabled"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>RM <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>disabled<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
           <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>EN<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;/ul&gt;</span>
       <span class="nt">&lt;/nav&gt;</span>
@@ -8897,7 +8897,13 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
 <strong>2.1.2:</strong></p>
 
 <ul>
-<li>added <code>h2.sr-only</code> for more screen reader clarity
+<li>added <code>h2.sr-only</code> for more screen reader clarity</li>
+</ul>
+
+<p><strong>2.5.0:</strong></p>
+
+<ul>
+<li>modified markup of dropdown list. Please refer to how it is in the example below
 </div></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><!-- Use normal `container` instead of `container-fluid` -->
@@ -8906,7 +8912,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
   <header>
 
     <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
-    <nav class="navbar treecrumb" role="navigation">
+    <nav class="navbar treecrumb pull-left" role="navigation">
       <h2 class="sr-only">Orientation in the website</h2>
       <ul class="nav navbar-nav">
 
@@ -8917,25 +8923,32 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
           <!-- Dropdown list element -->
           <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
             <!-- Dropdown title, can ben place anywhere in the list -->
-            <li class="dropdown-header"><a href="http://www.admin.ch">Federal Administration admin.ch</a></li>
-            <!-- Dropdown element link -->
-            <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
-            <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
-            <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
-            <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
-            <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
-            <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
-            <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
+            <li class="dropdown-header">
+              <a href="#">Federal Administration admin.ch</a>
+              <ul>
+                <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
+                <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
+                <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
+                <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
+                <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
+                <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
+                <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
         <li class="dropdown">
           <a href="#" id="service-dropdown" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Departement: EDI</a>
           <ul class="dropdown-menu" role="menu" aria-labelledby="service-dropdown">
-            <li class="dropdown-header"><a href="#">Departement: EDI<a href="http://www.admin.ch"></li>
-            <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
-            <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
-            <li><a href="#">Integrationsbüros</a></li>
+            <li class="dropdown-header">
+              <a href="#">Departement: EDI</a>
+              <ul>
+                <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
+                <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
+                <li><a href="#">Integrationsbüros</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
@@ -8952,7 +8965,7 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
   <span class="nt">&lt;header&gt;</span>
 
     <span class="c">&lt;!-- Standard Bootstrap `navbar` structure with the `treecrumb` class --&gt;</span>
-    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar treecrumb"</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar treecrumb pull-left"</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Orientation in the website<span class="nt">&lt;/h2&gt;</span>
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav navbar-nav"</span><span class="nt">&gt;</span>
 
@@ -8963,25 +8976,32 @@ var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
           <span class="c">&lt;!-- Dropdown list element --&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"admin-dropdown"</span><span class="nt">&gt;</span>
             <span class="c">&lt;!-- Dropdown title, can ben place anywhere in the list --&gt;</span>
-            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.admin.ch"</span><span class="nt">&gt;</span>Federal Administration admin.ch<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-            <span class="c">&lt;!-- Dropdown element link --&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>BK: Schweizerische Bundeskanzlei<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>EDA: Eidgenössisches Departement für auswärtige Angelegenheiten<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>EDI: Eidgenössisches Department des Innern<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;strong&gt;</span>EJPD: Eidgenössisches Justiz- und Polizeidepartment<span class="nt">&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>EVD: Eidgenössisches Volkswirtschaftsdepartement<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Federal Administration admin.ch<span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;ul&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>BK: Schweizerische Bundeskanzlei<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>EDA: Eidgenössisches Departement für auswärtige Angelegenheiten<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>EDI: Eidgenössisches Department des Innern<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;strong&gt;</span>EJPD: Eidgenössisches Justiz- und Polizeidepartment<span class="nt">&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>EVD: Eidgenössisches Volkswirtschaftsdepartement<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
           <span class="nt">&lt;/ul&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
 
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">id=</span><span class="s">"service-dropdown"</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon--right"</span><span class="nt">&gt;&lt;/span&gt;</span> Departement: EDI<span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"service-dropdown"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Departement: EDI<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.admin.ch"</span><span class="nt">&gt;&lt;/li&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>DEZA: Direktion für Entwicklung und Zusammenarbeit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Schweizer Beitrag an die erweiterte EU<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Integrationsbüros<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Departement: EDI<span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;ul&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>DEZA: Direktion für Entwicklung und Zusammenarbeit<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Schweizer Beitrag an die erweiterte EU<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Integrationsbüros<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
           <span class="nt">&lt;/ul&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
 
