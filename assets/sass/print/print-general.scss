@@ -116,6 +116,9 @@ unbedingt Reihenfolge behalten
     height: 0;
     border-bottom: 1px solid #6d6d6d;
   }
+  .news-feed .scroll-y {
+    max-height: 10000000000000px !important;
+  }
 
   .link-ref {display: none;}
   &.print-footnotes .link-ref {display: inline;}
