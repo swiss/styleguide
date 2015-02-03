@@ -104,6 +104,6 @@
   });
 
   // To test print preview mode
-  //$.printPreview.printPreview();
+  // $.printPreview.printPreview();
 
  }) (jQuery);

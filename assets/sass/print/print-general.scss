@@ -40,7 +40,7 @@ unbedingt Reihenfolge behalten
   }
 
   // Disable Bootstrap layout for preview
-  .row {
+  .row{
     margin: 0;
   }
   [class*="col-"] {
@@ -62,9 +62,9 @@ unbedingt Reihenfolge behalten
 
 
   header {
-    margin-top: 40px;
+    margin: 40px 0;
   }
-  .row .row {
+  .tab-content .row .row {
     margin-left: -20px !important;
   }
   table.table,
