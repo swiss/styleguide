@@ -54,7 +54,7 @@ The link at the end of the page is a special top link. Each page (with the excep
 
 ```html_example
 <!-- End Page Link -->
-<small><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small>
+<small class="hidden-print"><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small>
 ```
 
 For a print button, check the [buttons section](base_layout_-_forms_elements.html#f-buttons).
@@ -135,7 +135,7 @@ The “back to overview” navigation links pages that do not appear in the navi
 The “back to overview” link appears before the page title at the top of the content pane, and at the end of the page before the page-end navigation.
 
 ```html_example
-<a href="#" class="icon icon--before icon--less">Back to Overview</a>
+<a href="#" class="icon icon--before icon--less hidden-print">Back to Overview</a>
 ```
 */
 
