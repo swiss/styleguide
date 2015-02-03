@@ -58,7 +58,7 @@
         var target = $(this).attr('href');
         target = String(target);
 
-        if (target != "undefined" && target.indexOf("#") >= 0) {
+        if (target != "undefined" && target.indexOf("http") >= 0) {
           linksIndex ++;
           footnoteLinks += '<li>'+target+'</li>';
           $('<sup class="link-ref">('+linksIndex+')</sup>').insertAfter(this);
