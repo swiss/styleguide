@@ -30,8 +30,8 @@
       $container.prepend('<div class="row" id="print-settings">'+
         '<div class="col-sm-12">'+
           '<nav class="pagination-container clearfix">'+
-            '<span class="pull-left checkbox checkbox--left">'+
-              '<input type="checkbox" id="footnote-links">'+
+            '<span class="pull-left">'+
+              '<input type="checkbox" id="footnote-links">&nbsp;&nbsp;'+
               '<label for="footnote-links">Links as footnotes</label>'+
             '</span>'+
             '<ul class="pull-right pagination">'+
@@ -104,6 +104,6 @@
   });
 
   // To test print preview mode
-   $.printPreview.printPreview();
+  // $.printPreview.printPreview();
 
  }) (jQuery);

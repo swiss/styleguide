@@ -5,6 +5,7 @@ unbedingt Reihenfolge behalten
 */
 
 .print-preview {
+  display: block !important;
 
   // Hide elements
   .nav-mobile,
@@ -125,6 +126,7 @@ unbedingt Reihenfolge behalten
   &.print-footnotes .link-ref {display: inline;}
   &.print-footnotes a:after {content: none !important;}
   #print-settings .btn {display: inline-block !important;}
+  #print-settings .pagination-container {display: block !important;}
 }
 
 @media print {
