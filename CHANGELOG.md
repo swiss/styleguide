@@ -3,6 +3,12 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.5.1 (2015-03-05)
+ * #353 Improve print styles
+ * #348 #347 Fix errors with image flow in Publications
+ * #339 Fix error with buttons in main navbar
+ * #271 Change alt text of main logo
+
 * 2.5.0 (2015-01-20)
  * #325 [CONTRAST] fix contrast in carets
  * #279 [CONTRAST] fix input placeholders color
