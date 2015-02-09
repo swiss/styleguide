@@ -102,6 +102,7 @@ The slideshow component is not compliant with accessibility standards. If you ne
 .carousel-slideshow {
   border: 0;
   overflow: hidden;
+  margin-bottom: 25px;
 
   .carousel-inner {
     overflow: visible;
