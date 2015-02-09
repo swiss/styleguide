@@ -1,0 +1,147 @@
+/* ==========================================================
+ * slideshow.scss
+ * Slideshow component
+ *
+ * Author: Toni, toni@antistatique.net
+ * Date:   2015-02-09 10:52:08
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@charset "UTF-8";
+
+/*doc
+---
+title: Slideshow
+name: d-slideshow
+category: Content Modules - Teaser
+---
+
+<span class="label label-admin">FLEX</span>
+
+The slideshow uses the jQuery plugin ([Blueimp Bootstrap Image Gallery](https://github.com/blueimp/Bootstrap-Image-Gallery)) to display images in fullscreen from the basic carousel. Be sure to add the correct layout before your `</body>` closing tag, as explained in the example below.
+
+**Accessibility issue**
+
+The slideshow component is not compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.
+
+```html_example
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h3>Slideshow</h3>
+    <div id="carousel-slideshow" class="carousel carousel-slideshow slide" data-ride="carousel">
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <a href="http://placehold.it/1200x800" title="Banana" data-gallery>
+              <img src="http://placehold.it/800x600" alt="Banana">
+          </a>
+          <div class="carousel-caption">
+            <h4>Image Title</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus atque quas, dignissimos quo tempora, consectetur. Odio tempore nulla odit ab impedit dignissimos unde, alias error harum animi laboriosam repudiandae quaerat.</p>
+          </div>
+        </div>
+        <div class="item">
+          <a href="http://placehold.it/1200x800" title="Apple" data-gallery>
+              <img src="http://placehold.it/800x600" alt="Apple">
+          </a>
+          <div class="carousel-caption">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <div class="pull-right">
+          <a class="left icon icon--before icon--less" href="#carousel-slideshow" data-slide="prev" aria-label="previous"></a><a class="right icon icon--before icon--greater" href="#carousel-slideshow" data-slide="next" aria-label="next"></a>
+        </div>
+        <small class="pull-right"><span id="carousel-index">1</span> of <span id="carousel-total"></span></small>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- To include as is before the </body> closing tag -->
+<div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+*/
+
+.carousel-slideshow {
+  border: 0;
+  overflow: hidden;
+
+  .carousel-inner {
+    overflow: visible;
+  }
+
+  .item {
+    padding: 0;
+  }
+
+  .carousel-controls {
+    small {
+      margin: 23px 15px 0 0;
+      color: $coal;
+    }
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 0 12px 0 15px;
+      font-size: 25px;
+      &.right {border-left: 1px solid $gainsboro;}
+      &:before {color: $coal;}
+      &:hover:before {color: $black;}
+    }
+  }
+
+  .carousel-caption {
+    position: static;
+    padding-top: 11px;
+    padding-bottom: 0;
+    max-width: 300px;
+    min-height: 150px;
+    @media only screen and (min-width: $screen-md-min) {
+      float: left;
+      max-width: 360px;
+      min-height: 125px;
+    }
+    text-align: left;
+    text-shadow: none;
+    color: $black;
+    font-size: 11px;
+    p {margin-bottom: 0;}
+  }
+}

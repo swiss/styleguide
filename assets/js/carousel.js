@@ -19,10 +19,26 @@
     carouselInit(jQuery);
   });
 
+  // slideshow counter
+  var slideshow_total = $('.carousel-slideshow .item').length;
+  $('#carousel-total').text(slideshow_total);
+
+  $('.carousel-slideshow').on('slid.bs.carousel', function () {
+
+    var carouselData = $(this).data('bs.carousel');
+    var currentIndex = carouselData.getItemIndex(carouselData.$element.find('.item.active'));
+    var total = carouselData.$items.length;
+
+    var text = (currentIndex + 1);
+
+    $('#carousel-index').text(text);
+    $('#carousel-total').text(total);
+  });
+
 }) (jQuery);
 
 function carouselInit ($) {
-  var $carousel = $('.carousel');
+  var $carousel = $('.carousel:not(.carousel-slideshow)');
   if($carousel) {
     $carousel.each(function () {
       var biggestHeight = 0,
