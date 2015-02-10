@@ -28,6 +28,13 @@ The carousel consists of various information blocks, each of which contains a la
 
 The carousel component is not totally compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.
 
+<br>
+<div class="alert alert-warning">
+**2.5.1**
+
+  - put `<figure>` element after `<h4>` to avoid ungraceful alignment
+</div>
+
 ```html_example
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
@@ -56,10 +63,10 @@ The carousel component is not totally compliant with accessibility standards. If
                 <img class="carousel-img" src="http://placehold.it/588x331">
               </p>
               <div class="spacer"></div>
+              <h4><a href="#">Strassenbau in Nepal 1: ein Weg aus der Armut</a></h4>
               <figure class="pull-left">
                 <img src="http://placehold.it/130x81" alt="image description">
               </figure>
-              <h4><a href="#">Strassenbau in Nepal 1: ein Weg aus der Armut</a></h4>
               <p>
                 <small>
                   In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae.
@@ -72,10 +79,10 @@ The carousel component is not totally compliant with accessibility standards. If
                 <img class="carousel-img" src="http://placehold.it/588x331" alt="image description">
               </p>
               <div class="spacer"></div>
+              <h4><a href="#">Strassenbau in Nepal 2: ein Weg aus der Armut</a></h4>
               <figure class="pull-left">
                 <img src="http://placehold.it/130x81" alt="image description">
               </figure>
-              <h4><a href="#">Strassenbau in Nepal 2: ein Weg aus der Armut</a></h4>
               <p>
                 <small>
                   In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae.
@@ -88,10 +95,10 @@ The carousel component is not totally compliant with accessibility standards. If
                 <img class="carousel-img" src="http://placehold.it/588x331" alt="image description">
               </p>
               <div class="spacer"></div>
+              <h4><a href="#">Strassenbau in Nepal 3: ein Weg aus der Armut</a></h4>
               <figure class="pull-left">
                 <img src="http://placehold.it/130x81" alt="image description">
               </figure>
-              <h4><a href="#">Strassenbau in Nepal 3: ein Weg aus der Armut</a></h4>
               <p>
                 <small>
                   In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
@@ -137,6 +144,12 @@ The carousel component is not totally compliant with accessibility standards. If
   }
   &:hover:before {
     color: $black;
+  }
+  &.disabled {
+    cursor: default;
+    &:before {
+      color: $gainsboro;
+    }
   }
 }
 

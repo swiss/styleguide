@@ -30,7 +30,7 @@ var gulp = require('gulp'),
  */
 gulp.task('vendors', function() {
 
-  // DEPREACATED, to be removed in 3.0.0
+  // DEPRECATED, to be removed in 3.0.0
   gulp.src([
       'bower_components/jquery.socialshareprivacy/socialshareprivacy/images/*'
     ])
@@ -42,7 +42,9 @@ gulp.task('vendors', function() {
   gulp.src([
         'bower_components/yamm3/yamm/yamm.css',
         'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css',
-        'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css'
+        'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css',
+        'bower_components/blueimp-gallery/css/blueimp-gallery.min.css',
+        'bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css'
       ])
       .pipe($.concat('vendors.css'))
       .pipe($.minifyCss())
@@ -74,7 +76,9 @@ gulp.task('vendors', function() {
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
       'bower_components/jquery.socialshareprivacy/jquery.socialshareprivacy.min.js',
       'bower_components/jquery-drilldown/jquery.drilldown.min.js',
-      'bower_components/placeholdr/placeholdr.js'
+      'bower_components/placeholdr/placeholdr.js',
+      'bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
+      'bower_components/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js'
     ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
@@ -108,19 +112,19 @@ gulp.task('polyfills', function() {
  * With error reporting on compiling (so that there's no crash)
  */
 gulp.task('styles', function() {
-  if (argv.production) { console.log('[styles] Processing styles for production env.' ); }
+  if (!argv.dev) { console.log('[styles] Outputting minified styles.' ); }
   else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
   return gulp.src('assets/sass/admin.scss')
     .pipe($.sass({
       errLogToConsole: true
     }))
-    .pipe($.if(!argv.production, $.sourcemaps.init()))
+    .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
     }))
-    .pipe($.if(!argv.production, $.sourcemaps.write()))
-    .pipe($.if(argv.production, $.minifyCss()))
+    .pipe($.if(argv.dev, $.sourcemaps.write()))
+    .pipe($.if(!argv.dev, $.minifyCss()))
     .pipe(gulp.dest('build/css'));
 });
 
@@ -129,12 +133,12 @@ gulp.task('print', function() {
     .pipe($.sass({
       errLogToConsole: true
     }))
-    .pipe($.if(!argv.production, $.sourcemaps.init()))
+    .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
     }))
-    .pipe($.if(!argv.production, $.sourcemaps.write()))
-    .pipe($.if(argv.production, $.minifyCss()))
+    .pipe($.if(argv.dev, $.sourcemaps.write()))
+    .pipe($.if(!argv.dev, $.minifyCss()))
     .pipe(gulp.dest('build/css'));
 });
 

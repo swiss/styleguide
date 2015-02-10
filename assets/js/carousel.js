@@ -19,10 +19,37 @@
     carouselInit(jQuery);
   });
 
+  // slideshow counter
+  var slideshow_total = $('.carousel-slideshow .item').length;
+  $('#carousel-total').text(slideshow_total);
+
+  $('.carousel-slideshow').on('slid.bs.carousel', function () {
+
+    var carouselData = $(this).data('bs.carousel');
+    var currentIndex = carouselData.getItemIndex(carouselData.$element.find('.item.active'));
+    var total = carouselData.$items.length;
+
+    var text = (currentIndex + 1);
+
+    $('#carousel-index').text(text);
+    $('#carousel-total').text(total);
+  });
+
 }) (jQuery);
 
 function carouselInit ($) {
-  var $carousel = $('.carousel');
+  var $carousel = $('.carousel:not(.carousel-slideshow)');
+
+  $('.carousel .item:first-child').addClass('first');
+  $('.carousel .item:last-child').addClass('last');
+
+  $('.carousel').each(function() {
+    disableControl($(this));
+  });
+  $('.carousel').on('slid.bs.carousel', function () {
+    disableControl($(this));
+  });
+
   if($carousel) {
     $carousel.each(function () {
       var biggestHeight = 0,
@@ -39,5 +66,18 @@ function carouselInit ($) {
       });
       $(this).find('.item').height(biggestHeight);
     });
+  }
+}
+
+function disableControl(element) {
+  if (element.find('.first').hasClass('active')) {
+    element.find('.left').addClass('disabled').attr('aria-disabled', 'true');
+  } else {
+    element.find('.left').removeClass('disabled').attr('aria-disabled', 'false');
+  }
+  if (element.find('.last').hasClass('active')) {
+    element.find('.right').addClass('disabled').attr('aria-disabled', 'true');
+  } else {
+    element.find('.right').removeClass('disabled').attr('aria-disabled', 'false');
   }
 }

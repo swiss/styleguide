@@ -148,4 +148,11 @@ The elements list is a very generic element that groups content elements in a li
   font-size: 14px;
   margin-bottom: 0;
   a, p {font-size: 14px;}
+  &:after {
+    content: '\00a0';
+    display: block;
+    height: 0px;
+    overflow: hidden;
+    clear: both;
+  }
 }
