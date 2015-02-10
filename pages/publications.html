@@ -126,7 +126,7 @@
         </div>
 
         <a href="#" class="brand hidden-xs" title="back to home">
-          <img src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+          <img src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="back to home" />
           <h1>Department of the Environment, Transport, Energy and Communications</h1>
         </a>
 
@@ -430,7 +430,7 @@
         <p><a href="#context-sidebar" class="icon icon--before icon--root">Context sidebar</a></p>
       </div>
       <article>
-        <a href="#" class="icon icon--before icon--less">Back to Overview</a>
+        <a href="#" class="icon icon--before icon--less hidden-print">Back to Overview</a>
         <button type="button" class="btn btn-link pull-right"><span class="icon icon--print"></span></button>
         <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
         <br>
@@ -499,10 +499,45 @@
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. Lorem porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
         </p>
+
+
+        <h3>Slideshow</h3>
+        <div id="carousel-slideshow" class="carousel carousel-slideshow slide" data-ride="carousel">
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <a href="http://placehold.it/1200x800" title="Banana" data-gallery>
+                  <img src="http://placehold.it/800x600" alt="Banana">
+              </a>
+              <div class="carousel-caption">
+                <h4>Image Title</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus atque quas, dignissimos quo tempora, consectetur. Odio tempore nulla odit ab impedit dignissimos unde, alias error harum animi laboriosam repudiandae quaerat.</p>
+              </div>
+            </div>
+            <div class="item">
+              <a href="http://placehold.it/1200x800" title="Apple" data-gallery>
+                  <img src="http://placehold.it/800x600" alt="Apple">
+              </a>
+              <div class="carousel-caption">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <div class="pull-right">
+              <a class="left icon icon--before icon--less" href="#carousel-slideshow" data-slide="prev" aria-label="previous"></a><a class="right icon icon--before icon--greater" href="#carousel-slideshow" data-slide="next" aria-label="next"></a>
+            </div>
+            <small class="pull-right"><span id="carousel-index">1</span> of <span id="carousel-total"></span></small>
+          </div>
+
+        </div>
+
+
         <p><a href="#" class="icon icon--after icon--external">External link</a></p>
-        <p><a href="#" class="icon icon--before icon--less">Back to Overview</a></p>
-        <p><small><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small></p>
+        <p><a href="#" class="icon icon--before icon--less hidden-print">Back to Overview</a></p>
+        <p><small class="hidden-print"><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small></p>
       </article>
+
     </div>
                           <div class="col-md-4">
 
@@ -736,7 +771,7 @@
           </select>
         </p>
         <hr class="footer-line visible-xs">
-        <img class="visible-xs" src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch" />
+        <img class="visible-xs" src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="back to home" />
       </div>
 
       <address>
@@ -751,6 +786,39 @@
     </footer>
 
 
+  </div>
+  <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
+      <!-- The container for the modal slides -->
+      <div class="slides"></div>
+      <!-- Controls for the borderless lightbox -->
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
+      <!-- The modal dialog, which will be used to wrap the lightbox content -->
+      <div class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body next"></div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default pull-left prev">
+                          <i class="glyphicon glyphicon-chevron-left"></i>
+                          Previous
+                      </button>
+                      <button type="button" class="btn btn-primary next">
+                          Next
+                          <i class="glyphicon glyphicon-chevron-right"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
   <script type="text/javascript" src="../js/vendors.min.js"></script>
   <script type="text/javascript" src="../js/main.min.js"></script>
