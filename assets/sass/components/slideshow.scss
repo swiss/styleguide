@@ -30,7 +30,7 @@ The slideshow component is not compliant with accessibility standards. If you ne
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
     <h3>Slideshow</h3>
-    <div id="carousel-slideshow" class="carousel carousel-slideshow slide" data-ride="carousel">
+    <div id="carousel-slideshow" class="carousel carousel-slideshow slide">
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
@@ -125,6 +125,10 @@ The slideshow component is not compliant with accessibility standards. If you ne
       &.right {border-left: 1px solid $gainsboro;}
       &:before {color: $coal;}
       &:hover:before {color: $black;}
+      &.disabled {
+        cursor: default;
+        &:before {color: $gainsboro;}
+      }
     }
   }
 
