@@ -42,7 +42,9 @@ gulp.task('vendors', function() {
   gulp.src([
         'bower_components/yamm3/yamm/yamm.css',
         'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css',
-        'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css'
+        'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css',
+        'bower_components/blueimp-gallery/css/blueimp-gallery.min.css',
+        'bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css'
       ])
       .pipe($.concat('vendors.css'))
       .pipe($.minifyCss())
@@ -74,7 +76,9 @@ gulp.task('vendors', function() {
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
       'bower_components/jquery.socialshareprivacy/jquery.socialshareprivacy.min.js',
       'bower_components/jquery-drilldown/jquery.drilldown.min.js',
-      'bower_components/placeholdr/placeholdr.js'
+      'bower_components/placeholdr/placeholdr.js',
+      'bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
+      'bower_components/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js'
     ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())

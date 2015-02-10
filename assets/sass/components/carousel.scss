@@ -138,6 +138,12 @@ The carousel component is not totally compliant with accessibility standards. If
   &:hover:before {
     color: $black;
   }
+  &.disabled {
+    cursor: default;
+    &:before {
+      color: $gainsboro;
+    }
+  }
 }
 
 .carousel-indicators {
