@@ -3,7 +3,10 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
-* 2.5.1 (2015-03-05)
+* 2.5.2 (2015-02-26)
+ * #356 fix error with active state of `.list-emphasis` as list parent
+
+* 2.5.1 (2015-02-05)
  * #353 Improve print styles
  * #348 #347 Fix errors with image flow in Publications
  * #339 Fix error with buttons in main navbar
