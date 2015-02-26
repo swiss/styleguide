@@ -143,7 +143,7 @@ Please refer to their documentation for more details.
 The stylguide theme is in `styleguide-theme`. It's a theme for Trulia's [Hologram](https://github.com/trulia/hologram).
 It was based on [Cortana](https://github.com/Yago31/Cortana).
 
-## How is it included?
+### How is it included?
 
 The `hologram_config.yml` has a reference  to the styleguide theme:
 
@@ -153,7 +153,7 @@ destination: ./path/to/output
 documentation_assets: ./path/to/theme
 ```
 
-## Build the Styleguide Theme
+### Build the Styleguide Theme
 
 The theme has his own gulpfile (for the moment). So you have to do the following command to build the assets then generate the styleguide with `$ hologram`:
 
@@ -203,7 +203,7 @@ C:\>update_rubygems --no-ri --no-rdoc
 
 ## Known issues
 
-**`@font-face`**: 
+### `@font-face` + Cache-Control/Pragma: 
 There is a known issue with Internet Explorer when loading the page over HTTPS with Cache-Control or Pragma headers set. Disable cache control on fonts to fix it (refer to [issue #359](https://github.com/swiss/styleguide/issues/359) for more information):
 
 ```bash
