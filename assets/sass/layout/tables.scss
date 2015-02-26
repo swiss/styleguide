@@ -210,17 +210,11 @@ A simple example :
 */
 
 .table-striped {
-  > tbody > tr:nth-child(odd) {
-    > td,
-    > th {
-      background-color: transparent;
-    }
+  > tbody > tr:nth-of-type(odd) {
+    background-color: transparent;
   }
-  > tbody > tr:nth-child(even) {
-    > td,
-    > th {
-      background-color: $table-bg-accent;
-    }
+  > tbody > tr:nth-of-type(even) {
+    background-color: $table-bg-accent;
   }
   > thead td, > thead th, > tfoot td, > tfoot th {
     background: $smoke;
