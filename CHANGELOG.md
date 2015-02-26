@@ -7,24 +7,25 @@ This changelog references the relevant changes and bug fixes.
  * #356 fix error with active state of `.list-emphasis` as list parent
  * #358 fix `.table-striped` error due to new Bootstrap version
 
-* 2.5.1 (2015-02-05)
+* 2.5.1 (2015-02-10)
  * #353 Improve print styles
  * #348 #347 Fix errors with image flow in Publications
  * #339 Fix error with buttons in main navbar
  * #271 Change alt text of main logo
+ * #333 Slideshow
 
 * 2.5.0 (2015-01-20)
  * #325 [CONTRAST] fix contrast in carets
  * #279 [CONTRAST] fix input placeholders color
  * #324 [CONTRAST] fix tabs background contrast
  * #280 [CONTRAST] fix badge color bin nav-page-list
- * #321 [CONTRAST] fix color and weight in main navbar
+ * #321 [CONTRAST] fix color and weight in active link from main navbar
  * #241 Update Bootstrap to 3.3.1
  * #235 Fix `bower.json`
  * #266 Fix headings `font-size` on small devices
  * #268 Display version number on homepage of styleguide
  * #287 Implement better collapsibles examples
- * #322 Fix that fonts mess
+ * #322 Fix the font-face mess (faux-bold when setting `font-weight`, etc..)
  * #288 Remove link on active link in nav-page-list
  * #297 Treecrumb uses nested lists now
  * #299 Fix collapsible row in table
