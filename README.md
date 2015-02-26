@@ -3,7 +3,17 @@ Swiss Admin web guidelines
 
 - [About Accessibility](Accessibility.md)
 - [How to use the styleguide in your project?](HOWTO.md)
-- [How to install the styleguide in order to contribute?](#installation-development-tools)
+
+
+## Summary
+
+- [The Swiss Federal Administration on the Internet](#the-swiss-federal-administration-on-the-internet)
+- [Contribution](#contribution)
+- [Grid System](#grid-system)
+- [Print Classes](#print-classes)
+- [Styleguide Theme](#styleguide-theme)
+- [FAQ](#faq)
+- [Known Issues](#known-issues)
 
 The Confederation Web Guidelines define the design specifications for the presentation of the [Swiss Federal Administration](http://www.admin.ch) on the Internet and are binding for all websites within the domain admin.ch. These guidelines specify how the websites of the Federal authorities have to look and how they should behave. At the same time they give the government departments and public offices the necessary flexibility to be able to optimize their online communications to the requirements of their specific business purposes.
 
@@ -132,7 +142,7 @@ Please refer to their documentation for more details.
 The stylguide theme is in `styleguide-theme`. It's a theme for Trulia's [Hologram](https://github.com/trulia/hologram).
 It was based on [Cortana](https://github.com/Yago31/Cortana).
 
-## How is it included?
+### How is it included?
 
 The `hologram_config.yml` has a reference  to the styleguide theme:
 
@@ -142,7 +152,7 @@ destination: ./path/to/output
 documentation_assets: ./path/to/theme
 ```
 
-## Build the Styleguide Theme
+### Build the Styleguide Theme
 
 The theme has his own gulpfile (for the moment). So you have to do the following command to build the assets then generate the styleguide with `$ hologram`:
 
@@ -188,4 +198,16 @@ Download [rubygems 2.2.3](https://github.com/rubygems/rubygems/releases/tag/v2.2
 ```shell
 C:\>gem install --local C:\rubygems-update-2.2.3.gem
 C:\>update_rubygems --no-ri --no-rdoc
+```
+
+## Known issues
+
+### `@font-face` + Cache-Control/Pragma: 
+There is a known issue with Internet Explorer when loading the page over HTTPS with Cache-Control or Pragma headers set. Disable cache control on fonts to fix it (refer to [issue #359](https://github.com/swiss/styleguide/issues/359) for more information):
+
+```bash
+<FilesMatch "\.(eot|otf|woff|ttf)$">
+   Header unset Cache-Control
+   Header unset Pragma
+</FilesMatch>
 ```
