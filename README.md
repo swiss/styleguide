@@ -3,7 +3,6 @@ Swiss Admin web guidelines
 
 - [About Accessibility](Accessibility.md)
 - [How to use the styleguide in your project?](HOWTO.md)
-- [How to install the styleguide in order to contribute?](#installation-development-tools)
 
 
 ## Summary
