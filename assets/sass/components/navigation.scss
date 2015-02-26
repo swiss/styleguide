@@ -898,6 +898,7 @@ Navigation below the content level on a smartphone with links to the home page, 
   - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
   - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
 
+<br>
 **2.3.0:**
 
   - added `aria-selected="true"` for current link
@@ -905,9 +906,15 @@ Navigation below the content level on a smartphone with links to the home page, 
   - changed label of back button in drilldown sub from "Back" to title
     of section
 
+<br>
 **2.5.0:**
 
   - allow nested `<ul/>` lists in `.nav-page-list` elements
+
+<br>
+**2.5.2:**
+
+  - fix error with active state of `.list-emphasis`, **please always wrap the text of this list element with a `span` or a `a`**.
 </div>
 
 ```html_example
@@ -922,9 +929,8 @@ Navigation below the content level on a smartphone with links to the home page, 
           <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
           <a href="#" class="icon icon--before icon--less"><span class="sr-only">Back to </span>Comestible Goods</a>
           <ul>
-            <!-- the .list-emphasis class is optionnal -->
-            <li class="list-emphasis">
-              <a href="#">Drinks</a>
+            <li class="list-emphasis active">
+              <span>Drinks</span><span class="sr-only">active</span>
               <ul>
                 <!-- add the .list-sub class if the list has some animated sub-lists -->
                 <li class="list-sub"><a href="#">Mineral water</a>
@@ -938,7 +944,7 @@ Navigation below the content level on a smartphone with links to the home page, 
                     </ul>
                   </nav>
                 </li>
-                <li class="active">Wine <span class="sr-only"></span></li>
+                <li><a href="#">Wine</a></li>
                 <li><a href="#">Beer</a></li>
                 <li><a href="#">Spirits</a></li>
               </ul>
@@ -960,10 +966,38 @@ Navigation below the content level on a smartphone with links to the home page, 
     padding-left: 15px;
     padding-right: 15px;
     li.list-emphasis {
-      > a {
+      padding: 0;
+      border: 0;
+      > a,
+      > span:first-child {
+        border-bottom: 1px solid $coal;
+        display: block;
         color: $black;
         font-weight: 700;
-        border-color: $coal;
+        padding: 10px 0;
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: -15px;
+          width: 5px;
+          height: 100%;
+        }
+      }
+      &.active {
+        padding: 0;
+        border: 0;
+        &:before {
+          background: none;
+        }
+        > a,
+        >span {
+          &:before {
+            background: $venetian-red;
+          }
+        }
       }
     }
   }
@@ -989,6 +1023,7 @@ Navigation below the content level on a smartphone with links to the home page, 
     &:hover:before {background: none;}
   }
   li {
+    border-bottom: 1px solid $silver;
     display: block;
     margin: 0;
     &:before {
@@ -1008,12 +1043,16 @@ Navigation below the content level on a smartphone with links to the home page, 
       &:before {
         background: $venetian-red;
       }
-      a:before,
-      a:hover:before {background: $venetian-red;}
+      > a {
+        padding: 0;
+        &:before,
+        &:hover:before {
+          background: $venetian-red;
+        }
+      }
       .nav-mobile & { padding-bottom: 40px; }
     }
     a {
-      border-bottom: 1px solid $silver;
       color: $empress;
       padding: 10px 0;
       @media only screen and (max-width: $screen-xs-max) { padding: 10px; }
