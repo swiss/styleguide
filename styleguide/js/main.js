@@ -347,17 +347,6 @@ function disableControl(element) {
 
   };
 
-  // $(document).bind('keydown', function(e) {
-  //     var code = (e.keyCode ? e.keyCode : e.which);
-  //     if (e.ctrlKey && code == 80 && !$('body').hasClass('print-preview')) {
-  //         $.printPreview.printPreview();
-  //         return false;
-  //     }
-  // });
-
-  // To test print preview mode
-  // $.printPreview.printPreview();
-
  }) (jQuery);
 
 /* ==========================================================
