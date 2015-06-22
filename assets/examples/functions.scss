@@ -23,8 +23,16 @@ category: Content Modules - Functions
 
 The "Print" icon, with a link to the print version, can be integrated into every page (except the home page). It is positioned at the top right of the content column. A click on the icon opens the browser’s or operating system’s print dialog.
 
+<br>
+<div class="alert alert-warning">
+  **2.5.3:**
+
+  - change the `onclick="window.print()"` by `onclick="$.printPreview.printPreview()"`
+</div>
+
+
 ```html_example
-<a href="#" onclick="window.print()" class="icon icon--before icon--print"></a>
+<a href="#" onclick="$.printPreview.printPreview()" class="icon icon--before icon--print"></a>
 
 <br><br>
 ```
