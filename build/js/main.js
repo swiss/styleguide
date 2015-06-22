@@ -268,7 +268,7 @@ function disableControl(element) {
   $.fn.printPreview = function() {
     return this;
   };
-    
+
   $.printPreview = {
 
     printPreview: function() {
@@ -347,14 +347,13 @@ function disableControl(element) {
 
   };
 
-  $('a.truc').printPreview();
-  $(document).bind('keydown', function(e) {
-      var code = (e.keyCode ? e.keyCode : e.which);
-      if (code == 80 && !$('body').hasClass('print-preview')) {
-          $.printPreview.printPreview();
-          return false;
-      }
-  });
+  // $(document).bind('keydown', function(e) {
+  //     var code = (e.keyCode ? e.keyCode : e.which);
+  //     if (e.ctrlKey && code == 80 && !$('body').hasClass('print-preview')) {
+  //         $.printPreview.printPreview();
+  //         return false;
+  //     }
+  // });
 
   // To test print preview mode
   // $.printPreview.printPreview();
