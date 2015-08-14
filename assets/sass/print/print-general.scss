@@ -4,9 +4,7 @@ Formatierung Chrome und IE
 unbedingt Reihenfolge behalten
 */
 
-.print-preview {
-  display: block !important;
-
+@mixin print-preview {
   // Hide elements
   .nav-mobile,
   .drilldown,
@@ -57,11 +55,6 @@ unbedingt Reihenfolge behalten
     padding: 0 15px;
   }
 
-  // Adjust breaking page elements
-  table {
-    page-break-before: always;
-  }
-
 
   header {
     margin: 40px 0;
@@ -103,8 +96,14 @@ unbedingt Reihenfolge behalten
     max-height: auto !important;
   }
   .tab-content>.tab-pane {
-    display: block;
+    display: block !important;
     visibility: visible;
+  }
+  .tab-pane + .tab-pane {
+    border-top: 1px dashed #6d6d6d;
+    &:before {
+      content: '(next tab)';
+    }
   }
   .tab-content, .tab-content.tab-border {
     padding: 0;
@@ -129,8 +128,14 @@ unbedingt Reihenfolge behalten
   #print-settings .pagination-container {display: block !important;}
 }
 
+.print-preview {
+  display: block !important;
+  @include print-preview;
+}
+
 @media print {
-  @extend .print-preview;
+  @include print-preview;
+
   #print-settings,
   .icon--print {display: none !important;}
 }
