@@ -142,7 +142,7 @@ To have this grey background, add a `well` wrapper around your content.
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
 
-      <div class="well">
+      <div class="well clearfix">
         <h2>Big image</h2>
         <br>
         <figure>
@@ -157,7 +157,7 @@ To have this grey background, add a `well` wrapper around your content.
 
       <br>
 
-      <div class="well">
+      <div class="well clearfix">
         <h2>Small image</h2>
         <br>
         <figure class="pull-left">
@@ -178,7 +178,7 @@ To have this grey background, add a `well` wrapper around your content.
         <a href="#" class="icon icon--after icon--external">External link</a>
       </div>
 
-      <div class="well">
+      <div class="well clearfix">
         <h2>Tiny image</h2>
         <br>
         <figure class="pull-left">
