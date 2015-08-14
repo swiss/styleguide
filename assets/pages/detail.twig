@@ -6,7 +6,7 @@
 {% block content %}
   <div class="col-md-8">
       <div class="visible-xs visible-sm">
-        <p><a href="#context-sidebar" class="icon icon--before icon--root">Context sidebar</a></p>
+        <p><a href="#context-sidebar" class="icon icon--before icon--root hidden-print">Context sidebar</a></p>
       </div>
       <a href="#" onclick="$.printPreview.printPreview()" class="icon icon--before icon--print pull-right"></a>
       <h1 class="text-inline">This is the page title, and it can be really quite long.</h1>
@@ -110,7 +110,7 @@
       <br>
 
       <!-- Contextual information -->
-      <a name="context-sidebar"></a>
+      <a name="context-sidebar" class="hidden-print"></a>
 
       <!-- Nav tabs -->
       <ul class="nav nav-tabs">
