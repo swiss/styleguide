@@ -67,6 +67,10 @@ Add `.collapsed` to link for it to change the icon direction when collapsing.
 
 */
 
+.collapse {
+  @include clearfix;
+}
+
 .collapsing, .collapse.in {
   margin-left: 1.2em;
 }
