@@ -134,7 +134,13 @@ category: Content Modules - Standard elements
 
 The info box is a "text and image" element that has a gray background. It can be integrated into the running text body in order highlight additional information.
 
-To have this grey background, add a `well` wrapper around your content.
+To have this grey background, add a `.well .clearfix` wrapper around your content.
+
+<br>
+<div class="alert alert-warning">
+  **2.5.3:**
+  - add a `.clearfix` class to the `.well` wrapper
+</div>
 
 ```html_example
 <!-- Use normal `container` instead of `container-fluid` -->
