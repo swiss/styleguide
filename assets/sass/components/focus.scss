@@ -87,7 +87,7 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 
   <!-- focus tabs -->
   <ul class="nav nav-tabs nav-tabs-focus nav-justified">
-    <li class="active"><a href="#home" data-toggle="tab">Title longer than usual</a></li>
+    <li class="active"><a href="#home" data-toggle="tab">Title longer than usual and even a bit longer that it should be. More than a tweet!</a></li>
     <li><a href="#profile" data-toggle="tab">Title 2</a></li>
     <li><a href="#messages" data-toggle="tab">Das ist der Megateaser</a></li>
     <li><a href="#settings" data-toggle="tab">Lorem ipsum dolor sit amet</a></li>
@@ -101,6 +101,7 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 @media only screen and (min-width: $screen-sm-min) {
 
 .nav-tabs.nav-tabs-focus {
+  display: flex;
   position: relative;
   border-top: 1px solid $silver;
   border-right: 1px solid $silver;
@@ -120,18 +121,26 @@ Please be careful about the length of the text in the tabs, the height is fixed.
 }
 
 .nav-tabs.nav-tabs-focus li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   border: none;
   border-left: 1px solid $silver;
   border-bottom: none !important;
   position: relative;
+  .oldie &,
+  .ie9 & {
+    width: 1%;
+    a {height: 69px;}
+  }
   &:first-child, &:first-child:not(.active):hover a {border-left: none;}
   a {
+    flex-grow: 1;
     background: $smoke;
-    height: 69px;
     display: block;
+    position: relative;
     border: none;
     box-sizing: border-box !important;
-    border-bottom: 1px solid $silver;
     padding-bottom: 10px;
     font-size: 15px;
     line-height: 1.1em;
@@ -139,17 +148,30 @@ Please be careful about the length of the text in the tabs, the height is fixed.
     border-radius: 0;
     color: $night-rider;
     overflow: hidden;
+    &:after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: $silver;
+    }
   }
-  a:hover, a:focus  {
-    height: 69px;
+  &.active a, &.active:hover a {
+    padding-bottom: 10px !important;
+  }
+  a:hover, a:focus, &.active a  {
     border: none;
-    border-bottom: 3px solid $venetian-red;
     color: $black;
+    &:after {
+      background: $venetian-red;
+      height: 3px;
+    }
   }
   &.active a, &.active a:hover, &.active a:focus {
-    border: none;
-    padding-bottom: 10px !important;
-    border-bottom: 3px solid $venetian-red;
+    border: none !important;
     background: $gainsboro;
     color: $black;
   }
