@@ -407,7 +407,7 @@
                 <ul>
                   <!-- the .list-emphasis class is optionnal -->
                   <li class="list-emphasis">
-                    <a href="#">Drinks</a>
+                    <span>Drinks</span>
                     <ul>
                       <!-- add the .list-sub class if the list has some animated sub-lists -->
                       <li class="list-sub"><a href="#">Mineral water</a>
@@ -421,13 +421,14 @@
                           </ul>
                         </nav>
                       </li>
-                      <li class="active">Wine <span class="sr-only"></span></li>
+                      <li class="active" aria-selected="true"><span>Wine<span class="sr-only"> active</span></span></li>
                       <li><a href="#">Beer</a></li>
                       <li><a href="#">Spirits</a></li>
                     </ul>
                   </li>
                 </ul>
               </nav>
+
             </div>
           </div>
         {% endblock %}
