@@ -32,6 +32,7 @@ unbedingt Reihenfolge behalten
 
   // Force show elements
   [class*="hidden-"] {display: inline-block !important;}
+  .hidden-print {display: none !important;}
 
   // Force white background for preview
   header {
