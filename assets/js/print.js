@@ -15,16 +15,25 @@
   $.fn.printPreview = function() {
     return this;
   };
-    
+
   $.printPreview = {
 
-    printPreview: function() {
+    printPreview: function(element) {
       var $body = $('body'),
           $container = $('.container-main'),
           footnoteLinks = "",
           linksIndex = 0;
 
       $body.find('.nav-mobile, .drilldown, .nav-main, .header-separator, .nav-service, .nav-lang, .form-search, .yamm--select, header > div:first-child, footer, .alert, .icon--print, .social-sharing, form, .nav-process, .carousel-indicators, .carousel-control, .breadcrumb, .pagination-container').remove();
+
+      // if an element is passed, we want it to be the only thing to print out
+      if (element) {
+        element = $('[data-print=' + element + ']');
+        var header = $('header');
+            title = element.attr('data-title') ? '<h1>' + element.attr('data-title') + '</h1>' : '';
+        $container.addClass('print-element').html('').append(header).append(title).append(element);
+      }
+
       $body.addClass('print-preview');
 
       $container.prepend('<div class="row" id="print-settings">'+
@@ -93,17 +102,5 @@
     }
 
   };
-
-  $('a.truc').printPreview();
-  $(document).bind('keydown', function(e) {
-      var code = (e.keyCode ? e.keyCode : e.which);
-      if (code == 80 && !$('body').hasClass('print-preview')) {
-          $.printPreview.printPreview();
-          return false;
-      }
-  });
-
-  // To test print preview mode
-  // $.printPreview.printPreview();
 
  }) (jQuery);

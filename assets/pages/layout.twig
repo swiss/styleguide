@@ -407,7 +407,7 @@
                 <ul>
                   <!-- the .list-emphasis class is optionnal -->
                   <li class="list-emphasis">
-                    <a href="#">Drinks</a>
+                    <span>Drinks</span>
                     <ul>
                       <!-- add the .list-sub class if the list has some animated sub-lists -->
                       <li class="list-sub"><a href="#">Mineral water</a>
@@ -421,13 +421,14 @@
                           </ul>
                         </nav>
                       </li>
-                      <li class="active">Wine <span class="sr-only"></span></li>
+                      <li class="active" aria-selected="true"><span>Wine<span class="sr-only"> active</span></span></li>
                       <li><a href="#">Beer</a></li>
                       <li><a href="#">Spirits</a></li>
                     </ul>
                   </li>
                 </ul>
               </nav>
+
             </div>
           </div>
         {% endblock %}
@@ -438,7 +439,7 @@
               <div class="col-md-4">
 
                 <!-- Contextual information -->
-                <a name="context-sidebar"></a>
+                <a name="context-sidebar" class="hidden-print"></a>
 
                 <!-- Nav tabs -->
                   <ul class="nav nav-tabs">
@@ -447,8 +448,8 @@
                   </ul>
 
                   <!-- Tab panes -->
-                  <div class="tab-content tab-border">
-                    <div class="tab-pane active" id="contact">
+                  <div class="tab-content tab-border" data-print="contact" data-title="Contact info">
+                    <div class="tab-pane active" id="contact" title="Contact">
                       <address itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
                         <strong itemprop="name">UNO-Mission New York</strong>
                         <span>Permanent Mission of Switzerland to the UN</span><br>
@@ -473,9 +474,9 @@
                       09.00-12.00 AM</p>
                       <p>Saturday and Sunday<br>
                       closed</p>
-                      <p><a href="#" class="icon icon--before icon--print">Print contact infos</a></p>
+                      <p><a href="#" onclick="$.printPreview.printPreview('contact')" class="icon icon--before icon--print">Print contact infos</a></p>
                     </div>
-                    <div class="tab-pane" id="map">
+                    <div class="tab-pane" id="map" title="Map">
                       <h3>UNO-Mission New York</h3>
                       <p>633, Third Avenue<br>
                       New York, NY10017-6706</p>

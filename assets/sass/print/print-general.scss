@@ -4,9 +4,7 @@ Formatierung Chrome und IE
 unbedingt Reihenfolge behalten
 */
 
-.print-preview {
-  display: block !important;
-
+@mixin print-preview {
   // Hide elements
   .nav-mobile,
   .drilldown,
@@ -34,6 +32,7 @@ unbedingt Reihenfolge behalten
 
   // Force show elements
   [class*="hidden-"] {display: inline-block !important;}
+  .hidden-print {display: none !important;}
 
   // Force white background for preview
   header {
@@ -57,11 +56,6 @@ unbedingt Reihenfolge behalten
     padding: 0 15px;
   }
 
-  // Adjust breaking page elements
-  table {
-    page-break-before: always;
-  }
-
 
   header {
     margin: 40px 0;
@@ -78,7 +72,7 @@ unbedingt Reihenfolge behalten
     color: blue !important;
     text-decoration: underline;
   }
-  a:after{
+  a:not([name="context-sidebar"]):after{
     content:" (" attr(href) ") " !important;
     font-size:0.8em;
     font-weight:normal;
@@ -103,8 +97,14 @@ unbedingt Reihenfolge behalten
     max-height: auto !important;
   }
   .tab-content>.tab-pane {
-    display: block;
+    display: block !important;
     visibility: visible;
+    border-top: 1px dashed #6d6d6d;
+    margin-bottom: 15px;
+    &:before {
+      content: attr(title) ' tab:';
+      opacity: .6;
+    }
   }
   .tab-content, .tab-content.tab-border {
     padding: 0;
@@ -129,8 +129,18 @@ unbedingt Reihenfolge behalten
   #print-settings .pagination-container {display: block !important;}
 }
 
+.print-preview {
+  display: block !important;
+  @include print-preview;
+
+  .print-element {
+    padding: 0 25px;
+  }
+}
+
 @media print {
-  @extend .print-preview;
+  @include print-preview;
+
   #print-settings,
   .icon--print {display: none !important;}
 }

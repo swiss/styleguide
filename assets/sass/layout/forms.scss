@@ -224,6 +224,8 @@ legend {
 }
 
 .form-group {
+  @include clearfix;
+
   .control-label {
     padding-top: 4px;
   }
