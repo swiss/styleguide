@@ -448,7 +448,7 @@
                   </ul>
 
                   <!-- Tab panes -->
-                  <div class="tab-content tab-border">
+                  <div class="tab-content tab-border" data-print="contact" data-title="Contact info">
                     <div class="tab-pane active" id="contact" title="Contact">
                       <address itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
                         <strong itemprop="name">UNO-Mission New York</strong>
@@ -474,7 +474,7 @@
                       09.00-12.00 AM</p>
                       <p>Saturday and Sunday<br>
                       closed</p>
-                      <p><a href="#" class="icon icon--before icon--print">Print contact infos</a></p>
+                      <p><a href="#" onclick="$.printPreview.printPreview('contact')" class="icon icon--before icon--print">Print contact infos</a></p>
                     </div>
                     <div class="tab-pane" id="map" title="Map">
                       <h3>UNO-Mission New York</h3>

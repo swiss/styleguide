@@ -132,6 +132,10 @@ unbedingt Reihenfolge behalten
 .print-preview {
   display: block !important;
   @include print-preview;
+
+  .print-element {
+    padding: 0 25px;
+  }
 }
 
 @media print {
