@@ -38,11 +38,7 @@
   $('.form-search').append('<button class="icon icon--search icon--before"></button>');
 
   $('body').on('click', '[data-form-search-clear]', function () {
-    $(this).siblings('.search-field').focus().val('');
-  });
-
-  $('body').on('click', function () {
-    $('#search-field').val('');
+    $('#search-field').val('').focus(); // clear search field and refocus it
   });
 
 }) (jQuery, (typeof searchData === 'undefined' ? false : searchData));

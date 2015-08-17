@@ -47,7 +47,7 @@
   background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#e8e8e8),color-stop(61%,#f7f7f7),color-stop(89%,#f7f7f7),color-stop(91%,#f5f5f5),color-stop(95%,#ececec),color-stop(100%,#d7d7d7));
   background: -webkit-linear-gradient(top,#e8e8e8 0%,#f7f7f7 61%,#f7f7f7 89%,#f5f5f5 91%,#ececec 95%,#d7d7d7 100%);
   background: -o-linear-gradient(top,#e8e8e8 0%,#f7f7f7 61%,#f7f7f7 89%,#f5f5f5 91%,#ececec 95%,#d7d7d7 100%);
-  background: linear-gradient(top,#e8e8e8 0%,#f7f7f7 61%,#f7f7f7 89%,#f5f5f5 91%,#ececec 95%,#d7d7d7 100%);
+  background: linear-gradient(to bottom,#e8e8e8 0,#f7f7f7 61%,#f7f7f7 89%,#f5f5f5 91%,#ececec 95%,#d7d7d7 100%);
 }
 
 @mixin gradient-light {

@@ -21,18 +21,34 @@ category: Content Modules - Functions
 
 <span class="label label-admin">FLEX</span>
 
-The "Print" icon, with a link to the print version, can be integrated into every page (except the home page). It is positioned at the top right of the content column. A click on the icon opens the browser’s or operating system’s print dialog.
+The "Print" icon, with a link to the print version, can be integrated into every page (except the home page). It is positioned at the top right of the content column. A click on the icon opens the print dialog window.
+
+You can target a specific element to isolate and print by adding a `data-print="ID"` on the wrapper and setting `onclick="$.printPreview.printPreview(ID)"` on the print button. If a `data-title` attribute is set on the wrapper, it will be displayed as the title of the printed page.
 
 <br>
 <div class="alert alert-warning">
   **2.5.3:**
 
   - change the `onclick="window.print()"` by `onclick="$.printPreview.printPreview()"`
+  - add an optional target to the printPreview function: `onclick="$.printPreview.printPreview('target id')"`
 </div>
 
 
 ```html_example
 <a href="#" onclick="$.printPreview.printPreview()" class="icon icon--before icon--print"></a>
+
+<br><br>
+```
+
+With a specific target:
+
+```html_example
+<div class="example" data-print="example-print" data-title="Big pretty Title">
+  <h4>We only want to print this</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos labore non cum eligendi cumque, ipsa, repudiandae consequatur aut ducimus, molestiae nesciunt consectetur laborum pariatur accusamus in aspernatur quod quae possimus!</p>
+</div>
+
+<a href="#" onclick="$.printPreview.printPreview('example-print')" class="icon icon--before icon--print"></a>
 
 <br><br>
 ```

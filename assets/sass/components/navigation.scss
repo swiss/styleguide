@@ -353,7 +353,7 @@ Add `<div class="overlay"></div>` at the end of the `body` tag to display the gr
     > a {
       height: 70px;
       @include gradient-menu;
-      max-width: 140px;
+      max-width: 110px;
       color: $coal;
       font-size: 0.8em;
       line-height: 1.2;
@@ -929,8 +929,8 @@ Navigation below the content level on a smartphone with links to the home page, 
           <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
           <a href="#" class="icon icon--before icon--less"><span class="sr-only">Back to </span>Comestible Goods</a>
           <ul>
-            <li class="list-emphasis active">
-              <span>Drinks</span><span class="sr-only">active</span>
+            <li class="list-emphasis">
+              <span>Drinks</span>
               <ul>
                 <!-- add the .list-sub class if the list has some animated sub-lists -->
                 <li class="list-sub"><a href="#">Mineral water</a>
@@ -944,7 +944,7 @@ Navigation below the content level on a smartphone with links to the home page, 
                     </ul>
                   </nav>
                 </li>
-                <li><a href="#">Wine</a></li>
+                <li class="active" aria-selected="true">Wine<span class="sr-only"> active</span></li>
                 <li><a href="#">Beer</a></li>
                 <li><a href="#">Spirits</a></li>
               </ul>
@@ -965,38 +965,44 @@ Navigation below the content level on a smartphone with links to the home page, 
     // adding this padding for compensating the padding we removed from .drilldown
     padding-left: 15px;
     padding-right: 15px;
-    li.list-emphasis {
-      padding: 0;
-      border: 0;
-      > a,
-      > span:first-child {
-        border-bottom: 1px solid $coal;
+  }
+  li.list-emphasis {
+    padding: 0;
+    border: 0;
+    > a,
+    > span:first-child {
+      border-bottom: 1px solid $coal;
+      display: block;
+      color: $black;
+      font-weight: 700;
+      padding: 10px 0;
+      @media screen and (max-width: $screen-xs-max) {
+        padding: 10px;
+      }
+      position: relative;
+      &:before {
+        content: '';
         display: block;
-        color: $black;
-        font-weight: 700;
-        padding: 10px 0;
-        position: relative;
-        &:before {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 0;
-          left: -15px;
-          width: 5px;
-          height: 100%;
+        position: absolute;
+        top: 0;
+        left: -15px;
+        width: 5px;
+        height: 100%;
+        @media screen and (max-width: $screen-xs-max) {
+          left: 0;
         }
       }
-      &.active {
-        padding: 0;
-        border: 0;
+    }
+    &.active {
+      padding: 0;
+      border: 0;
+      &:before {
+        background: none;
+      }
+      > a,
+      > span {
         &:before {
-          background: none;
-        }
-        > a,
-        >span {
-          &:before {
-            background: $venetian-red;
-          }
+          background: $venetian-red;
         }
       }
     }
@@ -1012,7 +1018,7 @@ Navigation below the content level on a smartphone with links to the home page, 
     padding: 0px 10px 8px 10px;
     border-bottom: 1px solid $silver;
     @media only screen and (min-width: $screen-sm-min) {font-size: 11px;}
-    &:first-child { border: 1px solid $silver; }
+    &:first-child { border-top: 3px solid $silver; }
     &:before {
       font-size: 20px;
       position: relative;
@@ -1038,10 +1044,16 @@ Navigation below the content level on a smartphone with links to the home page, 
     &.active {
       color: $black;
       padding: 10px 0;
+      @media screen and (max-width: $screen-xs-max) {
+        padding: 10px;
+      }
       position: relative;
       border-bottom: 1px solid $silver;
       &:before {
         background: $venetian-red;
+        @media screen and (max-width: $screen-xs-max) {
+          left: 0;
+        }
       }
       > a {
         padding: 0;
@@ -1051,6 +1063,9 @@ Navigation below the content level on a smartphone with links to the home page, 
         }
       }
       .nav-mobile & { padding-bottom: 40px; }
+      ul {
+        padding-left: 25px;
+      }
     }
     a {
       color: $empress;
@@ -1089,10 +1104,6 @@ Navigation below the content level on a smartphone with links to the home page, 
     li a,
     ul ul li:first-child a {
       color: $cerulean;
-    }
-    .icon--less:not(.drilldown-back),
-    .icon--power {
-      background: none;
     }
     .icon--power {
       border-top: 1px solid $silver;

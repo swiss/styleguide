@@ -57,4 +57,25 @@ Interactive elements are either indicated by their position (e.g. in the navigat
 
 The uniform foot bar closes the pages. It contains a copyright notice as well as links to the “legal notice” and “further legal information”.
 
+## Favicon
+
+Don't forget the favicon before putting the website in production. The favicon ressources are located in the `/build/img/ico/` directory. Include them with the adequate code in your index file:
+
+```html
+<link rel="shortcut icon" href="build/img/ico/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="build/img/ico/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="build/img/ico/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="build/img/ico/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="build/img/ico/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="build/img/ico/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="build/img/ico/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="build/img/ico/apple-touch-icon-76x76.png">
+<link rel="icon" type="image/png" href="build/img/ico/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="build/img/ico/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="build/img/ico/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="img/ico/mstile-144x144.png">
+<meta name="msapplication-config" content="img/ico/browserconfig.xml">
+```
+
 */

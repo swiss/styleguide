@@ -26,6 +26,15 @@ The slideshow uses the jQuery plugin ([Blueimp Bootstrap Image Gallery](https://
 
 The slideshow component is not compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.
 
+<br>
+<div class="alert alert-warning">
+  **2.5.3:**
+
+  - switched order between the `<small>` and `<div>` elements inside of `.carousel-controls` container
+  - removed `.pull-right` class to those same 2 elements
+  - added `.pull-right` class to `.carousel-controls` element
+</div>
+
 ```html_example
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
@@ -51,11 +60,11 @@ The slideshow component is not compliant with accessibility standards. If you ne
           </div>
         </div>
       </div>
-      <div class="carousel-controls">
-        <div class="pull-right">
+      <div class="carousel-controls pull-right">
+        <small><span id="carousel-index">1</span> of <span id="carousel-total"></span></small>
+        <div>
           <a class="left icon icon--before icon--less" href="#carousel-slideshow" data-slide="prev" aria-label="previous"></a><a class="right icon icon--before icon--greater" href="#carousel-slideshow" data-slide="next" aria-label="next"></a>
         </div>
-        <small class="pull-right"><span id="carousel-index">1</span> of <span id="carousel-total"></span></small>
       </div>
 
     </div>
@@ -113,8 +122,13 @@ The slideshow component is not compliant with accessibility standards. If you ne
   }
 
   .carousel-controls {
+    > div {
+      display: inline-block;
+    }
     small {
-      margin: 23px 15px 0 0;
+      display: inline-block;
+      vertical-align: top;
+      margin: 25px 15px 0 0;
       color: $coal;
     }
     a {
