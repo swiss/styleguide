@@ -162,7 +162,7 @@ Please be careful about the length of the text in the tabs, the height is fixed.
   &.active a, &.active:hover a {
     padding-bottom: 10px !important;
   }
-  a:hover, a:focus, &.active a  {
+  a:hover, &.active a  {
     border: none;
     color: $black;
     &:after {
@@ -170,7 +170,7 @@ Please be careful about the length of the text in the tabs, the height is fixed.
       height: 3px;
     }
   }
-  &.active a, &.active a:hover, &.active a:focus {
+  &.active a, &.active a:hover {
     border: none !important;
     background: $gainsboro;
     color: $black;

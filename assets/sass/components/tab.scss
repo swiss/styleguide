@@ -100,6 +100,7 @@ ul.nav-tabs {
 
 .nav-tabs>li.active>a:focus {
   border-top: 3px solid $venetian-red;
+  border-bottom-color: $white;
 }
 
 .nav-tabs>li.active:not(:first-child)>a:focus {
