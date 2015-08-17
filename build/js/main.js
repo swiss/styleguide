@@ -38,11 +38,7 @@
   $('.form-search').append('<button class="icon icon--search icon--before"></button>');
 
   $('body').on('click', '[data-form-search-clear]', function () {
-    $(this).siblings('.search-field').focus().val('');
-  });
-
-  $('body').on('click', function () {
-    $('#search-field').val('');
+    $('#search-field').val('').focus(); // clear search field and refocus it
   });
 
 }) (jQuery, (typeof searchData === 'undefined' ? false : searchData));
@@ -271,13 +267,22 @@ function disableControl(element) {
 
   $.printPreview = {
 
-    printPreview: function() {
+    printPreview: function(element) {
       var $body = $('body'),
           $container = $('.container-main'),
           footnoteLinks = "",
           linksIndex = 0;
 
       $body.find('.nav-mobile, .drilldown, .nav-main, .header-separator, .nav-service, .nav-lang, .form-search, .yamm--select, header > div:first-child, footer, .alert, .icon--print, .social-sharing, form, .nav-process, .carousel-indicators, .carousel-control, .breadcrumb, .pagination-container').remove();
+
+      // if an element is passed, we want it to be the only thing to print out
+      if (element) {
+        element = $('[data-print=' + element + ']');
+        var header = $('header');
+            title = element.attr('data-title') ? '<h1>' + element.attr('data-title') + '</h1>' : '';
+        $container.addClass('print-element').html('').append(header).append(title).append(element);
+      }
+
       $body.addClass('print-preview');
 
       $container.prepend('<div class="row" id="print-settings">'+
@@ -457,6 +462,8 @@ function disableControl(element) {
 
   $(document).ready(function () {
     var id;
+    var isCarouselified = false;
+    var isCollapsified = false;
     carouselify();
     collapsify();
 
@@ -473,20 +480,21 @@ function disableControl(element) {
     function carouselify() {
       var $tabFocus = $(".tab-focus"),
           focusIndex = 0;
-      if($tabFocus && $(window).width() < 767 ) {
+      if($tabFocus && $(window).width() <= 767 && !isCarouselified ) {
+        isCarouselified = true;
         $tabFocus.each(function () {
           var $that = $(this),
               itemIndex = -1;
           focusIndex += 1;
           $that.attr('id', 'tab-focus-'+focusIndex);
-          $that.next(".nav-tabs").hide();
+          $that.next(".nav-tabs").hide().removeClass('nav-tabs-focus').addClass('focus');
           $that.addClass('carousel slide').removeClass('tab-content tab-border');
           $that.wrapInner( "<div class='carousel-inner'></div>");
           $that.prepend( "<ol class=\"carousel-indicators\"></ol>" );
 
           $that.find('.tab-pane').each(function () {
             itemIndex += 1;
-            $(this).removeClass('tab-pane fade in active').addClass('item');
+            $(this).removeClass('tab-pane in active').addClass('item');
             $that.find('.carousel-indicators').append("<li data-target=\"#tab-focus-"+focusIndex+"\" data-slide-to=\""+itemIndex+"\" class=\"\"></li>");
           });
           $that.find('.item:first').addClass('active');
@@ -494,16 +502,18 @@ function disableControl(element) {
 
           $that.append( "<a class=\"left carousel-control icon icon--before icon--less\" href=\"#tab-focus-"+focusIndex+"\" data-slide=\"prev\"></a><a class=\"right carousel-control icon icon--before icon--greater\" href=\"#tab-focus-"+focusIndex+"\" data-slide=\"next\"></a>" );
         });
-      } else if($tabFocus) {
+      } else if($tabFocus && $(window).width() > 767 && isCarouselified) {
+        isCarouselified = false;
         $tabFocus.each(function () {
           var $that = $(this);
           focusIndex -= 1;
-          $that.next(".nav-tabs").show();
+          $that.attr('id', '');
+          $that.next(".focus").addClass('nav-tabs-focus').removeClass('focus').css('display', 'flex'); // we can't use .show() because it should be a flex wrapper
           $that.removeClass('carousel slide').addClass('tab-content tab-border');
           $that.find( "ol.carousel-indicators" ).remove();
 
           $that.find('.item').each(function () {
-            $(this).addClass('tab-pane fade').removeClass('item');
+            $(this).addClass('tab-pane').removeClass('item');
             $(this).css('height', 'auto');
           });
           $that.find('.tab-pane:first-child').addClass('active in');
@@ -518,10 +528,11 @@ function disableControl(element) {
     }
 
     function collapsify() {
-      var $navTab = $(".nav-tabs"),
+      var $navTab = $(".nav-tabs:not(.focus)"),
           $collapsify = $(".collapsify"),
           linkIndex = 0;
-      if($navTab && $(window).width() < 767 ) {
+      if($navTab && $(window).width() <= 767 && !isCollapsified ) {
+        isCollapsified = true;
         $navTab.not('.tab-focus').each(function (){
           var $that = $(this);
           $that.removeClass("nav-tabs").addClass('collapsify');
@@ -540,7 +551,8 @@ function disableControl(element) {
           });
           //$that.find('a:first-child').removeClass('collapse-closed').next('.collapse').addClass('in');
         });
-      } else if($collapsify) {
+      } else if($collapsify && $(window).width() > 767 && isCollapsified) {
+        isCollapsified = false;
         $collapsify.each(function (){
           var $that = $(this);
           $that.addClass("nav-tabs").removeClass('collapsify');
@@ -741,19 +753,24 @@ function subNavInit($) {
   var interval = 3000;
   var tabCarousel = setInterval(nextSlide, interval);
 
-  $('.tab-content.tab-focus, .nav-tabs.nav-tabs-focus').hover(function(e){
+  $(document).on({
+    mouseenter: function () {
       clearInterval(tabCarousel);
-  }, function(e){
+    },
+    mouseleave: function () {
       tabCarousel = setInterval( nextSlide, interval);
-  });
+    }
+  }, ".tab-content.tab-focus, .nav-tabs.nav-tabs-focus");
 
   function nextSlide() {
-    var tabs = $('.nav-tabs-focus.nav-tabs > li'),
-        active = tabs.filter('.active'),
-        next = active.next('li'),
-        toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
+    if ($('.nav-tabs-focus.nav-tabs > li').length) {
+      var tabs = $('.nav-tabs-focus.nav-tabs > li'),
+          active = tabs.filter('.active'),
+          next = active.next('li'),
+          toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
 
-    toClick.tab('show');
+      toClick.tab('show');
+    }
   }
 
 }) (jQuery);

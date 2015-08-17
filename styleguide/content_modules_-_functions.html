@@ -8358,20 +8358,41 @@
 
 <p><span class="label label-admin">FLEX</span></p>
 
-<p>The &quot;Print&quot; icon, with a link to the print version, can be integrated into every page (except the home page). It is positioned at the top right of the content column. A click on the icon opens the browser’s or operating system’s print dialog.</p>
+<p>The &quot;Print&quot; icon, with a link to the print version, can be integrated into every page (except the home page). It is positioned at the top right of the content column. A click on the icon opens the print dialog window.</p>
+
+<p>You can target a specific element to isolate and print by adding a <code>data-print=&quot;ID&quot;</code> on the wrapper and setting <code>onclick=&quot;$.printPreview.printPreview(ID)&quot;</code> on the print button. If a <code>data-title</code> attribute is set on the wrapper, it will be displayed as the title of the printed page.</p>
 
 <p><br>
 <div class="alert alert-warning">
   <strong>2.5.3:</strong></p>
 
 <ul>
-<li>change the <code>onclick=&quot;window.print()&quot;</code> by <code>onclick=&quot;$.printPreview.printPreview()&quot;</code>
+<li>change the <code>onclick=&quot;window.print()&quot;</code> by <code>onclick=&quot;$.printPreview.printPreview()&quot;</code></li>
+<li>add an optional target to the printPreview function: <code>onclick=&quot;$.printPreview.printPreview(&#39;target id&#39;)&quot;</code>
 </div></li>
 </ul>
 <div class="codeExample"><div class="exampleOutput"><a href="#" onclick="$.printPreview.printPreview()" class="icon icon--before icon--print"></a>
 
 <br><br>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">onclick=</span><span class="s">"$.printPreview.printPreview()"</span> <span class="na">class=</span><span class="s">"icon icon--before icon--print"</span><span class="nt">&gt;&lt;/a&gt;</span>
+
+<span class="nt">&lt;br&gt;&lt;br&gt;</span>
+</pre></div></div></div>
+<p>With a specific target:</p>
+<div class="codeExample"><div class="exampleOutput"><div class="example" data-print="example-print" data-title="Big pretty Title">
+  <h4>We only want to print this</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos labore non cum eligendi cumque, ipsa, repudiandae consequatur aut ducimus, molestiae nesciunt consectetur laborum pariatur accusamus in aspernatur quod quae possimus!</p>
+</div>
+
+<a href="#" onclick="$.printPreview.printPreview('example-print')" class="icon icon--before icon--print"></a>
+
+<br><br>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"example"</span> <span class="na">data-print=</span><span class="s">"example-print"</span> <span class="na">data-title=</span><span class="s">"Big pretty Title"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h4&gt;</span>We only want to print this<span class="nt">&lt;/h4&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos labore non cum eligendi cumque, ipsa, repudiandae consequatur aut ducimus, molestiae nesciunt consectetur laborum pariatur accusamus in aspernatur quod quae possimus!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">onclick=</span><span class="s">"$.printPreview.printPreview('example-print')"</span> <span class="na">class=</span><span class="s">"icon icon--before icon--print"</span><span class="nt">&gt;&lt;/a&gt;</span>
 
 <span class="nt">&lt;br&gt;&lt;br&gt;</span>
 </pre></div></div></div>
