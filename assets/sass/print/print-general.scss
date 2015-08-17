@@ -99,11 +99,11 @@ unbedingt Reihenfolge behalten
   .tab-content>.tab-pane {
     display: block !important;
     visibility: visible;
-  }
-  .tab-pane + .tab-pane {
     border-top: 1px dashed #6d6d6d;
+    margin-bottom: 15px;
     &:before {
-      content: '(next tab)';
+      content: attr(title) ' tab:';
+      opacity: .6;
     }
   }
   .tab-content, .tab-content.tab-border {
