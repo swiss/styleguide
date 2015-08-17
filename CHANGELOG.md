@@ -3,6 +3,22 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.5.3 (2015-08-17)
+ * #375 add .clearfix class to the infobox element to avoid overflowing elements when floated !markup
+ * #374 remove clearing of search-field when clicking on body element, enhance its clear button
+ * #371 remove the p key shortcut to show the print view
+ * #381 add .hidden-print class to content-sidebar anchors
+ * #372 #370 fix print styles
+ * #357 add optional parameter to the printPreview() function !markup -> see doc
+ * #373 fix nav-page-list element to behave correctly on mobile
+ * #381 set .clearfix class to collapse element to avoid issues with first-child heading
+ * #381 change max-width of nav-main element from 140px to 110px
+ * #376 fix slideshow carousel-controls element to make it work with bigger numbers !markup
+ * #368 fix missing print function on publications page
+ * #380 add info about favicons in the CDelements page
+ * #367 #344 fix markup change in js for the focus and tabs elements
+ * #381 fix various visual issues with tabs (background-color, padding, focus state)
+
 * 2.5.2 (2015-02-26)
  * #356 fix error with active state of `.list-emphasis` as list parent
  * #358 fix `.table-striped` error due to new Bootstrap version
@@ -44,17 +60,17 @@ This changelog references the relevant changes and bug fixes.
 
 * 2.4.0 (2015-01-05)
  * #327 Anchor link for context information when placed at the bottom
- * #319 [icons] Icon in download list are shown twice. 
- * #318 Distance in between checkboxes and text is wrong in search results. 
- * #307 Social Sharing layout is moving on browser zoom 
- * #306 Resetting of search value doesn't work. 
- * #305 Search input field will only be initialised when typeahead values are available. 
- * #295 Language navigation covers name of the organizational unit 
- * #292 Invalid HTML in footer links. 
- * #291 Invalid HTML in breadcrumb. 
- * #290 Missing preset number at one-line order form. 
- * #289 Global Navigation slipped down when scrolling. 
- * #283 Single images will not be scaled and overlays their boxes. 
+ * #319 [icons] Icon in download list are shown twice.
+ * #318 Distance in between checkboxes and text is wrong in search results.
+ * #307 Social Sharing layout is moving on browser zoom
+ * #306 Resetting of search value doesn't work.
+ * #305 Search input field will only be initialised when typeahead values are available.
+ * #295 Language navigation covers name of the organizational unit
+ * #292 Invalid HTML in footer links.
+ * #291 Invalid HTML in breadcrumb.
+ * #290 Missing preset number at one-line order form.
+ * #289 Global Navigation slipped down when scrolling.
+ * #283 Single images will not be scaled and overlays their boxes.
 
 * 2.2.0 (2014-10-08)
  * #243  Heading not in a logical sequence bug
