@@ -28,8 +28,8 @@
 
       // if an element is passed, we want it to be the only thing to print out
       if (element) {
-        element = $('[data-print=' + element + ']');
-        var header = $('header');
+        element = $('[data-print=' + element + ']').clone(); // clone to fix issue with IE render
+        var header = $('header').clone(); // clone to fix issue with IE render
             title = element.attr('data-title') ? '<h1>' + element.attr('data-title') + '</h1>' : '';
         $container.addClass('print-element').html('').append(header, title, element);
       }
@@ -67,7 +67,7 @@
         var target = $(this).attr('href');
         target = String(target);
 
-        if (target != "undefined" && target.indexOf("http") >= 0) {
+        if (target != "undefined" && target.indexOf("http") === 0) {
           linksIndex ++;
           footnoteLinks += '<li>'+target+'</li>';
           $('<sup class="link-ref">('+linksIndex+')</sup>').insertAfter(this);
