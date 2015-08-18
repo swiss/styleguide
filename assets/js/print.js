@@ -31,7 +31,7 @@
         element = $('[data-print=' + element + ']');
         var header = $('header');
             title = element.attr('data-title') ? '<h1>' + element.attr('data-title') + '</h1>' : '';
-        $container.addClass('print-element').html('').append(header).append(title).append(element);
+        $container.addClass('print-element').html('').append(header, title, element);
       }
 
       $body.addClass('print-preview');
