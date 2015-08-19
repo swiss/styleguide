@@ -544,6 +544,7 @@
       <!-- Tab panes -->
       <div class="tab-content tab-border">
         <div class="tab-pane active" id="documents">
+          <h3 class="visible-print-block">Documents</h3>
           <article>
             <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -557,6 +558,7 @@
           </article>
         </div>
         <div class="tab-pane" id="links">
+          <h3 class="visible-print-block">Links</h3>
           <p><a href="#" class="icon icon--after icon--external">external link</a></p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eum amet architecto corporis aut cumque ratione dolores odit et libero impedit ipsa. Enim, deleniti, quae ipsa nostrum doloremque nihil repellendus.</p>
           <hr>
@@ -564,6 +566,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eum amet architecto corporis aut cumque ratione dolores odit et libero impedit ipsa. Enim, deleniti, quae ipsa nostrum doloremque nihil repellendus.</p>
         </div>
         <div class="tab-pane" id="news">
+          <h3 class="visible-print-block">News</h3>
           <!-- Add .clearfix class to prevent errors with floated elements -->
           <article class="clearfix">
             <h4><a href="#">Title Lorem ipsum</a></h4>
@@ -634,7 +637,8 @@
 
                   <!-- Tab panes -->
                   <div class="tab-content tab-border" data-print="contact" data-title="Contact info">
-                    <div class="tab-pane active" id="contact" title="Contact">
+                    <div class="tab-pane active" id="contact">
+                      <h2 class="visible-print-block">Contact</h2>
                       <address itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
                         <strong itemprop="name">UNO-Mission New York</strong>
                         <span>Permanent Mission of Switzerland to the UN</span><br>
@@ -661,13 +665,14 @@
                       closed</p>
                       <p><a href="#" onclick="$.printPreview.printPreview('contact')" class="icon icon--before icon--print">Print contact infos</a></p>
                     </div>
-                    <div class="tab-pane" id="map" title="Map">
+                    <div class="tab-pane" id="map">
+                      <h2 class="visible-print-block">Map</h2>
                       <h3>UNO-Mission New York</h3>
                       <p>633, Third Avenue<br>
                       New York, NY10017-6706</p>
                       <p><img src="http://placehold.it/158x120" alt="Map"></p>
                       <p><a href="#" class="icon icon--after icon--external">See on the map</a></p>
-                      <p><a href="#" class="icon icon--before icon--print">Print contact infos</a></p>
+                      <p><a href="#" onclick="$.printPreview.printPreview('contact')" class="icon icon--before icon--print">Print contact infos</a></p>
                     </div>
                   </div>
                   <br>
