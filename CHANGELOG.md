@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.5.4 (2015-08-19)
+ * #357 Missing print function in contact box fix IE9 bug
+
 * 2.5.3 (2015-08-17)
  * #375 add .clearfix class to the infobox element to avoid overflowing elements when floated !markup
  * #374 remove clearing of search-field when clicking on body element, enhance its clear button
