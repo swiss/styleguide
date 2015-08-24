@@ -320,7 +320,6 @@ function disableControl(element) {
           linksIndex ++;
           footnoteLinks += '<li>'+target+'</li>';
           $('<sup class="link-ref">('+linksIndex+')</sup>').insertAfter(this);
-          console.log(linksIndex);
         }
       });
 
