@@ -503,7 +503,7 @@
 
 
         <h3>Slideshow</h3>
-        <div id="carousel-slideshow" class="carousel carousel-slideshow slide" data-ride="carousel">
+        <div id="carousel-slideshow" class="carousel carousel-slideshow slide">
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
@@ -524,13 +524,48 @@
               </div>
             </div>
           </div>
-          <div class="carousel-controls">
-            <div class="pull-right">
+          <div class="carousel-controls pull-right">
+            <small><span id="carousel-index">1</span> of <span id="carousel-total"></span></small>
+            <div>
               <a class="left icon icon--before icon--less" href="#carousel-slideshow" data-slide="prev" aria-label="previous"></a><a class="right icon icon--before icon--greater" href="#carousel-slideshow" data-slide="next" aria-label="next"></a>
             </div>
-            <small class="pull-right"><span id="carousel-index">1</span> of <span id="carousel-total"></span></small>
           </div>
 
+        </div>
+
+        <!-- To include as is before the </body> closing tag -->
+        <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
+            <!-- The container for the modal slides -->
+            <div class="slides"></div>
+            <!-- Controls for the borderless lightbox -->
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
+            <!-- The modal dialog, which will be used to wrap the lightbox content -->
+            <div class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body next"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default pull-left prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                                Previous
+                            </button>
+                            <button type="button" class="btn btn-primary next">
+                                Next
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
