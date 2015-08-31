@@ -3,6 +3,10 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 2.5.4 (2015-08-31)
+ * #376 Fix controls spacing in slideshow element
+ * #385 Change Deutschland to Germany in language select
+
 * 2.5.4 (2015-08-19)
  * #357 Missing print function in contact box fix IE9 bug
 
