@@ -5,7 +5,16 @@
   "authors": "Antistatique.net",
   "description": "Swiss Admin Styleguide",
   "license": "MIT",
-  "main": "styleguide/index.html",
+  "main": [
+    "./styleguide/index.html",
+    "./build/css/*.css",
+    "./build/js/vendors.min.js",
+    "./build/js/main.js",
+    "./build/font/*.eot",
+    "./build/font/*.svg",
+    "./build/font/*.ttf",
+    "./build/font/*.woff"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
