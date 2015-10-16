@@ -36,6 +36,39 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
 **2.1.8**
   - added **IDs** to label and help text, `aria-labelledby` and `role` to buttons for a better accessibility
   - added `<fieldset>` and `<legend class="hidden">` around `.form-group` for a better accessibility
+
+<br>
+**2.6.0**
+  - added a datepicker calendar plugin as an option. Use this in your script to initiate the plugin on the fields you need. See the [official Pikaday documentation](https://github.com/dbushell/Pikaday).
+
+  ```js_example
+  // Load Pikaday on date fields
+  if ($(window).width() > 767) {
+
+    $('[type=date]').each(function(){
+
+      // we need to change to type text to be able to write in another format
+      // Just uncomment the following line:
+
+      // $(this).prop('type', 'text');
+
+      var picker = new Pikaday({
+        field: $(this)[0],
+        format: 'YYYY-MM-DD', // must be a input[type=text] to change this, see above
+        firstDay: 1, // sets monday as first day
+        theme: 'admin-theme',
+        i18n: {
+            previousMonth : 'Previous Month',
+            nextMonth     : 'Next Month',
+            months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
+            weekdays      : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+            weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+        }
+      });
+    });
+
+  }
+  ```
 </div>
 
 ```html_example
@@ -245,7 +278,10 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  line-height: 1.2;
+
+  &.form-control {
+    line-height: 1.2;
+  }
 }
 
 
@@ -335,4 +371,46 @@ label {
 // ie placeholders
 .placeholdr {
   color: $input-color-placeholder !important;
+}
+
+// hide Chrome native calendar popup
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+input[type="date"]::-webkit-input-placeholder {
+    visibility: hidden !important;
+}
+
+// Pickaday styles
+/**
+ * This theme is an example to show how you can create your own.
+ */
+
+.admin-theme .pika-table th {
+    color: $empress;
+}
+
+.admin-theme .pika-week {
+    color: #999;
+}
+
+.admin-theme .is-today .pika-button {
+    background-color: $mocassin;
+    color: $coal;
+}
+
+.admin-theme .is-selected .pika-button {
+    color: #fff;
+    background: $fire-engine-red;
+    box-shadow: inset 0 0 1px rgba($night-rider, 0.8);
+}
+
+.admin-theme .is-disabled .pika-button {
+    color: #999;
+    opacity: .3;
+}
+
+.admin-theme .pika-button:hover {
+    color: #fff !important;
+    background: $venetian-red !important;
 }
