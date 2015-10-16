@@ -42,6 +42,7 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
   - added a datepicker calendar plugin as an option. Use this in your script to initiate the plugin on the fields you need. See the [official Pikaday documentation](https://github.com/dbushell/Pikaday).
 
   ```js_example
+  // code duplicated in footer to make the datepicker work in the styleguide
   // Load Pikaday on date fields
   if ($(window).width() > 767) {
 
