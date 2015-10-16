@@ -8421,8 +8421,67 @@ The name of the form and the form box must be linked to a label. A label ID may 
 <div class="alert alert-warning">
 <strong>2.1.8</strong>
   - added <strong>IDs</strong> to label and help text, <code>aria-labelledby</code> and <code>role</code> to buttons for a better accessibility
-  - added <code>&lt;fieldset&gt;</code> and <code>&lt;legend class=&quot;hidden&quot;&gt;</code> around <code>.form-group</code> for a better accessibility
-</div></p>
+  - added <code>&lt;fieldset&gt;</code> and <code>&lt;legend class=&quot;hidden&quot;&gt;</code> around <code>.form-group</code> for a better accessibility</p>
+
+<p><br>
+<strong>2.6.0</strong>
+  - added a datepicker calendar plugin as an option. Use this in your script to initiate the plugin on the fields you need. See the <a href="https://github.com/dbushell/Pikaday">official Pikaday documentation</a>.</p>
+<script>  // code duplicated in footer to make the datepicker work in the styleguide
+  // Load Pikaday on date fields
+  if ($(window).width() > 767) {
+
+    $('[type=date]').each(function(){
+
+      // we need to change to type text to be able to write in another format
+      // Just uncomment the following line:
+
+      // $(this).prop('type', 'text');
+
+      var picker = new Pikaday({
+        field: $(this)[0],
+        format: 'YYYY-MM-DD', // must be a input[type=text] to change this, see above
+        firstDay: 1, // sets monday as first day
+        theme: 'admin-theme',
+        i18n: {
+            previousMonth : 'Previous Month',
+            nextMonth     : 'Next Month',
+            months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
+            weekdays      : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+            weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+        }
+      });
+    });
+
+  }
+</script> <div class="codeBlock jsExample"><div class="highlight"><pre>  <span class="c1">// code duplicated in footer to make the datepicker work in the styleguide</span>
+  <span class="c1">// Load Pikaday on date fields</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">width</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">767</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'[type=date]'</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+
+      <span class="c1">// we need to change to type text to be able to write in another format</span>
+      <span class="c1">// Just uncomment the following line:</span>
+
+      <span class="c1">// $(this).prop('type', 'text');</span>
+
+      <span class="kd">var</span> <span class="nx">picker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Pikaday</span><span class="p">({</span>
+        <span class="na">field</span><span class="p">:</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="na">format</span><span class="p">:</span> <span class="s1">'YYYY-MM-DD'</span><span class="p">,</span> <span class="c1">// must be a input[type=text] to change this, see above</span>
+        <span class="na">firstDay</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// sets monday as first day</span>
+        <span class="na">theme</span><span class="p">:</span> <span class="s1">'admin-theme'</span><span class="p">,</span>
+        <span class="na">i18n</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">previousMonth</span> <span class="p">:</span> <span class="s1">'Previous Month'</span><span class="p">,</span>
+            <span class="na">nextMonth</span>     <span class="p">:</span> <span class="s1">'Next Month'</span><span class="p">,</span>
+            <span class="na">months</span>        <span class="p">:</span> <span class="p">[</span><span class="s1">'January'</span><span class="p">,</span><span class="s1">'February'</span><span class="p">,</span><span class="s1">'March'</span><span class="p">,</span><span class="s1">'April'</span><span class="p">,</span><span class="s1">'May'</span><span class="p">,</span><span class="s1">'June'</span><span class="p">,</span><span class="s1">'July'</span><span class="p">,</span><span class="s1">'August'</span><span class="p">,</span><span class="s1">'September'</span><span class="p">,</span><span class="s1">'October'</span><span class="p">,</span><span class="s1">'November'</span><span class="p">,</span><span class="s1">'December'</span><span class="p">],</span>
+            <span class="na">weekdays</span>      <span class="p">:</span> <span class="p">[</span><span class="s1">'Sunday'</span><span class="p">,</span><span class="s1">'Monday'</span><span class="p">,</span><span class="s1">'Tuesday'</span><span class="p">,</span><span class="s1">'Wednesday'</span><span class="p">,</span><span class="s1">'Thursday'</span><span class="p">,</span><span class="s1">'Friday'</span><span class="p">,</span><span class="s1">'Saturday'</span><span class="p">],</span>
+            <span class="na">weekdaysShort</span> <span class="p">:</span> <span class="p">[</span><span class="s1">'Sun'</span><span class="p">,</span><span class="s1">'Mon'</span><span class="p">,</span><span class="s1">'Tue'</span><span class="p">,</span><span class="s1">'Wed'</span><span class="p">,</span><span class="s1">'Thu'</span><span class="p">,</span><span class="s1">'Fri'</span><span class="p">,</span><span class="s1">'Sat'</span><span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+    <span class="p">});</span>
+
+  <span class="p">}</span>
+</pre></div></div>
+<p></div></p>
 <div class="codeExample"><div class="exampleOutput"><form class="form-horizontal" role="form">
 
   <!-- email input -->
@@ -9914,5 +9973,33 @@ The name of the form and the form box must be linked to a label. A label ID may 
   
     <script type="text/javascript" src="js/main.min.js"></script>
   
+
+  <script>
+    if ($(window).width() > 767) {
+
+        $('[type=date]').each(function(){
+
+          // we need to change to type text to be able to write in another format
+          // Just uncomment the following line:
+
+          // $(this).prop('type', 'text');
+
+          var picker = new Pikaday({
+            field: $(this)[0],
+            format: 'YYYY-MM-DD', // must be a input[type=text] to change this, see above
+            firstDay: 1, // sets monday as first day
+            theme: 'admin-theme',
+            i18n: {
+                previousMonth : 'Previous Month',
+                nextMonth     : 'Next Month',
+                months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
+                weekdays      : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+                weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+            }
+          });
+        });
+
+      }
+  </script>
 </body>
 </html>
