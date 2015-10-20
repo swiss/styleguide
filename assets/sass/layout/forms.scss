@@ -139,11 +139,11 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
       <label class="col-sm-2 control-label" id="check-group-1">Terms</label>
       <div class="col-sm-10">
         <div class="checkbox checkbox--left">
-          <input id="checkboxform" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1">
+          <input id="checkboxform" name="remember" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1">
           <label id="checkbox-label-1" for="checkboxform">Remember me</label>
         </div>
         <div class="checkbox checkbox--left">
-          <input id="checkboxform2" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2">
+          <input id="checkboxform2" name="accept" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2">
           <label id="checkbox-label-2" for="checkboxform2">Accept terms</label>
         </div>
       </div>
@@ -156,58 +156,58 @@ HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `mo
     <div class="form-group">
       <label class="col-sm-2 control-label" id="check-group-2">Terms</label>
       <div class="col-sm-10">
-        <label class="checkbox-inline">
+        <div class="checkbox-inline">
           <div class="checkbox checkbox--left">
-            <input id="checkboxform3" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3">
+            <input id="checkboxform3" name="remember" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3">
             <label id="checkbox-label-3" for="checkboxform3">Remember me</label>
           </div>
-        </label>
-        <label class="checkbox-inline">
+        </div>
+        <div class="checkbox-inline">
           <div class="checkbox checkbox--left">
-            <input id="checkboxform4" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4">
+            <input id="checkboxform4" name="accept" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4">
             <label id="checkbox-label-4" for="checkboxform4">Accept terms</label>
           </div>
-        </label>
+        </div>
       </div>
     </div>
   </fieldset>
 
- <!-- Radio buttons horizontal -->
+ <!-- Radio buttons vertical -->
   <fieldset>
     <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
       <label class="col-sm-2 control-label" id="radio-group-1">Terms</label>
       <div class="col-sm-10">
         <div class="radio radio--left">
-          <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1">
+          <input id="radioform" value="yes" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1">
           <label for="radioform" id="radio-label-1">Remember me</label>
         </div>
         <div class="radio radio--left">
-          <input id="radioform2" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-2">
+          <input id="radioform2" value="no" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-2">
           <label for="radioform2" id="radio-label-2">Don't remember me</label>
         </div>
       </div>
     </div>
   </fieldset>
 
-  <!-- Radio buttons vertical -->
+  <!-- Radio buttons horizontal -->
   <fieldset>
     <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
       <label class="col-sm-2 control-label" id="radio-group-2">Terms</label>
       <div class="col-sm-10">
-        <label class="radio-inline">
+        <div class="radio-inline">
           <div class="radio radio--left">
-            <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-3">
-            <label for="radioform" id="radio-label-3">Remember me</label>
+            <input id="radioform3" value="radio3" type="radio" name="radio-j" aria-labelledby="radio-group-2 radio-label-3">
+            <label for="radioform3" id="radio-label-3">Remember me</label>
           </div>
-        </label>
-        <label class="radio-inline">
+        </div>
+        <div class="radio-inline">
           <div class="radio radio--left">
-            <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-4">
-            <label for="radioform" id="radio-label-4">Remember me</label>
+            <input id="radioform4" value="radio4" type="radio" name="radio-j" aria-labelledby="radio-group-2 radio-label-4">
+            <label for="radioform4" id="radio-label-4">Remember me</label>
           </div>
-        </label>
+        </div>
       </div>
     </div>
   </fieldset>
@@ -356,6 +356,7 @@ label {
 .checkbox-inline {
   padding-right: 20px;
   padding-left: 0;
+  overflow: hidden;
 }
 .form-horizontal{
   .radio-inline,
