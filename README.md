@@ -44,8 +44,9 @@ There are several ways to get started:
   - Clone the repo `git clone https://github.com/antistatique/Swiss-Admin-web-guidelines.git`
 
 
-## Contribution (development tools)
-This is not needed to use the styleguide, only if you want to modify it to fix some bugs and contribute.
+## Contribution
+
+If you want to contribute, fix a bug or suggest a new feature, please first [create a new issue](https://github.com/swiss/styleguide/issues/new), so we can discuss it. Then, please make a Pull Request to the `dev` branch. This is important, as we use the [Git Flow](https://github.com/swiss/styleguide/issues/new) workflow. We thank you in advance for your collaboration!
 
 
 ### Installation on OSX/Unix
