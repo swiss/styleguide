@@ -10,10 +10,10 @@
     "./build/css/*.css",
     "./build/js/vendors.min.js",
     "./build/js/main.js",
-    "./build/font/*.eot",
-    "./build/font/*.svg",
-    "./build/font/*.ttf",
-    "./build/font/*.woff"
+    "./build/fonts/*.eot",
+    "./build/fonts/*.svg",
+    "./build/fonts/*.ttf",
+    "./build/fonts/*.woff"
   ],
   "ignore": [
     "**/.*",
