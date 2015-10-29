@@ -23,7 +23,6 @@ category: Navigation modules - Content Navigation
 Process navigation is used in connection with forms that are spread over several pages. The active process stage is marked in red. The previous steps are clickable and lead the user back to the selected process stage.
 
 ```html_example
-
 <nav class="nav-process nav-process-steps-4"> 
 <!--  Adjust the classname 'nav-process-steps-4' to the number of pages you have (2 to 10). -->
   <ul>
@@ -39,7 +38,6 @@ Process navigation is used in connection with forms that are spread over several
     <li class="disabled">
       <a href="#">Step 4</a>
     </li>
-
   </ul>
 </nav>
 ```
@@ -110,7 +108,6 @@ Process navigation is used in connection with forms that are spread over several
     height: 10px;
     padding-top: 2px;
   }
-  
   li.active a:after {
     border-width: 5px;
     right: -5px;
@@ -118,7 +115,6 @@ Process navigation is used in connection with forms that are spread over several
   li.active a:before {
     border-width: 5px;
   }
-
   // create the widths for different amounts of steps
   @for $i from 2 through 10 {
     &.nav-process-steps-#{$i} li a {
