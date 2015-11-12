@@ -25,6 +25,22 @@ var gulp = require('gulp'),
     argv = require('yargs').argv,
     del = require('del');
 
+var assemble = require('fabricator-assemble');
+var browserSync = require('browser-sync');
+var csso = require('gulp-csso');
+var del = require('del');
+var gulp = require('gulp');
+var gutil = require('gulp-util');
+var gulpif = require('gulp-if');
+var imagemin = require('gulp-imagemin');
+var prefix = require('gulp-autoprefixer');
+var rename = require('gulp-rename');
+var reload = browserSync.reload;
+var runSequence = require('run-sequence');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var webpack = require('webpack');
+
 /**
  * Build vendors dependencies
  */
@@ -118,7 +134,7 @@ gulp.task('styles', function() {
   if (!argv.dev) { console.log('[styles] Outputting minified styles.' ); }
   else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
-  return gulp.src('assets/sass/admin.scss')
+  return gulp.src('src/assets/sass/admin.scss')
     .pipe($.sass({
       errLogToConsole: true
     }))
@@ -132,7 +148,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('print', function() {
-  return gulp.src('assets/sass/print/print.scss')
+  return gulp.src('src/assets/sass/print/print.scss')
     .pipe($.sass({
       errLogToConsole: true
     }))
@@ -151,7 +167,7 @@ gulp.task('print', function() {
  * With error reporting on compiling (so that there's no crash)
  */
 gulp.task('scripts', function() {
-  return gulp.src('assets/js/*.js')
+  return gulp.src('src/assets/js/*.js')
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.concat('main.js'))
@@ -161,38 +177,91 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('build/js'));
 });
 
-/**
- * Build Hologram Styleguide
- */
-gulp.task('styleguide', function () {
-  return gulp.src('hologram_config.yml')
-    .pipe($.hologram({ bundler: true }));
+gulp.task('images', function() {
+  return gulp.src(['src/assets/images/**'])
+          .pipe(gulp.dest('build/images'));
 });
 
-gulp.task('build-images', function() {
-  return gulp.src(['assets/img/**'])
-          .pipe(gulp.dest('build/img'));
-});
 
-gulp.task('build-fonts', function() {
-  return gulp.src(['assets/fonts/**'])
+gulp.task('fonts', function() {
+  return gulp.src(['src/assets/fonts/**'])
           .pipe(gulp.dest('build/fonts'));
 });
 
 /**
  * Compile TWIG example pages
  */
-
 gulp.task('twig', function () {
-    return gulp.src('assets/pages/*.twig')
+    return gulp.src('src/assets/pages/*.twig')
         .pipe($.twig())
-        .pipe(gulp.dest('styleguide/pages'));
+        .pipe(gulp.dest('dist/pages'));
+});
+
+
+// FABRICATOR
+// configuration
+var config = {
+	dev: gutil.env.dev,
+	src: {
+		scripts: {
+			fabricator: './src/assets/fabricator/scripts/fabricator.js',
+			toolkit: './src/assets/toolkit/scripts/toolkit.js'
+		},
+		styles: {
+			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
+			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
+		},
+		images: 'src/assets/toolkit/images/**/*',
+		views: 'src/toolkit/views/*.html'
+	},
+	dest: 'dist'
+};
+
+// webpack
+var webpackConfig = require('./webpack.config')(config);
+var webpackCompiler = webpack(webpackConfig);
+
+// assemble
+gulp.task('assemble', function (done) {
+	assemble({
+		logErrors: config.dev
+	});
+	done();
+});
+
+// styles
+gulp.task('styles:fabricator', function () {
+	gulp.src(config.src.styles.fabricator)
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(prefix('last 1 version'))
+		.pipe(gulpif(!config.dev, csso()))
+		.pipe(rename('f.css'))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest(config.dest + '/assets/fabricator/styles'))
+		.pipe(gulpif(config.dev, reload({stream:true})));
+});
+
+// scripts
+gulp.task('scripts-fabricator', function (done) {
+	webpackCompiler.run(function (error, result) {
+		if (error) {
+			gutil.log(gutil.colors.red(error));
+		}
+		result = result.toJson();
+		if (result.errors.length) {
+			result.errors.forEach(function (error) {
+				gutil.log(gutil.colors.red(error));
+			});
+		}
+		done();
+	});
 });
 
 /**
  * Clean output directories
  */
-gulp.task('clean', del.bind(null, ['build', 'styleguide']));
+gulp.task('clean', del.bind(null, ['build', 'dist']));
 
 /**
  * Serve
@@ -200,21 +269,25 @@ gulp.task('clean', del.bind(null, ['build', 'styleguide']));
 gulp.task('serve', ['styles', 'scripts'], function () {
   browserSync({
     server: {
-      baseDir: ['styleguide'],
+      baseDir: ['dist'],
     },
     open: false
   });
+
+  gulp.task('assemble:watch', ['assemble'], reload);
+	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
+
   gulp.watch(['assets/sass/**/*.scss'], function() {
-    runSequence('styles', 'print', 'styleguide', reload);
+    runSequence('styles', 'print', 'dist', reload);
   });
   gulp.watch(['assets/js/*.js'], function() {
-    runSequence('scripts', 'styleguide', reload);
+    runSequence('scripts', 'dist', reload);
   });
   gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], function() {
-    runSequence('build-images', 'styleguide', reload);
+    runSequence('build-images', 'dist', reload);
   });
   gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
-    runSequence('build-fonts', 'styleguide', reload);
+    runSequence('build-fonts', 'dist', reload);
   });
   gulp.watch(['assets/pages/**/*.twig'], function() {
     runSequence('twig', reload);
@@ -226,7 +299,7 @@ gulp.task('serve', ['styles', 'scripts'], function () {
  */
 
 gulp.task('deploy', function () {
-  return gulp.src("styleguide/**/*")
+  return gulp.src("dist/**/*")
     .pipe($.ghPages());
 });
 
@@ -234,6 +307,5 @@ gulp.task('deploy', function () {
  * Default task
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styleguide', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'images', 'fonts', 'scripts', 'twig', 'assemble', cb);
 });
-

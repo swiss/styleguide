@@ -10,6 +10,8 @@
  ========================================================== */
 
 (function($, data) {
+  'use strict';
+
   var $searchFields = $('.form-search .search-field');
   if (data) {
     // Init the Bloodhound suggestion engine
@@ -55,6 +57,7 @@
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   $(window).load(function () {
     carouselInit(jQuery);
@@ -126,6 +129,7 @@ function disableControl(element) {
     element.find('.right').removeClass('disabled').attr('aria-disabled', 'false');
   }
 }
+
 /* ==========================================================
  * collapse.js
  * Add class when nav collapse is open
@@ -138,6 +142,7 @@ function disableControl(element) {
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   // Normal Collapse
   $('.collapse:not(tbody)').on('show.bs.collapse', function () {
@@ -183,6 +188,7 @@ function disableControl(element) {
   });
 
 }) (jQuery);
+
 /* ==========================================================
  * drilldown.js
  * Drilldown plugin scripts. For page-list-nav element
@@ -194,23 +200,25 @@ function disableControl(element) {
  * Licensed under MIT
  ========================================================== */
 
- (function($) {
+(function($) {
+  'use strict';
 
-  var options = {
-    event: 'click', // * View note below
-    selector: 'a',  // * View note below
-    speed: 100,
-    cssClass: {
-      container: 'drilldown-container',
-      root: 'nav-page-list',
-      sub: 'drilldown-sub',
-      back: 'drilldown-back'
-    }
-  };
+var options = {
+  event: 'click', // * View note below
+  selector: 'a',  // * View note below
+  speed: 100,
+  cssClass: {
+    container: 'drilldown-container',
+    root: 'nav-page-list',
+    sub: 'drilldown-sub',
+    back: 'drilldown-back'
+  }
+};
 
-  $('.drilldown').drilldown(options);
+$('.drilldown').drilldown(options);
 
- }) (jQuery);
+}) (jQuery);
+
 /* ==========================================================
  * global-nav.js
  * Global Navigation syripts
@@ -222,31 +230,33 @@ function disableControl(element) {
  * Licensed under MIT
  ========================================================== */
 
- (function($) {
+(function($) {
+    'use strict';
 
-  // Handle scroll to position nav as fixed
+// Handle scroll to position nav as fixed
 
-  var top = 36;
+var top = 36;
 
-  $(window).scroll(function (event) {
+$(window).scroll(function (event) {
 
-    var y = $(this).scrollTop();
+  var y = $(this).scrollTop();
 
-    if (y >= top) {
-      if (!$('.nav-mobile').hasClass('fixed')) {
-        $('.nav-mobile').addClass('fixed')
-          .after('<div class="nav-mobile-spacer" id="spacer" style="height:36px;"></div>');
-      }
+  if (y >= top) {
+    if (!$('.nav-mobile').hasClass('fixed')) {
+      $('.nav-mobile').addClass('fixed')
+        .after('<div class="nav-mobile-spacer" id="spacer" style="height:36px;"></div>');
     }
-    else {
-      if ($('.nav-mobile').hasClass('fixed')) {
-        $('.nav-mobile').removeClass('fixed');
-        $('#spacer').remove();
-      }
+  }
+  else {
+    if ($('.nav-mobile').hasClass('fixed')) {
+      $('.nav-mobile').removeClass('fixed');
+      $('#spacer').remove();
     }
+  }
 
-  });
- }) (jQuery);
+});
+}) (jQuery);
+
 /* ==========================================================
  * print.js
  * Add print preview windows
@@ -258,101 +268,102 @@ function disableControl(element) {
  * Licensed under MIT
  ========================================================== */
 
- (function($) {
+(function($) {
+  'use strict';
 
-  // Initialization
-  $.fn.printPreview = function() {
-    return this;
-  };
+// Initialization
+$.fn.printPreview = function() {
+  return this;
+};
 
-  $.printPreview = {
+$.printPreview = {
 
-    printPreview: function(element) {
-      var $body = $('body'),
-          $container = $('.container-main'),
-          footnoteLinks = "",
-          linksIndex = 0;
+  printPreview: function(element) {
+    var $body = $('body'),
+        $container = $('.container-main'),
+        footnoteLinks = "",
+        linksIndex = 0;
 
-      $body.find('.nav-mobile, .drilldown, .nav-main, .header-separator, .nav-service, .nav-lang, .form-search, .yamm--select, header > div:first-child, footer, .alert, .icon--print, .social-sharing, form, .nav-process, .carousel-indicators, .carousel-control, .breadcrumb, .pagination-container').remove();
+    $body.find('.nav-mobile, .drilldown, .nav-main, .header-separator, .nav-service, .nav-lang, .form-search, .yamm--select, header > div:first-child, footer, .alert, .icon--print, .social-sharing, form, .nav-process, .carousel-indicators, .carousel-control, .breadcrumb, .pagination-container').remove();
 
-      // if an element is passed, we want it to be the only thing to print out
-      if (element) {
-        element = $('[data-print=' + element + ']').clone(); // clone to fix issue with IE render
-        var header = $('header').clone(); // clone to fix issue with IE render
-            title = element.attr('data-title') ? '<h1>' + element.attr('data-title') + '</h1>' : '';
-        $container.addClass('print-element').html('').append(header, title, element);
-      }
-
-      $body.addClass('print-preview');
-
-      $container.prepend('<div class="row" id="print-settings">'+
-        '<div class="col-sm-12">'+
-          '<nav class="pagination-container clearfix">'+
-            '<span class="pull-left">'+
-              '<input type="checkbox" id="footnote-links">&nbsp;&nbsp;'+
-              '<label for="footnote-links">Links as footnotes</label>'+
-            '</span>'+
-            '<ul class="pull-right pagination">'+
-              '<li>'+
-                '<button id="print-button" title="print" class="btn"><span class="icon icon--print"></span></button>'+
-                '&nbsp;&nbsp;'+
-                '<button id="close-button" title="close" class="btn btn-secondary"><span class="icon icon--close"></span></button>'+
-              '</li>'+
-            '</ul>'+
-          '</nav>'+
-        '</div>'+
-      '</div>');
-
-      $('#print-button').click(function () {
-        $.printPreview.printProcess();
-      });
-
-      $('#close-button').click(function () {
-        $.printPreview.printClose();
-      });
-
-
-      $('a').not('.access-keys a').each(function () {
-        var target = $(this).attr('href');
-        target = String(target);
-
-        if (target != "undefined" && target.indexOf("http") === 0) {
-          linksIndex ++;
-          footnoteLinks += '<li>'+target+'</li>';
-          $('<sup class="link-ref">('+linksIndex+')</sup>').insertAfter(this);
-        }
-      });
-
-
-      $('#footnote-links').change(function(){
-        if (this.checked) {
-          $container.append('<div id="footnote-links-wrapper" class="row footnote-links-wrapper">'+
-            '<div class="col-sm-12">'+
-            '<h3>Page Links</h3><hr>'+
-            '<ol>'+
-              footnoteLinks+
-            '</ol>'+
-            '</div>'+
-          '</div>');
-          $body.addClass('print-footnotes');
-        } else {
-          $('#footnote-links-wrapper').remove();
-          $body.removeClass('print-footnotes');
-        }
-      });
-    },
-
-    printProcess: function() {
-      window.print();
-    },
-
-    printClose: function() {
-      window.location.reload();
+    // if an element is passed, we want it to be the only thing to print out
+    if (element) {
+      element = $('[data-print=' + element + ']').clone(); // clone to fix issue with IE render
+      var header = $('header').clone(); // clone to fix issue with IE render
+          title = element.attr('data-title') ? '<h1>' + element.attr('data-title') + '</h1>' : '';
+      $container.addClass('print-element').html('').append(header, title, element);
     }
 
-  };
+    $body.addClass('print-preview');
 
- }) (jQuery);
+    $container.prepend('<div class="row" id="print-settings">'+
+      '<div class="col-sm-12">'+
+        '<nav class="pagination-container clearfix">'+
+          '<span class="pull-left">'+
+            '<input type="checkbox" id="footnote-links">&nbsp;&nbsp;'+
+            '<label for="footnote-links">Links as footnotes</label>'+
+          '</span>'+
+          '<ul class="pull-right pagination">'+
+            '<li>'+
+              '<button id="print-button" title="print" class="btn"><span class="icon icon--print"></span></button>'+
+              '&nbsp;&nbsp;'+
+              '<button id="close-button" title="close" class="btn btn-secondary"><span class="icon icon--close"></span></button>'+
+            '</li>'+
+          '</ul>'+
+        '</nav>'+
+      '</div>'+
+    '</div>');
+
+    $('#print-button').click(function () {
+      $.printPreview.printProcess();
+    });
+
+    $('#close-button').click(function () {
+      $.printPreview.printClose();
+    });
+
+
+    $('a').not('.access-keys a').each(function () {
+      var target = $(this).attr('href');
+      target = String(target);
+
+      if (target != "undefined" && target.indexOf("http") === 0) {
+        linksIndex ++;
+        footnoteLinks += '<li>'+target+'</li>';
+        $('<sup class="link-ref">('+linksIndex+')</sup>').insertAfter(this);
+      }
+    });
+
+
+    $('#footnote-links').change(function(){
+      if (this.checked) {
+        $container.append('<div id="footnote-links-wrapper" class="row footnote-links-wrapper">'+
+          '<div class="col-sm-12">'+
+          '<h3>Page Links</h3><hr>'+
+          '<ol>'+
+            footnoteLinks+
+          '</ol>'+
+          '</div>'+
+        '</div>');
+        $body.addClass('print-footnotes');
+      } else {
+        $('#footnote-links-wrapper').remove();
+        $body.removeClass('print-footnotes');
+      }
+    });
+  },
+
+  printProcess: function() {
+    window.print();
+  },
+
+  printClose: function() {
+    window.location.reload();
+  }
+
+};
+
+}) (jQuery);
 
 /* ==========================================================
  * rich-menu.js
@@ -366,6 +377,7 @@ function disableControl(element) {
  =========================================================== */
 
 (function($) {
+  'use strict';
 
   // Keep jQuery object in variables
   var $yamm = $('.yamm'),
@@ -439,6 +451,7 @@ function disableControl(element) {
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   $(document).ready(function(){
     $('select').chosen({
@@ -447,6 +460,7 @@ function disableControl(element) {
   });
 
 }) (jQuery);
+
 /* ==========================================================
  * shame.js
  * DOM rewritting on mobile, issue #160
@@ -459,6 +473,7 @@ function disableControl(element) {
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   $(document).ready(function () {
     var id;
@@ -578,6 +593,7 @@ function disableControl(element) {
   });
 
 }) (jQuery);
+
 /* ==========================================================
  * social.js
  * Social Sharing Privacy
@@ -646,6 +662,7 @@ function disableControl(element) {
 
  // DEPRECATED, to remove in 3.0.0
  $(function() {
+   'use strict';
 
    var setme = {
      facebook : {
@@ -688,6 +705,7 @@ function disableControl(element) {
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   subNavInit(jQuery);
   $(window).resize(function () {
@@ -701,6 +719,8 @@ function disableControl(element) {
 }) (jQuery);
 
 function subNavInit($) {
+  'use strict';
+
   $drilldown = $('.drilldown[class*=col-]');
   if ($(window).width() <= 767 && !$drilldown.hasClass('collapse-enabled')) {
     $drilldown
@@ -719,6 +739,7 @@ function subNavInit($) {
       });
   }
 }
+
 /* ==========================================================
  * tablesorter.js
  * Control tablesort from markup
@@ -732,10 +753,12 @@ function subNavInit($) {
 
 
 (function($) {
+  'use strict';
 
   $('.table-sort').tablesorter();
 
 }) (jQuery);
+
  /* ==========================================================
   * tabs.js
   * JS for the tabs and tab-focus elements
@@ -748,6 +771,7 @@ function subNavInit($) {
   ========================================================== */
 
 (function($) {
+  'use strict';
 
   // Autoplay for tabs-focus elements
   var interval = 3000;
@@ -774,6 +798,7 @@ function subNavInit($) {
   }
 
 }) (jQuery);
+
 /* ==========================================================
  * treecrumb.js
  * Change icon class to change the caret direction
@@ -786,6 +811,7 @@ function subNavInit($) {
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   var $treecrumb = $('.treecrumb'),
       $dropdownToggle = $('.dropdown-toggle');
