@@ -7,15 +7,12 @@
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
- *
- * Last Modified by:   Toni Fisler
- * Last Modified time: 2014-04-30 14:33:12
  ========================================================== */
 
 'use strict';
 
 /**
- * Import plugins
+ * Load required plugins
  */
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
@@ -23,23 +20,26 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     runSequence = require('run-sequence'),
     argv = require('yargs').argv,
-    del = require('del');
+    del = require('del'),
+    assemble = require('fabricator-assemble');
 
-var assemble = require('fabricator-assemble');
-var browserSync = require('browser-sync');
-var csso = require('gulp-csso');
-var del = require('del');
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var gulpif = require('gulp-if');
-var imagemin = require('gulp-imagemin');
-var prefix = require('gulp-autoprefixer');
-var rename = require('gulp-rename');
-var reload = browserSync.reload;
-var runSequence = require('run-sequence');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var webpack = require('webpack');
+/**
+ * Configuration
+ */
+var config = {
+  dev: $.util.env.dev,
+  src: {
+    scripts: {
+      fabricator: './src/assets/fabricator/scripts/fabricator.js',
+    },
+    styles: {
+      fabricator: 'src/assets/fabricator/styles/fabricator.scss',
+    },
+    images: 'src/assets/toolkit/images/**/*',
+    views: 'src/toolkit/views/*.html'
+  },
+  dest: 'styleguide'
+};
 
 /**
  * Build vendors dependencies
@@ -52,26 +52,21 @@ gulp.task('vendors', function() {
     ])
     .pipe(gulp.dest('build/css/images'));
 
-  /**
-   * CSS VENDORS
-   */
+  // CSS VENDORS
   gulp.src([
-        'bower_components/yamm3/yamm/yamm.css',
-        'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css',
-        'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css',
-        'bower_components/blueimp-gallery/css/blueimp-gallery.min.css',
-        'bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
-        'node_modules/pikaday/css/pikaday.css'
-      ])
-      .pipe($.concat('vendors.css'))
-      .pipe($.minifyCss())
-      .pipe(gulp.dest('build/css'));
+      'bower_components/yamm3/yamm/yamm.css',
+      'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css',
+      'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css',
+      'bower_components/blueimp-gallery/css/blueimp-gallery.min.css',
+      'bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
+      'node_modules/pikaday/css/pikaday.css'
+    ])
+    .pipe($.concat('vendors.css'))
+    .pipe($.minifyCss())
+    .pipe(gulp.dest('build/css'));
 
-  /**
-   * JS VENDORS
-   * (with jQuery and Bootstrap dependencies first)
-   */
-
+  // JS VENDORS
+  // (with jQuery and Bootstrap dependencies first)
   gulp.src([
       'bower_components/jquery/jquery.js',
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
@@ -103,11 +98,8 @@ gulp.task('vendors', function() {
     .pipe($.uglify())
     .pipe(gulp.dest('build/js'));
 
-
-  /**
-   * FONTS SOURCES
-   * Important to add the bootstrap fonts to avoid issues with the fonts include path
-   */
+  // FONTS SOURCES
+  // Important to add the bootstrap fonts to avoid issues with the fonts include path
   gulp.src([
       'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
       'assets/fonts/*'
@@ -115,6 +107,9 @@ gulp.task('vendors', function() {
     .pipe(gulp.dest('build/fonts'));
 });
 
+/**
+ * Build polyfills
+ */
 gulp.task('polyfills', function() {
   return gulp.src([
       'bower_components/html5shiv/dist/html5shiv.min.js',
@@ -177,135 +172,120 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('images', function() {
-  return gulp.src(['src/assets/images/**'])
-          .pipe(gulp.dest('build/images'));
+
+/**
+ * Copy images to build
+ */
+gulp.task('build-images', function() {
+  return gulp.src(['src/assets/img/**'])
+    .pipe(gulp.dest('build/img'));
 });
 
 
-gulp.task('fonts', function() {
+/**
+ * Copy fonts to build
+ */
+gulp.task('build-fonts', function() {
   return gulp.src(['src/assets/fonts/**'])
-          .pipe(gulp.dest('build/fonts'));
+    .pipe(gulp.dest('build/fonts'));
 });
+
 
 /**
  * Compile TWIG example pages
  */
-gulp.task('twig', function () {
+gulp.task('twig', function() {
     return gulp.src('src/assets/pages/*.twig')
         .pipe($.twig())
-        .pipe(gulp.dest('dist/pages'));
+        .pipe(gulp.dest('styleguide/pages'));
 });
 
 
-// FABRICATOR
-// configuration
-var config = {
-	dev: gutil.env.dev,
-	src: {
-		scripts: {
-			fabricator: './src/assets/fabricator/scripts/fabricator.js',
-			toolkit: './src/assets/toolkit/scripts/toolkit.js'
-		},
-		styles: {
-			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
-		},
-		images: 'src/assets/toolkit/images/**/*',
-		views: 'src/toolkit/views/*.html'
-	},
-	dest: 'dist'
-};
-
-// webpack
-var webpackConfig = require('./webpack.config')(config);
-var webpackCompiler = webpack(webpackConfig);
-
-// assemble
-gulp.task('assemble', function (done) {
+/**
+ * FABRICATOR
+ */
+// Build the style guide
+gulp.task('assemble', ['copy'], function(done) {
 	assemble({
+    dest: config.dest,
 		logErrors: config.dev
 	});
-	done();
+  done();
 });
 
-// styles
-gulp.task('styles:fabricator', function () {
+// Copy all the framework required files to the styleguide folder (css, js, fonts, images)
+gulp.task('copy', function() {
+  return gulp.src(['build/**/*'])
+    .pipe(gulp.dest(config.dest));
+});
+
+// Build Fabricator style
+gulp.task('styles:fabricator', function() {
 	gulp.src(config.src.styles.fabricator)
-		.pipe(sourcemaps.init())
-		.pipe(sass().on('error', sass.logError))
-		.pipe(prefix('last 1 version'))
-		.pipe(gulpif(!config.dev, csso()))
-		.pipe(rename('f.css'))
-		.pipe(sourcemaps.write())
+		.pipe($.sourcemaps.init())
+		.pipe($.sass().on('error', $.sass.logError))
+		.pipe($.autoprefixer('last 1 version'))
+		.pipe($.if(!config.dev, $.csso()))
+		.pipe($.rename('f.css'))
+		.pipe($.sourcemaps.write())
 		.pipe(gulp.dest(config.dest + '/assets/fabricator/styles'))
-		.pipe(gulpif(config.dev, reload({stream:true})));
+		.pipe($.if(config.dev, reload({stream:true})));
 });
 
-// scripts
-gulp.task('scripts-fabricator', function (done) {
-	webpackCompiler.run(function (error, result) {
-		if (error) {
-			gutil.log(gutil.colors.red(error));
-		}
-		result = result.toJson();
-		if (result.errors.length) {
-			result.errors.forEach(function (error) {
-				gutil.log(gutil.colors.red(error));
-			});
-		}
-		done();
-	});
-});
 
 /**
  * Clean output directories
  */
-gulp.task('clean', del.bind(null, ['build', 'dist']));
+gulp.task('clean', function(cb) {
+  del([config.dest], cb);
+});
+
 
 /**
  * Serve
  */
-gulp.task('serve', ['styles', 'scripts'], function () {
+gulp.task('serve', ['default'], function () {
   browserSync({
     server: {
-      baseDir: ['dist'],
+      baseDir: config.dest,
     },
+    notify: false,
     open: false
   });
 
   gulp.task('assemble:watch', ['assemble'], reload);
-	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
+	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble']);
 
   gulp.watch(['assets/sass/**/*.scss'], function() {
-    runSequence('styles', 'print', 'dist', reload);
+    runSequence('styles', 'print', 'assemble', reload);
   });
   gulp.watch(['assets/js/*.js'], function() {
-    runSequence('scripts', 'dist', reload);
+    runSequence('scripts', 'assemble', reload);
   });
   gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], function() {
-    runSequence('build-images', 'dist', reload);
+    runSequence('build-images', 'assemble', reload);
   });
   gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
-    runSequence('build-fonts', 'dist', reload);
+    runSequence('build-fonts', 'assemble', reload);
   });
   gulp.watch(['assets/pages/**/*.twig'], function() {
     runSequence('twig', reload);
   });
 });
 
+
 /**
  * Deploy to GH pages
  */
-
 gulp.task('deploy', function () {
-  return gulp.src("dist/**/*")
+  return gulp.src("styleguide/**/*")
     .pipe($.ghPages());
 });
 
+
 /**
- * Default task
+ * Default task build the style guide
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'images', 'fonts', 'scripts', 'twig', 'assemble', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'assemble', cb);
 });
