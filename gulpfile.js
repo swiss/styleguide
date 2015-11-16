@@ -7,15 +7,12 @@
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
- *
- * Last Modified by:   Toni Fisler
- * Last Modified time: 2014-04-30 14:33:12
  ========================================================== */
 
 'use strict';
 
 /**
- * Import plugins
+ * Load required plugins
  */
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
@@ -23,7 +20,26 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     runSequence = require('run-sequence'),
     argv = require('yargs').argv,
-    del = require('del');
+    del = require('del'),
+    assemble = require('fabricator-assemble');
+
+/**
+ * Configuration
+ */
+var config = {
+  dev: $.util.env.dev,
+  src: {
+    scripts: {
+      fabricator: './src/assets/fabricator/scripts/fabricator.js',
+    },
+    styles: {
+      fabricator: 'src/assets/fabricator/styles/fabricator.scss',
+    },
+    images: 'src/assets/toolkit/images/**/*',
+    views: 'src/toolkit/views/*.html'
+  },
+  dest: 'styleguide'
+};
 
 /**
  * Build vendors dependencies
@@ -36,26 +52,21 @@ gulp.task('vendors', function() {
     ])
     .pipe(gulp.dest('build/css/images'));
 
-  /**
-   * CSS VENDORS
-   */
+  // CSS VENDORS
   gulp.src([
-        'bower_components/yamm3/yamm/yamm.css',
-        'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css',
-        'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css',
-        'bower_components/blueimp-gallery/css/blueimp-gallery.min.css',
-        'bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
-        'node_modules/pikaday/css/pikaday.css'
-      ])
-      .pipe($.concat('vendors.css'))
-      .pipe($.minifyCss())
-      .pipe(gulp.dest('build/css'));
+      'bower_components/yamm3/yamm/yamm.css',
+      'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css',
+      'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css',
+      'bower_components/blueimp-gallery/css/blueimp-gallery.min.css',
+      'bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
+      'node_modules/pikaday/css/pikaday.css'
+    ])
+    .pipe($.concat('vendors.css'))
+    .pipe($.minifyCss())
+    .pipe(gulp.dest('build/css'));
 
-  /**
-   * JS VENDORS
-   * (with jQuery and Bootstrap dependencies first)
-   */
-
+  // JS VENDORS
+  // (with jQuery and Bootstrap dependencies first)
   gulp.src([
       'bower_components/jquery/jquery.js',
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
@@ -87,11 +98,8 @@ gulp.task('vendors', function() {
     .pipe($.uglify())
     .pipe(gulp.dest('build/js'));
 
-
-  /**
-   * FONTS SOURCES
-   * Important to add the bootstrap fonts to avoid issues with the fonts include path
-   */
+  // FONTS SOURCES
+  // Important to add the bootstrap fonts to avoid issues with the fonts include path
   gulp.src([
       'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
       'assets/fonts/*'
@@ -99,6 +107,9 @@ gulp.task('vendors', function() {
     .pipe(gulp.dest('build/fonts'));
 });
 
+/**
+ * Build polyfills
+ */
 gulp.task('polyfills', function() {
   return gulp.src([
       'bower_components/html5shiv/dist/html5shiv.min.js',
@@ -118,7 +129,7 @@ gulp.task('styles', function() {
   if (!argv.dev) { console.log('[styles] Outputting minified styles.' ); }
   else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
-  return gulp.src('assets/sass/admin.scss')
+  return gulp.src('src/assets/sass/admin.scss')
     .pipe($.sass({
       errLogToConsole: true
     }))
@@ -132,7 +143,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('print', function() {
-  return gulp.src('assets/sass/print/print.scss')
+  return gulp.src('src/assets/sass/print/print.scss')
     .pipe($.sass({
       errLogToConsole: true
     }))
@@ -151,7 +162,7 @@ gulp.task('print', function() {
  * With error reporting on compiling (so that there's no crash)
  */
 gulp.task('scripts', function() {
-  return gulp.src('assets/js/*.js')
+  return gulp.src('src/assets/js/*.js')
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.concat('main.js'))
@@ -161,79 +172,120 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('build/js'));
 });
 
+
 /**
- * Build Hologram Styleguide
+ * Copy images to build
  */
-gulp.task('styleguide', function () {
-  return gulp.src('hologram_config.yml')
-    .pipe($.hologram({ bundler: true }));
-});
-
 gulp.task('build-images', function() {
-  return gulp.src(['assets/img/**'])
-          .pipe(gulp.dest('build/img'));
+  return gulp.src(['src/assets/img/**'])
+    .pipe(gulp.dest('build/img'));
 });
 
+
+/**
+ * Copy fonts to build
+ */
 gulp.task('build-fonts', function() {
-  return gulp.src(['assets/fonts/**'])
-          .pipe(gulp.dest('build/fonts'));
+  return gulp.src(['src/assets/fonts/**'])
+    .pipe(gulp.dest('build/fonts'));
 });
+
 
 /**
  * Compile TWIG example pages
  */
-
-gulp.task('twig', function () {
-    return gulp.src('assets/pages/*.twig')
+gulp.task('twig', function() {
+    return gulp.src('src/assets/pages/*.twig')
         .pipe($.twig())
         .pipe(gulp.dest('styleguide/pages'));
 });
 
+
+/**
+ * FABRICATOR
+ */
+// Build the style guide
+gulp.task('assemble', ['copy'], function(done) {
+	assemble({
+    dest: config.dest,
+		logErrors: config.dev
+	});
+  done();
+});
+
+// Copy all the framework required files to the styleguide folder (css, js, fonts, images)
+gulp.task('copy', function() {
+  return gulp.src(['build/**/*'])
+    .pipe(gulp.dest(config.dest));
+});
+
+// Build Fabricator style
+gulp.task('styles:fabricator', function() {
+	gulp.src(config.src.styles.fabricator)
+		.pipe($.sourcemaps.init())
+		.pipe($.sass().on('error', $.sass.logError))
+		.pipe($.autoprefixer('last 1 version'))
+		.pipe($.if(!config.dev, $.csso()))
+		.pipe($.rename('f.css'))
+		.pipe($.sourcemaps.write())
+		.pipe(gulp.dest(config.dest + '/assets/fabricator/styles'))
+		.pipe($.if(config.dev, reload({stream:true})));
+});
+
+
 /**
  * Clean output directories
  */
-gulp.task('clean', del.bind(null, ['build', 'styleguide']));
+gulp.task('clean', function(cb) {
+  del([config.dest], cb);
+});
+
 
 /**
  * Serve
  */
-gulp.task('serve', ['styles', 'scripts'], function () {
+gulp.task('serve', ['default'], function () {
   browserSync({
     server: {
-      baseDir: ['styleguide'],
+      baseDir: config.dest,
     },
+    notify: false,
     open: false
   });
+
+  gulp.task('assemble:watch', ['assemble'], reload);
+	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble']);
+
   gulp.watch(['assets/sass/**/*.scss'], function() {
-    runSequence('styles', 'print', 'styleguide', reload);
+    runSequence('styles', 'print', 'assemble', reload);
   });
   gulp.watch(['assets/js/*.js'], function() {
-    runSequence('scripts', 'styleguide', reload);
+    runSequence('scripts', 'assemble', reload);
   });
   gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], function() {
-    runSequence('build-images', 'styleguide', reload);
+    runSequence('build-images', 'assemble', reload);
   });
   gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
-    runSequence('build-fonts', 'styleguide', reload);
+    runSequence('build-fonts', 'assemble', reload);
   });
   gulp.watch(['assets/pages/**/*.twig'], function() {
     runSequence('twig', reload);
   });
 });
 
+
 /**
  * Deploy to GH pages
  */
-
 gulp.task('deploy', function () {
   return gulp.src("styleguide/**/*")
     .pipe($.ghPages());
 });
 
+
 /**
- * Default task
+ * Default task build the style guide
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styleguide', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'assemble', cb);
 });
-
