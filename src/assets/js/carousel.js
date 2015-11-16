@@ -39,6 +39,8 @@
 }) (jQuery);
 
 function carouselInit ($) {
+  'use strict';
+
   var $carousel = $('.carousel:not(.carousel-slideshow)');
 
   $('.carousel .item:first-child').addClass('first');
@@ -71,6 +73,8 @@ function carouselInit ($) {
 }
 
 function disableControl(element) {
+  'use strict';
+
   if (element.find('.first').hasClass('active')) {
     element.find('.left').addClass('disabled').attr('aria-disabled', 'true');
   } else {

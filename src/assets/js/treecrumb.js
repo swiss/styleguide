@@ -12,12 +12,9 @@
 (function($) {
   'use strict';
 
-  var $treecrumb = $('.treecrumb'),
-      $dropdownToggle = $('.dropdown-toggle');
-
-  $treecrumb.each(function () {
+  $('.treecrumb').each(function() {
     var $that = $(this);
-    $that.on('hide.bs.dropdown', function(e) {
+    $that.on('hide.bs.dropdown', function() {
       $that.find('.dropdown-toggle span').removeClass('icon--bottom');
       $that.find('.dropdown-toggle span').addClass('icon--right');
     });

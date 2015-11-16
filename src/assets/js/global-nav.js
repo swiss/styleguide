@@ -16,7 +16,7 @@
 
 var top = 36;
 
-$(window).scroll(function (event) {
+$(window).scroll(function () {
 
   var y = $(this).scrollTop();
 

@@ -16,5 +16,9 @@
   "trailing": true,
   "undef": true,
   "unused": true,
-  "globals": {}
+  "globals": {
+    "Bloodhound": true,
+    "jQuery": true,
+    "searchData": true
+  }
 }

@@ -18,7 +18,7 @@
     subNavInit(jQuery);
   });
 
-  $('a[href=#collapseSubNav]').on('click', function(e) {
+  $('a[href=#collapseSubNav]').on('click', function() {
     $(this).attr('aria-expanded', ($(this).attr('aria-expanded') === 'true' ? 'false' : 'true') );
   });
 
@@ -27,7 +27,8 @@
 function subNavInit($) {
   'use strict';
 
-  $drilldown = $('.drilldown[class*=col-]');
+  var $drilldown = $('.drilldown[class*=col-]');
+
   if ($(window).width() <= 767 && !$drilldown.hasClass('collapse-enabled')) {
     $drilldown
       .addClass('collapse-enabled')

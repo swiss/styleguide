@@ -15,10 +15,8 @@
   // Keep jQuery object in variables
   var $yamm = $('.yamm'),
       $yammClose = $('.yamm-close, .yamm-close-bottom'),
-      $body = $('body'),
       $dropdown = $('.yamm .dropdown'),
-      $dropdownToggle = $('.yamm .dropdown-toggle'),
-      $dropdownMenu = $('.dropdown-menu');
+      $dropdownToggle = $('.yamm .dropdown-toggle');
 
   // Toggle dropdown and fix z-index errors
   $yamm.each(function () {

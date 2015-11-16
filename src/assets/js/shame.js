@@ -110,7 +110,6 @@
           $that.addClass("nav-tabs").removeClass('collapsify');
           $that.next('.tab-content').show();
           $that.find('a').each(function (){
-            var $target = $(this).attr('href');
             linkIndex -= 1;
             $(this).wrap('<li></li>');
             $(this).parent().next('.collapse').remove();
