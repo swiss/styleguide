@@ -205,7 +205,7 @@ gulp.task('twig', function() {
  * FABRICATOR
  */
 // Build the style guide
-gulp.task('assemble', ['copy'], function(done) {
+gulp.task('assemble', ['copy', 'styles:fabricator'], function(done) {
 	assemble({
     dest: config.dest,
 		logErrors: config.dev
@@ -226,9 +226,8 @@ gulp.task('styles:fabricator', function() {
 		.pipe($.sass().on('error', $.sass.logError))
 		.pipe($.autoprefixer('last 1 version'))
 		.pipe($.if(!config.dev, $.csso()))
-		.pipe($.rename('f.css'))
 		.pipe($.sourcemaps.write())
-		.pipe(gulp.dest(config.dest + '/assets/fabricator/styles'))
+		.pipe(gulp.dest(config.dest + '/css'))
 		.pipe($.if(config.dev, reload({stream:true})));
 });
 
@@ -254,7 +253,7 @@ gulp.task('serve', ['default'], function () {
   });
 
   gulp.task('assemble:watch', ['assemble'], reload);
-	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble']);
+	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
 
   gulp.watch(['assets/sass/**/*.scss'], function() {
     runSequence('styles', 'print', 'assemble', reload);
