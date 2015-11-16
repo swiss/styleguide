@@ -205,7 +205,7 @@ gulp.task('twig', function() {
  * FABRICATOR
  */
 // Build the style guide
-gulp.task('assemble', ['copy', 'styles:fabricator'], function(done) {
+gulp.task('assemble', function(done) {
 	assemble({
     dest: config.dest,
 		logErrors: config.dev
@@ -255,19 +255,19 @@ gulp.task('serve', ['default'], function () {
   gulp.task('assemble:watch', ['assemble'], reload);
 	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
 
-  gulp.watch(['assets/sass/**/*.scss'], function() {
-    runSequence('styles', 'print', 'assemble', reload);
+  gulp.watch(['src/assets/sass/**/*.scss'], function() {
+    runSequence('styles', 'print', 'assemble', 'copy', reload);
   });
-  gulp.watch(['assets/js/*.js'], function() {
-    runSequence('scripts', 'assemble', reload);
+  gulp.watch(['src/assets/js/*.js'], function() {
+    runSequence('scripts', 'assemble', 'copy', reload);
   });
-  gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], function() {
-    runSequence('build-images', 'assemble', reload);
+  gulp.watch(['src/assets/img/**/*.{jpg,png,gif,svg}'], function() {
+    runSequence('build-images', 'assemble', 'copy', reload);
   });
-  gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
-    runSequence('build-fonts', 'assemble', reload);
+  gulp.watch(['src/assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
+    runSequence('build-fonts', 'assemble', 'copy', reload);
   });
-  gulp.watch(['assets/pages/**/*.twig'], function() {
+  gulp.watch(['src/assets/pages/**/*.twig'], function() {
     runSequence('twig', reload);
   });
 });
@@ -286,5 +286,5 @@ gulp.task('deploy', function () {
  * Default task build the style guide
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'assemble', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'copy', 'styles:fabricator', 'assemble', cb);
 });
