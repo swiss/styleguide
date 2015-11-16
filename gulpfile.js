@@ -21,7 +21,9 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     argv = require('yargs').argv,
     del = require('del'),
-    assemble = require('fabricator-assemble');
+    assemble = require('fabricator-assemble'),
+    yaml = require('js-yaml'),
+    fs = require('fs');
 
 /**
  * Configuration
@@ -206,60 +208,45 @@ gulp.task('twig', function() {
  * FABRICATOR
  */
 // Build the style guide
-gulp.task('assemble-everything', ['assemble', 'translate', 'copy'])
+gulp.task('assemble-everything', ['assemble', 'copy'])
 
 gulp.task('assemble', function(done) {
-	assemble({
-    dest: config.styleguide.dest,
-		logErrors: config.dev
-	});
-  done();
-});
-
-// Translate styleguide
-gulp.task('translate', function() {
+  // Build style guide for every language
   config.locales.forEach(function(locale){
-    var options = {
-          localeDirectory: 'src/locales/',
-          lang: locale,
-          transform: {
-            // Override the translate function to continue when a translation is missing
-            translate: function(content, dictionary){
-              if (!content) {
-                return new Error('No content to transform (translate).');
-              }
+    var dest = config.styleguide.dest + '/' + locale,
+        translations = yaml.safeLoad(fs.readFileSync('src/locales/' + locale + '.yml', 'utf-8')),
+        data = {
+          locale: locale
+        };
 
-              var corr = content.trim().split('.').reduce(function(dict, key){
-                if (!dict) {
-                  return null;
-                }
-                return dict[key];
-              }, dictionary);
-
-              if (!corr) {
-                return '[Missing translation: ' + content + ']';
-              }
-              return corr;
+  	assemble({
+      dest: dest,
+  		logErrors: config.dev,
+      helpers: {
+        // Register the translation helper
+        t: function(ref) {
+          return ref.trim().split('.').reduce(function(dict, key){
+            if (!dict) {
+              return null;
             }
-          }
+            return dict[key];
+          }, translations) || '[Missing translation: ' + ref + ']';
         },
-        src = config.styleguide.dest + '/*.html',
-        dest = config.styleguide.dest
-
-    // English is built at root, other languages into subfolders
-    if (locale !== 'en') {
-      dest += '/' + locale
-    }
-
-    gulp.src(src)
-      .pipe(
-        $.translator(options)
-          .on('error', function(error){
-            console.warn('[Translator]['+locale.toUpperCase()+'] ' + error.message);
-          })
-      )
-      .pipe(gulp.dest(dest));
+        // Return true if the language given match with the current locale
+        isCurrentLocale: function(lang, options) {
+          if (lang === locale) {
+            return options.fn(this);
+          }
+          return options.inverse(this);
+        },
+        // Return the corresponding data value
+        data: function(value) {
+          return data[value] || '';
+        }
+      }
+  	});
   });
+  done();
 });
 
 // Copy all the framework required files to the styleguide folder (css, js, fonts, images)
@@ -301,7 +288,7 @@ gulp.task('serve', ['assemble-everything'], function () {
     open: false
   });
 
-  gulp.task('assemble:watch', ['assemble', 'translate', 'copy'], reload);
+  gulp.task('assemble:watch', ['assemble', 'copy'], reload);
 	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
 
   gulp.watch(['src/assets/sass/**/*.scss'], function() {

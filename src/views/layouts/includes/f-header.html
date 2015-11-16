@@ -2,20 +2,22 @@
   <div class="clearfix">
     <section class="nav-services clearfix">
       <h2>{{ title }}</h2>
-      <h2 class="sr-only">Language selection</h2>
+      <h2 class="sr-only">{{t 'styleguide.language' }}</h2>
       <nav class="nav-lang">
         <ul>
-          <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
-          <li><a href="#">FR</a></li>
-          <li><a href="#">IT</a></li>
-          <li><a class="disabled" href="#">RM <span class="sr-only">disabled</span></a></li>
-          <li><a href="#">EN</a></li>
+          {{#each i18n.locales}}
+            <li>
+              <a href="{{baseurl}}/{{@key}}/"{{#isCurrentLocale @key}} class="active"{{/isCurrentLocale}}>
+                {{@key}}{{#isCurrentLocale @key}}<span class="sr-only">selected</span>{{/isCurrentLocale}}
+              </a>
+            </li>
+          {{/each}}
         </ul>
       </nav>
       <nav class="nav-service">
         <ul class="download-link">
           <li>
-            <a class="btn btn-secondary" href="https://github.com/swiss/styleguide/releases/latest">\{{ styleguide.version | translate }} 0.0.0</a>
+            <a class="btn btn-secondary" href="https://github.com/swiss/styleguide/releases/latest">{{t 'styleguide.version' }} 0.0.0</a>
           </li>
         </ul>
       </nav>
@@ -23,7 +25,7 @@
   </div>
 
   <a href="{{baseurl}}" class="brand hidden-xs">
-    <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="\{{ styleguide.logo | translate }}" />
-    <h1>\{{ styleguide.title | translate }}</h1>
+    <img src="{{baseurl}}/img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="{{t 'styleguide.logo' }}" />
+    <h1>{{t 'styleguide.title' }}</h1>
   </a>
 </header>
