@@ -1,0 +1,29 @@
+<header>
+  <div class="clearfix">
+    <section class="nav-services clearfix">
+      <h2>{{ title }}</h2>
+      <h2 class="sr-only">{{t 'styleguide.language' }}</h2>
+      <nav class="nav-lang">
+        <ul>
+          {{#each i18n.locales}}
+            <li>
+              <a href="{{baseurl}}/{{@key}}/{{../permalink}}"{{#isCurrentLocale @key}} class="active"{{/isCurrentLocale}}>{{toUpperCase @key}}{{#isCurrentLocale @key}}<span class="sr-only">selected</span>{{/isCurrentLocale}}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </nav>
+      <nav class="nav-service">
+        <ul class="download-link">
+          <li>
+            <a href="https://github.com/swiss/styleguide/releases/latest">{{t 'styleguide.version' }} 0.0.0</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </div>
+
+  <a href="{{baseurl}}" class="brand hidden-xs">
+    <img src="{{baseurl}}/img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="{{t 'styleguide.logo' }}" />
+    <h1>{{t 'styleguide.title' }}</h1>
+  </a>
+</header>
