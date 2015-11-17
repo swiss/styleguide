@@ -225,6 +225,8 @@ gulp.task('assemble', function(done) {
       helpers: {
         // Register the translation helper
         t: function(ref) {
+          if (!ref) return;
+
           return ref.trim().split('.').reduce(function(dict, key){
             if (!dict) {
               return null;
@@ -242,6 +244,9 @@ gulp.task('assemble', function(done) {
         // Return the corresponding data value
         data: function(value) {
           return data[value] || '';
+        },
+        toUpperCase: function(value) {
+          return value.toUpperCase();
         }
       }
   	});

@@ -7,9 +7,7 @@
         <ul>
           {{#each i18n.locales}}
             <li>
-              <a href="{{baseurl}}/{{@key}}/"{{#isCurrentLocale @key}} class="active"{{/isCurrentLocale}}>
-                {{@key}}{{#isCurrentLocale @key}}<span class="sr-only">selected</span>{{/isCurrentLocale}}
-              </a>
+              <a href="{{baseurl}}/{{@key}}/{{../permalink}}"{{#isCurrentLocale @key}} class="active"{{/isCurrentLocale}}>{{toUpperCase @key}}{{#isCurrentLocale @key}}<span class="sr-only">selected</span>{{/isCurrentLocale}}</a>
             </li>
           {{/each}}
         </ul>
@@ -17,7 +15,7 @@
       <nav class="nav-service">
         <ul class="download-link">
           <li>
-            <a class="btn btn-secondary" href="https://github.com/swiss/styleguide/releases/latest">{{t 'styleguide.version' }} 0.0.0</a>
+            <a href="https://github.com/swiss/styleguide/releases/latest">{{t 'styleguide.version' }} 0.0.0</a>
           </li>
         </ul>
       </nav>
