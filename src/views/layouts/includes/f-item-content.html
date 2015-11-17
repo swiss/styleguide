@@ -11,11 +11,11 @@
       <strong>Example</strong>
       {{{material @key @root}}}
 
-      <button type="button" class="show-code" data-toggle="collapse" data-target="#{{data.codeblock}}" aria-expanded="true">&lt;/&gt;</button>
+      <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{@key}}" aria-expanded="true">&lt;/&gt;</button>
     </div>
 
     <div class="f-item-code f-item-hidden">
-      <div class="codeBlock collapse" id="{{data.codeblock}}">
+      <div class="codeBlock collapse" id="code-{{@key}}">
         <strong>Code</strong>
         <pre><code class="language-markup">{{material @key @root}}</code></pre>
       </div>
