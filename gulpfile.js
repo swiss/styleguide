@@ -167,7 +167,7 @@ gulp.task('print', function() {
  * With error reporting on compiling (so that there's no crash)
  */
 gulp.task('scripts', function() {
-  return gulp.src('src/assets/js/*.js')
+  return gulp.src(['src/assets/js/*.js', 'src/assets/fabricator/scripts/*.js'])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.concat('main.js'))
@@ -307,7 +307,7 @@ gulp.task('serve', ['assemble-everything'], function () {
   });
 
   gulp.task('assemble:watch', ['assemble', 'copy'], reload);
-	gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
+  gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
 
   gulp.watch(['src/assets/sass/**/*.scss'], function() {
     runSequence('styles', 'print', 'assemble:watch');
