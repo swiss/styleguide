@@ -6,18 +6,28 @@
 {{/if}}
 
 <div class="f-item-preview">
-  <strong>Example</strong>
-  {{{material @key @root}}}
-</div>
+  <div class="codeExample">
+    <div class="exampleOutput">
+      <strong>Example</strong>
+      {{{material @key @root}}}
 
-<div class="f-item-code f-item-hidden">
-  <strong>Code</strong>
-	<pre><code class="language-markup">{{material @key @root}}</code></pre>
+      <button type="button" class="show-code" data-toggle="collapse" data-target="#{{data.codeblock}}" aria-expanded="true">&lt;/&gt;</button>
+    </div>
+
+    <div class="f-item-code f-item-hidden">
+      <div class="codeBlock collapse" id="{{data.codeblock}}">
+        <strong>Code</strong>
+        <pre><code class="language-markup">{{material @key @root}}</code></pre>
+      </div>
+    </div>
+  </div>
 </div>
 
 {{#if data.javascript}}
   <div class="f-item-javascript">
-    <strong>Javascript</strong>
-    <pre><code class="language-javascript">{{data.javascript}}</code></pre>
+    <div class="codeBlock jsExample">
+      <strong>Javascript</strong>
+      <pre><code class="language-javascript">{{data.javascript}}</code></pre>
+    </div>
   </div>
 {{/if}}
