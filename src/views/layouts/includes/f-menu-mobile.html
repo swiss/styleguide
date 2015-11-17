@@ -1,0 +1,11 @@
+<li class="list-sub"><a href="{{@key}}.html">{{name}}</a>
+  <!-- sub-list element -->
+  <nav class="drilldown-sub">
+    <a href="#" class="icon icon--before icon--less drilldown-back">Back</a>
+    {{#each items}}
+      <ul>
+        <li><a href="{{@../key}}.html#{{@key}}">{{name}}</a></li>
+      </ul>
+    {{/each}}
+  </nav>
+</li>

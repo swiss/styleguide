@@ -1,0 +1,25 @@
+<li class="dropdown yamm-fw">
+  <a href="{{@key}}.html" class="dropdown-toggle" data-toggle="dropdown">{{name}} <span class="sr-only">current page</span></a>
+  <ul class="dropdown-menu" role="menu">
+    <div class="yamm-content container-fluid">
+      <div class="row">
+        <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Close</a></div>
+      </div>
+      <div class="row">
+        {{#each items}}
+          <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+          <li class="col-sm-3">
+            <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+            <div class="yamm-content container-fluid">
+              <h4><a href="{{@../key}}.html#{{@key}}">{{name}}</a></h4>
+              {{#each items}}
+                <a href="{{@../key}}.html#{{@key}}">{{name}}</a>
+              {{/each}}
+            </div>
+          </li><!-- Dropdown `li` end -->
+        {{/each}}
+      </div>
+      <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+    </div>
+  </ul><!-- Dropdown `ul` end -->
+</li>
