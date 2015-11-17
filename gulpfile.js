@@ -23,7 +23,9 @@ var gulp = require('gulp'),
     del = require('del'),
     assemble = require('fabricator-assemble'),
     yaml = require('js-yaml'),
-    fs = require('fs');
+    fs = require('fs'),
+    globby = require('globby'),
+    path = require('path');
 
 /**
  * Configuration
@@ -214,11 +216,22 @@ gulp.task('assemble', function(done) {
   // Build style guide for every language
   config.locales.forEach(function(locale){
     var dest = config.styleguide.dest + '/' + locale,
-        translations = yaml.safeLoad(fs.readFileSync('src/locales/' + locale + '.yml', 'utf-8')),
         data = {
           locale: locale
-        };
+        },
+        dictionary = {};
 
+    // Get all translation files for the current locale
+    var translations = globby.sync('src/locales/' + locale + '/*.yml');
+
+    // Build a dictionnary using the filename as the main key
+    translations.forEach(function(file) {
+      var id = path.basename(file, path.extname(file));
+      var content = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
+      dictionary[id] = content;
+    });
+
+    // Assemble the style guide
   	assemble({
       dest: dest,
   		logErrors: config.dev,
@@ -232,7 +245,7 @@ gulp.task('assemble', function(done) {
               return null;
             }
             return dict[key];
-          }, translations) || '[Missing translation: ' + ref + ']';
+          }, dictionary) || '[Missing translation: ' + ref + ']';
         },
         // Return true if the language given match with the current locale
         isCurrentLocale: function(lang, options) {
