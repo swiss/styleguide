@@ -1,11 +1,23 @@
-{{#if notes}}
-<div class="f-item-notes" data-f-toggle="notes">
-	{{{notes}}}
-</div>
+{{#if data.help}}
+  <div class="f-item-notes">
+    <strong>Help</strong>
+    {{t data.help}}
+  </div>
 {{/if}}
+
 <div class="f-item-preview">
-	{{{material @key @root}}}
+  <strong>Example</strong>
+  {{{material @key @root}}}
 </div>
-<div class="f-item-code f-item-hidden" data-f-toggle="code">
+
+<div class="f-item-code f-item-hidden">
+  <strong>Code</strong>
 	<pre><code class="language-markup">{{material @key @root}}</code></pre>
 </div>
+
+{{#if data.javascript}}
+  <div class="f-item-javascript">
+    <strong>Javascript</strong>
+    <pre><code class="language-javascript">{{data.javascript}}</code></pre>
+  </div>
+{{/if}}
