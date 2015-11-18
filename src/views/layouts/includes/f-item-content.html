@@ -1,3 +1,7 @@
+{{#if data.label}}
+  <span class="label label-admin">{{toUpperCase data.label}}</span>
+{{/if}}
+
 {{#if data.help}}
   <div class="f-item-notes">
     <strong>Help</strong>
@@ -24,8 +28,11 @@
 {{#if data.javascript}}
   <div class="f-item-javascript">
     <div class="codeBlock jsExample">
-      <strong>Javascript</strong>
-      <pre><code class="language-javascript">{{data.javascript}}</code></pre>
+      <pre><code class="language-javascript">{{renderFile data.javascript}}</code></pre>
     </div>
   </div>
+{{/if}}
+
+{{#if data.complement}}
+  {{{renderFile data.complement}}}
 {{/if}}

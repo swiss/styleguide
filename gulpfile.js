@@ -260,6 +260,9 @@ gulp.task('assemble', function(done) {
         },
         toUpperCase: function(value) {
           return value.toUpperCase();
+        },
+        renderFile: function(file) {
+          return fs.readFileSync('src/materials-data/' + file, 'utf-8');
         }
       }
   	});
@@ -307,7 +310,7 @@ gulp.task('serve', ['assemble-everything'], function () {
   });
 
   gulp.task('assemble:watch', ['assemble', 'copy'], reload);
-  gulp.watch('src/**/*.{html,md,json,yml}', ['assemble:watch']);
+  gulp.watch(['src/**/*.{html,md,json,yml}', 'src/**/**/*.{html,js}'], ['assemble:watch']);
 
   gulp.watch(['src/assets/sass/**/*.scss'], function() {
     runSequence('styles', 'print', 'assemble:watch');
