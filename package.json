@@ -7,7 +7,7 @@
     "url": "git@github.com:antistatique/Swiss-Admin-web-guidelines.git"
   },
   "scripts": {
-    "prestart": "npm install",
+    "prestart": "npm install && bower install",
     "start": "gulp && gulp serve"
   },
   "author": "antistatique",
