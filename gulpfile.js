@@ -200,9 +200,9 @@ gulp.task('build-fonts', function() {
  * Compile TWIG example pages
  */
 gulp.task('twig', function() {
-    return gulp.src('src/assets/pages/*.twig')
-        .pipe($.twig())
-        .pipe(gulp.dest(config.styleguide.dest + '/pages'));
+  return gulp.src(['src/example-pages/*.twig', '!src/example-pages/layout.twig'])
+    .pipe($.twig())
+    .pipe(gulp.dest('src/views/pages'));
 });
 
 
@@ -210,7 +210,9 @@ gulp.task('twig', function() {
  * FABRICATOR
  */
 // Build the style guide
-gulp.task('assemble-everything', ['assemble', 'copy'])
+gulp.task('assemble-everything', function(cb) {
+  runSequence('clean', 'assemble', 'copy', cb);
+});
 
 gulp.task('assemble', function(done) {
   // Build style guide for every language
@@ -237,15 +239,22 @@ gulp.task('assemble', function(done) {
   		logErrors: config.dev,
       helpers: {
         // Register the translation helper
-        t: function(ref) {
-          if (!ref) return;
+        t: function() {
+          // Build an array out of fn arguments
+          var args = Array.prototype.slice.call(arguments);
+          // Remove the last entry which is an object given by Handlebars
+          args.pop();
 
-          return ref.trim().split('.').reduce(function(dict, key){
+          // Build a full translation key with all arguments
+          args = args.join('.');
+
+          // Look for the translation in the dictionnary
+          return args.trim().split('.').reduce(function(dict, key){
             if (!dict) {
               return null;
             }
             return dict[key];
-          }, dictionary) || '[Missing translation: ' + ref + ']';
+          }, dictionary) || '[Missing translation: ' + args + ']';
         },
         // Return true if the language given match with the current locale
         isCurrentLocale: function(lang, options) {
@@ -293,7 +302,7 @@ gulp.task('styles:fabricator', function() {
  * Clean output directories
  */
 gulp.task('clean', function(cb) {
-  del([config.styleguide.dest, config.framework.dest], cb);
+  del([config.styleguide.dest], cb);
 });
 
 
@@ -309,7 +318,7 @@ gulp.task('serve', ['assemble-everything'], function () {
     open: false
   });
 
-  gulp.task('assemble:watch', ['assemble', 'copy'], reload);
+  gulp.task('assemble:watch', ['assemble-everything'], reload);
   gulp.watch(['src/**/*.{html,md,json,yml}', 'src/**/**/*.{html,js}'], ['assemble:watch']);
 
   gulp.watch(['src/assets/sass/**/*.scss'], function() {
@@ -324,7 +333,7 @@ gulp.task('serve', ['assemble-everything'], function () {
   gulp.watch(['src/assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
     runSequence('build-fonts', 'assemble:watch');
   });
-  gulp.watch(['src/assets/pages/**/*.twig'], function() {
+  gulp.watch(['src/views/pages/twig/*.twig'], function() {
     runSequence('twig', reload);
   });
 });
@@ -334,8 +343,21 @@ gulp.task('serve', ['assemble-everything'], function () {
  * Deploy to GH pages
  */
 gulp.task('deploy', function () {
-  return gulp.src(config.styleguide.dest + '/**/*')
-    .pipe($.ghPages());
+  if (argv.github) {
+    return gulp.src(config.styleguide.dest + '/**/*')
+     .pipe($.ghPages());
+  }
+  else {
+    return gulp.src(config.styleguide.dest + '/**/*')
+      .pipe($.rsync({
+        root: 'styleguide',
+        hostname: 'swg',
+        destination: '/var/www/swg',
+        progress: true,
+        recursive: true,
+        clean: true
+      }));
+  }
 });
 
 
@@ -343,5 +365,5 @@ gulp.task('deploy', function () {
  * Default task build the style guide
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styles:fabricator', 'assemble-everything', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styles:fabricator', 'assemble', 'copy', cb);
 });
