@@ -6,6 +6,10 @@
     "type": "git",
     "url": "git@github.com:antistatique/Swiss-Admin-web-guidelines.git"
   },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "gulp && gulp serve"
+  },
   "author": "antistatique",
   "devDependencies": {
     "babel-core": "^5.8.23",
@@ -14,6 +18,7 @@
     "browser-sync": "^1.3.6",
     "del": "~0.1.1",
     "fabricator-assemble": "^1.1.9",
+    "globby": "^4.0.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "0.0.9",
     "gulp-concat": "^2.3.4",
