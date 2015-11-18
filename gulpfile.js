@@ -340,8 +340,21 @@ gulp.task('serve', ['assemble-everything'], function () {
  * Deploy to GH pages
  */
 gulp.task('deploy', function () {
-  return gulp.src(config.styleguide.dest + '/**/*')
-    .pipe($.ghPages());
+  if (argv.github) {
+    return gulp.src(config.styleguide.dest + '/**/*')
+     .pipe($.ghPages());
+  }
+  else {
+    return gulp.src(config.styleguide.dest + '/**/*')
+      .pipe($.rsync({
+        root: 'styleguide',
+        hostname: 'swg',
+        destination: '/var/www/swg',
+        progress: true,
+        recursive: true,
+        clean: true
+      }));
+  }
 });
 
 
