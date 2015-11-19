@@ -6,30 +6,24 @@
   {{{t data.help}}}
 {{/if}}
 
-<div class="f-item-preview">
-  <div class="codeExample">
-    <div class="exampleOutput">
-      {{{material @key @root}}}
+<div class="code-example">
+  <div class="example-output">
+    {{{material @key @root}}}
 
-      <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{@key}}" aria-expanded="true">&lt;/&gt;</button>
-    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '.' '-' @key}}" aria-expanded="true">&lt;/&gt;</button>
+  </div>
 
-    <div class="f-item-code f-item-hidden">
-      <div class="codeBlock collapse" id="code-{{@key}}">
-        <pre><code class="language-markup">{{material @key @root}}</code></pre>
-      </div>
-    </div>
+  <div class="code-block collapse" id="code-{{replace '.' '-' @key}}">
+    <pre><code class="language-markup">{{material @key @root}}</code></pre>
   </div>
 </div>
 
 {{#if data.javascript}}
-  <div class="f-item-javascript">
-    <div class="codeBlock jsExample">
-      <pre><code class="language-javascript">{{renderFile data.javascript}}</code></pre>
-    </div>
+  <div class="code-block js-example">
+    <pre><code class="language-javascript">{{renderFile 'javascripts/' data.javascript}}</code></pre>
   </div>
 {{/if}}
 
 {{#if data.complement}}
-  {{{renderFile data.complement}}}
+  {{{renderFile 'complements/' data.complement}}}
 {{/if}}

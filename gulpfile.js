@@ -273,8 +273,16 @@ gulp.task('assemble', function(done) {
         toUpperCase: function(value) {
           return value.toUpperCase();
         },
-        renderFile: function(file) {
-          return fs.readFileSync('src/materials-data/' + file, 'utf-8');
+        renderFile: function(path, file) {
+          var fileName = 'src/materials-data/' + path + file,
+              exists = fs.existsSync(fileName);
+
+          if (!exists) return '[File "' + fileName + '" doesn’t exist.]';
+
+          return fs.readFileSync(fileName, 'utf-8');
+        },
+        replace: function(substr, newSubstr, str) {
+          return str.replace(substr, newSubstr);
         }
       }
   	});
