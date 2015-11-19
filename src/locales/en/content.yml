@@ -3,7 +3,7 @@ widgets:
   title: Widgets
   alerts:
     title: Alerts
-    notes: |
+    help: |
       Alerts are shown when you need to get the attention of the user with something important.
 
       Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`

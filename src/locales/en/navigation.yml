@@ -3,7 +3,7 @@ hierarchical-navigation:
   title: Hierarchical Navigation
   global-navigation:
     title: Global Navigation
-    notes: |
+    help: |
       <span class="label label-admin">FIX</span>
 
       The global navigation shows the main points of access to a website as tabs. It is separated from the header above by a red line. The terminology used for the tabs should be chosen carefully, as this is what gives the user the first impression of the purpose of the website.

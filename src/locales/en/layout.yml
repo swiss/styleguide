@@ -3,4 +3,4 @@ form-elements:
   title: Form elements
   fieldsets:
     title: Fieldsets
-    notes: Fieldsets are used to separate content in a form.
+    help: Fieldsets are used to separate content in a form.
