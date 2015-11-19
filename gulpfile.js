@@ -25,7 +25,8 @@ var gulp = require('gulp'),
     yaml = require('js-yaml'),
     fs = require('fs'),
     globby = require('globby'),
-    path = require('path');
+    path = require('path'),
+    markdown = require('markdown-it')();
 
 /**
  * Configuration
@@ -246,18 +247,25 @@ gulp.task('assemble', function(done) {
           // Build an array out of fn arguments
           var args = Array.prototype.slice.call(arguments);
           // Remove the last entry which is an object given by Handlebars
-          args.pop();
+          var obj = args.pop();
 
           // Build a full translation key with all arguments
           args = args.join('.');
 
           // Look for the translation in the dictionnary
-          return args.trim().split('.').reduce(function(dict, key){
+          var value = args.trim().split('.').reduce(function(dict, key){
             if (!dict) {
               return null;
             }
             return dict[key];
-          }, dictionary) || '[Missing translation: ' + args + ']';
+          }, dictionary);
+
+          // Parse content for Markdown if required
+          if (value && obj.hash && obj.hash.markdown) {
+            var value = markdown.render(value);
+          }
+
+          return value || '[Missing translation: ' + args + ']';
         },
         // Return true if the language given match with the current locale
         isCurrentLocale: function(lang, options) {

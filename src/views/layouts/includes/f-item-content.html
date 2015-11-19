@@ -3,7 +3,13 @@
 {{/if}}
 
 {{#if data.help}}
-  {{{t data.help}}}
+  {{{t data.help markdown=true}}}
+{{/if}}
+
+{{#if data.release}}
+  <div class="alert alert-warning">
+    {{{t data.release markdown=true}}}
+  </div>
 {{/if}}
 
 <div class="code-example">

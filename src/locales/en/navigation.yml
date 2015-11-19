@@ -4,8 +4,6 @@ hierarchical-navigation:
   global-navigation:
     title: Global Navigation
     help: |
-      <span class="label label-admin">FIX</span>
-
       The global navigation shows the main points of access to a website as tabs. It is separated from the header above by a red line. The terminology used for the tabs should be chosen carefully, as this is what gives the user the first impression of the purpose of the website.
 
       Behavior:
@@ -22,25 +20,19 @@ hierarchical-navigation:
       A flyout can contain a teaser, which consists of a linked heading, an image, and a descriptive text (max. 70 characters including spaces).
 
       Add `<div class="overlay"></div>` at the end of the `body` tag to display the gray overlay.
-
-      <br>
-      <div class="alert alert-warning">
+    release: |
       **2.1.0:**
-
         - added the `.nav-mobile` section to the beginning of the `.list-group` element
 
       **2.1.2:**
-
         - changed `.active` class to `.current` for current page highlight in the menu
         - added `h2.sr-only` for more screen reader clarity
         - added h2 and label to search field on mobile
 
       **3.0.0:**
-
         - added ` <span class="sr-only">current page</span>` for current active link
         - added `id="main-navigation"`for accessibility nav
         - added `aria-hidden="true"` to close button
-      </div>
 header:
   title: Header
   site-search:
@@ -49,7 +41,7 @@ header:
       The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
 
       On smartphones, the search function can be accessed via an icon in the Header.
-
-      2.1.2:
-      added h2.sr-only for more screen reader clarity
-      added label before input for screen readers
+    release: |
+      **2.1.2:**
+        - added h2.sr-only for more screen reader clarity
+        - added label before input for screen readers

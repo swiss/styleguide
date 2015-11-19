@@ -7,11 +7,7 @@ widgets:
       Alerts are shown when you need to get the attention of the user with something important.
 
       Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
+    release: |
+      **Accessibility**
 
-      <div class="alert alert-warning">
-
-        **Accessibility**
-
-        You can add a `<span class="sr-only">alert type</span>` if the `role="alert"` is not enough information for the end user.
-
-      </div>
+      You can add a `<span class="sr-only">alert type</span>` if the `role="alert"` is not enough information for the end user.
