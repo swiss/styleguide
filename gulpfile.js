@@ -36,6 +36,9 @@ var config = {
     styles: {
       fabricator: 'src/assets/fabricator/styles/fabricator.scss',
     },
+    javascript: {
+      fabricator: 'src/assets/fabricator/scripts/*.js',
+    },
   },
   styleguide: {
     dest: 'styleguide'
@@ -167,7 +170,7 @@ gulp.task('print', function() {
  * With error reporting on compiling (so that there's no crash)
  */
 gulp.task('scripts', function() {
-  return gulp.src(['src/assets/js/*.js', 'src/assets/fabricator/scripts/*.js'])
+  return gulp.src(['src/assets/js/*.js'])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.concat('main.js'))
@@ -211,7 +214,7 @@ gulp.task('twig', function() {
  */
 // Build the style guide
 gulp.task('assemble-everything', function(cb) {
-  runSequence('clean', 'assemble', 'copy', cb);
+  runSequence('clean', 'assemble', 'copy', 'styles:fabricator', 'scripts:fabricator', cb);
 });
 
 gulp.task('assemble', function(done) {
@@ -297,6 +300,14 @@ gulp.task('styles:fabricator', function() {
 		.pipe($.if(config.dev, reload({stream:true})));
 });
 
+// Build Fabricator scripts
+gulp.task('scripts:fabricator', function() {
+  return gulp.src(config.src.javascript.fabricator)
+    .pipe($.concat('fabricator.min.js'))
+    .pipe($.uglify())
+    .pipe(gulp.dest(config.framework.dest + '/js'));
+});
+
 
 /**
  * Clean output directories
@@ -365,5 +376,5 @@ gulp.task('deploy', function () {
  * Default task build the style guide
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styles:fabricator', 'assemble', 'copy', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styles:fabricator', 'scripts:fabricator', 'assemble', 'copy', cb);
 });
