@@ -1,0 +1,38 @@
+{{#if data.label}}
+  <span class="label label-admin">{{toUpperCase data.label}}</span>
+{{/if}}
+
+{{#if data.help}}
+  <div class="f-item-notes">
+    <strong>Help</strong>
+    {{{t data.help}}}
+  </div>
+{{/if}}
+
+<div class="f-item-preview">
+  <div class="codeExample">
+    <div class="exampleOutput">
+      {{{material @key @root}}}
+
+      <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{@key}}" aria-expanded="true">&lt;/&gt;</button>
+    </div>
+
+    <div class="f-item-code f-item-hidden">
+      <div class="codeBlock collapse" id="code-{{@key}}">
+        <pre><code class="language-markup">{{material @key @root}}</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{#if data.javascript}}
+  <div class="f-item-javascript">
+    <div class="codeBlock jsExample">
+      <pre><code class="language-javascript">{{renderFile data.javascript}}</code></pre>
+    </div>
+  </div>
+{{/if}}
+
+{{#if data.complement}}
+  {{{renderFile data.complement}}}
+{{/if}}

@@ -7,15 +7,12 @@
  *
  * Copyright 2014 Federal Chancellery of Switzerland
  * Licensed under MIT
- *
- * Last Modified by:   Toni Fisler
- * Last Modified time: 2014-04-30 14:33:12
  ========================================================== */
 
 'use strict';
 
 /**
- * Import plugins
+ * Load required plugins
  */
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
@@ -23,7 +20,31 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     runSequence = require('run-sequence'),
     argv = require('yargs').argv,
-    del = require('del');
+    del = require('del'),
+    assemble = require('fabricator-assemble'),
+    yaml = require('js-yaml'),
+    fs = require('fs'),
+    globby = require('globby'),
+    path = require('path');
+
+/**
+ * Configuration
+ */
+var config = {
+  dev: $.util.env.dev,
+  src: {
+    styles: {
+      fabricator: 'src/assets/fabricator/styles/fabricator.scss',
+    },
+  },
+  styleguide: {
+    dest: 'styleguide'
+  },
+  framework: {
+    dest: 'build'
+  },
+  locales: ['en', 'de', 'fr', 'it']
+};
 
 /**
  * Build vendors dependencies
@@ -34,28 +55,23 @@ gulp.task('vendors', function() {
   gulp.src([
       'bower_components/jquery.socialshareprivacy/socialshareprivacy/images/*'
     ])
-    .pipe(gulp.dest('build/css/images'));
+    .pipe(gulp.dest(config.framework.dest + '/css/images'));
 
-  /**
-   * CSS VENDORS
-   */
+  // CSS VENDORS
   gulp.src([
-        'bower_components/yamm3/yamm/yamm.css',
-        'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css',
-        'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css',
-        'bower_components/blueimp-gallery/css/blueimp-gallery.min.css',
-        'bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
-        'node_modules/pikaday/css/pikaday.css'
-      ])
-      .pipe($.concat('vendors.css'))
-      .pipe($.minifyCss())
-      .pipe(gulp.dest('build/css'));
+      'bower_components/yamm3/yamm/yamm.css',
+      'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css',
+      'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css',
+      'bower_components/blueimp-gallery/css/blueimp-gallery.min.css',
+      'bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
+      'node_modules/pikaday/css/pikaday.css'
+    ])
+    .pipe($.concat('vendors.css'))
+    .pipe($.minifyCss())
+    .pipe(gulp.dest(config.framework.dest + '/css'));
 
-  /**
-   * JS VENDORS
-   * (with jQuery and Bootstrap dependencies first)
-   */
-
+  // JS VENDORS
+  // (with jQuery and Bootstrap dependencies first)
   gulp.src([
       'bower_components/jquery/jquery.js',
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
@@ -85,20 +101,20 @@ gulp.task('vendors', function() {
     ])
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest(config.framework.dest + '/js'));
 
-
-  /**
-   * FONTS SOURCES
-   * Important to add the bootstrap fonts to avoid issues with the fonts include path
-   */
+  // FONTS SOURCES
+  // Important to add the bootstrap fonts to avoid issues with the fonts include path
   gulp.src([
       'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
       'assets/fonts/*'
     ])
-    .pipe(gulp.dest('build/fonts'));
+    .pipe(gulp.dest(config.framework.dest + '/fonts'));
 });
 
+/**
+ * Build polyfills
+ */
 gulp.task('polyfills', function() {
   return gulp.src([
       'bower_components/html5shiv/dist/html5shiv.min.js',
@@ -107,7 +123,7 @@ gulp.task('polyfills', function() {
     ])
     .pipe($.concat('polyfills.min.js'))
     .pipe($.uglify())
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest(config.framework.dest + '/js'));
 });
 
 /**
@@ -118,7 +134,7 @@ gulp.task('styles', function() {
   if (!argv.dev) { console.log('[styles] Outputting minified styles.' ); }
   else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
-  return gulp.src('assets/sass/admin.scss')
+  return gulp.src('src/assets/sass/admin.scss')
     .pipe($.sass({
       errLogToConsole: true
     }))
@@ -128,11 +144,11 @@ gulp.task('styles', function() {
     }))
     .pipe($.if(argv.dev, $.sourcemaps.write()))
     .pipe($.if(!argv.dev, $.minifyCss()))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest(config.framework.dest + '/css'));
 });
 
 gulp.task('print', function() {
-  return gulp.src('assets/sass/print/print.scss')
+  return gulp.src('src/assets/sass/print/print.scss')
     .pipe($.sass({
       errLogToConsole: true
     }))
@@ -142,7 +158,7 @@ gulp.task('print', function() {
     }))
     .pipe($.if(argv.dev, $.sourcemaps.write()))
     .pipe($.if(!argv.dev, $.minifyCss()))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest(config.framework.dest + '/css'));
 });
 
 
@@ -151,89 +167,203 @@ gulp.task('print', function() {
  * With error reporting on compiling (so that there's no crash)
  */
 gulp.task('scripts', function() {
-  return gulp.src('assets/js/*.js')
+  return gulp.src(['src/assets/js/*.js', 'src/assets/fabricator/scripts/*.js'])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.concat('main.js'))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest(config.framework.dest + '/js'))
     .pipe($.rename({ suffix: '.min' }))
     .pipe($.uglify())
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest(config.framework.dest + '/js'));
 });
+
 
 /**
- * Build Hologram Styleguide
+ * Copy images to build
  */
-gulp.task('styleguide', function () {
-  return gulp.src('hologram_config.yml')
-    .pipe($.hologram({ bundler: true }));
-});
-
 gulp.task('build-images', function() {
-  return gulp.src(['assets/img/**'])
-          .pipe(gulp.dest('build/img'));
+  return gulp.src(['src/assets/img/**'])
+    .pipe(gulp.dest(config.framework.dest + '/img'));
 });
 
+
+/**
+ * Copy fonts to build
+ */
 gulp.task('build-fonts', function() {
-  return gulp.src(['assets/fonts/**'])
-          .pipe(gulp.dest('build/fonts'));
+  return gulp.src(['src/assets/fonts/**'])
+    .pipe(gulp.dest(config.framework.dest + '/fonts'));
 });
+
 
 /**
  * Compile TWIG example pages
  */
-
-gulp.task('twig', function () {
-    return gulp.src('assets/pages/*.twig')
-        .pipe($.twig())
-        .pipe(gulp.dest('styleguide/pages'));
+gulp.task('twig', function() {
+  return gulp.src(['src/example-pages/*.twig', '!src/example-pages/layout.twig'])
+    .pipe($.twig())
+    .pipe(gulp.dest('src/views/pages'));
 });
+
+
+/**
+ * FABRICATOR
+ */
+// Build the style guide
+gulp.task('assemble-everything', function(cb) {
+  runSequence('clean', 'assemble', 'copy', cb);
+});
+
+gulp.task('assemble', function(done) {
+  // Build style guide for every language
+  config.locales.forEach(function(locale){
+    var dest = config.styleguide.dest + '/' + locale,
+        data = {
+          locale: locale
+        },
+        dictionary = {};
+
+    // Get all translation files for the current locale
+    var translations = globby.sync('src/locales/' + locale + '/*.yml');
+
+    // Build a dictionnary using the filename as the main key
+    translations.forEach(function(file) {
+      var id = path.basename(file, path.extname(file));
+      var content = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
+      dictionary[id] = content;
+    });
+
+    // Assemble the style guide
+  	assemble({
+      dest: dest,
+  		logErrors: config.dev,
+      helpers: {
+        // Register the translation helper
+        t: function() {
+          // Build an array out of fn arguments
+          var args = Array.prototype.slice.call(arguments);
+          // Remove the last entry which is an object given by Handlebars
+          args.pop();
+
+          // Build a full translation key with all arguments
+          args = args.join('.');
+
+          // Look for the translation in the dictionnary
+          return args.trim().split('.').reduce(function(dict, key){
+            if (!dict) {
+              return null;
+            }
+            return dict[key];
+          }, dictionary) || '[Missing translation: ' + args + ']';
+        },
+        // Return true if the language given match with the current locale
+        isCurrentLocale: function(lang, options) {
+          if (lang === locale) {
+            return options.fn(this);
+          }
+          return options.inverse(this);
+        },
+        // Return the corresponding data value
+        data: function(value) {
+          return data[value] || '';
+        },
+        toUpperCase: function(value) {
+          return value.toUpperCase();
+        },
+        renderFile: function(file) {
+          return fs.readFileSync('src/materials-data/' + file, 'utf-8');
+        }
+      }
+  	});
+  });
+  done();
+});
+
+// Copy all the framework required files to the styleguide folder (css, js, fonts, images)
+gulp.task('copy', function() {
+  return gulp.src([config.framework.dest + '/**/*'])
+    .pipe(gulp.dest(config.styleguide.dest));
+});
+
+// Build Fabricator style
+gulp.task('styles:fabricator', function() {
+	gulp.src(config.src.styles.fabricator)
+		.pipe($.sourcemaps.init())
+		.pipe($.sass().on('error', $.sass.logError))
+		.pipe($.autoprefixer('last 1 version'))
+		.pipe($.if(!config.dev, $.csso()))
+		.pipe($.sourcemaps.write())
+		.pipe(gulp.dest(config.styleguide.dest + '/css'))
+		.pipe($.if(config.dev, reload({stream:true})));
+});
+
 
 /**
  * Clean output directories
  */
-gulp.task('clean', del.bind(null, ['build', 'styleguide']));
+gulp.task('clean', function(cb) {
+  del([config.styleguide.dest], cb);
+});
+
 
 /**
  * Serve
  */
-gulp.task('serve', ['styles', 'scripts'], function () {
+gulp.task('serve', ['assemble-everything'], function () {
   browserSync({
     server: {
-      baseDir: ['styleguide'],
+      baseDir: config.styleguide.dest,
     },
+    notify: false,
     open: false
   });
-  gulp.watch(['assets/sass/**/*.scss'], function() {
-    runSequence('styles', 'print', 'styleguide', reload);
+
+  gulp.task('assemble:watch', ['assemble-everything'], reload);
+  gulp.watch(['src/**/*.{html,md,json,yml}', 'src/**/**/*.{html,js}'], ['assemble:watch']);
+
+  gulp.watch(['src/assets/sass/**/*.scss'], function() {
+    runSequence('styles', 'print', 'assemble:watch');
   });
-  gulp.watch(['assets/js/*.js'], function() {
-    runSequence('scripts', 'styleguide', reload);
+  gulp.watch(['src/assets/js/*.js'], function() {
+    runSequence('scripts', 'assemble:watch');
   });
-  gulp.watch(['assets/img/**/*.{jpg,png,gif,svg}'], function() {
-    runSequence('build-images', 'styleguide', reload);
+  gulp.watch(['src/assets/img/**/*.{jpg,png,gif,svg}'], function() {
+    runSequence('build-images', 'assemble:watch');
   });
-  gulp.watch(['assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
-    runSequence('build-fonts', 'styleguide', reload);
+  gulp.watch(['src/assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
+    runSequence('build-fonts', 'assemble:watch');
   });
-  gulp.watch(['assets/pages/**/*.twig'], function() {
+  gulp.watch(['src/views/pages/twig/*.twig'], function() {
     runSequence('twig', reload);
   });
 });
 
+
 /**
  * Deploy to GH pages
  */
-
 gulp.task('deploy', function () {
-  return gulp.src("styleguide/**/*")
-    .pipe($.ghPages());
+  if (argv.github) {
+    return gulp.src(config.styleguide.dest + '/**/*')
+     .pipe($.ghPages());
+  }
+  else {
+    return gulp.src(config.styleguide.dest + '/**/*')
+      .pipe($.rsync({
+        root: 'styleguide',
+        hostname: 'swg',
+        destination: '/var/www/swg',
+        progress: true,
+        recursive: true,
+        clean: true
+      }));
+  }
 });
+
 
 /**
- * Default task
+ * Default task build the style guide
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styleguide', cb);
+  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styles:fabricator', 'assemble', 'copy', cb);
 });
-

@@ -1,0 +1,19 @@
+title: Example pages
+detail:
+  title: Details page
+forms:
+  title: Forms page
+home-without-nav:
+  title: Homepage without global navigation
+homepage-global-nav:
+  title: Homepage with global navigation
+preview-without-nav:
+  title: Overview page without navigation
+preview:
+  title: Overview page
+publications:
+  title: Publications page
+results:
+  title: Search results page
+subpage:
+  title: Subpage
