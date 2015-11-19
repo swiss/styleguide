@@ -41,4 +41,15 @@ hierarchical-navigation:
         - added `id="main-navigation"`for accessibility nav
         - added `aria-hidden="true"` to close button
       </div>
+header:
+  title: Header
+  site-search:
+    title: Site search
+    help: |
+      The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
 
+      On smartphones, the search function can be accessed via an icon in the Header.
+
+      2.1.2:
+      added h2.sr-only for more screen reader clarity
+      added label before input for screen readers
