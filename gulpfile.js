@@ -43,7 +43,7 @@ var config = {
   framework: {
     dest: 'build'
   },
-  locales: ['en', 'de', 'fr', 'it']
+  locales: ['en', 'de', 'fr']
 };
 
 /**

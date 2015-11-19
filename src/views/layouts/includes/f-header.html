@@ -5,9 +5,9 @@
       <h2 class="sr-only">{{t 'styleguide.language'}}</h2>
       <nav class="nav-lang">
         <ul>
-          {{#each i18n.locales}}
+          {{#each locales}}
             <li>
-              <a href="/{{@key}}/{{../permalink}}"{{#isCurrentLocale @key}} class="active"{{/isCurrentLocale}}>{{toUpperCase @key}}{{#isCurrentLocale @key}}<span class="sr-only">{{t 'styleguide.selected'}}</span>{{/isCurrentLocale}}</a>
+              <a href="{{#if disabled}}#{{else}}/{{code}}/{{../permalink}}{{/if}}" title="{{name}}" class="{{#isCurrentLocale code}}active{{/isCurrentLocale}}{{#if disabled}}disabled{{/if}}">{{toUpperCase code}}{{#isCurrentLocale code}}<span class="sr-only">{{t 'styleguide.selected'}}</span>{{/isCurrentLocale}}{{#if disabled}}<span class="sr-only">{{t 'styleguide.disabled'}}</span>{{/if}}</a>
             </li>
           {{/each}}
         </ul>
