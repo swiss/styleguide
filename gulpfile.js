@@ -228,7 +228,8 @@ gulp.task('assemble', function(done) {
 
     var dest = config.styleguide.dest + '/' + locale.code,
         data = {
-          locale: locale.code
+          locale: locale.code,
+          version: fs.readFileSync('VERSION', 'utf-8')
         },
         dictionary = {};
 
