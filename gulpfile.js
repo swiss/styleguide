@@ -296,6 +296,11 @@ gulp.task('assemble', function(done) {
         },
         replace: function(substr, newSubstr, str) {
           return str.replace(substr, newSubstr);
+        },
+        modulo: function(index, divider, block) {
+          if ((parseInt(index,10) + 1) % divider === 0) {
+            return block.fn(this);
+          }
         }
       }
   	})
