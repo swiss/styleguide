@@ -47,7 +47,7 @@ var config = {
   framework: {
     dest: 'build'
   },
-  locales: ['en', 'de', 'fr']
+  locales: yaml.safeLoad(fs.readFileSync('src/data/locales.yml', 'utf-8'))
 };
 
 /**
@@ -220,15 +220,20 @@ gulp.task('assemble-everything', function(cb) {
 
 gulp.task('assemble', function(done) {
   // Build style guide for every language
-  config.locales.forEach(function(locale){
-    var dest = config.styleguide.dest + '/' + locale,
+  for (var localeCode in config.locales) {
+    var locale = config.locales[localeCode];
+
+    // Do not build disabled locales
+    if (locale.disabled) continue;
+
+    var dest = config.styleguide.dest + '/' + locale.code,
         data = {
-          locale: locale
+          locale: locale.code
         },
         dictionary = {};
 
     // Get all translation files for the current locale
-    var translations = globby.sync('src/locales/' + locale + '/*.yml');
+    var translations = globby.sync('src/locales/' + locale.code + '/*.yml');
 
     // Build a dictionnary using the filename as the main key
     translations.forEach(function(file) {
@@ -269,7 +274,7 @@ gulp.task('assemble', function(done) {
         },
         // Return true if the language given match with the current locale
         isCurrentLocale: function(lang, options) {
-          if (lang === locale) {
+          if (lang === locale.code) {
             return options.fn(this);
           }
           return options.inverse(this);
@@ -293,8 +298,8 @@ gulp.task('assemble', function(done) {
           return str.replace(substr, newSubstr);
         }
       }
-  	});
-  });
+  	})
+  }
   done();
 });
 
