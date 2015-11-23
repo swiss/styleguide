@@ -4,3 +4,23 @@ form-elements:
   fieldsets:
     title: Fieldsets
     help: Fieldsets are used to separate content in a form.
+  forms:
+    title: Forms
+    help: |
+      You can use `.form-horizontal` on `<form>` to display the label aligned at the left of the input. `.form-group` then behaves like a `.row`.
+
+      Input boxes allow the user to input content (e.g. name).
+      For inputting dates, an HTML5 solution is available. With browsers that do not support HTML5 the date has to be input manually.
+      The following has to be taken into account for barrier-free accessibility:
+      The name of the form and the form box must be linked to a label. A label ID may only appear once on a page. Required fields must have sensible names or, preferably, use WAI.
+
+      You can use the `.has-error`, `.has-warning` or `.has-success` classes to send feedback to the user.
+
+      HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, and `color`
+    release: |
+      **2.1.8**
+        - added **IDs** to label and help text, `aria-labelledby` and `role` to buttons for a better accessibility
+        - added `<fieldset>` and `<legend class="hidden">` around `.form-group` for a better accessibility
+
+      **2.6.0**
+        - added a datepicker calendar plugin as an option. Use this in your script to initiate the plugin on the fields you need. See the [official Pikaday documentation](https://github.com/dbushell/Pikaday).
