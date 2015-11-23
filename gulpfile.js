@@ -321,7 +321,7 @@ gulp.task('styles:fabricator', function() {
 		.pipe($.sourcemaps.init())
 		.pipe($.sass().on('error', $.sass.logError))
 		.pipe($.autoprefixer('last 1 version'))
-		.pipe($.if(!config.dev, $.csso()))
+		.pipe($.if(!config.dev, $.minifyCss()))
 		.pipe($.sourcemaps.write())
 		.pipe(gulp.dest(config.styleguide.dest + '/css'))
 		.pipe($.if(config.dev, reload({stream:true})));
