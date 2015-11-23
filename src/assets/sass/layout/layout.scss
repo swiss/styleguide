@@ -9,42 +9,10 @@
  * Licensed under MIT
  =========================================================== */
 
- @charset "UTF-8";
-
-/*doc
----
-title: Background
-name: c-background
-category: Base Layout - General
----
-
-<span class="label label-admin">FIX</span>
-
-The background color is a light shade of gray.
-
-<div class="codeExample">
-  <div class="exampleOutput body">
-    <div class="container-main clearfix">
-      <div class="col-sm-12">
-        <p>Lorem ipsum dolor sit  amet, consectetur adipisicing elit. Pariatur dolores adipisci minus nesciunt facilis. Iure, error, facilis, modi, soluta deleniti maiores corporis impedit ducimus laboriosam porro fugiat et esse blanditiis.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-```
-<body>
-  <div class="container-main">
-    <div class="col-sm-12">
-      <!-- your page content -->
-    </div>
-  </div>
-</body>
-```
-*/
+@charset "UTF-8";
 
 body, .body {
-  background: url('../img/bg-striped.png') repeat;
+  background: url('/img/bg-striped.png') repeat;
 }
 
 .overlay {
@@ -55,7 +23,7 @@ body, .body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url('../img/overlay.png') repeat;
+  background: url('/img/overlay.png') repeat;
   z-index: 999;
 }
 

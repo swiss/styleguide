@@ -30,3 +30,6 @@ general:
       Three colors are used: the red shade of the Confederation logo, which is complemented by a lighter shade of red, a blue tone, and a range of gray shades.
 
       The red color is used in the red line which marks the bottom of the header, and it is also used to indicate a selection in the navigation as well as for mouseovers on links. Otherwise, various shades of gray are used. For instance, the headlines and the body copy are presented in a dark shade of gray.
+  background:
+    title: Background
+    help: The background color is a light shade of gray.
