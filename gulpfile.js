@@ -38,7 +38,10 @@ var config = {
       fabricator: 'src/assets/fabricator/styles/fabricator.scss',
     },
     javascript: {
-      fabricator: 'src/assets/fabricator/scripts/*.js',
+      fabricator: [
+        'node_modules/prismjs/prism.js',
+        'src/assets/fabricator/scripts/*.js'
+      ],
     },
   },
   styleguide: {
