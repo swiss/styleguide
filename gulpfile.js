@@ -362,10 +362,10 @@ gulp.task('serve', ['assemble-everything'], function () {
   gulp.task('assemble:watch', ['assemble-everything'], reload);
   gulp.watch(['src/**/*.{html,md,json,yml}', 'src/**/**/*.{html,js}'], ['assemble:watch']);
 
-  gulp.watch(['src/assets/sass/**/*.scss'], function() {
+  gulp.watch(['src/assets/sass/**/*.scss', 'src/assets/fabricator/styles/**/*.scss'], function() {
     runSequence('styles', 'print', 'assemble:watch');
   });
-  gulp.watch(['src/assets/js/*.js'], function() {
+  gulp.watch(['src/assets/js/*.js', 'src/assets/fabricator/scripts/**/*.js'], function() {
     runSequence('scripts', 'assemble:watch');
   });
   gulp.watch(['src/assets/img/**/*.{jpg,png,gif,svg}'], function() {
