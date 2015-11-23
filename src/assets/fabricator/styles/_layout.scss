@@ -108,3 +108,13 @@
   height: 31px !important;
   border-radius: 31px !important;
 }
+
+.release-notes {
+  p + ul {
+    margin-top: 0;
+
+    + p {
+      margin-top: 10px;
+    }
+  }
+}
