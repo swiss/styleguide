@@ -36,3 +36,6 @@ form-elements:
       **2.1.2:**
 
       - added a label before select for screen readers
+  checkboxes:
+    title: Checkboxes
+    help: Checkboxes are used when one or more elements are to be selected from a predefined list of items.
