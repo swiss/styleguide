@@ -4,6 +4,61 @@ form-elements:
   fieldsets:
     title: Fieldsets
     help: Fieldsets are used to separate content in a form.
+general:
+  title: General
+  logo:
+    title: Logo
+    help: |
+      The designation of a website allows the user to recognize at a glance who the originator of the site is together with the website's content and purpose.
+
+      The designation consists of the Confederation logo (coat of arms and the four-language wordmark) and the name of the organizational unit, including its abbreviation (e.g. EDA), or as a short form (e.g. MeteoSchweiz).
+
+      These two components are separated from one another by a vertical line. For smartphones only the coat of arms from the Confederation logo is used in the header. The name of the organizational unit can be abbreviated. The appropriate HTML code for this is provided together with the Globalnavigation.
+
+      The full form of the Confederation logo is given in the Footer.
+
+      The logo is a CD element. Its use is mandatory, and its representation may not be changed in any way.
+    release: |
+      **2.1.8**
+
+      - added `title` to brand link for accessibility
+  colors:
+    title: Colors
+    help: |
+      The predefined color range is intended to make the family of Confederation websites instantly recognizable, to emphasize individual elements and interactions, and is also used for orientation purposes. The color range employed is a CD element, and its use is mandatory.
+
+      Three colors are used: the red shade of the Confederation logo, which is complemented by a lighter shade of red, a blue tone, and a range of gray shades.
+
+      The red color is used in the red line which marks the bottom of the header, and it is also used to indicate a selection in the navigation as well as for mouseovers on links. Otherwise, various shades of gray are used. For instance, the headlines and the body copy are presented in a dark shade of gray.
+  background:
+    title: Background
+    help: The background color is a light shade of gray. It gets automatically applied to the `<body>` element.
+  images:
+    title: Images
+    help: Images in landscape format have an aspect ratio of 16:10 (full-sized landscape format - golden section) or 16:5 (half-sized landscape format). Portrait format images do not have a specific aspect ratio. However, we recommend a ratio of 2:3.
+  standard-image:
+    title: Standard image
+  captioned-image:
+    title: Captioned image
+  image-format:
+    title: Image format
+  icons:
+    title: Icons
+    help: |
+      The icons used are one-color and two-dimensional. They are provided as a web font which is to be found in the resources as a TrueType font.
+
+      For an **only-icon** element, add the class to an empty `<span>`.
+
+      For an **inside-icon** element, use the global `.icon` and `.icon--before` or `.icon--after` class followed by the more specific class.
+    release: |
+      **Accessibility**
+
+      If the element should be readable by a screen reader and/or is semantically important, be sure to add the appropriate `aria-` attribute. Otherwise, add an `aria-hidden="true"` attribute to hide it and avoid useless clutter of informations.
+
+      You could also add a `<span class="sr-only">icon description</span>` depending on your needs.
+  form-icons:
+    title: Form icons
+    help: Use the global `.form-icon` class followed by the more specific class
 tables:
   title: Tables
   table-standard:
