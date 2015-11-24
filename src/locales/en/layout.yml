@@ -42,3 +42,11 @@ form-elements:
   radios:
     title: Radios
     help: Radio buttons allow the user to make an unequivocal choice from a predefined list. Radio buttons can also be structured in groups. Only one element in a group may be selected.
+  buttons:
+    title: Buttons
+    help: |
+      A differentiation is made between primary and secondary buttons. The primary button is used for the main action (e.g. send), which can also be activated via the Enter key. The secondary button is used for less important actions, such as "Cancel".
+
+      The standard button can be used for a variety of actions. Buttons can also be grouped in a button group. As with the radio button groups, only one element can be selected within such a group.
+
+      Use the class `.btn` to create a styled button. You can use it on a `<input>`, `<button>` or `<a>` element. There are 4 button themes:
