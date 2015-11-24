@@ -315,9 +315,9 @@ gulp.task('assemble', function(done) {
   done();
 });
 
-// Copy all the framework required files to the styleguide folder (css, js, fonts, images)
+// Copy all the framework required files to the styleguide folder
 gulp.task('copy', function() {
-  return gulp.src([config.framework.dest + '/**/*'])
+  return gulp.src([config.framework.dest + '/**/*', 'styleguide-img/**/*', 'src/index.html'])
     .pipe(gulp.dest(config.styleguide.dest));
 });
 
