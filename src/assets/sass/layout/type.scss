@@ -81,23 +81,6 @@ var {
   color: $empress;
 }
 
-/*doc
----
-title: Blockquote
-name: d-blockquote
-category: Base Layout - Typography
----
-
-<span class="label label-admin">CD</span>
-
-```html_example
-<blockquote>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-</blockquote>
-```
-
-*/
-
 blockquote {
   margin: 1.5em 0 0 1.6em;
   color: $empress;
