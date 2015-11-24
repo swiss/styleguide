@@ -21,3 +21,6 @@ typography:
       A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text.
 
       A lead of this sort is formatted bold.
+  text-elements:
+    title: Text elements
+    help: The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.
