@@ -12,17 +12,19 @@
   </div>
 {{/if}}
 
-<div class="code-example">
-  <div class="example-output">
-    {{{material @key @root}}}
+{{#unless data.empty}}
+  <div class="code-example">
+    <div class="example-output">
+      {{{material @key @root}}}
 
-    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '.' '-' @key}}" aria-expanded="true">&lt;/&gt;</button>
-  </div>
+      <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '.' '-' @key}}" aria-expanded="true">&lt;/&gt;</button>
+    </div>
 
-  <div class="code-block collapse" id="code-{{replace '.' '-' @key}}">
-    <pre><code class="language-markup">{{material @key @root}}</code></pre>
+    <div class="code-block collapse" id="code-{{replace '.' '-' @key}}">
+      <pre><code class="language-markup">{{material @key @root}}</code></pre>
+    </div>
   </div>
-</div>
+{{/unless}}
 
 {{#if data.javascript}}
   <div class="code-block js-example">
