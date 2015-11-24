@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+    // Redirect the user to its preferred language or fallback to english
+    var language = window.navigator.userLanguage || (window.navigator.languages && window.navigator.languages[0]) || window.navigator.language || '',
+        languages = ['en', 'fr', 'de'];
+
+    language = language.substr(0, 2);
+
+    if (languages.indexOf(language) === -1) {
+      language = 'en';
+    }
+
+    window.location = window.location += '/' + language;
+    </script>
+
+    <!-- Ensure redirection even for people with JavaScript disabled -->
+    <meta http-equiv="refresh" content="1; url=/en/">
+  </head>
+</html>
