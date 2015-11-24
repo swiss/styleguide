@@ -32,7 +32,7 @@ general:
       The red color is used in the red line which marks the bottom of the header, and it is also used to indicate a selection in the navigation as well as for mouseovers on links. Otherwise, various shades of gray are used. For instance, the headlines and the body copy are presented in a dark shade of gray.
   background:
     title: Background
-    help: The background color is a light shade of gray.
+    help: The background color is a light shade of gray. It gets automatically applied to the `<body>` element.
   images:
     title: Images
     help: Images in landscape format have an aspect ratio of 16:10 (full-sized landscape format - golden section) or 16:5 (half-sized landscape format). Portrait format images do not have a specific aspect ratio. However, we recommend a ratio of 2:3.
