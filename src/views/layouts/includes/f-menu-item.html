@@ -9,11 +9,11 @@
         {{#each items}}
           <li class="col-sm-3">
             <div class="yamm-content container-fluid">
-              <h4><a href="/{{data 'locale'}}/{{../path}}{{@key}}.html">{{t @../key @key 'title'}}</a></h4>
+              <h4><a href="/{{data 'locale'}}/{{../path}}{{replace '(\.)' '-' @key}}.html">{{t @../key @key 'title'}}</a></h4>
               <ul role="menu">
                 {{#each items}}
                   <li role="presentation">
-                    <a href="/{{data 'locale'}}/{{../path}}{{@../key}}.html#{{@key}}">{{t @../../key @key 'title'}}</a>
+                    <a href="/{{data 'locale'}}/{{../path}}{{@../key}}.html#{{replace '(\.)' '-' @key}}">{{t @../../key @key 'title'}}</a>
                   </li>
                 {{/each}}
               </ul>
