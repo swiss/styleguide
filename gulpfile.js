@@ -261,6 +261,9 @@ gulp.task('assemble', function(done) {
           // Build a full translation key with all arguments
           args = args.join('.');
 
+          // Remove any digits coming from the component key prefix
+          args = args.replace(/(\.\d+)/g, '');
+
           // Look for the translation in the dictionnary
           var value = args.trim().split('.').reduce(function(dict, key){
             if (!dict) {
