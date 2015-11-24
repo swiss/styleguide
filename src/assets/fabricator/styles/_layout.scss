@@ -65,7 +65,7 @@
   border: 1px solid $softBlue !important;
   position: relative !important;
   width: 100% !important;
-  overflow-y: auto !important;
+  overflow-y: visible !important;
   box-sizing: border-box !important;
   position: relative !important;
   &:after {
