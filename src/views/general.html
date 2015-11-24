@@ -1,0 +1,13 @@
+---
+fabricator: true
+title: layout.general.title
+permalink: general.html
+---
+
+<h1>{{t 'layout.general.title'}}</h1>
+
+{{#each materials.layout.items.general.items}}
+
+{{> f-item this}}
+
+{{/each}}
