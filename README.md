@@ -49,68 +49,19 @@ There are several ways to get started:
 If you want to contribute, fix a bug or suggest a new feature, please first [create a new issue](https://github.com/swiss/styleguide/issues/new), so we can discuss it. Then, please make a Pull Request to the `dev` branch. This is important, as we use the [Git Flow](https://github.com/swiss/styleguide/issues/new) workflow. We thank you in advance for your collaboration!
 
 
-### Installation on OSX/Unix
+### Installation on OSX/Unix/Windows
 
-> We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [Hologram](https://github.com/trulia/hologram).
+> We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [Fabricator](http://fbrctr.github.io/).
 
 Make sure you have [Node.js](http://nodejs.org) installed.
-
 
 Install all the dependencies you need:
 
 ```shell
-$ npm install -g gulp
-$ npm install
-$ bower install
-```
-
-Install Hologram from the Gemfile (for version > 1.1.0):
-
-```shell
-$ bundle
+$ npm start
 ```
 
 [Browser-sync](http://www.browsersync.io) is automatically set up and will allow you to make changes and see them in real time.
-
-### Installation on Windows
-
-This is the not the recommended OS. If you have a choice, use OS X. We are therefore not perfectly sure of the process below, please report or make a PR to make this better.
-
-*Warning: This was tested on the [Windows PowerShell](﻿http://en.wikipedia.org/wiki/Windows_PowerShell) but should work on any shell that support UTF8.*
-
-- Download and Install [Ruby](http://rubyinstaller.org)
-
-- Install DevKit. Follow [those instructions](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
-
-- [Install Ruby & DevKit](http://rubyinstaller.org)
-
-- [Configure DevKit](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
-
-- Download and install [Node.js](http://nodejs.org)
-
-- Install [Git for Windows](http://msysgit.github.io/) (recommended) or alternatively [Github for Windows](https://windows.github.com)
-
-Then install SASS, Hologram & Bundle
-
-```shell
-$ gem install sass bundle hologram
-```
-
-
-Go in the project directory and install the dependencies:
-
-```
-C:\\projectPath> npm install gulp -g
-C:\\projectPath> npm install
-C:\\projectPath> node_module\.bin\bower install
-```
-
-Finally you will have to rebuild some gems:
-
-````shell
-$ gem uninstal yajl-ruby
-$ gem install yajl-ruby --version=1.1.0 --platform=ruby
-````
 
 ### Build the styleguide
 
@@ -138,30 +89,6 @@ Classes available: `.visible-print-block`, `.visible-print-inline`, `.visible-pr
 
 Please refer to their documentation for more details.
 
-## Styleguide Theme
-
-The stylguide theme is in `styleguide-theme`. It's a theme for Trulia's [Hologram](https://github.com/trulia/hologram).
-It was based on [Cortana](https://github.com/Yago31/Cortana).
-
-### How is it included?
-
-The `hologram_config.yml` has a reference  to the styleguide theme:
-
-```yaml
-source: ./path/to/your/source
-destination: ./path/to/output
-documentation_assets: ./path/to/theme
-```
-
-### Build the Styleguide Theme
-
-The theme has his own gulpfile (for the moment). So you have to do the following command to build the assets then generate the styleguide with `$ hologram`:
-
-```shell
-$ cd styleguide-theme
-$ gulp
-```
-
 ## FAQ
 
 ### Why are there a lot of `!important` in the CSS?
@@ -183,23 +110,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 ````
-
-### Error encoding ruby 2.1.0 with Windows 7 x64
-
-Edit file : C:\Ruby21-64\lib\ruby\2.1.0\registry.rb
-
-````
-Add line 70 == LOCALE = Encoding::UTF_8
-````
-
-### Error SSL certificates rubygems 2.2.2 with Windows 7 x64
-
-Download [rubygems 2.2.3](https://github.com/rubygems/rubygems/releases/tag/v2.2.3)
-
-```shell
-C:\>gem install --local C:\rubygems-update-2.2.3.gem
-C:\>update_rubygems --no-ri --no-rdoc
-```
 
 ## Known issues
 

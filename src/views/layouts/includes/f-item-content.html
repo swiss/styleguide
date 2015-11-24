@@ -1,0 +1,37 @@
+{{#if data.label}}
+  <p><span class="label label-admin">{{toUpperCase data.label}}</span></p>
+{{/if}}
+
+{{#if data.help}}
+  {{{t data.help markdown=true}}}
+{{/if}}
+
+{{#if data.release}}
+  <div class="release-notes alert alert-warning">
+    {{{t data.release markdown=true}}}
+  </div>
+{{/if}}
+
+{{#unless data.empty}}
+  <div class="code-example">
+    <div class="example-output">
+      {{{material @key @root}}}
+
+      <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '(\.)' '-' @key}}" aria-expanded="true">&lt;/&gt;</button>
+    </div>
+
+    <div class="code-block collapse" id="code-{{replace '(\.)' '-' @key}}">
+      <pre><code class="language-markup">{{material @key @root}}</code></pre>
+    </div>
+  </div>
+{{/unless}}
+
+{{#if data.javascript}}
+  <div class="code-block js-example">
+    <pre><code class="language-javascript">{{renderFile 'javascripts/' data.javascript}}</code></pre>
+  </div>
+{{/if}}
+
+{{#if data.complement}}
+  {{{renderFile 'complements/' data.complement}}}
+{{/if}}

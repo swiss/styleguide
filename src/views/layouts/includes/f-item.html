@@ -1,0 +1,20 @@
+<div class="f-item-group" id="{{replace '(\.)' '-' @key}}">
+
+{{#if items}}
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading">{{name}}</h2>
+	</div>
+	{{#each items}}
+		<div class="f-item-group" id="{{replace '(\.)' '-' @key}}">
+			<div class="f-item-heading-group">
+				<h3 class="f-item-heading">{{t data.title}}</h3>
+			</div>{{> f-item-content this}}
+		</div>
+	{{/each}}
+{{else}}
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading">{{t data.title}}</h2>
+	</div>{{> f-item-content this}}
+{{/if}}
+
+</div>

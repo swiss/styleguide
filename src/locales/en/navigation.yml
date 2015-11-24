@@ -1,0 +1,47 @@
+title: Navigation Modules
+hierarchical-navigation:
+  title: Hierarchical Navigation
+  global-navigation:
+    title: Global Navigation
+    help: |
+      The global navigation shows the main points of access to a website as tabs. It is separated from the header above by a red line. The terminology used for the tabs should be chosen carefully, as this is what gives the user the first impression of the purpose of the website.
+
+      Behavior:
+      Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The background is darkened.
+
+      There are two obligatory flyout types: the teaser and the list flyout. In the teaser flyout, the second navigation level, and in the list flyout the second and third navigation levels can be selected directly. This makes it possible to skip navigation nodes for which there are no contents.
+
+      It is also possible to develop and use new flyout types. For instance, a country selection flyout was developed for the EDA.
+
+      The flyout can be closed again by clicking on the “close” function at the top right, the tab at the bottom edge, by clicking on the background, or by clicking on the active tab again.
+
+      Only on the home page are all the tabs closed. If the user navigates in the area below a tab, this tab remains actively selected.
+
+      A flyout can contain a teaser, which consists of a linked heading, an image, and a descriptive text (max. 70 characters including spaces).
+
+      Add `<div class="overlay"></div>` at the end of the `body` tag to display the gray overlay.
+    release: |
+      **2.1.0:**
+        - added the `.nav-mobile` section to the beginning of the `.list-group` element
+
+      **2.1.2:**
+        - changed `.active` class to `.current` for current page highlight in the menu
+        - added `h2.sr-only` for more screen reader clarity
+        - added h2 and label to search field on mobile
+
+      **3.0.0:**
+        - added ` <span class="sr-only">current page</span>` for current active link
+        - added `id="main-navigation"`for accessibility nav
+        - added `aria-hidden="true"` to close button
+header:
+  title: Header
+  site-search:
+    title: Site search
+    help: |
+      The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
+
+      On smartphones, the search function can be accessed via an icon in the Header.
+    release: |
+      **2.1.2:**
+        - added h2.sr-only for more screen reader clarity
+        - added label before input for screen readers

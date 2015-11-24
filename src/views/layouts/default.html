@@ -1,0 +1,67 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="{{data 'locale'}}" class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="{{data 'locale'}}" class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="{{data 'locale'}}" class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="{{data 'locale'}}" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9 ]><!--><html lang="{{data 'locale'}}" class="no-js no-ie"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{#if title}}{{t title}} &middot; {{/if}}{{t 'styleguide.title'}}</title>
+
+  <!-- Styleguide CSS -->
+	{{#if fabricator}}<link rel="stylesheet" href="{{baseurl}}/css/fabricator.css">{{/if}}
+
+	<!-- Source CSS -->
+  <link rel="stylesheet" href="{{baseurl}}/css/vendors.css">
+  <link rel="stylesheet" href="{{baseurl}}/css/admin.css">
+	<link rel="stylesheet" href="{{baseurl}}/css/print.css">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="{{baseurl}}/img/ico/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{baseurl}}/img/ico/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{baseurl}}/img/ico/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{baseurl}}/img/ico/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{baseurl}}/img/ico/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{baseurl}}/img/ico/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{baseurl}}/img/ico/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{baseurl}}/img/ico/apple-touch-icon-76x76.png">
+  <link rel="icon" type="image/png" href="{{baseurl}}/img/ico/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="{{baseurl}}/img/ico/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="{{baseurl}}/img/ico/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="{{baseurl}}/img/ico/mstile-144x144.png">
+  <meta name="msapplication-config" content="{{baseurl}}/img/ico/browserconfig.xml">
+
+  <!--[if lt IE 9]>
+    <script src="{{baseurl}}/js/polyfills.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+	{{#if fabricator}}
+		<div class="container container-main">
+      {{> f-header}}
+			{{> f-menu}}
+      <div class="container-fluid">
+	{{/if}}
+
+	{% body %}
+
+	{{#if fabricator}}
+      </div>
+
+      {{> f-footer}}
+		</div>
+	{{/if}}
+
+  <!-- Source Scripts -->
+  <script src="{{baseurl}}/js/vendors.min.js"></script>
+  <script src="{{baseurl}}/js/main.min.js"></script>
+
+  <!-- Styleguide Scripts -->
+	<script src="{{baseurl}}/js/fabricator.min.js"></script>
+
+</body>
+</html>

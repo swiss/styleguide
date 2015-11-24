@@ -1,0 +1,73 @@
+.admin-content code, .admin-content pre {
+  font-family: $codeFont !important;
+  font-size: 14px !important;
+  border: 1px solid $silver !important;
+  padding: 2px 5px !important;
+  border-radius: 2px !important;
+  background: $white !important;
+  margin: 0 !important;
+  word-break: keep-all !important;
+  word-wrap: normal !important;
+  white-space:pre !important;
+  color: $mine !important;
+}
+
+.code-example,
+.code-block {
+  margin: 30px 0;
+}
+
+.code-example .code-block {
+  margin-top: 0;
+}
+
+.code-block {
+  background: #1e221d !important;
+  color: $white !important;
+  font-size: 15px !important;
+  line-height: 1.6em !important;
+  margin-bottom: 20px !important;
+  position: relative !important;
+  width: auto !important;
+  &.collapse.in, &.collapsing {margin-left: 0 !important;}
+  &:after {
+    content: 'HTML' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    color: $asbestos !important;
+    border-right: 1px solid $asbestos !important;
+    border-bottom: 1px solid $asbestos !important;
+    border-bottom-right-radius: 4px !important;
+    padding: 5px 8px !important;
+    display: inline-block !important;
+    font-family: $mainFont !important;
+  }
+  &.js-example:after {
+    content: 'JavaScript' !important;
+  }
+  .highlight {
+    background: #1e221d !important;
+  }
+  pre, code {
+    font-family: $codeFont !important;
+    width: auto !important;
+    background: #1e221d !important;
+    word-break: keep-all !important;
+    word-wrap: normal !important;
+    white-space:pre !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    font-size: 14px !important;
+    position: relative !important;
+    line-height: 1.6em !important;
+    color: $white !important;
+    border: 1px solid  #1e221d !important;
+    overflow: visible !important;
+  }
+  pre {
+    padding: 50px 4% 40px !important;
+    overflow-x: auto !important;
+  }
+  @media only screen and (max-width: 900px) {padding: 50px 10px !important;}
+}

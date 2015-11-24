@@ -1,0 +1,22 @@
+---
+title: navigation.header.site-search.title
+help: navigation.header.site-search.help
+release: navigation.header.site-search.release
+javascript: site-search.js
+complement: site-search.html
+label: cd
+---
+
+<!-- Use normal `container` instead of `container-fluid` -->
+<div class="container-fluid">
+
+  <header>
+    <form class="form-horizontal form-search pull-right" role="form">
+      <h2 class="sr-only">Search</h2>
+      <label for="search-field" class="sr-only">Search:</label>
+      <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+    </form>
+  </header>
+  <nav class="nav-main"></nav>
+
+</div>
