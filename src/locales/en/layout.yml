@@ -42,3 +42,17 @@ general:
     title: Captioned image
   image-format:
     title: Image format
+  icons:
+    title: Icons
+    help: |
+      The icons used are one-color and two-dimensional. They are provided as a web font which is to be found in the resources as a TrueType font.
+
+      For an **only-icon** element, add the class to an empty `<span>`.
+
+      For an **inside-icon** element, use the global `.icon` and `.icon--before` or `.icon--after` class followed by the more specific class.
+    release: |
+      **Accessibility**
+
+      If the element should be readable by a screen reader and/or is semantically important, be sure to add the appropriate `aria-` attribute. Otherwise, add an `aria-hidden="true"` attribute to hide it and avoid useless clutter of informations.
+
+      You could also add a `<span class="sr-only">icon description</span>` depending on your needs.
