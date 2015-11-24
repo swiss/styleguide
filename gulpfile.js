@@ -262,7 +262,7 @@ gulp.task('assemble', function(done) {
           args = args.join('.');
 
           // Remove any digits coming from the component key prefix
-          args = args.replace(/(\.\d+)/g, '');
+          args = args.replace(/(\d+\.)/g, '');
 
           // Look for the translation in the dictionnary
           var value = args.trim().split('.').reduce(function(dict, key){
@@ -301,8 +301,8 @@ gulp.task('assemble', function(done) {
 
           return fs.readFileSync(fileName, 'utf-8');
         },
-        replace: function(substr, newSubstr, str) {
-          return str.replace(substr, newSubstr);
+        replace: function(regex, newSubstr, str) {
+          return str.replace(new RegExp(regex, 'g'), newSubstr);
         },
         modulo: function(index, divider, block) {
           if ((parseInt(index,10) + 1) % divider === 0) {
