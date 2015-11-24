@@ -4,6 +4,60 @@ form-elements:
   fieldsets:
     title: Fieldsets
     help: Fieldsets are used to separate content in a form.
+  forms:
+    title: Forms
+    help: |
+      You can use `.form-horizontal` on `<form>` to display the label aligned at the left of the input. `.form-group` then behaves like a `.row`.
+
+      Input boxes allow the user to input content (e.g. name).
+      For inputting dates, an HTML5 solution is available. With browsers that do not support HTML5 the date has to be input manually.
+      The following has to be taken into account for barrier-free accessibility:
+      The name of the form and the form box must be linked to a label. A label ID may only appear once on a page. Required fields must have sensible names or, preferably, use WAI.
+
+      You can use the `.has-error`, `.has-warning` or `.has-success` classes to send feedback to the user.
+
+      HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, and `color`
+    release: |
+      **2.1.8**
+        - added **IDs** to label and help text, `aria-labelledby` and `role` to buttons for a better accessibility
+        - added `<fieldset>` and `<legend class="hidden">` around `.form-group` for a better accessibility
+
+      **2.6.0**
+        - added a datepicker calendar plugin as an option. Use this in your script to initiate the plugin on the fields you need. See the [official Pikaday documentation](https://github.com/dbushell/Pikaday).
+  selects:
+    title: Selects
+    help: |
+      A drop down list box allows the user to select an item from a predefined list. This list appears in a menu after the element has been clicked on. After the selection has been made, the result is displayed.
+
+      With more than 10 options in the select, a search field is setup at the top of the dropdown list.
+
+      You can also add the `multiple` attribute to `<select>` and allow the user to select more than one option at a time, displaying them as tags in the input field.
+    release: |
+      **2.1.2:**
+
+      - added a label before select for screen readers
+  checkboxes:
+    title: Checkboxes
+    help: Checkboxes are used when one or more elements are to be selected from a predefined list of items.
+  radios:
+    title: Radios
+    help: Radio buttons allow the user to make an unequivocal choice from a predefined list. Radio buttons can also be structured in groups. Only one element in a group may be selected.
+  buttons:
+    title: Buttons
+    help: |
+      A differentiation is made between primary and secondary buttons. The primary button is used for the main action (e.g. send), which can also be activated via the Enter key. The secondary button is used for less important actions, such as "Cancel".
+
+      The standard button can be used for a variety of actions. Buttons can also be grouped in a button group. As with the radio button groups, only one element can be selected within such a group.
+
+      Use the class `.btn` to create a styled button. You can use it on a `<input>`, `<button>` or `<a>` element. There are 4 button themes:
+  button-groups:
+    title: Button groups
+    help: |
+      A differentiation is made between primary and secondary buttons. The primary button is used for the main action (e.g. send), which can also be activated via the Enter key. The secondary button is used for less important actions, such as "Cancel".
+
+      The standard button can be used for a variety of actions. Buttons can also be grouped in a button group. As with the radio button groups, only one element can be selected within such a group.
+
+      Use the class `.btn` to create a styled button. You can use it on a `<input>`, `<button>` or `<a>` element. There are 4 button themes:
 general:
   title: General
   logo:
