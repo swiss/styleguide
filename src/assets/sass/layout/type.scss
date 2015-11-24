@@ -9,39 +9,7 @@
  * Licensed under MIT
  =========================================================== */
 
- @charset "UTF-8";
-
-/*doc
----
-title: Paragraphs
-name: b-paragraphs
-category: Base Layout - Typography
----
-
-<span class="label label-admin">CD</span>
-
-## Lead
-A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text.
-
-A lead of this sort is formatted bold.
-
-element                          | Effect
---------------------------------:| -----------------
-`<p class="lead"></p>`           | Leading emphasized paragraph
-`<strong></strong>`              | Emphasized bold element in the text
-`<em></em>`                      | Emphasized italic element in the text
-
-```html_example
-<p class="lead">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, reprehenderit, quas, facere, placeat eveniet quia consequuntur est sint necessitatibus at perferendis modi. Officiis, mollitia deleniti nostrum. Temporibus, architecto fugit eveniet.
-</p>
-
-<p>
-  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Quam, <em>sapiente</em>, fuga provident illum adipisci tenetur nisi vero minima. Id, molestias, assumenda hic minima perspiciatis dolorem repellendus vero maiores beatae enim?
-</p>
-```
-
-*/
+@charset "UTF-8";
 
 @media only screen and (max-width: $screen-sm-max) {
   body {font-size: 12px;}

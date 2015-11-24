@@ -14,3 +14,10 @@ typography:
       To conform accessibiliity requirement titles have to respect a sequence from 1 to 6
 
       Headings can also have links and are then formatted in blue.
+  paragraphs:
+    title: Paragraphs
+    help: |
+      ## Lead
+      A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text.
+
+      A lead of this sort is formatted bold.
