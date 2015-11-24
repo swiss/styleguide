@@ -12,7 +12,7 @@
 @charset "UTF-8";
 
 body, .body {
-  background: url('/img/bg-striped.png') repeat;
+  background: url('../img/bg-striped.png') repeat;
 }
 
 .overlay {
@@ -23,7 +23,7 @@ body, .body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url('/img/overlay.png') repeat;
+  background: url('../img/overlay.png') repeat;
   z-index: 999;
 }
 
