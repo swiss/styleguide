@@ -113,3 +113,105 @@ general:
   form-icons:
     title: Form icons
     help: Use the global `.form-icon` class followed by the more specific class
+tables:
+  title: Tables
+  table-standard:
+    title: Standard table
+    help: |
+      The standard table consists of the table title `<caption>`, the table head `<thead>`, the table body `<tbody>`, and the table foot `<tfoot>`.
+
+      Add `.table-bordered` for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.
+    release: |
+      **2.1.8**
+
+        - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+        - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
+  table-cycle:
+    title: Cycle table (single)
+  table-cycle-pairs:
+    title: Cycle table (pairs)
+  table-with-caption:
+    title: Table with caption
+  table-zebra:
+    title: Table with Zebra Striping
+    help: The zebra stripes are shown when the `table-striped` class is added to the `<table>`.
+    release: |
+      **2.1.8**
+
+        - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+        - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
+  table-zebra-cycle-single:
+    title: Zebra cycle table (single)
+  table-zebra-cycle-pairs:
+    title: Zebra cycle table (pairs)
+  table-zebra-caption:
+    title: Zebra table with caption
+  table-highlight:
+    title: Table with Highlighting
+    help: This table is based on the standard table but with active class on cells or on row.
+    release: |
+      **2.1.8**
+
+        - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+        - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
+  table-highlight-cycle:
+    title: Highlighted cycle table (single)
+  table-highlight-cycle-pairs:
+    title: Highlighted cycle table (pairs)
+  table-highlight-caption:
+    title: Highlighted table with caption
+  table-sortable:
+    title: Sortable table
+    help: The sortable table automatically formats the column in which the data has been sorted. You just have to use the `table-sort` class.
+  table-expandable:
+    title: Table with expandable rows
+    help: Some tables can be expanded to show details of a data set.
+    release: |
+      **2.1.8**
+
+        - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+        - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
+
+      **2.5.0**
+
+        - wrapped text in `<a/>` in `<th/>` tag if it is a collapse link
+  table-ruled:
+    title: Ruled table
+    help: Ruled tables are particularly suitable for presenting simple 1:1 relationships. The ruled format is set by adding the `table-simple` to the table tag.
+    release: |
+      **2.1.8**
+
+        - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+        - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
+  table-unruled:
+    title: Unruled table
+    help: Unruled tables are suitable for presenting properties, e.g. of a publication. A simple unruled table is formatted with the class `table-naked`.
+    release: |
+      **2.1.8**
+
+        - added `columnheader` and `aria-describedby` for better accessibility
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+        - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
