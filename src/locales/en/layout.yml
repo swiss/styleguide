@@ -228,10 +228,8 @@ typography:
   paragraphs:
     title: Paragraphs
     help: |
-      ## Lead
-      A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text.
-
-      A lead of this sort is formatted bold.
+      ### Lead
+      A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text. A lead of this sort is formatted bold.
   text-elements:
     title: Text elements
     help: The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.
@@ -241,22 +239,12 @@ typography:
     title: Lists
     help: |
       Lists are used to structure contents and to provide the user with a quick overview of a topic.
-
-      The following types of lists are used:
-
-      - Ordered and unordered lists
-      - Definition lists
-      - Link lists (with internal and external links, which can also be mixed)
-      - Anchor lists
-      - Download lists
-
-      ### Unordered lists & order lists
-  definition-lists:
-    title: Definition lists
+  unstyled-lists:
+    title: Unstyled lists
     help: |
       To use with links. Outputs a more readable and clickable list of links. Just add the `.list-unstyled` class.
-
-      ### Unstyled lists & Definition lists
+  definition-lists:
+    title: Definition lists
   links:
     title: Links
     help: |
