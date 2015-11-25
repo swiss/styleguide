@@ -11,27 +11,6 @@
 
 @charset "UTF-8";
 
-/*doc
----
-title: Anchor links
-name: b-anchorlinks
-category: Navigation modules - Content Navigation
----
-
-<span class="label label-admin">FLEX</span>
-
-An anchor link is a jump label which allows the user to navigate to a particular position within the page currently in use.
-
-```html_example
-<ul>
-  <li class="anchor"><a class=" icon icon--before icon--root" href="#">Link 1</a></li>
-  <li class="anchor"><a class=" icon icon--before icon--root" href="#">Link 2</a></li>
-  <li class="anchor"><a class=" icon icon--before icon--root" href="#">Link 3</a></li>
-</ul>
-```
-
-*/
-
 .anchor {
   list-style-type: none;
   .icon:before {

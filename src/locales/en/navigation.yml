@@ -218,6 +218,31 @@ header:
       **2.5.0:**
 
         - modified markup of dropdown list. Please refer to how it is in the example below
+content-navigation:
+  title: Content navigation
+  pagination:
+    title: Pagination
+    help: The paging function allows the user to browse through a large number of elements which are arranged into pages. The element appears above and below the elements list.
+    release: |
+      **2.1.8**
+
+      - added ` <span class="sr-only">current page</span>` and `aria-disabled="true"` for accessibility
+      - added `title`to empty link (link only with icon)
+      - added `.clearfix`and `.pull-left` inside of `.pagination-container
+  anchor-links:
+    title: Anchor links
+    help: An anchor link is a jump label which allows the user to navigate to a particular position within the page currently in use.
+  process-navigation:
+    title: Process navigation
+    help: Process navigation is used in connection with forms that are spread over several pages. The active process stage is marked in red. The previous steps are clickable and lead the user back to the selected process stage.
+  tab-navigation:
+    title: Tab navigation
+    help: |
+      Tab navigation is used to group related contents locally within the same page. By way of exception, the font color of the tabs is dark gray (rather than blue) here. The active tab is highlighted with the red bar and the white background color.
+
+      Please note that the contents in the tabs are only used for presentation purposes here. The actual contents are contingent on the purpose of their use (e.g. search results or “further information”).
+
+      Reference in detailed specification: Chapter **2.5.4**
 footer:
   title: Footer
   site-map:

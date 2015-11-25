@@ -11,37 +11,6 @@
 
 @charset "UTF-8";
 
-/*doc
----
-title: Process navigation
-name: c-process-navigation
-category: Navigation modules - Content Navigation
----
-
-<span class="label label-admin">FLEX</span>
-
-Process navigation is used in connection with forms that are spread over several pages. The active process stage is marked in red. The previous steps are clickable and lead the user back to the selected process stage.
-
-```html_example
-<nav class="nav-process">
-  <ul>
-    <li>
-      <a href="#">Step 1</a>
-    </li>
-    <li>
-      <a href="#">Step 2</a>
-    </li>
-    <li class="active">
-      <a href="#">Step 3</a>
-    </li>
-    <li class="disabled">
-      <a href="#">Step 4</a>
-    </li>
-  </ul>
-</nav>
-```
-*/
-
 .nav-process {
   width: 100%;
   height: 30px;
