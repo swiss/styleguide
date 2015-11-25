@@ -11,3 +11,20 @@ widgets:
       **Accessibility**
 
       You can add a `<span class="sr-only">alert type</span>` if the `role="alert"` is not enough information for the end user.
+content-containers:
+  title: Content containers
+  elements-list:
+    title: Elements list
+    help: The elements list is a very generic element that groups content elements in a list. The elements shown here are merely examples.
+  further-information:
+    title: Further Information
+    help: |
+      Below the content of a page, additional information may be shown. This has the purpose of presenting content (e.g. publications, news, or links) that is directly related to the content that is being shown, but which is not mentioned explicitly in the text (in which case it would have an embedded link). This content is arranged in tabs.
+
+      This feature is a specific type of horizontal tab navigation. Up to five tabs can be used. The names to be given to the tabs are not predefined. However, the terminology used must be uniform and used consistently throughout a website. The following tabs are possible, for instance: "Documents and Publications", "Services", "Legal Framework", "Links", and "News".
+  collapsible-panel:
+    title: Collapsible panel
+    help: |
+      The collapsible panel is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.
+
+      Add `.collapsed` to link for it to change the icon direction when collapsing.
