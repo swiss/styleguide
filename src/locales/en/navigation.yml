@@ -33,6 +33,93 @@ hierarchical-navigation:
         - added ` <span class="sr-only">current page</span>` for current active link
         - added `id="main-navigation"`for accessibility nav
         - added `aria-hidden="true"` to close button
+  breadcrumb:
+    title: Breadcrumb
+    help: |
+      The breadcrumb is a line of text below the header which shows the user the path, i.e. the position of the web page currently being used within the information architecture of the website. If there is no global navigation feature, the breadcrumb navigation is placed immediately below the red line which closes the header section.
+
+      Thanks to the breadcrumb, users can see at a glance where they are on the site map.
+
+      When the user clicks on a navigation point in the path, the appropriate page opens. When the user clicks on a link on the first or second navigation level (pages which do not have content of their own), an overview page without a navigation pane is opened.
+
+      On smartphones there is always a link at the end of the page to the home page and to the level above. There is no complete breadcrumb on the smartphone version.
+  back-to-overview:
+    title: Back to Overview
+    help: |
+      The “back to overview” navigation links pages that do not appear in the navigation to their “parent page”. An example of this can be found in the details page of the publications section.
+
+      The “back to overview” link appears before the page title at the top of the content pane, and at the end of the page before the page-end navigation.
+  page-navigation-list:
+    title: Page Navigation List (Left Sidebar Navigation)
+    help: |
+      The sub-navigation on the left sidebar of the content section is a so-called dynamic navigation. It always only shows the page that has currently been selected and the navigation options that page has to offer:
+
+      * Navigation header: the name of the active page has a color bar and is highlighted typographically
+      * “Back” link: above the navigation header, there is a link leading back to the previous navigation level
+      * Sub-pages: below the navigation header, all of the lower navigation levels are listed as links
+      * Sister pages: pages located on the same navigation level as the active page are not listed here. They are accessed via the global navigation or the “back” link. Only on the lowest navigation level, where there are no other sub-pages, are sister pages shown – if there are any.
+
+      ### Behavior
+
+      If a link to a sub-page is clicked on, a new page is loaded. On this page, the selected page is shown as the navigation header. The “back” link leads to the navigation level above, i.e. to the page on which the user has just been. Below the navigation header there are links to the lower navigation levels.
+
+      If a page on the same navigation level as the active page (a sister page) is to be accessed, this is either done via back-linking to the page above or via the global navigation.
+
+      If a page on the lowest navigation level is clicked on (i.e. the selected page has no sub-pages), the navigation is not replaced. Instead, the page currently selected is marked with a red line and the other pages on the same level (sister pages) remain visible.
+
+      ![example](../styleguide-img/navigation_supermarkt.png)
+
+      As long as a page has sub-pages, the navigation head changes dynamically during the navigation (drilling down) process (Step 1). When the lowest level of the navigation tree has been reached, and the pages no longer have sub-pages, only the display changes (Step 2).
+
+      ### Implementation for Smartphones
+
+      On smartphones, the navigation is shown at the end of the page above the footer The name of the active page is hidden.
+
+      ![Left nav on mobile](../styleguide-img/mobile_navi_3.png)
+
+      Navigation below the content level on a smartphone with links to the home page, the navigation level above, and to further pages.
+    release: |
+      **2.1.0:**
+
+        - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
+        - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
+
+      **2.3.0:**
+
+        - added `aria-selected="true"` for current link
+        - removed first button in the list (looked like a back link)
+        - changed label of back button in drilldown sub from "Back" to title
+          of section
+
+      **2.5.0:**
+
+        - allow nested `<ul/>` lists in `.nav-page-list` elements
+
+      **2.5.2:**
+
+        - fix error with active state of `.list-emphasis`, **please always wrap the text of this list element with a `span` or a `a`**.
+  faceted-page-navigation:
+    title: Faceted Page Navigation
+    help: |
+      Faceted navigation serves the purpose of filtering elements (e.g. in a product catalog) on the basis of predefined criteria, so-called facets. These facets are grouped by facet types. A facet which contains subfacets is marked with a triangle.
+
+      ### Behavior:
+
+      After a page with faceted navigation has been loaded, a list containing the facets of the highest level of facet types remains open. The user can open or close any number of other facet types.
+
+      For every facet type, the user can only open one facet; the other facets are hidden. The selected facet type can then no longer be closed.
+
+      If a facet has subfacets, these subfacets are shown after the facet has been selected. The user can then further limit the selection with the help of the subfacets. A selection can be undone with a delete button.
+
+      The contents of the page are adapted to show the selection made in the faceted navigation, and are constantly updated.
+
+      ### Implementation for Smartphones:
+
+      On smartphones, the navigation is accessed via a filter link, and it behaves in the same way as the faceted navigation for desktop computers. Unlike in the desktop version, the contents of the page are only updated when the user closes the faceted navigation.
+    release: |
+      **3.0.0:**
+
+      - added `aria-selected="true"` for current link
 header:
   title: Header
   site-search:
