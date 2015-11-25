@@ -243,3 +243,35 @@ content-navigation:
       Please note that the contents in the tabs are only used for presentation purposes here. The actual contents are contingent on the purpose of their use (e.g. search results or “further information”).
 
       Reference in detailed specification: Chapter **2.5.4**
+footer:
+  title: Footer
+  site-map:
+    title: Site Map and Partners
+    help: |
+      Links are placed in the footer to make them equally accessible on all pages. These can take the form of a site map linking to pages within the website currently being used, or they can refer to external contents, such as partner websites. If required, the footer can be divided into various sections.
+
+      ### Implementation for Smartphones:
+
+      On smartphones, some of the functions from the header, e.g. service navigation or the full form of the Confederation logo, are moved to the footer.
+    release: |
+      **2.1.0:**
+
+      - placed links in a `ul.list-unstyled` list
+      - changed `.col-sm-3` in `.col-sm-4.col-md-3` for more readability on small size and removed useless `.row` wrapper
+
+      **2.5.0:**
+
+      - wrapped footer columns in a `div.row`
+  social-media:
+    title: Social Media
+    help: The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) are listed in a separate section of the footer.
+    release: |
+      **2.1.0:**
+
+      - added the `.links-social` class to the `<nav/>` element containing the social links
+  footbar:
+    title: Footbar
+    help: |
+      In the footbar below the footer there is a left-justified copyright notice and right-justified links to “further legal information” and “legal notice”. These notices are mandatory for legal reasons.
+
+      The footbar is a CD element. Its use is mandatory, and its representation may not be changed in any way.
