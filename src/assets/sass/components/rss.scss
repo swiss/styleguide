@@ -11,37 +11,6 @@
 
 @charset "UTF-8";
 
-
-/*doc
----
-title: RSS Feed
-name: j-rssfeed
-category: Content Modules - Teaser
----
-
-<span class="label label-admin">FLEX</span>
-
-An RSS feed is a very specialized teaser with which only RSS feeds can be accessed.
-
-The title always consists of an RSS icon and the letters “RSS”. A list of links can be found below this.
-
-```html_example
-<div class="col-sm-4">
-  <div class="bordered">
-    <div class="rss well well-white">
-      <h4 class="icon icon--before icon--rss">RSS</h4>
-      <ul class="list-unstyled">
-        <li><a href="#">News</a></li>
-        <li><a href="#">Agenda</a></li>
-        <li><a href="#">Events</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-```
-
-*/
-
 .rss {
   padding-top: 0;
   &.well {
