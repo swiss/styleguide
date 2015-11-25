@@ -9,85 +9,7 @@
  * Licensed under MIT
  =========================================================== */
 
- @charset "UTF-8";
-
-/*doc
----
-title: Standard table
-name: a-standard-table
-category: Base Layout - Tables
----
-
-<span class="label label-admin">FLEX</span>
-
-The standard table consists of the table title `<caption>`, the table head `<thead>`, the table body `<tbody>`, and the table foot `<tfoot>`.
-
-Add `.table-bordered` for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.
-
-
-A simple example :
-
-<br>
-<div class="alert alert-warning">
-
-**2.1.8**
-
-  - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
-
-<br>**2.1.9**
-
-  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
-  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
-</div>
-
-```html_example
-<table class="table table-bordered text-right">
-  <caption>Game animals shot in Switzerland</caption>
-  <thead>
-    <tr role="columnheader">
-      <th></th>
-      <th id="year-2000">2000</th>
-      <th id="year-2010">2010</th>
-      <th id="year-2011">2011</th>
-      <th id="year-2012">2012</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="text-left" role="rowheader">Boars</th>
-      <td>4'160</td>
-      <td>7'647</td>
-      <td>4'726</td>
-      <td>10'650</td>
-    </tr>
-    <tr>
-      <th class="text-left" role="rowheader">Chamois</th>
-      <td>16'625</td>
-      <td>13'427</td>
-      <td>13'413</td>
-      <td>13'350</td>
-    </tr>
-    <tr>
-      <th class="text-left" role="rowheader">Fox</th>
-      <td>42'221</td>
-      <td>31'044</td>
-      <td>27'094</td>
-      <td>35'616</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-
-      <td></td>
-      <td>2000</td>
-      <td>2010</td>
-      <td>2011</td>
-      <td>2012</td>
-    </tr>
-  </tfoot>
-</table>
-```
-*/
+@charset "UTF-8";
 
 table caption {
   font-weight: 700;
@@ -134,81 +56,6 @@ tr, td, th {
 }
 
 
-/*doc
----
-title: Table with Zebra Striping
-name: b-zebra-table
-category: Base Layout - Tables
----
-
-<span class="label label-admin">FLEX</span>
-
-The zebra stripes are shown when the `table-striped` class is added to the `<table>`.
-
-A simple example :
-
-<br>
-<div class="alert alert-warning">
-
-**2.1.8**
-
-  - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
-
-<br>**2.1.9**
-
-  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
-  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
-</div>
-
-```html_example
-<table class="table table-bordered table-striped text-right">
-  <caption>Game animals shot in Switzerland</caption>
-  <thead>
-    <tr role="columnheader">
-      <th></th>
-      <th id="year-2000">2000</th>
-      <th id="year-2010">2010</th>
-      <th id="year-2011">2011</th>
-      <th id="year-2012">2012</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="text-left" role="rowheader">Boars</th>
-      <td>4'160</td>
-      <td>7'647</td>
-      <td>4'726</td>
-      <td>10'650</td>
-    </tr>
-    <tr>
-      <th class="text-left" role="rowheader">Chamois</th>
-      <td>16'625</td>
-      <td>13'427</td>
-      <td>13'413</td>
-      <td>13'350</td>
-    </tr>
-    <tr>
-      <th class="text-left" role="rowheader">Fox</th>
-      <td>42'221</td>
-      <td>31'044</td>
-      <td>27'094</td>
-      <td>35'616</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td></td>
-      <td>2000</td>
-      <td>2010</td>
-      <td>2011</td>
-      <td>2012</td>
-    </tr>
-  </tfoot>
-</table>
-```
-
-*/
-
 .table-striped {
   > tbody > tr:nth-of-type(odd) {
     background-color: transparent;
@@ -224,82 +71,6 @@ A simple example :
 }
 
 
-
-/*doc
----
-title: Table with Highlighting
-name: c-highlight-table
-category: Base Layout - Tables
----
-
-<span class="label label-admin">FLEX</span>
-
-This table is based on the standard table but with `active` class on cells or on row.
-
-A simple example :
-
-<br>
-<div class="alert alert-warning">
-
-**2.1.8**
-
-  - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
-
-<br>**2.1.9**
-
-  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
-  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
-</div>
-
-```html_example
-<table class="table table-bordered text-right">
-  <caption>Game animals shot in Switzerland</caption>
-  <thead>
-    <tr role="columnheader">
-      <th></th>
-      <th id="year-2000">2000</th>
-      <th id="year-2010">2010</th>
-      <th id="year-2011" class="active">2011</th>
-      <th id="year-2012">2012</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="text-left" role="rowheader">Boars</th>
-      <td>4'160</td>
-      <td>7'647</td>
-      <td class="active">4'726</td>
-      <td>10'650</td>
-    </tr>
-    <tr>
-      <th class="text-left" role="rowheader">Chamois</th>
-      <td>16'625</td>
-      <td>13'427</td>
-      <td class="active">13'413</td>
-      <td>13'350</td>
-    </tr>
-    <tr class="active">
-      <th class="text-left" role="rowheader">Fox</th>
-      <td>42'221</td>
-      <td>31'044</td>
-      <td class="active">27'094</td>
-      <td>35'616</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td></td>
-      <td>2000</td>
-      <td>2010</td>
-      <td class="active">2011</td>
-      <td>2012</td>
-    </tr>
-  </tfoot>
-</table>
-```
-
-*/
-
 tr.active {
   th {background: $solitude !important;}
   tbody & th {background: $clear-day !important;}
@@ -310,66 +81,6 @@ th.active {background: $solitude !important;}
 tbody th.active {background: $clear-day !important;}
 td.active {background: $clear-day !important;}
 tfoot td.active {background: $solitude !important;}
-
-
-/*doc
----
-title: Sortable table
-name: d-sortable-table
-category: Base Layout - Tables
----
-
-<span class="label label-admin">FLEX</span>
-
-The sortable table automatically formats the column in which the data has been sorted. You just have to use the `table-sort` class
-
-```html_example
-<table class="table table-bordered table-sort text-right">
-  <caption>Game animals shot in Switzerland</caption>
-  <thead>
-    <tr role="columnheader">
-      <th></th>
-      <th id="year-2000">2000</th>
-      <th id="year-2010">2010</th>
-      <th id="year-2011">2011</th>
-      <th id="year-2012">2012</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th class="text-left" role="rowheader">Boars</th>
-      <td>4'160</td>
-      <td>7'647</td>
-      <td>4'726</td>
-      <td>10'650</td>
-    </tr>
-    <tr>
-      <th class="text-left" role="rowheader">Chamois</th>
-      <td>16'625</td>
-      <td>13'427</td>
-      <td>13'413</td>
-      <td>13'350</td>
-    </tr>
-    <tr>
-      <th class="text-left" role="rowheader">Fox</th>
-      <td>42'221</td>
-      <td>31'044</td>
-      <td>27'094</td>
-      <td>35'616</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td></td>
-      <td>2000</td>
-      <td>2010</td>
-      <td>2011</td>
-      <td>2012</td>
-    </tr>
-  </tfoot>
-</table>
-```
-*/
 
 
 .table-sort thead th {
@@ -398,94 +109,6 @@ The sortable table automatically formats the column in which the data has been s
 }
 
 
-/*doc
----
-title: Table with Expandable Rows
-name: e-expandable-table
-category: Base Layout - Tables
----
-
-<span class="label label-admin">FLEX</span>
-
-Some tables can be expanded to show details of a data set
-
-<br>
-<div class="alert alert-warning">
-
-**2.1.8**
-
-  - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
-
-<br>**2.1.9**
-
-  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
-  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
-
-<br>**2.5.0**
-
-  - wrapped text in `<a/>` in `<th/>` tag if it is a collapse link
-</div>
-
-```html_example
-
-<table class="table table-bordered text-right">
-  <caption>Game animals shot in Switzerland</caption>
-  <thead>
-    <tr role="columnheader">
-      <th></th>
-      <th id="year-2000">2000</th>
-      <th id="year-2010">2010</th>
-      <th id="year-2011">2011</th>
-      <th id="year-2012">2012</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th role="rowheader"><a href="#animals" class="text-left icon icon--before collapsed" data-toggle="collapse">Animals</a></th>
-      <td>63'006</td>
-      <td>52'118</td>
-      <td>45'233</td>
-      <td>59'616</td>
-    </tr>
-  </tbody>
-  <tbody id="animals" class="collapse">
-    <tr>
-      <th class="text-left" role="rowheader">Boars</th>
-      <td>4'160</td>
-      <td>7'647</td>
-      <td>4'726</td>
-      <td>10'650</td>
-    </tr>
-    <tr>
-      <th class="text-left" role="rowheader">Chamois</th>
-      <td>16'625</td>
-      <td>13'427</td>
-      <td>13'413</td>
-      <td>13'350</td>
-    </tr>
-    <tr>
-      <th class="text-left" role="rowheader">Fox</th>
-      <td>42'221</td>
-      <td>31'044</td>
-      <td>27'094</td>
-      <td>35'616</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td></td>
-      <td>2000</td>
-      <td>2010</td>
-      <td>2011</td>
-      <td>2012</td>
-    </tr>
-  </tfoot>
-</table>
-
-```
-*/
-
-
 .table {
   th[data-toggle="collapse"], td[data-toggle="collapse"] {
     color: $cerulean;
@@ -502,58 +125,6 @@ Some tables can be expanded to show details of a data set
   }
 }
 
-
-/*doc
----
-title: Ruled Table
-name: f-ruled-table
-category: Base Layout - Tables
----
-
-<span class="label label-admin">FLEX</span>
-
-Ruled tables are particularly suitable for presenting simple 1:1 relationships. The ruled format is set by adding the `table-simple` to the table tag.
-
-<br>
-<div class="alert alert-warning">
-
-**2.1.8**
-
-  - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
-
-<br>**2.1.9**
-
-  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
-  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
-</div>
-
-```html_example
-<table class="table table-simple">
-  <caption>Contact</caption>
-  <thead>
-    <tr role="columnheader">
-      <th id="name">Name</th>
-      <th id="mail">E-mail</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Hans Muster</td>
-      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
-    </tr>
-    <tr>
-      <td>Hans Muster</td>
-      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
-    </tr>
-    <tr>
-      <td>Hans Muster</td>
-      <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
-    </tr>
-  </tbody>
-</table>
-```
-
-*/
 
 .table-simple thead tr {
   th, td {border: none;}
@@ -573,57 +144,6 @@ Ruled tables are particularly suitable for presenting simple 1:1 relationships. 
 }
 
 
-/*doc
----
-title: Unruled Table
-name: g-unruled-table
-category: Base Layout - Tables
----
-
-<span class="label label-admin">FLEX</span>
-
-Unruled tables are suitable for presenting properties, e.g. of a publication. A simple unruled table is formatted with the class `table-naked`.
-
-<br>
-<div class="alert alert-warning">
-
-**2.1.8**
-
-  - added `columnheader` and `aria-describedby` for better accessibility
-
-<br>**2.1.9**
-
-  - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
-  - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
-</div>
-
-```html_example
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-5">
-
-      <table class="table table-naked">
-        <thead>
-          <tr role="columnheader">
-            <th id="name">Name</th>
-            <th id="mail">E-mail</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Hans Muster</td>
-            <td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-</div>
-```
-
-*/
-
 .table-naked {
   border-collapse: separate;
   border-spacing: 10px 0px;
@@ -632,5 +152,3 @@ Unruled tables are suitable for presenting properties, e.g. of a publication. A 
     border: none;
   }
 }
-
-

@@ -315,9 +315,21 @@ gulp.task('assemble', function(done) {
   done();
 });
 
-// Copy all the framework required files to the styleguide folder
-gulp.task('copy', function() {
-  return gulp.src([config.framework.dest + '/**/*', 'styleguide-img/**/*', 'src/index.html'])
+// Copy all the required files to the styleguide folder
+gulp.task('copy', ['copy:framework', 'copy:assets', 'copy:landing']);
+
+gulp.task('copy:framework', function() {
+  return gulp.src([config.framework.dest + '/**/*'])
+    .pipe(gulp.dest(config.styleguide.dest));
+});
+
+gulp.task('copy:assets', function() {
+  return gulp.src(['styleguide-img/**/*'])
+    .pipe(gulp.dest(config.styleguide.dest + '/styleguide-img'));
+});
+
+gulp.task('copy:landing', function() {
+  return gulp.src(['src/index.html'])
     .pipe(gulp.dest(config.styleguide.dest));
 });
 
@@ -363,7 +375,7 @@ gulp.task('serve', ['assemble-everything'], function () {
   });
 
   gulp.task('assemble:watch', ['assemble-everything'], reload);
-  gulp.watch(['src/**/*.{html,md,json,yml}', 'src/**/**/*.{html,js}'], ['assemble:watch']);
+  gulp.watch(['src/**/*.{html,md,json,yml}'], ['assemble:watch']);
 
   gulp.watch(['src/assets/sass/**/*.scss', 'src/assets/fabricator/styles/**/*.scss'], function() {
     runSequence('styles', 'print', 'assemble:watch');
