@@ -60,4 +60,7 @@ typography:
     help: The top link is the counterpart to the anchor link. It takes the user back to the beginning of the page from any position in the page currently in use.
   end-page-link:
     title: End page link
-    help: The link at the end of the page is a special top link. Each page (with the exception of the home page and the level 1 pages) has a page-end link at the bottom of the page. It contains a link to the top of the page currently in use, together with the date of the last update of the content on this page.
+    help: |
+      The link at the end of the page is a special top link. Each page (with the exception of the home page and the level 1 pages) has a page-end link at the bottom of the page. It contains a link to the top of the page currently in use, together with the date of the last update of the content on this page.
+
+      For a print button, check the buttons section.
