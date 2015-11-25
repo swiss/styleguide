@@ -11,56 +11,6 @@
 
  @charset "UTF-8";
 
-/*doc
----
-title: Links
-name: f-links
-category: Base Layout - Typography
----
-
-<span class="label label-admin">CD</span>
-
-Links are formatted blue by default and are not underlined. When a mouseover is used, they become red.
-
-There are two exceptions to this rule:
-If there is a link in the running text, the linked text is underlined. Links in a navigation element (e.g. in the global navigation) are gray, and not blue. There are separate descriptions of how these special links are presented and how they behave at the appropriate places in these Web Guidelines.
-
-You can  use the `.icon` classes to add some icons after or before the link. Use `.icon--external` if the link is external.
-
-```html_example
-<p>An <a href="#">internal link</a> in a paragraph.</p>
-
-<p>An <a href="#" class="icon icon--after icon--external">external link</a> in a paragraph.</p>
-<a href="#" class="icon icon--before icon--cart">link with icon</a><br>
-<a href="#" class="icon icon--before icon--pdf">link with icon lorem <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></a><br>
-```
-
-## Top Link
-
-<span class="label label-admin">FLEX</span>
-
-The top link is the counterpart to the anchor link. It takes the user back to the beginning of the page from any position in the page currently in use.
-
-```html_example
-<!-- Link to top -->
-<small class="pull-right"><a href="#" class="icon icon--before icon--power">Back to top</a></small>
-```
-
-## End Page Link
-
-<span class="label label-admin">FLEX</span>
-
-The link at the end of the page is a special top link. Each page (with the exception of the home page and the level 1 pages) has a page-end link at the bottom of the page. It contains a link to the top of the page currently in use, together with the date of the last update of the content on this page.
-
-```html_example
-<!-- End Page Link -->
-<small class="hidden-print"><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small>
-```
-
-For a print button, check the [buttons section](base_layout_-_forms_elements.html#f-buttons).
-
-*/
-
 a {
  color: $cerulean;
  line-height: 1.5;

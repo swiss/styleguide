@@ -215,3 +215,51 @@ tables:
 
         - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
         - added the `<col>` and `<colgroup></colgroup>` tags before the tables on some cases
+typography:
+  title: Typography
+  titles:
+    title: Titles
+    help: |
+      Headings serve to structure the content of a page. The higher the heading is in the structural hierarchy (e.g. H1), the more important it is, and the more weight is given to it by search engines such as Google. Generally speaking, not too many hierarchical levels should be used, as this has a negative impact on the clarity of the structure. Heading levels H1 through H4 are therefore clearly differentiated in their formatting (while levels H5 and H6 are merely defined pro forma).
+
+      To conform accessibiliity requirement titles have to respect a sequence from 1 to 6
+
+      Headings can also have links and are then formatted in blue.
+  paragraphs:
+    title: Paragraphs
+    help: |
+      ### Lead
+      A lead can be placed at the beginning of a longish text summarizing the most important aspects of the text. A lead of this sort is formatted bold.
+  text-elements:
+    title: Text elements
+    help: The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.
+  blockquote:
+    title: Blockquote
+  lists:
+    title: Lists
+    help: |
+      Lists are used to structure contents and to provide the user with a quick overview of a topic.
+  unstyled-lists:
+    title: Unstyled lists
+    help: |
+      To use with links. Outputs a more readable and clickable list of links. Just add the `.list-unstyled` class.
+  definition-lists:
+    title: Definition lists
+  links:
+    title: Links
+    help: |
+      Links are formatted blue by default and are not underlined. When a mouseover is used, they become red.
+
+      There are two exceptions to this rule:
+      If there is a link in the running text, the linked text is underlined. Links in a navigation element (e.g. in the global navigation) are gray, and not blue. There are separate descriptions of how these special links are presented and how they behave at the appropriate places in these Web Guidelines.
+
+      You can  use the `.icon` classes to add some icons after or before the link. Use `.icon--external` if the link is external.
+  top-link:
+    title: Top link
+    help: The top link is the counterpart to the anchor link. It takes the user back to the beginning of the page from any position in the page currently in use.
+  end-page-link:
+    title: End page link
+    help: |
+      The link at the end of the page is a special top link. Each page (with the exception of the home page and the level 1 pages) has a page-end link at the bottom of the page. It contains a link to the top of the page currently in use, together with the date of the last update of the content on this page.
+
+      For a print button, check the buttons section.
