@@ -218,3 +218,14 @@ header:
       **2.5.0:**
 
         - modified markup of dropdown list. Please refer to how it is in the example below
+content-navigation:
+  title: Content navigation
+  pagination:
+    title: Pagination
+    help: The paging function allows the user to browse through a large number of elements which are arranged into pages. The element appears above and below the elements list.
+    release: |
+      **2.1.8**
+
+      - added ` <span class="sr-only">current page</span>` and `aria-disabled="true"` for accessibility
+      - added `title`to empty link (link only with icon)
+      - added `.clearfix`and `.pull-left` inside of `.pagination-container
