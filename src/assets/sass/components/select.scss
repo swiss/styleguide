@@ -13,42 +13,6 @@
 
 /*doc
 ---
-title: Selects
-name: c-selects
-category: Base Layout - Forms Elements
----
-
-<span class="label label-admin">FLEX</span>
-
-A drop down list box allows the user to select an item from a predefined list. This list appears in a menu after the element has been clicked on. After the selection has been made, the result is displayed.
-
-With more than 10 options in the select, a search field is setup at the top of the dropdown list.
-
-You can also add the `multiple` attribute to `<select>` and allow the user to select more than one option at a time, displaying them as tags in the input field.
-
-<br>
-<div class="alert alert-warning">
-  **2.1.2:**
-
-  - added a label before select for screen readers
-</div>
-
-```html_example
-<label for="select" class="sr-only">Select:</select>
-<select id="select" class="form-control">
-  <option>Option 1</option>
-  <option>Option 2</option>
-</select>
-```
-
-*/
-
-
-// everything is handled by the chosen plugin (cf chosen-theme.scss)
-
-
-/*doc
----
 title: Topics A-Z
 name: e-topics
 category: Navigation modules - Header
