@@ -71,25 +71,6 @@ a {
 }
 
 
-/*doc
----
-title: Back to Overview
-name: c-back-to-overview
-category: Navigation modules - Hierarchical Navigation
----
-
-<span class="label label-admin">FIX</span>
-
-The “back to overview” navigation links pages that do not appear in the navigation to their “parent page”. An example of this can be found in the details page of the publications section.
-
-The “back to overview” link appears before the page title at the top of the content pane, and at the end of the page before the page-end navigation.
-
-```html_example
-<a href="#" class="icon icon--before icon--less hidden-print">Back to Overview</a>
-```
-*/
-
-
 /**
  * Social sharing (see social.js file for doc)
  */
