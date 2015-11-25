@@ -9,56 +9,7 @@
  * Licensed under MIT
  ========================================================== */
 
- @charset "UTF-8";
-
-/*doc
----
-title: Site Search
-name: c-site-search
-category: Navigation modules - Header
----
-
-<span class="label label-admin">CD</span>
-
-The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
-
-On smartphones, the search function can be accessed via an icon in the Header.
-
-
-<br>
-<div class="alert alert-warning">
-**2.1.2:**
-
-  - added `h2.sr-only` for more screen reader clarity
-  - added label before input for screen readers
-</div>
-
-```html_example
-<!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-
-  <header>
-    <form class="form-horizontal form-search pull-right" role="form">
-      <h2 class="sr-only">Search</h2>
-      <label for="search-field" class="sr-only">Search:</label>
-      <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-    </form>
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-```
-
-```js_example
-// You have to store all your data inside `searchData` and define it globaly
-var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
-  "Basel-Landschaft", "Basel-Stadt", "Bern", "Fribourg", "Genève",
-  "Glarus", "Graubünden", "Jura", "Lucerne", "Neuchâtel", "Nidwalden",
-  "Obwalden", "Schaffhausen", "Schwyz", "Solothurn", "St. Gallen",
-  "Thurgau", "Ticino", "Uri", "Valais", "Vaud", "Zug", "Zurich"
-];
-```
-*/
+@charset "UTF-8";
 
 .form-search {
   display: inline-block;

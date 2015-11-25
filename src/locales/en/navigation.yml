@@ -122,6 +122,28 @@ hierarchical-navigation:
       - added `aria-selected="true"` for current link
 header:
   title: Header
+  logo:
+    title: Logo with link to home page
+    help: The Confederation logo with the coat of arms and the four-language wordmark as well as the name of the organizational unit (department, public office, agency, or mission, or, alternatively, the title of the website) together form the designation of the website. The complete designation contains a link which takes the user back to the home page from any page of the website.
+  accessibility-navigation:
+    title: Accessibility navigation
+    help: The accessibility navigation has to be placed right after the body tag. It is used to give quick access to pages and page areas. **It is invisible**, except when the link is focused.
+    release: |
+      **2.1.8**
+
+        - added `.access-keys` for better accessibility
+        - added `#content` to main page content
+        - added `#main-navigation` to main page navigation
+  service-navigation:
+    title: Service navigation
+    help: |
+      The service navigation is positioned at the top right of the header next to the language selection. It contains links that are of overriding importance (e.g. Contact, Jobs, Media and Contact). Ideally, there should be three, but in no case should there be more than five links in the service navigation.
+
+      On mobile devices the links in the service navigation are moved to the footer.
+    release: |
+      **2.1.2:**
+
+        - added `h2.sr-only` for more screen reader clarity
   site-search:
     title: Site search
     help: |
@@ -132,3 +154,67 @@ header:
       **2.1.2:**
         - added h2.sr-only for more screen reader clarity
         - added label before input for screen readers
+  language-selector:
+    title: Language Selection via a Link List
+    help: |
+      The languages available are shown as links, placed side by side, at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: DE, French: FR, Italian: IT, Romansh: RM, English: EN).
+
+      The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages: German, French, and Italian. Romansh, English and other languages are optional and dependent on the requirements of the individual organizational unit and its target groups.
+
+      The following rules apply for the language navigation:
+
+      * German, French and English are mandatory. Therefore the abbrevations DE, FR and IT have to be present on each page.
+      * The active language is indicated with a light grey background.
+      * Inactive languages are indicated as disabled with a light-grey text colour.
+      * The abbrevations for Romansh (RM) and English (EN) are shown only when the corresponding content is available.
+      * Pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
+
+      These rules apply for smartphones as well.
+
+      On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
+
+      The design of the language navigation for cases, where their are more then five languages, has yet to be specified.
+    release: |
+      **2.1.0:**
+
+        - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
+
+      **2.1.2:**
+
+        - added `h2.sr-only` for more screen reader clarity
+
+      **2.1.8**
+
+        - added `<span class="sr-only">selected</span>` for active accessibility
+
+      **2.5.0**
+
+        - added `<span class="sr-only">disabled</span>` for disabled accessibility
+  topics:
+    title: Topics A-Z
+    help: |
+      The topics A-Z search function is an alternative means of accessing the contents of the website. The sub-topics of website can be selected from an alphabetical catalog.
+
+      The topics A-Z section is positioned on the right-hand side of the header. When it is clicked on, a flyout opens which contains an A-Z tab navigation. The topics can also be grouped in other tabs, e.g. according to organizational unit.
+
+      On smartphones, the A-Z navigation is accessed via an icon together with the search function.
+    release: |
+      **2.1.2:**
+
+      - added `h2.sr-only` for more screen reader clarity
+  treecrumb:
+    title: Treecrumb Federal Administration
+    help: |
+      The treecrumb navigation shows the position of the current website within the context of all the websites of the Federal Administration. It also serves as an efficient means of accessing information across departments.
+
+      When closed, the treecrumb navigation presents the hierarchical organization of the Federal Administration as a path. When a hierarchical level is clicked on, a menu opens with a collection of links pertinent to the selected hierarchical level.
+
+      On smartphones, the treecrumb navigation is omitted.
+    release: |
+      **2.1.2:**
+
+        - added `h2.sr-only` for more screen reader clarity
+
+      **2.5.0:**
+
+        - modified markup of dropdown list. Please refer to how it is in the example below

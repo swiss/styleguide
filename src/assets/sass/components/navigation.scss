@@ -261,48 +261,6 @@ nav {
   }
 }
 
-/*doc
----
-title: Service Navigation
-name: b-service-navigation
-category: Navigation modules - Header
----
-
-<span class="label label-admin">CD</span>
-
-The service navigation is positioned at the top right of the header next to the language selection. It contains links that are of overriding importance (e.g. Contact, Jobs, Media and Contact). Ideally, there should be three, but in no case should there be more than five links in the service navigation.
-
-On mobile devices the links in the service navigation are moved to the footer.
-
-
-<br>
-<div class="alert alert-warning">
-**2.1.2:**
-
-  - added `h2.sr-only` for more screen reader clarity
-</div>
-
-```html_example
-<!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-
-  <header>
-    <nav class="nav-service">
-      <h2 class="sr-only">Services navigation</h2>
-      <ul>
-        <li><a href="#">Emergencies</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Media</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-```
-
-*/
 
 .nav-service {
   display: inline-block;
@@ -320,92 +278,6 @@ On mobile devices the links in the service navigation are moved to the footer.
   }
 }
 
-/*doc
----
-title: Language Selection via a Link List
-name: d-lang-navigation-list
-category: Navigation modules - Header
----
-
-<span class="label label-admin">CD</span>
-
-The languages available are shown as links, placed side by side, at the top right of the header. For this purpose their two-digit abbreviations as per ISO 639-2 are used (e.g. German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc.).
-
-The information and services of the Federal Administration in the web are provided in at least the three official Swiss languages German, French, and Italian. Additionally their can be information in Romansh and English.
-
-Other languages are optional and are dependent on the requirements of the individual organizational unit and its target groups.
-
-The following rules apply for the language navigation:
-
-German, Frech and English are mandatory. Therefore the abbrevations DE, FR and IT are always and on each page visible.
-
-The active language is indicated with a light grey background.
-
-Inactive languages are indicated as disabled with a light-grey font colour.
-
-The abbrevations for Romansh (RM) and English (EN) are shown, if their is content in this languages available.
-
-If no content in one of the languages is available or only some, the language link is shown as `disabled. In the navigation, the pages which are not translated can either be omitted or shown as available in the other languages, as in Swiss Embassies (German, French, Italian).
-
-This rules apply for smartphones as well.
-
-On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
-
-The design of the language navigation for cases, where their are more then five langugages, has yet to be specified.
-
-<br>
-<div class="alert alert-warning">
-  **2.1.0:**
-
-  - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
-
-  **2.1.2:**
-
-  - added `h2.sr-only` for more screen reader clarity
-
-  **2.1.8**
-
-  - added `<span class="sr-only">selected</span>` for active accessibility
-
-  **2.5.0**
-
-  - added `<span class="sr-only">disabled</span>` for disabled accessibility
-</div>
-
-```html_example
-<!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-
-  <header>
-
-    <section class="nav-services clearfix">
-      <h2>Title of page</h2>
-      <h2 class="sr-only">Language selection</h2>
-      <nav class="nav-lang">
-        <ul>
-          <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
-          <li><a href="#">FR</a></li>
-          <li><a href="#">IT</a></li>
-          <li><a class="disabled" href="#">RM <span class="sr-only">disabled</span></a></li>
-          <li><a href="#">EN</a></li>
-        </ul>
-      </nav>
-      <nav class="nav-service">
-        <ul>
-          <li><a href="#">Emergencies</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Media</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </section>
-
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-```
-*/
 
 .nav-services {
   font-size: 0.85em;
@@ -470,90 +342,6 @@ The design of the language navigation for cases, where their are more then five 
   }
 }
 
-/*doc
----
-title: Treecrumb Federal Administration
-name: g-treecrumb-federal-administration
-category: Navigation modules - Header
----
-
-<span class="label label-admin">CD</span>
-
-The treecrumb navigation shows the position of the current website within the context of all the websites of the Federal Administration. It also serves as an efficient means of accessing information across departments.
-
-When closed, the treecrumb navigation presents the hierarchical organization of the Federal Administration as a path. When a hierarchical level is clicked on, a menu opens with a collection of links pertinent to the selected hierarchical level.
-
-On smartphones, the treecrumb navigation is omitted.
-
-
-<br>
-<div class="alert alert-warning">
-**2.1.2:**
-
-  - added `h2.sr-only` for more screen reader clarity
-
-**2.5.0:**
-
-  - modified markup of dropdown list. Please refer to how it is in the example below
-</div>
-
-```html_example
-<!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-
-  <header>
-
-    <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
-    <nav class="navbar treecrumb pull-left" role="navigation">
-      <h2 class="sr-only">Orientation in the website</h2>
-      <ul class="nav navbar-nav">
-
-        <!-- Treecrumb dropdown element -->
-        <li class="dropdown">
-          <!-- Dropdown label -->
-          <a id="admin-dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Federal Administration</a>
-          <!-- Dropdown list element -->
-          <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
-            <!-- Dropdown title, can ben place anywhere in the list -->
-            <li class="dropdown-header">
-              <a href="#">Federal Administration admin.ch</a>
-              <ul>
-                <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
-                <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
-                <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
-                <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
-                <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
-                <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
-                <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" id="service-dropdown" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Departement: EDI</a>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="service-dropdown">
-            <li class="dropdown-header">
-              <a href="#">Departement: EDI</a>
-              <ul>
-                <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
-                <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
-                <li><a href="#">Integrationsbüros</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-      </ul>
-    </nav>
-
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-```
-
-*/
 
 .treecrumb {
   @media only screen and (max-width: $screen-xs-max) {
@@ -571,7 +359,7 @@ On smartphones, the treecrumb navigation is omitted.
   .nav .open a.dropdown-toggle {
     background: $white;
     border: 1px solid $silver;
-    border-left-color: $silver;
+    border-right: none;
     border-bottom: none;
     position: relative;
     z-index: 1001;
@@ -584,8 +372,8 @@ On smartphones, the treecrumb navigation is omitted.
     background: transparent;
     color: $coal;
     border: 1px solid $silver;
-    border-left: 0;
-    border-right: 0;
+    border-left-color: transparent;
+    border-right: none;
     position: relative;
     height: 27px;
     &:hover, &:focus {
@@ -609,7 +397,9 @@ On smartphones, the treecrumb navigation is omitted.
       border-color: transparent transparent transparent $white;
     }
     span {
-      margin-right: 1em;
+      display: inline-block;
+      min-width: 13px;
+      margin-right: 0.5em;
     }
   }
   .dropdown:first-child .dropdown-toggle {
