@@ -26,3 +26,23 @@ typography:
     help: The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.
   blockquote:
     title: Blockquote
+  lists:
+    title: Lists
+    help: |
+      Lists are used to structure contents and to provide the user with a quick overview of a topic.
+
+      The following types of lists are used:
+
+      - Ordered and unordered lists
+      - Definition lists
+      - Link lists (with internal and external links, which can also be mixed)
+      - Anchor lists
+      - Download lists
+
+      ### Unordered lists & order lists
+  definition-lists:
+    title: Definition lists
+    help: |
+      To use with links. Outputs a more readable and clickable list of links. Just add the `.list-unstyled` class.
+
+      ### Unstyled lists & Definition lists
