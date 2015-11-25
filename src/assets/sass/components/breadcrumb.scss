@@ -11,45 +11,6 @@
 
 @charset "UTF-8";
 
-/*doc
----
-title: Breadcrumb
-name: b-breadcrumb
-category: Navigation modules - Hierarchical Navigation
----
-
-<span class="label label-admin">FIX</span>
-
-The breadcrumb is a line of text below the header which shows the user the path, i.e. the position of the web page currently being used within the information architecture of the website. If there is no global navigation feature, the breadcrumb navigation is placed immediately below the red line which closes the header section.
-
-Thanks to the breadcrumb, users can see at a glance where they are on the site map.
-
-When the user clicks on a navigation point in the path, the appropriate page opens. When the user clicks on a link on the first or second navigation level (pages which do not have content of their own), an overview page without a navigation pane is opened.
-
-On smartphones there is always a link at the end of the page to the home page and to the level above. There is no complete breadcrumb on the smartphone version.
-
-```html_example
-<!-- Use normal `container` instead of `container-fluid` -->
-<div class="container-fluid">
-
-  <header>
-    <h2 id="br1" class="hidden">Breadcrumbs</h2>
-    <ol class="breadcrumb" role="navigation" aria-labelledby="br1">
-      <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
-      <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
-      <li><a href="#">Country Selection</a><span class="icon icon--greater"></span></li>
-      <li><a href="#">Democratic Republic of the Congo</a><span class="icon icon--greater"></span></li>
-      <li><a href="#">Some text to create a line break</a><span class="icon icon--greater"></span></li>
-      <li><a href="#">Bilateral Relations</a><span class="icon icon--greater"></span></li>
-      <li class="active" aria-selected="true" aria-label="current page">Title of the active page</li>
-    </ol>
-  </header>
-  <nav class="nav-main"></nav>
-
-</div>
-```
-*/
-
 .breadcrumb {
   margin: 0;
   li {margin: 0;}
