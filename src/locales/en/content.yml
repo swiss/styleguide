@@ -121,3 +121,9 @@ content-containers:
       The collapsible panel is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.
 
       Add `.collapsed` to link for it to change the icon direction when collapsing.
+  emergency:
+    title: Emergency
+    help: |
+      The emergency banner is only ever shown on the home page in cases of extreme urgency. It is always placed at the very top of the home page.
+
+      It is vital that this element should only be used in cases of emergency – i.e. extremely sparingly.
