@@ -233,7 +233,6 @@ footer:
 
       - placed links in a `ul.list-unstyled` list
       - changed `.col-sm-3` in `.col-sm-4.col-md-3` for more readability on small size and removed useless `.row` wrapper
-      - added ``
 
       **2.5.0:**
 
