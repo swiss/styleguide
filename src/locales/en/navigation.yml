@@ -172,8 +172,6 @@ header:
       These rules apply for smartphones as well.
 
       On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
-
-      The design of the language navigation for cases, where their are more then five languages, has yet to be specified.
     release: |
       **2.1.0:**
 
