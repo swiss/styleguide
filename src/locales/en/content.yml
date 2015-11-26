@@ -125,3 +125,10 @@ ordering-checkout:
   title: Ordering and checkout
   one-line-order-form:
     title: One line order form
+  shopping-cart:
+    title: Shopping cart
+    help: By default, the shopping cart is not shown. Only after an object has been added to the shopping cart does the latter appear in the context pane. It then remains visible until it is either completely deleted or the purchase is finalized.
+    release: |
+      **2.5.0**
+
+      - added `span.sr-only` to the delete icon
