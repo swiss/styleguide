@@ -50,7 +50,8 @@ var config = {
   framework: {
     dest: 'build'
   },
-  locales: yaml.safeLoad(fs.readFileSync('src/data/locales.yml', 'utf-8'))
+  locales: yaml.safeLoad(fs.readFileSync('src/data/locales.yml', 'utf-8')),
+  autoprefixer: ['last 2 versions', 'safari 8', 'ie 9', 'ff 28']
 };
 
 /**
@@ -147,7 +148,7 @@ gulp.task('styles', function() {
     }))
     .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
+      browsers: config.autoprefixer
     }))
     .pipe($.if(argv.dev, $.sourcemaps.write()))
     .pipe($.if(!argv.dev, $.minifyCss()))
@@ -161,7 +162,7 @@ gulp.task('print', function() {
     }))
     .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
-      browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'ff 27', 'opera 12.1']
+      browsers: config.autoprefixer
     }))
     .pipe($.if(argv.dev, $.sourcemaps.write()))
     .pipe($.if(!argv.dev, $.minifyCss()))
