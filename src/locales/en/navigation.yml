@@ -29,8 +29,8 @@ hierarchical-navigation:
         - added `h2.sr-only` for more screen reader clarity
         - added h2 and label to search field on mobile
 
-      **3.0.0:**
-        - added ` <span class="sr-only">current page</span>` for current active link
+      **2.0.0:**
+        - added `<span class="sr-only">current page</span>` for current active link
         - added `id="main-navigation"`for accessibility nav
         - added `aria-hidden="true"` to close button
   breadcrumb:
@@ -117,7 +117,7 @@ hierarchical-navigation:
 
       On smartphones, the navigation is accessed via a filter link, and it behaves in the same way as the faceted navigation for desktop computers. Unlike in the desktop version, the contents of the page are only updated when the user closes the faceted navigation.
     release: |
-      **3.0.0:**
+      **2.0.0:**
 
       - added `aria-selected="true"` for current link
 header:
