@@ -148,3 +148,46 @@ ordering-checkout:
       **2.5.0**
 
       - added `span.sr-only` to the delete icon
+standard-elements:
+  title: Standard elements
+  page-title:
+    title: Page title
+    help: |
+      Each page with the exception of the home page must have its own page title. This is always positioned as the first element on the content page. Only in unattached detail pages (such as publications) is it preceded by the "back to overview" link.
+
+      The text used in the page title is of relevance for rankings in search engines (e.g. Google).
+  image-text:
+    title: Image text
+    help: |
+      This element comprises running text body, which can be complemented by a title and a subtitle. An image and a caption can also be added. If required, the caption can be right-ragged below the text. Various standard image sizes (mainly in golden section proportions) are possible.
+
+      For small images, simply use `pull-left` or `pull-right` class on the `<figure>`.
+  info-box:
+    title: Info box
+    help: |
+      The info box is a "text and image" element that has a gray background. It can be integrated into the running text body in order highlight additional information.
+
+      To have this grey background, add a `.well .clearfix` wrapper around your content.
+    release: |
+      **2.5.3:** - add a `.clearfix` class to the `.well` wrapper
+multimedia:
+  title: Multimedia
+  photo-gallery:
+    title: Photo Gallery Overview
+    help: |
+      The photo gallery shows scaled-down preview images (thumbnails) together with their names. These preview images are arranged in groups of 12. If the number of preview images exceeds this quantity, the “paging” navigation element is added to the photo gallery.
+
+      When the user clicks on an image, a detailed view is opened either in a lightbox or in single view mode for the images.
+    release: |
+      **2.1.8**
+
+        - added `aria-selected="true"` and `aria-disabled="true"` for accessibility
+  photo-gallery-single:
+    title: Photo Gallery Single View Mode
+    help: The single view mode allows the user to browse through the complete contents of a photo gallery. A caption can be added below the image.
+  lightbox:
+    title: Lightbox
+    help: |
+      A "lightbox" is an overlay that opens on top of the website. For instance, it is opened when a preview image in a photo gallery is clicked on, or when the zoom icon of an individual image is activated.
+
+      When a "lightbox" is opened, the website in the background is darkened. The "lightbox" comprises the title, the full view of the image, and its caption. The user can then browse through various images using the arrow icons in the "lightbox" or the arrow keys on the keyboard. The "lightbox" can be closed by clicking on the background, and by using the close command or the Esc key.
