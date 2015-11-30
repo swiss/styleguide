@@ -11,6 +11,22 @@ widgets:
       **Accessibility**
 
       You can add a `<span class="sr-only">alert type</span>` if the `role="alert"` is not enough information for the end user.
+  emergency:
+    title: Emergency
+    help: |
+      The emergency banner is only ever shown on the home page in cases of extreme urgency. It is always placed at the very top of the home page.
+
+      It is vital that this element should only be used in cases of emergency – i.e. extremely sparingly.
+  contact-box:
+    title: Contact box
+    help: |
+      The contact box provides the user with a possibility to contact the website with regard to the content of the page. It is always to be found at the top of the context pane. If there is only one general contact available for the whole website, and if this is also available via the service navigation function, then the contact box is omitted.
+
+      The contact box shows two tabs: “Contact” and “Map”. In the “Contact” tab the name of the contact person, the address, the telephone number, the contact form, etc. are shown. If required, additional information, such as the opening hours of an embassy, for example, can be listed. In the “Map” tab, the contact is localized graphically in a map section, and the address is again listed in abbreviated form.
+
+      A click on “Print contact information” opens the browser’s or operating system’s print dialog.
+
+      On tablets the contact information is shown under the content of the page in a two-column layout. The contents of the two tabs are shown next to one another.
 teaser:
   title: Teaser
   focus:
@@ -121,19 +137,3 @@ content-containers:
       The collapsible panel is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.
 
       Add `.collapsed` to link for it to change the icon direction when collapsing.
-  emergency:
-    title: Emergency
-    help: |
-      The emergency banner is only ever shown on the home page in cases of extreme urgency. It is always placed at the very top of the home page.
-
-      It is vital that this element should only be used in cases of emergency – i.e. extremely sparingly.
-  contact-box:
-    title: Contact box
-    help: |
-      The contact box provides the user with a possibility to contact the website with regard to the content of the page. It is always to be found at the top of the context pane. If there is only one general contact available for the whole website, and if this is also available via the service navigation function, then the contact box is omitted.
-
-      The contact box shows two tabs: “Contact” and “Map”. In the “Contact” tab the name of the contact person, the address, the telephone number, the contact form, etc. are shown. If required, additional information, such as the opening hours of an embassy, for example, can be listed. In the “Map” tab, the contact is localized graphically in a map section, and the address is again listed in abbreviated form.
-
-      A click on “Print contact information” opens the browser’s or operating system’s print dialog.
-
-      On tablets the contact information is shown under the content of the page in a two-column layout. The contents of the two tabs are shown next to one another.
