@@ -17,16 +17,12 @@
           <div class="drilldown-container">
             <nav class="nav-page-list">
               <ul>
-                {{#each docs}}
-                  {{> f-menu-mobile this}}
-                {{/each}}
-
                 {{#each materials}}
                   {{> f-menu-mobile this}}
                 {{/each}}
 
                 {{#each views}}
-                  {{> f-menu-mobile this path="pages/"}}
+                  {{> f-menu-mobile this path=true}}
                 {{/each}}
               </ul>
               <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
@@ -39,16 +35,12 @@
 
   <!-- The tab navigation -->
   <ul class="nav navbar-nav" role="navigation">
-    {{#each docs}}
-      {{> f-menu-item this}}
-    {{/each}}
-
     {{#each materials}}
       {{> f-menu-item this}}
     {{/each}}
 
     {{#each views}}
-      {{> f-menu-item this path="pages/"}}
+      {{> f-menu-item this path=true}}
     {{/each}}
   </ul>
 </nav>

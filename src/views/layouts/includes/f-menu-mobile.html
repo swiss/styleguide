@@ -5,7 +5,7 @@
     <a href="#" class="icon icon--before icon--less drilldown-back">{{t 'styleguide.back'}}</a>
     <ul>
       {{#each items}}
-        <li><a href="/{{data 'locale'}}/{{../path}}{{@key}}.html">{{t @../key @key 'title'}}</a></li>
+        <li><a href="/{{data 'locale'}}/{{#if ../path}}{{@../key}}/{{/if}}{{replace '(\.)' '-' @key}}.html">{{t @../key @key 'title'}}</a></li>
       {{/each}}
     </ul>
   </nav>
