@@ -17,10 +17,10 @@
     <div class="example-output">
       {{{material @key @root}}}
 
-      <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '(\.)' '-' @key}}" aria-expanded="true">&lt;/&gt;</button>
+      <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '(\.)' '-' @key}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}">&lt;/&gt;</button>
     </div>
 
-    <div class="code-block collapse" id="code-{{replace '(\.)' '-' @key}}">
+    <div class="code-block collapse{{#if data.expanded}} in{{/if}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}" id="code-{{replace '(\.)' '-' @key}}">
       <pre><code class="language-markup">{{material @key @root}}</code></pre>
     </div>
   </div>

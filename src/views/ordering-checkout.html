@@ -1,0 +1,13 @@
+---
+fabricator: true
+title: content.ordering-checkout.title
+permalink: ordering-checkout.html
+---
+
+<h1>{{t 'content.ordering-checkout.title'}}</h1>
+
+{{#each materials.content.items.ordering-checkout.items}}
+
+{{> f-item this}}
+
+{{/each}}
