@@ -171,7 +171,7 @@ nav {
       line-height: 1.2;
       padding: 10px 9px;
       &:after {
-        content: ',';
+        content: '\e904';
         font-family: $admin-icons;
         position: absolute;
         bottom: 4px;
@@ -215,7 +215,7 @@ nav {
       background: $white;
     }
     &:after {
-      content: ';';
+      content: '\e90e';
     }
   }
   .ie9 & > .open > a {
