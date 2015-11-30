@@ -170,8 +170,3 @@ standard-elements:
       To have this grey background, add a `.well .clearfix` wrapper around your content.
     release: |
       **2.5.3:** - add a `.clearfix` class to the `.well` wrapper
-search:
-  title: Search
-  search-box:
-    title: Search box
-    help: The search box is a simple form which can be used to enter a search term on a search page.
