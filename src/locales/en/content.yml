@@ -148,6 +148,28 @@ ordering-checkout:
       **2.5.0**
 
       - added `span.sr-only` to the delete icon
+standard-elements:
+  title: Standard elements
+  page-title:
+    title: Page title
+    help: |
+      Each page with the exception of the home page must have its own page title. This is always positioned as the first element on the content page. Only in unattached detail pages (such as publications) is it preceded by the "back to overview" link.
+
+      The text used in the page title is of relevance for rankings in search engines (e.g. Google).
+  image-text:
+    title: Image text
+    help: |
+      This element comprises running text body, which can be complemented by a title and a subtitle. An image and a caption can also be added. If required, the caption can be right-ragged below the text. Various standard image sizes (mainly in golden section proportions) are possible.
+
+      For small images, simply use `pull-left` or `pull-right` class on the `<figure>`.
+  info-box:
+    title: Info box
+    help: |
+      The info box is a "text and image" element that has a gray background. It can be integrated into the running text body in order highlight additional information.
+
+      To have this grey background, add a `.well .clearfix` wrapper around your content.
+    release: |
+      **2.5.3:** - add a `.clearfix` class to the `.well` wrapper
 multimedia:
   title: Multimedia
   photo-gallery:
