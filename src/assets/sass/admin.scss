@@ -13,11 +13,11 @@
 
 @font-face {
     font-family: 'Admin Icons';
-    src: url('../fonts/AdminCH_Symbols.eot?v2');
+    src: url('../fonts/AdminCH_Symbols.eot?v3');
     src: url('../fonts/AdminCH_Symbols.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/AdminCH_Symbols.woff?v2') format('woff'),
-         url('../fonts/AdminCH_Symbols.ttf?v2') format('truetype'),
-         url('../fonts/AdminCH_Symbols.svg#fnb') format('svg');
+         url('../fonts/AdminCH_Symbols.woff2?v3') format('woff2'),
+         url('../fonts/AdminCH_Symbols.woff?v3') format('woff'),
+         url('../fonts/AdminCH_Symbols.ttf?v3') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,9 +26,9 @@
     font-family: 'Frutiger Neue';
     src: url('../fonts/FrutigerNeueW02-Bd.eot?v2');
     src: url('../fonts/FrutigerNeueW02-Bd.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FrutigerNeueW02-Bd.woff2?v2') format('woff2'),
          url('../fonts/FrutigerNeueW02-Bd.woff?v2') format('woff'),
-         url('../fonts/FrutigerNeueW02-Bd.ttf?v2') format('truetype'),
-         url('../fonts/FrutigerNeueW02-Bd.svg#fnb') format('svg');
+         url('../fonts/FrutigerNeueW02-Bd.ttf?v2') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -37,9 +37,9 @@
     font-family: 'Frutiger Neue';
     src: url('../fonts/FrutigerNeueW02-It.eot?v2');
     src: url('../fonts/FrutigerNeueW02-It.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FrutigerNeueW02-It.woff2?v2') format('woff2'),
          url('../fonts/FrutigerNeueW02-It.woff?v2') format('woff'),
-         url('../fonts/FrutigerNeueW02-It.ttf?v2') format('truetype'),
-         url('../fonts/FrutigerNeueW02-It.svg#fnb') format('svg');
+         url('../fonts/FrutigerNeueW02-It.ttf?v2') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
@@ -48,9 +48,9 @@
     font-family: 'Frutiger Neue';
     src: url('../fonts/FrutigerNeueW02-Regular.eot?v2');
     src: url('../fonts/FrutigerNeueW02-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FrutigerNeueW02-Regular.woff2?v2') format('woff2'),
          url('../fonts/FrutigerNeueW02-Regular.woff?v2') format('woff'),
-         url('../fonts/FrutigerNeueW02-Regular.ttf?v2') format('truetype'),
-         url('../fonts/FrutigerNeueW02-Regular.svg#fnb') format('svg');
+         url('../fonts/FrutigerNeueW02-Regular.ttf?v2') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -58,9 +58,9 @@
     font-family: 'Frutiger Neue';
     src: url('../fonts/FrutigerNeueW02-Light.eot?v2');
     src: url('../fonts/FrutigerNeueW02-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FrutigerNeueW02-Light.woff2?v2') format('woff2'),
          url('../fonts/FrutigerNeueW02-Light.woff?v2') format('woff'),
-         url('../fonts/FrutigerNeueW02-Light.ttf?v2') format('truetype'),
-         url('../fonts/FrutigerNeueW02-Light.svg#fnb') format('svg');
+         url('../fonts/FrutigerNeueW02-Light.ttf?v2') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
