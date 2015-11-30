@@ -3,6 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 3.0.0
+ * #246 Remove deprecated social sharing buttons
+
 * 2.5.4 (2015-08-31)
  * #376 Fix controls spacing in slideshow element
  * #385 Change Deutschland to Germany in language select
