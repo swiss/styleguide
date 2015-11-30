@@ -9,34 +9,6 @@
  * Licensed under MIT
  =========================================================== */
 
- /*doc
----
-title: Emergency
-name: a-emergency
-category: Content Modules - Widgets
----
-
-<span class="label label-admin">FLEX</span>
-
-The emergency banner is only ever shown on the home page in cases of extreme urgency. It is always placed at the very top of the home page.
-
-It is vital that this element should only be used in cases of emergency – i.e. extremely sparingly.
-
-```html_example
-<div class="alert alert--emergency clearfix" role="alert">
-  <div class="col-sm-3">
-    <h3>Lorem ipsum</h3>
-  </div>
-  <div class="col-sm-9">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, placeat, recusandae, amet, modi hic accusamus cumque id nesciunt debitis nihil neque quaerat reprehenderit iste mollitia laborum natus culpa laboriosam labore.
-    </p>
-  </div>
-</div>
-```
-
-*/
-
 .alert--emergency {
   background-color: $mocassin;
   border-left: 40px solid $venetian-red;

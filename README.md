@@ -40,8 +40,8 @@ The styleguide is located in the `/styleguide` directory. You can open `/stylegu
 There are several ways to get started:
 
   - **Install with bower `bower install swiss-styleguide`**
-  - Use the provided build. Download the [latest release](https://github.com/antistatique/Swiss-Admin-web-guidelines/releases/latest) and include all the built assets in your project.
-  - Clone the repo `git clone https://github.com/antistatique/Swiss-Admin-web-guidelines.git`
+  - Use the provided build. Download the [latest release](https://github.com/swiss/styleguide/releases/latest) and include all the built assets in your project.
+  - Clone the repo `git clone https://github.com/swiss/styleguide.git`
 
 
 ## Contribution

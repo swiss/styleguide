@@ -12,7 +12,7 @@
       language = 'en';
     }
 
-    window.location = window.location += '/' + language;
+    window.location = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + '/' + language + '/';
     </script>
 
     <!-- Ensure redirection even for people with JavaScript disabled -->
