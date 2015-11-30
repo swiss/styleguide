@@ -148,3 +148,8 @@ ordering-checkout:
       **2.5.0**
 
       - added `span.sr-only` to the delete icon
+search:
+  title: Search
+  search-box:
+    title: Search box
+    help: The search box is a simple form which can be used to enter a search term on a search page.

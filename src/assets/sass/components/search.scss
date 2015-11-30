@@ -79,29 +79,6 @@
   background-color: $smoke;
 }
 
-/*doc
----
-title: Search Box
-name: a-searchbox
-category: Content Modules - Search
----
-
-The search box is a simple form which can be used to enter a search term on a search page.
-
-```html_example
-<form action="#" class="form-inline row search-box">
-  <fieldset class="clearfix">
-    <div class="form-group">
-      <label for="inputSearch" class="control-label">Search</label>
-      <input type="text" class="form-control" id="inputSearch" placeholder="Search">
-    </div>
-    <input class="btn btn-primary" aria-label="Search" type="submit" value="Search">
-  </fieldset>
-</form>
-```
-
-*/
-
 .search-box {
   border-top: 1px solid $silver;
   border-bottom: 2px solid $silver;
@@ -306,4 +283,3 @@ Search results are shown in semantically grouped tabs. The categories (groupings
     font-size: 1.3em;
   }
 }
-
