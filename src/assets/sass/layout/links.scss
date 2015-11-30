@@ -69,14 +69,3 @@ a {
     clear: left;
   }
 }
-
-
-/**
- * Social sharing (see social.js file for doc)
- */
-
-.social-sharing {
-  @media only screen and (max-width: $screen-sm-max) {
-    display: none;
-  }
-}

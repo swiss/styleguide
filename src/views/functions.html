@@ -1,0 +1,13 @@
+---
+fabricator: true
+title: content.functions.title
+permalink: functions.html
+---
+
+<h1>{{t 'content.functions.title'}}</h1>
+
+{{#each materials.content.items.functions.items}}
+
+{{> f-item this}}
+
+{{/each}}
