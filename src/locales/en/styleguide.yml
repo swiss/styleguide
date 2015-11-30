@@ -12,4 +12,6 @@ navigation: Navigation
 homepage: Homepage
 main-navigation: Main navigation
 content: Content
-terms-and-conditions: Terms and conditions
+disclaimer:
+  text: Legal framework
+  link: http://www.disclaimer.admin.ch/terms_and_conditions.html
