@@ -169,7 +169,9 @@ standard-elements:
 
       To have this grey background, add a `.well .clearfix` wrapper around your content.
     release: |
-      **2.5.3:** - add a `.clearfix` class to the `.well` wrapper
+      **2.5.3:**
+
+      - add a `.clearfix` class to the `.well` wrapper
 multimedia:
   title: Multimedia
   photo-gallery:

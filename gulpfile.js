@@ -26,7 +26,9 @@ var gulp = require('gulp'),
     fs = require('fs'),
     globby = require('globby'),
     path = require('path'),
-    markdown = require('markdown-it')();
+    markdown = require('markdown-it')({
+      html: true
+    });
 
 /**
  * Configuration
