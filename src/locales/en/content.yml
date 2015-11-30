@@ -153,3 +153,6 @@ search:
   search-box:
     title: Search box
     help: The search box is a simple form which can be used to enter a search term on a search page.
+  search-results:
+    title: Search results
+    help: Search results are shown in semantically grouped tabs. The categories (groupings) can be chosen freely (e.g. Content pages, News, and Publications). Within the individual tabs, the user can move through the pages with the paging function.
