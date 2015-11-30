@@ -191,3 +191,23 @@ multimedia:
       A "lightbox" is an overlay that opens on top of the website. For instance, it is opened when a preview image in a photo gallery is clicked on, or when the zoom icon of an individual image is activated.
 
       When a "lightbox" is opened, the website in the background is darkened. The "lightbox" comprises the title, the full view of the image, and its caption. The user can then browse through various images using the arrow icons in the "lightbox" or the arrow keys on the keyboard. The "lightbox" can be closed by clicking on the background, and by using the close command or the Esc key.
+functions:
+  title: Functions
+  print:
+    title: Print
+    help: |
+      The "Print" icon, with a link to the print version, can be integrated into every page except the home page. It is positioned at the top right of the content column. A click on the icon opens the print dialog window.
+
+      You can target a specific element to isolate and print by adding a `data-print="ID"` on the wrapper and setting `onclick="$.printPreview.printPreview(ID)"` on the print button. If a `data-title` attribute is set on the wrapper, it will be displayed as the title of the printed page.
+    release: |
+      **2.5.3:**
+
+      - change the `onclick="window.print()"` by `onclick="$.printPreview.printPreview()"`
+      - add an optional target to the printPreview function: `onclick="$.printPreview.printPreview('target id')"`
+
+      **2.5.4:**
+
+      - place a title like `<h3 class="visible-print-block">Contact</h3>` at the top of your `.tab-pane` elements to display only when printing
+  downloading-files:
+    title: Downloading files
+    help: Links with which a file can be downloaded are always preceded by a document icon.

@@ -50,12 +50,16 @@
 		<div class="container container-main">
       {{> f-header}}
 			{{> f-menu}}
-      <div id="content" class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="content" class="container-fluid">
 	{{/if}}
 
 	{% body %}
 
 	{{#if fabricator}}
+          </div>
+        </div>
       </div>
 
       {{> f-footer}}
