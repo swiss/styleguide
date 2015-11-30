@@ -1,7 +1,21 @@
 <footer>
+  <nav class="container-fluid footer-service">
+    <ul class="download-link">
+      <a href="https://github.com/swiss/styleguide/releases/latest">{{t 'styleguide.version'}} {{data 'version'}}</a>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <hr class="footer-line visible-xs">
+    <img class="visible-xs" src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="back to home">
+  </div>
+
   <address>
-    <div class="container-fluid">
-      ©2015 {{t 'styleguide.chancellery'}}
-    </div>
+    <span class="hidden-xs">©2015 {{t 'styleguide.chancellery'}}</span>
+    <nav class="pull-right">
+      <ul>
+        <li><a href="http://www.disclaimer.admin.ch/">{{t 'styleguide.terms-and-conditions'}}</a></li>
+      </ul>
+    </nav>
   </address>
 </footer>
