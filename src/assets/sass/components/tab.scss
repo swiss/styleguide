@@ -106,7 +106,7 @@ ul.nav-tabs {
     border-bottom: 1px solid $silver;
     color: $empress;
     &:before {
-      content: ':';
+      content: '\e90d';
       color: $empress;
     }
     &:first-child {border-top: 1px solid $silver;}

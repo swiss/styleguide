@@ -119,7 +119,7 @@ nav {
   }
   .open .icon--menu:after,
   .open a > .icon--search:after {
-    content: 'x'; // display close icon when dropdown is open
+    content: '\e931'; // display close icon when dropdown is open
   }
 }
 
@@ -171,7 +171,7 @@ nav {
       line-height: 1.2;
       padding: 10px 9px;
       &:after {
-        content: ',';
+        content: '\e904';
         font-family: $admin-icons;
         position: absolute;
         bottom: 4px;
@@ -215,7 +215,7 @@ nav {
       background: $white;
     }
     &:after {
-      content: ';';
+      content: '\e90e';
     }
   }
   .ie9 & > .open > a {
@@ -586,7 +586,7 @@ nav {
     & > a {padding-right: 20px;}
     &:after {
       font-family: $admin-icons;
-      content: '>';
+      content: '\e910';
       padding-right: 5px;
       position: absolute;
       top: 10px;
