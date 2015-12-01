@@ -72,7 +72,7 @@ Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
   }
   &.alert-warning:before {
     font-family: $admin-icons;
-    content: '!';
+    content: '\e900';
     font-size: 2em;
     top: 13px;
     left: 23px;
