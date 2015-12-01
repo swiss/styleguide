@@ -93,7 +93,7 @@ tfoot td.active {background: $solitude !important;}
     cursor: pointer;
   }
   &:after {
-    content: "v";
+    content: "\e92f";
     margin-left: .4em;
     color: $empress;
     font-family: $admin-icons;
