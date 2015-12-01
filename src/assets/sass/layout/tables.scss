@@ -83,7 +83,7 @@ td.active {background: $clear-day !important;}
 tfoot td.active {background: $solitude !important;}
 
 
-.table-sort thead td, .table-sort thead th {
+.table-sort thead th {
   color: $cerulean;
   &:hover, &:hover:after {color: $venetian-red;}
   div {
