@@ -2,6 +2,11 @@
 
 {% block pagetitle %}Details{% endblock %}
 
+{% block skiplinks %}
+  {% set hasSecondaryNav = true %}
+  {{ parent() }}
+{% endblock %}
+
 
 {% block content %}
   <div class="col-md-8">

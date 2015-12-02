@@ -48,15 +48,22 @@ layout: empty
   </script>
 </head>
 <body>
-  <ul class="access-keys">
-    <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
-    <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
-    <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
-    <li><a href="contact.html" accesskey="3">Contact page</a></li><!-- Link to contact page -->
-    <li><a href="sitemap.html" accesskey="4">Sitemap</a></li><!-- Link to sitemap page or page area -->
-    <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
-    <!-- Other smart links can be added for main website functionalities -->
-  </ul>
+
+  {% block skiplinks %}
+    <ul class="access-keys">
+      <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
+      <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
+      <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
+      <li><a href="contact.html" accesskey="3">Contact page</a></li><!-- Link to contact page -->
+      <li><a href="sitemap.html" accesskey="4">Sitemap</a></li><!-- Link to sitemap page or page area -->
+      <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
+      {% if hasSecondaryNav == true %}
+        <li><a href="#secondary-navigation" accesskey="6">Secondary navigation</a></li><!-- Link to secondary navigation -->
+      {% endif %}
+      <!-- Other smart links can be added for main website functionalities -->
+    </ul>
+  {% endblock %}
+
   <div class="container container-main">
 
     {% block header %}
@@ -404,7 +411,7 @@ layout: empty
           <div class="col-sm-4 col-md-3 drilldown">
             <a href="#collapseSubNav" data-toggle="collapse" class="collapsed visible-xs">Sub-Navigation</a>
             <div class="drilldown-container">
-              <nav class="nav-page-list" role="navigation">
+              <nav class="nav-page-list" role="navigation" id="secondary-navigation">
                 <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
                 <a href="#" class="icon icon--before icon--less"><span class="sr-only">Back to </span>Comestible Goods</a>
                 <ul>
