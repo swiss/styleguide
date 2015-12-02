@@ -21,13 +21,13 @@ hierarchical-navigation:
 
       Add `<div class="overlay"></div>` at the end of the `body` tag to display the gray overlay.
     release: |
-      **2.1.0:**
-        - added the `.nav-mobile` section to the beginning of the `.list-group` element
-
       **2.1.2:**
         - changed `.active` class to `.current` for current page highlight in the menu
         - added `h2.sr-only` for more screen reader clarity
         - added h2 and label to search field on mobile
+
+      **2.1.0:**
+        - added the `.nav-mobile` section to the beginning of the `.list-group` element
 
       **2.0.0:**
         - added `<span class="sr-only">current page</span>` for current active link
@@ -79,10 +79,13 @@ hierarchical-navigation:
 
       Navigation below the content level on a smartphone with links to the home page, the navigation level above, and to further pages.
     release: |
-      **2.1.0:**
+      **2.5.2:**
 
-        - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
-        - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
+        - fix error with active state of `.list-emphasis`, **please always wrap the text of this list element with a `span` or a `a`**.
+
+      **2.5.0:**
+
+        - allow nested `<ul/>` lists in `.nav-page-list` elements
 
       **2.3.0:**
 
@@ -91,13 +94,10 @@ hierarchical-navigation:
         - changed label of back button in drilldown sub from "Back" to title
           of section
 
-      **2.5.0:**
+      **2.1.0:**
 
-        - allow nested `<ul/>` lists in `.nav-page-list` elements
-
-      **2.5.2:**
-
-        - fix error with active state of `.list-emphasis`, **please always wrap the text of this list element with a `span` or a `a`**.
+        - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
+        - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
   faceted-page-navigation:
     title: Faceted Page Navigation
     help: |
@@ -173,21 +173,21 @@ header:
 
       On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
     release: |
-      **2.1.0:**
+      **2.5.0**
 
-        - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
-
-      **2.1.2:**
-
-        - added `h2.sr-only` for more screen reader clarity
+        - added `<span class="sr-only">disabled</span>` for disabled accessibility
 
       **2.1.8**
 
         - added `<span class="sr-only">selected</span>` for active accessibility
 
-      **2.5.0**
+      **2.1.2:**
 
-        - added `<span class="sr-only">disabled</span>` for disabled accessibility
+        - added `h2.sr-only` for more screen reader clarity
+
+      **2.1.0:**
+
+        - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
   topics:
     title: Topics A-Z
     help: |
@@ -209,13 +209,13 @@ header:
 
       On smartphones, the treecrumb navigation is omitted.
     release: |
-      **2.1.2:**
-
-        - added `h2.sr-only` for more screen reader clarity
-
       **2.5.0:**
 
         - modified markup of dropdown list. Please refer to how it is in the example below
+
+      **2.1.2:**
+
+        - added `h2.sr-only` for more screen reader clarity
 content-navigation:
   title: Content navigation
   pagination:
@@ -252,14 +252,14 @@ footer:
 
       On smartphones, some of the functions from the header, e.g. service navigation or the full form of the Confederation logo, are moved to the footer.
     release: |
+      **2.5.0:**
+
+      - wrapped footer columns in a `div.row`
+
       **2.1.0:**
 
       - placed links in a `ul.list-unstyled` list
       - changed `.col-sm-3` in `.col-sm-4.col-md-3` for more readability on small size and removed useless `.row` wrapper
-
-      **2.5.0:**
-
-      - wrapped footer columns in a `div.row`
   social-media:
     title: Social Media
     help: The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) are listed in a separate section of the footer.
