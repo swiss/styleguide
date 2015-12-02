@@ -65,7 +65,7 @@ index:
 
     If the KID agrees to the amendment, the submitting body will implement the amendment. In the course of this implementation process, the applicant will ensure that the code, together with a description of the amendment, is passed on to the Specialist Unit for the Confederation CD. The Unit will add the amendment to the Guidelines and inform the service providers of the change.
 accessibility:
-  title: Barrier-free accessibility
+  title: Barrier-free Accessibility
   content: |
     All of the Confederation’s Internet resources must be designed in such a way as to enable people with disabilities to use them without restrictions. The Federal Administration is committed to fulfilling the requirements of the “Web Content Accessibility Guidelines (WCAG) 2.0” to conformance level AA.
 
@@ -75,7 +75,7 @@ accessibility:
 
     [The Guidelines of the Confederation (P028)](http://www.isb.admin.ch/themen/standards/alle/03237/)
 basic-grid:
-  title: Basic grid and page types
+  title: Basic Grid and Page Types
   content: |
     ## Basic Grid
 
@@ -113,7 +113,7 @@ basic-grid:
 
     No additional information and no essential content components may be placed in the context pane, with the exception of the elements mentioned above.
 cd-elements:
-  title: CD elements
+  title: CD Elements
   content: |
     The consistent use of CD elements provides for a branded look and feel across all the websites of the Confederation. It ensures that a website is immediately recognizable as a Confederation website. It also conveys to the user the fundamental values underlying the daily work of the Federal Administration: quality, efficiency, and transparency.
 
@@ -188,7 +188,7 @@ cd-elements:
     <meta name="msapplication-config" content="img/ico/browserconfig.xml">
     ```
 devices:
-  title: Output across a range of end devices
+  title: Output across a Range of End Devices
   content: |
     The Confederation Web Guidelines facilitate optimized output of all the content on a website on various end devices such as desktop computers, laptops, tablets, and smartphones. The layout of the individual web pages and the individual elements adapts on the fly to the viewing environment of the output device.
 
@@ -312,7 +312,7 @@ guidelines:
     - Chrome Mobile
     - Firefox Mobile
 header-footer:
-  title: Header and footer
+  title: Header and Footer
   content: |
     The header and footer appear on all pages and have a predefined design. Their presentation is modified for use on mobile devices.
 
@@ -363,7 +363,7 @@ header-footer:
 
     On mobile devices, many of the functions from the header (e.g. navigation, service navigation, and the full form of the Confederation logo) are moved to the footer.
 sample-pages:
-  title: Sample pages
+  title: Sample Pages
   content: |
     Ten different sample pages are shown in the Confederation Web Guidelines, all of them based on the page types “Home page” and “Content Page”. They were created in the course of the EDA, VBS, and BFS (Federal Statistic Office) projects, and they exemplify how the various elements presented can be combined on web pages. These sample pages can be used as the basis for a project and can be adapted, expanded, or modified as required.
 
