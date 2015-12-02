@@ -94,7 +94,11 @@
   background: transparent;
   font-family: $mainFont;
   outline: none;
-  &:hover {color: #DC0018;}
+
+  &:hover,
+  &:focus {
+    color: #DC0018;
+  }
 }
 
 .label-admin {
