@@ -1,17 +1,3 @@
-.admin-content code, .admin-content pre {
-  font-family: $codeFont !important;
-  font-size: 14px !important;
-  border: 1px solid $silver !important;
-  padding: 2px 5px !important;
-  border-radius: 2px !important;
-  background: $white !important;
-  margin: 0 !important;
-  word-break: keep-all !important;
-  word-wrap: normal !important;
-  white-space:pre !important;
-  color: $mine !important;
-}
-
 .code-example,
 .code-block {
   margin: 15px 0 30px;
@@ -29,7 +15,12 @@
   margin-bottom: 20px !important;
   position: relative !important;
   width: auto !important;
-  &.collapse.in, &.collapsing {margin-left: 0 !important;}
+
+  &.collapse.in,
+  &.collapsing {
+    margin-left: 0 !important;
+  }
+
   &:after {
     content: 'HTML' !important;
     position: absolute !important;
@@ -43,13 +34,17 @@
     display: inline-block !important;
     font-family: $mainFont !important;
   }
+
   &.js-example:after {
     content: 'JavaScript' !important;
   }
+
   .highlight {
     background: #1e221d !important;
   }
-  pre, code {
+
+  pre,
+  code {
     font-family: $codeFont !important;
     width: auto !important;
     background: #1e221d !important;
@@ -65,9 +60,13 @@
     border: 1px solid  #1e221d !important;
     overflow: visible !important;
   }
+
   pre {
     padding: 50px 4% 40px !important;
     overflow-x: auto !important;
   }
-  @media only screen and (max-width: 900px) {padding: 50px 10px !important;}
+
+  @media only screen and (max-width: 900px) {
+    padding: 50px 10px !important;
+  }
 }

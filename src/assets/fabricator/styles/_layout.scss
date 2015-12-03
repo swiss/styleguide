@@ -1,65 +1,3 @@
-.admin-body, #sb-site {
-  background: $softBlue !important;
-  z-index: auto !important;
-}
-
-.admin-header {
-  background: $white !important;
-  padding: 15px 0 !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  z-index: 999 !important;
-  border-bottom: 2px solid $alizarin;
-  h1 {
-    color: $mine !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: $mainFont !important;
-    font-weight: normal !important;
-    font-size: 30px !important;
-    font-style: normal !important;
-    @media only screen and (max-width: 767px) {
-      font-size: 20px !important;
-    }
-  }
-  img {
-    max-height: 29px !important;
-    margin-right: 15px !important;
-    position: relative !important;
-    top: 2px !important;
-    @media only screen and (max-width: 767px) {
-      margin-right: 5px !important;
-      max-height: 16px !important;
-      top: 0 !important;
-    }
-  }
-}
-
-.admin-container {
-  max-width: 900px !important;
-  margin: 0 auto !important;
-  padding-bottom: 90px !important;
-  border: 1px solid $softBlue !important;
-  @media only screen and (max-width: 900px) {
-    padding: 0 10px 50px 10px !important;
-  }
-}
-
-.admin-content-wrapper {
-  padding: 15px 0 !important;
-  padding-bottom: 40px !important;
-  background: $white !important;
-  border-radius: 4px !important;
-  margin-top: 100px !important;
-  @media only screen and (max-width: 1280px) {
-    margin-top: 20px !important;
-  }
-}
-
-
 .example-output {
   padding: 50px 4% 40px 4% !important;
   border: 1px solid $softBlue !important;
@@ -68,6 +6,7 @@
   overflow-y: visible !important;
   box-sizing: border-box !important;
   position: relative !important;
+
   &:after {
     content: 'Example' !important;
     position: absolute !important;
