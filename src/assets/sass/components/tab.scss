@@ -111,9 +111,16 @@ ul.nav-tabs {
     padding: 12px 25px;
     color: $black;
     transition: all 0.2s;
-    &:before {color: $black;}
-    &:hover {text-decoration: none;}
-    &:first-child {border-top: 3px solid $venetian-red;}
+
+    &:before {
+      color: $black;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    &:first-child {
+      border-top: 3px solid $venetian-red;
+    }
   }
 
   a[data-toggle="collapse"].collapse-closed {
@@ -122,7 +129,7 @@ ul.nav-tabs {
     color: $empress;
 
     &:before {
-      content: '\e90d';
+      content: get-font-icon('greater');
       color: $empress;
     }
 

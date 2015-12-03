@@ -93,13 +93,13 @@ tfoot td.active {background: $solitude !important;}
     cursor: pointer;
   }
   &:after {
-    content: "\e92f";
+    content: get-font-icon('root');
     margin-left: .4em;
     color: $empress;
     font-family: $admin-icons;
   }
   &.tablesorter-headerAsc:after {
-    content: "\5E";
+    content: get-font-icon('power');
   }
   &.tablesorter-headerAsc, &.tablesorter-headerDesc {
     div, &:after {

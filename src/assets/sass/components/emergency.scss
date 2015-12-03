@@ -22,7 +22,7 @@
     height: auto;
     color: $white;
     font-family: $admin-icons;
-    content: '\e900';
+    content: get-font-icon('exclam');
     font-size: 2em;
     padding-left: 5px;
   }

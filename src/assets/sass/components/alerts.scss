@@ -9,47 +9,6 @@
  * Licensed under MIT
  =========================================================== */
 
- /*doc
----
-title: Alerts
-name: a-alerts
-category: Content Modules - Widgets
----
-
-Alerts are shown when you need to get the attention of the user with something important.
-
-Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
-
-<br>
-<div class="alert alert-warning">
-
-  **Accessibility**
-
-  You can add a `<span class="sr-only">alert type</span>` if the `role="alert"` is not enough information for the end user.
-
-</div>
-
-```html_example
-<div class="alert alert-success" role="alert">
-  <span class="sr-only">success:</span>
-  Alert info!
-</div>
-<div class="alert alert-info" role="alert">
-  <span class="sr-only">info:</span>
-  Alert info!
-</div>
-<div class="alert alert-warning" role="alert">
-  <span class="sr-only">warning:</span>
-  Alert info!
-</div>
-<div class="alert alert-danger" role="alert">
-  <span class="sr-only">danger:</span>
-  Alert info!
-</div>
-```
-
-*/
-
 .alert {
   border: none;
   padding-left: 55px;
@@ -72,7 +31,7 @@ Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
   }
   &.alert-warning:before {
     font-family: $admin-icons;
-    content: '\e900';
+    content: get-font-icon('exclam');
     font-size: 2em;
     top: 13px;
     left: 23px;
