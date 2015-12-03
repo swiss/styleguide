@@ -14,7 +14,7 @@ index:
 
     The elements and modules described can be categorized in three groups:
 
-    ## Corporate Design Elements
+    ## 1. Corporate Design Elements <span class="label label-admin">CD</span>
 
     The corporate design elements identify the website definitively as websites of the Confederation and for this reason their use is obligatory. Their presentation and design are set out in the Confederation CD, and they may not be modified in any way. Changes to these elements may only be implemented by the Specialist Unit for the Confederation CD or by the KID (Information Services Conference of the Administrative Departments). The CD elements are:
 
@@ -26,7 +26,7 @@ index:
 
     The CD elements are marked with the following icon in the detailed descriptions: Corporate
 
-    ## Fixed Elements
+    ## 2. Fixed Elements <span class="label label-admin">FIX</span>
 
     The use of fixed elements is not mandatory. However, if they are used, their position and design are fixed and unalterable. For this reason they may not be modified in any way. Changes or additions to the following elements require the approval of the Web Forum:
 
@@ -44,7 +44,7 @@ index:
 
     Fixed elements are marked with the following icon in the detailed descriptions: Fixed
 
-    ##  Flexible Elements
+    ## 3. Flexible Elements <span class="label label-admin">FLEX</span>
 
     The descriptions of all other elements are recommendations. They can and may be adapted to meet specific requirements. They can be freely expanded upon and modified. The general look and feel of the site must, however, be retained. Additions to and amendments of these elements can be presented to the Web Forum for consideration as part of the web guidelines.
 
@@ -66,14 +66,24 @@ index:
     If the KID agrees to the amendment, the submitting body will implement the amendment. In the course of this implementation process, the applicant will ensure that the code, together with a description of the amendment, is passed on to the Specialist Unit for the Confederation CD. The Unit will add the amendment to the Guidelines and inform the service providers of the change.
 accessibility:
   title: Barrier-free Accessibility
-  content: |
+  intro: |
     All of the Confederation’s Internet resources must be designed in such a way as to enable people with disabilities to use them without restrictions. The Federal Administration is committed to fulfilling the requirements of the “Web Content Accessibility Guidelines (WCAG) 2.0” to conformance level AA.
 
     Additional Information:
 
     [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/)
 
-    [The Guidelines of the Confederation (P028)](http://www.isb.admin.ch/themen/standards/alle/03237/)
+    [The Guidelines of the Confederation (P028)](https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html)
+
+    ## Best practices
+
+    This section provides Accessibility compliant examples for commonly encountered situations.
+
+  multi-language: |
+    ### Multi-language content
+
+    Sometimes, on the same page, there is content in different languages. The "lang" atttribute can be used to notify the Screen readers of the language switch.
+
 basic-grid:
   title: Basic Grid and Page Types
   content: |
@@ -83,9 +93,10 @@ basic-grid:
 
     the header, the four-column content section, and the footer.
 
-    ![image](/styleguide-img/grid.png)
-
-    *The four-column grid is used in different ways by the various page types*
+    <figure>
+      <img src="/styleguide-img/grid.png" alt="Page grid example">
+      <figcaption>The four-column grid is used in different ways by the various page types</figcaption>
+    </figure>
 
     ## Page Types
 
@@ -93,13 +104,13 @@ basic-grid:
 
     ## Home page
 
-    The home page is made up of the header (that can contain the global navigation section, which is explained in the Elements Page , the teaser section, and the footer. The teaser section is divided into four columns. There are many different teasers for the various applications, and these are listed in the “Content Modules” section and described in detail there. The teasers can be used flexibly in the teaser section. For instance, a focus teaser can be spread over three columns, while a person teaser with a portrait of the responsible Federal Councillor can be limited to one column.
+    The home page is made up of the header (that can contain the global navigation section, which is explained in the Elements Page, the teaser section, and the footer. The teaser section is divided into four columns. There are many different teasers for the various applications, and these are listed in the “Content Modules” section and described in detail there. The teasers can be used flexibly in the teaser section. For instance, a focus teaser can be spread over three columns, while a person teaser with a portrait of the responsible Federal Councillor can be limited to one column.
 
     ## Content Page
 
     A content page also has a header and a footer. In place of the teaser section, this page has a four-column content section. The column on the left is used as the left navigation bar, the two columns in the middle are set aside for the content proper, while the column on the right is used as the context pane.
 
-    ### Left Navigation Bar:
+    ### Left Navigation Bar
 
     The navigation used on the left of the content section is dynamic, meaning that the subsections of the page currently in use are always shown. There are three parts to the navigation: a link back to the previous level, the navigation header with the title of the current page, and the actual navigation with links to the sub-pages. Its use is described on the Elements Page.
 
@@ -129,19 +140,19 @@ cd-elements:
 
     The originator of the website is always identified via the full form of the Confederation logo (coat of arms and the four-language wordmark) and the name of the organizational unit, including its abbreviation or shortened form. These two components are separated from one another by a vertical line. The designation is always positioned at the top left of the header. As an alternative to the organizational unit, the title of the website may also be shown.
 
-
-    ![image](/styleguide-img/kennzeichnung.png)
-
-    *The designation comprises the full form of the Confederation logo, and the name of the organizational unit, as well as a separating line.*
-
+    <figure>
+      <img src="/styleguide-img/kennzeichnung.png" alt="Page grid example">
+      <figcaption>The designation comprises the full form of the Confederation logo, and the name of the organizational unit, as well as a separating line.</figcaption>
+    </figure>
 
     ## Implementation for Smartphones
 
     For applications in which space for the header is limited, the coat of arms can be used on its own without the wordmark. The name of the organizational unit can be given in its abbreviated form (e.g. EDA) or as a short form (e.g. MeteoSchweiz). Organizational units for which there is no abbreviation or short form are written in full. This can mean that the designation covers several lines and the height of the header section is increased to accommodate the name.
 
-    ![image](/styleguide-img/mobile_header.png)
-
-    *For the designation on smartphones the abbreviation can also be used. If the name of the organizational unit has to be written out in full, the designation may cover several lines.*
+    <figure>
+      <img src="/styleguide-img/mobile_header.png" alt="Page grid example">
+      <figcaption>For the designation on smartphones the abbreviation can also be used. If the name of the organizational unit has to be written out in full, the designation may cover several lines.</figcaption>
+    </figure>
 
     In cases where the shorter form of the designation is used in the header, the footer must contain the full form of the Confederation logo with the coat of arms and the four-language wordmark.
 
@@ -169,7 +180,7 @@ cd-elements:
 
     ## Favicon
 
-    Don't forget the favicon before putting the website in production. The favicon ressources are located in the `/build/img/ico/` directory. Include them with the adequate code in your index file:
+    Don't forget the favicon before putting the website in production. The favicon ressources are located in the `/build/img/ico/` directory. Include them with the adequate code:
 
     ```html
     <link rel="shortcut icon" href="build/img/ico/favicon.ico">
@@ -184,31 +195,22 @@ cd-elements:
     <link rel="icon" type="image/png" href="build/img/ico/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="build/img/ico/favicon-32x32.png" sizes="32x32">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="img/ico/mstile-144x144.png">
-    <meta name="msapplication-config" content="img/ico/browserconfig.xml">
+    <meta name="msapplication-TileImage" content="build/img/ico/mstile-144x144.png">
+    <meta name="msapplication-config" content="build/img/ico/browserconfig.xml">
     ```
 devices:
   title: Output across a Range of End Devices
   content: |
     The Confederation Web Guidelines facilitate optimized output of all the content on a website on various end devices such as desktop computers, laptops, tablets, and smartphones. The layout of the individual web pages and the individual elements adapts on the fly to the viewing environment of the output device.
 
-    In the Confederation Web Guidelines, the target output viewing environments are shown at the bottom left-hand corner of the preview box of the element/module, and in the window of the sample pages. For use in production, the display of this message must be deactivated in the responsive.less file (lines 15-16).
-
-    ![image](/styleguide-img/responsive_indicator.png)
-
-    *The “tablet” output format in the bottom left-hand corner of the preview box*
-
-    ![image](/styleguide-img/responsive_production.png)
-
-    For use in productive systems, line 15 (production) of the LESS code file responsive.less must be activated. Line 16 (development) can be commented out.
-
     ## Desktop Computers, Laptops, and Tablets
 
     For desktop computers, laptops, and tablets held in landscape mode, the original layout is retained. As soon as a tablet is held in portrait mode, the content of the right-hand column (the context pane) is shown below the content.
 
-    ![image](/styleguide-img/responsive.png)
-
-    *The contents are arranged and displayed differently on different end devices*
+    <figure>
+      <img src="/styleguide-img/responsive.png" alt="Page grid example">
+      <figcaption>The contents are arranged and displayed differently on different end devices</figcaption>
+    </figure>
 
     ## Mobile Devices / Smartphones
 
@@ -220,7 +222,7 @@ glossary:
   content: |
     <dl>
       <dt>Accessibility</dt>
-      <dd>Barrier-free Accessibility</dd>
+      <dd>See Barrier-free Accessibility</dd>
 
       <dt>Barrier-free Accessibility</dt>
       <dd>Barrier-free Internet is used to refer to web resources that can be utilized by all users, irrespective of their physical capabilities.</dd>
@@ -241,7 +243,7 @@ glossary:
       <dd>The designation consists of the Confederation logo (coat of arms + the four-language wordmark) and the name of the organizational unit (OU). Its function is to indicate to the user who the originator of a particular website is. In websites that cover several organizations and in theme portals, the name of the OU is replaced by the title of the website.</dd>
 
       <dt>KID</dt>
-      <dd>The Information Services Conference of the Administrative Departments Organization Unit (or OU): The relevant organizational unit (e.g. a department, an agency, a division) of the Swiss Confederation</dd>
+      <dd>The Information Services Conference of the Administrative Departments Organization Unit (or OU): The relevant organizational unit (e.g. a department, an agency, a division) of the Swiss Confederation.</dd>
 
       <dt>Responsive Design/Responsiveness</dt>
       <dd>Responsive design or responsiveness is used to describe the process by which the layout of a website is adapted to fit the viewing environment of an end device. This means that users can enjoy an optimal viewing experience of the same contents on desktop computers, laptops, tablets, and smartphones.</dd>
@@ -270,27 +272,19 @@ guidelines:
 
     The chapter entitled “Design Principles” summarizes the fundamental principles of the Confederation Web Guidelines.
 
-    The tabs “Basic Elements”, “Navigation Modules”, and “Content Modules” contain detailed descriptions of the individual elements.
+    The tabs “Base Layout”, “Navigation Modules”, and “Content Modules” contain detailed descriptions of the individual elements.
 
-    On the individual pages, the element is presented first of all in a scalable frame. When the frame is enlarged or reduced in size, the presentation of the element can be tested for responsiveness on various output devices. Below the representation of the element there is a brief description as well as the HTML code for implementation by the development team.
+    On the individual pages, the element is presented first of all in a scalable frame. When the frame is enlarged or reduced in size, the presentation of the element can be tested for responsiveness on various output devices. Above the representation of the element lives a brief description of it. Below it, the HTML code for implementation by the development team can be displayed. The code given in the HTML tab can be copied and reused.
 
-    Abbildung für die Reiter mit Info und Code
-    The code given in the HTML tab can be copied and reused.
-    In the section “Sample Pages”, various types of web page are presented. These are opened in a new browser window or tab. They can therefore be scaled directly and the presentation tested on various screen sizes. For the Chrome browser, we recommend the use of the browser extension “Responsive Site View”.
+    In the section “Example Pages”, various types of web page are presented. They can be scaled directly and the presentation tested on various screen sizes.
 
     ## Examples Used
 
     The Confederation Web Guidelines were the outcome of pilot projects initiated by the EDA (Federal Department of Foreign Affairs) and the VBS (Federal Department of Defence, Civil Protection and Sport). This explains some of the examples and terms used in the visualizations (e.g. the terminology in the global navigation). These Web Guidelines primarily contain definitions pertaining to the functional and creative design of the website. They make no reference to the information architecture, nor do they prescribe the terminology to be used.
 
-    ## Downloads
+    ## Usage
 
-    All the files that are necessary to build a website can be downloaded as ZIP files. After these have been downloaded and unzipped, all of the required files are to be found in the subfolders of the folder titled “app”:
-
-    - “snippets” contains the HTML code for all the elements introduced in the Web Guidelines
-    - “assets/fonts” contains the icon font “AdminCH_Symbols”
-    - “assets/styles” contains the CSS framework (in LESS format)
-    - “assets/scripts” contains the JavaScript framework
-    - “assets/images” contains graphics and sample images
+    Please follow [these instructions](https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet) to use the styleguide into your project.
 
     ## Web Browsers Supported
 
@@ -298,19 +292,15 @@ guidelines:
 
     ### Desktop optimisation:
 
-    - IE 9 and higher
-    - Safari 6.0 and higher
-    - Firefox 25 and higher
-    - Chrome 31 and higher
+    - Internet Explorer 9 and higher
+    - Safari 9 and higher
+    - Firefox 38 and higher
+    - Chrome 45 and higher
 
     ### Mobile optimisation:
 
-    - iOS 6 et 7 (iPhone and iPad)
-    - Safari Mobile
-    - Chrome iOS
-    - Android 4.2 (Galaxie S3, Nexus 7)
-    - Chrome Mobile
-    - Firefox Mobile
+    - Safari and Chrome on iOS 7 and higher
+    - Chrome and/or the “default browser” and Firefox on Android 5 and higher
 header-footer:
   title: Header and Footer
   content: |
@@ -322,17 +312,18 @@ header-footer:
 
     These elements are either CD elements or fixed elements. They may not be amended in any way.
 
-    ![image](/styleguide-img/header.png)
-
-    *The header with its key elements*
+    <figure>
+      <img src="/styleguide-img/header.png" alt="Page grid example">
+      <figcaption>The header with its key elements</figcaption>
+    </figure>
 
     The **Treecrumb** shows the position of the website within the hierarchical organization of the Federal Administration. It allows the user to access directly the websites of higher-level organizational units. The treecrumb navigation is not used on mobile devices.
 
     The **Service Navigation** provides links to topics of overriding importance (e.g. Contact, Jobs, Media and Contact) and also contains the language navigation. Ideally, there should be three, but in no case should there be more than five links in the service navigation. At the very least there must be the Contact link and the Language selection link. On mobile devices the links in the service navigation are moved to the footer.
 
-    To the right of the service navigation is the **language selection**. The languages available are represented by their abbreviations as per ISO-Norm ISO 639-1 in the following order: German: = DE, French = FR, Italian = IT, Romansh = RM, English = EN, etc. It is mandatory to offer the choice of one of the official languages DE, FR, and IT on every Federal Administration website. If there is no content available in one of these languages, the relevant link is not active. A tooltip shows that the content is not available in the language selected. The RM and EN language choices are only shown when the relevant content is actually available in these languages. Sites which use more than 5 languages can use a dropdown menu for the other languages in place of the fifth language. However, DE, FR, IT and RM are all always given in their short form as links.
+    To the right of the service navigation is the **language selection**. The languages available are represented by their abbreviations as per ISO-Norm ISO 639-1 in the following order: German: DE, French: FR, Italian: IT, Romansh: RM, English: EN. It is mandatory to offer the choice of one of the official languages DE, FR, and IT on every Federal Administration website. If there is no content available in one of these languages, the relevant link is not active. A tooltip shows that the content is not available in the language selected. The RM and EN language choices are only shown when the relevant content is actually available in these languages. Sites which use more than 5 languages can use a dropdown menu for the other languages in place of the fifth language. However, DE, FR, IT and RM are all always given in their short form as links.
     The language navigation is aligned flush left with the search box and the topics A-Z box.
-    The language selection on mobile devices follows the regulations set out above. The concrete implementation will be described in release 1.2 of the Guidelines.
+    The language selection on mobile devices follows the regulations set out above.
 
     The designation, comprising the Confederation logo (coat of arms and wordmark) and the name of the organizational unit, is the most important CD element. In websites that cover several organizations or in theme portals, the name of the organizational unit is replaced by the title of the website. On mobile devices the wordmark in the Confederation logo in the header may be omitted, and the name of the organizational unit abbreviated or shortened. If the name is abbreviated, its full form is given in a section above the header. This section disappears when the user starts to scroll.
 
@@ -357,9 +348,10 @@ header-footer:
 
     The footbar below the footer contains the copyright notice, and links to the “legal notice” and “further legal information”. The footbar is a CD element. Its use is mandatory.
 
-    ![image](/styleguide-img/footer.png)
-
-    *The footer with its various sections*
+    <figure>
+      <img src="/styleguide-img/footer.png" alt="Page grid example">
+      <figcaption>The footer with its various sections</figcaption>
+    </figure>
 
     On mobile devices, many of the functions from the header (e.g. navigation, service navigation, and the full form of the Confederation logo) are moved to the footer.
 sample-pages:

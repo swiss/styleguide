@@ -1,85 +1,24 @@
-.admin-body, #sb-site {
-  background: $softBlue !important;
-  z-index: auto !important;
-}
-
-.admin-header {
-  background: $white !important;
-  padding: 15px 0 !important;
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  z-index: 999 !important;
-  border-bottom: 2px solid $alizarin;
-  h1 {
-    color: $mine !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: $mainFont !important;
-    font-weight: normal !important;
-    font-size: 30px !important;
-    font-style: normal !important;
-    @media only screen and (max-width: 767px) {
-      font-size: 20px !important;
-    }
-  }
-  img {
-    max-height: 29px !important;
-    margin-right: 15px !important;
-    position: relative !important;
-    top: 2px !important;
-    @media only screen and (max-width: 767px) {
-      margin-right: 5px !important;
-      max-height: 16px !important;
-      top: 0 !important;
-    }
-  }
-}
-
-.admin-container {
-  max-width: 900px !important;
-  margin: 0 auto !important;
-  padding-bottom: 90px !important;
-  border: 1px solid $softBlue !important;
-  @media only screen and (max-width: 900px) {
-    padding: 0 10px 50px 10px !important;
-  }
-}
-
-.admin-content-wrapper {
-  padding: 15px 0 !important;
-  padding-bottom: 40px !important;
-  background: $white !important;
-  border-radius: 4px !important;
-  margin-top: 100px !important;
-  @media only screen and (max-width: 1280px) {
-    margin-top: 20px !important;
-  }
-}
-
-
 .example-output {
-  padding: 50px 4% 40px 4% !important;
-  border: 1px solid $softBlue !important;
-  position: relative !important;
-  width: 100% !important;
-  overflow-y: visible !important;
-  box-sizing: border-box !important;
-  position: relative !important;
+  padding: 50px 4% 40px 4%;
+  border: 1px solid $softBlue;
+  position: relative;
+  width: 100%;
+  overflow-y: visible;
+  box-sizing: border-box;
+  position: relative;
+
   &:after {
-    content: 'Example' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    color: $asbestos !important;
-    border-right: 1px solid $softBlue !important;
-    border-bottom: 1px solid $softBlue !important;
-    border-bottom-right-radius: 4px !important;
-    padding: 5px 8px !important;
-    display: inline-block !important;
-    font-family: $mainFont !important;
+    content: 'Example';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $asbestos;
+    border-right: 1px solid $softBlue;
+    border-bottom: 1px solid $softBlue;
+    border-bottom-right-radius: 4px;
+    padding: 5px 8px;
+    display: inline-block;
+    font-family: $mainFont;
   }
 }
 
@@ -87,7 +26,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: 0 !important;
+  margin: 0;
   z-index: 50;
   border: none;
   color: #CCCCCC;
@@ -102,15 +41,18 @@
 }
 
 .label-admin {
-  border: 1px solid $black !important;
-  color: $black !important;
-  font-size: 8px !important;
-  line-height: 26px !important;
-  text-align: center !important;
-  display: block !important;
-  width: 31px !important;
-  height: 31px !important;
-  border-radius: 31px !important;
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+
+  color: $black;
+  font-size: 8px;
+  line-height: 26px;
+  text-align: center;
+  vertical-align: middle;
+
+  border-radius: 31px;
+  border: 1px solid $black;
 }
 
 .release-notes {
@@ -147,5 +89,21 @@
 
     box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
     border-radius: 3px;
+  }
+}
+
+.f-item-anchor {
+  &,
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
   }
 }
