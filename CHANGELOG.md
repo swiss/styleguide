@@ -6,6 +6,7 @@ This changelog references the relevant changes and bug fixes.
 * 3.0.0
  * Move "Admin Icons" code points to [PUA Area](https://en.wikipedia.org/wiki/Private_Use_Areas)
  * #246 Remove deprecated social sharing buttons
+ * #219 Fix accessibility on tables
 
 * 2.5.4 (2015-08-31)
  * #376 Fix controls spacing in slideshow element
