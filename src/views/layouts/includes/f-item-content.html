@@ -20,14 +20,14 @@
       <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '(\.)' '-' @key}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}">&lt;/&gt;</button>
     </div>
 
-    <div class="code-block collapse{{#if data.expanded}} in{{/if}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}" id="code-{{replace '(\.)' '-' @key}}">
+    <div class="code-block collapse{{#if data.expanded}} in{{/if}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}" id="code-{{replace '(\.)' '-' @key}}" role="note">
       <pre><code class="language-markup">{{material @key @root}}</code></pre>
     </div>
   </div>
 {{/unless}}
 
 {{#if data.javascript}}
-  <div class="code-block js-example">
+  <div class="code-block js-example" role="note">
     <pre><code class="language-javascript">{{renderFile 'javascripts/' data.javascript}}</code></pre>
   </div>
 {{/if}}
