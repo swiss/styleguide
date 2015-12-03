@@ -88,3 +88,19 @@
     border-radius: 3px;
   }
 }
+
+.f-item-anchor {
+  &,
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
