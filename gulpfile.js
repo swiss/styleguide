@@ -389,7 +389,7 @@ gulp.task('serve', ['assemble-everything'], function () {
   gulp.watch(['src/assets/img/**/*.{jpg,png,gif,svg}'], function() {
     runSequence('build-images', 'assemble:watch');
   });
-  gulp.watch(['src/assets/fonts/**/*.{eot,svg,woff,ttf}'], function() {
+  gulp.watch(['src/assets/fonts/**/*.{eot,woff,woff2,ttf}'], function() {
     runSequence('build-fonts', 'assemble:watch');
   });
   gulp.watch(['src/views/pages/twig/*.twig'], function() {
