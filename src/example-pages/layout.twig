@@ -1,7 +1,6 @@
 ---
 layout: empty
 ---
-
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
@@ -10,29 +9,29 @@ layout: empty
 <!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=$start">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin.ch - {% block pagetitle %}{% endblock %}</title>
+  <title>{% block pagetitle %}{% endblock %}, Example Pages, Swiss Confederation Web Guidelines</title>
 
   <link rel="stylesheet" href="../../css/vendors.css">
   <link rel="stylesheet" href="../../css/admin.css">
   <link rel="stylesheet" href="../../css/print.css">
 
-<!-- Favicons -->
-    <link rel="shortcut icon" href="../../img/ico/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="../../img/ico/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../../img/ico/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../../img/ico/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../../img/ico/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../../img/ico/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../../img/ico/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../../img/ico/apple-touch-icon-76x76.png">
-    <link rel="icon" type="image/png" href="../../img/ico/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="../../img/ico/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="../../img/ico/favicon-32x32.png" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="../../img/ico/mstile-144x144.png">
-    <meta name="msapplication-config" content="../../img/ico/browserconfig.xml">
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="../../img/ico/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="../../img/ico/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../img/ico/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../img/ico/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../img/ico/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../img/ico/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../img/ico/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../img/ico/apple-touch-icon-76x76.png">
+  <link rel="icon" type="image/png" href="../../img/ico/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="../../img/ico/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../img/ico/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../../img/ico/mstile-144x144.png">
+  <meta name="msapplication-config" content="../../img/ico/browserconfig.xml">
 
   <!--[if lt IE 9]>
     <script src="../../js/polyfills.min.js"></script>
@@ -48,15 +47,20 @@ layout: empty
   </script>
 </head>
 <body>
-  <ul class="access-keys" role="navigation">
-    <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
-    <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
-    <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
-    <li><a href="contact.html" accesskey="3">Contact page</a></li><!-- Link to contact page -->
-    <li><a href="sitemap.html" accesskey="4">Sitemap</a></li><!-- Link to sitemap page or page area -->
-    <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
-    <!-- Other smart links can be added for main website functionalities -->
-  </ul>
+
+  {% block skiplinks %}
+    <ul class="access-keys">
+      <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
+      <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
+      <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
+      <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
+      {% if hasSecondaryNav == true %}
+        <li><a href="#secondary-navigation" accesskey="6">Secondary navigation</a></li><!-- Link to secondary navigation -->
+      {% endif %}
+      <!-- Other smart links can be added for main website functionalities -->
+    </ul>
+  {% endblock %}
+
   <div class="container container-main">
 
     {% block header %}
@@ -107,15 +111,14 @@ layout: empty
           </nav>
 
           <section class="nav-services clearfix">
-            <h2>Title of page</h2>
             <h2 class="sr-only">Language selection</h2>
             <nav class="nav-lang">
               <ul>
-                <li><a class="active" href="#">DE <span class="sr-only">selected</span></a></li>
+                <li><a href="#">DE</a></li>
                 <li><a href="#">FR</a></li>
                 <li><a href="#">IT</a></li>
-                <li><a class="disabled" href="#">RM <span class="sr-only">disabled</span></a></li>
-                <li><a href="#">EN</a></li>
+                <li><a class="disabled" href="#">RM<span class="sr-only">disabled</span></a></li>
+                <li><a class="active" href="#">EN<span class="sr-only">selected</span></a></a></li>
               </ul>
             </nav>
             <nav class="nav-service" role="navigation">
@@ -227,7 +230,7 @@ layout: empty
         </section>
 
         <!-- The tab navigation -->
-        <ul class="nav navbar-nav" role="navigation">
+        <ul class="nav navbar-nav">
           <li class="dropdown current yamm-fw">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aktuell <span class="sr-only">current page</span></a>
             <ul class="dropdown-menu" role="menu">
@@ -405,7 +408,7 @@ layout: empty
           <div class="col-sm-4 col-md-3 drilldown">
             <a href="#collapseSubNav" data-toggle="collapse" class="collapsed visible-xs">Sub-Navigation</a>
             <div class="drilldown-container">
-              <nav class="nav-page-list" role="navigation">
+              <nav class="nav-page-list" role="navigation" id="secondary-navigation">
                 <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
                 <a href="#" class="icon icon--before icon--less"><span class="sr-only">Back to </span>Comestible Goods</a>
                 <ul>

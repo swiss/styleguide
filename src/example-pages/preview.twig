@@ -4,6 +4,11 @@
 
 {% block sidebar_right %}{% endblock %}
 
+{% block skiplinks %}
+  {% set hasSecondaryNav = true %}
+  {{ parent() }}
+{% endblock %}
+
 {% block content %}
     <div class="col-sm-12">
       <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>

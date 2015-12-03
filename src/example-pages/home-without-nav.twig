@@ -2,6 +2,11 @@
 
 {% block pagetitle %}Homepage without nav{% endblock %}
 
+{% block skiplinks %}
+  {% set hasSecondaryNav = true %}
+  {{ parent() }}
+{% endblock %}
+
 {% block main_yamm %}
   <section class="nav-mobile yamm">
     <div class="table-row">

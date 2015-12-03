@@ -392,8 +392,8 @@ gulp.task('serve', ['assemble-everything'], function () {
   gulp.watch(['src/assets/fonts/**/*.{eot,woff,woff2,ttf}'], function() {
     runSequence('build-fonts', 'assemble:watch');
   });
-  gulp.watch(['src/views/pages/twig/*.twig'], function() {
-    runSequence('twig', reload);
+  gulp.watch(['src/example-pages/*.twig'], function() {
+    runSequence('twig', 'assemble:watch');
   });
 });
 
