@@ -1,0 +1,14 @@
+---
+fabricator: true
+title: navigation.hierarchical-navigation.title
+category: navigation.title
+permalink: hierarchical-navigation.html
+---
+
+<h1>{{t 'navigation.hierarchical-navigation.title'}}</h1>
+
+{{#each materials.navigation.items.hierarchical-navigation.items}}
+
+{{> f-item this}}
+
+{{/each}}

@@ -1,0 +1,14 @@
+---
+fabricator: true
+title: layout.typography.title
+category: layout.title
+permalink: typography.html
+---
+
+<h1>{{t 'layout.typography.title'}}</h1>
+
+{{#each materials.layout.items.typography.items}}
+
+{{> f-item this}}
+
+{{/each}}

@@ -1,0 +1,14 @@
+---
+fabricator: true
+title: content.widgets.title
+category: content.title
+permalink: widgets.html
+---
+
+<h1>{{t 'content.widgets.title'}}</h1>
+
+{{#each materials.content.items.widgets.items}}
+
+{{> f-item this}}
+
+{{/each}}

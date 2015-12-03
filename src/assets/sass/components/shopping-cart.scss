@@ -1,0 +1,20 @@
+.cart {
+  @media only screen and (min-width: $screen-md-min) {
+    border: 1px solid $silver;
+    padding: 0 0.8em 0.8em 0.8em;
+  }
+  ul {
+    border-top: 1px solid $silver;
+  }
+  li {
+    margin-left: 0;
+    margin-top: 0.4em;
+    border-bottom: 1px solid $silver;
+    min-height: 25px;
+    padding-bottom: 3px;
+    > span {
+      display: block;
+      width: 80%;
+    }
+  }
+}

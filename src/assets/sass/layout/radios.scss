@@ -1,0 +1,46 @@
+/* ==========================================================
+ * radios.scss
+ * Custom radio input styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+@charset "UTF-8";
+
+.radio {
+  @extend .checkbox;
+}
+
+.radio--left {
+  input {
+    &:focus + label:before {background-position: 0 -315px;}
+    &:checked + label:before {background-position: 0 -225px;}
+    &:checked:focus + label:before {background-position: 0 -180px;}
+    &:disabled + label:before {background-position: 0 -405px;}
+    &:checked:disabled + label:before {background-position: 0 -495px;}
+  }
+  label:before {
+    @include form-button(radio, left);
+  }
+}
+
+.radio--right {
+  input {
+    &:focus + label:after {background-position: 0 -315px;}
+    &:checked + label:after {background-position: 0 -225px;}
+    &:checked:focus + label:after {background-position: 0 -180px;}
+    &:disabled + label:after {background-position: 0 -405px;}
+    &:checked:disabled + label:after {background-position: 0 -495px;}
+  }
+  label {
+    padding-right: 20px;
+    padding-left: 0;
+    &:after {
+      @include form-button(radio, right);
+    }
+  }
+}

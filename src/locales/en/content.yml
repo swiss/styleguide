@@ -1,0 +1,223 @@
+title: Content Modules
+widgets:
+  title: Widgets
+  alerts:
+    title: Alerts
+    help: |
+      Alerts are shown when you need to get the attention of the user with something important.
+
+      Variants: `.alert-success` `.alert-info` `.alert-warning` `.alert-danger`
+    release: |
+      **Accessibility**
+
+      You can add a `<span class="sr-only">alert type</span>` if the `role="alert"` is not enough information for the end user.
+  emergency:
+    title: Emergency
+    help: |
+      The emergency banner is only ever shown on the home page in cases of extreme urgency. It is always placed at the very top of the home page.
+
+      It is vital that this element should only be used in cases of emergency – i.e. extremely sparingly.
+  contact-box:
+    title: Contact box
+    help: |
+      The contact box provides the user with a possibility to contact the website with regard to the content of the page. It is always to be found at the top of the context pane. If there is only one general contact available for the whole website, and if this is also available via the service navigation function, then the contact box is omitted.
+
+      The contact box shows two tabs: “Contact” and “Map”. In the “Contact” tab the name of the contact person, the address, the telephone number, the contact form, etc. are shown. If required, additional information, such as the opening hours of an embassy, for example, can be listed. In the “Map” tab, the contact is localized graphically in a map section, and the address is again listed in abbreviated form.
+
+      A click on “Print contact information” opens the browser’s or operating system’s print dialog.
+
+      On tablets the contact information is shown under the content of the page in a two-column layout. The contents of the two tabs are shown next to one another.
+teaser:
+  title: Teaser
+  focus:
+    title: Focus
+    help: |
+      The focus teaser contains two to four articles selected by the editorial team and of topical interest which are to be placed in a prominent position. The position of the focus teaser is normally at the top of the home page. It consists of a large image, a headline, a brief teaser text, and a "more" link. The various topics are highlighted in turn in a slideshow presentation. The user can choose a particular article via a tab. This automatically stops the slideshow.
+
+      On tablets and smartphones, the tab bar is replaced by a series of dots.
+
+      Please be careful about the length of the text in the tabs, the height is fixed.
+  news:
+    title: News
+    help: |
+      Instead of the focus teaser, the "News" teaser can be used, in this case with only one article. This is the best solution if only a limited number of newsworthy items are presented on the home page and there is a low frequency of changes to the content of the home page.
+
+      The "News" teaser consists of a headline, a large image, a brief teaser text, and a "more" link.
+  headline:
+    title: Title Line for Headlines
+    help: |
+      The teaser title line makes it possible to provide a teaser with an additional headline or to arrange several teasers in a group.
+
+      The title line consists of a headline, an optional link to related topics, and a line 2 pixels in height.
+  carousel:
+    title: Carousel
+    help: |
+      In a rotating carousel a topic can be presented from different perspectives. The various articles on the topic alternate automatically.
+
+      The carousel consists of various information blocks, each of which contains a large image, an optional small image, a brief teaser headline, a text, and a "more" link.
+
+      **Accessibility issue**
+
+      The carousel component is not totally compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.
+    release: |
+      **2.5.1**
+
+        - put `<figure>` element after `<h4>` to avoid ungraceful alignment
+  slideshow:
+    title: Slideshow
+    help: |
+      The slideshow uses the jQuery plugin ([Blueimp Bootstrap Image Gallery](https://github.com/blueimp/Bootstrap-Image-Gallery)) to display images in fullscreen from the basic carousel. Be sure to add the correct layout before your `</body>` closing tag, as explained in the example below.
+
+      **Accessibility issue**
+
+      The slideshow component is not compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.
+    release: |
+      **2.5.3:**
+
+      - switched order between the `<small>` and `<div>` elements inside of `.carousel-controls` container
+      - removed `.pull-right` class to those same 2 elements
+      - added `.pull-right` class to `.carousel-controls` element
+  text-teaser:
+    title: Text teaser
+    help: The text teaser is a simple element which is usually used in lists. It consists of a headline with a link and a short text.
+  dossier-teaser:
+    title: Dossier teaser
+    help: |
+      The dossier teaser is used to introduce topics on home pages or overview pages.
+
+      It consists of a 16:10 format image, the title of the topic, and a brief introductory text. Both the title and the image are linked to the appropriate page with a detailed presentation of the topic.
+
+      Dossier teasers can be grouped with a title line.
+  person-teaser:
+    title: Person teaser
+    help: |
+      In order to place particular emphasis on an individual topic, a maximum of one person teaser may be used on a home page. It is used, for example, on department web pages for a portrait of the responsible Federal Councillor.
+
+      Like the dossier teaser, the person teaser consists of a 16:10 format image, the title of the topic, and a brief introductory text. Both the title and the image are linked to the appropriate page with a detailed presentation of the topic. In addition, the teaser has a gray background.
+    release: |
+      **2.1.1:**
+
+      - wrapped the `.well` element in `<div class="bordered-well"></div>`
+  publications-preview:
+    title: Publications preview
+    help: |
+      The publications preview is a very flexible teaser from a formal viewpoint.
+
+      It consists of an optional title, an optional image, an optional caption, and the text. The text can be wrapped round the image, starting on the right of the image.
+
+      Alternatively, this content element can be placed inside a gray info box.
+  news-feed:
+    title: News feed
+    help: In the news teaser, various snippets of news items are arranged chronologically. The user can use the scrollbar to scroll down the teaser and take a look at all of the news snippets that are available. Each snippet contains the date, the type of news item, and the link to the news story’s headline.
+    release: |
+      **2.0.1:**
+
+      - added the `.news-feed` class to the `.list-group` element
+      - added the `.scroll-y` wrapper containing all the `.list-group-item` elements
+  rss-feed:
+    title: RSS Feed
+    help: |
+      An RSS feed is a very specialized teaser with which only RSS feeds can be accessed.
+
+      The title always consists of an RSS icon and the letters “RSS”. A list of links can be found below this.
+content-containers:
+  title: Content containers
+  elements-list:
+    title: Elements list
+    help: The elements list is a very generic element that groups content elements in a list. The elements shown here are merely examples.
+  further-information:
+    title: Further Information
+    help: |
+      Below the content of a page, additional information may be shown. This has the purpose of presenting content (e.g. publications, news, or links) that is directly related to the content that is being shown, but which is not mentioned explicitly in the text (in which case it would have an embedded link). This content is arranged in tabs.
+
+      This feature is a specific type of horizontal tab navigation. Up to five tabs can be used. The names to be given to the tabs are not predefined. However, the terminology used must be uniform and used consistently throughout a website. The following tabs are possible, for instance: "Documents and Publications", "Services", "Legal Framework", "Links", and "News".
+  collapsible-panel:
+    title: Collapsible panel
+    help: |
+      The collapsible panel is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.
+
+      Add `.collapsed` to link for it to change the icon direction when collapsing.
+ordering-checkout:
+  title: Ordering and checkout
+  one-line-order-form:
+    title: One line order form
+  shopping-cart:
+    title: Shopping cart
+    help: By default, the shopping cart is not shown. Only after an object has been added to the shopping cart does the latter appear in the context pane. It then remains visible until it is either completely deleted or the purchase is finalized.
+    release: |
+      **2.5.0**
+
+      - added `span.sr-only` to the delete icon
+standard-elements:
+  title: Standard elements
+  page-title:
+    title: Page title
+    help: |
+      Each page with the exception of the home page must have its own page title. This is always positioned as the first element on the content page. Only in unattached detail pages (such as publications) is it preceded by the "back to overview" link.
+
+      The text used in the page title is of relevance for rankings in search engines (e.g. Google).
+  image-text:
+    title: Image text
+    help: |
+      This element comprises running text body, which can be complemented by a title and a subtitle. An image and a caption can also be added. If required, the caption can be right-ragged below the text. Various standard image sizes (mainly in golden section proportions) are possible.
+
+      For small images, simply use `pull-left` or `pull-right` class on the `<figure>`.
+  info-box:
+    title: Info box
+    help: |
+      The info box is a "text and image" element that has a gray background. It can be integrated into the running text body in order highlight additional information.
+
+      To have this grey background, add a `.well .clearfix` wrapper around your content.
+    release: |
+      **2.5.3:**
+
+      - add a `.clearfix` class to the `.well` wrapper
+multimedia:
+  title: Multimedia
+  photo-gallery:
+    title: Photo Gallery Overview
+    help: |
+      The photo gallery shows scaled-down preview images (thumbnails) together with their names. These preview images are arranged in groups of 12. If the number of preview images exceeds this quantity, the “paging” navigation element is added to the photo gallery.
+
+      When the user clicks on an image, a detailed view is opened either in a lightbox or in single view mode for the images.
+    release: |
+      **2.1.8**
+
+        - added `aria-selected="true"` and `aria-disabled="true"` for accessibility
+  photo-gallery-single:
+    title: Photo Gallery Single View Mode
+    help: The single view mode allows the user to browse through the complete contents of a photo gallery. A caption can be added below the image.
+  lightbox:
+    title: Lightbox
+    help: |
+      A "lightbox" is an overlay that opens on top of the website. For instance, it is opened when a preview image in a photo gallery is clicked on, or when the zoom icon of an individual image is activated.
+
+      When a "lightbox" is opened, the website in the background is darkened. The "lightbox" comprises the title, the full view of the image, and its caption. The user can then browse through various images using the arrow icons in the "lightbox" or the arrow keys on the keyboard. The "lightbox" can be closed by clicking on the background, and by using the close command or the Esc key.
+functions:
+  title: Functions
+  print:
+    title: Print
+    help: |
+      The "Print" icon, with a link to the print version, can be integrated into every page except the home page. It is positioned at the top right of the content column. A click on the icon opens the print dialog window.
+
+      You can target a specific element to isolate and print by adding a `data-print="ID"` on the wrapper and setting `onclick="$.printPreview.printPreview(ID)"` on the print button. If a `data-title` attribute is set on the wrapper, it will be displayed as the title of the printed page.
+    release: |
+      **2.5.4:**
+
+      - place a title like `<h3 class="visible-print-block">Contact</h3>` at the top of your `.tab-pane` elements to display only when printing
+
+      **2.5.3:**
+
+      - change the `onclick="window.print()"` by `onclick="$.printPreview.printPreview()"`
+      - add an optional target to the printPreview function: `onclick="$.printPreview.printPreview('target id')"`
+  downloading-files:
+    title: Downloading files
+    help: Links with which a file can be downloaded are always preceded by a document icon.
+search:
+  title: Search
+  search-box:
+    title: Search box
+    help: The search box is a simple form which can be used to enter a search term on a search page.
+  search-results:
+    title: Search results
+    help: Search results are shown in semantically grouped tabs. The categories (groupings) can be chosen freely (e.g. Content pages, News, and Publications). Within the individual tabs, the user can move through the pages with the paging function.

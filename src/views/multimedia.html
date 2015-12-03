@@ -1,0 +1,14 @@
+---
+fabricator: true
+title: content.multimedia.title
+category: content.title
+permalink: multimedia.html
+---
+
+<h1>{{t 'content.multimedia.title'}}</h1>
+
+{{#each materials.content.items.multimedia.items}}
+
+{{> f-item this}}
+
+{{/each}}

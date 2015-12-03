@@ -1,0 +1,14 @@
+---
+fabricator: true
+title: navigation.footer.title
+category: navigation.title
+permalink: footer.html
+---
+
+<h1>{{t 'navigation.footer.title'}}</h1>
+
+{{#each materials.navigation.items.footer.items}}
+
+{{> f-item this}}
+
+{{/each}}

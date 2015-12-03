@@ -1,0 +1,14 @@
+---
+fabricator: true
+title: content.search.title
+category: content.title
+permalink: search.html
+---
+
+<h1>{{t 'content.search.title'}}</h1>
+
+{{#each materials.content.items.search.items}}
+
+{{> f-item this}}
+
+{{/each}}

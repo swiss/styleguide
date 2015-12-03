@@ -1,0 +1,14 @@
+---
+fabricator: true
+title: layout.form-elements.title
+category: layout.title
+permalink: form-elements.html
+---
+
+<h1>{{t 'layout.form-elements.title'}}</h1>
+
+{{#each materials.layout.items.form-elements.items}}
+
+{{> f-item this}}
+
+{{/each}}

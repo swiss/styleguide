@@ -1,0 +1,71 @@
+/* ==========================================================
+ * links.scss
+ * Links element styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-30 09:38:36
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+ @charset "UTF-8";
+
+a {
+ color: $cerulean;
+ line-height: 1.5;
+
+ &:hover {
+   color: darken($cerulean, 5%);
+   text-decoration: underline;
+ }
+ &:active, &:visited {text-decoration: none;}
+ &:visited {color: $cadillac;}
+ p & {
+   line-height: 1;
+   text-decoration: underline;
+ }
+ p &:hover {
+   text-decoration: underline;
+ }
+
+ small & ~ span{
+  display: block;
+  margin-top: -5px;
+ }
+
+ &.icon {
+  &,
+  &:before, &:after,
+  &:hover:before, &:hover:after {
+    text-decoration: none;
+  }
+ }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  .phone-number {
+    .dl-horizontal & {
+      margin-left: 0;
+    }
+    a {
+      display: block;
+      margin-bottom: 1em;
+      padding: 10px 20px;
+      width: 100%;
+      border: 1px solid $coal;
+      border-radius: 3px;
+      background: $gray-lighter;
+      color: $coal;
+      text-align: center;
+      text-decoration: none;
+      span {
+        display: inline;
+      }
+    }
+  }
+  .dl-horizontal dt {
+    float: left;
+    clear: left;
+  }
+}
