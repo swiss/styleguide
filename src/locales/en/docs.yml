@@ -26,7 +26,7 @@ index:
 
     The CD elements are marked with the following icon in the detailed descriptions: Corporate
 
-    ## 2. Fixed Elements
+    ## 2. Fixed Elements <span class="label label-admin">FIX</span>
 
     The use of fixed elements is not mandatory. However, if they are used, their position and design are fixed and unalterable. For this reason they may not be modified in any way. Changes or additions to the following elements require the approval of the Web Forum:
 
@@ -44,7 +44,7 @@ index:
 
     Fixed elements are marked with the following icon in the detailed descriptions: Fixed
 
-    ## 3. Flexible Elements
+    ## 3. Flexible Elements <span class="label label-admin">FLEX</span>
 
     The descriptions of all other elements are recommendations. They can and may be adapted to meet specific requirements. They can be freely expanded upon and modified. The general look and feel of the site must, however, be retained. Additions to and amendments of these elements can be presented to the Web Forum for consideration as part of the web guidelines.
 
