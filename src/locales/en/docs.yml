@@ -66,7 +66,7 @@ index:
     If the KID agrees to the amendment, the submitting body will implement the amendment. In the course of this implementation process, the applicant will ensure that the code, together with a description of the amendment, is passed on to the Specialist Unit for the Confederation CD. The Unit will add the amendment to the Guidelines and inform the service providers of the change.
 accessibility:
   title: Barrier-free Accessibility
-  content: |
+  intro: |
     All of the Confederation’s Internet resources must be designed in such a way as to enable people with disabilities to use them without restrictions. The Federal Administration is committed to fulfilling the requirements of the “Web Content Accessibility Guidelines (WCAG) 2.0” to conformance level AA.
 
     Additional Information:
@@ -74,6 +74,16 @@ accessibility:
     [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/)
 
     [The Guidelines of the Confederation (P028)](https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html)
+
+    ## Best practices
+
+    This section provides Accessibility compliant examples for commonly encountered situations.
+
+  multi-language: |
+    ### Multi-language content
+
+    Sometimes, on the same page, there is content in different languages. The "lang" atttribute can be used to notify the Screen readers of the language switch.
+
 basic-grid:
   title: Basic Grid and Page Types
   content: |
