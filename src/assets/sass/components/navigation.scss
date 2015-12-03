@@ -119,7 +119,7 @@ nav {
   }
   .open .icon--menu:after,
   .open a > .icon--search:after {
-    content: '\e931'; // display close icon when dropdown is open
+    content: get-font-icon('close'); // display close icon when dropdown is open
   }
 }
 
@@ -171,7 +171,7 @@ nav {
       line-height: 1.2;
       padding: 10px 9px;
       &:after {
-        content: '\e904';
+        content: get-font-icon('bottom');
         font-family: $admin-icons;
         position: absolute;
         bottom: 4px;
@@ -215,7 +215,7 @@ nav {
       background: $white;
     }
     &:after {
-      content: '\e90e';
+      content: get-font-icon('top');
     }
   }
   .ie9 & > .open > a {
@@ -586,7 +586,7 @@ nav {
     & > a {padding-right: 20px;}
     &:after {
       font-family: $admin-icons;
-      content: '\e910';
+      content: get-font-icon('greater');
       padding-right: 5px;
       position: absolute;
       top: 10px;

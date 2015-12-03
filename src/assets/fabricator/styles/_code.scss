@@ -8,65 +8,65 @@
 }
 
 .code-block {
-  background: #1e221d !important;
-  color: $white !important;
-  font-size: 15px !important;
-  line-height: 1.6em !important;
-  margin-bottom: 20px !important;
-  position: relative !important;
-  width: auto !important;
+  background: #1e221d;
+  color: $white;
+  font-size: 15px;
+  line-height: 1.6em;
+  margin-bottom: 20px;
+  position: relative;
+  width: auto;
 
   &.collapse.in,
   &.collapsing {
-    margin-left: 0 !important;
+    margin-left: 0;
   }
 
   &:after {
-    content: 'HTML' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    color: $asbestos !important;
-    border-right: 1px solid $asbestos !important;
-    border-bottom: 1px solid $asbestos !important;
-    border-bottom-right-radius: 4px !important;
-    padding: 5px 8px !important;
-    display: inline-block !important;
-    font-family: $mainFont !important;
+    content: 'HTML';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $asbestos;
+    border-right: 1px solid $asbestos;
+    border-bottom: 1px solid $asbestos;
+    border-bottom-right-radius: 4px;
+    padding: 5px 8px;
+    display: inline-block;
+    font-family: $mainFont;
   }
 
   &.js-example:after {
-    content: 'JavaScript' !important;
+    content: 'JavaScript';
   }
 
   .highlight {
-    background: #1e221d !important;
+    background: #1e221d;
   }
 
   pre,
   code {
-    font-family: $codeFont !important;
-    width: auto !important;
-    background: #1e221d !important;
-    word-break: keep-all !important;
-    word-wrap: normal !important;
-    white-space:pre !important;
-    margin: 0px !important;
-    padding: 0px !important;
-    font-size: 14px !important;
-    position: relative !important;
-    line-height: 1.6em !important;
-    color: $white !important;
-    border: 1px solid  #1e221d !important;
-    overflow: visible !important;
+    font-family: $codeFont;
+    width: auto;
+    background: #1e221d;
+    word-break: keep-all;
+    word-wrap: normal;
+    white-space:pre;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    position: relative;
+    line-height: 1.6em;
+    color: $white;
+    border: 1px solid  #1e221d;
+    overflow: visible;
   }
 
   pre {
-    padding: 50px 4% 40px !important;
-    overflow-x: auto !important;
+    padding: 50px 4% 40px;
+    overflow-x: auto;
   }
 
   @media only screen and (max-width: 900px) {
-    padding: 50px 10px !important;
+    padding: 50px 10px;
   }
 }

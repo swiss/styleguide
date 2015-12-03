@@ -1,24 +1,24 @@
 .example-output {
-  padding: 50px 4% 40px 4% !important;
-  border: 1px solid $softBlue !important;
-  position: relative !important;
-  width: 100% !important;
-  overflow-y: visible !important;
-  box-sizing: border-box !important;
-  position: relative !important;
+  padding: 50px 4% 40px 4%;
+  border: 1px solid $softBlue;
+  position: relative;
+  width: 100%;
+  overflow-y: visible;
+  box-sizing: border-box;
+  position: relative;
 
   &:after {
-    content: 'Example' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    color: $asbestos !important;
-    border-right: 1px solid $softBlue !important;
-    border-bottom: 1px solid $softBlue !important;
-    border-bottom-right-radius: 4px !important;
-    padding: 5px 8px !important;
-    display: inline-block !important;
-    font-family: $mainFont !important;
+    content: 'Example';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $asbestos;
+    border-right: 1px solid $softBlue;
+    border-bottom: 1px solid $softBlue;
+    border-bottom-right-radius: 4px;
+    padding: 5px 8px;
+    display: inline-block;
+    font-family: $mainFont;
   }
 }
 
@@ -26,7 +26,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: 0 !important;
+  margin: 0;
   z-index: 50;
   border: none;
   color: #CCCCCC;
@@ -41,15 +41,15 @@
 }
 
 .label-admin {
-  border: 1px solid $black !important;
-  color: $black !important;
-  font-size: 8px !important;
-  line-height: 26px !important;
-  text-align: center !important;
-  display: block !important;
-  width: 31px !important;
-  height: 31px !important;
-  border-radius: 31px !important;
+  border: 1px solid $black;
+  color: $black;
+  font-size: 8px;
+  line-height: 26px;
+  text-align: center;
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+  border-radius: 31px;
 }
 
 .release-notes {
@@ -86,5 +86,21 @@
 
     box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
     border-radius: 3px;
+  }
+}
+
+.f-item-anchor {
+  &,
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
   }
 }
