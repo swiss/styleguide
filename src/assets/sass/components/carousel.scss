@@ -13,44 +13,57 @@
 
 .carousel {
   border: 1px solid $silver;
+
   .item {
     padding: 10px;
   }
 }
 
 .carousel-control {
-  opacity: 1;
-  &:hover {
-    opacity: 1;
-  }
-}
+  height: 40px;
 
-.carousel-control.right, .carousel-control.left {
-  background-image: none !important;
-  background: none;
-  filter: none; // fix for IE
-  &:before {
-    color: $coal;
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  bottom: auto;
+  z-index: 1;
+
+  color: $coal;
+  font-size: 25px;
+  line-height: 40px;
+  text-shadow: none;
+
+  opacity: 1;
+
+  &.left,
+  &.right {
+    background-image: none;
+    filter: none; // fix for IE
   }
-  &:hover:before {
-    color: $black;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    color: $venetian-red;
   }
+
+  &:focus {
+    outline: currentColor;
+  }
+
   &.disabled {
     cursor: default;
-    &:before {
-      color: $gainsboro;
-    }
+    color: $gainsboro;
   }
 }
 
 .carousel-indicators {
+  margin-top: 12px;
   bottom: auto;
-}
 
-.carousel-indicators li {
-  border: none;
-  background: $gainsboro;
-}
+  li {
+    border: none;
+    background: $gainsboro;
+  }
 
-.carousel-indicators .active {background: $venetian-red;}
+  .active {
+    background: $venetian-red;
+  }
+}

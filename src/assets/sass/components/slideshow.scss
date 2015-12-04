@@ -38,13 +38,23 @@
       display: inline-block;
       margin-top: 15px;
       padding: 0 12px 0 15px;
+
+      color: $coal;
       font-size: 25px;
-      &.right {border-left: 1px solid $gainsboro;}
-      &:before {color: $coal;}
-      &:hover:before {color: $black;}
+
+      &.right {
+        border-left: 1px solid $gainsboro;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+        color: $venetian-red;
+      }
+
       &.disabled {
         cursor: default;
-        &:before {color: $gainsboro;}
+        color: $gainsboro;
       }
     }
   }
@@ -55,15 +65,19 @@
     padding-bottom: 0;
     max-width: 300px;
     min-height: 150px;
+    text-align: left;
+    text-shadow: none;
+    color: $black;
+    font-size: 11px;
+
     @media only screen and (min-width: $screen-md-min) {
       float: left;
       max-width: 360px;
       min-height: 125px;
     }
-    text-align: left;
-    text-shadow: none;
-    color: $black;
-    font-size: 11px;
-    p {margin-bottom: 0;}
+
+    p {
+      margin-bottom: 0;
+    }
   }
 }
