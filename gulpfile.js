@@ -114,19 +114,6 @@ gulp.task('vendors', function() {
     .pipe(gulp.dest(config.framework.dest + '/fonts'));
 });
 
-/**
- * Build polyfills
- */
-gulp.task('polyfills', function() {
-  return gulp.src([
-      'bower_components/html5shiv/dist/html5shiv.min.js',
-      'bower_components/html5shiv/dist/html5shiv-printshiv.min.js',
-      'bower_components/respond/dest/respond.min.js'
-    ])
-    .pipe($.concat('polyfills.min.js'))
-    .pipe($.uglify())
-    .pipe(gulp.dest(config.framework.dest + '/js'));
-});
 
 /**
  * Build styles from SCSS files
@@ -416,5 +403,5 @@ gulp.task('deploy', function () {
  * Default task build the style guide
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styles:fabricator', 'scripts:fabricator', 'assemble', 'copy', cb);
+  runSequence('vendors', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styles:fabricator', 'scripts:fabricator', 'assemble', 'copy', cb);
 });
