@@ -17,8 +17,7 @@
   ],
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components"
+    "node_modules"
   ],
   "dependencies": {},
   "devDependencies": {}

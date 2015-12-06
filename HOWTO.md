@@ -43,7 +43,3 @@ And you're all set!
 To import the styleguide you basically need to import all files placed in the `build/` folder to your project.
 
 Compile these files with a task runner of your choice, or just import them from where they are.
-
-## Report issues
-
-You should **never** alter anything in the `bower_components/` folder. If you find anything buggy that needs fixing, create an issue on the official repo [https://github.com/swiss/styleguide/issues](https://github.com/swiss/styleguide/issues). Make sure that the issue doesn't already exist before posting.
