@@ -1,41 +1,56 @@
 {% extends "layout.twig" %}
 
-{% block pagetitle %}Preview{% endblock %}
+{% block pagetitle %}Overview page without navigation{% endblock %}
 
+{% block sidebar %}{% endblock %}
 {% block sidebar_right %}{% endblock %}
-
-{% block skiplinks %}
-  {% set hasSecondaryNav = true %}
-  {{ parent() }}
-{% endblock %}
+{% block content_columns %}col-sm-12{% endblock %}
 
 {% block content %}
     <div class="col-sm-12">
-      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+      <h1>Das ist der Seitentitel, der kann auch etwas länger werden.</h1>
+
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-6 col-md-4">
           <h3><a href="#">Title in H3</a></h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
           </p>
           <h3><a href="#">Title in H3</a></h3>
+          <figure class="pull-left">
+            <img src="http://placehold.it/110x68" alt="image description">
+          </figure>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria,
           </p>
           <h3><a href="#">Title in H3</a></h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
-          </p>
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam,
           </p>
           <h3><a href="#">Title in H3</a></h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
           </p>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 col-md-4">
+          <h3><a href="#">Title in H3</a></h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
+          </p>
+          <h3><a href="#">Title in H3</a></h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt,
+          </p>
+          <h3><a href="#">Title in H3</a></h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
+          </p>
+          <h3><a href="#">Title in H3</a></h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes,
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-4">
           <h3><a href="#">Title in H3</a></h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
@@ -46,9 +61,12 @@
           </p>
           <h3><a href="#">Title in H3</a></h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <h3><a href="#">Title in H3</a></h3>
+          <figure class="pull-left">
+            <img src="http://placehold.it/110x68" alt="image description">
+          </figure>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
           </p>
