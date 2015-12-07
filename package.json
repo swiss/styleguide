@@ -18,7 +18,7 @@
     "bower": "^1.3.9",
     "browser-sync": "^2.8.2",
     "del": "~0.1.1",
-    "fabricator-assemble": "^1.1.9",
+    "fabricator-assemble": "https://github.com/lebenleben/fabricator-assemble",
     "globby": "^4.0.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "0.0.9",

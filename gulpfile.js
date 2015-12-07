@@ -188,7 +188,11 @@ gulp.task('build-fonts', function() {
 /**
  * Compile TWIG example pages
  */
-gulp.task('twig', function() {
+gulp.task('clean-twig', function(cb) {
+  del(['src/views/pages'], cb);
+});
+
+gulp.task('twig', ['clean-twig'], function() {
   return gulp.src(['src/example-pages/*.twig', '!src/example-pages/layout.twig'])
     .pipe($.twig())
     .pipe(gulp.dest('src/views/pages'));
@@ -244,7 +248,7 @@ gulp.task('assemble', function(done) {
           args = args.join('.');
 
           // Remove any digits coming from the component key prefix
-          args = args.replace(/(\d+\.)/g, '');
+          args = args.replace(/(\d+[\-\.]?)/g, '');
 
           // Look for the translation in the dictionnary
           var value = args.trim().split('.').reduce(function(dict, key){
@@ -290,6 +294,10 @@ gulp.task('assemble', function(done) {
           if ((parseInt(index,10) + 1) % divider === 0) {
             return block.fn(this);
           }
+        },
+        // Remove number prefixes (01- or 01.02-)
+        prefixless: function(value) {
+          return value.replace(/(\d+[\-\.]?)+/ig, '');
         }
       }
   	})
