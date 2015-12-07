@@ -8,12 +8,12 @@
   'use strict';
 
   // Disable links to nothing (avoid jump to top of the page)
-  $('.example-output a[href="#"]').on('click', function(e) {
+  $('.component-example a[href="#"]').on('click', function(e) {
     e.preventDefault();
   });
 
   // Disable forms submit (avoid page reload)
-  $('.example-output form').on('submit', function(e) {
+  $('.component-example form').on('submit', function(e) {
     e.preventDefault();
   });
 

@@ -1,18 +1,14 @@
-.code-example,
-.code-block {
-  margin: 15px 0 30px;
-}
-
-.code-example .code-block {
-  margin-top: 0;
-}
+/**
+ * Component
+ * CODE BLOCK
+ */
 
 .code-block {
   background: #1e221d;
   color: $white;
   font-size: 15px;
   line-height: 1.6em;
-  margin-bottom: 20px;
+  margin: 15px 0 30px;
   position: relative;
   width: auto;
 
@@ -39,10 +35,6 @@
     content: 'JavaScript';
   }
 
-  .highlight {
-    background: #1e221d;
-  }
-
   pre,
   code {
     font-family: $codeFont;
@@ -57,7 +49,7 @@
     position: relative;
     line-height: 1.6em;
     color: $white;
-    border: 1px solid  #1e221d;
+    border: none;
     overflow: visible;
   }
 
