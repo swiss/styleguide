@@ -10,8 +10,11 @@
 }
 
 .component-heading {
-  float: left;
   margin-top: 0;
+
+  @media screen and (min-width: 480px) {
+    float: left;
+  }
 }
 
 .component-anchor {
@@ -31,10 +34,35 @@
 }
 
 .component-label {
-  margin-left: 12px;
-
   position: relative;
   top: -2px;
+
+  @media screen and (max-width: 480px) {
+    float: left;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 480px) {
+    margin-left: 12px;
+  }
+}
+
+.component-nav {
+  margin: 0;
+
+  li {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    float: left;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 480px) {
+    float: right;
+    margin-right: -5px;
+  }
 }
 
 .component-release-notes {
@@ -49,30 +77,6 @@
     + p {
       margin-top: 10px;
     }
-  }
-}
-
-.component-nav {
-  margin: 0;
-
-  li {
-    margin: 0;
-  }
-
-  @media screen and (max-width: 480px) {
-    margin-left: -5px;
-    margin-bottom: 10px;
-
-    &::before {
-      content: '';
-      display: table;
-      clear: both;
-    }
-  }
-
-  @media screen and (min-width: 480px) {
-    float: right;
-    margin-right: -5px;
   }
 }
 
