@@ -53,7 +53,27 @@
 }
 
 .component-nav {
-  margin: 0 -5px 0 0;
+  margin: 0;
+
+  li {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-left: -5px;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    float: right;
+    margin-right: -5px;
+  }
 }
 
 .component-example {

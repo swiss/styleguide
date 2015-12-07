@@ -7,7 +7,7 @@
       <span class="component-label label label-admin">{{toUpperCase data.label}}</span>
     {{/if}}
 
-    <ul class="component-nav list-inline pull-right">
+    <ul class="component-nav list-inline">
       {{#if data.release}}
         <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-{{replace '(\.)' '-' @key}}" aria-expanded="false">Release notes</button></li>
       {{/if}}
