@@ -1,0 +1,21 @@
+.high-contrast {
+  .checkbox, .radio {
+    display: inline-block;
+
+    input {
+      opacity: 1;
+    }
+  }
+
+  .checkbox--right, .radio--right {
+    input {
+      top: 4px;
+      right: 0px;
+    }
+  }
+
+  .checkbox--right::after, .radio--right::after {
+    content: '\A \A';
+    white-space: pre;
+  }
+}

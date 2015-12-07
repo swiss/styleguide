@@ -12,11 +12,11 @@
 @charset "UTF-8";
 
 .checkbox {
-  position: relative;
   input {
-    position: absolute;
-    left: -999999999%;
-    display: none;
+    position: static;
+    width: 15px;
+    height: 15px;
+    opacity: 0;
   }
   label {
     position: relative;
