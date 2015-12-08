@@ -79,6 +79,11 @@ accessibility:
 
     This section provides Accessibility compliant examples for commonly encountered situations.
 
+  title-tag: |
+    ### Page title
+
+    It is recommended to use commas to separate different segments of the "title" tag's content.
+
   multi-language: |
     ### Multi-language content
 
