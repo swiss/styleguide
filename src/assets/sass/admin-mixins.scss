@@ -10,22 +10,15 @@
  =========================================================== */
 
 /**
-* Mixin to generate the pseudo element for a checkbox or radio
-* $type:   radio/checkbox
-* $position:   left/right
-*/
-@mixin form-button($type, $position) {
-  position: absolute;
-  content: ' ';
-  width: 16px;
-  height: 15px;
-  top: 4px;
+ * Mixin to generate the pseudo element for a checkbox or radio
+ * $type:   radio/checkbox
+ * $position:   left/right
+ */
+@mixin form-button($position) {
+  margin: 0;
+  top: 50%;
+  transform: translateY(-55%);
   #{$position}: 0;
-  background-repeat: no-repeat;
-  @if $type == "checkbox" {background-position: 0 -90px;}
-  @else {background-position: 0 -270px;}
-  background-image: url(../img/form-icons.svg);
-  background-image: url(../img/form-icons.png)\9 // IE6, IE7 and IE8
 }
 
 /**

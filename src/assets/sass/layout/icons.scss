@@ -117,27 +117,3 @@ $icon-list: (
 a.icon:hover {
   text-decoration: underline; // fix to override normal bootstrap behaviour
 }
-
-.form-icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  background-repeat: no-repeat;
-  background-image: url(../img/form-icons.svg);
-  background-image: url(../img/form-icons.png)\9 // IE6, IE7 and IE8 fallback
-}
-
-.form-icon--checkbox-checked {background-position: 0 -45px;}
-.form-icon--checkbox-checked-focus {background-position: 0 0;}
-.form-icon--checkbox-checked-inactive {background-position: 0 -540px;}
-.form-icon--checkbox-unchecked {background-position: 0 -90px;}
-.form-icon--checkbox-unchecked-focus {background-position: 0 -360px;}
-.form-icon--checkbox-unchecked-inactive {background-position: 0 -450px;}
-.form-icon--radio-checked {background-position: 0 -225px;}
-.form-icon--radio-checked-focus {background-position: 0 -180px;}
-.form-icon--radio-checked-inactive {background-position: 0 -495px;}
-.form-icon--radio-unchecked {background-position: 0 -270px;}
-.form-icon--radio-unchecked-focus {background-position: 0 -315px;}
-.form-icon--radio-unchecked-inactive {background-position: 0 -405px;}
-.form-icon--select-dropdown {background-position: 0 -129px; height: 26px; position: relative;}
-//.form-icon--error {background-position: 0 -375px; width: 17px; height: 25px;}
