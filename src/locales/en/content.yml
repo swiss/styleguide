@@ -192,7 +192,7 @@ multimedia:
     help: |
       A "lightbox" is an overlay that opens on top of the website. For instance, it is opened when a preview image in a photo gallery is clicked on, or when the zoom icon of an individual image is activated.
 
-      When a "lightbox" is opened, the website in the background is darkened. The "lightbox" comprises the title, the full view of the image, and its caption. The user can then browse through various images using the arrow icons in the "lightbox" or the arrow keys on the keyboard. The "lightbox" can be closed by clicking on the background, and by using the close command or the Esc key.
+      When a "lightbox" is opened, the website in the background is darkened. The "lightbox" comprises the title, the full view of the image, and its caption. The "lightbox" can be closed by clicking on the background, and by using the close command or the Esc key.
 functions:
   title: Functions
   print:

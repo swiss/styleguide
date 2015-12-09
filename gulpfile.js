@@ -124,9 +124,7 @@ gulp.task('styles', function() {
   else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
   return gulp.src('src/assets/sass/admin.scss')
-    .pipe($.sass({
-      errLogToConsole: true
-    }))
+    .pipe($.sass().on('error', $.sass.logError))
     .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
       browsers: config.autoprefixer
@@ -138,9 +136,7 @@ gulp.task('styles', function() {
 
 gulp.task('print', function() {
   return gulp.src('src/assets/sass/print/print.scss')
-    .pipe($.sass({
-      errLogToConsole: true
-    }))
+    .pipe($.sass().on('error', $.sass.logError))
     .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
       browsers: config.autoprefixer
