@@ -39,9 +39,17 @@ form-elements:
   checkboxes:
     title: Checkboxes
     help: Checkboxes are used when one or more elements are to be selected from a predefined list of items.
+    release: |
+      **3.0.0**
+
+      - Custom styling of this element has been removed in favor of browsers’ default for better accessibility. To keep the previous style and variants, the checkbox now have to be inside the label.
   radios:
     title: Radios
     help: Radio buttons allow the user to make an unequivocal choice from a predefined list. Radio buttons can also be structured in groups. Only one element in a group may be selected.
+    release: |
+      **3.0.0**
+
+      - Custom styling of this element has been removed in favor of browsers’ default for better accessibility. To keep the previous style and variants, the radio now have to be inside the label.
   buttons:
     title: Buttons
     help: |
@@ -157,14 +165,14 @@ tables:
     title: Table with Zebra Striping
     help: The zebra stripes are shown when the `table-striped` class is added to the `<table>`.
     release: |
-      **2.1.9**
-
-        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
-
       **3.0.0**
 
         - remove attribute `role="columnheader"` on tag `<tr>`
         - remove attribute `role="rowheader"` on tag `<th>`
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
   table-zebra-cycle-single:
     title: Zebra cycle table (single)
     release: |
@@ -189,14 +197,14 @@ tables:
     title: Table with Highlighting
     help: This table is based on the standard table but with active class on cells or on row.
     release: |
-      **2.1.9**
-
-        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
-
       **3.0.0**
 
         - remove attribute `role="columnheader"` on tag `<tr>`
         - remove attribute `role="rowheader"` on tag `<th>`
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
   table-highlight-cycle:
     title: Highlighted cycle table (single)
     release: |
@@ -229,6 +237,11 @@ tables:
     title: Table with expandable rows
     help: Some tables can be expanded to show details of a data set.
     release: |
+      **3.0.0**
+
+        - remove attribute `role="columnheader"` on tag `<tr>`
+        - remove attribute `role="rowheader"` on tag `<th>`
+
       **2.5.0**
 
         - wrapped text in `<a>` in `<th>` tag if it is a collapse link
@@ -240,33 +253,28 @@ tables:
       **2.1.8**
 
         - wrapped text in `<a>` in `<th>` tag if it is a collapse link
-
-      **3.0.0**
-
-        - remove attribute `role="columnheader"` on tag `<tr>`
-        - remove attribute `role="rowheader"` on tag `<th>`
   table-ruled:
     title: Ruled table
     help: Ruled tables are particularly suitable for presenting simple 1:1 relationships. The ruled format is set by adding the `table-simple` to the table tag.
     release: |
-      **2.1.9**
-
-        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
-
       **3.0.0**
 
         - remove attribute `role="columnheader"` on tag `<tr>`
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
   table-unruled:
     title: Unruled table
     help: Unruled tables are suitable for presenting properties, e.g. of a publication. A simple unruled table is formatted with the class `table-naked`.
     release: |
-      **2.1.9**
-
-        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
-
       **3.0.0**
 
         - remove attribute `role="columnheader"` on tag `<tr>`
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
 typography:
   title: Typography
   titles:

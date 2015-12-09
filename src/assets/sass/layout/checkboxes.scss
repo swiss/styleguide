@@ -9,51 +9,36 @@
  * Licensed under MIT
  =========================================================== */
 
-@charset "UTF-8";
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+  margin-left: 0;
+}
 
 .checkbox {
-  position: relative;
-  input {
-    position: absolute;
-    left: -999999999%;
-    display: none;
-  }
   label {
     position: relative;
-
-    .form-inline & {
-      padding-left: 20px;
-    }
-
   }
 }
 
 .checkbox--left {
-  input {
-    &:focus + label:before {background-position: 0 -360px;}
-    &:checked + label:before {background-position: 0 -45px;}
-    &:checked:focus + label:before {background-position: 0 0;}
-    &:disabled + label:before {background-position: 0 -450px;}
-    &:checked:disabled + label:before {background-position: 0 -540px;}
+  label {
+    padding-left: 24px;
+    padding-right: 0;
   }
-  label:before {
-    @include form-button(checkbox, left);
+  input {
+    @include form-button(left);
   }
 }
 
 .checkbox--right {
-  input {
-    &:checked + label:after {background-position: 0 -45px;}
-    &:focus + label:after {background-position: 0 -360px;}
-    &:checked:focus + label:after {background-position: 0 0;}
-    &:disabled + label:after {background-position: 0 -450px;}
-    &:checked:disabled + label:after {background-position: 0 -540px;}
-  }
   label {
-    padding-right: 20px;
+    padding-right: 24px;
     padding-left: 0;
-    &:after {
-      @include form-button(checkbox, right);
-    }
+  }
+  input {
+    @include form-button(right);
   }
 }

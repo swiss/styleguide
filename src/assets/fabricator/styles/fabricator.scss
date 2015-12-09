@@ -2,11 +2,11 @@
  * STYLEGUIDE DEDICATED STYLE
  */
 
-@import 'variables';
+@import 'settings/variables';
 
-@import 'layout';
+@import 'vendor/prism';
 
-@import 'prism';
-@import 'code';
-
-@import 'components';
+@import 'objects/component';
+@import 'objects/label';
+@import 'objects/code-block';
+@import 'objects/color-swatch';

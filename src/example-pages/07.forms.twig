@@ -1,0 +1,196 @@
+{% extends "layout.twig" %}
+
+{% block pagetitle %}Forms{% endblock %}
+
+{% block skiplinks %}
+  {% set hasSecondaryNav = true %}
+  {{ parent() }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="col-md-8">
+
+    <div class="visible-xs visible-sm">
+      <p><a href="#context-sidebar" class="icon icon--before icon--root hidden-print">Context sidebar</a></p>
+    </div>
+
+    <nav class="nav-process">
+      <ul>
+        <li>
+          <a href="#">Step 1</a>
+        </li>
+        <li>
+          <a href="#">Step 2</a>
+        </li>
+        <li class="active">
+          <a href="#">Step 3</a>
+        </li>
+        <li class="disabled">
+          <a href="#">Step 4</a>
+        </li>
+      </ul>
+    </nav>
+    <br>
+    <form class="form-horizontal" role="form">
+
+      <!-- email input -->
+      <fieldset>
+        <legend class="hidden-legend">Email</legend>
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label" id="email">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email" aria-labelledby="email">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- password input -->
+      <fieldset>
+        <legend class="hidden-legend">Password</legend>
+        <div class="form-group has-warning">
+          <label for="inputPassword3" class="col-sm-2 control-label" id="password">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password" aria-labelledby="password error-password" aria-invalid="true">
+            <span class="help-block" id="error-password" role="alert">Warning, this is not a correct info!</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- URL input -->
+      <fieldset>
+        <legend class="hidden-legend">Website</legend>
+        <div class="form-group">
+          <label for="inputURL" class="col-sm-2 control-label" id="website">Website</label>
+          <div class="col-sm-10">
+            <input type="url" class="form-control" id="inputURL" placeholder="URL" aria-labelledby="website url-format">
+            <span class="help-block" id="url-format">Use format "http://www.example.com"</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- file input -->
+      <fieldset>
+        <legend class="hidden-legend">Document</legend>
+        <div class="form-group">
+          <label for="file" class="col-sm-2 control-label" id="document">Document</label>
+          <div class="col-sm-10">
+            <input type="file" class="form-control" id="file" placeholder="URL" aria-labelledby="document">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Checkboxes Vertical -->
+      <fieldset>
+        <legend class="hidden-legend">Terms</legend>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" id="check-group-1">Terms</label>
+          <div class="col-sm-10">
+            <div class="checkbox checkbox--left">
+              <label id="checkbox-label-1" for="checkboxform">
+                <input id="checkboxform" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1"> Remember me
+              </label>
+            </div>
+            <div class="checkbox checkbox--left">
+              <label id="checkbox-label-2" for="checkboxform2">
+                <input id="checkboxform2" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2"> Accept terms
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Checkboxes Horizontal -->
+      <fieldset>
+        <legend class="hidden-legend">Terms</legend>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" id="check-group-2">Terms</label>
+          <div class="col-sm-10">
+            <label class="checkbox-inline">
+              <div class="checkbox checkbox--left">
+                <label id="checkbox-label-3" for="checkboxform3">
+                  <input id="checkboxform3" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3"> Remember me
+                </label>
+              </div>
+            </label>
+            <label class="checkbox-inline">
+              <div class="checkbox checkbox--left">
+                <label id="checkbox-label-4" for="checkboxform4">
+                  <input id="checkboxform4" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4"> Accept terms
+                </label>
+              </div>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+     <!-- Radio buttons horizontal -->
+      <fieldset>
+        <legend class="hidden-legend">Terms</legend>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" id="radio-group-1">Terms</label>
+          <div class="col-sm-10">
+            <div class="radio radio--left">
+              <label for="radioform" id="radio-label-1">
+                <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1"> Remember me
+              </label>
+            </div>
+            <div class="radio radio--left">
+              <label for="radioform2" id="radio-label-2">
+                <input id="radioform2" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-2"> Don't remember me
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Radio buttons vertical -->
+      <fieldset>
+        <legend class="hidden-legend">Terms</legend>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" id="radio-group-2">Terms</label>
+          <div class="col-sm-10">
+            <label class="radio-inline">
+              <div class="radio radio--left">
+                <label for="radioform" id="radio-label-3">
+                  <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-3"> Remember me
+                </label>
+              </div>
+            </label>
+            <label class="radio-inline">
+              <div class="radio radio--left">
+                <label for="radioform" id="radio-label-4">
+                  <input id="radioform" type="radio" name="radio-h" aria-labelledby="radio-group-2 radio-label-4"> Remember me
+                </label>
+              </div>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Dropdown -->
+      <fieldset>
+        <legend class="hidden-legend">Dropdown</legend>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="dropdown">Dropdown</label>
+          <div class="col-sm-10">
+            <select id="dropdown" class="form-control">
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <button type="submit" role="button" class="btn btn-secondary"><span class="icon icon--close"></span></button>
+            <button type="submit" role="button" class="btn btn-default">Cancel</button>
+            <button type="button" role="button" class="btn btn-primary">Validate</button>
+          </div>
+        </div>
+      </fieldset>
+
+    </form>
+  </div>
+{% endblock %}

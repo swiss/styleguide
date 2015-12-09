@@ -61,16 +61,9 @@ var config = {
  */
 gulp.task('vendors', function() {
 
-  // DEPRECATED, to be removed in 3.0.0
-  gulp.src([
-      'bower_components/jquery.socialshareprivacy/socialshareprivacy/images/*'
-    ])
-    .pipe(gulp.dest(config.framework.dest + '/css/images'));
-
   // CSS VENDORS
   gulp.src([
       'bower_components/yamm3/yamm/yamm.css',
-      'bower_components/jquery.socialshareprivacy/socialshareprivacy/socialshareprivacy.css',
       'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css',
       'bower_components/blueimp-gallery/css/blueimp-gallery.min.css',
       'bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
@@ -101,7 +94,6 @@ gulp.task('vendors', function() {
       'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
       'bower_components/bootstrapaccessibilityplugin/plugins/js/bootstrap-accessibility.js',
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
-      'bower_components/jquery.socialshareprivacy/jquery.socialshareprivacy.min.js',
       'bower_components/jquery-drilldown/jquery.drilldown.min.js',
       'bower_components/placeholdr/placeholdr.js',
       'bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
@@ -122,19 +114,6 @@ gulp.task('vendors', function() {
     .pipe(gulp.dest(config.framework.dest + '/fonts'));
 });
 
-/**
- * Build polyfills
- */
-gulp.task('polyfills', function() {
-  return gulp.src([
-      'bower_components/html5shiv/dist/html5shiv.min.js',
-      'bower_components/html5shiv/dist/html5shiv-printshiv.min.js',
-      'bower_components/respond/dest/respond.min.js'
-    ])
-    .pipe($.concat('polyfills.min.js'))
-    .pipe($.uglify())
-    .pipe(gulp.dest(config.framework.dest + '/js'));
-});
 
 /**
  * Build styles from SCSS files
@@ -145,9 +124,7 @@ gulp.task('styles', function() {
   else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
   return gulp.src('src/assets/sass/admin.scss')
-    .pipe($.sass({
-      errLogToConsole: true
-    }))
+    .pipe($.sass().on('error', $.sass.logError))
     .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
       browsers: config.autoprefixer
@@ -159,9 +136,7 @@ gulp.task('styles', function() {
 
 gulp.task('print', function() {
   return gulp.src('src/assets/sass/print/print.scss')
-    .pipe($.sass({
-      errLogToConsole: true
-    }))
+    .pipe($.sass().on('error', $.sass.logError))
     .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
       browsers: config.autoprefixer
@@ -209,7 +184,11 @@ gulp.task('build-fonts', function() {
 /**
  * Compile TWIG example pages
  */
-gulp.task('twig', function() {
+gulp.task('clean-twig', function(cb) {
+  del(['src/views/pages'], cb);
+});
+
+gulp.task('twig', ['clean-twig'], function() {
   return gulp.src(['src/example-pages/*.twig', '!src/example-pages/layout.twig'])
     .pipe($.twig())
     .pipe(gulp.dest('src/views/pages'));
@@ -265,7 +244,7 @@ gulp.task('assemble', function(done) {
           args = args.join('.');
 
           // Remove any digits coming from the component key prefix
-          args = args.replace(/(\d+\.)/g, '');
+          args = args.replace(/(\d+[\-\.]?)/g, '');
 
           // Look for the translation in the dictionnary
           var value = args.trim().split('.').reduce(function(dict, key){
@@ -311,6 +290,10 @@ gulp.task('assemble', function(done) {
           if ((parseInt(index,10) + 1) % divider === 0) {
             return block.fn(this);
           }
+        },
+        // Remove number prefixes (01- or 01.02-)
+        prefixless: function(value) {
+          return value.replace(/(\d+[\-\.]?)+/ig, '');
         }
       }
   	})
@@ -424,5 +407,5 @@ gulp.task('deploy', function () {
  * Default task build the style guide
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'polyfills', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styles:fabricator', 'scripts:fabricator', 'assemble', 'copy', cb);
+  runSequence('vendors', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styles:fabricator', 'scripts:fabricator', 'assemble', 'copy', cb);
 });
