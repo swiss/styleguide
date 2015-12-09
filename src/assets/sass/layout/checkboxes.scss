@@ -11,6 +11,14 @@
 
 @charset "UTF-8";
 
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+  margin-left: 0;
+}
+
 .checkbox {
   label {
     min-height: 26px;
