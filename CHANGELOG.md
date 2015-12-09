@@ -4,6 +4,7 @@ CHANGELOG
 This changelog references the relevant changes and bug fixes.
 
 * 3.0.0
+ * #208 Remove custom styling of checkboxes/radio buttons for better accessibility (required markup has changed).
  * Move "Admin Icons" code points to [PUA Area](https://en.wikipedia.org/wiki/Private_Use_Areas)
  * #246 Remove deprecated social sharing buttons
  * #219 Fix accessibility on tables
