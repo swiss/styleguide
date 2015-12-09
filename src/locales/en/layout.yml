@@ -18,6 +18,9 @@ form-elements:
 
       HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, and `color`
     release: |
+      **3.0.0**
+        - added atributes `required` and `aria-required="true"` on mandatory filed
+
       **2.6.0**
         - added a datepicker calendar plugin as an option. Use this in your script to initiate the plugin on the fields you need. See the [official Pikaday documentation](https://github.com/dbushell/Pikaday).
 
