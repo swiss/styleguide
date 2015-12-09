@@ -47,14 +47,15 @@ a {
 *:focus,
 a:focus,
 .form-control:focus,
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus
+input[type=checkbox]:focus,
+input[type=radio]:focus,
+input[type=file]:focus,
 button:focus,
 .btn:focus,
 .btn.active:focus,
 .carousel-control:focus,
-.dropdown-toggle:focus {
+.dropdown-toggle:focus,
+.chosen-container-active .chosen-single {
   outline: $focus-outline;
   outline-offset: 1px;
 }
