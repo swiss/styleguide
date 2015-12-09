@@ -9,13 +9,11 @@
  * Licensed under MIT
  =========================================================== */
 
- @charset "UTF-8";
-
 /**
- * Mixin to generate the pseudo element for a checkbox or radio
- * $type:   radio/checkbox
- * $position:   left/right
- */
+* Mixin to generate the pseudo element for a checkbox or radio
+* $type:   radio/checkbox
+* $position:   left/right
+*/
 @mixin form-button($type, $position) {
   position: absolute;
   content: ' ';
