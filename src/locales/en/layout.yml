@@ -42,9 +42,17 @@ form-elements:
   checkboxes:
     title: Checkboxes
     help: Checkboxes are used when one or more elements are to be selected from a predefined list of items.
+    release: |
+      **3.0.0**
+
+      - Custom styling of this element has been removed in favor of browsers’ default for better accessibility. To keep the previous style and variants, the checkbox now have to be inside the label.
   radios:
     title: Radios
     help: Radio buttons allow the user to make an unequivocal choice from a predefined list. Radio buttons can also be structured in groups. Only one element in a group may be selected.
+    release: |
+      **3.0.0**
+
+      - Custom styling of this element has been removed in favor of browsers’ default for better accessibility. To keep the previous style and variants, the radio now have to be inside the label.
   buttons:
     title: Buttons
     help: |

@@ -173,20 +173,20 @@ header:
 
       On smartphones the language selection is always included in a drawer section above the header. This section is hidden automatically as soon as the user scrolls down. If the user scrolls back all the way to the top, the drawer with the language selection reappears.
     release: |
-      **2.5.0**
+      **3.0.0**
+        - added `lang`, `title` and `aria-label` attributes for accessibility
+        - moved language states (active, disabled) to the link title and aria-label
 
+      **2.5.0**
         - added `<span class="sr-only">disabled</span>` for disabled accessibility
 
       **2.1.8**
-
         - added `<span class="sr-only">selected</span>` for active accessibility
 
       **2.1.2:**
-
         - added `h2.sr-only` for more screen reader clarity
 
       **2.1.0:**
-
         - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
   topics:
     title: Topics A-Z

@@ -9,9 +9,15 @@
  * Licensed under MIT
  =========================================================== */
 
-@charset "UTF-8";
+body,
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
 
-body, .body {
+body,
+.body {
+  position: relative;
   background: url('../img/bg-striped.png') repeat;
 }
 

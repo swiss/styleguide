@@ -13,7 +13,7 @@
               <ul role="menu">
                 {{#each items}}
                   <li role="presentation">
-                    <a href="/{{data 'locale'}}/{{prefixless @../key}}.html#{{@key}}">{{t @../../key @key 'title'}}</a>
+                    <a href="/{{data 'locale'}}/{{prefixless @../key}}.html#{{replace '(\.)' '-' @key}}">{{t @../../key @key 'title'}}</a>
                   </li>
                 {{/each}}
               </ul>
