@@ -224,7 +224,7 @@ content-navigation:
     release: |
       **2.1.8**
 
-      - added ` <span class="sr-only">current page</span>` and `aria-disabled="true"` for accessibility
+      - added `<span class="sr-only">current page</span>` and `aria-disabled="true"` for accessibility
       - added `title`to empty link (link only with icon)
       - added `.clearfix`and `.pull-left` inside of `.pagination-container
   anchor-links:
@@ -233,6 +233,10 @@ content-navigation:
   process-navigation:
     title: Process navigation
     help: Process navigation is used in connection with forms that are spread over several pages. The active process stage is marked in red. The previous steps are clickable and lead the user back to the selected process stage.
+    release: |
+      **3.0.0**
+
+      - added class `nav-process-steps-{2-10}` you specified the number of process between 2 and 10
   tab-navigation:
     title: Tab navigation
     help: |
