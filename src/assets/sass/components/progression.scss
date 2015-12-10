@@ -16,32 +16,43 @@
     padding: 0;
     margin: 0;
   }
-  li {margin: 0;}
-  li a {
+  li {
     display: block;
     height: 6px;
-    width: 24.2%;
+    width: 24.2%; // only for backwards compatibility
     float: left;
     background: $light-grey;
     margin: 0 0.5%;
-    color: $black;
     text-align: center;
     font-size: 13px;
     line-height: 35px;
     position: relative;
   }
-  li.active a, li a:hover, li a:active, li a:focus {
+  li a {
+    margin-top: -0.3em; // negative margin to extend the clickable area to the decorative bar
+    padding-top: 1.1em;
+    width: 100%;
+    display: block;
+    color: $black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+  }
+  li.active, li:hover, li:focus {
     background: $venetian-red;
     font-weight: 700;
   }
-  li.disabled a:hover, li.disabled a:active, li.disabled a:focus {
+  li.disabled:hover {
     background: $light-grey;
+    font-weight: normal;
+  }
+  li.disabled a:hover, li.disabled a:active, li.disabled a:focus {
     cursor: not-allowed;
     text-decoration: none;
   }
-  li:first-child a {margin-left: 0;}
-  li:last-child a {margin-right: 0;}
-  li a:before {
+  li:first-child {margin-left: 0;}
+  li:last-child {margin-right: 0;}
+  li:before {
     content: '';
     position: absolute;
     left: 0;
@@ -52,8 +63,8 @@
     border-left: 3px solid $white;
     border-bottom: 3px solid transparent;
   }
-  li:first-child a:before {display: none;}
-  li a:after {
+  li:first-child:before {display: none;}
+  li:after {
     content: '';
     position: absolute;
     right: -3px;
@@ -64,21 +75,27 @@
     border-left: 3px solid $light-grey;
     border-bottom: 3px solid transparent;
   }
-  li.active a:after, li a:hover:after, li a:active:after, li a:focus:after {border-left-color: $venetian-red;}
-  li.disabled a:hover:after, li.disabled a:active:after, li.disabled a:focus:after {border-left-color: $light-grey;}
-  li:last-child a:after {display: none;}
-  li.active a {
+  li.active:after, li:hover:after {border-left-color: $venetian-red;}
+  li.disabled:hover:after {border-left-color: $light-grey;}
+  li:last-child:after {display: none;}
+  li.active {
+    position: relative;
+    left: -0.2%;
     margin-top: -2px;
-    margin-left: .4%;
-    margin-right: .6%;
     height: 10px;
     padding-top: 2px;
   }
-  li.active a:after {
+  li.active:after {
     border-width: 5px;
     right: -5px;
   }
-  li.active a:before {
+  li.active:before {
     border-width: 5px;
+  }
+  // create the widths for different amounts of steps
+  @for $i from 2 through 10 {
+    &.nav-process-steps-#{$i} li {
+      width: ((100% - 1% * ($i - 1)) / $i) // For each step there is a -1% margin, minus one, because no margins on the far left and on the far right
+    }
   }
 }
