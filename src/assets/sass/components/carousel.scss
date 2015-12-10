@@ -9,48 +9,61 @@
  * Licensed under MIT
  ========================================================== */
 
-@charset "UTF-8";
-
 .carousel {
   border: 1px solid $silver;
+
   .item {
     padding: 10px;
   }
 }
 
 .carousel-control {
+  bottom: auto;
   opacity: 1;
+
   &:hover {
     opacity: 1;
   }
-}
 
-.carousel-control.right, .carousel-control.left {
-  background-image: none !important;
-  background: none;
-  filter: none; // fix for IE
-  &:before {
-    color: $coal;
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-  &:hover:before {
-    color: $black;
-  }
-  &.disabled {
-    cursor: default;
+  &.right,
+  &.left {
+    width: 40px;
+    background-image: none !important;
+    background: none;
+    filter: none; // fix for IE
     &:before {
-      color: $gainsboro;
+      color: $coal;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
     }
+    &:hover:before {
+      color: $black;
+    }
+    &.disabled {
+      cursor: default;
+      &:before {
+        color: $gainsboro;
+      }
+    }
+  }
+
+  &.left {
+    left: 10px;
+  }
+
+  &.right {
+    right: 10px;
   }
 }
 
 .carousel-indicators {
   bottom: auto;
-}
 
-.carousel-indicators li {
-  border: none;
-  background: $gainsboro;
-}
+  li {
+    border: none;
+    background: $gainsboro;
+  }
 
-.carousel-indicators .active {background: $venetian-red;}
+  .active {
+    background: $venetian-red;
+  }
+}

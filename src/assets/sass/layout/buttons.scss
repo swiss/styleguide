@@ -9,8 +9,6 @@
  * Licensed under MIT
  =========================================================== */
 
-@charset "UTF-8";
-
 .btn {
   padding: 0.45em 0.9em;
   border-radius: 3px;
@@ -21,9 +19,6 @@
   &:hover, &:focus {
     background-color: $light-grey;
     z-index: 100;
-  }
-  &:focus, &:active {
-    outline: none !important;
   }
 
   &.btn-primary {

@@ -9,8 +9,6 @@
  * Licensed under MIT
  =========================================================== */
 
- @charset "UTF-8";
-
 nav {
   ul {
     padding: 0;
@@ -24,8 +22,11 @@ nav {
 .nav {
   > li {
     > a {
-      &:hover, &:focus {
+      &:hover {
         outline: none;
+      }
+      &:focus {
+        outline: $focus-outline;
       }
     }
   }
@@ -636,9 +637,6 @@ nav {
     margin-left: 0px;
     padding: 10px;
     margin-top: 5px;
-    &:focus {
-      outline: 0;
-    }
     &.active {background: $smoke;}
   }
   .collapse.in {
