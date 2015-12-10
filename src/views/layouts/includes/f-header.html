@@ -6,7 +6,7 @@
         <ul>
           {{#each locales}}
             <li>
-              <a href="{{#if disabled}}#{{else}}/{{code}}/{{../../permalink}}{{/if}}" title="{{name}}" class="{{#isCurrentLocale code}}active{{/isCurrentLocale}}{{#if disabled}}disabled{{/if}}">{{toUpperCase code}}{{#isCurrentLocale code}}<span class="sr-only">{{t 'styleguide.selected'}}</span>{{/isCurrentLocale}}{{#if disabled}}<span class="sr-only">{{t 'styleguide.disabled'}}</span>{{/if}}</a>
+              <a href="{{#if disabled}}#{{else}}/{{code}}/{{../../permalink}}{{/if}}" lang="{{code}}" title="{{name}}{{#isCurrentLocale code}} {{t 'styleguide.selected'}}{{/isCurrentLocale}}{{#if disabled}} {{t 'styleguide.disabled'}}{{/if}}" aria-label="{{name}} {{#isCurrentLocale code}}{{t 'styleguide.selected'}}{{/isCurrentLocale}}{{#if disabled}}{{t 'styleguide.disabled'}}{{/if}}" class="{{#isCurrentLocale code}}active{{/isCurrentLocale}}{{#if disabled}}disabled{{/if}}">{{toUpperCase code}}</a>
             </li>
           {{/each}}
         </ul>

@@ -6,6 +6,7 @@ This changelog references the relevant changes and bug fixes.
 * 3.0.0
  * Introduced high-contrast outline around focused element while browsing with the keyboard
  * #208 Remove custom styling of checkboxes/radio buttons for better accessibility (required markup has changed)
+ * Language switcher gets more acccessible with extra attributes to describe languages
  * Move "Admin Icons" code points to [PUA Area](https://en.wikipedia.org/wiki/Private_Use_Areas)
  * #246 Remove deprecated social sharing buttons
  * #219 Fix accessibility on tables
