@@ -210,6 +210,16 @@ functions:
 
       - change the `onclick="window.print()"` by `onclick="$.printPreview.printPreview()"`
       - add an optional target to the printPreview function: `onclick="$.printPreview.printPreview('target id')"`
+  social-sharing:
+    title: Social sharing
+    help: |
+      With the social sharing function, contents can be shared on social networks. In order to protect the privacy of the users, the function contains an activation mechanism. The user first has to activate the service before being able to share contents via his or her social network.
+
+      At the moment, Facebook, Twitter, and Google Plus are supported. Just add the correct [Open Graph](http://ogp.me/) meta tags to get the preview images and descriptions.
+    release: |
+      **2.1.1:**
+
+      - added the `.social-sharing` class to the `#social-sharing` element
   downloading-files:
     title: Downloading files
     help: Links with which a file can be downloaded are always preceded by a document icon.
