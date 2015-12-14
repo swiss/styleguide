@@ -9,8 +9,16 @@
  * Licensed under MIT
  =========================================================== */
 
-@media only screen and (max-width: $screen-sm-max) {
-  body {font-size: 12px;}
+html {
+  font-size: $font-size-base / 16px * 100%;
+
+  @media only screen and (max-width: $screen-sm-max) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-size: inherit;
 }
 
 p {
