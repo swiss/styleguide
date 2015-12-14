@@ -4,6 +4,7 @@ CHANGELOG
 This changelog references the relevant changes and bug fixes.
 
 * 3.0.0
+ * #421 Icon print always display 
  * Introduced high-contrast outline around focused element while browsing with the keyboard
  * #208 Remove custom styling of checkboxes/radio buttons for better accessibility (required markup has changed)
  * Language switcher gets more acccessible with extra attributes to describe languages
