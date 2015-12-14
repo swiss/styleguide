@@ -1,0 +1,33 @@
+{{#if data.release}}
+  <div class="component-release-notes collapse" id="release-notes-{{replace '(\.)' '-' @key}}" aria-expanded="false">
+    <div class="alert alert-info">
+      {{{t data.release markdown=true}}}
+    </div>
+  </div>
+{{/if}}
+
+{{#if data.help}}
+  {{{t data.help markdown=true}}}
+{{/if}}
+
+{{#unless data.empty}}
+  <div class="component-example">
+    {{{material @key @root}}}
+
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '(\.)' '-' @key}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse{{#if data.expanded}} in{{/if}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}" id="code-{{replace '(\.)' '-' @key}}" role="note">
+    <pre><code class="language-markup">{{material @key @root}}</code></pre>
+  </div>
+{{/unless}}
+
+{{#if data.javascript}}
+  <div class="code-block js-example" role="note">
+    <pre><code class="language-javascript">{{renderFile 'javascripts/' data.javascript}}</code></pre>
+  </div>
+{{/if}}
+
+{{#if data.complement}}
+  {{{renderFile 'complements/' data.complement}}}
+{{/if}}

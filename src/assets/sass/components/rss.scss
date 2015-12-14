@@ -1,0 +1,20 @@
+/* ==========================================================
+ * rss.scss
+ * RSS component
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-15 16:13:19
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.rss {
+  padding-top: 0;
+  &.well {
+    @media only screen and (max-width: $screen-sm-max) {
+      padding: 0;
+    }
+  }
+}
+

@@ -1,0 +1,17 @@
+/* ==========================================================
+ * anchor-links.scss
+ * Anchor links to elements on the page
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-01 16:37:43
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.anchor {
+  list-style-type: none;
+  .icon:before {
+    padding-right: 7px;
+  }
+}

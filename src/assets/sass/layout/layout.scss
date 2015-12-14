@@ -1,0 +1,59 @@
+/* ==========================================================
+ * layout.scss
+ * Global layout definition
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+body,
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body,
+.body {
+  position: relative;
+  background: url('../img/bg-striped.png') repeat;
+}
+
+.overlay {
+  content: ' ';
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('../img/overlay.png') repeat;
+  z-index: 999;
+}
+
+.container-main {
+  padding: 0;
+  background: $white;
+  margin-top: 0;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
+  @media only screen and (min-width: $screen-sm-min) {
+    margin-bottom: 90px;
+  }
+}
+
+.container-fluid h1:first-child {
+  margin-top: 0;
+}
+
+hr {
+  margin: 0;
+  border: none;
+  height: 1px;
+  background: $light-grey;
+}
+
+div[class*=col-] {
+  margin-bottom: 2em;
+}

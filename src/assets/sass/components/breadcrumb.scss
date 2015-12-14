@@ -1,0 +1,43 @@
+/* ==========================================================
+ * breadcrumb.scss
+ * Breadcrumb styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-29 14:21:47
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+.breadcrumb {
+  margin: 0;
+  li {margin: 0;}
+  li + li:before { content: none; }
+  .icon {margin: 0 10px;}
+  a {
+    font-size: 0.85em;
+    margin-top: 0;
+  }
+  span.icon {
+    position: relative;
+    top: 2px;
+  }
+  li.active {
+    color: $coal;
+    font-size: 0.935em
+  }
+  &.breadcrumb--search {
+    margin: 0.8em 0;
+    @media only screen and (max-width: $screen-xs-max) {
+      font-size: 0.7em;
+      li {margin: 0;}
+      .icon {margin: 0 3px;}
+    }
+  }
+  @media only screen and (max-width: $screen-sm-max) {
+    &:not(.breadcrumb--search) {
+      display: none;
+    }
+  }
+}
+

@@ -1,0 +1,152 @@
+/* ==========================================================
+ * tables.scss
+ * Table styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+table caption {
+  font-weight: 700;
+  text-align: left;
+  padding-bottom: 0.5em;
+}
+
+table.table-bordered {
+  font-size: 1em;
+  thead th, thead td, tfoot td {background: $smoke;}
+  tbody td {color: $night-rider;}
+  th {color: $black;}
+}
+
+.table>tbody+tbody {
+  border-top-width: 1px;
+}
+
+table.table thead tr {
+  td, th {
+    border-bottom-width: 1px !important;
+  }
+}
+
+.text-right {
+  tr, td, th {text-align: right;}
+}
+tr, td, th {
+  &.text-right {text-align: right;}
+}
+
+.text-center {
+  tr, td, th {text-align: center;}
+}
+tr, td, th {
+  &.text-center {text-align: center;}
+}
+
+.text-left {
+  tr, td, th {text-align: left;}
+}
+tr, td, th {
+  &.text-left {text-align: left;}
+}
+
+
+.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: transparent;
+  }
+  > tbody > tr:nth-of-type(even) {
+    background-color: $table-bg-accent;
+  }
+  > thead td, > thead th, > tfoot td, > tfoot th {
+    background: $smoke;
+    font-weight: 700;
+    color: $black;
+  }
+}
+
+
+tr.active {
+  th {background: $solitude !important;}
+  tbody & th {background: $clear-day !important;}
+  td {background: $clear-day !important;}
+}
+
+th.active {background: $solitude !important;}
+tbody th.active {background: $clear-day !important;}
+td.active {background: $clear-day !important;}
+tfoot td.active {background: $solitude !important;}
+
+
+.table-sort thead th {
+  color: $cerulean;
+  &:hover, &:hover:after {color: $venetian-red;}
+  div {
+    display: inline;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:after {
+    content: get-font-icon('root');
+    margin-left: .4em;
+    color: $empress;
+    font-family: $admin-icons;
+  }
+  &.tablesorter-headerAsc:after {
+    content: get-font-icon('power');
+  }
+  &.tablesorter-headerAsc, &.tablesorter-headerDesc {
+    div, &:after {
+      color: $venetian-red !important;
+    }
+  }
+}
+
+
+.table {
+  th[data-toggle="collapse"], td[data-toggle="collapse"] {
+    color: $cerulean;
+    &:hover {
+      cursor: pointer;
+      color: $venetian-red;
+    }
+  }
+  tbody tbody {
+    tr td:first-child, tr th:first-child {
+      background: red;
+      padding-left: 20px;
+    }
+  }
+}
+
+
+.table-simple thead tr {
+  th, td {border: none;}
+}
+
+.table-simple {
+  border-collapse: separate;
+  border-spacing: 10px 0px;
+  caption {
+    padding-left: 10px;
+  }
+  tbody tr th, tbody tr td, thead tr td, thead tr th {
+    padding-left: 0;
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+
+.table-naked {
+  border-collapse: separate;
+  border-spacing: 10px 0px;
+  tbody tr th, tbody tr td, thead tr td, thead tr th {
+    padding-left: 0;
+    border: none;
+  }
+}

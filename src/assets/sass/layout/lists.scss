@@ -1,0 +1,83 @@
+/* ==========================================================
+ * lists.scss
+ * List element styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+ul, ol, dl {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 1.5em 0 0 0;
+  padding: 0 0 0 0.8em;
+}
+
+ul {
+  list-style-type: square;
+
+  ul {
+    margin-top: 0;
+    list-style-type: none;
+  }
+}
+
+li {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-left: 0.8em;
+  li {font-size: 1em;}
+}
+
+ol {
+  list-style-type: decimal;
+  ol {margin-top: 0;}
+}
+
+dl {
+  margin: 1.5em 0 0 0;
+  padding: 0;
+}
+
+.dl-horizontal {
+  dt {
+    width: 2em;
+    text-align: left;
+  }
+  dd {
+    margin-left: 3em;
+  }
+    @media (min-width: $grid-float-breakpoint) {
+    dt {
+      width: 2em;
+      text-align: left;
+    }
+    dd {
+      margin-left: 3em;
+    }
+  }
+}
+
+dt {
+  @extend strong;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+dt, dd {
+  font-size: 1.1em;
+  dt, dd {font-size: 1em;}
+}
+
+.list-unstyled {
+  margin: 0.8em 0;
+  li {
+    font-size: 1em;
+    margin-left: 0;
+  }
+}

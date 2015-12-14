@@ -1,0 +1,98 @@
+/* ==========================================================
+ * search.scss
+ * Search field styles
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-01 11:57:02
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.form-search {
+  display: inline-block;
+  position: relative;
+  @media only screen and (max-width: $screen-xs-max) {
+    header & {
+      display: none;
+    }
+  }
+  button {
+    background: transparent;
+    border: none;
+  }
+  .icon {
+    display: inline-block;
+    position: absolute;
+    top: -1px;
+    z-index: 999;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .icon--search {left: 3px;}
+  span.icon--search {display: none;}
+  .icon--close {
+    color: $white;
+    transition: color 0.3s;
+    right: 10px;
+    top: 4px;
+    font-size: 11px;
+  }
+}
+
+.search-field {
+  padding: 0px 30px;
+  position: relative;
+  height: 25px;
+  width: 200px;
+  transition: width 0.4s;
+  &:focus {width: 250px;}
+}
+
+.search-field:focus + .icon--close:after {color: $black;}
+
+/* Remove X button in IE10 */
+.search-field::-ms-clear { display: none; }
+
+.tt-dropdown-menu {
+  background: $white;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  padding: 0;
+  font-size: 13px;
+  border: 1px solid $silver;
+  width: 100%;
+}
+
+.tt-suggestion {
+  font-size: 13px;
+  line-height: 16px;
+  padding: 3px 10px 1px 10px;
+  margin: 0;
+  a {color: $coal;}
+}
+
+.tt-suggestion.tt-cursor, .tt-is-under-cursor {
+  background-color: $smoke;
+}
+
+.search-box {
+  border-top: 1px solid $silver;
+  border-bottom: 2px solid $silver;
+  padding: 1em 0 1.5em 0;
+  @media only screen and (max-width: $screen-xs-max) {
+    input[type=submit] {
+      width: 100%;
+    }
+  }
+}
+
+.search-result {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid $silver;
+  h4 {
+    font-size: 1.3em;
+  }
+}

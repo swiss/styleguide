@@ -1,0 +1,44 @@
+/* ==========================================================
+ * checkboxes.scss
+ * Custom checkbox styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+  margin-left: 0;
+}
+
+.checkbox {
+  label {
+    position: relative;
+  }
+}
+
+.checkbox--left {
+  label {
+    padding-left: 24px;
+    padding-right: 0;
+  }
+  input {
+    @include form-button(left);
+  }
+}
+
+.checkbox--right {
+  label {
+    padding-right: 24px;
+    padding-left: 0;
+  }
+  input {
+    @include form-button(right);
+  }
+}

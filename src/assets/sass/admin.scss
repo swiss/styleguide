@@ -1,0 +1,115 @@
+/* ==========================================================
+ * admin.scss
+ * Project sass files and font files import
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-30 09:38:36
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Admin Icons';
+  src: url('../fonts/AdminCH_Symbols.eot?v3');
+  src: url('../fonts/AdminCH_Symbols.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/AdminCH_Symbols.woff2?v3') format('woff2'),
+       url('../fonts/AdminCH_Symbols.woff?v3') format('woff'),
+       url('../fonts/AdminCH_Symbols.ttf?v3') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Frutiger Neue';
+  src: url('../fonts/FrutigerNeueW02-Bd.eot?v2');
+  src: url('../fonts/FrutigerNeueW02-Bd.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FrutigerNeueW02-Bd.woff2?v2') format('woff2'),
+       url('../fonts/FrutigerNeueW02-Bd.woff?v2') format('woff'),
+       url('../fonts/FrutigerNeueW02-Bd.ttf?v2') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Frutiger Neue';
+  src: url('../fonts/FrutigerNeueW02-It.eot?v2');
+  src: url('../fonts/FrutigerNeueW02-It.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FrutigerNeueW02-It.woff2?v2') format('woff2'),
+       url('../fonts/FrutigerNeueW02-It.woff?v2') format('woff'),
+       url('../fonts/FrutigerNeueW02-It.ttf?v2') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Frutiger Neue';
+  src: url('../fonts/FrutigerNeueW02-Regular.eot?v2');
+  src: url('../fonts/FrutigerNeueW02-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FrutigerNeueW02-Regular.woff2?v2') format('woff2'),
+       url('../fonts/FrutigerNeueW02-Regular.woff?v2') format('woff'),
+       url('../fonts/FrutigerNeueW02-Regular.ttf?v2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Frutiger Neue';
+  src: url('../fonts/FrutigerNeueW02-Light.eot?v2');
+  src: url('../fonts/FrutigerNeueW02-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/FrutigerNeueW02-Light.woff2?v2') format('woff2'),
+       url('../fonts/FrutigerNeueW02-Light.woff?v2') format('woff'),
+       url('../fonts/FrutigerNeueW02-Light.ttf?v2') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@import 'admin-mixins';
+@import 'admin-variables';
+@import 'bootstrap';
+@import 'chosen-theme';
+
+// Layout
+@import 'layout/type';
+@import 'layout/brand';
+@import 'layout/buttons';
+@import 'layout/checkboxes';
+@import 'layout/footer';
+@import 'layout/forms';
+@import 'layout/header';
+@import 'layout/icons';
+@import 'layout/images';
+@import 'layout/layout';
+@import 'layout/links';
+@import 'layout/lists';
+@import 'layout/others';
+@import 'layout/radios';
+@import 'layout/tables';
+@import 'layout/titles';
+
+// Components
+@import 'components/alerts';
+@import 'components/anchor-links';
+@import 'components/breadcrumb';
+@import 'components/collapse';
+@import 'components/contact-box';
+@import 'components/emergency';
+@import 'components/helpers';
+@import 'components/list-group';
+@import 'components/mega-menu';
+@import 'components/navigation';
+@import 'components/news-feed';
+@import 'components/pagination';
+@import 'components/progression';
+@import 'components/search';
+@import 'components/select';
+@import 'components/shopping-cart';
+@import 'components/tab';
+@import 'components/well';
+@import 'components/modal';
+@import 'components/focus';
+@import 'components/carousel';
+@import 'components/rss';
+@import 'components/slideshow';
+@import 'components/social-sharing';

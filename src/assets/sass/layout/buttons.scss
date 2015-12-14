@@ -1,0 +1,80 @@
+/* ==========================================================
+ * buttons.scss
+ * Global buttons styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-30 09:38:36
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+.btn {
+  padding: 0.45em 0.9em;
+  border-radius: 3px;
+  line-height: 1.2;
+  background-color: $smoke;
+  border: 1px solid $empress;
+  font-weight: 100;
+  &:hover, &:focus {
+    background-color: $light-grey;
+    z-index: 100;
+  }
+
+  &.btn-primary {
+    background-color: $cerulean;
+    border-color: $cerulean;
+    &:hover, &:focus {
+      color: $white;
+      background-color: darken($cerulean, 8%);
+    }
+    &:active {
+      background-color: darken($cerulean, 15%);
+    }
+    &.active {
+      color: $white;
+      background-color: darken($cerulean, 15%);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $empress;
+    color: $white;
+    &:hover, &:focus {
+      background-color: darken($empress, 8%);
+    }
+    &:active {
+      background-color: darken($empress, 15%);
+    }
+    &.active {
+      color: $white;
+      background-color: $coal;
+      box-shadow: none;
+    }
+  }
+
+  &.active {
+    color: $cerulean;
+    background-color: $white;
+    box-shadow: none;
+  }
+
+  &.btn-link {
+    border: none;
+    background-color: transparent;
+    float: none;
+    &:hover, &:focus {
+      color: darken($cerulean, 5%);
+      background: $smoke;
+    }
+  }
+}
+
+a.btn {
+  color: inherit;
+}
+
+// Fix bootstrap
+.btn-group>.btn:hover {
+  z-index: 3;
+}

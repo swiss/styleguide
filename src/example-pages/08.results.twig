@@ -1,0 +1,201 @@
+{% extends "layout.twig" %}
+
+{% block pagetitle %}Results{% endblock %}
+
+{% block sidebar %}{% endblock %}
+{% block sidebar_right %}{% endblock %}
+
+{% block content %}
+    <div class="col-sm-12">
+      <a href="#" onclick="$.printPreview.printPreview()" class="icon icon--before icon--print pull-right"></a>
+      <h1 class="text-inline">Search</h1>
+
+      <br>
+
+      <form action="#" class="form-inline search-box">
+        <fieldset class="clearfix">
+          <div class="form-group">
+            <label for="inputSearch" class="control-label">Search by keyword</label>
+            <input type="text" class="form-control" id="inputSearch" placeholder="Search by keyword">
+          </div>
+          <input class="btn btn-primary" aria-label="Find" type="submit" value="Find">
+        </fieldset>
+      </form>
+
+      <h2>Search Results</h2>
+      <p>39 items found for Health Insurance</p>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#contentPages" data-toggle="tab">Content pages (28)</a></li>
+        <li><a href="#newsPages" data-toggle="tab">News (16)</a></li>
+        <li><a href="#publicationsPages" data-toggle="tab">Publications (3)</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content tab-border">
+        <div class="tab-pane active" id="contentPages">
+
+          <!-- Header pagination -->
+          <nav class="pagination-container clearfix">
+            <span class="pull-left">Object - 2 of 3</span>
+            <ul class="pull-right pagination">
+              <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
+              <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+              <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
+              <li><a href="#">2</a></li>
+              <li>...</li>
+              <li><a href="#">17</a></li>
+              <li class="separator-left"><a href="#">Next</a></li>
+              <li class="separator-left"><a href="#" title="step forward"><span class="icon icon--step-forward"></span></a></li>
+            </ul>
+          </nav>
+
+          <!-- Results -->
+          <article class="search-result">
+            <h2 id="br2" class="hidden">Breadcrumbs</h2>
+            <ol class="breadcrumb breadcrumb--search" aria-labelledby="br2">
+              <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
+              <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
+              <li class="active">Country Selection</li>
+            </ol>
+            <h4><a href="#">Title of the first result</a></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, eum, dolor, alias quo aspernatur quos soluta ducimus nihil aliquid maiores ipsam aut suscipit eos iste dicta ipsum aperiam distinctio illum.</p>
+          </article>
+          <article class="search-result">
+            <h2 id="br3" class="hidden">Breadcrumbs</h2>
+            <ol class="breadcrumb breadcrumb--search" aria-labelledby="br3">
+              <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
+              <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
+              <li class="active">Country Selection</li>
+            </ol>
+            <h4><a href="#">Title of the second result</a></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, eum, dolor, alias quo aspernatur quos soluta ducimus nihil aliquid maiores ipsam aut suscipit eos iste dicta ipsum aperiam distinctio illum.</p>
+          </article>
+
+          <!-- Footer pagination -->
+          <nav class="pagination-container pagination-end">
+            <span class="pull-left">Object - 2 of 3</span>
+            <ul class="pull-right pagination">
+              <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
+              <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+              <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
+              <li><a href="#">2</a></li>
+              <li>...</li>
+              <li><a href="#">17</a></li>
+              <li class="separator-left"><a href="#">Next</a></li>
+              <li class="separator-left"><a href="#" title="step forward"><span class="icon icon--step-forward"></span></a></li>
+            </ul>
+          </nav>
+
+        </div>
+        <div class="tab-pane" id="newsPages">
+
+          <!-- Header pagination -->
+          <nav class="pagination-container clearfix">
+            <span class="pull-left">Object - 2 of 3</span>
+            <ul class="pull-right pagination">
+              <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
+              <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+              <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
+              <li><a href="#">2</a></li>
+              <li>...</li>
+              <li><a href="#">17</a></li>
+              <li class="separator-left"><a href="#">Next</a></li>
+              <li class="separator-left"><a href="#" title="step forward"><span class="icon icon--step-forward"></span></a></li>
+            </ul>
+          </nav>
+
+          <article class="search-result clearfix">
+            <h4><a href="#">News item</a></h4>
+            <figure class="pull-left">
+              <img src="http://placehold.it/180x113" alt="image description">
+              <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
+          </article>
+          <article class="search-result clearfix">
+            <h4><a href="#">News item</a></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
+          </article>
+
+          <!-- Footer pagination -->
+          <nav class="pagination-container pagination-end">
+            <span class="pull-left">Object - 2 of 3</span>
+            <ul class="pull-right pagination">
+              <li class="separator disabled"><a aria-disabled="true" href="#" title="step backward"><span class="icon icon--step-backward"></span></a></li>
+              <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+              <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
+              <li><a href="#">2</a></li>
+              <li>...</li>
+              <li><a href="#">17</a></li>
+              <li class="separator-left"><a href="#">Next</a></li>
+              <li class="separator-left"><a href="#" title="step forward"><span class="icon icon--step-forward"></span></a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="tab-pane" id="publicationsPages">
+
+          <form action="#" class="form-inline">
+            <div class="checkbox checkbox--left">
+              <input type="checkbox" id="checkbox1" value="checkbox1" checked>
+              <label for="checkbox1">Documents (1)</label>
+            </div>
+            <div class="checkbox checkbox--left">
+              <input type="checkbox" id="checkbox2" value="checkbox2" checked>
+              <label for="checkbox2">Images (1)</label>
+            </div>
+            <div class="checkbox checkbox--left">
+              <input type="checkbox" id="checkbox3" value="checkbox3" checked>
+              <label for="checkbox3">Videos (1)</label>
+            </div>
+          </form>
+
+          <div class="pagination-container">
+            <span>Objects <b>1</b> - <b>3</b> of 3</span>
+          </div>
+
+          <article class="search-result clearfix">
+            <h4><a href="#">Document</a></h4>
+            <figure class="pull-left">
+              <img src="http://placehold.it/78x117" alt="image description">
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
+            <p>
+              <a href="#" class="icon icon--before icon--pdf">
+                Strategie des Bundes in der humanitären Minenräumung 2008 - 2011 <span class="text-dimmed">(PDF, 90 Seiten, 5-0 MB, deutsch)</span>
+              </a>
+            </p>
+            <p><a href="#" class="icon icon--before icon--greater">Other languages</a></p>
+          </article>
+
+          <article class="search-result clearfix">
+            <h4><a href="#">Image</a></h4>
+            <figure class="pull-left">
+              <img src="http://placehold.it/180x113" alt="image description">
+            </figure>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
+          </article>
+
+          <article class="search-result clearfix">
+            <h4><a href="#">Video</a></h4>
+            <iframe src="//player.vimeo.com/video/38388574" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
+          </article>
+
+          <div class="pagination-container pagination-end">
+            <span>Objects <b>1</b> - <b>3</b> of 3</span>
+          </div>
+
+        </div>
+      </div>
+
+      <br>
+
+      <small>
+      <a href="#">Zum Seitenanfang</a><br>
+        Letze Änderung 17.01.2014
+      </small>
+    </div>
+{% endblock %}

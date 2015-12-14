@@ -1,0 +1,42 @@
+/* ==========================================================
+ * alerts.scss
+ * Alert element styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-30 09:38:36
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+.alert {
+  border: none;
+  padding-left: 55px;
+  position: relative;
+
+  &:before {
+    @extend .glyphicon;
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    font-size: 1.5em;
+  }
+
+  &.alert-success:before {
+    @extend .glyphicon-ok;
+    top: 13px;
+  }
+  &.alert-info:before {
+    @extend .glyphicon-info-sign;
+  }
+  &.alert-warning:before {
+    font-family: $admin-icons;
+    content: get-font-icon('exclam');
+    font-size: 2em;
+    top: 13px;
+    left: 23px;
+  }
+  &.alert-danger:before {
+    @extend .glyphicon-remove;
+  }
+}
