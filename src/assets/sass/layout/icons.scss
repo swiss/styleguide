@@ -108,12 +108,6 @@ $icon-list: (
   padding-right: 0;
 }
 
-.icon--print {
-  @media only screen and (max-width: $screen-sm-max) {
-    display: none;
-  }
-}
-
 a.icon:hover {
   text-decoration: underline; // fix to override normal bootstrap behaviour
 }

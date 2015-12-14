@@ -44,7 +44,7 @@ $.printPreview = {
             '<input type="checkbox" id="footnote-links">&nbsp;&nbsp;'+
             '<label for="footnote-links">Links as footnotes</label>'+
           '</span>'+
-          '<ul class="pull-right pagination">'+
+          '<ul class="pull-right">'+
             '<li>'+
               '<button id="print-button" title="print" class="btn"><span class="icon icon--print"></span></button>'+
               '&nbsp;&nbsp;'+
