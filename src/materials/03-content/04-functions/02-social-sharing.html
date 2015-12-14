@@ -9,8 +9,8 @@ label: fix
   <a href="#" aria-label="Facebook"
    onclick="
      window.open(
-       'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-       'facebook-share-dialog',
+       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href),
+       'twitter-share-dialog',
        'width=626,height=436');
      return false;">
     <img src="/img/FB-f-Logo__blue_29.png" width="16px" height="16px" alt="Share on Facebook">
@@ -18,7 +18,7 @@ label: fix
   <a href="#" aria-label="Twitter"
    onclick="
      window.open(
-       'http://twitter.com/share?text=You text here.&url='+encodeURIComponent(location.href),
+       'http://twitter.com/share?text=You text here.&amp;url=' + encodeURIComponent(location.href),
        'facebook-share-dialog',
        'width=626,height=436');
      return false;">
@@ -27,8 +27,8 @@ label: fix
   <a href="#"
     onclick="
       window.open(
-        'https://plus.google.com/share?url=encodeURIComponent(location.href)',
-        '',
+        'https://plus.google.com/share?url=' + encodeURIComponent(location.href),
+        'google-share-dialog',
         'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
       return false;">
     <img src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/></a>
