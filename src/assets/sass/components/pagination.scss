@@ -38,6 +38,7 @@
       border: none;
       background: none;
       padding: 2px 3px;
+      font-size: 1rem;
       line-height: 1;
       &:hover {
         background: none;
@@ -60,9 +61,6 @@
     padding-top: 10px;
     &.pull-right {
       float: none !important;
-    }
-    li a {
-      font-size: 12px;
     }
   }
   @media only screen and (max-width: $screen-xs-max) {

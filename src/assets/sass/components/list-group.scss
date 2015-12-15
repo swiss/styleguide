@@ -20,12 +20,15 @@
   min-height: 30px;
   border-bottom: 2px solid $silver;
   margin-bottom: 10px;
+
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
+
   .pull-right {
     padding-top: 3px;
   }
+
   &:after {
     content: ' ';
     clear: both;
@@ -38,9 +41,13 @@
   border-bottom: 1px solid $silver;
   border-radius: 0px;
   padding: 10px 0;
-  font-size: 14px;
   margin-bottom: 0;
-  a, p {font-size: 14px;}
+
+  a,
+  p {
+    font-size: 1rem;
+  }
+
   &:after {
     content: '\00a0';
     display: block;
