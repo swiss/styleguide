@@ -229,9 +229,9 @@ gulp.task('assemble', function(done) {
     });
 
     // Assemble the style guide
-  	assemble({
+    assemble({
       dest: dest,
-  		logErrors: config.dev,
+      logErrors: config.dev,
       helpers: {
         // Register the translation helper
         t: function() {
@@ -296,7 +296,7 @@ gulp.task('assemble', function(done) {
           return value.replace(/(\d+[\-\.]?)+/ig, '');
         }
       }
-  	})
+    })
   }
   done();
 });
@@ -321,14 +321,16 @@ gulp.task('copy:landing', function() {
 
 // Build Fabricator style
 gulp.task('styles:fabricator', function() {
-	gulp.src(config.src.styles.fabricator)
-		.pipe($.sourcemaps.init())
-		.pipe($.sass().on('error', $.sass.logError))
-		.pipe($.autoprefixer('last 1 version'))
-		.pipe($.if(!config.dev, $.minifyCss()))
-		.pipe($.sourcemaps.write())
-		.pipe(gulp.dest(config.styleguide.dest + '/css'))
-		.pipe($.if(config.dev, reload({stream:true})));
+  gulp.src(config.src.styles.fabricator)
+    .pipe($.sourcemaps.init())
+    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: config.autoprefixer
+    }))
+    .pipe($.if(!config.dev, $.minifyCss()))
+    .pipe($.sourcemaps.write())
+    .pipe(gulp.dest(config.styleguide.dest + '/css'))
+    .pipe($.if(config.dev, reload({stream:true})));
 });
 
 // Build Fabricator scripts

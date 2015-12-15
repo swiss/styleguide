@@ -9,8 +9,6 @@
  * Licensed under MIT
  ========================================================== */
 
-@charset "UTF-8";
-
 .carousel {
   border: 1px solid $silver;
 
@@ -32,25 +30,38 @@
 
   opacity: 1;
 
-  &.left,
-  &.right {
-    background-image: none;
-    filter: none; // fix for IE
-  }
-
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 1;
     color: $venetian-red;
   }
 
-  &:focus {
-    outline: currentColor;
+  &.right,
+  &.left {
+    width: 40px;
+    background-image: none !important;
+    background: none;
+    filter: none; // fix for IE
+    &:before {
+      color: $coal;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    &:hover:before {
+      color: $black;
+    }
+    &.disabled {
+      cursor: default;
+      &:before {
+        color: $gainsboro;
+      }
+    }
   }
 
-  &.disabled {
-    cursor: default;
-    color: $gainsboro;
+  &.left {
+    left: 10px;
+  }
+
+  &.right {
+    right: 10px;
   }
 }
 

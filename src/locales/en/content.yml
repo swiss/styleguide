@@ -32,11 +32,16 @@ teaser:
   focus:
     title: Focus
     help: |
-      The focus teaser contains two to four articles selected by the editorial team and of topical interest which are to be placed in a prominent position. The position of the focus teaser is normally at the top of the home page. It consists of a large image, a headline, a brief teaser text, and a "more" link. The various topics are highlighted in turn in a slideshow presentation. The user can choose a particular article via a tab. This automatically stops the slideshow.
+      The focus teaser contains two to four articles selected by the editorial team and of topical interest which are to be placed in a prominent position. The position of the focus teaser is normally at the top of the home page. It consists of a large image, a headline, a brief teaser text, and a "more" link. The various topics are highlighted in turn in a slideshow presentation.
 
-      On tablets and smartphones, the tab bar is replaced by a series of dots.
+      The user can choose a particular article via a tab, this automatically stops the slideshow until the user decided to play it again with the dedicated button. Hovering and focusing on the component will temporarily pause it, the slideshow is resumed once the focus/mouse leave the target.
+
+      On tablets and smartphones, the tab bar is replaced by a series of dots. In that particular case the slideshow never play automatically.
 
       Please be careful about the length of the text in the tabs, the height is fixed.
+    release: |
+      **3.0.0**
+      - Improved accessibility by pausing the slideshow when user interact with the component and also by adding a play/pause button.
   news:
     title: News
     help: |
@@ -210,6 +215,16 @@ functions:
 
       - change the `onclick="window.print()"` by `onclick="$.printPreview.printPreview()"`
       - add an optional target to the printPreview function: `onclick="$.printPreview.printPreview('target id')"`
+  social-sharing:
+    title: Social sharing
+    help: |
+      With the social sharing function, contents can be shared on social networks. In order to protect the privacy of the users, the function contains an activation mechanism. The user first has to activate the service before being able to share contents via his or her social network.
+
+      At the moment, Facebook, Twitter, and Google Plus are supported. Just add the correct [Open Graph](http://ogp.me/) meta tags to get the preview images and descriptions.
+    release: |
+      **2.1.1:**
+
+      - added the `.social-sharing` class to the `#social-sharing` element
   downloading-files:
     title: Downloading files
     help: Links with which a file can be downloaded are always preceded by a document icon.

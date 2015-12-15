@@ -9,8 +9,6 @@
  * Licensed under MIT
  =========================================================== */
 
- @charset "UTF-8";
-
 a {
  color: $cerulean;
  line-height: 1.5;
@@ -41,6 +39,25 @@ a {
     text-decoration: none;
   }
  }
+}
+
+// Apply a more accessible/visible focus state on interactive elements
+// This is shown *only* when user interact with the keyboard
+// See outline.js
+*:focus,
+a:focus,
+.form-control:focus,
+input[type=checkbox]:focus,
+input[type=radio]:focus,
+input[type=file]:focus,
+button:focus,
+.btn:focus,
+.btn.active:focus,
+.carousel-control:focus,
+.dropdown-toggle:focus,
+.chosen-container-active .chosen-single {
+  outline: $focus-outline;
+  outline-offset: 1px;
 }
 
 @media only screen and (max-width: $screen-xs-max) {

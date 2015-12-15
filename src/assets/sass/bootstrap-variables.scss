@@ -64,15 +64,16 @@ $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !def
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
+$font-size-base-rel:      87.5% !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default;
 $font-size-small:         ceil(($font-size-base * 0.85)) !default;
 
-$font-size-h1:            floor(($font-size-base * 2.5)) !default;
-$font-size-h2:            floor(($font-size-base * 1.7)) !default;
-$font-size-h3:            ceil(($font-size-base * 1.2)) !default;
-$font-size-h4:            ceil(($font-size-base * 1.05)) !default;
-$font-size-h5:            ceil(($font-size-base * 1.05)) !default;
-$font-size-h6:            $font-size-base !default;
+$font-size-h1:            2.5rem !default;
+$font-size-h2:            1.7rem !default;
+$font-size-h3:            1.2rem !default;
+$font-size-h4:            1.05rem !default;
+$font-size-h5:            1.05rem !default;
+$font-size-h6:            1rem !default;
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.6 !default; // 20/14
@@ -280,7 +281,8 @@ $zindex-dropdown:          1000 !default;
 $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 $zindex-navbar-fixed:      1030 !default;
-$zindex-modal:             1040 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050;
 
 
 //== Media queries breakpoints
@@ -493,7 +495,7 @@ $jumbotron-padding:              30px !default;
 $jumbotron-color:                inherit !default;
 $jumbotron-bg:                   $gray-lighter !default;
 $jumbotron-heading-color:        inherit !default;
-$jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
+$jumbotron-font-size:            1.5rem !default;
 
 
 //== Form states and alerts
@@ -812,7 +814,7 @@ $carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
 $carousel-control-color:                      #fff !default;
 $carousel-control-width:                      15% !default;
 $carousel-control-opacity:                    .5 !default;
-$carousel-control-font-size:                  20px !default;
+$carousel-control-font-size:                  1.78571429rem !default;
 
 $carousel-indicator-active-bg:                #fff !default;
 $carousel-indicator-border-color:             #fff !default;
@@ -860,7 +862,7 @@ $headings-small-color:        $gray-light !default;
 //** Blockquote small color
 $blockquote-small-color:      $gray-light !default;
 //** Blockquote font size
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-font-size:        1.25rem !default;
 //** Blockquote border color
 $blockquote-border-color:     $gray-lighter !default;
 //** Page header border color
