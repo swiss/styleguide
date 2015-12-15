@@ -24,16 +24,11 @@
   z-index: 1;
 
   color: $coal;
-  font-size: 25px;
+  font-size: $carousel-control-font-size;
   line-height: 40px;
   text-shadow: none;
 
   opacity: 1;
-
-  &:hover {
-    opacity: 1;
-    color: $venetian-red;
-  }
 
   &.right,
   &.left {
@@ -41,18 +36,23 @@
     background-image: none !important;
     background: none;
     filter: none; // fix for IE
-    &:before {
-      color: $coal;
-      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    }
-    &:hover:before {
-      color: $black;
-    }
+
+    color: $coal;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
     &.disabled {
-      cursor: default;
-      &:before {
+      &,
+      &:hover,
+      &:focus {
+        cursor: default;
         color: $gainsboro;
       }
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      color: $venetian-red;
     }
   }
 
