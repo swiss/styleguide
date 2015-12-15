@@ -72,7 +72,6 @@
   $('#carousel-total').text(slideshow_total);
 
   $('.carousel-slideshow').on('slid.bs.carousel', function () {
-
     var carouselData = $(this).data('bs.carousel');
     var currentIndex = carouselData.getItemIndex(carouselData.$element.find('.item.active'));
     var total = carouselData.$items.length;
@@ -85,7 +84,7 @@
 
 }) (jQuery);
 
-function carouselInit ($) {
+function carouselInit($) {
   'use strict';
 
   var $carousel = $('.carousel:not(.carousel-slideshow)');
@@ -103,11 +102,10 @@ function carouselInit ($) {
   if($carousel) {
     $carousel.each(function () {
       var biggestHeight = 0,
-          titleHeight = $(this).find('h3:first-child').height(),
-          imgHeight = $(this).find('.carousel-img').height();
+          titleHeight = $(this).find('.item.active h3:first-child').height(),
+          imgHeight = $(this).find('.item.active .carousel-img').height();
 
-      $(this).find('.carousel-indicators').css('top', titleHeight + imgHeight + 40);
-      $(this).find('.carousel-control').css('top', titleHeight + imgHeight + 50);
+      $(this).find('.carousel-indicators, .carousel-control').css('top', titleHeight + imgHeight + 50);
 
       $(this).find('.item').each(function () {
         if ($(this).height() >= biggestHeight) {

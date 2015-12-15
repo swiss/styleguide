@@ -36,13 +36,23 @@
       display: inline-block;
       margin-top: 15px;
       padding: 0 12px 0 15px;
+
+      color: $coal;
       font-size: $carousel-control-font-size;
-      &.right {border-left: 1px solid $gainsboro;}
-      &:before {color: $coal;}
-      &:hover:before {color: $black;}
+
+      &.right {
+        border-left: 1px solid $gainsboro;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+        color: $venetian-red;
+      }
+
       &.disabled {
         cursor: default;
-        &:before {color: $gainsboro;}
+        color: $gainsboro;
       }
     }
   }
