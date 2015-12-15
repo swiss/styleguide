@@ -10,7 +10,7 @@
  =========================================================== */
 
 html {
-  font-size: $font-size-base / 16px * 100%;
+  font-size: $font-size-base-rel;
 
   @media only screen and (max-width: $screen-sm-max) {
     font-size: 75%;
@@ -33,7 +33,7 @@ strong {
 .lead {
   @extend strong;
   line-height: $line-height-base;
-  font-size: ceil(($font-size-base * 1));
+  font-size: $font-size-base;
 }
 
  abbr {

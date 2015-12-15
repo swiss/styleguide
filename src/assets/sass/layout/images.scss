@@ -15,18 +15,22 @@ img {
 
 figure {
   margin-top: 0.2em;
+
   &.pull-left {
     padding-right: 10px;
     display: table;
+
     figcaption {
       display: table-caption;
       caption-side: bottom;
       padding-right: 10px;
     }
   }
+
   &.pull-right {
     padding-left: 10px;
     display: table;
+
     figcaption {
       display: table-caption;
       caption-side: bottom;
@@ -36,7 +40,7 @@ figure {
 }
 
 figcaption {
-  font-size: 13px;
+  font-size: 0.92857143rem;
   line-height: 1.3em;
   margin-top: 0.7em;
   margin-bottom: 0.8em;
@@ -47,7 +51,6 @@ figcaption {
   padding-top: 100%;
   position: relative;
   margin: 10px 0 45px 0;
-  font-size: 1em;
 }
 
 .thumbnail {
@@ -61,6 +64,7 @@ figcaption {
   bottom: 0;
   left: 0;
   right: 0;
+
   figure {
     margin: 0;
     background: $smoke;
@@ -68,6 +72,7 @@ figcaption {
     height: 100%;
     text-align: center;
   }
+
   img {
     width: auto;
     height: auto;
@@ -81,6 +86,7 @@ figcaption {
       width: 100%;
     }
   }
+
   figcaption {
     display: block;
     position: absolute;

@@ -6,7 +6,7 @@
 .code-block {
   background: #1e221d;
   color: $white;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.6em;
   margin: 15px 0 30px;
   position: relative;
@@ -45,7 +45,7 @@
     white-space:pre;
     margin: 0px;
     padding: 0px;
-    font-size: 14px;
+    font-size: inherit;
     position: relative;
     line-height: 1.6em;
     color: $white;

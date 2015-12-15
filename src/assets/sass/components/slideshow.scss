@@ -36,7 +36,7 @@
       display: inline-block;
       margin-top: 15px;
       padding: 0 12px 0 15px;
-      font-size: 25px;
+      font-size: $carousel-control-font-size;
       &.right {border-left: 1px solid $gainsboro;}
       &:before {color: $coal;}
       &:hover:before {color: $black;}
@@ -53,15 +53,20 @@
     padding-bottom: 0;
     max-width: 300px;
     min-height: 150px;
+
     @media only screen and (min-width: $screen-md-min) {
       float: left;
       max-width: 360px;
       min-height: 125px;
     }
+
     text-align: left;
     text-shadow: none;
     color: $black;
-    font-size: 11px;
-    p {margin-bottom: 0;}
+    font-size: 0.78571429rem;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 }
