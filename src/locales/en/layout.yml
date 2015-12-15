@@ -86,7 +86,7 @@ general:
     release: |
       **3.0.0**
 
-      - added `pull-left` class on logo link
+      - Add a container with `clearfix` class around logo component
 
       **2.1.8**
 
