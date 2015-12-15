@@ -86,7 +86,7 @@ general:
     release: |
       **3.0.0**
 
-      - added `clearfix` class on logo link
+      - added `pull-left` class on logo link
 
       **2.1.8**
 

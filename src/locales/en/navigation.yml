@@ -128,7 +128,7 @@ header:
     release: |
       **3.0.0**
 
-      - added `clearfix` class on logo link
+      - added `pull-left` class on logo link
   accessibility-navigation:
     title: Accessibility navigation
     help: The accessibility navigation has to be placed right after the body tag. It is used to give quick access to pages and page areas. **It is invisible**, except when the link is focused.
