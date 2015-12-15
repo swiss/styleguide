@@ -4,8 +4,10 @@ CHANGELOG
 This changelog references the relevant changes and bug fixes.
 
 * 3.0.0
- * #138 Fix default font size value on html & body tags
- * Add pull-left class on logo component 
+ * Add a container with `clearfix` class around logo component
+ * Add pull-left class on logo component
+ * Focus component overall accessibility has been improved, now with a play/pause button
+ * #138 Change various font sizes to relative units
  * Introduced high-contrast outline around focused element while browsing with the keyboard
  * #208 Remove custom styling of checkboxes/radio buttons for better accessibility (required markup has changed)
  * Language switcher gets more acccessible with extra attributes to describe languages
