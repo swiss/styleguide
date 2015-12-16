@@ -403,3 +403,10 @@ sample-pages:
     ## Webform Page
 
     The sample page for webforms shows how a form and its navigation process look on a page.
+translations:
+  title: Translations
+  content: |
+    Some components of the web guidelines are using labels that are usually the same accross all the websites using them. For example the label of a search field will always be "Search".
+
+    To simplify the usage of those components in the context of multilingual websites, we are providing a file containing all those translations in the four official Swiss languages (German, French, Italian and Romansh) in addition to English.
+  download-link: Download translations file (XLS)

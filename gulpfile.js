@@ -302,7 +302,7 @@ gulp.task('assemble', function(done) {
 });
 
 // Copy all the required files to the styleguide folder
-gulp.task('copy', ['copy:framework', 'copy:assets', 'copy:landing']);
+gulp.task('copy', ['copy:framework', 'copy:assets', 'copy:landing', 'copy:files']);
 
 gulp.task('copy:framework', function() {
   return gulp.src([config.framework.dest + '/**/*'])
@@ -318,6 +318,12 @@ gulp.task('copy:landing', function() {
   return gulp.src(['src/index.html'])
     .pipe(gulp.dest(config.styleguide.dest));
 });
+
+gulp.task('copy:files', function() {
+  return gulp.src(['src/assets/files/*'])
+    .pipe(gulp.dest(config.styleguide.dest + '/files'));
+});
+
 
 // Build Fabricator style
 gulp.task('styles:fabricator', function() {
