@@ -4,6 +4,7 @@ CHANGELOG
 This changelog references the relevant changes and bug fixes.
 
 * 3.0.0
+ * #421 Do not hide print icon on small screens
  * Fix an issue which was misplacing the controls of carousels
  * Add a container with `clearfix` class around logo component
  * Add pull-left class on logo component
