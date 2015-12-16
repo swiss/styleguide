@@ -125,6 +125,10 @@ header:
   logo:
     title: Logo with link to home page
     help: The Confederation logo with the coat of arms and the four-language wordmark as well as the name of the organizational unit (department, public office, agency, or mission, or, alternatively, the title of the website) together form the designation of the website. The complete designation contains a link which takes the user back to the home page from any page of the website.
+    release: |
+      **3.0.0**
+
+      - Add a container with `clearfix` class around logo component
   accessibility-navigation:
     title: Accessibility navigation
     help: The accessibility navigation has to be placed right after the body tag. It is used to give quick access to pages and page areas. **It is invisible**, except when the link is focused.

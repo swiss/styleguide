@@ -72,7 +72,6 @@
   $('#carousel-total').text(slideshow_total);
 
   $('.carousel-slideshow').on('slid.bs.carousel', function () {
-
     var carouselData = $(this).data('bs.carousel');
     var currentIndex = carouselData.getItemIndex(carouselData.$element.find('.item.active'));
     var total = carouselData.$items.length;
@@ -85,7 +84,7 @@
 
 }) (jQuery);
 
-function carouselInit ($) {
+function carouselInit($) {
   'use strict';
 
   var $carousel = $('.carousel:not(.carousel-slideshow)');
@@ -103,11 +102,10 @@ function carouselInit ($) {
   if($carousel) {
     $carousel.each(function () {
       var biggestHeight = 0,
-          titleHeight = $(this).find('h3:first-child').height(),
-          imgHeight = $(this).find('.carousel-img').height();
+          titleHeight = $(this).find('.item.active h3:first-child').height(),
+          imgHeight = $(this).find('.item.active .carousel-img').height();
 
-      $(this).find('.carousel-indicators').css('top', titleHeight + imgHeight + 40);
-      $(this).find('.carousel-control').css('top', titleHeight + imgHeight + 50);
+      $(this).find('.carousel-indicators, .carousel-control').css('top', titleHeight + imgHeight + 50);
 
       $(this).find('.item').each(function () {
         if ($(this).height() >= biggestHeight) {
@@ -523,8 +521,8 @@ $.printPreview = {
     collapsify();
 
     $(window).resize(function() {
-        clearTimeout(id);
-        id = setTimeout(resizeLauncher, 500);
+      clearTimeout(id);
+      id = setTimeout(resizeLauncher, 500);
     });
 
     function resizeLauncher() {
@@ -533,39 +531,47 @@ $.printPreview = {
     }
 
     function carouselify() {
-      var $tabFocus = $(".tab-focus"),
+      var $tabFocus = $('.tab-focus'),
           focusIndex = 0;
+
       if($tabFocus && $(window).width() <= 767 && !isCarouselified ) {
         isCarouselified = true;
+
         $tabFocus.each(function () {
           var $that = $(this),
               itemIndex = -1;
+
           focusIndex += 1;
+
           $that.attr('id', 'tab-focus-'+focusIndex);
-          $that.next(".nav-tabs").hide().removeClass('nav-tabs-focus').addClass('focus');
-          $that.addClass('carousel slide').removeClass('tab-content tab-border');
-          $that.wrapInner( "<div class='carousel-inner'></div>");
-          $that.prepend( "<ol class=\"carousel-indicators\"></ol>" );
+          $that.next('.nav-tabs').hide();
+          // Prevent those mobile-only carousels from riding automatically by setting interval to 0
+          $that.addClass('carousel slide').removeClass('tab-content tab-border').attr('data-interval', 0);
+          $that.wrapInner('<div class="carousel-inner"></div>');
+          $that.prepend('<ol class="carousel-indicators"></ol>');
 
           $that.find('.tab-pane').each(function () {
             itemIndex += 1;
             $(this).removeClass('tab-pane in active').addClass('item');
-            $that.find('.carousel-indicators').append("<li data-target=\"#tab-focus-"+focusIndex+"\" data-slide-to=\""+itemIndex+"\" class=\"\"></li>");
+            $that.find('.carousel-indicators').append('<li data-target="#tab-focus-' + focusIndex + '" data-slide-to="' + itemIndex + '"></li>');
           });
           $that.find('.item:first').addClass('active');
           $that.find('.carousel-indicators li:first-child').addClass('active');
 
-          $that.append( "<a class=\"left carousel-control icon icon--before icon--less\" href=\"#tab-focus-"+focusIndex+"\" data-slide=\"prev\"></a><a class=\"right carousel-control icon icon--before icon--greater\" href=\"#tab-focus-"+focusIndex+"\" data-slide=\"next\"></a>" );
+          $that.append('<a class="left carousel-control icon icon--before icon--less" href="#tab-focus-' + focusIndex + '" data-slide="prev"></a><a class="right carousel-control icon icon--before icon--greater" href="#tab-focus-' + focusIndex + '" data-slide="next"></a>');
         });
-      } else if($tabFocus && $(window).width() > 767 && isCarouselified) {
+      }
+      else if($tabFocus && $(window).width() > 767 && isCarouselified) {
         isCarouselified = false;
+
         $tabFocus.each(function () {
           var $that = $(this);
+
           focusIndex -= 1;
           $that.attr('id', '');
-          $that.next(".focus").addClass('nav-tabs-focus').removeClass('focus').css('display', 'flex'); // we can't use .show() because it should be a flex wrapper
+          $that.next('.nav-tabs-focus').css('display', 'flex'); // we can't use .show() because it should be a flex wrapper
           $that.removeClass('carousel slide').addClass('tab-content tab-border');
-          $that.find( "ol.carousel-indicators" ).remove();
+          $that.find('ol.carousel-indicators').remove();
 
           $that.find('.item').each(function () {
             $(this).addClass('tab-pane').removeClass('item');
@@ -573,7 +579,7 @@ $.printPreview = {
           });
           $that.find('.tab-pane:first-child').addClass('active in');
 
-          if ( $that.find('.tab-pane').parent().hasClass( "carousel-inner" ) ) {
+          if ( $that.find('.tab-pane').parent().hasClass('carousel-inner') ) {
             $that.find('.tab-pane').unwrap();
           }
 
@@ -583,35 +589,43 @@ $.printPreview = {
     }
 
     function collapsify() {
-      var $navTab = $(".nav-tabs:not(.focus)"),
-          $collapsify = $(".collapsify"),
+      var $navTab = $('.nav-tabs:not(.focus)'),
+          $collapsify = $('.collapsify'),
           linkIndex = 0;
+
       if($navTab && $(window).width() <= 767 && !isCollapsified ) {
         isCollapsified = true;
+
         $navTab.not('.tab-focus').each(function (){
           var $that = $(this);
-          $that.removeClass("nav-tabs").addClass('collapsify');
+
+          $that.removeClass('nav-tabs').addClass('collapsify');
           $that.next('.tab-content').hide();
+
           $that.find('a').each(function (){
             var $target = $(this).attr('href');
             linkIndex += 1;
             $(this).unwrap();
-            $( '<div class="collapse" id="collapse-'+linkIndex+'">'+$($target).html()+'</div>' ).insertAfter(this);
+            $('<div class="collapse" id="collapse-' + linkIndex + '">' + $($target).html() + '</div>').insertAfter(this);
             $(this).attr('data-toggle', 'collapse');
-            $(this).attr('data-target', '#collapse-'+linkIndex );
+            $(this).attr('data-target', '#collapse-' + linkIndex);
             $(this).addClass('collapse-closed');
             $(this).click(function(){
-                $(this).toggleClass('collapse-closed');
+              $(this).toggleClass('collapse-closed');
             });
           });
           //$that.find('a:first-child').removeClass('collapse-closed').next('.collapse').addClass('in');
         });
-      } else if($collapsify && $(window).width() > 767 && isCollapsified) {
+      }
+      else if($collapsify && $(window).width() > 767 && isCollapsified) {
         isCollapsified = false;
+
         $collapsify.each(function (){
           var $that = $(this);
-          $that.addClass("nav-tabs").removeClass('collapsify');
+
+          $that.addClass('nav-tabs').removeClass('collapsify');
           $that.next('.tab-content').show();
+
           $that.find('a').each(function (){
             linkIndex -= 1;
             $(this).wrap('<li></li>');
@@ -620,6 +634,7 @@ $.printPreview = {
             $(this).attr('data-target', '');
             $(this).removeClass('collapse-closed');
           });
+
           $that.find('li a').each(function () {
             var $tabTarget = $(this).attr('href');
             if($($tabTarget).hasClass('active')){
@@ -705,9 +720,6 @@ function subNavInit($) {
   * tabs.js
   * JS for the tabs and tab-focus elements
   *
-  * Author: Toni Fisler, toni@antistatique.net
-  * Date:   2014-09-09 09:58:14
-  *
   * Copyright 2014 Federal Chancellery of Switzerland
   * Licensed under MIT
   ========================================================== */
@@ -715,31 +727,99 @@ function subNavInit($) {
 (function($) {
   'use strict';
 
-  // Autoplay for tabs-focus elements
-  var interval = 3000;
-  var tabCarousel = setInterval(nextSlide, interval);
+  /**
+   * @constructor
+   * @param {Object} domNode
+   */
+  function TabFocus(element) {
+    this.$wrapper = $(element).parent();
+    this.domNodes = '.tab-focus, .nav-tabs-focus';
+    this.delay = 3000;
+    this.playing = null;
+    this.interval = null;
 
-  $(document).on({
-    mouseenter: function () {
-      clearInterval(tabCarousel);
-    },
-    mouseleave: function () {
-      tabCarousel = setInterval( nextSlide, interval);
-    }
-  }, ".tab-content.tab-focus, .nav-tabs.nav-tabs-focus");
+    this.$wrapper
+      .on('click', '.nav-tabs-focus', function() {
+        this.pause(null, true);
+      }.bind(this))
+      .on('click', '.tab-focus-control', function() {
+        if (this.playing) {
+          this.pause(null, true);
+        } else {
+          this.play(null, true);
+        }
+      }.bind(this));
 
-  function nextSlide() {
-    if ($('.nav-tabs-focus.nav-tabs > li').length) {
-      var tabs = $('.nav-tabs-focus.nav-tabs > li'),
-          active = tabs.filter('.active'),
-          next = active.next('li'),
-          toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
-
-      toClick.tab('show');
-    }
+    this.play(null, true);
   }
 
-}) (jQuery);
+  TabFocus.prototype = {
+    addListeners: function() {
+      this.$wrapper
+        .on('mouseenter.tabfocus focus.tabfocus', this.domNodes, this.pause.bind(this))
+        .on('mouseleave.tabfocus blur.tabfocus', this.domNodes, this.play.bind(this));
+    },
+
+    removeListeners: function() {
+      this.$wrapper
+        .off('mouseenter.tabfocus focus.tabfocus', this.domNodes)
+        .off('mouseleave.tabfocus blur.tabfocus', this.domNodes);
+    },
+
+    play: function(event, startListening) {
+      if (this.interval) {
+        clearInterval(this.interval);
+      }
+      this.interval = setInterval(this.slide.bind(this), this.delay);
+
+      if (startListening) {
+        this.playing = true;
+        this.addListeners();
+        this.$wrapper.find('.tab-focus-control .icon').removeClass('icon--play').addClass('icon--pause');
+      }
+    },
+
+    pause: function(event, stopListening) {
+      clearInterval(this.interval);
+
+      if (stopListening) {
+        this.playing = false;
+        this.removeListeners();
+        this.$wrapper.find('.tab-focus-control .icon').removeClass('icon--pause').addClass('icon--play');
+      }
+    },
+
+    slide: function() {
+      var $nav = this.$wrapper.find('.nav-tabs-focus');
+
+      // If the nav is hidden, it means the focus has been changed for a carousel (mobile)
+      // We don’t want to slide automatically anymore
+      if ($nav.is(':hidden')) {
+        return this.pause(null, true);
+      }
+
+      if ($nav.find('> li').length) {
+        var tabs = this.$wrapper.find('.nav-tabs-focus > li'),
+            activeTab = tabs.filter('.active'),
+            nextTab = activeTab.next('li'),
+            newTab = nextTab.length ? nextTab.find('a') : tabs.eq(0).find('a');
+
+        newTab.tab('show');
+      }
+    }
+  };
+
+  $.fn.tabFocus = function() {
+    return this.each(function() {
+      if (!$.data(this, 'TabFocus')) {
+        $.data(this, 'TabFocus', new TabFocus(this));
+      }
+    });
+  };
+
+  $('.tab-focus').tabFocus();
+
+})(jQuery);
 
 /* ==========================================================
  * treecrumb.js

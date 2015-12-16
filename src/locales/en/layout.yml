@@ -84,6 +84,10 @@ general:
 
       The logo is a CD element. Its use is mandatory, and its representation may not be changed in any way.
     release: |
+      **3.0.0**
+
+      - Add a container with `clearfix` class around logo component
+
       **2.1.8**
 
       - added `title` to brand link for accessibility

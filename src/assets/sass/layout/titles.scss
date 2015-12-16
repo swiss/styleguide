@@ -28,12 +28,12 @@ h1, h2, h3, h4, h5, h6 {
 
 // Responsive behaviour
 @media only screen and (max-width: $screen-md-max) {
-  h1 {font-size: 2.3em;}
+  h1 {font-size: 2.3rem;}
 }
 @media only screen and (max-width: $screen-sm-max) {
-  h1 {font-size: 2em;}
-  h2 {font-size: 1.3em;}
-  h3 {font-size: 1.3em;}
+  h1 {font-size: 2rem;}
+  h2 {font-size: 1.5rem;}
+  h3 {font-size: 1.3rem;}
 }
 
 
