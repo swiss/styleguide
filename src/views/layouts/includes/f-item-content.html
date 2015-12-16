@@ -12,8 +12,9 @@
 
 {{#unless data.empty}}
   <div class="component-example">
-    {{{material @key @root}}}
-
+    <div class="clearfix">
+      {{{material @key @root}}}
+    </div>
     <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '(\.)' '-' @key}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}">&lt;/&gt;</button>
   </div>
 

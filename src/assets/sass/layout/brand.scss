@@ -10,34 +10,48 @@
  =========================================================== */
 
 .brand {
-  display: block;
+  float: left;
+  width: 570px; // Fix float issue with Firefox
+
+  @media only screen and (max-width: $screen-sm-max) {
+    width: 470px;
+  }
 
   img {
-    max-width: 400px;
+    max-width: 252px;
     height: auto;
+
     @media only screen and (max-width: $screen-sm-max) {
       max-height: 50px;
     }
+
     margin: 0;
     padding-right: 2em;
     border-right: 1px solid $gainsboro;
     float: left;
   }
+
   h1 {
     color: $black;
     font-weight: 700;
     font-size: 1em;
     max-width: 310px;
-    @media only screen and (max-width: $screen-md-max) {
-      font-size: 0.85em;
-    }
-    @media only screen and (max-width: $screen-sm-max) {
-      max-width: 210px;
-    }
+
     line-height: 1.3;
     margin: 0;
     padding-left: 2.5em;
     float: left;
+
+    @media only screen and (max-width: $screen-md-max) {
+      font-size: 0.85em;
+    }
+
+    @media only screen and (max-width: $screen-sm-max) {
+      max-width: 210px;
+    }
   }
-  &:hover {text-decoration: none;}
+
+  &:hover {
+    text-decoration: none;
+  }
 }
