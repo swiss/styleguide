@@ -8,6 +8,10 @@
     {{/if}}
 
     <ul class="component-nav list-inline">
+      {{#if data.translation}}
+        <li><a href="/{{ data 'locale' }}/docs/09-translation.html" target="_blank" class="btn btn-sm btn-link" aria-label="translation">Translation</a></li>
+      {{/if}}
+
       {{#if data.release}}
         <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-{{replace '(\.)' '-' @key}}" aria-expanded="false">Release notes</button></li>
       {{/if}}

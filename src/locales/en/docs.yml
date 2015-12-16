@@ -403,3 +403,8 @@ sample-pages:
     ## Webform Page
 
     The sample page for webforms shows how a form and its navigation process look on a page.
+translation:
+  title: Translation
+  content: |
+    Download the following file to get all the official translations for each translatable compontent with the corresponding key.
+  download-link: Download example file
