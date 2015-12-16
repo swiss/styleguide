@@ -163,7 +163,9 @@
 }
 
 .tab-focus-control {
+  min-width: 24px;
   margin: 10px;
+  padding: 0.2em 0.5em;
 
   position: absolute;
   z-index: 1;
