@@ -44,7 +44,7 @@ a {
 // Apply a more accessible/visible focus state on interactive elements
 // This is shown *only* when user interact with the keyboard
 // See outline.js
-*:not(body):not(.container-main > .row):focus,
+*:not([class*="col-"]):focus,
 a:focus,
 .form-control:focus,
 input[type=checkbox]:focus,
