@@ -4,6 +4,7 @@ CHANGELOG
 This changelog references the relevant changes and bug fixes.
 
 * 3.0.0
+ * #400 Fix an issue with Process navigation when first/last item was active
  * #421 Do not hide print icon on small screens
  * Fix an issue which was misplacing the controls of carousels
  * Focus component overall accessibility has been improved, now with a play/pause button
