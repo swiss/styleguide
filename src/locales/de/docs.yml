@@ -1,4 +1,4 @@
-title: Grundlagen
+title: Richtlinie für das Webdesign Bund
 index:
   title: Startseite
   content: |
@@ -8,7 +8,7 @@ index:
 
     ## Ausnahmen
 
-    Ausnahmen vom Webdesign Bund sind für Kampagnen- und Partner-Websites möglich. Sie müssen von der Konferenz der Generalsekretäre der Departemente (GSK) genehmigt werden. Entsprechende Anträge sind bei der Fachstelle CD Bund der Bundeskanzlei einzureichen.
+    Ausnahmen vom Webdesign Bund sind für Kampagnen- und Partner-Websites möglich. Sie müssen von der Konferenz der Generalsekretäre der Departemente (GSK) genehmigt werden. Entsprechende Anträge sind bei der <a href=“http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de“>Fachstelle CD Bund</a>  der Bundeskanzlei einzureichen.
 
     ## Benutzerfreundliche und barrierefreie Websites
 
@@ -69,7 +69,7 @@ index:
       - Kontaktbox
       - usw.
 
-    Flexible Elemente sind in den Detailbeschreibungen mit dem folgenden Icon gekennzeichnet: Flexbile
+    Flexible Elemente sind in den Detailbeschreibungen mit dem folgenden Icon gekennzeichnet: Flexibel
 
     Darüber hinaus steht es jedem Projekt frei im Rahmen des durch die Marken- und verbindlichen Elemente aufgespannten Rahmens eigene Elemente zu entwickeln. Diese neuen Elemente können dem Webforum zur Aufnahme in die Web-Richtlinien vorgeschlagen werden.
 
@@ -88,127 +88,136 @@ index:
     Voraussetzung ist jeweils, dass die Finanzierung gesichert ist.
 
 accessibility:
-  title: Barrier-free Accessibility
-  intro: |
-    All of the Confederation’s Internet resources must be designed in such a way as to enable people with disabilities to use them without restrictions. The Federal Administration is committed to fulfilling the requirements of the “Web Content Accessibility Guidelines (WCAG) 2.0” to conformance level AA.
+  title: Barrierefreiheit
+  content: |
+    Laut dem Behindertengleichstellungsgesetz (BehiG) müssen Dienstleistungen der Bundesverwaltung im Internet Sehbehinderten ohne erschwerende Bedingungen zugänglich sein. Erfüllt ist diese Vorgabe, wenn eine Website die Konformitätsbedingungen gemäss WCAG 2.0 entspricht und die Konformitätsstufe AA erreicht.
 
-    Additional Information:
+    Weiterführende Informationen:
 
     [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/)
 
-    [The Guidelines of the Confederation (P028)](https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html)
+    [P028 - Richtlinien des Bundes für die Gestaltung von barrierefreien Internetangeboten](https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html)
 
-    ## Best practices
+    ## Gute Praxis
 
-    This section provides Accessibility compliant examples for commonly encountered situations.
+    tbd
 
   title-tag: |
-    ### Page title
+    ### Seitentitel
 
-    It is recommended to use commas to separate different segments of the "title" tag's content.
+    Im “title” des HTML-Dokuments soll zuerst das Seitenspezfische, dann das Allgemeine beschrieben werden. Die Elemente sind mittels Komma zu trennen. Beispiel: Lebenslauf von Bundesrätin Doris Leuthard, UVEK
 
   multi-language: |
-    ### Multi-language content
+    ### Mehrsprachige Inhalte auf einer Seite
 
-    Sometimes, on the same page, there is content in different languages. The "lang" atttribute can be used to notify the Screen readers of the language switch.
+    Manchmal gibt es auf derselben Seite Inhalte in verschiedenen Sprachen. Screenreader müssen mit dem “lang”-Attribut auf den Sprachwechsel aufmerksam gemacht werden. Beispiel:
+
+    ### Hilfsmittel
+
+    tbd
 
 basic-grid:
-  title: Basic Grid and Page Types
+  title: Grundraster und Seitentypen
   content: |
-    ## Basic Grid
+    ## Grundraster
 
-    The websites are made up of three segments:
+    Die Webseiten bestehen aus drei Bereichen:
 
-    the header, the four-column content section, and the footer.
+    dem Header, dem vierspaltig aufgebauten Inhaltsbereich und dem Footer.
 
     <figure>
       <img src="/styleguide-img/grid.png" alt="Page grid example">
-      <figcaption>The four-column grid is used in different ways by the various page types</figcaption>
+      <figcaption> Das vierspaltige Raster wird von den verschiedenen Seitentypen unterschiedlich belegt.</figcaption>
     </figure>
 
-    ## Page Types
+    ## Seitentypen
 
-    Basically, there are two page types; the home page and the content page. There are also some mixed forms and special pages (see “Sample Pages”).
+    Grundsätzlich gibt es zwei Seitentypen: Startseite (Homepage) und Inhaltsseite. Ausserdem gibt es einige Mischformen und Spezialseiten (siehe dazu «Beispielseiten»).
 
-    ## Home page
+    ## Startseite
 
-    The home page is made up of the header (that can contain the global navigation section, which is explained in the Elements Page, the teaser section, and the footer. The teaser section is divided into four columns. There are many different teasers for the various applications, and these are listed in the “Content Modules” section and described in detail there. The teasers can be used flexibly in the teaser section. For instance, a focus teaser can be spread over three columns, while a person teaser with a portrait of the responsible Federal Councillor can be limited to one column.
+    Die Startseite besteht aus dem Header, der Navigation, dem Teaser-Bereich und dem Footer. Der Teaser-Bereich ist in vier Spalten unterteilt. Es gibt eine Vielzahl von Teasern für verschiedene Anwendungen. Diese sind in der Rubrik «Inhaltsmodule» aufgelistet und detailliert beschrieben. Diese Teaser können den Teaserbereich flexibel belegen. So kann z.B. der Brennpunkt-Teaser drei Spalten einnehmen und ein Personen-Teaser mit dem Portrait des zuständigen Bundesrates nur eine Spalte.
 
-    ## Content Page
+    ## Inhaltsseite
 
-    A content page also has a header and a footer. In place of the teaser section, this page has a four-column content section. The column on the left is used as the left navigation bar, the two columns in the middle are set aside for the content proper, while the column on the right is used as the context pane.
+    Eine Inhaltsseite hat ebenfalls einen Header und einen Footer. Statt des Teaser-Bereichs hat die Seite einen vierspaltigen Inhaltsbereich. Die linke Spalte wird von der Subnavigation genutzt, die mittleren beiden Spalten sind für den eigentlichen Inhalt vorgesehen und die rechte Spalte wird als Kontextspalte verwendet.
 
-    ### Left Navigation Bar
+    ### Linke Navigation
 
-    The navigation used on the left of the content section is dynamic, meaning that the subsections of the page currently in use are always shown. There are three parts to the navigation: a link back to the previous level, the navigation header with the title of the current page, and the actual navigation with links to the sub-pages. Its use is described on the Elements Page.
+    Die Subnavigation in der linken Spalte des Inhaltsbereichs ist eine so genannte verdrängende Navigation, die immer die Optionen für die aktuelle Seite anzeigt. Sie besteht aus drei Bereichen: dem Navigationskopf mit dem Titel der aktuellen Seite, einem Zurück-Link auf die darüberliegende Ebene und Links auf die Unterseiten. Das Verhalten wird auf der Elementseite [Link] beschrieben.
 
-    ### Content Section
 
-    The content section contains the title and subtitle of the page, the body copy, the images, info boxes, and further information. The further information section is always positioned as the last element in the content section and should not be placed in the context pane. Usability tests have shown that users paid little attention to the information contained in the context pane.
+    ### Inhaltsbereich
 
-    ### Context Pane
+    Im Inhaltsbereich werden Seitentitel und Zwischentitel, Fliesstext, Bilder, Infoboxen und weiterführende Informationen platziert. Die weiterführenden Informationen werden immer als unterstes Element im Inhaltsbereich platziert und gehören nicht in der Kontextspalte. In Usability-Test wurde festgestellt, dass Anwender Informationen in der Kontext-Spalte wenig beachten.
 
-    The context pane is reserved for the following elements: wherever it makes sense to do so, a direct contact should be placed at the very top. If there is a shopping cart element, this is placed directly under the contact box. Teasers, such as an RSS feed box or a temporary teaser (for instance for a conference) can also be placed in this section. However, in no case is it possible to have more than three elements here. If using any of the elements listed here does not make sense, then the column remains blank.
+    ### Kontextspalte
 
-    No additional information and no essential content components may be placed in the context pane, with the exception of the elements mentioned above.
-cd-elements:
-  title: CD Elements
+    Die Kontextspalte ist reserviert für die folgenden Elemente: wo immer es sinnvoll ist, wird zuoberst ein Direktkontakt platziert. Wenn es ein Warenkorb-Element gibt, wird es direkt unterhalb des Kontakt-Teasers eingefügt. Es dürfen auch andere Teaser, wie z.B. eine RSS-Feed-Box oder ein temporärer Teaser (z.B. für eine Konferenz) platziert werden. Es dürfen aber auf keinen Fall mehr als drei Elemente platziert werden. Ist die Platzierung der erwähnten Elemente nicht sinnvoll, bleibt die Spalte leer.
+
+    In der Kontextspalte dürfen keine weiterführenden Informationen oder sonstige essentielle Inhaltsbestandteile, abgesehen von den oben erwähnten, platziert werden.
+
+Markenelemente:
+  title: Markenelemente
   content: |
-    The consistent use of CD elements provides for a branded look and feel across all the websites of the Confederation. It ensures that a website is immediately recognizable as a Confederation website. It also conveys to the user the fundamental values underlying the daily work of the Federal Administration: quality, efficiency, and transparency.
+    Die konsistente Anwendung der Markenelemente sorgt für ein markentypisches “Look and Feel” der Websites des Bundes. Sie stellt sicher, dass eine Website auf den ersten Blick als Website des Bundes identifiziert wird. Weiter vermittelt sie dem Anwender die wesentlichen Werte, die der täglichen Arbeit der Bundesverwaltung zu Grunde liegen: Qualität, Effizienz und Transparenz.
 
-    The use of the following central CD elements is mandatory. They are set out in the Confederation CD and may not be modified in any way. Any changes to these elements are adopted by the GSK at the request of the Specialist Unit for the Confederation CD:
+    Der Verwendung der folgenden zentralen Markenelemente ist zwingend. Sie sind im CD Bund geregelt und dürfen in keiner Weise modifiziert werden:
 
-    - the designation, comprising the Confederation logo, the name of the organizational unit, and the gray separating line between these two elements
-    - the red line marking the bottom of the header
-    - the color range used: red for selection, blue for text links, and a variety of gray shades.
-    - the consistent use of the “Frutiger” typeface
-    - a uniform footbar (with the copyright notice, the legal notice, and further legal information)
+    - die Kennzeichnung, bestehend aus dem Bundeslogo, der Bezeichnung der Organisationseinheit und der grauen Trennlinie zwischen diesen beiden Elementen;
+    - die rote Linie, welche den Header abschliesst;
+    - die verwendeten Farben: Rot für Auszeichnungen, Blau für Links und eine Palette von Grautönen;
+    - der durchgängige Einsatz der Schrift «Frutiger»;
+    - eine einheitliche Fusszeile (mit Copyright, Impressum und Rechtliches)
 
-    ## Clear Designation of the Website
+    ## Klare Kennzeichnung der Webseite
 
-    The originator of the website is always identified via the full form of the Confederation logo (coat of arms and the four-language wordmark) and the name of the organizational unit, including its abbreviation or shortened form. These two components are separated from one another by a vertical line. The designation is always positioned at the top left of the header. As an alternative to the organizational unit, the title of the website may also be shown.
+    Der Absender einer Website wird immer mit dem vollständigen Bundeslogo (Wappen mit viersprachiger Wortmarke) und der Bezeichnung der Organisationseinheit inklusive Kürzel oder Kurzform gekennzeichnet. Diese zwei Bestandteile sind durch eine vertikale Linie voneinander getrennt. Die Kennzeichnung ist immer oben links im Header positioniert.
 
     <figure>
       <img src="/styleguide-img/kennzeichnung.png" alt="Page grid example">
-      <figcaption>The designation comprises the full form of the Confederation logo, and the name of the organizational unit, as well as a separating line.</figcaption>
+      <figcaption> Die Kennzeichnung besteht aus dem vollständigen Bundeslogo und der Bezeichnung der Organisationseinheit, sowie einer Trennlinie.</figcaption>
     </figure>
 
-    ## Implementation for Smartphones
+    ## Umsetzung für Smartphones
 
-    For applications in which space for the header is limited, the coat of arms can be used on its own without the wordmark. The name of the organizational unit can be given in its abbreviated form (e.g. EDA) or as a short form (e.g. MeteoSchweiz). Organizational units for which there is no abbreviation or short form are written in full. This can mean that the designation covers several lines and the height of the header section is increased to accommodate the name.
+    Für Anwendungen, bei denen der Platz im Header eingeschränkt ist, kann das Wappen allein ohne die Wortmarke verwendet werden. Die Bezeichnung der Organisationseinheit kann als Kürzel (z.B. EDA) oder Kurzform (z.B. MeteoSchweiz) verwendet werden. Organisationseinheiten, für die es keine Kürzel oder Kurzformen gibt, werden ausgeschrieben. Das kann dazu führen, dass die Bezeichnung mehrzeilig und der Header-Bereich dadurch höher wird.
 
     <figure>
       <img src="/styleguide-img/mobile_header.png" alt="Page grid example">
-      <figcaption>For the designation on smartphones the abbreviation can also be used. If the name of the organizational unit has to be written out in full, the designation may cover several lines.</figcaption>
+      <figcaption>Für die Kennzeichnung im Header auf Smartphones kann auch das Kürzel verwendet werden. Wenn die Organisationseinheit ausgeschrieben werden muss, kann die Bezeichnung mehrzeilig werden.</figcaption>
     </figure>
 
-    In cases where the shorter form of the designation is used in the header, the footer must contain the full form of the Confederation logo with the coat of arms and the four-language wordmark.
+    Dort wo im Header die reduzierte Form der Kennzeichnung verwendet wird, muss im Footer das vollständige Bundeslogo mit Wappen und viersprachiger Wortmarke wiederholt werden.
 
-    In mobile devices, the complete name of the organizational unit is shown together with the language selection in a drawer section above the header. This section is hidden automatically the first time the user scrolls down.
+    Die vollständige Bezeichnung der Organisationseinheit wird bei mobilen Geräten ausserdem in einem Bereich oberhalb des Headers eingeblendet. Dieser Bereich wird beim ersten Scrollen ausgeblendet.
 
-    ![image](/styleguide-img/schublade.png)
+    <figure>
+       <img src=“styleguide-img/schublade.png“ alt="Beispiel einer vollständigen Bezeichnung">
+       <figcaption>Die vollständige Bezeichnung der Organisationseinheit bei Smartphones.</figurecaption>
+    </figure>
 
-    ## Separating Line below the Header
+    ## Trennlinie unterhalb Header
 
-    The red separating line marks the bottom of the header. It can also indicate a field selected in the global navigation.
+    Die rote Trennlinie schliesst den Header nach unten ab. Sie kann einen ausgewählten Bereich in der Globalnavigation auszeichnen.
 
-    ![image](/styleguide-img/rotelinie.png)
+    ![Die rote Trennlinie wird zur Markierung eines aktiven Bereichs in der Globalnavigation verwendet.](/styleguide-img/rotelinie.png)
 
-    ## Typography
+    ## Typographie
 
-    The “Frutiger” typeface has been selected for use throughout all Internet applications. In intranets the “Arial” typeface is used.
+    Für das Internet wird durchgehend die Schriftart «Frutiger» verwendet. Im Intranet wird die Schriftart «Arial» verwendet.
 
-    ## Interaction Colors
+    ## Signalfarben
 
-    Interactive elements are either indicated by their position (e.g. in the navigation) or are marked by the color blue. Selected elements are red.
+    Interaktive Elemente werden entweder durch ihre Position (z.B. in der Navigation) ausgezeichnet oder durch die Farbe Blau markiert. Ausgewählte Elemente sind rot.
 
-    ## Foot Bar
+    ## Fussleiste
 
-    The uniform foot bar closes the pages. It contains a copyright notice as well as links to the “legal notice” and “further legal information”.
+    Die einheitliche Fussleiste schliesst die Seiten ab. Sie beinhaltet einen Copyright-Vermerk und Links auf «Rechtliches» und «Impressum».
 
     ## Favicon
 
-    Don't forget the favicon before putting the website in production. The favicon ressources are located in the `/build/img/ico/` directory. Include them with the adequate code:
+    Vergessen Sie das Favicon nicht, bevor Sie die Website live schalten. Die Ressourcen finden Sie im Code-Packet.
 
     ```html
     <link rel="shortcut icon" href="build/img/ico/favicon.ico">
@@ -221,30 +230,31 @@ cd-elements:
     <link rel="apple-touch-icon" sizes="76x76" href="build/img/ico/apple-touch-icon-76x76.png">
     <link rel="icon" type="image/png" href="build/img/ico/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="build/img/ico/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="build/img/ico/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="build/img/ico/favicon-:3172x32.png" sizes="32x32">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="build/img/ico/mstile-144x144.png">
     <meta name="msapplication-config" content="build/img/ico/browserconfig.xml">
     ```
-devices:
-  title: Output across a Range of End Devices
+Responsivness:
+  title: Ausgabe auf verschiedenen Endgeräten
   content: |
-    The Confederation Web Guidelines facilitate optimized output of all the content on a website on various end devices such as desktop computers, laptops, tablets, and smartphones. The layout of the individual web pages and the individual elements adapts on the fly to the viewing environment of the output device.
+    Die Webrichtlinien Bund erlauben die optimierte Ausgabe aller Inhalte einer Website auf verschiedenen Endgeräten wie Desktop Computer, Laptops, Tablets und Smartphones. Das Layout der einzelnen Webseiten und der einzelnen Elemente passt sich der Auflösung des Ausgabegeräts an.
 
-    ## Desktop Computers, Laptops, and Tablets
+    ## Desktop Computer, Laptop und Tablet
 
-    For desktop computers, laptops, and tablets held in landscape mode, the original layout is retained. As soon as a tablet is held in portrait mode, the content of the right-hand column (the context pane) is shown below the content.
+    Auf Desktop Computern, Laptops und Tablets, die im Querformat gehalten werden, wird das vierspaltige Original-Layout beibehalten. Sobald ein Tablet im Hochformat gehalten wird, wird der Inhalt der rechten Spalte (Kontextspalte) unterhalb des Inhalts angezeigt.
 
     <figure>
-      <img src="/styleguide-img/responsive.png" alt="Page grid example">
-      <figcaption>The contents are arranged and displayed differently on different end devices</figcaption>
+      <img src="/styleguide-img/responsive.png" alt="Grafik zur Anordnung des Inhalts je nach Endgerät">
+      <figcaption> Auf den verschiedenen Endgeräten werden die Inhalte unterschiedlich angeordnet.</figcaption>
     </figure>
 
-    ## Mobile Devices / Smartphones
+    ## Mobile Geräte/Smartphones
 
-    If the page is displayed on a smartphone, only the content is shown. The navigation function in the left sidebar disappears, as does the context pane. Instead, the user can navigate via links in the footer and a special menu for mobile devices.
+    Wird die Seite auf einem Smartphone ausgegeben, wird nur noch die Inhaltsspalte dargestellt. Die Navigation in der linken Spalte und die Kontextspalte verschwinden. Der Anwender kann stattdessen über Links im Footer und ein spezielles Menu für Mobile navigieren.
 
-    Usability tests have shown that many smartphone users ignore the navigation menu in the header and navigate via links in the footer. It is therefore important to reproduce the navigation in the footer.
+    Usability-Tests haben ergeben, dass viele Anwender auf dem Smartphone das Navigationsmenu im Header ignorieren und über die Links im Footer navigieren. Es ist deshalb wichtig, die Navigation im Footer abzubilden.
+
 glossary:
   title: Glossary
   content: |
@@ -296,13 +306,23 @@ guidelines:
   content: |
     ## Aufbau der Richtlinien
 
-    Navigation to the individual chapters within the Confederation Web Guidelines is via the tabs in the main menu.
+    Innerhalb der Richtlinien für das Webdesign Bund kann über die Reiter im Hauptmenu zu den einzelnen Kapiteln navigiert werden.
 
-    The chapter entitled “Design Principles” summarizes the fundamental principles of the Confederation Web Guidelines.
+    Im Kapitel «Grundsätzliches» sind die Grundsätze der Richtlinien für das Webdesign Bund zusammengefasst.
 
-    The tabs “Base Layout”, “Navigation Modules”, and “Content Modules” contain detailed descriptions of the individual elements.
+    Unter den Reitern «Grundelemente», «Navigationsmodule» und «Inhaltsmodule» sind die detaillierten Beschreibungen der einzelnen Elemente zu finden.
 
-    On the individual pages, the element is presented first of all in a scalable frame. When the frame is enlarged or reduced in size, the presentation of the element can be tested for responsiveness on various output devices. Above the representation of the element lives a brief description of it. Below it, the HTML code for implementation by the development team can be displayed. The code given in the HTML tab can be copied and reused.
+    Im Kapitel "Barrierefreiheit" sind alle Informationen für die Gestaltung von Websites, die die gesetzlichen Anforderungen an die Barrierefreiheit erfüllen.
+
+    Unter dem Menupunkt «Beispielseiten» werden verschiedene Typen Webseiten vorgestellt. Diese werden in einem neuen Reiter geöffnet. Sie können dort skaliert und so die Darstellung in verschiedenen Auflösungen überprüft werden.
+
+    # Angaben zu den Elementen
+
+    Auf den einzelnen Seiten ist das Element als erstes in einem skalierbaren Rahmen dargestellt. Mit dem Vergrössern und Verkleinern des Rahmens kann die Darstellung des Elements auf verschiedenen Ausgabegeräten überprüft werden (Responsiveness). Unterhalb der Darstellung des Elements sind eine kurze Beschreibung sowie der Code für die Umsetzung durch das Entwicklerteam aufgeführt.
+
+    Der Code kann kopiert und weiterverwendet werden.
+
+    Ebenfalls angegeben sind die Releasenotes. Diese informieren Entwickler über Änderungen am Code.
 
     In the section “Example Pages”, various types of web page are presented. They can be scaled directly and the presentation tested on various screen sizes.
 
@@ -310,119 +330,125 @@ guidelines:
 
     The Confederation Web Guidelines were the outcome of pilot projects initiated by the EDA (Federal Department of Foreign Affairs) and the VBS (Federal Department of Defence, Civil Protection and Sport). This explains some of the examples and terms used in the visualizations (e.g. the terminology in the global navigation). These Web Guidelines primarily contain definitions pertaining to the functional and creative design of the website. They make no reference to the information architecture, nor do they prescribe the terminology to be used.
 
-    ## Usage
+    ## Unterstützte Webbrowser
 
-    Please follow [these instructions](https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet) to use the styleguide into your project.
+    Die Version 3.0 ist für folgende Browser-Versionen optimiert:
 
-    ## Web Browsers Supported
+    ### Desktop:
 
-    The presentation of the elements has been optimized for all recent browsers and devices.
+    - Internet Explorer 9 und höher
+    - Safari 8 und höher
+    - Firefox 40 und höher
+    - Chrome 45 und höher
 
-    ### Desktop optimisation:
+    ### Mobile:
 
-    - Internet Explorer 9 and higher
-    - Safari 9 and higher
-    - Firefox 38 and higher
-    - Chrome 45 and higher
+    - Safari und Chrome ab iOS 7 und höher
+    - Chrome und/oder “default browser” und Firefox ab Android 5 und höher
 
-    ### Mobile optimisation:
+    ## Installation
 
-    - Safari and Chrome on iOS 7 and higher
-    - Chrome and/or the “default browser” and Firefox on Android 5 and higher
-header-footer:
-  title: Header and Footer
+    Die Installationsangaben für die Verwendung der Richtlinien in einem Projekt finden sich unter (https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet)
+
+
+Header und Footer:
+  title: Header und Footer
   content: |
-    The header and footer appear on all pages and have a predefined design. Their presentation is modified for use on mobile devices.
+    Header und Footer erscheinen auf allen Seiten und haben eine fixe Gestaltung. Auf mobilen Geräten wird deren Darstellung angepasst.
 
     ## Header
 
-    The header is the defining element of a website. It consists of the treecrumb navigation of the Federal Administration, the service navigation including language selection, the designation (Confederation logo plus name of the organizational unit or the title of the website), the search box and the topics A-Z box. This section is always separated from the rest of the page by a red line at the bottom of it.
+    Der Header ist das prägende Element einer Website. Er besteht aus der Treecrumb-Navigation der Bundesverwaltung, der Service-Navigation inkl. der Sprachwahl, der Kennzeichnung (Bundeslogo und Bezeichnung der Organisationseinheit), der Suche und der A-Z-Navigation. Er wird immer durch eine rote Linie abgeschlossen.
 
-    These elements are either CD elements or fixed elements. They may not be amended in any way.
+    Diese Elemente sind entweder Markenelemente oder verbindliche Elemente. Sie dürfen nicht verändert werden.
 
     <figure>
       <img src="/styleguide-img/header.png" alt="Page grid example">
-      <figcaption>The header with its key elements</figcaption>
+      <figcaption> Der Header mit den prägenden Elementen</figcaption>
     </figure>
 
-    The **Treecrumb** shows the position of the website within the hierarchical organization of the Federal Administration. It allows the user to access directly the websites of higher-level organizational units. The treecrumb navigation is not used on mobile devices.
+    Der **Treecrumb** stellt die hierarchische Verortung der Website in der Bundesverwaltung dar. Er bietet dem Anwender die Möglichkeit, Websites übergeordneter Organisationseinheiten direkt aufzurufen. Auf mobilen Geräten fällt der Treecrumb weg.
 
-    The **Service Navigation** provides links to topics of overriding importance (e.g. Contact, Jobs, Media and Contact) and also contains the language navigation. Ideally, there should be three, but in no case should there be more than five links in the service navigation. At the very least there must be the Contact link and the Language selection link. On mobile devices the links in the service navigation are moved to the footer.
+    In der **Service Navigation** werden Links von übergeordneter Bedeutung (z.B. Kontakt, Jobs, Medien) und die Sprach-Navigation positioniert. Es sollen idealerweise drei, auf keinen Fall aber mehr als fünf Links in der Service-Navigation angeboten werden. Ein Minimum ist der Kontakt und die Sprach-Navigation. Auf mobilen Geräten werden die Links der Service-Navigation in den Footer verschoben.
 
-    To the right of the service navigation is the **language selection**. The languages available are represented by their abbreviations as per ISO-Norm ISO 639-1 in the following order: German: DE, French: FR, Italian: IT, Romansh: RM, English: EN. It is mandatory to offer the choice of one of the official languages DE, FR, and IT on every Federal Administration website. If there is no content available in one of these languages, the relevant link is not active. A tooltip shows that the content is not available in the language selected. The RM and EN language choices are only shown when the relevant content is actually available in these languages. Sites which use more than 5 languages can use a dropdown menu for the other languages in place of the fifth language. However, DE, FR, IT and RM are all always given in their short form as links.
-    The language navigation is aligned flush left with the search box and the topics A-Z box.
-    The language selection on mobile devices follows the regulations set out above.
+    Rechts neben der Service-Navigation steht die **Sprachwahl**. Die angebotenen Sprachen werden als Kürzel nach ISO-Norm ISO 639-2/3 aufgeführt (z.B. Deutsch = DE, Französisch = FR, Rätoromanisch = ROH usw.). Auf mobilen Geräten wird die Sprach-Navigation in einem Bereich oberhalb des Headers eingebunden.
 
-    The designation, comprising the Confederation logo (coat of arms and wordmark) and the name of the organizational unit, is the most important CD element. In websites that cover several organizations or in theme portals, the name of the organizational unit is replaced by the title of the website. On mobile devices the wordmark in the Confederation logo in the header may be omitted, and the name of the organizational unit abbreviated or shortened. If the name is abbreviated, its full form is given in a section above the header. This section disappears when the user starts to scroll.
+    Die Informationen auf den Websites der Bundesverwaltung müssen in den Amtssprachen deutsch, französisch und italienisch angeboten werden. Es ist wichtig, dass die Nutzerinnen und Nutzer sofort sehen, in welchen Amtssprachen der Inhalt zugänglich ist. Demzufolge erscheinen diese Sprachkürzel auf jeder Seite im Header - linksbündig neben der Servicebox - nebeneinander. Falls Inhalte nur in einer oder zwei der Amtssprachen verfügbar sind, ist das Kürzel der dritten Amtssprache nicht aktiv. Beim mouse-over erscheint eine Anzeige, die darüber informiert, dass der Inhalt in der entsprechenden Sprache nicht verfügbar ist.
 
-    The **search function** is placed as a text box on the right-hand side of the header opposite the designation. When the user clicks on the text box, the box is enlarged.
-    On mobile devices the search function can be accessed via an icon in the header.
+    Die Sprachkürzel für RM und EN werden nur angezeigt, falls es Inhalte in den entsprechenden Sprachen gibt.
 
-    The **topics A-Z** is positioned under the search box. This is an alternative means of access to the contents of the website, which can be selected from an alphabetical catalog of topics. On mobile devices the A-Z navigation is offered together with the search function.
+    Websites in mehr als fünf Sprachen können die **zusätzlichen** Sprachen in einem Dropdown-Menü anzeigen. Die Landessprachen sind immer in der Kurzform nebeneinander als Link anzuzeigen.
 
-    The bottom of the header is always indicated by a red line If a global navigation function is used below the header, this line can also highlight a selected section via a colored marking.
+    Die **Kennzeichnung** aus Bundeslogo (Wappen und Wortmarke) und Bezeichnung der Organisationseinheit ist das wichtigste Markenelement. Bei organisationsübergreifenden Sites und bei Themenportalen wird die Bezeichnung der Organisationseinheit durch den Titel der Website ersetzt. Auf mobilen Geräten kann die Wortmarke des Bundeslogos im Header weggelassen und die Bezeichnung der Organisationseinheit abgekürzt werden. Wenn die Bezeichnung abgekürzt ist, wird sie vollständig in einem Bereich oberhalb des Headers angezeigt.
 
-    ## Global Navigation
+    Die **Suchfunktion** ist als Textfeld auf der rechten Seite des Headers gegenüber der Kennzeichnung positioniert. Wenn der Anwender in das Textfeld klickt, vergrössert sich das Textfeld.
 
-    Most websites have a global navigation function comprising a series of tabs in a section positioned below the red line closing the header. This global navigation represents the highest navigation level. Its purpose is to show the topics covered on the website in order to give an overview of the website’s content and purpose.
+    Auf mobilen Geräten kann die Suchfunktion über ein Icon im Header aufgerufen werden.
 
-    If the following topics are included in the website, they must have the names used here and be placed in the position given in parentheses after their names: “Latest News” (first), “Publications and Services” (second-last), and “About Us” (last). All other terms for the global navigation section have not been defined by the Confederation Web Guidelines, but should be as brief and to the point as possible. They are dependent on the specific communications requirements of the individual department or public office.
+    Unterhalb der Suchfunktion ist die **A-Z-Navigation** positioniert. Sie ist ein alternativer Zugang zu den Inhalten der Website, die aus einem alphabetisch geordneten Katalog aufgerufen werden können. Auf mobilen Geräten wird die A-Z-Navigation zusammen mit der Suchfunktion angeboten.
 
-    Websites which do not contain a lot of content can do without the global navigation function and limit navigation to the left sidebar in the content section (for details, see Sample Pages, “Home Page without Global Navigation”).
+    Der Header wird immer mit einer roten Linie abgeschlossen. Wird unterhalb des Headers eine Globalnavigation verwendet, kann diese Linie durch eine farbliche Markierung einen ausgewählten Bereich anzeigen.
+
+    ## Hauptnavigation
+
+    Die meisten Websites haben eine Hauptnavigation, die als Reiter in einem Bereich unterhalb der roten Linie positioniert ist. Die Global- Navigation stellt die oberste Ebene der Informationsarchitektur dar. Die wichtigsten Themen können hier direkt aufgerufen werden. Sie sollten dem Anwender damit einen Überblick über den Inhalt und den Zweck der Website geben.
+
+    Die Begriffe der Global-Navigation werden von den Webrichtlinien nicht definiert. Sie sind abhängig vom spezifischen Kommunikations-Bedürfnis des jeweiligen Departementes bzw. Amtes.
+
+    ### Ausnahmen
+
+    Für folgende Rubriken sind Bezeichnung und Reihenfolge in der Hauptnavigation vorgegeben, sofern sie überhaupt verwendet werden:
+
+    “Aktuell” (1.), “Dienstleistungen und Publikationen” (2.) und “Über uns” (immer an letzter Stelle).
+
+    Websites mit einem geringen Umfang können auf die Global-Navigation verzichten und sich auf die Navigation in der linken Spalte des Inhaltsbereichs beschränken.
 
     ## Footer
 
-    The footer contains important links, making them thereby immediately accessible on all the pages of a website. These links can refer to pages in the website itself but also to external content (such as the authority’s social media platform). If required, the footer can be divided into various sections.
+    Im **Footer** werden wichtige Links platziert, die somit auf allen Seiten gleich zugänglich sind. Diese können auf Seiten in der aktuellen Webseite aber auch auf externe Inhalte (wie z.B. die Präsenz in Social Media) verweisen. Der Footer lässt sich nach Bedarf in verschiedene Bereiche unterteilen.
 
-    The footbar below the footer contains the copyright notice, and links to the “legal notice” and “further legal information”. The footbar is a CD element. Its use is mandatory.
+    In der Fusszeile unterhalb des Footers, wird ein Hinweis auf das Copyright und Links auf "Rechtliches" und "Impressum" aufgeführt. Die Fusszeile ist ein Markenelement. Die Verwendung ist zwingend.
 
     <figure>
-      <img src="/styleguide-img/footer.png" alt="Page grid example">
-      <figcaption>The footer with its various sections</figcaption>
+      <img src="/styleguide-img/footer.png" alt="Beispiel für einen Footer">
+      <figcaption> Der Footer mit den verschiedenen Bereichen </figcaption>
     </figure>
 
-    On mobile devices, many of the functions from the header (e.g. navigation, service navigation, and the full form of the Confederation logo) are moved to the footer.
-sample-pages:
-  title: Sample Pages
+    Auf mobilen Geräten werden viele Funktionen aus dem Header (wie z.B. Navigation, Service-Navigation und das vollständiges Bundeslogo) in den Footer verschoben.
+
+Beispielseiten:
+  title: Beispielseiten
   content: |
-    Ten different sample pages are shown in the Confederation Web Guidelines, all of them based on the page types “Home page” and “Content Page”. They were created in the course of the EDA, VBS, and BFS (Federal Statistic Office) projects, and they exemplify how the various elements presented can be combined on web pages. These sample pages can be used as the basis for a project and can be adapted, expanded, or modified as required.
+    In den Richtlinien für das Webdesign Bund werden verschiedene Beispielseiten vorgestellt, die auf den beiden Seitentypen "Startseite" und Inhaltsseite aufbauen. Sie zeigen beispielhaft, wie die verschiedenen, vorgestellten Elemente auf Webseiten kombiniert werden können. Die Seiten können als Grundlage für ein Projekt verwendet und für die jeweiligen Kommunikationsbedürfnisse angepasst, erweitert und modifiziert werden.
 
-    ## Home Page with Global Navigation
 
-    This sample page is suitable for websites with a large volume of information (“large websites”, such as www.eda.admin.ch or www.vbs.admin.ch). The global navigation (first navigation level) is combined with a mega flyout menu (second and possibly also third navigation level). The first and second navigation levels serve to group the content and have no content of their own.
+    ## Startseite mit Hauptnavigation
 
-    ## Home Page without Global Navigation
+    Diese Startseite eignet sich für Websites mit einer Vielzahl von Informationen ("grosse Websites", wie z.B.  www.eda.admin.ch oder www.vbs.admin.ch). Durch die Verwendung der Globalnavigation können dabei die ersten beiden Navigationsebenen übersprungen werden.
 
-    Websites with a lower volume of information (such as the websites of the Swiss embassies) use the home page without global navigation. In such cases the user accesses the content directly via the left sidebar sub-navigation.
+    Websites mit einem geringeren Informationsumfang verwenden die Startseite ohne Globalnavigation (z.B. Seiten von Schweizer Botschaften). Hier steigt der Anwender direkt über die linke Sub-Navigation in die Inhalte ein.
 
-    ## Sub-Home Page
+    ## Detailseite
 
-    Sub-home pages make it possible to use all the elements of the home page on pages that are on a lower navigation level. They are intended to allow subordinate organizational units to have their own home page. Every sub-home page has a left sidebar. There is no context pane. A sub-home page can have its own short URL (e.g. www.luftwaffe.ch) to allow direct access.
+    Die Detailseite ist eine klassische Inhaltsseite mit einem Artikel in der mittleren Spalte.
 
-    ## Overview Page
+    ## Publikationen
 
-    The overview page is based on the content page type, so it has a global navigation section, a left sidebar, and a context pane. It is used to provide a conspicuous point of access to a topic. The various sections of this topic or the subpages (child pages) are introduced in a two-column list of teasers in the middle section.
+    Eine Publikationen-Seite ist eine spezielle ungebundene Detailseite auf der eine Publikation vorgestellt wird und vom Anwender gekauft werden kann. In der rechten Spalte ist ein Warenkorb eingebunden.
 
-    ## Navigation Page
+    ## Suchresultate
 
-    This page type is used as a fallback solution for browsers that do not support JavaScript and therefore cannot use the global navigation. This page type is also shown when a user views a navigation node containing no content of its own.
+    Dieser Seitentyp bricht mit dem grundsätzlichen Aufbau einer Inhaltsseite. Die linke Navigationsspalte fällt weg. Die Suchresultate nutzen die rechten drei Spalten des Grundrasters.
 
-    ## Detail Page
+    ## Formular
 
-    The detail page is a classical content page with an article in the middle column.
+    Auf der Beispielseite für Formulare wird gezeigt wie ein Formular mit einer Prozessnavigation in eine Seite integriert wird.
 
-    ## Unattached Detail Page
+  title: Übersetzungen
+  content: |
+    Einige Komponenten der Richtlinien verwenden Bezeichnungen oder Labels, die üblicherweise auf allen Websites, die diese Komponenten verwenden, gleich lauten. Zum Beispiel wird das Suchfeld immer mit „Suche“ bezeichnet.
 
-    When a detail page is not rooted in the navigation but was accessed via a link in the content of a page on a higher navigation level, it is provided with a “Back to…” link.
+    Um den Bau mehrsprachiger Websites zu vereinfachen, wird ein Übersetzungsfile zur Verfügung gestellt. Es enthält eine Kollektion von Standardlabels in den vier Landessprachen sowie Englisch.
 
-    ## Publications Page
+  Download: Übersetzungsfile herunterladen (XLS)
 
-    A publications page is a special unattached detail page on which a publication is presented and can be ordered by the user. The right column contains a shopping cart for this purpose.
-
-    ## Search Results
-
-    The search results page does not contain left sidebar navigation. The search results are placed on the three columns on the right of the basic grid.
-
-    ## Webform Page
-
-    The sample page for webforms shows how a form and its navigation process look on a page.
