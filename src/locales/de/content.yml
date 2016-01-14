@@ -1,0 +1,242 @@
+﻿title: Inhaltsmodule
+widgets:
+  title: Widgets
+  alerts:
+    title: Hinweise
+    help: |
+      Hinweise machen die User auf Dinge aufmerksam, die sie beachten müssen. Häufig sind sie in Bestellformularen, wenn Angaben falsch sind (E-Mail-Adresse) oder fehlen.
+
+      Es gibt folgende Varianten: `.alert-success` (Bestätigung)  `.alert-info` (Information) `.alert-warning` (Warnung) `.alert-danger` (Gefahr)
+    release: |
+      **Accessibility**
+
+      You can add a `<span class="sr-only">alert type</span>` if the `role="alert"` is not enough information for the end user.
+  emergency:
+    title: Krisenbanner
+    help: |
+      Der Krisenbanner wird bei Ereignissen grosser Dringlichkeit auf der Startseite angezeigt. Er steht immer zuoberst auf der Startseite.
+
+      Es ist wichtig, dieses Element nur bei Notfällen - also sparsam - einzusetzen.
+  contact-box:
+    title: Kontaktbox
+    help: |
+      Die Kontaktbox bietet eine Kontaktmöglichkeit zu dem Inhalt der Seite an. Sie steht immer in der Kontextspalte an oberster Stelle. Steht für die gesamte Website nur ein allgemeiner Kontakt zur Verfügung, der auch über die Service-Navigation verfügbar ist, entfällt die Kontaktbox.
+
+      Die Kontaktbox weist zwei Reiter auf: "Kontakt" und "Karte". Unter dem Reiter "Kontakt" wird die Kontaktperson, Adresse, Telefonnummer, Kontaktformular usw. angezeigt. Bei Bedarf können weitere Informationen, wie z.B. Öffnungszeiten (z.B. einer Botschaft) aufgeführt werden. Unter dem Reiter "Karte" wird der Kontakt in einem Kartenausschnitt grafisch lokalisiert und die Adresse nochmals abgekürzt aufgeführt.
+
+      Durch Klicken auf den Link "Kontaktinformationen drucken" öffnet sich ein neues Browserfenster, welches die Kontaktdaten in einer für den Druck optimierten Darstellung anzeigt.
+
+      Auf Tablets wird der Kontakt unterhalb des Seiteninhalts in einem zweispaltigen Layout angezeigt. Die Inhalte der beiden Reiter werden nebeneinander angezeigt.
+teaser:
+  title: Teaser
+  focus:
+    title: Brennpunkt
+    help: |
+      Der Brennpunkte-Teaser umfasst zwei bis vier redaktionell ausgewählte und aktuelle Beiträge, die prominent platziert werden sollen. Der Brennpunkt-Teaser steht im Normalfall auf der Startseite zuoberst. Er besteht aus einem grossen Bild, einem Titel, einem kurzen Teaser-Text und einem weiterführenden Link. Die Anzeige wechselt automatisch zwischen den gewählten Beiträgen. Der Anwender kann über eine Reiter-Leiste einen bestimmten Beitrag auswählen; der automatische Wechsel wird dadurch unterbrochen. Er wird ebenfalls unterbrochen, wenn der User die Maus in den Teaser-Container bewegt (hover) oder diesen mittels der Tastatur ansteuert (Fokus). Beim Verlassen des Teasers (Maus/Fokus) setzt der automatische Wechsel wieder ein.
+
+      Auf Tablets und Smartphones wird die Reiterleiste durch eine Reihe von Punkten ersetzt.
+
+      Achtung: Bitte Text- und Wortlänge beachten. Die Höhe des Teasers ist fest definiert. Please be careful about the length of the text in the tabs, the height is fixed.
+    release: |
+      **3.0.0**
+      - Improved accessibility by pausing the slideshow when user interact with the component and also by adding a play/pause button.
+  news:
+    title: Neuigkeiten
+    help: |
+      Anstelle des Brennpunkte-Teasers, kann auch der Teaser Neuigkeiten mit nur einem Beitrag verwendet werden. Dies ist dann sinnvoll, wenn auf der Startseite nur wenige News geschaltet werden und die Frequenz der Änderungen tief ist.
+
+      Er besteht aus einer Titelzeile, einem grossen Bild, einem kurzen Teaser-Text und einem weiterführenden Link.
+  headline:
+    title: Titelzeile für Teaser
+    help: |
+      Mit dem Teaser Titelzeile lässt sich ein Teaser mit einem zusätzlichen Titel versehen oder mehrere Teaser zu einer Gruppe zusammenfassen.
+
+      Die Titelzeile besteht aus dem Titel, einem optionalen Link auf verwandte Themen und einer 2 Pixel hohen Linie.
+  carousel:
+    title: Karussell
+    help: |
+      In einem Karussell kann ein Thema aus verschiedenen Perspektiven dargestellt werden. Die verschiedenen Beiträge wechseln automatisch.
+
+      Das Karussell besteht aus verschiedenen Informationsblöcken, die jeweils in einem grossen Bild, einem optionalen kleinen Bild, einem kurzen Teaser-Titel, einem Text und einem weiterführenden Link zusammengesetzt sind.
+
+      **Accessibility**
+
+      Die Karussell-Komponente ist nicht 100 Prozent barrierefrei.
+    release: |
+      **3.0.0**
+        - The carousel controls have been moved upper in the DOM to be the easily accessible with the keyboard.
+
+      **2.5.1**
+        - put `<figure>` element after `<h4>` to avoid ungraceful alignment
+  slideshow:
+    title: Slideshow
+    help: |
+      In einer Slideshow kann eine thematisch zusammengehörende Gruppe von Bildern attraktiv dargestellt werden. Es gibt eine Blätter-Funktion, die erlaubt, von einem Bild zum nächsten zu wechseln. Die Slideshow nutzt das jQuery plugin ([Blueimp Bootstrap Image Gallery](https://github.com/blueimp/Bootstrap-Image-Gallery)), um die Bilder im Vollbildmodus anzuzeigen. Bitte beachten: Das korrekte Layout vor dem abschliessenden `</body>`-Tag einfügen (siehe untenstehendes Beispiel).
+
+      **Accessibility**
+
+      Die Slideshow-Komponente ist **nicht** accessibilitykonform.
+
+    release: |
+      **2.5.3:**
+
+      - switched order between the `<small>` and `<div>` elements inside of `.carousel-controls` container
+      - removed `.pull-right` class to those same 2 elements
+      - added `.pull-right` class to `.carousel-controls` element
+  text-teaser:
+    title: Textteaser
+    help: Der Text Teaser ist einfaches Element das meistens in Listen verwendet wird. Er besteht aus einem verlinkten Titel und einem folgenden Textblock.
+  dossier-teaser:
+    title: Dossierteaser
+    help: |
+      Mit dem Dossier-Teaser werden Themen auf Startseiten oder Übersichtseiten eingeführt.
+
+      Er besteht aus einem Bild im 16:10-Format, dem Titel des Themas sowie einem kurzen Einleitungstext. Der Titel und das Bild verlinken auf die entsprechende Detailseite.
+
+      Dossier-Teaser können mit einer Titelzeile gruppiert werden. Dabei ist zu beachten, dass die Titel-Hierarchie auf der Seite **accessibility**konform bleibt.
+  person-teaser:
+    title: Personenteaser
+    help: |
+      Um ein Thema besonders hervorzuheben kann auf einer Startseite maximal ein Personen-Teaser verwendet werden. Er wird bei Departement-Seiten zum Beispiel für das Portrait des zuständigen Bundesrates verwendet.
+
+      Der Personen-Teaser besteht, wie der Dossier-Teaser, aus einem Bild im 16:10-Format, dem Titel des Themas sowie einem kurzen Einleitungstext. Der Titel und das Bild verlinken auf die entsprechende Detailseite. Zusätzlich ist der Teaser mit einer grauen Fläche hinterlegt.
+    release: |
+      **2.1.1:**
+
+      - wrapped the `.well` element in `<div class="bordered-well"></div>`
+  publications-preview:
+    title: Publikationen-Vorschau
+    help: |
+      Die Publikationen-Vorschau ist ein formal sehr flexibler Teaser. Er besteht aus einem optionalen Titel, einem optionalen Bild, einer optionalen Bildlegende und dem Text. Der Text kann das Bild rechts umfliessen. Alternativ kann dieses Inhaltselement auch in eine graue Infobox verschachtelt werden.
+  news-feed:
+    title: News Feed
+    help: Im News-Teaser werden verschiedene News-Anrisse chronologisch sortiert dargestellt. Mit einer Scrollbar kann der Anwender innerhalb des Teasers nach unten scrollen und somit alle angebotenen News-Anrisse sehen. Jeder Anriss beinhaltet das Datum, den Meldungstyp sowie den verlinkten Titel zur News.
+    release: |
+      **2.0.1:**
+
+      - added the `.news-feed` class to the `.list-group` element
+      - added the `.scroll-y` wrapper containing all the `.list-group-item` elements
+  rss-feed:
+    title: RSS-Feed
+    help: |
+      Ein RSS Feed ist ein sehr spezialisierter Teaser mit dem ausschliesslich RSS-Feeds aufgerufen werden können
+
+      Der Titel besteht immer aus einem RSS-Icon und dem Text "RSS". Darunter befindet sich eine Liste mit Links.
+content-containers:
+  title: Inhaltscontainer
+  elements-list:
+    title: Elemente-Liste
+    help: |
+      Die Elemente-Liste ist vielfältig einsetzbar. Generell stellt sie eine Reihe unterschiedlicher Inhaltselement dar. Dies können verschiedenen Typs sein: Adressen Publikationen, Reden, Medienmitteilungen. Sie können mit und ohne Bild sein.
+  further-information:
+    title: Weiterführende Informationen
+    help: |
+      Unterhalb des Inhalts einer Seite können weiterführende Informationen angezeigt werden. Sie haben den Zweck, Inhalte (z.B. Publikationen, News oder Links), welche mit dem besprochenen Inhalt in Zusammenhang steht aber nicht direkt im Text angesprochen und daher im Inhalt verlinkt werden, anzubieten. Diese Inhalte werden mit Reitern  geordnet.
+
+      Es handelt sich hierbei um eine spezifische Ausprägung der horizontalen Tab-Navigation. Es können bis zu fünf Tabs belegt werden. Die Bezeichnung der Tabs ist nicht vorgegeben. Innerhalb einer Website muss diese aber einheitlich (immer gleich) verwendet werden. Beispiele sind "Dokumente", "Publikationen", "Dienstleistungen", "Rechtliche Grundlagen", "Links", "News" etc.
+  collapsible-panel:
+    title: Klapp-Box
+    help: |
+      Die Klapp-Box ist ein interaktives Element, in dem sich andere interaktive Elemente oder sonstige Inhalte verbergen. Es ist standardmässig geschlossen. Durch einen Klick wird die Box geöffnet, und die Inhalte werden sichtbar. Mit einem weiteren Klick kann die Box wieder geschlossen werden.
+
+ordering-checkout:
+  title: Bestellen und Check-out
+  one-line-order-form:
+    title: Einzeiliges Bestell-Formular
+    help: |
+      Dieses kompakte Formular wird verwendet, wenn ein Objekt (z.B. eine Publikation, Topologische Karte, etc.) dem Warenkorb hinzugefügt werden soll.
+  shopping-cart:
+    title: Einkaufswagen
+    help: |
+      Der Einkaufswagen wird standardmässig nicht angezeigt. Erst nachdem ein Objekt zum Einkaufswagen hinzugefügt wurde, erscheint er in der Kontextspalte. Er bleibt sichtbar bis er entweder komplett gelöscht wird oder der Einkaufsprozess abgeschlossen ist.
+    release: |
+      **2.5.0**
+
+      - added `span.sr-only` to the delete icon
+
+standard-elements:
+  title: Standardelemente
+  page-title:
+    title: Seitentitel
+    help: |
+      Auf jeder Seite mit Ausnahme der Startseite muss der Seitentitel eingesetzt werden. Dieser steht immer als erstes Element der Inhaltsseite. Nur bei ungebundenen Detailseiten (z.B. bei Publikationen) ist ihm der "Zurück zur Übersicht"-Link vorangestellt.
+
+      Der Text des Seitentitels ist relevant für die Positionierung in Suchergebnissen (z.B. Google).
+  image-text:
+    title: Text und Bild
+    help: |
+      Dieses Element besteht aus Fliesstext, der durch einen Titel und Zwischentitel ergänzt werden kann. Ein Bild und eine Bildlegende, die rechts vom Text umflossen werden kann, können ebenfalls hinzugefügt werden. Es sind diverse Bildgrössen (hauptsächlich im Goldenen Schnitt) vorgesehen.
+
+      Für kleine Bilder kann die Klasse `pull-left` oder `pull-right` im HTML-Element `<figure>` genutzt werden.
+  info-box:
+    title: Infobox
+    help: |
+      Die Infobox ist ein "Text und Bild"-Element, das mit einer grauen Fläche hinterlegt wird. Es kann in den Textfluss integriert werden, um zusätzliche Informationen hervorzuheben.
+
+
+    release: |
+
+      **3.0**
+      - To have this grey background, add a `.well .clearfix` wrapper around your content.
+      **2.5.3:**
+
+      - add a `.clearfix` class to the `.well` wrapper
+multimedia:
+  title: Multimedia
+  photo-gallery:
+    title: Bildgalerie Übersicht
+    help: |
+      Die Komponente "Bildergalerie Übersicht" zeigt Vorschaubilder (thumbnails) mit der Bildbezeichnung. Die Vorschaubilder sind in 12er-Gruppen zusammengefasst. Überschreitet die Anzahl der Vorschaubilder diese Menge, wird die Bildergalerie mit dem Navigationselement Paging ergänzt.
+
+      Beim Klick auf ein Vorschaubild wird eine Detailansicht entweder in einer Bilder-**Lightbox** oder einer Bilder-**Einzelansicht** geöffnet.
+    release: |
+      **2.1.8**
+
+        - added `aria-selected="true"` and `aria-disabled="true"` for accessibility
+  photo-gallery-single:
+    title: Bildergalerie Einzelansicht
+    help: In der Einzelansicht kann man durch den gesamten Inhalt einer Bildergalerie blättern. Unterhalb des Bildes kann ein Text eingebunden werden.
+  lightbox:
+    title: Lightbox
+    help: |
+      Eine **Lightbox** ist ein Overlay, das sich über der Webseite öffnet. Sie wird z.B. nach dem Klick auf ein Vorschaubild in einer Bildergalerie oder beim Klick auf ein Lupe-Icon eines einzelnen Bildes geöffnet.
+
+      Wird eine Lightbox geöffnet, wird die Webseite im Hintergrund abgedunkelt. Die Lightbox besteht aus dem Titel, der Grossansicht eines Bildes und einer Legende. Mit Pfeil-Icons in der Lightbox oder mit den Pfeil-Tasten auf der Tastatur kann der Anwender zwischen verschiedenen Bildern blättern. Die Lightbox kann durch einen Klick auf den Hintergrund, dem Schliessen-Link oder mit der ESC-Taste geschlossen werden.
+
+functions:
+  title: Funktionen
+  print:
+    title: Drucken
+    help: |
+      Das Icon **Drucken** mit Link zur Druckversion kann auf jeder Seite (Ausnahme Startseite) eingebunden werden. Es steht in der Inhaltspalte oben rechts. Ein Klick auf das Icon öffnet den Druckdialog des Browsers bzw. des Betriebssystems
+
+      Mittels einer Print-ID können für den Ausdruck spezifische Teile einer Seite adressiert werden (`data-print="ID"` im Container und  `onclick="$.printPreview.printPreview(ID)"` im Eventhandler. Falls im Container das `data-title`-Attribut steht, wird dieses als Seitentitel gedruckt.)
+    release: |
+      **2.5.4:**
+      - place a title like `<h3 class="visible-print-block">Contact</h3>` at the top of your `.tab-pane` elements to display only when printing
+
+      **2.5.3:**
+      - change the `onclick="window.print()"` by `onclick="$.printPreview.printPreview()"`
+      - add an optional target to the printPreview function: `onclick="$.printPreview.printPreview('target id')"`
+  social-sharing:
+    title: Inhalte teilen (Social sharing)
+    help: |
+      Mit der Teilen-Funktion können Inhalte über soziale Netzwerke verbreitet werden.
+
+      Derzeit werden Facebook, Twitter und Google+ unterstützt. Weitere Netzwerke können mit dem betreffenden [Open Graph](http://ogp.me/) meta tag hinzugefügt werden.
+    release: |
+      **2.1.1:**
+
+      - added the `.social-sharing` class to the `#social-sharing` element
+  downloading-files:
+    title: Datei download
+    help: Links, mit denen eine Datei geladen werden kann, sind immer mit einem vorangestellten Dokument-Icon gekennzeichnet.
+search:
+  title: Suche
+  search-box:
+    title: Suchmaske
+    help: Die Suchmaske ist ein einfaches Formular, in das der Anwender auf einer Such-Seite einen Suchbegriff eingeben kann.
+  search-results:
+    title: Suchergebnisse
+    help: Suchergebnisse werden semantisch gruppiert in Reitern angezeigt. Die Kategorien (Gruppierung) ist frei wählbar (z.B. Inhaltsseiten, News und Publikationen). Innerhalb des Reiters kann der Anwender sich mit eine Paging-Funktion durch die Seiten bewegen.
+

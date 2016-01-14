@@ -1,0 +1,327 @@
+﻿title: Base Layout
+form-elements:
+  title: Formular-Elemente
+  fieldsets:
+    title: Gruppierung von Formular-Elementen
+    help: Mit Zwischentiteln werden Formularelemente inhaltlich gruppiert. Dazu wird das Fieldset-Tag verwendet.
+  forms:
+    title: Eingabefelder
+    help: |
+      Inputfelder erlauben die Eingabe von Inhalten (z.B. Name).
+
+      Für die Eingabe eines Datums wird eine HTM-5-Lösung angeboten. Bei Browsern die HTML 5 nicht unterstützen, muss das Datum manuell eingegeben werden.
+      **Barrierefreiheit**
+      The following has to be taken into account for barrier-free accessibility:
+      The name of the form and the form box must be linked to a label. A label ID may only appear once on a page. Required fields must have sensible names or, preferably, use WAI.
+
+      You can use the `.has-error`, `.has-warning` or `.has-success` classes to send feedback to the user.
+
+      HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, and `color`
+    release: |
+      **3.0.0**
+        - added atributes `required` and `aria-required="true"` on mandatory filed
+
+      **2.6.0**
+        - added a datepicker calendar plugin as an option. Use this in your script to initiate the plugin on the fields you need. See the [official Pikaday documentation](https://github.com/dbushell/Pikaday).
+
+      **2.1.8**
+        - added **IDs** to label and help text, `aria-labelledby` and `role` to buttons for a better accessibility
+        - added `<fieldset>` and `<legend class="hidden">` around `.form-group` for a better accessibility
+  selects:
+    title: Auswahllisten
+    help: |
+      Mit einer Dropdown List kann aus einer vorgegebenen Liste eine Auswahl getroffen werden. Diese Liste erscheint in einem Menü nach Klick auf das Element. Nachdem eine Auswahl getroffen wurde, wird das Ergebnis angezeigt.
+      Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angeboten.
+
+      Das Attribut `multiple` bei `<select>` erlaubt es den Usern, mehr als eine Option auszuwählen.
+
+    release: |
+      **2.1.2:**
+
+      - added a label before select for screen readers
+  checkboxes:
+    title: Checkboxen
+    help: Checkbox werden verwendet, wenn aus einer vorgegebenen Liste ein oder mehrere Elemente ausgewählt werden sollen.
+    release: |
+      **3.0.0**
+
+      - Custom styling of this element has been removed in favor of browsers’ default for better accessibility. To keep the previous style and variants, the checkbox now have to be inside the label.
+  radios:
+    title: Radios
+    help: Radio buttons allow the user to make an unequivocal choice from a predefined list. Radio buttons can also be structured in groups. Only one element in a group may be selected.
+    release: |
+      **3.0.0**
+
+      - Custom styling of this element has been removed in favor of browsers’ default for better accessibility. To keep the previous style and variants, the radio now have to be inside the label.
+  buttons:
+    title: Schaltflächen
+    help: |
+      Es wird zwischen primärem und sekundärem Button unterschieden. Der primäre Button wird für die Hauptaktion (z.B. Senden) verwendet, die auch über die Enter-Taste der Tastatur ausgelöst werden kann. Der Sekundärbutton wird für die weniger wichtigen Aktionen (z.B. Abbrechen) verwendet.
+
+      Der Standard-Button kann für vielfältige Aktionen eingesetzt werden. Buttons können auch in einer Buttongroup zusammengefasst werden. Wie bei Radio-Button-Groups, kann innerhalb einer solchen Gruppe, nur ein Element ausgewählt werden.
+
+      Mit der Klasse `.btn` können Schaltflächen gestaltet werden. Die Klasse kann auf `<input>`, `<button>` oder `<a>` Elemente angewendet warden. Es gibt vier Designvarianten:
+  button-groups:
+    title: Gruppen von Schaltflächen
+general:
+  title: Allgemeines
+  logo:
+    title: Logo
+    help: |
+      Durch die Kennzeichnung einer Website erkennt der Besucher auf den ersten Blick den Absender der Site und das Thema bzw. den Zweck.
+
+      Die Kennzeichnung besteht aus dem Bundeslogo (Wappen und viersprachige Wortmarke) und der Bezeichnung der Organisationseinheit mit dem dazugehörigen Kürzel (z.B. EDA) oder Kurzform (z.B. MeteoSchweiz).
+
+      Diese zwei Bestandteile sind durch eine vertikale Linie voneinander getrennt.
+       Für Smartphones wird im Header vom Bundeslogo nur das Wappen verwendet. Die Bezeichnung der Organisationseinheit kann abgekürzt werden. Das vollständige Bundeslogo wird im Footer wiederholt.
+
+      Das Logo ist ein Markenelement: die Verwendung ist obligatorisch, das Erscheinungsbild darf nicht verändert werden.
+    release: |
+      **3.0.0**
+
+      - Add a container with `clearfix` class around logo component
+
+      **2.1.8**
+
+      - added `title` to brand link for accessibility
+  colors:
+    title: Farbpalette
+    help: |
+      Die definierten Farben dienen der Wiedererkennung der Bundeswebsites, der Auszeichnung von einzelnen Elementen und Interaktionen sowie der Orientierung. Die verwendete Farbpalette ist ein Markenelement: die Verwendung ist obligatorisch.
+
+      Es werden drei Farben verwendet: der Rot-Ton des Bundeslogos, der durch einen helleren Rot-Ton ergänzt wird, ein Blau-Ton und eine Palette von Grautönen.
+
+      Das Rot findet sich in der roten Linie, die den Header abschliesst, und als Selektionsfarbe in der Navigation und bei Mouseover über Links. Ansonsten wird mit verschiedenen Grautönen gearbeitet. So sind zum Beispiel die Headlines und der Fliesstext in einem dunklen Grauton umgesetzt.
+  background:
+    title: Hintergrund
+    help: Als Hintergrundfarbe wird ein helles Grau verwendet. Sie wird automatisch auf `<body>` angewendet.
+  images:
+    title: Bildformate
+    help: Bilder im Querformat haben ein Seitenverhältnis von 16:10 (volles Querformat - goldener Schnitt) oder 16:5 (halbes Querformat). Hochformatige Bilder haben kein spezifisches Seitenverhältnis. Wir empfehlen jedoch ein Verhältnis von 2:3
+  standard-image:
+    title: Standardbild
+  captioned-image:
+    title: Bild mit Legende
+  image-format:
+    title: Bildformate
+  icons:
+    title: Icons
+    help: |
+      Die verwendeten Icons sind einfarbig und flächig gestaltet. Sie sind als Webfont hinterlegt, der sich als True-Type-Font in den Ressourcen befindet.
+
+      Besteht ein Element nur aus einem Icon, so wie die Klasse in einem <span>-Container definiert. Die Funktion des Icons muss in diesem Fall in einem alt-Text erklärt werden: <span class="" alt="vorwärts"> ...</span>
+
+      Für ein **inside-icon** element, use the global `.icon` and `.icon--before` or `.icon--after` class followed by the more specific class.
+    release: |
+      **Accessibility**
+
+      If the element should be readable by a screen reader and/or is semantically important, be sure to add the appropriate `aria-` attribute. Otherwise, add an `aria-hidden="true"` attribute to hide it and avoid useless clutter of informations.
+
+      You could also add a `<span class="sr-only">icon description</span>` depending on your needs.
+  form-icons:
+    title: Form icons
+    help: Use the global `.form-icon` class followed by the more specific class
+tables:
+  title: Tabellen
+  table-standard:
+    title: Standardtabelle
+    help: |
+      Standardtabellen bestehend aus Tabellenüberschrift (caption) Tabellenkopf (thead), Tabellenkörper (tbody) und Tabellenfuss (tfoot). Diese Tabelle kann erweitert werden um die Zebrastreifung und/oder die Spalten- respektive Zeilenauszeichnung.
+
+      Für eine Tabelle mit gerahmten Zellen wird die Klasse ".table-bordered" verwendet.
+    release: |
+      **3.0.0**
+
+        - remove attribute `role="columnheader"` on tag `<tr>`
+        - remove attribute `role="rowheader"` on tag `<th>`
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+        - added the `<col>` and `<colgroup>` tags before the tables on some cases
+
+      **2.1.8**
+
+        - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+  table-cycle:
+    title: Cycle table (single)
+    release: |
+      **3.0.0**
+
+        - remove attribute `role="columnheader"` on tag `<tr>`
+  table-cycle-pairs:
+    title: Cycle table (pairs)
+    release: |
+      **3.0.0**
+
+        - remove attribute `summary` on tag `<table>`
+  table-with-caption:
+    title: Table with caption
+    release: |
+      **3.0.0**
+
+        - remove attribute `summary` on tag `<table>`
+  table-zebra:
+    title: Tabelle mit Zebra-Streifen
+    help: Die Zebrastreifen werden angezeigt, wenn dem Table-Tag die Klasse class='table_zebra' hinzugefügt wird.
+    release: |
+      **3.0.0**
+
+        - remove attribute `role="columnheader"` on tag `<tr>`
+        - remove attribute `role="rowheader"` on tag `<th>`
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+  table-zebra-cycle-single:
+    title: Zebra cycle table (single)
+    release: |
+      **3.0.0**
+
+        - remove attribute `summary` on tag `<table>`
+        - remove attribute `role="columnheader"` on tag `<tr>`
+  table-zebra-cycle-pairs:
+    title: Zebra cycle table (pairs)
+    release: |
+      **3.0.0**
+
+        - remove attribute `summary` on tag `<table>`
+  table-zebra-caption:
+    title: Zebra table with caption
+    release: |
+      **3.0.0**
+
+        - remove attribute `summary` on tag `<table>`
+        - remove attribute `role="columnheader"` on tag `<tr>`
+  table-highlight:
+    title: Tabelle mit Hervorhebung
+    help: |
+      Diese Tabelle leitet sich von der Standardtabelle ab, hat aber zusätzlich die Zebrastreifen und die Auszeichnung von Tabellenzellen (class='selected') aktiviert.
+    release: |
+      **3.0.0**
+
+        - remove attribute `role="columnheader"` on tag `<tr>`
+        - remove attribute `role="rowheader"` on tag `<th>`
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+  table-highlight-cycle:
+    title: Highlighted cycle table (single)
+    release: |
+      **3.0.0**
+
+        - remove attribute `summary` on tag `<table>`
+        - remove attribute `role="columnheader"` on tag `<tr>`
+  table-highlight-cycle-pairs:
+    title: Highlighted cycle table (pairs)
+    release: |
+      **3.0.0**
+
+        - remove attribute `summary` on tag `<table>`
+  table-highlight-caption:
+    title: Highlighted table with caption
+    release: |
+      **3.0.0**
+
+        - remove attribute `summary` on tag `<table>`
+        - remove attribute `role="columnheader"` on tag `<tr>`
+  table-sortable:
+    title: Sortierbare Tabelle
+    help: Die sortierbare Tabelle zeichnet die sortierte Spalte automatisch aus. (Klasse`table-sort`)
+    release: |
+      **3.0.0**
+
+        - remove attribute `role="columnheader"` on tag `<tr>`
+        - remove attribute `role="rowheader"` on tag `<th>`
+  table-expandable:
+    title: Tabelle mit aufklappbarer Zeile
+    help: Einzelne Tabellenzeilen können ausgeklappt werden, um Details zu einem Datensatz anzuzeigen.
+    release: |
+      **3.0.0**
+
+        - remove attribute `role="columnheader"` on tag `<tr>`
+        - remove attribute `role="rowheader"` on tag `<th>`
+
+      **2.5.0**
+
+        - wrapped text in `<a>` in `<th>` tag if it is a collapse link
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+
+      **2.1.8**
+
+        - wrapped text in `<a>` in `<th>` tag if it is a collapse link
+  table-ruled:
+    title: Linierte Tabelle
+    help: Linierte Tabellen eignen sich besonders für die Darstellung einfacher 1:1 Beziehungen. Die Linierung der Tabelle wird dadurch erreicht, dass dem Table-Tag die Klasse class='table_simple' hinzugefügt wird.
+    release: |
+      **3.0.0**
+
+        - remove attribute `role="columnheader"` on tag `<tr>`
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+  table-unruled:
+    title: Tabelle ohne Linien
+    help: Tabellen ohne Linien eignen sich für die Darstellung von Eigenschaften z.B. von einer Publikation. Eine einfache Tabelle ohne Linien wird mit der Klasse class='table_naked' ausgezeichnet.
+    release: |
+      **3.0.0**
+
+        - remove attribute `role="columnheader"` on tag `<tr>`
+
+      **2.1.9**
+
+        - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+
+typography:
+  title: Typography
+  titles:
+    title: Überschriften
+    help: |
+      Überschriften dienen dazu, den Inhalt einer Seite zu strukturieren. Je höher die Hierarchie (z.B. H1) desto wichtiger ist dieser und wird entsprechend auch so bei Suchmaschinen (z.B. Google) gewichtet. Grundsätzlich sollen nicht zu viele Hierarchien verwendet werden, da sonst die Übersichtlichkeit leidet. Die Titelhierarchien H1 bis H4 heben sich entsprechen gestalterisch voneinander ab (die Hierarchien H5 und H6 wurden nur pro Forma definiert).
+      **Accessibility** Jede Seite hat einen und nur einen H1-Titel. Die nächste Ebene ist H2. Unterhalb eines H2-Titels kann ein oder mehrere H3-Titel gesetzt werden. Unterhalb eines H3 können ein oder mehrere H4 gesetzt werden.
+      Überschriften können auch verlinkt sein und werden dann in blau gesetzt.
+  paragraphs:
+    title: Absätze
+    help: |
+      ### Lead
+      Am Anfang eines längeren Textes kann ein Lead platziert werden, der die wichtigsten Aspekte des Textes zusammenfasst. Er wird in einem fetten Schriftschnitt gesetzt.
+  text-elements:
+    title: Fliesstext
+    help: |
+      Die Schriftgrösse, Zeilenlänge und -abstände des Fliesstextes sind für optimale Lesbarkeit optimiert. Zitate werden kursiv gesetzt. Links im Textfluss werden mit einer Unterstreichung ausgezeichnet, sollten aber sparsam eingesetzt werden. Besser ist es, Links am Ende eines Absatzes zu platzieren.
+  blockquote:
+    title: Zitat
+  lists:
+    title: Listen
+    help: |
+      Listen werden verwendet, um Inhalte strukturiert darzustellen und dem Anwender einen schnellen Überblick über ein Thema zu ermöglichen.
+      Folgende Listen werden verwendet:
+        -  Ungeordnete Listen (Anzeigelisten)
+        -  Geordnete Listen (nummerierte Listen)
+        -  Listen ohne Bullet oder Nummerierung
+   help: Dieser Listentyp wird für die Aufzählung von Links verwendet. (Klasse `.list-unstyled`)
+  definition-lists:
+    title: Beschreibungsliste
+  links:
+    title: Links
+    help: |
+      Links haben standardmässig die Textfarbe Blau und sind nicht unterstrichen. Bei Mouseover werden diese rot.
+
+      In zwei Fällen wird von dieser Regel abgewichen:
+      Bei einem Link im Textfluss wird der verlinkte Text unterstrichen. Links in einem Navigations-Element (z.B. in der Globalnavigation) sind nicht blau, sondern grau. Aussehen und Verhalten dieser speziellen Links, wird in diesen Webrichtlinien an den entsprechenden Stellen separat beschrieben.
+
+      Mit den `.icon`-Klassen kann vor oder nach dem Link ein Icon hinzugefügt werden (Klasse`.icon--external` für externe Links).
+  top-link:
+    title: Top link
+    help: Der Top-Link ist das Gegenstück zum Anker-Link: er bringt den Anwender von jeder Position in der aktuellen Seite wieder zurück zum Seitenanfang.
+  end-page-link:
+    title: End page link
+    help: |
+      Der Link am Seitenende ist ein spezieller Top-Link. Jede Seite (mit Ausnahme der Startseite und der Seiten von Level 1) schliesst mit einem solchen Seitenende-Link ab. Er enthält einen Link zum Anfang der aktuellen Seite und das Datum der letzten Aktualisierung der Inhalte dieser Seite.
+
+      Die Druck-Schaltfläche ist bei den Schaltflächen beschrieben.
