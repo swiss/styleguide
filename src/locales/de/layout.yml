@@ -304,7 +304,7 @@ typography:
         -  Ungeordnete Listen (Anzeigelisten)
         -  Geordnete Listen (nummerierte Listen)
         -  Listen ohne Bullet oder Nummerierung
-   help: Dieser Listentyp wird für die Aufzählung von Links verwendet. (Klasse `.list-unstyled`)
+      Dieser Listentyp wird für die Aufzählung von Links verwendet. (Klasse `.list-unstyled`)
   definition-lists:
     title: Beschreibungsliste
   links:
@@ -318,7 +318,8 @@ typography:
       Mit den `.icon`-Klassen kann vor oder nach dem Link ein Icon hinzugefügt werden (Klasse`.icon--external` für externe Links).
   top-link:
     title: Top link
-    help: Der Top-Link ist das Gegenstück zum Anker-Link: er bringt den Anwender von jeder Position in der aktuellen Seite wieder zurück zum Seitenanfang.
+    help: |
+      Der Top-Link ist das Gegenstück zum Anker-Link: er bringt den Anwender von jeder Position in der aktuellen Seite wieder zurück zum Seitenanfang.
   end-page-link:
     title: End page link
     help: |

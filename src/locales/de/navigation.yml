@@ -10,16 +10,16 @@ hierarchical-navigation:
       Durch Klicken auf einen der Reiter öffnet sich ein Mega-Flyout mit einem Menü der Unterseiten. Der Hintergrund wird abgedunkelt.
 
       Es gibt zwei obligatorische Flyout-Typen: Teaser- oder Listen -Flyout. Das Menü zeigt abhängig vom Typ des Flyouts die Unterseiten der zweiten Navigationsebene (Teaser-Flyout) oder auch diejenigen des zweiten und dritten Navigationsebene (Listen-Flyout) an.
-	Im Teaser-Flyout kann direkt eine Seite des zweiten Navigationsebene und im Listen-Flyout direkt eine Seite des dritten Navigationsebene angewählt werden. Man kann also Navigationsknoten überspringen, für die es keine Inhalte gibt.
-      Es ist möglich, weitere Flyout-Typen zu entwickeln und einzusetzen. Das EDA hat zum Beispiel ein Flyout für die Länderauswahl realisiert. 
+      Im Teaser-Flyout kann direkt eine Seite des zweiten Navigationsebene und im Listen-Flyout direkt eine Seite des dritten Navigationsebene angewählt werden. Man kann also Navigationsknoten überspringen, für die es keine Inhalte gibt.
+      Es ist möglich, weitere Flyout-Typen zu entwickeln und einzusetzen. Das EDA hat zum Beispiel ein Flyout für die Länderauswahl realisiert.
 
       Das Flyout kann durch Klicken der "Schliessen"-Funktionen (oben rechts und unten), durch Klicken auf den Hintergrund oder durch nochmaliges Klicken auf denselben Reiter wieder geschlossen werden.
 
       Nur auf der Homepage sind alle Reiter geschlossen. Wenn man unterhalb eines Reiters weiter navigiert, bleibt dieser ausgewählt.
 
       Ein Flyout kann einen Teaser enthalten, welcher aus einem verlinkten Titel, einem Bild, sowie einem Beschreibungstext (max. 70 Zeichen inkl. Leerzeichen)  besteht.
-	
-      Mit `<div class="overlay"></div>` am Ende des `body`-Tags wird das grau Overlay angezeigt. 
+
+      Mit `<div class="overlay"></div>` am Ende des `body`-Tags wird das grau Overlay angezeigt.
     release: |
       **2.1.2:**
         - changed `.active` class to `.current` for current page highlight in the menu
@@ -44,7 +44,7 @@ hierarchical-navigation:
 
       Auf Smartphones wird am Seitenende jeweils ein Link auf die Startseite und auf die darüberliegende Ebene angeboten; einen kompletten Breadcrumb gibt es nicht.
   back-to-overview:
-    title: Zurück zur Übersicht	
+    title: Zurück zur Übersicht
     help: |
       Die "Zurück zur Übersicht"-Navigation verlinkt Seiten, die nicht in der Navigation erscheinen, zu ihrer "Mutterseite". Ein Beispiel dafür sind die Detail-Seiten der Publikationen.
 
@@ -163,13 +163,13 @@ header:
 
       Regeln für die Sprachnavigation:
 
-      * Die Sprachen DE, FR und IT sind obligatorisch. Sie werden auf allen Seiten angezeigt. Dies auch dann, wenn ein Inhalt in nur einer dieser Sprachen vorhanden ist.
-      * Die Sprache RM und EN werden nur angezeigt, wenn es Inhalte in diesen Sprachen gibt.
-      * Die aktive Sprache wird mit einem hellgrauen Hintergrund gekennzeichnet.  
-* Inaktive Sprachen erscheinen in hellgrauer Schrift
-      * Die Kürzel werden auf allen Ausgabegeräten im Header nebeneinander platziert.
-      * Die Platzierung der Sprachwahl in einem Dropdown-Menu ist untersagt.  
-       * Seiten, die nicht übersetzt sind, können als in einer andern Sprache verfügbar angezeigt werden.
+        * Die Sprachen DE, FR und IT sind obligatorisch. Sie werden auf allen Seiten angezeigt. Dies auch dann, wenn ein Inhalt in nur einer dieser Sprachen vorhanden ist.
+        * Die Sprache RM und EN werden nur angezeigt, wenn es Inhalte in diesen Sprachen gibt.
+        * Die aktive Sprache wird mit einem hellgrauen Hintergrund gekennzeichnet.
+        * Inaktive Sprachen erscheinen in hellgrauer Schrift
+        * Die Kürzel werden auf allen Ausgabegeräten im Header nebeneinander platziert.
+        * Die Platzierung der Sprachwahl in einem Dropdown-Menu ist untersagt.
+        * Seiten, die nicht übersetzt sind, können als in einer andern Sprache verfügbar angezeigt werden.
 
       Diese Regeln gelten auch für Smartphones.
 
@@ -198,7 +198,7 @@ header:
       Das Themen A-Z ist im rechten Bereich des Headers platziert. Bei einem Klick darauf öffnet sich ein Flyout, das eine A-Z-Tab- Navigation enthält. Die Themen können in weiteren Tabs, z.B. nach Organisationseinheiten, gruppiert werden.
 
       Auf Smartphones wird die A-Z-Navigation zusammen mit der Suche über ein Icon im Header aufgerufen.
-	Die Unterteilung eines Themen A-Z in Bereiche, die über eine Reiternavigation erschlossen werden, ist unerwünscht.    
+      Die Unterteilung eines Themen A-Z in Bereiche, die über eine Reiternavigation erschlossen werden, ist unerwünscht.
 
     release: |
       **2.1.2:**
@@ -236,20 +236,22 @@ content-navigation:
     help: Ein Anker-Link ist eine Sprungmarke, mit dem eine Position innerhalb der aktuellen Seite direkt angesteuert werden kann.
   anchor-links:
     title: Top-Links
-    help: Der Top-Link ist das Gegenstück zum Anker-Link: Er bringt den Anwender von jeder Position in der aktuellen Seite wieder zurück zum Seitenanfang.
-       title: Seitenende-Links
+    help: |
+      Der Top-Link ist das Gegenstück zum Anker-Link: Er bringt den Anwender von jeder Position in der aktuellen Seite wieder zurück zum Seitenanfang.
+  top-links:
+    title: Seitenende-Links
     help: Der Link am Seitenende ist ein spezieller Top-Link. Jede Seite (mit Ausnahme der Startseite und der Seiten auf Level 1) schliesst mit einem solchen Seitenende-Link ab. Er enthält einen Link zum Anfang der aktuellen Seite und das Datum der letzten Aktualisierung der Inhalte dieser Seite.
-
-       process-navigation:
+  process-navigation:
     title: Prozessnavigation
-    help: Die Prozessnavigation wird im Zusammenhang mit Formularen eingesetzt, welche über mehrere Seiten verteilt sind. Der aktive Prozessschritt wird in rot markiert. Die vorhergehenden Schritte sind klickbar und führen zurück zum entsprechenden Prozessschritt.
-	**Achtung:** Das vorliegende Beispiel beschreibt nur das graphische Design; die Prozessnavigation muss in jedem Fall gemäss dem zugrundeliegenden Prozess programmiert werden.  
+    help: |
+      Die Prozessnavigation wird im Zusammenhang mit Formularen eingesetzt, welche über mehrere Seiten verteilt sind. Der aktive Prozessschritt wird in rot markiert. Die vorhergehenden Schritte sind klickbar und führen zurück zum entsprechenden Prozessschritt.
+      **Achtung:** Das vorliegende Beispiel beschreibt nur das graphische Design; die Prozessnavigation muss in jedem Fall gemäss dem zugrundeliegenden Prozess programmiert werden.
   tab-navigation:
     title: Reiter-Navigation
     help: |
       Die Reiter-Navigation wird angewendet, wenn auf einer Seite zusammenhängende Inhalte gruppiert werden sollen. Im Sinn einer Ausnahme ist die Schriftfabe dunkelgrau (statt blau). Der aktive Reiter ist durch die rote Linie und den weissen Hintergrund gekennzeichnet.
 
-      Die Bezeichnungen der Reiter sind als Beispiel zu lesen. Sie richten sich nach dem effektiven Inhalt der Seite. 
+      Die Bezeichnungen der Reiter sind als Beispiel zu lesen. Sie richten sich nach dem effektiven Inhalt der Seite.
 
       Reference in detailed specification: Chapter **2.5.4**
 footer:
