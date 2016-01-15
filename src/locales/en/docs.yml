@@ -222,52 +222,7 @@ devices:
     If the page is displayed on a smartphone, only the content is shown. The navigation function in the left sidebar disappears, as does the context pane. Instead, the user can navigate via links in the footer and a special menu for mobile devices.
 
     Usability tests have shown that many smartphone users ignore the navigation menu in the header and navigate via links in the footer. It is therefore important to reproduce the navigation in the footer.
-glossary:
-  title: Glossary
-  content: |
-    <dl>
-      <dt>Accessibility</dt>
-      <dd>See Barrier-free Accessibility</dd>
 
-      <dt>Barrier-free Accessibility</dt>
-      <dd>Barrier-free Internet is used to refer to web resources that can be utilized by all users, irrespective of their physical capabilities.</dd>
-
-      <dt>Breadcrumb</dt>
-      <dd>The breadcrumb is a line of text below the header which shows the user the position of the web page currently being used within the information architecture of the website. This enables users to see at a glance where they are on the site map. A breadcrumb could look like this: Home page EDA > Countries & travel information > Travel advice > Africa > Morocco</dd>
-
-      <dt>Breakpoints</dt>
-      <dd>In a responsive design, the layout of the pages changes according to the viewing environment of the output device. The resolution value at which the layout changes, is called the “breakpoint”.</dd>
-
-      <dt>EDA</dt>
-      <dd>The Federal Department of Foreign Affairs</dd>
-
-      <dt>Icon</dt>
-      <dd>Icons are graphical representations of options and functions, such as “Print”.</dd>
-
-      <dt>Designation</dt>
-      <dd>The designation consists of the Confederation logo (coat of arms + the four-language wordmark) and the name of the organizational unit (OU). Its function is to indicate to the user who the originator of a particular website is. In websites that cover several organizations and in theme portals, the name of the OU is replaced by the title of the website.</dd>
-
-      <dt>KID</dt>
-      <dd>The Information Services Conference of the Administrative Departments Organization Unit (or OU): The relevant organizational unit (e.g. a department, an agency, a division) of the Swiss Confederation.</dd>
-
-      <dt>Responsive Design/Responsiveness</dt>
-      <dd>Responsive design or responsiveness is used to describe the process by which the layout of a website is adapted to fit the viewing environment of an end device. This means that users can enjoy an optimal viewing experience of the same contents on desktop computers, laptops, tablets, and smartphones.</dd>
-
-      <dt>Treecrumb</dt>
-      <dd>The treecrumb shows the position of the website within the hierarchical organization of the Federal Administration. It allows the user to access directly the websites of higher-level organizational units. It is always positioned at the top left-hand corner of the header in a Confederation website.</dd>
-
-      <dt>VBS</dt>
-      <dd>The Federal Department of Defence, Civil Protection and Sport</dd>
-
-      <dt>Confederation Web Forum </dt>
-      <dd>A monthly meeting of the persons responsible for web activities in the Departments, the Parliamentary Services, and the Federal Chancellery. Its purpose is to coordinate the Internet activities within the General Federal Administration. The Confederation Web Forum draws up guidelines and directives, and is responsible for putting them into effect as well as monitoring their implementation.</dd>
-
-      <dt>Web page</dt>
-      <dd>A single page on a website</dd>
-
-      <dt>Website</dt>
-      <dd>All the web pages subsumed under the same URL, e.g. www.bundeskanzlei.admin.ch.</dd>
-    </dl>
 guidelines:
   title: Guidelines
   content: |
