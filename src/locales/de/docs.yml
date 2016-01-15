@@ -435,13 +435,11 @@ sample-pages:
 
     Auf der Beispielseite für Formulare wird gezeigt wie ein Formular mit einer Prozessnavigation in eine Seite integriert wird.
 
-  translations:
-       title: Übersetzungen
+translations:
+  title: Übersetzungen
   content: |
-    # Übersetzungen
     Einige Komponenten der Richtlinien verwenden Bezeichnungen oder Labels, die üblicherweise auf allen Websites, die diese Komponenten verwenden, gleich lauten. Zum Beispiel wird das Suchfeld immer mit "Suche" bezeichnet.
 
     Um den Bau mehrsprachiger Websites zu vereinfachen, wird ein Übersetzungsfile zur Verfügung gestellt. Es enthält eine Kollektion von Standardlabels in den vier Landessprachen sowie Englisch.
 
-  download-link:
-       Übersetzungsfile herunterladen (XLS)
+  download-link: Übersetzungsfile herunterladen (XLS)
