@@ -86,21 +86,21 @@ index:
     Bei Bedarf und in Absprache mit der KID, dem Informatiksteuerungsorgan ISB, den Leistungserbringern und der Fachstelle CD Bund leitet das Webforum Bund einen Releasewechsel ein.
 
     Voraussetzung ist jeweils, dass die Finanzierung gesichert ist.
-    
-    Änderungen der Markenelemente müssen von der GSK genehmigt werden, sonstige Änderungen der Webrichtlinien von der KID. 
+
+    Änderungen der Markenelemente müssen von der GSK genehmigt werden, sonstige Änderungen der Webrichtlinien von der KID.
 
 accessibility:
   title: Barrierefreiheit
   intro: |
 
-    Laut dem <a href=“https://www.admin.ch/opc/de/classified-compilation/20002658/index.html#a14“>Behindertengleichstellungsgesetz (BehiG)Art. 14</a> müssen Dienstleistungen der Bundesverwaltung im Internet Sehbehinderten ohne erschwerende Bedingungen zugänglich sein. Erfüllt ist diese Vorgabe, wenn eine Website die Konformitätsbedingungen gemäss WCAG 2.0 entspricht und die Konformitätsstufe AA erreicht.
+    Laut dem <a href="https://www.admin.ch/opc/de/classified-compilation/20002658/index.html#a14">Behindertengleichstellungsgesetz (BehiG)Art. 14</a> müssen Dienstleistungen der Bundesverwaltung im Internet Sehbehinderten ohne erschwerende Bedingungen zugänglich sein. Erfüllt ist diese Vorgabe, wenn eine Website die Konformitätsbedingungen gemäss WCAG 2.0 entspricht und die Konformitätsstufe AA erreicht.
 
     Weiterführende Informationen:
 
-      - <a href=“https://www.admin.ch/opc/de/classified-compilation/20002658/index.html“>Behindertengleichstellungsgesetz (BehiG)</a>
-      - <a href=“https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html“>P028 - Richtlinien des Bundes für die Gestaltung von barrierefreien Internetangeboten</a>
-      - <a href=”http://www.w3.org/TR/WCAG20/”>Web Content Accessibility Guidelines (WCAG) 2.0</a>
-      - <a href=”http://www.w3.org/TR/wai-aria/”>Accessible Rich Internet Applications (WAI-ARIA) 1.0</a>
+      - <a href="https://www.admin.ch/opc/de/classified-compilation/20002658/index.html">Behindertengleichstellungsgesetz (BehiG)</a>
+      - <a href="https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html">P028 - Richtlinien des Bundes für die Gestaltung von barrierefreien Internetangeboten</a>
+      - <a href="http://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a>
+      - <a href="http://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a>
 
     ## Gute Praxis
 
@@ -116,15 +116,15 @@ accessibility:
     ### Mehrsprachige Inhalte auf einer Seite
 
     Manchmal gibt es auf derselben Seite Inhalte in verschiedenen Sprachen. Screenreader müssen mit dem "lang"-Attribut auf den Sprachwechsel aufmerksam gemacht werden. Beispiel:
-    
+
     <p lang="de">Barrierefreiheit ist einfach.</p>
     <p lang="en">Web content accessibility ist simple.</p>
     <p lang="fr">L'accessibilité aux contenus web est facile.</p>
-    
+
     ### Icons
 
     Font Icons können von Screenreader oft nicht gelesen werden. Daher ist ein zusätzlicher sichtbarer oder unsichtbarer Text (<span class="sr-only">icon description</span>) notwendig.
-    Die Icons selbst können dann als aria-hidden=“true“ definiert werden.
+    Die Icons selbst können dann als aria-hidden="true" definiert werden.
 
     ### Accesskeys – Accessibility-Navigation
 
@@ -137,33 +137,33 @@ accessibility:
     ## Hilfsmittel
 
     Nachfolgend eine Auswahl von Hilfsmittel zur Gestaltung und Prüfung der Barrierefreiheit von Webseiten:
-    
-      ###Accessibility-Checkliste für AEM
-    
+
+      ### Accessibility-Checkliste für AEM
+
       Leitfaden für die Erstellung von barrierefreien Inhalten mit Adobe Experience Manager AEM
-    
+
       ### HeadingMap (Firefox Add-on)
-    
+
       HeadingsMap eignet sich hervorragend, um die Struktur einer Webseite sichtbar zu machen. Das Add-on zeigt die Überschriftenstruktur der aktuell geöffneten Internetseite in einem Extrabereich des Browserfensters an.
 
       ### Juicy Studio Accessibility Toolbar (Firefox Add-on)
-      
+
       Diese Toolbar prüft eine Reihe von Anforderung der Barrierefreiheit, darunter auch die Auszeichnung von ARIA-Elementen und das Markup von Tabellen.
 
       ### Web Developer Toolbar (Firefox Add-on)
-      
+
       Diese Toolbar eignet sich Deaktivierung von JS, Hervorhebung von bestimmten HTML—Elementen oder zur Überprüfung von Bildern.
 
       ### Color Contrast Analyzer
-      
-      <a href=“https://www.paciellogroup.com/resources/contrastanalyser/“>Color Contrast Analyzer</a> ist ein Werkzeug, das dabei hilft, den Kontrast zwischen Vorder- und Hintergrundfarbe zu analysieren.
-      
-      Die Web Accessibility Initiative (WAI) des World Wide Web Consortiums (W3C) bietet eine <a href=“ https://www.w3.org/WAI/ER/tools/index.html“>ausführliche Liste</a> von Tools zur Accessibility-Evaluation an.
+
+      <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyzer</a> ist ein Werkzeug, das dabei hilft, den Kontrast zwischen Vorder- und Hintergrundfarbe zu analysieren.
+
+      Die Web Accessibility Initiative (WAI) des World Wide Web Consortiums (W3C) bietet eine <a href=" https://www.w3.org/WAI/ER/tools/index.html">ausführliche Liste</a> von Tools zur Accessibility-Evaluation an.
 
     ## Weitere Informationen und Kontakt
 
     Geschäftsstelle E-Accessibility Bund (2015-2017)
-    <a href=“mailto:markus.riesch@gs-edi.admin.ch“>Markus Riesch</a> Tel. +41584625463
+    <a href="mailto:markus.riesch@gs-edi.admin.ch">Markus Riesch</a> Tel. +41584625463
 
 
 basic-grid:
@@ -314,8 +314,8 @@ guidelines:
     Innerhalb der Richtlinien für das Webdesign Bund kann über die Reiter im Hauptmenu zu den einzelnen Kapiteln navigiert werden.
 
     Auf der Startseite sind die Richtlinien für das Webdesign Bund zusammengefasst.
-    
-    Unter "Richtlnien für das Webdesign Bund" wird der Aufbau, die Browserkompatibilität und die Installation beschrieben. 
+
+    Unter "Richtlnien für das Webdesign Bund" wird der Aufbau, die Browserkompatibilität und die Installation beschrieben.
 
     Unter den Reitern "Grundraster", "Navigationsmodule" und "Inhaltsmodule" sind die detaillierten Beschreibungen der einzelnen Elemente zu finden.
 
@@ -349,7 +349,7 @@ guidelines:
 
     ## Installation
 
-    Die Installationsangaben für die Verwendung der Richtlinien in einem Projekt finden sich auf <a href=“https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet“>Github</a>
+    Die Installationsangaben für die Verwendung der Richtlinien in einem Projekt finden sich auf <a href="https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet">Github</a>
 
 
 header-footer:
