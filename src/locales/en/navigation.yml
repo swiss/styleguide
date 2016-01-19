@@ -7,17 +7,15 @@ hierarchical-navigation:
       The global navigation shows the main points of access to a website as tabs. It is separated from the header above by a red line. The terminology used for the tabs should be chosen carefully, as this is what gives the user the first impression of the purpose of the website.
 
       Behavior:
-      Clicking on a tab opens a mega flyout with a menu showing the sub-pages. The background is darkened.
+      Clicking on a tab opens a mega flyout with a menu showing the sub-pages.
 
-      There are two obligatory flyout types: the teaser and the list flyout. In the teaser flyout, the second navigation level, and in the list flyout the second and third navigation levels can be selected directly. This makes it possible to skip navigation nodes for which there are no contents.
+      There are different flyout types: e.g. the teaser and the list flyout. In the teaser flyout, the second navigation level, and in the list flyout the second and third navigation levels can be selected directly. This makes it possible to skip navigation nodes for which there are no contents.
 
       It is also possible to develop and use new flyout types. For instance, a country selection flyout was developed for the EDA.
 
       The flyout can be closed again by clicking on the “close” function at the top right, the tab at the bottom edge, by clicking on the background, or by clicking on the active tab again.
 
       Only on the home page are all the tabs closed. If the user navigates in the area below a tab, this tab remains actively selected.
-
-      A flyout can contain a teaser, which consists of a linked heading, an image, and a descriptive text (max. 70 characters including spaces).
 
       Add `<div class="overlay"></div>` at the end of the `body` tag to display the gray overlay.
     release: |
