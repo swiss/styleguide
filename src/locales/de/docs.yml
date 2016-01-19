@@ -110,13 +110,17 @@ accessibility:
   title-tag: |
     ### Seitentitel
 
-    Im "title" des HTML-Dokuments soll zuerst das Seitenspezfische, dann das Allgemeine beschrieben werden. Die Elemente sind mittels Komma zu trennen. Beispiel: Lebenslauf von Bundesrätin Doris Leuthard, UVEK
+    Im "title" des HTML-Dokuments soll zuerst das Seitenspezfische, dann das Allgemeine beschrieben werden. Die Elemente sind mittels Komma zu trennen. Beispiel: Barrier-free Accessibilty, Swiss Confederation Webguidelines
 
   multi-language: |
     ### Mehrsprachige Inhalte auf einer Seite
 
     Manchmal gibt es auf derselben Seite Inhalte in verschiedenen Sprachen. Screenreader müssen mit dem "lang"-Attribut auf den Sprachwechsel aufmerksam gemacht werden. Beispiel:
-
+    
+    <p lang="de">Barrierefreiheit ist einfach.</p>
+    <p lang="en">Web content accessibility ist simple.</p>
+    <p lang="fr">L'accessibilité aux contenus web est facile.</p>
+    
     ### Icons
 
     Font Icons können von Screenreader oft nicht gelesen werden. Daher ist ein zusätzlicher sichtbarer oder unsichtbarer Text (<span class="sr-only">icon description</span>) notwendig.
@@ -124,7 +128,7 @@ accessibility:
 
     ### Accesskeys – Accessibility-Navigation
 
-    Accesskeys vereinfachen die Benutzung einer Webseite Mittels Screenreader oder über die Tastatur. Die Accessibility-Navigation muss direkt nach dem Body-Tag definiert werden. Die Accesskey sind unsichtbar, ausser bei Erhalt des Fokus.
+    Accesskeys vereinfachen die Benutzung einer Webseite Mittels Screenreader oder über die Tastatur. Die Accessibility-Navigation muss direkt nach dem Body-Tag definiert werden. Die Accesskey sind unsichtbar, ausser bei Erhalt des Fokus. Ein Beispiel findet sich unter Navigationsmodule - Kopfbereich - Barrierefreie Navigation.
 
     ### Anforderung zur Gestaltung von barrierefreien Inhalten
 
@@ -133,19 +137,27 @@ accessibility:
     ## Hilfsmittel
 
     Nachfolgend eine Auswahl von Hilfsmittel zur Gestaltung und Prüfung der Barrierefreiheit von Webseiten:
-      - Accessibility-Checkliste für AEM
-    Leitfaden für die Erstellung von barrierefreien Inhalten mit Adobe Experience Manager AEM
-    [brmbk1]- HeadingMap (Firefox Add-on)
-    HeadingsMap eignet sich hervorragend, um die Struktur einer Webseite sichtbar zu machen. Das Add-on zeigt die Überschriftenstruktur der aktuell geöffneten Internetseite in einem Extrabereich des Browserfensters an.
+    
+      ###Accessibility-Checkliste für AEM
+    
+      Leitfaden für die Erstellung von barrierefreien Inhalten mit Adobe Experience Manager AEM
+    
+      ### HeadingMap (Firefox Add-on)
+    
+      HeadingsMap eignet sich hervorragend, um die Struktur einer Webseite sichtbar zu machen. Das Add-on zeigt die Überschriftenstruktur der aktuell geöffneten Internetseite in einem Extrabereich des Browserfensters an.
 
-      - Juicy Studio Accessibility Toolbar (Firefox Add-on)
+      ### Juicy Studio Accessibility Toolbar (Firefox Add-on)
+      
       Diese Toolbar prüft eine Reihe von Anforderung der Barrierefreiheit, darunter auch die Auszeichnung von ARIA-Elementen und das Markup von Tabellen.
 
-      - Web Developer Toolbar (Firefox Add-on)
+      ### Web Developer Toolbar (Firefox Add-on)
+      
       Diese Toolbar eignet sich Deaktivierung von JS, Hervorhebung von bestimmten HTML—Elementen oder zur Überprüfung von Bildern.
 
-      - Color Contrast Analyzer
-      <a href=“ https://www.paciellogroup.com/resources/contrastanalyser/“>Color Contrast Analyzer</a> ist ein Werkzeug, das dabei hilft, den Kontrast zwischen Vorder- und Hintergrundfarbe zu analysieren.
+      ### Color Contrast Analyzer
+      
+      <a href=“https://www.paciellogroup.com/resources/contrastanalyser/“>Color Contrast Analyzer</a> ist ein Werkzeug, das dabei hilft, den Kontrast zwischen Vorder- und Hintergrundfarbe zu analysieren.
+      
       Die Web Accessibility Initiative (WAI) des World Wide Web Consortiums (W3C) bietet eine <a href=“ https://www.w3.org/WAI/ER/tools/index.html“>ausführliche Liste</a> von Tools zur Accessibility-Evaluation an.
 
     ## Weitere Informationen und Kontakt
@@ -157,7 +169,7 @@ accessibility:
 basic-grid:
   title: Grundraster und Seitentypen
   content: |
-    # Grundraster
+    ## Grundraster
 
     Die Webseiten bestehen aus drei Bereichen: dem Header, dem vierspaltig aufgebauten Inhaltsbereich und dem Footer.
 
@@ -176,7 +188,7 @@ basic-grid:
 
     ## Inhaltsseite
 
-    Eine Inhaltsseite hat ebenfalls einen Header und einen Footer. Statt des Teaser-Bereichs hat die Seite einen vierspaltigen Inhaltsbereich. Die linke Spalte wird von der Subnavigation genutzt, die mittleren beiden Spalten sind für den eigentlichen Inhalt vorgesehen und die rechte Spalte wird als Kontextspalte verwendet.
+    Eine Inhaltsseite hat ebenfalls einen Header und einen Footer. Statt des Teaser-Bereichs hat die Seite einen vierspaltigen Inhaltsbereich. Die linke Spalte wird von der Subnavigation genutzt, die mittleren beiden Spalten sind für den eigentlichen Inhalt vorgesehen. Die rechte Spalte wird als Kontextspalte verwendet.
 
     ### Linke Navigation
 
@@ -196,7 +208,7 @@ basic-grid:
 cd-elements:
   title: Markenelemente
   content: |
-    # Markenelemente
+    ## Zweck
        Die konsistente Anwendung der Markenelemente sorgt für ein markentypisches "Look and Feel" der Websites des Bundes. Sie stellt sicher, dass eine Website auf den ersten Blick als Website des Bundes identifiziert wird. Weiter vermittelt sie dem Anwender die wesentlichen Werte, die der täglichen Arbeit der Bundesverwaltung zu Grunde liegen: Qualität, Effizienz und Transparenz.
 
     Der Verwendung der folgenden zentralen Markenelemente ist zwingend. Sie sind im CD Bund geregelt und dürfen in keiner Weise modifiziert werden:
@@ -225,12 +237,12 @@ cd-elements:
       <figcaption>Für die Kennzeichnung im Header auf Smartphones kann auch das Kürzel verwendet werden. Wenn die Organisationseinheit ausgeschrieben werden muss, kann die Bezeichnung mehrzeilig werden.</figcaption>
     </figure>
 
-    Dort wo im Header die reduzierte Form der Kennzeichnung verwendet wird, muss im Footer das vollständige Bundeslogo mit Wappen und viersprachiger Wortmarke wiederholt werden.
+    Dort, wo im Header die reduzierte Form der Kennzeichnung verwendet wird, muss im Footer das vollständige Bundeslogo mit Wappen und viersprachiger Wortmarke wiederholt werden.
 
     Die vollständige Bezeichnung der Organisationseinheit wird bei mobilen Geräten ausserdem in einem Bereich oberhalb des Headers eingeblendet. Dieser Bereich wird beim ersten Scrollen ausgeblendet.
 
     <figure>
-       <img src="styleguide-img/schublade.png" alt="Beispiel einer vollständigen Bezeichnung">
+       <img src="/styleguide-img/schublade.png" alt="Beispiel einer vollständigen Bezeichnung">
        <figcaption>Die vollständige Bezeichnung der Organisationseinheit bei Smartphones.</figurecaption>
     </figure>
 
@@ -275,7 +287,7 @@ cd-elements:
 devices:
   title: Ausgabe auf verschiedenen Endgeräten
   content: |
-    # Ausgabe auf verschiedenen Endgeräten
+    ## Responsive Design
        Die Webrichtlinien Bund erlauben die optimierte Ausgabe aller Inhalte einer Website auf verschiedenen Endgeräten wie Desktop Computer, Laptops, Tablets und Smartphones. Das Layout der einzelnen Webseiten und der einzelnen Elemente passt sich der Auflösung des Ausgabegeräts an.
 
     ## Desktop Computer, Laptop und Tablet
@@ -297,15 +309,15 @@ devices:
 guidelines:
   title: Anwendung der Webrichtlinien Bund
   content: |
-    # Aufbau der Richtlinien
+    ## Aufbau
 
     Innerhalb der Richtlinien für das Webdesign Bund kann über die Reiter im Hauptmenu zu den einzelnen Kapiteln navigiert werden.
 
-    Im Kapitel "Grundsätzliches" sind die Grundsätze der Richtlinien für das Webdesign Bund zusammengefasst.
+    Auf der Startseite sind die Richtlinien für das Webdesign Bund zusammengefasst.
+    
+    Unter "Richtlnien für das Webdesign Bund" wird der Aufbau, die Browserkompatibilität und die Installation beschrieben. 
 
-    Unter den Reitern "Grundelemente", "Navigationsmodule" und "Inhaltsmodule" sind die detaillierten Beschreibungen der einzelnen Elemente zu finden.
-
-    Im Kapitel "Barrierefreiheit" sind alle Informationen für die Gestaltung von Websites, die die gesetzlichen Anforderungen an die Barrierefreiheit erfüllen.
+    Unter den Reitern "Grundraster", "Navigationsmodule" und "Inhaltsmodule" sind die detaillierten Beschreibungen der einzelnen Elemente zu finden.
 
     Unter dem Menupunkt "Beispielseiten" werden verschiedene Typen Webseiten vorgestellt. Diese werden in einem neuen Reiter geöffnet. Sie können dort skaliert und so die Darstellung in verschiedenen Auflösungen überprüft werden.
 
@@ -343,7 +355,7 @@ guidelines:
 header-footer:
   title: Header und Footer
   content: |
-    # Header and Footer
+
     Header und Footer erscheinen auf allen Seiten und haben eine fixe Gestaltung. Auf mobilen Geräten wird deren Darstellung angepasst.
 
     ## Header
@@ -361,7 +373,7 @@ header-footer:
 
     In der **Service Navigation** werden Links von übergeordneter Bedeutung (z.B. Kontakt, Jobs, Medien) und die Sprach-Navigation positioniert. Es sollen idealerweise drei, auf keinen Fall aber mehr als fünf Links in der Service-Navigation angeboten werden. Ein Minimum ist der Kontakt und die Sprach-Navigation. Auf mobilen Geräten werden die Links der Service-Navigation in den Footer verschoben.
 
-    Rechts neben der Service-Navigation steht die **Sprachwahl**. Die angebotenen Sprachen werden als Kürzel nach ISO-Norm ISO 639-2/3 aufgeführt (z.B. Deutsch = DE, Französisch = FR, Rätoromanisch = ROH usw.). Auf mobilen Geräten wird die Sprach-Navigation in einem Bereich oberhalb des Headers eingebunden.
+    Rechts neben der Service-Navigation steht die **Sprachwahl**. Die angebotenen Sprachen werden als Kürzel nach ISO-Norm ISO 639-2/3 aufgeführt (z.B. Deutsch = DE, Französisch = FR, Rätoromanisch = RM usw.). Auf mobilen Geräten wird die Sprach-Navigation in einem Bereich oberhalb des Headers eingebunden.
 
     Die Informationen auf den Websites der Bundesverwaltung müssen in den Amtssprachen deutsch, französisch und italienisch angeboten werden. Es ist wichtig, dass die Nutzerinnen und Nutzer sofort sehen, in welchen Amtssprachen der Inhalt zugänglich ist. Demzufolge erscheinen diese Sprachkürzel auf jeder Seite im Header - linksbündig neben der Servicebox - nebeneinander. Falls Inhalte nur in einer oder zwei der Amtssprachen verfügbar sind, ist das Kürzel der dritten Amtssprache nicht aktiv. Beim mouse-over erscheint eine Anzeige, die darüber informiert, dass der Inhalt in der entsprechenden Sprache nicht verfügbar ist.
 
@@ -410,10 +422,7 @@ sample-pages:
   title: Beispielseiten
   content: |
 
-    # Beispielseiten
-
     In den Richtlinien für das Webdesign Bund werden verschiedene Beispielseiten vorgestellt, die auf den beiden Seitentypen "Startseite" und Inhaltsseite aufbauen. Sie zeigen beispielhaft, wie die verschiedenen, vorgestellten Elemente auf Webseiten kombiniert werden können. Die Seiten können als Grundlage für ein Projekt verwendet und für die jeweiligen Kommunikationsbedürfnisse angepasst, erweitert und modifiziert werden.
-
 
     ## Startseite mit Hauptnavigation
 
