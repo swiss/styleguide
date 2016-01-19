@@ -17,9 +17,9 @@ hierarchical-navigation:
 
       Nur auf der Homepage sind alle Reiter geschlossen. Wenn man unterhalb eines Reiters weiter navigiert, bleibt dieser ausgewählt.
 
-      Ein Flyout kann einen Teaser enthalten, welcher aus einem verlinkten Titel, einem Bild, sowie einem Beschreibungstext (max. 70 Zeichen inkl. Leerzeichen)  besteht.
+      Ein Flyout kann einen Teaser enthalten, welcher aus einem verlinkten Titel, einem Bild sowie einem Beschreibungstext (max. 70 Zeichen inkl. Leerzeichen)  besteht.
 
-      Mit `<div class="overlay"></div>` am Ende des `body`-Tags wird das grau Overlay angezeigt.
+      Mit `<div class="overlay"></div>` am Ende des `body`-Tags wird das graue Overlay angezeigt.
     release: |
       **2.1.2:**
         - changed `.active` class to `.current` for current page highlight in the menu
@@ -38,7 +38,7 @@ hierarchical-navigation:
     help: |
       Der Breadcrumb ist eine Linkzeile unterhalb des Headers, der dem Anwender den Pfad, also die Position der aktuell aufgerufenen Webseite in der Informationsarchitektur anzeigt. Wenn keine Globalnavigation vorhanden ist, folgt die Breadcrumb-Navigation nach der roten Linie, die den Kopfbereich abschliesst.
 
-      Dank dem Breadcrumb sieht der Anwender auf einen Blick, wo in der Sitemap er sich befindet.
+      Dank dem Breadcrumb sieht der Anwender auf einen Blick, wo in der Site er sich befindet.
 
       Bei einem Klick auf einen Navigationspunkt im Pfad öffnet sich die entsprechende Seite. Beim Klick auf Links der ersten oder zweiten Ebene der Navigation (Seiten, die keine eigenen Inhalte haben) wird eine Übersichtsseite ohne Navigationsspalte geöffnet.
 
@@ -207,9 +207,9 @@ header:
   treecrumb:
     title: Treecrumb Bundesverwaltung
     help: |
-      Die Treecrumb-Navigation ordnet die aktuelle Website in den Kontext aller Websites der Bundesverwaltung ein. Zudem dient sie der effizienten departementsübergreifenden  Erschliessung. Die Reecrum-Navigation beginnt im mit „Der Bundesrat"
+      Die Treecrumb-Navigation ordnet die aktuelle Website in den Kontext aller Websites der Bundesverwaltung ein. Zudem dient sie der effizienten departementsübergreifenden  Erschliessung. Die Treecrumb-Navigation beginnt mit „Der Bundesrat".
 
-      Im geschlossenen Zustand stellt sie die Hierarchie der Bundesverwaltung als Pfad dar. Durch Klicken auf eine der Hierarchiestufen öffnet sich ein Menü, welches eine Linksammlung im Kontext der gewählten Hierarchiestufe auflistet.
+      Im geschlossenen Zustand stellt sie die Einordnung der Site in die Organisation der Bundesverwaltung als Pfad dar. Durch Klicken auf eine der Hierarchiestufen öffnet sich ein Menü, welches eine Linksammlung im Kontext der gewählten Hierarchiestufe auflistet.
 
       Auf Smartphones fällt die Treecrumb-Navigation weg.
     release: |
@@ -245,7 +245,11 @@ content-navigation:
     title: Prozessnavigation
     help: |
       Die Prozessnavigation wird im Zusammenhang mit Formularen eingesetzt, welche über mehrere Seiten verteilt sind. Der aktive Prozessschritt wird in rot markiert. Die vorhergehenden Schritte sind klickbar und führen zurück zum entsprechenden Prozessschritt.
-      **Achtung:** Das vorliegende Beispiel beschreibt nur das graphische Design; die Prozessnavigation muss in jedem Fall gemäss dem zugrundeliegenden Prozess programmiert werden.
+
+      **Achtung:**
+
+      Das vorliegende Beispiel beschreibt nur das graphische Design; die Prozessnavigation muss in jedem Fall gemäss dem zugrundeliegenden Prozess programmiert werden.
+
   tab-navigation:
     title: Reiter-Navigation
     help: |
@@ -253,7 +257,6 @@ content-navigation:
 
       Die Bezeichnungen der Reiter sind als Beispiel zu lesen. Sie richten sich nach dem effektiven Inhalt der Seite.
 
-      Reference in detailed specification: Chapter **2.5.4**
 footer:
   title: Seitenfuss (Footer)
   site-map:
