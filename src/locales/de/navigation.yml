@@ -7,17 +7,15 @@ hierarchical-navigation:
       Die Globalnavigation zeigt die Haupteinstiegspunkte einer Website als Reiter an. Sie ist durch eine rote Linie von dem darüber liegenden Header getrennt. Die in den Reitern verwendeten Begriffe sollten sorgsam gewählt werden, denn sie geben dem Benutzer einen ersten Eindruck über den Sinn und Zweck der Website.
 
       Verhalten:
-      Durch Klicken auf einen der Reiter öffnet sich ein Mega-Flyout mit einem Menü der Unterseiten. Der Hintergrund wird abgedunkelt.
+      Durch Klicken auf einen der Reiter öffnet sich ein Mega-Flyout mit einem Menü der Unterseiten.
 
-      Es gibt zwei obligatorische Flyout-Typen: Teaser- oder Listen -Flyout. Das Menü zeigt abhängig vom Typ des Flyouts die Unterseiten der zweiten Navigationsebene (Teaser-Flyout) oder auch diejenigen des zweiten und dritten Navigationsebene (Listen-Flyout) an.
+      Es gibt zwei obligatorische Flyout-Typen: Teaser- oder Listen-Flyout. Das Menü zeigt abhängig vom Typ des Flyouts die Unterseiten der zweiten Navigationsebene (Teaser-Flyout) oder auch diejenigen des zweiten und dritten Navigationsebene (Listen-Flyout) an.
       Im Teaser-Flyout kann direkt eine Seite des zweiten Navigationsebene und im Listen-Flyout direkt eine Seite des dritten Navigationsebene angewählt werden. Man kann also Navigationsknoten überspringen, für die es keine Inhalte gibt.
       Es ist möglich, weitere Flyout-Typen zu entwickeln und einzusetzen. Das EDA hat zum Beispiel ein Flyout für die Länderauswahl realisiert.
 
-      Das Flyout kann durch Klicken der "Schliessen"-Funktionen (oben rechts und unten), durch Klicken auf den Hintergrund oder durch nochmaliges Klicken auf denselben Reiter wieder geschlossen werden.
+      Das Flyout kann durch Klicken der "Schliessen"-Funktionen (oben rechts), durch Klicken auf den Tab mit dem schwarzen Dreieck (an der unteren Kante), durch Klicken auf den Hintergrund oder durch nochmaliges Klicken auf denselben Reiter wieder geschlossen werden.
 
       Nur auf der Homepage sind alle Reiter geschlossen. Wenn man unterhalb eines Reiters weiter navigiert, bleibt dieser ausgewählt.
-
-      Ein Flyout kann einen Teaser enthalten, welcher aus einem verlinkten Titel, einem Bild sowie einem Beschreibungstext (max. 70 Zeichen inkl. Leerzeichen)  besteht.
 
       Mit `<div class="overlay"></div>` am Ende des `body`-Tags wird das graue Overlay angezeigt.
     release: |
