@@ -221,7 +221,7 @@ header:
 
         - added `h2.sr-only` for more screen reader clarity
 content-navigation:
-  title: Content navigation
+  title: Inhaltsnavigation
   pagination:
     title: Paging
     help: Mit der Paging-Funktion kann der Anwender durch eine grosse Anzahl Elemente blättern , die in Seiten (Pages) angeordnet sind. Das Element erscheint oberhalb und unterhalb der Elementliste.
@@ -234,11 +234,11 @@ content-navigation:
   anchor-links:
     title: Anker-Links
     help: Ein Anker-Link ist eine Sprungmarke, mit dem eine Position innerhalb der aktuellen Seite direkt angesteuert werden kann.
-  anchor-links:
+  top-links:
     title: Top-Links
     help: |
       Der Top-Link ist das Gegenstück zum Anker-Link: Er bringt den Anwender von jeder Position in der aktuellen Seite wieder zurück zum Seitenanfang.
-  top-links:
+  endofpage-links:
     title: Seitenende-Links
     help: Der Link am Seitenende ist ein spezieller Top-Link. Jede Seite (mit Ausnahme der Startseite und der Seiten auf Level 1) schliesst mit einem solchen Seitenende-Link ab. Er enthält einen Link zum Anfang der aktuellen Seite und das Datum der letzten Aktualisierung der Inhalte dieser Seite.
   process-navigation:
