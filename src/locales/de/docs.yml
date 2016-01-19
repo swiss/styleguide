@@ -121,7 +121,7 @@ accessibility:
 
     ### Icons
 
-    Font Icons können von Screenreader oft nicht gelesen werden. Daher ist ein zusätzlicher sichtbarer oder unsichtbarer Text (<span class="sr-only">icon description</span>) notwendig.
+    Font Icons können von Screenreader oft nicht gelesen werden. Daher ist ein zusätzlicher sichtbarer oder unsichtbarer Text ('<span class="sr-only">icon description</span>') notwendig.
     Die Icons selbst können dann als aria-hidden="true" definiert werden.
 
     ### Accesskeys – Accessibility-Navigation
@@ -132,6 +132,12 @@ accessibility:
 
     Weitere Beispiele guter Praxis für die Gestaltung von barrierefreien Inhalten sind in der «Accessibility-Checkliste für AEM» aufgeführt.
 
+    ## Nicht barrierefreie Elemente
+    
+    Die Elemente Slideshow und Karussell sind nicht vollständig barrierefrei zugänglich. Falls sie dennoch eingesetzt werden, sind sie für Screenreader mit dem Befehl aria-hidden="true" auszublenden. Die Inhalte sind in diesem Fall in einer für Screenreader nutzbaren Form anzubieten. 
+    
+    Dies kann erreicht werden, indem der Inhalt einer Slideshow oder eines Karussells als herkömmliche HTML-Liste nur für Screenreader sichtbar ('<div class="sr-only">'> wiederholt wird. Alternativ kann ein nur für Screenreader sichtbarer Link auf eine Seite mit den barrierefrei dargestellten Inhalten ergänzt werden.
+    
     ## Hilfsmittel
 
     Nachfolgend eine Auswahl von Hilfsmittel zur Gestaltung und Prüfung der Barrierefreiheit von Webseiten:
@@ -150,7 +156,7 @@ accessibility:
 
       ### Web Developer Toolbar (Firefox Add-on)
 
-      Diese Toolbar eignet sich Deaktivierung von JS, Hervorhebung von bestimmten HTML—Elementen oder zur Überprüfung von Bildern.
+      Diese Toolbar eignet sich für die Deaktivierung von JS, Hervorhebung von bestimmten HTML-Elementen oder zur Überprüfung von Bildern.
 
       ### Color Contrast Analyzer
 
