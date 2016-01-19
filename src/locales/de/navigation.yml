@@ -9,7 +9,7 @@ hierarchical-navigation:
       Verhalten:
       Durch Klicken auf einen der Reiter öffnet sich ein Mega-Flyout mit einem Menü der Unterseiten.
 
-      Es gibt zwei obligatorische Flyout-Typen: Teaser- oder Listen-Flyout. Das Menü zeigt abhängig vom Typ des Flyouts die Unterseiten der zweiten Navigationsebene (Teaser-Flyout) oder auch diejenigen des zweiten und dritten Navigationsebene (Listen-Flyout) an.
+      Es gibt verschiedene Flyout-Typen: z. B. Teaser- oder Listen-Flyout. Das Menü zeigt abhängig vom Typ des Flyouts die Unterseiten der zweiten Navigationsebene (Teaser-Flyout) oder auch diejenigen des zweiten und dritten Navigationsebene (Listen-Flyout) an.
       Im Teaser-Flyout kann direkt eine Seite des zweiten Navigationsebene und im Listen-Flyout direkt eine Seite des dritten Navigationsebene angewählt werden. Man kann also Navigationsknoten überspringen, für die es keine Inhalte gibt.
       Es ist möglich, weitere Flyout-Typen zu entwickeln und einzusetzen. Das EDA hat zum Beispiel ein Flyout für die Länderauswahl realisiert.
 
