@@ -117,9 +117,7 @@ accessibility:
 
     Manchmal gibt es auf derselben Seite Inhalte in verschiedenen Sprachen. Screenreader müssen mit dem "lang"-Attribut auf den Sprachwechsel aufmerksam gemacht werden. Beispiel:
 
-    <p lang="de">Barrierefreiheit ist einfach.</p>
-    <p lang="en">Web content accessibility ist simple.</p>
-    <p lang="fr">L'accessibilité aux contenus web est facile.</p>
+  outro: |
 
     ### Icons
 
@@ -158,13 +156,12 @@ accessibility:
 
       <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyzer</a> ist ein Werkzeug, das dabei hilft, den Kontrast zwischen Vorder- und Hintergrundfarbe zu analysieren.
 
-      Die Web Accessibility Initiative (WAI) des World Wide Web Consortiums (W3C) bietet eine <a href=" https://www.w3.org/WAI/ER/tools/index.html">ausführliche Liste</a> von Tools zur Accessibility-Evaluation an.
+    Die Web Accessibility Initiative (WAI) des World Wide Web Consortiums (W3C) bietet eine <a href=" https://www.w3.org/WAI/ER/tools/index.html">ausführliche Liste</a> von Tools zur Accessibility-Evaluation an.
 
     ## Weitere Informationen und Kontakt
 
     Geschäftsstelle E-Accessibility Bund (2015-2017)
     <a href="mailto:markus.riesch@gs-edi.admin.ch">Markus Riesch</a> Tel. +41584625463
-
 
 basic-grid:
   title: Grundraster und Seitentypen

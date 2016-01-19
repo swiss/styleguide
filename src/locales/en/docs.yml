@@ -89,6 +89,12 @@ accessibility:
 
     Sometimes, on the same page, there is content in different languages. The "lang" atttribute can be used to notify the Screen readers of the language switch.
 
+  outro: |
+
+    ### Icons
+
+    ### Accesskeys
+
 basic-grid:
   title: Basic Grid and Page Types
   content: |
