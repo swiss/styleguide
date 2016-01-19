@@ -16,7 +16,7 @@ index:
 
     ## Barriereifreiheit (Accessibility)
 
-    Die Bundesverwaltung ist gesetzlich verpflichtet, die Online-Informationen barrierefrei anzubieten. Die Vorgaben, Massnahmen und Hinweise für die Erstellung barrierefreier Websites sind im Kapitel <a href=http:docs/07-accessibility.html“>"Barrierefreiheit"</a> beschrieben.
+    Die Bundesverwaltung ist gesetzlich verpflichtet, die Online-Informationen barrierefrei anzubieten. Die Vorgaben, Massnahmen und Hinweise für die Erstellung barrierefreier Websites sind im Kapitel "Barrierefreiheit"</a> beschrieben.
 
     ## Responsive Design
 
@@ -24,7 +24,7 @@ index:
 
     ## Zielgruppen
 
-    Die Webrichtlinien richten sich an bundesinterne Projektleitende und externe Dienstleister. Projektleitenden bietet sie einen Überblick über die Gestaltungsvorgaben. Entwicklerteams können die Seitentypen und Elemente direkt verwenden. Sie sind in standardkonformem HTML-Code umgesetzt und können zusammen mit den CSS- und JavaScript-Dateien verwendet werden.
+    Die Webrichtlinien richten sich an bundesinterne Projektleitende und externe Dienstleister. Projektleitenden bieten sie einen Überblick über die Gestaltungsvorgaben. Entwicklerteams können die Seitentypen und Elemente direkt verwenden. Sie sind in standardkonformem HTML-Code umgesetzt und können zusammen mit den CSS- und JavaScript-Dateien verwendet werden.
 
     ## Obligatorische und empfohlene Elemente
 
@@ -44,7 +44,7 @@ index:
 
     ### 2. Verbindliche Elemente <span class="label label-admin">FIX</span>
 
-    Verbindliche Elemente müssen nicht zwingend eingesetzt werden. Wenn sie jedoch verwendet werden, sind sie in ihrer Position und Gestaltung fix. Sie dürfen daher nicht modifiziert werden. Änderungen an diesen verbindlichen Elementen benötigen zwingend eine Genehmigung der KID. Es handelt sich um folgende Elemente:
+    Verbindliche Elemente müssen nicht zwingend eingesetzt werden. Wenn sie jedoch verwendet werden, sind sie in ihrer Position und Gestaltung fix. Sie dürfen daher nicht modifiziert werden. Änderungen an diesen verbindlichen Elementen benötigen zwingend eine Genehmigung der Konferenz der Informationsdienste (KID). Es handelt sich um folgende Elemente:
 
       - Alle sonstigen Header-Elemente (Treecrumb, Service- Navigation, Suche, Themen A-Z)
       - Globalnavigation
@@ -71,7 +71,7 @@ index:
 
     Flexible Elemente sind in den Detailbeschreibungen mit dem folgenden Icon gekennzeichnet: <span class="label label-admin">FLEX</span>
 
-    Darüber hinaus steht es jedem Projekt frei im Rahmen des durch die Marken- und verbindlichen Elemente aufgespannten Rahmens eigene Elemente zu entwickeln. Diese neuen Elemente können dem Webforum zur Aufnahme in die Web-Richtlinien vorgeschlagen werden.
+    Darüber hinaus steht es jedem Projekt frei, im Rahmen des durch die Marken- und verbindlichen Elemente aufgespannten Rahmens eigene Elemente zu entwickeln. Diese neuen Elemente können dem Webforum zur Aufnahme in die Web-Richtlinien vorgeschlagen werden.
 
     ## Download
 
@@ -79,13 +79,15 @@ index:
 
     ## Überarbeitung und Weiterentwicklung
 
-    Die Entwicklung der Richtlinien, die Issues und Releases sind auf Github dokumentiert: <a href=http://swiss.github.io/styleguide/index.html“>Richtlinien für das Webdesign Bund</a>. Fehlermeldungen und Anregungen sind dort einzugeben. Dafür ist ein Konto bei Github nötig. Weitere Auskünfte dazu: <a href=“mailto:webforum@bk.admin.ch“>Webforum Bund</a>.
+    Die Entwicklung der Richtlinien, die Issues und Releases sind auf Github dokumentiert: <a href="http://github.com/swiss/styleguide“>Richtlinien für das Webdesign Bund</a>. Fehlermeldungen und Anregungen sind dort einzugeben. Dafür ist ein Konto bei Github nötig. Anfragen dazu bitte per Mail an <a href=“mailto:webforum@bk.admin.ch“>Webforum Bund</a>.
 
     Das Webforum Bund überprüft die Webrichtlinien periodisch auf Aktualität und Konformität mit den Entwicklungen im Web.
 
-    Bei Bedarf und in Absprache mit der KID, den Leistungserbringern und der Fachstelle CD Bund leitet das Webforum Bund einen Releasewechsel ein.
+    Bei Bedarf und in Absprache mit der KID, dem Informatiksteuerungsorgan ISB, den Leistungserbringern und der Fachstelle CD Bund leitet das Webforum Bund einen Releasewechsel ein.
 
     Voraussetzung ist jeweils, dass die Finanzierung gesichert ist.
+    
+    Änderungen der Markenelemente müssen von der GSK genehmigt werden, sonstige Änderungen der Webrichtlinien von der KID. 
 
 accessibility:
   title: Barrierefreiheit
