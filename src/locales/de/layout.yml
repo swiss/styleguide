@@ -9,12 +9,13 @@ form-elements:
     help: |
       Inputfelder erlauben die Eingabe von Inhalten (z.B. Name).
 
-      Für die Eingabe eines Datums wird eine HTM-5-Lösung angeboten. Bei Browsern die HTML 5 nicht unterstützen, muss das Datum manuell eingegeben werden.
-      **Barrierefreiheit**
-      The following has to be taken into account for barrier-free accessibility:
-      The name of the form and the form box must be linked to a label. A label ID may only appear once on a page. Required fields must have sensible names or, preferably, use WAI.
+      Für die Eingabe eines Datums wird eine HTM-5-Lösung angeboten. Bei Browsern, die HTML 5 nicht unterstützen, muss das Datum manuell eingegeben werden.
+      
+      **Barrierefreiheit
+      
+        Für die Sicherstellung der Barrierefreiheit müssen die Form und die Inputboxen mit Labels bezeichnet sein. Eine Label-ID darf nur einmal pro Seite verwendet werden. Felder sollten verständlich bezeichnet sein, vorzugsweise wird WAI verwendet.
 
-      You can use the `.has-error`, `.has-warning` or `.has-success` classes to send feedback to the user.
+        Mit den Klassen `.has-error`, `.has-warning` der `.has-success` kann den Usern Feedback gegeben werden.
 
       HTML5 input types: `text`, `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, and `color`
     release: |
@@ -47,8 +48,8 @@ form-elements:
 
       - Custom styling of this element has been removed in favor of browsers’ default for better accessibility. To keep the previous style and variants, the checkbox now have to be inside the label.
   radios:
-    title: Radios
-    help: Radio buttons allow the user to make an unequivocal choice from a predefined list. Radio buttons can also be structured in groups. Only one element in a group may be selected.
+    title: Radio buttons
+    help: Radio buttons ermöglichen es den Usern, aus einer vorgegebenen Liste eine eindeutige Auswahl zu treffen. Radio Buttons können gruppiert werden. Innerhalb einer Gruppe kann nur ein Element ausgewählt werden.
     release: |
       **3.0.0**
 
@@ -115,9 +116,8 @@ general:
 
       **Accessibility**
 
-      If the element should be readable by a screen reader and/or is semantically important, be sure to add the appropriate `aria-` attribute. Otherwise, add an `aria-hidden="true"` attribute to hide it and avoid useless clutter of informations.
-
-      You could also add a `<span class="sr-only">icon description</span>` depending on your needs.
+      Damit das Icon-Element von einem Screenreader gelesen werden kann, und/oder wenn es semantisch wichtig ist, soll es mit dem entsprechenden "aria"-Attribut versehen werden. Sonst wird ein `aria-hidden="true"-Attribute hinzugefügt.
+      Je nach Bedarf ist es auch möglich, `<span class="sr-only">icon description</span>` zu verwenden.
   form-icons:
     title: Form icons
     help: Use the global `.form-icon` class followed by the more specific class
@@ -284,8 +284,12 @@ typography:
     title: Überschriften
     help: |
       Überschriften dienen dazu, den Inhalt einer Seite zu strukturieren. Je höher die Hierarchie (z.B. H1) desto wichtiger ist dieser und wird entsprechend auch so bei Suchmaschinen (z.B. Google) gewichtet. Grundsätzlich sollen nicht zu viele Hierarchien verwendet werden, da sonst die Übersichtlichkeit leidet. Die Titelhierarchien H1 bis H4 heben sich entsprechen gestalterisch voneinander ab (die Hierarchien H5 und H6 wurden nur pro Forma definiert).
-      **Accessibility** Jede Seite hat einen und nur einen H1-Titel. Die nächste Ebene ist H2. Unterhalb eines H2-Titels kann ein oder mehrere H3-Titel gesetzt werden. Unterhalb eines H3 können ein oder mehrere H4 gesetzt werden.
       Überschriften können auch verlinkt sein und werden dann in blau gesetzt.
+      
+      **Accessibility** 
+      
+      Normalsehende Personen erkennen Titel und Struktur einer Seite anhand der Grösse und Auszeichnung der Schrift. Bei sehbehinderten Personen ist dies nicht so. Sie bzw. die Screenreader erhalten diese Informationen aus den <h1> bis <h6>-Tags. Dieses sollten entsprechend zur Gewichtung und nicht zur graphischen Auszeichnung eingesetzt werden. 
+     
   paragraphs:
     title: Absätze
     help: |
@@ -318,7 +322,7 @@ typography:
   links:
     title: Links
     help: |
-      Links haben standardmässig die Textfarbe Blau und sind nicht unterstrichen. Bei Mouseover werden diese rot.
+      Links haben standardmässig die Textfarbe Blau und sind nicht unterstrichen. Bei Mouseover werden diese rot. Bereits geklickte Links werden violett.  
 
       In zwei Fällen wird von dieser Regel abgewichen:
       Bei einem Link im Textfluss wird der verlinkte Text unterstrichen. Links in einem Navigations-Element (z.B. in der Globalnavigation) sind nicht blau, sondern grau. Aussehen und Verhalten dieser speziellen Links, wird in diesen Webrichtlinien an den entsprechenden Stellen separat beschrieben.
@@ -332,5 +336,3 @@ typography:
     title: Seitenende-Link
     help: |
       Der Link am Seitenende ist ein spezieller Top-Link. Jede Seite (mit Ausnahme der Startseite und der Seiten von Level 1) schliesst mit einem solchen Seitenende-Link ab. Er enthält einen Link zum Anfang der aktuellen Seite und das Datum der letzten Aktualisierung der Inhalte dieser Seite.
-
-      Die Druck-Schaltfläche ist bei den Schaltflächen beschrieben.
