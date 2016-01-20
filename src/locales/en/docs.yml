@@ -70,30 +70,13 @@ accessibility:
     All of the Confederation’s Internet resources must be designed in such a way as to enable people with disabilities to use them without restrictions. The Federal Administration is committed to fulfilling the requirements of the “Web Content Accessibility Guidelines (WCAG) 2.0” to conformance level AA.
 
     Additional Information:
+    
+    Internet und Barrierefreiheit - <a href="http://www.edi.admin.ch/ebgb/05114/05208/index.html?lang=de">Informationen des Eidg. Büros für die Gleichstellung von Menschen mit Behinderungen</a> (in German)
 
     [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/)
 
     [The Guidelines of the Confederation (P028)](https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html)
 
-    ## Best practices
-
-    This section provides Accessibility compliant examples for commonly encountered situations.
-
-  title-tag: |
-    ### Page title
-
-    It is recommended to use commas to separate different segments of the "title" tag's content.
-
-  multi-language: |
-    ### Multi-language content
-
-    Sometimes, on the same page, there is content in different languages. The "lang" atttribute can be used to notify the Screen readers of the language switch.
-
-  outro: |
-
-    ### Icons
-
-    ### Accesskeys
 
 basic-grid:
   title: Basic Grid and Page Types
