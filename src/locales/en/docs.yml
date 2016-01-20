@@ -244,10 +244,6 @@ guidelines:
 
     In the section “Example Pages”, various types of web page are presented. They can be scaled directly and the presentation tested on various screen sizes.
 
-    ## Examples Used
-
-    The Confederation Web Guidelines were the outcome of pilot projects initiated by the EDA (Federal Department of Foreign Affairs) and the VBS (Federal Department of Defence, Civil Protection and Sport). This explains some of the examples and terms used in the visualizations (e.g. the terminology in the global navigation). These Web Guidelines primarily contain definitions pertaining to the functional and creative design of the website. They make no reference to the information architecture, nor do they prescribe the terminology to be used.
-
     ## Usage
 
     Please follow [these instructions](https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet) to use the styleguide into your project.
@@ -323,8 +319,8 @@ header-footer:
 sample-pages:
   title: Sample Pages
   content: |
-    Ten different sample pages are shown in the Confederation Web Guidelines, all of them based on the page types “Home page” and “Content Page”. They were created in the course of the EDA, VBS, and BFS (Federal Statistic Office) projects, and they exemplify how the various elements presented can be combined on web pages. These sample pages can be used as the basis for a project and can be adapted, expanded, or modified as required.
-
+    Several sample pages are shown in the Confederation Web Guidelines, all of them based on the page types “Home page” and “Content Page”. They demonstrate how the different elements can be combined. The example pages can be directly used for a project. 
+    
     ## Home Page with Global Navigation
 
     This sample page is suitable for websites with a large volume of information (“large websites”, such as www.eda.admin.ch or www.vbs.admin.ch). The global navigation (first navigation level) is combined with a mega flyout menu (second and possibly also third navigation level). The first and second navigation levels serve to group the content and have no content of their own.
@@ -333,11 +329,7 @@ sample-pages:
 
     Websites with a lower volume of information (such as the websites of the Swiss embassies) use the home page without global navigation. In such cases the user accesses the content directly via the left sidebar sub-navigation.
 
-    ## Sub-Home Page
-
-    Sub-home pages make it possible to use all the elements of the home page on pages that are on a lower navigation level. They are intended to allow subordinate organizational units to have their own home page. Every sub-home page has a left sidebar. There is no context pane. A sub-home page can have its own short URL (e.g. www.luftwaffe.ch) to allow direct access.
-
-    ## Overview Page
+   ## Overview Page
 
     The overview page is based on the content page type, so it has a global navigation section, a left sidebar, and a context pane. It is used to provide a conspicuous point of access to a topic. The various sections of this topic or the subpages (child pages) are introduced in a two-column list of teasers in the middle section.
 
@@ -348,10 +340,6 @@ sample-pages:
     ## Detail Page
 
     The detail page is a classical content page with an article in the middle column.
-
-    ## Unattached Detail Page
-
-    When a detail page is not rooted in the navigation but was accessed via a link in the content of a page on a higher navigation level, it is provided with a “Back to…” link.
 
     ## Publications Page
 
