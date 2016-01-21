@@ -36,14 +36,14 @@ teaser:
 
       Auf Tablets und Smartphones wird die Reiterleiste durch eine Reihe von Punkten ersetzt.
 
-      Achtung: 
-      
+      Achtung:
+
       Bitte Text- und Wortlänge beachten. Die Höhe des Teasers ist fest definiert.
-      
+
       *** Accessibility
-      
-      Das Titelformat H3 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der <section> oder der Seite.     
-    
+
+      Das Titelformat H3 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der <section> oder der Seite.
+
     release: |
       **3.0.0**
       - Improved accessibility by pausing the slideshow when user interact with the component and also by adding a play/pause button.
@@ -52,7 +52,7 @@ teaser:
     help: |
       Anstelle des Brennpunkte-Teasers kann der Teaser Neuigkeiten mit nur einem Beitrag verwendet werden. Dies ist dann sinnvoll, wenn auf der Startseite nur wenige News geschaltet werden und die Frequenz der Änderungen tief ist.
 
-      Er besteht aus einem grossen Bild, einem kurzen Teaser-Text und einem weiterführenden Link. Allenfalls kann er mit einer Titelzeile versehen werden (siehe folgendes Element). 
+      Er besteht aus einem grossen Bild, einem kurzen Teaser-Text und einem weiterführenden Link. Allenfalls kann er mit einer Titelzeile versehen werden (siehe folgendes Element).
   headline:
     title: Titelzeile für Teaser
     help: |
@@ -69,7 +69,7 @@ teaser:
 
       **Accessibility**
 
-      Die Karussell-Komponente ist **nicht** barrierefrei. Wird sie verwendet, müssen die Inhalte auch in einer barrierefreien Form zugänglich gemacht werden. 
+      Die Karussell-Komponente ist **nicht** barrierefrei. Wird sie verwendet, müssen die Inhalte auch in einer barrierefreien Form zugänglich gemacht werden.
     release: |
       **3.0.0**
         - The carousel controls have been moved upper in the DOM to be the easily accessible with the keyboard.
