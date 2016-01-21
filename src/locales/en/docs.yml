@@ -303,7 +303,7 @@ sample-pages:
   title: Sample Pages
   content: |
     Several sample pages are shown in the Confederation Web Guidelines, all of them based on the page types “Home page” and “Content Page”. They demonstrate how the different elements can be combined. The example pages can be directly used for a project. 
-    
+
     ## Home Page with Global Navigation
 
     This sample page is suitable for websites with a large volume of information (“large websites”, such as www.eda.admin.ch or www.vbs.admin.ch). The global navigation (first navigation level) is combined with a mega flyout menu (second and possibly also third navigation level). The first and second navigation levels serve to group the content and have no content of their own.
@@ -312,7 +312,7 @@ sample-pages:
 
     Websites with a lower volume of information (such as the websites of the Swiss embassies) use the home page without global navigation. In such cases the user accesses the content directly via the left sidebar sub-navigation.
 
-   ## Overview Page
+    ## Overview Page
 
     The overview page is based on the content page type, so it has a global navigation section, a left sidebar, and a context pane. It is used to provide a conspicuous point of access to a topic. The various sections of this topic or the subpages (child pages) are introduced in a two-column list of teasers in the middle section.
 
