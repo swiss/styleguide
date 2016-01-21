@@ -148,6 +148,7 @@ ordering-checkout:
   title: Ordering and checkout
   one-line-order-form:
     title: One line order form
+    help: This compact form is used whenever an object (e.g. Publication, Topological Map) should be added to the shopping cart.
   shopping-cart:
     title: Shopping cart
     help: By default, the shopping cart is not shown. Only after an object has been added to the shopping cart does the latter appear in the context pane. It then remains visible until it is either completely deleted or the purchase is finalized.
