@@ -1,13 +1,15 @@
 {
   "name": "swiss-styleguide",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "homepage": "http://swiss.github.io/styleguide",
   "authors": "Antistatique.net",
   "description": "Swiss Admin Styleguide",
   "license": "MIT",
   "main": [
     "./styleguide/index.html",
-    "./build/css/*.css",
+    "./build/css/vendors.css",
+    "./build/css/admin.css",
+    "./build/css/print.css",
     "./build/js/vendors.min.js",
     "./build/js/main.js",
     "./build/fonts/*.eot",
