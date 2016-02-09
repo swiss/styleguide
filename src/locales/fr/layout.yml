@@ -1,0 +1,336 @@
+title: Grille de base
+form-elements:
+  title: Eléments de formulaire
+  fieldsets:
+    title: Regroupement d’éléments de formulaire
+    help: Les intertitres permettent de regrouper des éléments de formulaire en fonction du contenu. On utilise pour cela la balise fieldset.
+  forms:
+    title: Champs de saisie
+    help: |
+      >Les champs de saisie permettent l’entrée de contenu (p. ex. le nom).
+
+      Pour entrer une date, une solution HTLM5 est proposée. Dans les navigateurs qui ne sont pas compatibles HTML5, la date doit être saisie manuellement.
+      
+      **Accessibilité
+      
+        Afin d’assurer l’accessibilité, les formulaires et encadrés de saisie doivent être marqués avec des étiquettes. Un identifiant d’étiquette ne doit être utilisé qu’une seule fois par page. Il convient de désigner les champs de manière compréhensible, de préférence on respectera la WAI.
+
+        Du feedback peut être donné aux utilisateurs grâce aux classes `.has-error`, `.has-warning` ou `.has-success`.
+
+      Types de saisie HTML5: `text`, `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, et `color`
+    release: |
+      **3.0.0**
+        - attributs `required` et `aria-required="true"` ajoutés au champ obligatoire
+
+      **2.6.0**
+        - plugin de calendrier sélecteur de date ajouté comme option. Utilisez cela dans votre script pour initier le plugin pour les champs dont vous avez besoin. Voir la [documentation officielle de Pikaday](https://github.com/dbushell/Pikaday).
+
+      **2.1.8**
+        - **Identifiants** ajoutés à l’étiquette et au texte d’aide, `aria-labelledby` et `role` ajoutés aux boutons pour une meilleure accessibilité
+        - `<fieldset>` et `<legend class="hidden">` ajoutés autour de `.form-group` pour une meilleure accessibilité
+  selects:
+    title: Listes de sélection
+    help: |
+      Une liste déroulante permet d’effectuer une sélection à partir d’une liste prédéfinie. Cette liste apparaît dans un menu après avoir cliqué sur l’élément. Après avoir effectué une sélection, le résultat est affiché.
+      S’il existe plus de dix options, un champ de recherche est proposé en début de liste.
+
+      L’attribut `multiple` sur `<select>` permet aux utilisateurs de sélectionner plus d’une option.
+
+    release: |
+      **2.1.2:**
+
+      - étiquette BeforeSelect ajoutée pour les lecteurs d’écran
+  checkboxes:
+    title: Cases à cocher
+    help: Les cases à cocher sont utilisées lorsqu’un ou plusieurs éléments doivent être sélectionnés dans une liste prédéfinie.
+    release: |
+      **3.0.0**
+
+      - Le style personnalisé de cet élément a été supprimé en faveur du style par défaut du navigateur pour une meilleure accessibilité. Pour garder le style précédent et les variantes, les cases à cocher doivent maintenant être situées à l’intérieur de l’étiquette.
+  radios:
+    title: Boutons radio
+    help: Les boutons radio permettent aux utilisateurs de faire un choix unique dans une liste prédéfinie. Les boutons radio peuvent être regroupés. Un seul élément peut être choisi à l’intérieur d’un groupe.
+    release: |
+      **3.0.0**
+
+      - Le style personnalisé de cet élément a été supprimé en faveur du style par défaut du navigateur pour une meilleure accessibilité. Pour garder le style précédent et les variantes, les boutons radio doivent maintenant être situés à l’intérieur de l’étiquette.
+  buttons:
+    title: Boutons
+    help: |
+      Une distinction est faite entre le bouton principal et secondaire. Le bouton principal est utilisé pour l’action principale (p. ex. envoyer) qui peut également être déclenchée par la touche Entrée du clavier. Le bouton secondaire est utilisé pour les actions moins importantes (p. ex. Annuler).
+
+      Le bouton standard peut être utilisé pour diverses actions. Les boutons peuvent également être combinés dans un groupe de boutons. Comme dans les groupes de boutons radio, on ne peut choisir qu’un seul élément à l’intérieur d’un tel groupe.
+
+      La classe `.btn` permet de concevoir les boutons. La classe peut être utilisée pour les éléments `<input>`, `<button>` ou `<a>`. Il existe quatre variantes de design:
+  button-groups:
+    title: Groupes de boutons
+general:
+  title: Généralités
+  logo:
+    title: Logo
+    help: |
+      Grâce au marquage d’un site Internet, le visiteur reconnait immédiatement l’expéditeur du site et le thème ou l’objectif.
+
+      Le marquage se compose du logo fédéral (blason et marque verbale en quatre langues) et du nom de l’unité organisationnelle avec le sigle approprié (p. ex. DFAE) ou la forme courte (p. ex. MétéoSuisse).
+
+      Ces deux composants sont séparés par une ligne verticale. Pour les smartphones, le logo fédéral dans l’en-tête utilise uniquement le blason. Le nom de l’unité organisationnelle peut être abrégé. Le logo fédéral complet est répété dans le pied de page.
+
+      Le logo est un élément de marque: son utilisation est obligatoire et son apparence ne peut être modifiée.
+    release: |
+      **3.0.0**
+
+      - Ajoutez un conteneur avec la classe `clearfix` autour de la composante de logo
+
+      **2.1.8**
+
+      - `title` ajouté au lien de marque pour l’accessibilité
+  colors:
+    title: Palette de couleurs
+    help: |
+      Les couleurs définies servent à la reconnaissance des sites Internet fédéraux, à la distinction d’éléments et interactions spécifiques ainsi qu’à l’orientation. La palette de couleurs utilisée est un élément de marque: son utilisation est obligatoire.
+
+      Trois couleurs sont utilisées: le ton rouge du logo fédéral, qui est complété par un ton rouge plus clair, un ton bleu et une palette de tons gris.
+
+      On retrouve le rouge dans la ligne rouge qui souligne l’en-tête et comme couleur de sélection dans la navigation et lorsque la souris passe sur un lien (mouseover). A part cela, on travaille avec différents tons gris. Ainsi, les titres et le corps du texte sont par exemple mis en œuvre dans un ton gris sombre.
+  background:
+    title: Arrière-plan
+    help: Un ton gris clair est utilisé comme couleur d’arrière-plan. Il est appliqué automatiquement à `<body>`.
+  images:
+    title: Formats d’image
+    help: Le rapport des côtés des images en format paysage est de 16:10 (format paysage complet – nombre d’or) ou de 16:5 (demi format paysage). Les images en format portrait ne possèdent aucun rapport spécifique des côtés. Cependant, nous recommandons un rapport de 2:3
+  standard-image:
+    title: Image standard
+  captioned-image:
+    title: Image avec légende
+  image-format:
+    title: Formats d’image
+  icons:
+    title: Icônes
+    help: |
+      Les icônes utilisées sont conçues de manière monochrome et plate. Elles sont stockées sous forme de polices Web et se trouvent dans les ressources comme polices TrueType.
+
+      Si l’élément est composé d’une seule icône, la classe est définie dans un conteneur `<span>`. Dans ce cas, la fonction de l’icône doit être expliquée dans un texte «alt». Communiqué: `<span class="" alt="vorwärts">...</span>`
+
+          release: |
+
+      **Accessibilité**
+
+      Afin que l’élément d’icône puisse être lu par un lecteur d’écran et/ou s’il possède une importance du point de vue sémantique, il doit être muni de l’attribut «aria» approprié. Sinon, on ajoutera un attribut `aria-hidden="true".
+      Selon les besoins, on peut également utiliser `<span class="sr-only">icon description</span>`.
+  form-icons:
+    title: Icônes de forme
+    help: Utilisez la classe `.form-icon` globale, suivie de la classe plus spécifique
+tables:
+  title: Tableaux
+  table-standard:
+    title: Tableau standard
+    help: |
+      Tableaux standard constitués du titre de tableau (caption), de la tête du tableau (thead), du corps du tableau (tbody) et du pied du tableau (tfoot). Ce tableau peut être complété par des fonds alternés et/ou l’emphase des lignes ou colonnes.
+
+      Pour un tableau composé de cellules encadrées, on utilisera la classe «.table-bordered».
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>
+        - retirez l’attribut `role="rowheader"` de la balise `<th>`
+
+      **2.1.9**
+
+        - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
+        - balises `<col>` et `<colgroup>` ajoutées avant les tableaux dans certains cas
+
+      **2.1.8**
+
+        - `columnheader`, `rowheader` et `aria-describedby` ajoutés pour une meilleure accessibilité
+  table-cycle:
+    title: Tableau imbriqué (simple)
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+  table-cycle-pairs:
+    title: Tableau imbriqué (multiple)
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `summary` de la balise `<table>`
+  table-with-caption:
+    title: Tableau avec titre
+    help: Dans la balise `<caption>`, on définit un titre de tableau.
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `summary` de la balise `<table>`
+  table-zebra:
+    title: Tableau avec fonds alternés
+    help: Les fonds alternés sont affichés si on ajoute la classe class=’table_zebra’ à la balise du tableau.
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>
+        - retirez l’attribut `role="rowheader"` de la balise `<th>`
+
+      **2.1.9**
+
+        - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
+  table-zebra-cycle-single:
+    title: Tableau imbriqué avec fonds alternés (simple)
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `summary` de la balise `<table>`
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+  table-zebra-cycle-pairs:
+    title: Tableau imbriqué avec fonds alternés (multiple)
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `summary` de la balise `<table>`
+  table-zebra-caption:
+    title: Tableau à fonds alternés avec titre
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `summary` de la balise `<table>`
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+  table-highlight:
+    title: Tableau avec mise en évidence
+    help: |
+      Ce tableau est dérivé du tableau standard, mais il possède en plus l’activation des fonds alternés et l’emphase appliquée sur des cellules du tableau (class=’selected’).
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>
+        - retirez l’attribut `role="rowheader"` de la balise `<th>` 
+
+      **2.1.9**
+
+        - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
+  table-highlight-cycle:
+    title: Tableau imbriqué avec mise en évidence (simple)
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `summary` de la balise `<table>`
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+  table-highlight-cycle-pairs:
+    title: Tableau imbriqué avec mise en évidence (multiple)
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `summary` de la balise `<table>`
+  table-highlight-caption:
+    title: Tableau avec titre et mise en évidence
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `summary` de la balise `<table>`
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+  table-sortable:
+    title: Tableau triable
+    help: Le tableau triable met automatiquement en évidence la colonne triée. (classe `table-sort`)
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+        - retirez l’attribut `role="rowheader"` de la balise `<th>`
+  table-expandable:
+    title: Tableau avec masquage et affichage de lignes
+    help: Certaines lignes du tableau peuvent être dépliées pour afficher des détails concernant un enregistrement.
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>
+        - retirez l’attribut `role="rowheader"` de la balise `<th>` 
+
+      **2.5.0**
+
+        - emballer le texte `<a>` dans une balise `<th>` s’il s’agit d’un lien «collapse»
+
+      **2.1.9**
+
+        - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
+
+      **2.1.8**
+
+        - emballer le texte `<a>` dans une balise `<th>` s’il s’agit d’un lien «collapse»
+  table-ruled:
+    title: Tableau avec lignes
+    help: Les tableaux avec lignes conviennent particulièrement bien à la représentation de rapports simples 1:1. On obtient les lignes du tableau en ajoutant la classe class=’table_simple’ à la balise du tableau.
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+
+      **2.1.9**
+
+        - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
+  table-unruled:
+    title: Tableaux sans lignes
+    help: Les tableaux sans lignes conviennent pour la représentation de propriétés, p. ex. d’une publication. Un tableau simple sans lignes sera marqué par la classe class=’table_naked’.
+    release: |
+      **3.0.0**
+
+        - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+
+      **2.1.9**
+
+        - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
+
+typography:
+  title: Typographie
+  titles:
+    title: Titres
+    help: |
+      Les titres servent à structurer le contenu d’une page. Plus la hiérarchie est élevée (p. ex. H1), plus le titre est important et il sera pondéré en conséquence par les moteurs de recherche (p. ex. Google). En général, il convient de ne pas utiliser trop hiérarchies, car sinon la clarté pourrait en pâtir. Les hiérarchies de titres H1 à H4 se démarquent les unes des autres en termes de design (les hiérarchies H5 et H6 ont seulement été définies pour la forme).
+      Les titres peuvent également être munis de liens. Ils seront alors affichés en bleu.
+      
+      **Accessibilité** 
+      
+      Les personnes possédant une vue normale reconnaissent les titres et la structure d’une page à l’aide de la taille et de l’emphase de la police. Tel n’est pas le cas chez les personnes malvoyantes. Elles (ou les lecteurs d’écran) reçoivent ces informations des <h1> balises <h6>correspondantes. Il convient donc de les utiliser pour la pondération et non pour une mise en évidence d’ordre graphique.
+     
+  paragraphs:
+    title: Paragraphes
+    help: |
+      ### Chapeau
+      Au début d’un texte plus long, on peut placer un chapeau qui résume les aspects les plus importants du texte. La police sera mise en gras.
+  text-elements:
+    title: Corps de texte
+    help: |
+      La taille de police, la longueur et l’espacement des lignes du corps de texte sont optimisés pour une lisibilité optimale. Les citations sont mises en italique. Les liens dans le corps de texte sont soulignés. Cependant, il convient de les utiliser avec parcimonie. Il est préférable de placer les liens à la fin d’un paragraphe.
+  blockquote:
+    title: Citation
+  lists:
+    title: Listes
+    help: |
+      Les listes sont utilisées pour représenter des contenus de manière structurée et pour permettre à l’utilisateur d’obtenir un aperçu rapide d’un sujet. Les listes suivantes sont utilisées:
+        -  Listes à puces (listes d’affichage)
+        -  Listes ordonnées (listes numérotées)
+
+  unstyled-lists:
+    title: Liste sans numérotation ou puces
+    help: |
+      Les listes sans puces ou numérotation sont utilisées pour l’énumération de liens. Cela se fait à l’aide de la classe `.list-unstyled`.
+
+  definition-lists:
+    title: Liste de définitions
+    help: |
+      Ce type de liste est utilisé pour afficher de manière claire les explications de termes.
+
+  links:
+    title: Liens
+    help: |
+      Par défaut, les liens sont bleus et le texte n’est pas souligné. Lorsque la souris passe sur un lien (mouseover), il devient rouge. Les liens sur lesquels on a déjà cliqué deviennent violets.  
+
+      On dévie de cette règle dans deux cas:
+      dans le cas d’un lien situé dans le corps de texte, le texte muni du lien est souligné. Les liens situés dans un élément de navigation (p. ex. dans la navigation globale) ne sont pas bleu, mais gris. L’apparence et le comportement de ces liens spéciaux sont décrits séparément aux endroits appropriés dans les présentes lignes directrices pour le webdesign.
+
+      Les classes `.icon` permettent d’ajouter une icône avant ou après le lien (classe `.icon--external` pour les liens externes).
+  top-link:
+    title: Lien vers le haut de page
+    help: |
+      Le lien vers le haut de page (top-link) est la contrepartie du lien d’ancre: il ramène les utilisateurs de n’importe quelle position de la page vers le haut de la page.
+  end-page-link:
+    title: Lien de fin de page
+    help: |
+      Le lien situé en fin de page est un top-link spécial. Chaque page (à l’exception de la page d’accueil et des pages de niveau 1) se termine par un tel lien de fin de page. Il comporte un lien vers le haut de la page actuelle ainsi que la date de la dernière mise à jour des contenus de cette page.

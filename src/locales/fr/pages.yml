@@ -1,0 +1,20 @@
+title: Pages d’exemple
+detail:
+  title: Page de détails
+forms:
+  title: Formulaire
+home-without-nav:
+  title: Page d’accueil avec navigation principale
+homepage-global-nav:
+  title: Page d’accueil sans navigation principale
+preview-without-nav:
+  title: Page d’aperçu sans navigation principale
+preview:
+  title: Page d’aperçu
+publications:
+  title: Publications
+results:
+  title: Résultats de recherche
+subpage:
+  title: Sous-page
+

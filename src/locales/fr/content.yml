@@ -1,0 +1,250 @@
+title: Modules de contenu
+widgets:
+  title: Widgets
+  alerts:
+    title: Remarques
+    help: |
+      Les remarques fournissent aux utilisateurs des informations dont ils doivent tenir compte. On les trouve souvent dans des formulaires de commande, en cas d’indications erronées (adresse e-mail) ou manquantes.
+
+      Les variantes suivantes sont disponibles: `.alert-success` (confirmation)  `.alert-info` (information) `.alert-warning` (avertissement) `.alert-danger` (danger)
+    release: |
+      **Accessibilité**
+      Vous pouvez ajouter un `<span class="sr-only">type d’alerte</span>` si le `role="alert"` ne fournit pas suffisamment d’informations à l’utilisateur final.
+
+  emergency:
+    title: Bannière de crise
+    help: |
+      La bannière de crise est affichée sur la page d’accueil en cas d’événements de grande urgence. Elle est toujours placée en haut de la page d’accueil.
+
+      Il est important d’utiliser cet élément uniquement dans des situations d’urgence – et donc avec parcimonie.
+  contact-box:
+    title: Encadré de contact
+    help: |
+      L’encadré de contact permet de prendre contact au sujet du contenu de la page. Il est toujours placé en première position dans la colonne de contexte. Si un seul contact général, accessible via la navigation de service, est disponible pour l’ensemble du site Internet, il n’y aura pas d’encadré de contact.
+
+      L’encadré de contact comporte deux onglets: «Contact» et «Plan». Sous l’onglet «Contact» seront affichés la personne à contacter, l’adresse, le numéro de téléphone, le formulaire de contact etc. Si nécessaire, des informations complémentaires telles que les horaires d’ouverture (par exemple d’une ambassade) peuvent être indiquées. Sous l’onglet «Plan», le contact est localisé graphiquement sur un extrait de plan et l’adresse est à nouveau indiquée en abrégé.
+
+      Un clic sur le lien «Imprimer les informations de contact» permet d’ouvrir une nouvelle fenêtre de navigateur, affichant les coordonnées de contact sous une forme optimisée pour l’impression.
+
+      Sur les tablettes, le contact est affiché en bas du contenu de la page avec une mise en page en deux colonnes. Les contenus des deux onglets sont affichés côte à côte.
+teaser:
+  title: Teaser
+  focus:
+    title: A la une
+    help: |
+      Le teaser «à la une» comprend deux à quatre articles actuels et sélectionnés par la rédaction qui doivent être affichés de manière bien visible. Normalement, le teaser «à la une» est placé tout en haut de la page d’accueil. Il est composé d’une grande image, d’un titre, d’un texte d’accroche court et d’un lien pour en savoir plus. L’affichage bascule automatiquement entre les articles sélectionnés. L’utilisateur peut sélectionner un article spécifique via une barre d’onglets; la bascule automatique est alors interrompue. Elle est également interrompue lorsque l’utilisateur clique sur le bouton Start/Stop en haut à gauche de l’image, lorsqu’il déplace la souris dans le conteneur du teaser (hover) ou qu’il commande ce dernier via son clavier (focus). En quittant le teaser (souris/focus), la bascule automatique reprend.
+
+      Sur les tablettes et smartphones, la barre d’onglets est remplacée par une série de points.
+
+      Attention:
+
+      veuillez respecter la longueur des textes et des mots. La hauteur du teaser est déterminée de manière fixe.
+
+      *** Accessibilité
+
+      Le format de titre H3 dans les exemples de teaser ne constitue pas une exigence générale. Le format (H1, H2, H3, etc.) dépend de l’importance du titre au sein de la structure <section> de la page.
+
+    release: |
+      **3.0.0**
+      – Amélioration de l’accessibilité en mettant le diaporama en pause lorsque l’utilisateur interagit avec le composant et aussi en ajoutant un bouton de lecture/pause.
+  news:
+    title: Actualités
+    help: |
+      Au lieu du teaser «à la une», on peut utiliser le teaser «actualités» avec un seul article. Cela est utile lorsque peu d’actualités sont publiées sur la page d’accueil et lorsque la fréquence des changements est faible.
+
+      Il est composé d’une grande image, d’un texte d’accroche court et d’un lien pour en savoir plus. Il peut éventuellement être muni d’une barre de titre (voir élément suivant).
+  headline:
+    title: Barre de titre pour teaser
+    help: |
+      L’élément «barre de titre» permet de munir un teaser d’un titre supplémentaire ou de réunir plusieurs teasers dans un groupe.
+
+      La barre de titre se compose du titre, d’un lien facultatif vers des sujets connexes et d’une ligne de 2 pixels de hauteur.
+
+  carousel:
+    title: Carrousel
+    help: |
+      Un carrousel permet de présenter un thème à partir de différentes perspectives. Les divers articles basculent automatiquement. 
+
+      Le carrousel se compose de différents blocs d’informations, eux-mêmes composés d’une grande image, d’une image plus petite facultative, d’un titre d’accroche court, d’un texte et d’un lien pour en savoir plus.
+
+      **Accessibilité**
+
+      La composante du carrousel n’est **pas** totalement accessible. Si elle est utilisée, le contenu doit également être mis à disposition sous une forme accessible à tous.
+    release: |
+      **3.0.0**
+        – Les commandes du carrousel ont été déplacées plus haut dans le DOM pour être plus facilement accessible avec le clavier.
+
+      **2.5.1**
+        - Placer `<figure>` (élément) après `<h4>` pour éviter un alignement disgracieux
+  slideshow:
+    title: Diaporama
+    help: |
+      Un diaporama permet d’afficher de manière attrayante un groupe d’images dont les thèmes sont connexes. Grâce à une fonction permettant de tourner les pages, on peut passer d’une image à l’autre. Le diaporama utilise le plugin jQuery ([Blueimp Bootstrap Image Gallery](https://github.com/blueimp/Bootstrap-Image-Gallery)) pour afficher les images en mode plein écran. Attention: Insérer la mise en page correcte avant la journée de clôture `</body>` (voir exemple ci-dessous).
+
+      **Accessibilité**
+
+      La composante du diaporama n’est **pas** totalement accessible. Si elle est utilisée, les contenus doivent également être mis à disposition sous une forme accessible à tous.
+
+    release: |
+      **2.5.3:**
+
+      - ordre inversé entre les éléments `<small>` et `<div>` à l’intérieur du conteneur `.carousel-controls`
+      - classe `.pull-right` supprimée de ces 2 mêmes éléments
+      - classe `.pull-right` ajoutée à l’élément `.carousel-controls`
+  text-teaser:
+    title: Teaser de texte
+    help: DLe teaser de texte est un élément simple qui est le plus souvent utilisé dans les listes. Il est composé d’un titre muni d’un lien, suivi d’un bloc de texte.
+  dossier-teaser:
+    title: Teaser de dossier
+    help: |
+      Le teaser de dossier sert à introduire des thèmes sur des pages d’accueil ou d’aperçu.
+
+      Il est composé d’une image au format 16:10, du titre du thème ainsi que d’un texte d’introduction court. Le lien du titre et de l’image mène vers la page de détails correspondante.
+
+      Les teasers de dossier peuvent être groupés avec une barre de titre. Il convient alors de veiller à ce que la hiérarchie des titres de la page reste conforme aux exigences d’**accessibilité**.
+  person-teaser:
+    title: Teaser de personne
+    help: |
+      Pour mettre particulièrement en évidence un thème sur une page d’accueil, on peut utiliser au maximum un teaser de personne. Sur les pages des départements, il est par exemple utilisé pour présenter le Conseiller fédéral correspondant. 
+
+      Le teaser de personne est composé, comme le teaser de dossier, d’une image au format 16:10, du titre du thème ainsi que d’un texte d’introduction court. Le lien du titre et de l’image mène vers la page de détails correspondante. De plus, le teaser dispose d’un arrière-plan gris.
+    release: |
+      **2.1.1:**
+
+      - élément `.well` emballé dans `<div class="bordered-well"></div>`
+  publications-preview:
+    title: Présentation des publications
+    help: |
+      Sur la forme, la présentation des publications est un teaser très flexible. Il est composé d’un titre facultatif, d’une image facultative, d’une légende d’image facultative et du texte. Le texté peut contourner l’image à droite. Alternativement, cet élément de contenu pet être imbriqué dans un encadré d’information gris.
+  news-feed:
+    title: Flux d’actualités
+    help: Dans le teaser des actualités, divers éléments d’actualités sont présentés par ordre chronologique. A l’aide d’une barre de défilement, l’utilisateur peut faire défiler le contenu du teaser vers le bas et ainsi voir tous les éléments d’actualités proposés. Chaque élément comporte la date, le type d’information et le titre muni du lien menant vers l’actualité.
+    release: |
+      **2.0.1:**
+
+      - classe `.news-feed` ajoutée à l’élément `.list-group`
+      - wrapper `.scroll-y` contenant tous les éléments `.list-group-item` ajouté
+  rss-feed:
+    title: Flux RSS
+    help: |
+      Un flux RSS est un teaser très spécialisé permettant de consulter exclusivement des flux RSS.
+
+      Le titre se compose toujours d’une icône RSS et du texte «RSS». En-dessous, on trouve une liste de liens.
+content-containers:
+  title: Conteneur de contenu
+  elements-list:
+    title: Liste d’éléments
+    help: |
+      La liste d’éléments est utilisable de manière polyvalente. En général, elle représente un certain nombre d’éléments de contenu différents. Il peut s’agir de divers types: des adresses, publications, discours, communiqués de presse. Ils peuvent être dotés d’images ou non.
+  further-information:
+    title: Informations complémentaires
+    help: |
+      En-dessous du contenu d’une page, des informations complémentaires peuvent être affichées. Elles ont pour but de proposer des contenus (p. ex. des publications, actualités ou liens) qui sont en rapport avec le contenu mais qui ne sont pas directement abordés dans le texte et donc pas munies d’un lien. Ces contenus sont rangés dans des onglets. 
+
+      Il s’agit ici d’une forme spécifique de la navigation horizontale par onglets. On peut utiliser jusqu’à cinq onglets. La désignation des onglets n’est pas prédéterminée. Cependant, à l’intérieur d’un site Internet, celle-ci doit être utilisée de manière uniforme (toujours identique). Par exemple «Documents», «Publications», «Services», «Principes juridiques», «Liens», «Actualités», etc.
+  collapsible-panel:
+    title: Encadré pliant
+    help: |
+      L’encadré pliant est un élément interactif à l’intérieur duquel se cachent d’autres éléments interactifs ou d’autres contenus. Par défaut il est fermé. Un clic permet d’ouvrir l’encadré afin de rendre les contenus visibles. Un autre clic permet de refermer l’encadré.
+
+ordering-checkout:
+  title: Commande et check-out
+  one-line-order-form:
+    title: Formulaire de commande à une ligne
+    help: |
+      Ce formulaire compact est utilisé lorsqu’un objet (p. ex. une publication, une carte topologique, etc.) doit être ajouté au panier.
+  shopping-cart:
+    title: Panier
+    help: |
+      Par défaut, le panier n’est pas affiché. C’est seulement lorsqu’un objet a été ajouté au panier qu’il apparaît dans la colonne de contexte. Il reste visible jusqu’à ce qu’il soit complètement supprimé ou jusqu’à ce que le processus d’achat soit achevé.
+    release: |
+      **2.5.0**
+
+      - `span.sr-only` ajouté à l’icône de suppression
+
+standard-elements:
+  title: Eléments standard
+  page-title:
+    title: Titre de page
+    help: |
+      Chaque page, à l’exception de la page d’accueil, doit comporter un titre de page. Celui-ci constitue toujours le premier élément de la page de contenu. Il n’est précédé du lien «Retour à l’aperçu» que sur les pages de détails non reliées (p. ex. pour les publications).
+
+      Le texte du titre de la page est pertinent pour le positionnement dans les résultats de recherche (p. ex. sur Google).
+  image-text:
+    title: Texte et image
+    help: |
+      Cet élément se compose d’un corps de texte pouvant être complété par un titre et des intertitres. Une image avec légende d’image, qui peut être contournée à droite par le texte, peut également être ajoutée. Diverses tailles d’images (principalement dans les proportions du nombre d’or) sont prévues.
+
+      Pour les petites images, on peut utiliser les classes `pull-left` ou `pull-right` dans l’élément HTML `<figure>`.
+  info-box:
+    title: Encadré d’information
+    help: |
+      L’encadré d’information est un élément «texte et image» qui peut être doté d’un fond gris. Il peut être intégré dans le corps de texte afin de mettre en évidence des informations complémentaires.
+
+
+    release: |
+
+      **3.0**
+      - Pour obtenir cet arrière-plan gris, ajoutez un wrapper `.well .clearfix` autour de votre contenu.
+      **2.5.3:**
+
+      - ajoutez une classe `.clearfix` au wrapper `.well`
+multimedia:
+  title: Multimédia
+  photo-gallery:
+    title: Aperçu de galerie d’images
+    help: |
+      La composante «Aperçu de galerie d’images» présente des images d’aperçu (vignettes) avec la désignation de l’image. Les images d’aperçu sont regroupées par groupes de 12 images. Si le nombre d’images d’aperçu dépasse cette quantité, la galerie d’images sera remplacée par l’élément de navigation «Pagination».
+
+      Lorsque vous cliquez sur une image d’aperçu, une vue détaillée est ouverte soit en mode **Visionneuse**, soit en mode **Vue individuelle**.
+    release: |
+      **2.1.8**
+
+        - `aria-selected="true"` et `aria-disabled="true"` ajoutés pour l’accessibilité
+  photo-gallery-single:
+    title: Galerie d’images – vue individuelle
+    help: La vue individuelle permet de feuilleter l’ensemble du contenu d’une galerie d’images. Un texte peut être ajouté en bas de l’image.
+  lightbox:
+    title: Visionneuse
+    help: |
+      Une **Visionneuse** est un élément qui s’ouvre en superposition du site Internet. Elle s’ouvre p. ex. lorsque l’on clique sur une image d’aperçu d’une galerie d’images ou sur l’icône «loupe» d’une image particulière.
+
+      Quand on ouvre une visionneuse, le site Internet en arrière-plan est obscurci. La visionneuse est constituée du titre, de la vue d’image en grand format et d’une légende. A l’aide des icônes de flèches dans la visionneuse ou des touches de flèches du clavier, l’utilisateur peut faire défiler les différentes images. La visionneuse peut être fermée en cliquant sur l’arrière-plan, sur le lien de fermeture ou encore avec la touche ECHAP.
+
+functions:
+  title: Fonctions
+  print:
+    title: Imprimer
+    help: |
+      L’icône **Imprimer** avec lien vers la version imprimable peut être intégrée dans chaque page (à l’exception de la page d’accueil). Elle est placée en haut à droite de la colonne de contenu. Un clic sur cette icône ouvre la boîte de dialogue d’impression du navigateur ou du système d’exploitation.
+
+      Un identifiant d’impression (print-ID) permet de sélectionner des parties spécifiques d’une page pour l’impression. (`data-print="ID"` dans le conteneur et `onclick="$.printPreview.printPreview(ID)"` dans le gestionnaire d’événements. Si le conteneur contient l’attribut `data-title`, celui-ci est imprimé comme titre de page.)
+    release: |
+      **2.5.4:**
+      - placez un titre tel que `<h3 class="visible-print-block">Contact</h3>` en haut de vos éléments `.tab-pane` à afficher uniquement lors de l’impression
+
+      **2.5.3:**
+      - remplacez le `onclick="window.print()"` par `onclick="$.printPreview.printPreview()"`
+      - ajoutez une cible facultative à la fonction printPreview: `onclick="$.printPreview.printPreview(’target id’)"`
+  social-sharing:
+    title: Partager des contenus (Social sharing)
+    help: |
+      La fonction de partage permet de diffuser des contenus via des réseaux sociaux.
+
+      Actuellement, cette fonction est compatible avec Facebook, Twitter et Google+. D’autres réseaux peuvent être ajoutés à l’aide de la balise meta concernée [Open Graph](http://ogp.me/).
+    release: |
+      **2.1.1:**
+
+      - classe `.social-sharing` ajoutée à l’élément `#social-sharing`
+  downloading-files:
+    title: Téléchargement de fichier
+    help: Les liens permettant de télécharger un fichier sont toujours signalés par une icône «document» qui les précède.
+search:
+  title: Recherche
+  search-box:
+    title: Masque de recherche
+    help: Le masque de recherche est un formulaire simple à l’intérieur duquel l’utilisateur peut saisir le terme recherché sur une page de recherche.
+  search-results:
+    title: Résultats de recherche
+    help: Les résultats de recherche sont affichés par groupes sémantiques dans des onglets. Les catégories (pour le regroupement) peuvent être choisies librement (p. ex. pages de contenu, actualités et publications). Une fonction de pagination permet à l’utilisateur de feuilleter les pages à l’intérieur de l’onglet.
+
