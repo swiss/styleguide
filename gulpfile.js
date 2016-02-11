@@ -344,7 +344,7 @@ gulp.task('scripts:fabricator', function() {
   return gulp.src(config.src.javascript.fabricator)
     .pipe($.concat('fabricator.min.js'))
     .pipe($.uglify())
-    .pipe(gulp.dest(config.framework.dest + '/js'));
+    .pipe(gulp.dest(config.styleguide.dest + '/js'));
 });
 
 
