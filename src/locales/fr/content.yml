@@ -42,7 +42,7 @@ teaser:
 
       *** Accessibilité
 
-      Le format de titre H3 dans les exemples de teaser ne constitue pas une exigence générale. Le format (H1, H2, H3, etc.) dépend de l’importance du titre au sein de la structure <section> de la page.
+      Le format de titre H3 dans les exemples de teaser ne constitue pas une exigence générale. Le format (H1, H2, H3, etc.) dépend de l’importance du titre au sein de la structure de la page.
 
     release: |
       **3.0.0**
@@ -131,7 +131,7 @@ teaser:
 
       Le titre se compose toujours d’une icône RSS et du texte «RSS». En-dessous, on trouve une liste de liens.
 content-containers:
-  title: Conteneur de contenu
+  title: Conteneurs
   elements-list:
     title: Liste d’éléments
     help: |
@@ -143,9 +143,9 @@ content-containers:
 
       Il s’agit ici d’une forme spécifique de la navigation horizontale par onglets. On peut utiliser jusqu’à cinq onglets. La désignation des onglets n’est pas prédéterminée. Cependant, à l’intérieur d’un site Internet, celle-ci doit être utilisée de manière uniforme (toujours identique). Par exemple «Documents», «Publications», «Services», «Principes juridiques», «Liens», «Actualités», etc.
   collapsible-panel:
-    title: Encadré pliant
+    title: Encadré rétractable
     help: |
-      L’encadré pliant est un élément interactif à l’intérieur duquel se cachent d’autres éléments interactifs ou d’autres contenus. Par défaut il est fermé. Un clic permet d’ouvrir l’encadré afin de rendre les contenus visibles. Un autre clic permet de refermer l’encadré.
+      L’encadré rétractable est un élément interactif à l’intérieur duquel se cachent d’autres éléments interactifs ou d’autres contenus. Par défaut il est fermé. Un clic permet d’ouvrir l’encadré afin de rendre les contenus visibles. Un autre clic permet de refermer l’encadré.
 
 ordering-checkout:
   title: Commande et check-out
@@ -173,7 +173,7 @@ standard-elements:
   image-text:
     title: Texte et image
     help: |
-      Cet élément se compose d’un corps de texte pouvant être complété par un titre et des intertitres. Une image avec légende d’image, qui peut être contournée à droite par le texte, peut également être ajoutée. Diverses tailles d’images (principalement dans les proportions du nombre d’or) sont prévues.
+      Cet élément se compose d’un corps de texte pouvant être complété par un titre et des intertitres. Une image avec légende d’image, qui peut être habillée à droite par le texte, peut également être ajoutée. Diverses tailles d’images (principalement dans les proportions du nombre d’or) sont prévues.
 
       Pour les petites images, on peut utiliser les classes `pull-left` ou `pull-right` dans l’élément HTML `<figure>`.
   info-box:
