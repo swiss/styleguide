@@ -370,7 +370,7 @@ header-footer:
 
     Der **Treecrumb** stellt die hierarchische Verortung der Website in der Bundesverwaltung dar. Er bietet dem Anwender die Möglichkeit, Websites übergeordneter Organisationseinheiten direkt aufzurufen. Auf mobilen Geräten fällt der Treecrumb weg.
 
-    In der **Service Navigation** werden Links von übergeordneter Bedeutung (z.B. Kontakt, Jobs, Medien) und die Sprach-Navigation positioniert. Es sollen idealerweise drei, auf keinen Fall aber mehr als fünf Links in der Service-Navigation angeboten werden. Ein Minimum ist der Kontakt und die Sprach-Navigation. Auf mobilen Geräten werden die Links der Service-Navigation in den Footer verschoben.
+    In der **Service Navigation** werden Links von übergeordneter Bedeutung (z.B. Kontakt, Jobs, Medien) positioniert. Es sollen idealerweise drei, auf keinen Fall aber mehr als fünf Links in der Service-Navigation angeboten werden. Ein Minimum ist der Kontakt und die Sprach-Navigation. Auf mobilen Geräten werden die Links der Service-Navigation in den Footer verschoben.
 
     Rechts neben der Service-Navigation steht die **Sprachwahl**. Die angebotenen Sprachen werden als Kürzel nach ISO-Norm ISO 639-2/3 aufgeführt (z.B. Deutsch = DE, Französisch = FR, Rätoromanisch = RM usw.). Auf mobilen Geräten wird die Sprach-Navigation in einem Bereich oberhalb des Headers eingebunden.
 
