@@ -7,7 +7,7 @@ form-elements:
   forms:
     title: Champs de saisie
     help: |
-      >Les champs de saisie permettent l’entrée de contenu (p. ex. le nom).
+      Les champs de saisie permettent l’entrée de contenu (p. ex. le nom).
 
       Pour entrer une date, une solution HTLM5 est proposée. Dans les navigateurs qui ne sont pas compatibles HTML5, la date doit être saisie manuellement.
       
