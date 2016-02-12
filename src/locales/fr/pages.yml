@@ -4,11 +4,11 @@ detail:
 forms:
   title: Formulaire
 home-without-nav:
-  title: Page d’accueil avec navigation principale
+  title: Page d’accueil avec navigation globale
 homepage-global-nav:
-  title: Page d’accueil sans navigation principale
+  title: Page d’accueil sans navigation globale
 preview-without-nav:
-  title: Page d’aperçu sans navigation principale
+  title: Page d’aperçu sans navigation globale
 preview:
   title: Page d’aperçu
 publications:
