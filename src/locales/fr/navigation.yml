@@ -9,13 +9,13 @@ hierarchical-navigation:
       Comportement:
       un clic sur l’un des onglets ouvre un méga-flyout qui contient un menu des sous-pages.
 
-      Il existe différents types de flyouts (fenêtres en surimpression): p. ex. flyout de teaser ou de liste. Selon le type de flyout, le menu affiche les sous-pages du deuxième niveau de navigation (flyout de teaser) ou bien celles du deuxième et troisième niveau de navigation (flyout de liste).
-      Dans le flyout de teaser on peut sélectionner directement une page du deuxième niveau de navigation, et dans le flyout de liste une page du troisième niveau de navigation. On peut ainsi «sauter» des nœuds de navigation pour lesquels il n’existe aucun contenu.
+      Il existe différents types de flyouts (fenêtres en surimpression): p. ex. flyout de teasers ou de listes. Selon le type de flyout, le menu affiche les sous-pages du deuxième niveau de navigation (flyout de teasers) ou bien celles du deuxième et troisième niveau de navigation (flyout de listes).
+      Dans le flyout de teasers on peut sélectionner directement une page du deuxième niveau de navigation, et dans le flyout de listes une page du troisième niveau de navigation. On peut ainsi «sauter» des nœuds de navigation pour lesquels il n’existe aucun contenu.
       Il est possible de développer et d’utiliser d’autres types de flyouts. Le DFAE a par exemple réalisé un flyout pour la sélection du pays.
 
       On peut refermer le flyout en cliquant sur la fonction «Fermer» (en haut à droite), en cliquant sur l’onglet avec le triangle noir (près du bord inférieur), en cliquant sur l’arrière-plan ou en recliquant sur le même onglet.
 
-      Seul sur la page d’accueil tous les onglets sont fermés. Lorsque l’on continue à naviguer en-dessous d’un onglet, ce dernier reste sélectionné.
+      Sur la page d’accueil, tous les onglets sont fermés. Lorsque l’on continue à naviguer en-dessous d’un onglet, ce dernier reste sélectionné.
 
       Avec `<div class="overlay"></div>` à la fin de la balise `body`, on affiche la superposition grise.
     release: |
@@ -34,7 +34,7 @@ hierarchical-navigation:
   breadcrumb:
     title: Fil d’Ariane
     help: |
-      Le fil d’Ariane est une ligne de liens, placée en-dessous de l’en-tête, indiquant à l’utilisateur le chemin, c’est-à-dire la position de la page Web actuellement consultée à l’intérieur de l’architecture d’information. Si aucune navigation globale n’est disponible, le fil d’Ariane est placé en-dessous de la ligne rouge qui délimite la zone d’en-tête.
+      Le fil d’Ariane est une ligne de liens, placée en-dessous de l’en-tête, indiquant à l’utilisateur le chemin, c’est-à-dire la position de la page web actuellement consultée à l’intérieur de l’architecture d’information. Si aucune navigation globale n’est disponible, le fil d’Ariane est placé en-dessous de la ligne rouge qui délimite la zone d’en-tête.
 
       Grâce au fil d’Ariane, l’utilisateur voit en un coup d’œil où il se trouve dans le site.
 
@@ -52,10 +52,10 @@ hierarchical-navigation:
     help: |
       La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement». Elle affiche toujours uniquement la page actuellement sélectionné et ses options de navigation:
 
-      * Navigationskopf: En-tête de navigation: le nom de la page active est surligné en couleur ou muni d’une emphase typographique.
+      * En-tête de navigation: le nom de la page active est surligné en couleur ou muni d’une emphase typographique.
       * Lien «Retour»: au-dessus de ce terme est situé un lien menant vers le niveau de navigation supérieur
       * Sous-pages: en-dessous de l’en-tête de navigation sont listés tous les niveaux de navigation inférieurs sous forme de liens
-      * Pages sœurs: les pages qui se trouvent au même niveau hiérarchique ne sont pas indiquées ici. On y accède via la navigation principale ou le lien «Retour». Seul sur le niveau de navigation le plus bas, les pages sœurs sont indiquées (à condition qu’il y en ait).
+      * Pages sœurs: les pages qui se trouvent au même niveau hiérarchique ne sont pas indiquées ici. On y accède via la navigation globale ou le lien «Retour». Seul sur le niveau de navigation le plus bas, les pages sœurs sont indiquées (à condition qu’il y en ait).
 
       ### Comportement
 
@@ -64,15 +64,15 @@ hierarchical-navigation:
 
       ![exemple](../styleguide-img/navigation_supermarkt.png)
 
-      Tant qu’une page possède des sous-pages, l’en-tête de navigation est changé lors de la navigation (drill-down). (1re étape). Dès que l’on est arrivé au niveau le plus bas de l’arbre de navigation et que les pages ne possèdent plus de sous-pages, seule la mise en évidence est ajustée. (2e étape).
+      Tant qu’une page possède des sous-pages, l’en-tête de navigation est changé lors de la navigation (drill-down) (1re étape). Dès que l’on est arrivé au niveau le plus bas de l’arbre de navigation et que les pages ne possèdent plus de sous-pages, seule la mise en évidence est ajustée (2e étape).
 
       ### Mise en œuvre pour les smartphones
 
-      Sur les smartphones, la navigation est affichée en bas de page, au-dessus du pied de page. La désignation de la page active est alors masquée.
+      Sur les smartphones, la navigation de service est affichée en bas de la page, au-dessus du pied de page. La désignation de la page active est alors masquée.
 
       ![Nav de gauche sur mobile](../styleguide-img/mobile_navi_3.png)
 
-      Sur un smartphone, la navigation apparaît sous le contenu avec des liens vers la page d’accueil, vers le niveau supérieur et vers d’autres pages.
+      Sur un smartphone, la sous-navigation apparaît en-dessus du contenu.
     release: |
       **2.5.2:**
 
@@ -118,7 +118,7 @@ header:
   title: Zone d’en-tête
   logo:
     title: Logo avec lien vers la page d’accueil
-    help: Le logo fédéral (blason et marque verbale en quatre langues) et le nom de l’unité organisationnelle (département, office, direction ou agence) forment le marquage d’un site Internet. L’ensemble du marquage est muni d’un lien qui ramène l’utilisateur de n’importe quelle page du site Internet vers la page d’accueil.
+    help: Le logo fédéral (blason et marque verbale en quatre langues) et le nom de l’unité organisationnelle (département, office, direction ou agence) forment la désignation d’un site Internet. L’ensemble de la désignation est muni d’un lien qui ramène l’utilisateur de n’importe quelle page du site Internet vers la page d’accueil.
     release: |
       **3.0.0**
 
@@ -131,7 +131,7 @@ header:
 
         - `.access-keys` ajouté pour une meilleure accessibilité
         - `#content` ajouté au contenu principal de la page
-        - `#main-navigation` ajouté à la navigation principale de la page
+        - `#main-navigation` ajouté à la navigation globale de la page
   service-navigation:
     title: Navigation de service
     help: |
@@ -200,13 +200,13 @@ header:
 
       - `h2.sr-only` ajouté pour plus de clarté pour les lecteurs d’écran
   treecrumb:
-    title: Treecrumb de l’administration fédérale
+    title: Arborescence de l’administration fédérale
     help: |
-      La navigation Treecrumb classe le site Internet actuel dans le contexte de tous les sites Internet de l’administration fédérale. Elle sert par ailleurs à une exploitation interdépartementale efficace. La navigation Treecrumb commence par «Le Conseil fédéral».
+      L'arborescence de l'administration fédérale (treecrumb) classe le site Internet actuel dans le contexte de tous les sites Internet de l’administration fédérale. Elle sert par ailleurs à une délimitation efficace entre départements. Elle commence par «Le Conseil fédéral».
 
       Lorsqu’elle est fermée, elle représente sous forme de chemin (fil d’Ariane) le classement du site Internet au sein de l’organisation de l’administration fédérale. Un clic sur l’un des niveaux hiérarchiques permet d’ouvrir un menu qui répertorie un certain nombre de liens connexes au niveau hiérarchique sélectionné.
 
-      Sur les smartphones, la navigation Treecrumb n’existe pas.
+      Sur les smartphones, elle n’existe pas.
     release: |
       **2.5.0:**
 
@@ -257,7 +257,7 @@ footer:
   site-map:
     title: Sitemap (plan du site) et partenaires
     help: |
-      >Dans le pied de page on place des liens qui sont ainsi accessibles depuis toutes les pages. Ces liens peuvent mener, en tant que plan du site, vers des pages du site Internet actuel, mais aussi faire référence à des contenus externes, p. ex. des sites partenaires. Selon les besoins, le pied de page peut être divisé en différents domaines.
+      Dans le pied de page on place des liens qui sont ainsi accessibles depuis toutes les pages. Ces liens peuvent mener, en tant que plan du site, vers des pages du site Internet actuel, mais aussi faire référence à des contenus externes, p. ex. des sites partenaires. Selon les besoins, le pied de page peut être divisé en différents domaines.
 
       ### Mise en œuvre pour les smartphones
 
