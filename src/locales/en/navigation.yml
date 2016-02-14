@@ -71,11 +71,11 @@ hierarchical-navigation:
 
       ### Implementation for Smartphones
 
-      On smartphones, the navigation is shown at the end of the page above the footer The name of the active page is hidden.
+      On smartphones, the service navigation is shown at the end of the page above the footer.
 
       ![Left nav on mobile](../styleguide-img/mobile_navi_3.png)
 
-      Navigation below the content level on a smartphone with links to the home page, the navigation level above, and to further pages.
+      On smartphones, the subnavigation appears between header and content.
     release: |
       **2.5.2:**
 
