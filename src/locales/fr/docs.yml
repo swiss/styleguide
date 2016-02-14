@@ -1,18 +1,18 @@
-title: Principes de design
+title: Lignes directrices web
 index:
   title: Page d’accueil
   content: |
     # L’apparence de l’administration fédérale sur Internet
 
-    Les lignes directrices pour le webdesign de la Confédération (lignes directrices Web) définissent le cadre créatif pour l’apparence de sites Internet du Conseil fédéral et de l’administration fédérale. Elles font partie de l’identité visuelle de la Confédération et sont obligatoires pour tous les sites Internet publics de l’administration fédérale. 
+    Les lignes directrices pour le design web de la Confédération (lignes directrices web) définissent le cadre graphique de l’apparence des sites web du Conseil fédéral et de l’administration fédérale. Elles font partie de l’identité visuelle de la Confédération et sont obligatoires pour tous les sites web publics de l’administration fédérale. 
 
     ## Exceptions
 
-    Des exceptions du webdesign de la Confédération sont possibles pour les sites Internet de campagne et partenaires. Elles doivent être approuvées par la Conférence des secrétaires généraux des départements (CSG). Les demandes correspondantes doivent être soumises au <a href="http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de">Service Identité visuelle de la Confédération</a> de la Chancellerie fédérale. 
+    Des exceptions du design web de la Confédération sont possibles pour les sites Internet de campagne et partenaires. Elles doivent être approuvées par la Conférence des secrétaires généraux des départements (CSG). Les demandes correspondantes doivent être soumises au <a href="http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de">Service Identité visuelle de la Confédération</a> de la Chancellerie fédérale. 
 
     ## Sites Internet conviviaux et accessibles
 
-    Les présentes lignes directrices Web permettent le développement de sites Internet modernes, conviviaux et accessibles. Elles définissent les éléments de marque obligatoires ainsi que les modules de navigation et de contenu obligatoires. Elles introduisent par ailleurs une série d’éléments qui peuvent être utilisés directement.
+    Les présentes lignes directrices web permettent le développement de sites Internet modernes, conviviaux et accessibles. Elles définissent les éléments de marque obligatoires ainsi que les modules de navigation et de contenu obligatoires. Elles introduisent par ailleurs une série d’éléments qui peuvent être utilisés directement.
 
     ## Accessibilité
 
@@ -20,11 +20,11 @@ index:
 
     ## Design adaptatif
 
-    L’affichage est optimisé aussi bien pour les navigateurs Web sur les ordinateurs de bureau que sur les ordinateurs portables, tablettes et smartphones.
+    L’affichage est optimisé aussi bien pour les navigateurs web sur les ordinateurs de bureau que sur les ordinateurs portables, tablettes et smartphones.
 
     ## Groupes cibles
 
-    Les lignes directrices Web sont destinées aux chefs de projet internes au gouvernement fédéral ainsi qu’aux fournisseurs de services externes. Elles offrent aux chefs de projet un aperçu des prescriptions en termes de conception. Les équipes de développement peuvent utiliser les types de pages et les éléments directement. Ils sont conçus en code HTML conforme aux normes et peuvent être utilisés avec les fichiers CSS et JavaScript.
+    Les lignes directrices web sont destinées aux chefs de projet internes au gouvernement fédéral ainsi qu’aux fournisseurs de services externes. Elles offrent aux chefs de projet un aperçu des prescriptions en termes de conception. Les équipes de développement peuvent utiliser les types de pages et les éléments directement. Ils sont conçus en code HTML conforme aux normes et peuvent être utilisés avec les fichiers CSS et JavaScript.
 
     ## Eléments obligatoires et recommandés
 
@@ -34,7 +34,7 @@ index:
 
     Les éléments de marque identifient clairement le site Internet comme étant un site Internet de la Confédération. Ils sont donc à utiliser obligatoirement. Ils sont déterminés dans l’IV de la Confédération et ne peuvent être modifiés en aucun cas. Tous changements de ces éléments doivent être approuvés par la CSG. Il s’agit des éléments suivants:
 
-      - marquage du site Internet, composé du logo fédéral et du nom de l’unité organisationnelle 
+      - la désignation du site Internet, composé du logo fédéral et du nom de l’unité organisationnelle 
       - ligne rouge délimitant l’en-tête
       - ligne de pied de page avec note de copyright, liens «Informations juridiques» et «Impressum»
       - police «Frutiger»
@@ -71,17 +71,17 @@ index:
 
     Les éléments flexibles sont identifiés dans les descriptions détaillées grâce à l’icône suivante: <span class="label label-admin">FLEX</span>
 
-    En outre, chaque projet est libre de développer ses propres éléments dans le cadre des éléments de marque et obligatoires définis. Ces éléments nouveaux peuvent être proposés au Webforum pour intégration dans les lignes directrices Web.
+    En outre, chaque projet est libre de développer ses propres éléments dans le cadre des éléments de marque et obligatoires définis. Ces éléments nouveaux peuvent être proposés au Webforum pour intégration dans les lignes directrices web.
 
     ## Révision et développement
 
-    Le développement des lignes directrices, les thèmes et les communiqués sont documentés sur Github: <a href="http://github.com/swiss/styleguide">Lignes directrices pour le webdesign de la Confédération</a>. Il convient d’y saisir les signalements d’erreurs et suggestions. Cela nécessite un compte sur Github. Les demandes à ce sujet doivent être adressées par e-mail au <a href="mailto:webforum@bk.admin.ch">Webforum de la Confédération</a>.
+    Le développement des lignes directrices, les thèmes et les communiqués sont documentés sur Github: <a href="http://github.com/swiss/styleguide">Lignes directrices pour le design web de la Confédération</a>. Il convient d’y saisir les signalements d’erreurs et suggestions. Cela nécessite un compte sur Github. Les demandes à ce sujet doivent être adressées par e-mail au <a href="mailto:webforum@bk.admin.ch">Webforum de la Confédération</a>.
 
-    Le Webforum de la Confédération vérifie périodiquement les lignes directrices Web en vue de leur actualité et conformité avec les évolutions du Web.
+    Le Webforum de la Confédération vérifie périodiquement les lignes directrices web en vue de leur actualité et conformité avec les évolutions du web.
 
     Si nécessaire, et en consultation avec la CSIC, l’Unité de pilotage informatique de la Confédération (UPIC), les fournisseurs de services et le Service Identité visuelle de la Confédération, le Webforum initie la sortie d’une nouvelle version à condition que le financement respectif en soit assuré.
 
-    Tous changements des éléments de marque doivent être approuvés par la CSG et tous autres changements des lignes directrices Web par la CSIC.
+    Tous changements des éléments de marque doivent être approuvés par la CSG et tous autres changements des lignes directrices web par la CSIC.
 
 accessibility:
   title: Accessibilité
@@ -99,13 +99,13 @@ accessibility:
 
     ## Bonnes pratiques
 
-    Les exemples suivants montrent comment les rédactrices et rédacteur Web peuvent améliorer l’accessibilité de leurs sites Web par des moyens simples.
+    Les exemples suivants montrent comment les rédactrices et rédacteur web peuvent améliorer l’accessibilité de leurs sites web par des moyens simples.
 
 
   title-tag: |
     ### Titre de page
 
-    Dans le «title» du document HTML il convient de décrire d’abord les aspects spécifiques de la page, puis les généralités. Les éléments doivent être séparés par des virgules. Exemple: accessibilité pour les handicapés, lignes directrices pour le webdesign de la Confédération suisse
+    Dans le «title» du document HTML il convient de décrire d’abord les aspects spécifiques de la page, puis les généralités. Les éléments doivent être séparés par des virgules. Exemple: accessibilité pour les handicapés, lignes directrices pour le design web de la Confédération suisse
 
   multi-language: |
     ### Contenus multilingues sur une page
@@ -207,19 +207,19 @@ cd-elements:
 
     L’utilisation des éléments de marque clés suivants est obligatoire. Ils sont déterminés dans l’IV de la Confédération et ne peuvent être modifiés en aucun cas:
 
-    - le marquage, composé du logo fédéral, du nom de l’unité organisationnelle et de la ligne grise entre ces deux éléments;
+    - la désignation du site, composée du logo fédéral, du nom de l’unité organisationnelle et de la ligne grise entre ces deux éléments;
     - la ligne rouge délimitant l’en-tête;
     - les couleurs utilisées: le rouge pour les mises en évidence, le bleu pour les liens et une palette de tons gris;
     - l’utilisation permanente de la police «Frutiger»;
     - un pied de page uniforme (avec Copyright, Impressum et Informations juridiques)
 
-    ## Marquage clair du site Internet
+    ## Désignation claire du site Internet
 
-    L’expéditeur d’un site Internet est toujours marqué par le logo fédéral complet (blason et marque verbale en quatre langues), le nom de l’unité organisationnelle, y compris le sigle ou la forme courte. Ces deux composants sont séparés par une ligne verticale. Le marquage est toujours placé en haut à gauche dans l’en-tête.
+    L’expéditeur d’un site Internet est toujours marqué par le logo fédéral complet (blason et marque verbale en quatre langues), le nom de l’unité organisationnelle, y compris le sigle ou la forme courte. Ces deux composants sont séparés par une ligne verticale. La désignation est toujours placée en haut à gauche dans l’en-tête.
 
     <figure>
         <img src="/styleguide-img/kennzeichnung.png" alt="Exemple de grille de page">
-        <figcaption> Le marquage est composé du logo fédéral complet et du nom de l’unité organisationnelle ainsi que d’une ligne de séparation.</figcaption>
+        <figcaption> La désignation est composée du logo fédéral complet et du nom de l’unité organisationnelle ainsi que d’une ligne de séparation.</figcaption>
     </figure>
 
     ## Mise en œuvre pour les smartphones
@@ -228,10 +228,10 @@ cd-elements:
 
     <figure>
         <img src="/styleguide-img/mobile_header.png" alt="Exemple de grille de page">
-        <figcaption>Pour le marquage dans l’en-tête sur les smartphones, on peut également utiliser le sigle. S’il faut écrire le nom de l’unité organisationnelle en entier, la désignation peut s’étendre sur plusieurs lignes.</figcaption>
+        <figcaption>Pour la désignation dans l’en-tête sur les smartphones, on peut également utiliser le sigle. S’il faut écrire le nom de l’unité organisationnelle en entier, la désignation peut s’étendre sur plusieurs lignes.</figcaption>
     </figure>
 
-    Partout où la forme réduite du marquage est utilisée dans l’en-tête, le logo fédéral complet avec blason et marque verbale en quatre langues doit être répété dans le pied de page. 
+    Partout où la forme réduite de la désignation est utilisée dans l’en-tête, le logo fédéral complet avec blason et marque verbale en quatre langues doit être répété dans le pied de page. 
     
     Sur les appareils mobiles, le nom complet de l’unité organisationnelle est également affiché dans une zone au-dessus de l’en-tête. Cette zone est masquée dès le premier défilement de la page.
 
@@ -279,10 +279,10 @@ cd-elements:
     <meta name="msapplication-config" content="build/img/ico/browserconfig.xml">
     ```
 devices:
-  title: Sortie sur différents appareils
+  title: Rendu sur différents appareils
   content: |
     ## Design adaptatif
-       Les lignes directrices Web de la Confédération permettent une sortie optimisée de l’ensemble des contenus d’un site Internet sur différents appareils tels que les ordinateurs de bureau, ordinateurs portables, tablettes et smartphones. La mise en page des sites Internet et des éléments individuels s’adapte à la résolution du périphérique de sortie.
+       Les lignes directrices web de la Confédération permettent un rendu optimisée de l’ensemble des contenus d’un site Internet sur différents appareils tels que les ordinateurs de bureau, ordinateurs portables, tablettes et smartphones. La mise en page des sites Internet et des éléments individuels s’adapte à la résolution du périphérique de sortie.
 
     ## Ordinateur de bureau, ordinateur portable et tablette
 
@@ -301,15 +301,15 @@ devices:
 
 
 guidelines:
-  title: Application des lignes directrices Web de la Confédération
+  title: Application des lignes directrices web de la Confédération
   content: |
     ## Structure
 
-    A l’intérieur des Lignes directrices pour le webdesign de la Confédération, vous pouvez naviguer vers les différents chapitres via les onglets du menu principal.
+    A l’intérieur des Lignes directrices pour le design web de la Confédération, vous pouvez naviguer vers les différents chapitres via les onglets du menu principal.
 
-    La page d’accueil présente un résumé des Lignes directrices pour le webdesign de la Confédération.
+    La page d’accueil présente un résumé des Lignes directrices pour le design web de la Confédération.
 
-    La structure, la compatibilité avec les navigateurs et l’installation sont décrites sous «Lignes directrices pour le webdesign de la Confédération».
+    La structure, la compatibilité avec les navigateurs et l’installation sont décrites sous «Lignes directrices pour le design web de la Confédération».
 
     Sous les onglets «Grille de base», «Modules de navigation» et «Modules de contenu», vous trouverez les descriptions détaillées des divers éléments.
 
@@ -317,15 +317,15 @@ guidelines:
 
     ## Informations sur les éléments
 
-    Sur les différentes pages, l’élément est affiché en premier dans un cadre évolutif. En agrandissant et en rétrécissant le cadre, on peut tester l’affichage de l’élément sur différents périphériques de sortie (webdesign adaptatif). En dessous de l’affichage de l’élément, vous trouverez une brève description ainsi que le code pour la mise en œuvre par l’équipe de développement.
+    Sur les différentes pages, l’élément est affiché dans un cadre adaptatif. En agrandissant et en rétrécissant le cadre, on peut tester l’affichage de l’élément sur différents périphériques de sortie (design web adaptatif). En-dessus de l’affichage de l’élément, vous trouverez une brève description ainsi que le code pour la mise en œuvre par l’équipe de développement.
 
     Le code peut être copié et réutilisé.
 
     Les notes de mises à jour sont également indiquées. Celles-ci informent les développeurs à propos des changements de code.
 
-    La rubrique «Pages d’exemple», présente différents types de pages. Celles-ci sont adaptatives et accessibles.
+    La rubrique «Pages d’exemple» présente différents types de pages. Celles-ci sont adaptatives et accessibles.
 
-    ## Navigateurs Web pris en charge
+    ## Navigateurs web pris en charge
 
     La version 3.0 est optimisée pour les versions de navigateur suivantes:
 
@@ -354,7 +354,7 @@ header-footer:
 
     ## En-tête
 
-    L’en-tête est l’élément déterminant d’un site Internet. Il se compose de l’arborescence de navigation (Treecrumb) de l’administration fédérale, de la navigation de service, y compris choix de la langue, du marquage (logo fédéral et nom de l’unité organisationnelle), de la recherche et de la navigation A-Z. Il se termine toujours par une ligne rouge.
+    L’en-tête est l’élément déterminant d’un site Internet. Il se compose de l’arborescence de navigation (Treecrumb) de l’administration fédérale, de la navigation de service, y compris choix de la langue, de la désignation (logo fédéral et nom de l’unité organisationnelle), de la recherche et de la navigation A-Z. Il se termine toujours par une ligne rouge.
 
     Ces éléments sont soit des éléments de marque, soit des éléments obligatoires. Ils ne doivent pas être modifiés.
 
@@ -375,9 +375,9 @@ header-footer:
 
     Les sites Internet disponibles dans plus de cinq langues peuvent afficher les langues **supplémentaires** dans un menu déroulant. Les sigles des langues nationales doivent toujours être affichés comme liens placés côte à côté.
 
-    Le **marquage**, composé du logo fédéral (blason et marque verbale) et du nom de l’unité organisationnelle, est l’élément de marque le plus important. Sur les sites inter-organisationnels et les portails thématiques, le nom de l’unité organisationnelle est remplacé par le titre du site Internet. Pour les appareils mobiles, la marque verbale du logo fédéral peut être omise et le nom de l’unité organisationnelle peut être abrégé. Si le nom est abrégé, il est affiché dans sa totalité dans une zone située au-dessus de l’en-tête.
+    La **désignation**, composée du logo fédéral (blason et marque verbale) et du nom de l’unité organisationnelle, est l’élément de marque le plus important. Sur les sites inter-organisationnels et les portails thématiques, le nom de l’unité organisationnelle est remplacé par le titre du site Internet. Pour les appareils mobiles, la marque verbale du logo fédéral peut être omise et le nom de l’unité organisationnelle peut être abrégé. Si le nom est abrégé, il est affiché dans sa totalité dans une zone située au-dessus de l’en-tête.
 
-    La **fonction de recherche** est positionnée comme champ de texte sur le côté droit de l’en-tête, en face du marquage. Lorsque l’utilisateur clique dans le champ de texte, le champ de texte est agrandi. 
+    La **fonction de recherche** est positionnée comme champ de texte sur le côté droit de l’en-tête, en face de la désignation. Lorsque l’utilisateur clique dans le champ de texte, le champ de texte est agrandi. 
 
     Sur les appareils mobiles, la recherche peut être appelée via une icône dans l’en-tête.
 
@@ -389,7 +389,7 @@ header-footer:
 
     La plupart des sites Internet possèdent une navigation principale qui est positionnée sous forme d’onglets dans une zone en-dessous de la ligne rouge. La navigation globale représente le niveau le plus élevé de l’architecture d’information. Ici, les principaux thèmes sont accessibles directement. Ils sont censés fournir un aperçu du contenu et de l’objectif du site Internet à l’utilisateur.
 
-    Les termes de la navigation globale ne sont pas définis par les lignes directrices Web. Ils dépendent des besoins de communication spécifiques de chaque département ou office.
+    Les termes de la navigation globale ne sont pas définis par les lignes directrices web. Ils dépendent des besoins de communication spécifiques de chaque département ou office.
 
     ### Exceptions
 
@@ -416,7 +416,7 @@ sample-pages:
   title: Pages d’exemple
   content: |
 
-    Diverses pages d’exemple, construites sur la base des deux types de pages «page d’accueil» et «page de contenu», sont présentées dans les Lignes directrices pour le webdesign de la Confédération. Elles montrent, à titre d’exemple, comment on peut combiner les différents éléments présentés sur les pages Internet. Ces pages peuvent être utilisées comme base pour un projet et adaptées, étendues et modifiées en fonction des besoins de communication respectifs.
+    Diverses pages d’exemple, construites sur la base des deux types de pages «page d’accueil» et «page de contenu», sont présentées dans les Lignes directrices pour le design web de la Confédération. Elles montrent, à titre d’exemple, comment on peut combiner les différents éléments présentés sur les pages Internet. Ces pages peuvent être utilisées comme base pour un projet et adaptées, étendues et modifiées en fonction des besoins de communication respectifs.
 
     ## Page d’accueil avec navigation principale
 
@@ -426,11 +426,11 @@ sample-pages:
 
     ## Page de détails
 
-    La page de détail est une page de contenu classique avec un article placé dans la colonne du milieu.
+    La page de détails est une page de contenu classique avec un article placé dans la colonne du milieu.
 
     ## Publications
 
-    Une page de publications est une page de détail spéciale indépendante, sur laquelle est présentée une publication pouvant être achetée par l’utilisateur. Un panier d’achat est intégré dans la colonne de droite.
+    Une page de publications est une page de détails spéciale indépendante, sur laquelle est présentée une publication pouvant être achetée par l’utilisateur. Un panier d’achat est intégré dans la colonne de droite.
 
     ## Résultats de recherche
 
