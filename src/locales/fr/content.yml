@@ -79,7 +79,7 @@ teaser:
   slideshow:
     title: Diaporama
     help: |
-      Un diaporama permet d’afficher de manière attrayante un groupe d’images dont les thèmes sont connexes. Grâce à une fonction permettant de tourner les pages, on peut passer d’une image à l’autre. Le diaporama utilise le plugin jQuery ([Blueimp Bootstrap Image Gallery](https://github.com/blueimp/Bootstrap-Image-Gallery)) pour afficher les images en mode plein écran. Attention: Insérer la mise en page correcte avant la journée de clôture `</body>` (voir exemple ci-dessous).
+      Un diaporama permet d’afficher de manière attrayante un groupe d’images dont les thèmes sont connexes. Grâce à une fonction permettant de tourner les pages, on peut passer d’une image à l’autre. Le diaporama utilise le plugin jQuery ([Blueimp Bootstrap Image Gallery](https://github.com/blueimp/Bootstrap-Image-Gallery)) pour afficher les images en mode plein écran. Attention: Insérer la mise en page correcte avant le tag de clôture `</body>` (voir exemple ci-dessous).
 
       **Accessibilité**
 
@@ -93,7 +93,7 @@ teaser:
       - classe `.pull-right` ajoutée à l’élément `.carousel-controls`
   text-teaser:
     title: Teaser de texte
-    help: DLe teaser de texte est un élément simple qui est le plus souvent utilisé dans les listes. Il est composé d’un titre muni d’un lien, suivi d’un bloc de texte.
+    help: Le teaser de texte est un élément simple qui est le plus souvent utilisé dans les listes. Il est composé d’un titre muni d’un lien, suivi d’un bloc de texte.
   dossier-teaser:
     title: Teaser de dossier
     help: |
@@ -173,7 +173,7 @@ standard-elements:
   image-text:
     title: Texte et image
     help: |
-      Cet élément se compose d’un corps de texte pouvant être complété par un titre et des intertitres. Une image avec légende d’image, qui peut être habillée à droite par le texte, peut également être ajoutée. Diverses tailles d’images (principalement dans les proportions du nombre d’or) sont prévues.
+      Cet élément se compose d’un corps de texte pouvant être complété par un titre et des intertitres. Une image avec légende d’image, qui peut être habillée par le texte à droite , peut également être ajoutée. Diverses tailles d’images (principalement dans les proportions du nombre d’or) sont prévues.
 
       Pour les petites images, on peut utiliser les classes `pull-left` ou `pull-right` dans l’élément HTML `<figure>`.
   info-box:
