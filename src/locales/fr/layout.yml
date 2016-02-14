@@ -7,7 +7,7 @@ form-elements:
   forms:
     title: Champs de saisie
     help: |
-      >Les champs de saisie permettent l’entrée de contenu (p. ex. le nom).
+      Les champs de saisie permettent l’entrée de contenu (p. ex. le nom).
 
       Pour entrer une date, une solution HTLM5 est proposée. Dans les navigateurs qui ne sont pas compatibles HTML5, la date doit être saisie manuellement.
       
@@ -15,7 +15,7 @@ form-elements:
       
         Afin d’assurer l’accessibilité, les formulaires et encadrés de saisie doivent être marqués avec des étiquettes. Un identifiant d’étiquette ne doit être utilisé qu’une seule fois par page. Il convient de désigner les champs de manière compréhensible, de préférence on respectera la WAI.
 
-        Du feedback peut être donné aux utilisateurs grâce aux classes `.has-error`, `.has-warning` ou `.has-success`.
+        Un feedback peut être donné aux utilisateurs grâce aux classes `.has-error`, `.has-warning` ou `.has-success`.
 
       Types de saisie HTML5: `text`, `password`, `datetime`, `datetime-local`, `date`, `month`, `time`, `week`, `number`, `email`, `url`, `search`, `tel`, et `color`
     release: |
@@ -69,9 +69,9 @@ general:
   logo:
     title: Logo
     help: |
-      Grâce au marquage d’un site Internet, le visiteur reconnait immédiatement l’expéditeur du site et le thème ou l’objectif.
+      Grâce à la désignation d’un site Internet, le visiteur reconnait immédiatement l’expéditeur du site et le thème ou l’objectif.
 
-      Le marquage se compose du logo fédéral (blason et marque verbale en quatre langues) et du nom de l’unité organisationnelle avec le sigle approprié (p. ex. DFAE) ou la forme courte (p. ex. MétéoSuisse).
+      La désignation se compose du logo fédéral (blason et marque verbale en quatre langues) et du nom de l’unité organisationnelle avec le sigle approprié (p. ex. DFAE) ou la forme courte (p. ex. MétéoSuisse).
 
       Ces deux composants sont séparés par une ligne verticale. Pour les smartphones, le logo fédéral dans l’en-tête utilise uniquement le blason. Le nom de l’unité organisationnelle peut être abrégé. Le logo fédéral complet est répété dans le pied de page.
 
@@ -97,7 +97,7 @@ general:
     help: Un ton gris clair est utilisé comme couleur d’arrière-plan. Il est appliqué automatiquement à `<body>`.
   images:
     title: Formats d’image
-    help: Le rapport des côtés des images en format paysage est de 16:10 (format paysage complet – nombre d’or) ou de 16:5 (demi format paysage). Les images en format portrait ne possèdent aucun rapport spécifique des côtés. Cependant, nous recommandons un rapport de 2:3
+    help: Le rapport des côtés des images en format paysage est de 16:10 (format paysage complet – nombre d’or) ou de 16:5 (demi format paysage). Les images en format portrait ne possèdent aucun rapport spécifique des côtés. Cependant, un rapport de 2:3 est recommandé.
   standard-image:
     title: Image standard
   captioned-image:
@@ -107,7 +107,7 @@ general:
   icons:
     title: Icônes
     help: |
-      Les icônes utilisées sont conçues de manière monochrome et plate. Elles sont stockées sous forme de polices Web et se trouvent dans les ressources comme polices TrueType.
+      Les icônes utilisées sont conçues de manière monochrome et plate. Elles sont stockées sous forme de polices web et se trouvent dans les ressources comme polices TrueType.
 
       Si l’élément est composé d’une seule icône, la classe est définie dans un conteneur `<span>`. Dans ce cas, la fonction de l’icône doit être expliquée dans un texte «alt». Communiqué: `<span class="" alt="vorwärts">...</span>`
 
@@ -282,18 +282,18 @@ typography:
   titles:
     title: Titres
     help: |
-      Les titres servent à structurer le contenu d’une page. Plus la hiérarchie est élevée (p. ex. H1), plus le titre est important et il sera pondéré en conséquence par les moteurs de recherche (p. ex. Google). En général, il convient de ne pas utiliser trop hiérarchies, car sinon la clarté pourrait en pâtir. Les hiérarchies de titres H1 à H4 se démarquent les unes des autres en termes de design (les hiérarchies H5 et H6 ont seulement été définies pour la forme).
+      Les titres servent à structurer le contenu d’une page. Plus la hiérarchie est élevée (p. ex. H1), plus le titre est important et il sera pondéré en conséquence par les moteurs de recherche (p. ex. Google). En général, il convient de ne pas utiliser trop de niveaux hiérarchiques, car la clarté pourrait en pâtir. Les hiérarchies de titres H1 à H4 se démarquent les unes des autres en termes de design (les hiérarchies H5 et H6 ont seulement été définies pour la forme).
       Les titres peuvent également être munis de liens. Ils seront alors affichés en bleu.
       
       **Accessibilité** 
       
-      Les personnes possédant une vue normale reconnaissent les titres et la structure d’une page à l’aide de la taille et de l’emphase de la police. Tel n’est pas le cas chez les personnes malvoyantes. Elles (ou les lecteurs d’écran) reçoivent ces informations des <h1> balises <h6>correspondantes. Il convient donc de les utiliser pour la pondération et non pour une mise en évidence d’ordre graphique.
+      Les personnes possédant une vue normale reconnaissent les titres et la structure d’une page à l’aide de la taille et de l’emphase de la police. Tel n’est pas le cas chez les personnes malvoyantes. Elles (ou les lecteurs d’écran) reçoivent ces informations des balises h1 à h6 correspondantes. Il convient donc de les utiliser pour la pondération et non pour une mise en évidence d’ordre graphique.
      
   paragraphs:
     title: Paragraphes
     help: |
-      ### Chapeau
-      Au début d’un texte plus long, on peut placer un chapeau qui résume les aspects les plus importants du texte. La police sera mise en gras.
+      ### Lead
+      Au début d’un texte plus long, on peut placer un lead qui résume les aspects les plus importants du texte. La police sera mise en gras.
   text-elements:
     title: Corps de texte
     help: |
@@ -320,10 +320,10 @@ typography:
   links:
     title: Liens
     help: |
-      Par défaut, les liens sont bleus et le texte n’est pas souligné. Lorsque la souris passe sur un lien (mouseover), il devient rouge. Les liens sur lesquels on a déjà cliqué deviennent violets.  
+      Par défaut, les liens sont bleus et le texte n’est pas souligné. Lorsque la souris passe sur un lien (mouseover), il devient souligné. Les liens sur lesquels on a déjà cliqué deviennent violets.  
 
       On dévie de cette règle dans deux cas:
-      dans le cas d’un lien situé dans le corps de texte, le texte muni du lien est souligné. Les liens situés dans un élément de navigation (p. ex. dans la navigation globale) ne sont pas bleu, mais gris. L’apparence et le comportement de ces liens spéciaux sont décrits séparément aux endroits appropriés dans les présentes lignes directrices pour le webdesign.
+      dans le cas d’un lien situé dans le corps de texte, le texte muni du lien est souligné. Les liens situés dans un élément de navigation (p. ex. dans la navigation globale) ne sont pas bleu, mais gris. L’apparence et le comportement de ces liens spéciaux sont décrits séparément aux endroits appropriés dans les présentes lignes directrices pour le design web.
 
       Les classes `.icon` permettent d’ajouter une icône avant ou après le lien (classe `.icon--external` pour les liens externes).
   top-link:
