@@ -115,7 +115,7 @@ teaser:
   publications-preview:
     title: Présentation des publications
     help: |
-      Sur la forme, la présentation des publications est un teaser très flexible. Il est composé d’un titre facultatif, d’une image facultative, d’une légende d’image facultative et du texte. Le texté peut contourner l’image à droite. Alternativement, cet élément de contenu pet être imbriqué dans un encadré d’information gris.
+      Sur la forme, la présentation des publications est un teaser très flexible. Il est composé d’un titre facultatif, d’une image facultative, d’une légende d’image facultative et de texte. Le texte peut être habillé par l’image à droite. Alternativement, cet élément de contenu pet être imbriqué dans un encadré d’information gris.
   news-feed:
     title: Flux d’actualités
     help: Dans le teaser des actualités, divers éléments d’actualités sont présentés par ordre chronologique. A l’aide d’une barre de défilement, l’utilisateur peut faire défiler le contenu du teaser vers le bas et ainsi voir tous les éléments d’actualités proposés. Chaque élément comporte la date, le type d’information et le titre muni du lien menant vers l’actualité.
@@ -145,7 +145,7 @@ content-containers:
   collapsible-panel:
     title: Encadré rétractable
     help: |
-      L’encadré rétractable est un élément interactif à l’intérieur duquel se cachent d’autres éléments interactifs ou d’autres contenus. Par défaut il est fermé. Un clic permet d’ouvrir l’encadré afin de rendre les contenus visibles. Un autre clic permet de refermer l’encadré.
+      L’encadré rétractable est un élément interactif à l’intérieur duquel se cachent d’autres éléments interactifs ou d’autres contenus. Par défaut, il est fermé. Un clic permet d’ouvrir l’encadré afin de rendre les contenus visibles. Un autre clic permet de refermer l’encadré.
 
 ordering-checkout:
   title: Commande et check-out
