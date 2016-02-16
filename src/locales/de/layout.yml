@@ -10,9 +10,9 @@ form-elements:
       Inputfelder erlauben die Eingabe von Inhalten (z.B. Name).
 
       Für die Eingabe eines Datums wird eine HTM-5-Lösung angeboten. Bei Browsern, die HTML 5 nicht unterstützen, muss das Datum manuell eingegeben werden.
-      
+
       **Barrierefreiheit
-      
+
         Für die Sicherstellung der Barrierefreiheit müssen die Form und die Inputboxen mit Labels bezeichnet sein. Eine Label-ID darf nur einmal pro Seite verwendet werden. Felder sollten verständlich bezeichnet sein, vorzugsweise wird WAI verwendet.
 
         Mit den Klassen `.has-error`, `.has-warning` der `.has-success` kann den Usern Feedback gegeben werden.
@@ -285,11 +285,11 @@ typography:
     help: |
       Überschriften dienen dazu, den Inhalt einer Seite zu strukturieren. Je höher die Hierarchie (z.B. H1) desto wichtiger ist dieser und wird entsprechend auch so bei Suchmaschinen (z.B. Google) gewichtet. Grundsätzlich sollen nicht zu viele Hierarchien verwendet werden, da sonst die Übersichtlichkeit leidet. Die Titelhierarchien H1 bis H4 heben sich entsprechen gestalterisch voneinander ab (die Hierarchien H5 und H6 wurden nur pro Forma definiert).
       Überschriften können auch verlinkt sein und werden dann in blau gesetzt.
-      
-      **Accessibility** 
-      
-      Normalsehende Personen erkennen Titel und Struktur einer Seite anhand der Grösse und Auszeichnung der Schrift. Bei sehbehinderten Personen ist dies nicht so. Sie bzw. die Screenreader erhalten diese Informationen aus den h1 bis h6-Tags. Dieses sollten entsprechend zur Gewichtung und nicht zur graphischen Auszeichnung eingesetzt werden. 
-     
+
+      **Accessibility**
+
+      Normalsehende Personen erkennen Titel und Struktur einer Seite anhand der Grösse und Auszeichnung der Schrift. Bei sehbehinderten Personen ist dies nicht so. Sie bzw. die Screenreader erhalten diese Informationen aus den h1 bis h6-Tags. Dieses sollten entsprechend zur Gewichtung und nicht zur graphischen Auszeichnung eingesetzt werden.
+
   paragraphs:
     title: Absätze
     help: |
@@ -322,7 +322,7 @@ typography:
   links:
     title: Links
     help: |
-      Links haben standardmässig die Textfarbe blau und sind nicht unterstrichen. Bei Mouseover werden die Links unterstrichen. Bereits geklickte Links werden violett.  
+      Links haben standardmässig die Textfarbe blau und sind nicht unterstrichen. Bei Mouseover werden die Links unterstrichen. Bereits geklickte Links werden violett.
 
       In zwei Fällen wird von dieser Regel abgewichen:
       Bei einem Link im Textfluss wird der verlinkte Text unterstrichen. Links in einem Navigations-Element (z.B. in der Globalnavigation) sind nicht blau, sondern grau. Aussehen und Verhalten dieser speziellen Links, wird in diesen Webrichtlinien an den entsprechenden Stellen separat beschrieben.
