@@ -34,7 +34,7 @@ index:
 
     Les éléments de marque identifient clairement le site Internet comme étant un site Internet de la Confédération. Ils sont donc à utiliser obligatoirement. Ils sont déterminés dans l’identité visuelle de la Confédération et ne peuvent être modifiés en aucun cas. Tous changements de ces éléments doivent être approuvés par la CSG. Il s’agit des éléments suivants:
 
-      - désignation du site Internet, composé du logo fédéral et du nom de l’unité organisationnelle 
+      - désignation du site Internet, composé du logo fédéral et du nom de l’unité organisationnelle
       - ligne rouge délimitant l’en-tête
       - ligne de pied de page avec note de copyright, liens «Informations juridiques» et «Impressum»
       - police «Frutiger»
@@ -58,7 +58,7 @@ index:
       - lien «Retour à l’aperçu»
       - règles typographiques
 
-    Les éléments obligatoires sont identifiés dans les descriptions détaillées grâce à l’icône suivante: <span class="label label-admin">FIXE</span>
+    Les éléments obligatoires sont identifiés dans les descriptions détaillées grâce à l’icône suivante: <span class="label label-admin">FIX</span>
 
     ### 3. Eléments flexibles <span class="label label-admin">FLEX</span>
 
