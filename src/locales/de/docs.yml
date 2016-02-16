@@ -191,7 +191,7 @@ basic-grid:
 
     ### Linke Navigation
 
-    Die Subnavigation in der linken Spalte des Inhaltsbereichs ist eine so genannte verdrängende Navigation, die immer die Optionen für die aktuelle Seite anzeigt. Sie besteht aus drei Bereichen: dem Navigationskopf mit dem Titel der aktuellen Seite, einem Zurück-Link auf die darüberliegende Ebene und Links auf die Unterseiten. Das Verhalten wird auf der Elementseite [Link] beschrieben.
+    Die Subnavigation in der linken Spalte des Inhaltsbereichs ist eine so genannte verdrängende Navigation, die immer die Optionen für die aktuelle Seite anzeigt. Sie besteht aus drei Bereichen: dem Navigationskopf mit dem Titel der aktuellen Seite, einem Zurück-Link auf die darüberliegende Ebene und Links auf die Unterseiten. Das Verhalten wird auf der Elementseite <a href="/de/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Seitennavigation Liste (Linke Subnavigation)</a> beschrieben.
 
 
     ### Inhaltsbereich

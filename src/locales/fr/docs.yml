@@ -186,12 +186,12 @@ basic-grid:
 
     ### Navigation de gauche
 
-    La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement» qui indique toujours les options de la page actuelle. Elle se compose de trois zones: l’en-tête de navigation avec le titre de la page actuelle, un lien «Retour» vers le niveau de navigation supérieur et des liens vers les sous-pages. Le comportement est décrit sur la page d’élément <a href="http://vps-liip-lxc.iron.oriented.ch:8032/fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Liste de navigation latérale (sous-navigation de gauche)</a>.
+    La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement» qui indique toujours les options de la page actuelle. Elle se compose de trois zones: l’en-tête de navigation avec le titre de la page actuelle, un lien «Retour» vers le niveau de navigation supérieur et des liens vers les sous-pages. Le comportement est décrit sur la page d’élément <a href="/fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Liste de navigation latérale (sous-navigation de gauche)</a>.
 
 
     ### Zone de contenu 
 
-    Dans la zone de contenu, on place les titres de page et les intertitres, ainsi que le corps du texte, les images, les encadrés d’information et les informations supplémentaires. Les informations supplémentaires sont toujours placées tout en bas de la zone de contenu et n’ont pas leur place dans la colonne de contexte. Le test d’utilisabilité a permis de constater que les utilisateurs ne font pas tellement attention aux informations placées dans la colonne de contexte. 
+    Dans la zone de contenu, on place les titres de page et les intertitres, ainsi que le corps du texte, les images, les encadrés d’information et les informations supplémentaires. Les informations supplémentaires sont toujours placées tout en bas de la zone de contenu et n’ont pas leur place dans la colonne de contexte. Le test d’utilisabilité a permis de constater que les utilisateurs ne font pas tellement attention aux informations placées dans la colonne de contexte.
 
     ### Colonne de contexte
 
