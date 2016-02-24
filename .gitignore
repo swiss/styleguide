@@ -5,7 +5,5 @@ bower_components/*
 .sass-cache
 
 styleguide/*
-build/*
 
-styleguide-theme/vendors
 src/views/pages/*
