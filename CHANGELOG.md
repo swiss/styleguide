@@ -3,7 +3,9 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
-* 3.0.0
+* 3.0.0 (2016-02-24)
+ * New documentation translated in german and french
+ * #407 Fix icon of emergency component on IE11
  * #400 Fix an issue with Process navigation when first/last item was active
  * #421 Do not hide print icon on small screens
  * Fix an issue which was misplacing the controls of carousels
