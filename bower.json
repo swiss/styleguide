@@ -8,9 +8,6 @@
     "Antistatique.net"
   ],
   "license": "MIT",
-  "main": [
-    "./build/*.*"
-  ],
   "ignore": [
     "**/.*",
     "node_modules",
