@@ -1,0 +1,287 @@
+title: Modules de navigation
+hierarchical-navigation:
+  title: Navigation hiérarchique
+  global-navigation:
+    title: Navigation globale
+    help: |
+      La navigation globale indique sous forme d’onglets les principaux points d’entrée d’un site Internet. Elle est séparée par une ligne rouge de l’en-tête situé au-dessus. Il convient de choisir avec soin les termes utilisés dans les onglets, car ils offrent à l’utilisateur une première impression du sens et de l’objectif du site Internet.
+
+      Comportement:
+      un clic sur l’un des onglets ouvre un méga-flyout qui contient un menu des sous-pages.
+
+      Il existe différents types de flyouts (fenêtres en surimpression): p. ex. flyout de teasers ou de listes. Selon le type de flyout, le menu affiche les sous-pages du deuxième niveau de navigation (flyout de teasers) ou bien celles du deuxième et troisième niveau de navigation (flyout de listes).
+      Dans le flyout de teasers on peut sélectionner directement une page du deuxième niveau de navigation, et dans le flyout de listes une page du troisième niveau de navigation. On peut ainsi «sauter» des nœuds de navigation pour lesquels il n’existe aucun contenu.
+      Il est possible de développer et d’utiliser d’autres types de flyouts. Le DFAE a par exemple réalisé un flyout pour la sélection du pays.
+
+      On peut refermer le flyout en cliquant sur la fonction «Fermer» (en haut à droite), en cliquant sur l’onglet avec le triangle noir (près du bord inférieur), en cliquant sur l’arrière-plan ou en recliquant sur le même onglet.
+
+      Sur la page d’accueil, tous les onglets sont fermés. Lorsque l’on continue à naviguer en-dessous d’un onglet, ce dernier reste sélectionné.
+
+      Avec `<div class="overlay"></div>` à la fin de la balise `body`, on affiche la superposition grise.
+    release: |
+      **2.1.2:**
+        - classe `.active` changée en `.current` pour la mise en évidence de la page actuelle dans le menu
+        - `h2.sr-only` ajouté pour plus de clarté pour les lecteurs d’écran
+        - h2 et label ajoutés au champ de recherche pour les mobiles
+
+      **2.1.0:**
+        - section `.nav-mobile` ajoutée au début de l’élément `.list-group`
+
+      **2.0.0:**
+        - `<span class="sr-only">current page</span>` ajouté pour le lien actif actuel
+        - `id="main-navigation"` pour l’accessibilité
+        - `aria-hidden="true"` ajouté au bouton de fermeture
+  breadcrumb:
+    title: Fil d’Ariane
+    help: |
+      Le fil d’Ariane est une ligne de liens, placée en-dessous de l’en-tête, indiquant à l’utilisateur le chemin, c’est-à-dire la position de la page web actuellement consultée à l’intérieur de l’architecture d’information. Si aucune navigation globale n’est disponible, le fil d’Ariane est placé en-dessous de la ligne rouge qui délimite la zone d’en-tête.
+
+      Grâce au fil d’Ariane, l’utilisateur voit en un coup d’œil où il se trouve dans le site.
+
+      En cliquant sur un point de navigation dans le chemin, la page appropriée s’ouvre. En cliquant sur des liens du premier ou deuxième niveau de navigation (pages ne disposant pas de contenu propre), une page de résumé sans colonne de navigation est ouverte.
+
+      Sur les smartphones, un lien vers la page d’accueil et vers le niveau situé au-dessus est proposé en fin de chaque page. Un fil d’Ariane complet n’y est pas disponible.
+  back-to-overview:
+    title: Retour à l’aperçu
+    help: |
+      La navigation «Retour à l’aperçu» relie des pages n’apparaissant pas dans la navigation avec leur «page mère». Les pages de détails des publications en sont des exemples.
+
+      La navigation «Retour à l’aperçu» apparaît toujours avant le titre de la page, tout en haut de la colonne de contenu, et en bas de page, avant la navigation de fin de page.
+  page-navigation-list:
+    title: Liste de navigation latérale (sous-navigation de gauche)
+    help: |
+      La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement». Elle affiche toujours uniquement la page actuellement sélectionné et ses options de navigation:
+
+      * En-tête de navigation: le nom de la page active est surligné en couleur ou muni d’une emphase typographique.
+      * Lien «Retour»: au-dessus de ce terme est situé un lien menant vers le niveau de navigation supérieur
+      * Sous-pages: en-dessous de l’en-tête de navigation sont listés tous les niveaux de navigation inférieurs sous forme de liens
+      * Pages sœurs: les pages qui se trouvent au même niveau hiérarchique ne sont pas indiquées ici. On y accède via la navigation globale ou le lien «Retour». Seul sur le niveau de navigation le plus bas, les pages sœurs sont indiquées (à condition qu’il y en ait).
+
+      ### Comportement
+
+      Lorsque l’on clique sur un lien vers une sous-page, une nouvelle page est chargée. Sur cette page, la page sélectionnée est alors affichée comme en-tête de navigation. Le lien «Retour» mène au niveau de navigation supérieur, c’est-à-dire à la page sur laquelle l’utilisateur se trouvait juste avant. En-dessous de l’en-tête de navigation sont listés tous les liens vers les niveaux de navigation inférieurs.
+      Si l’on souhaite sélectionner une page (page sœur) qui se situe sur le même niveau de navigation que la page active, cela se fait par le biais du lien «Retour» ou de la navigation globale. Lorsque l’on clique sur un lien vers une page du niveau de navigation le plus bas (c.-à-d. la page consultée ne possède pas de sous-pages), la navigation n’est pas changée. La page actuelle est alors marquée d’une ligne rouge et les pages du même niveau restent affichées.
+
+      ![exemple](../styleguide-img/navigation_supermarkt.png)
+
+      Tant qu’une page possède des sous-pages, l’en-tête de navigation est changé lors de la navigation (drill-down) (1re étape). Dès que l’on est arrivé au niveau le plus bas de l’arbre de navigation et que les pages ne possèdent plus de sous-pages, seule la mise en évidence est ajustée (2e étape).
+
+      ### Mise en œuvre pour les smartphones
+
+      Sur les smartphones, la navigation de service est affichée en bas de la page, au-dessus du pied de page. La désignation de la page active est alors masquée.
+
+      ![Nav de gauche sur mobile](../styleguide-img/mobile_navi_3.png)
+
+      Sur un smartphone, la sous-navigation apparaît en-dessus du contenu.
+    release: |
+      **2.5.2:**
+
+        - corriger l’erreur avec l’état actif de `.list-emphasis`, **veuillez toujours envelopper le texte de cet élément de liste avec un `span` ou un `a`**.
+
+      **2.5.0:**
+
+        - permettez les listes `<ul/>` emboîtées dans les éléments `.nav-page-list`
+
+      **2.3.0:**
+
+        - `aria-selected="true"` ajouté pour le lien actuel 
+        - premier bouton de la liste supprimée (il ressemblait à un lien retour) 
+        - label «Back» du bouton de retour remplacé par le nom de la section dans le sous-menu drill-down
+
+      **2.1.0:**
+
+        - classe `.list-emphasis` optionnelle ajoutée au premier élément `<li>`. Si nécessaire, mettez un élément plus gras et plus foncé dans la liste.
+        - si vous voulez un comportement de drill-down, intégrez l’élément `.nav-page-list` dans `<div class="drilldown"><div class="drilldown-container"></div></div>` et ajoutez quelques éléments `<nav class="drilldown-sub"></nav>` dans n’importe quel(le)/s `<li>` de votre choix. Ajoutez également la classe `.list-sub` à l’élément `<li>`.
+  faceted-page-navigation:
+    title: Navigation à facettes
+    help: |
+      La navigation à facettes permet de filtrer des éléments (p. ex. un catalogue de produits) sur la base de critères prédéterminés que l’on appelle «facettes». Les facettes sont regroupées par types de facette. Une facette qui contient des sous-facettes est marquée d’un triangle.
+
+      ### Comportement:
+
+      après le chargement d’une page avec navigation à facettes, la liste des facettes du type de facette le plus élevé est ouverte.
+
+      L’utilisateur peut ouvrir ou fermer à volonté d’autres types de facettes. Pour chaque type de facette, l’utilisateur ne peut sélectionner qu’une seule facette, les autres facettes sont masquées.
+
+      Le type de facettes correspondant ne peut alors plus être fermé. Si une facette possède des sous-facettes, ces sous-facettes sont affichées après que la facette ait été sélectionnée. L’utilisateur peut alors continuer à limiter sa sélection en utilisant les sous-facettes. Une sélection effectuée peut être annulée à l’aide d’un bouton de suppression.
+
+      Les contenus de la page sont adaptés et constamment mis à jour en fonction de la sélection actuelle de la navigation à facettes.
+
+      ### Mise en œuvre pour les smartphones
+
+      Sur les smartphones, la navigation est appelée à l’aide d’un lien «filtre» et se comporte de la même façon que la navigation à facettes sur un ordinateur de bureau. Contrairement à la version pour les ordinateurs de bureau, les contenus de la page sont seulement mis à jour lorsque l’utilisateur referme la navigation à facettes.
+    release: |
+      **2.0.0:**
+
+      - `aria-selected="true"` ajouté pour le lien actuel
+header:
+  title: Zone d’en-tête
+  logo:
+    title: Logo avec lien vers la page d’accueil
+    help: Le logo fédéral (blason et marque verbale en quatre langues) et le nom de l’unité organisationnelle (département, office, direction ou agence) forment la désignation d’un site Internet. L’ensemble de la désignation est muni d’un lien qui ramène l’utilisateur de n’importe quelle page du site Internet vers la page d’accueil.
+    release: |
+      **3.0.0**
+
+      - Ajoutez un conteneur avec la classe `clearfix` autour de la composante de logo
+  accessibility-navigation:
+    title: Navigation accessible
+    help: La navigation accessible est placée directement après la balise <body>. Elle est nécessaire pour offrir aux utilisateurs un accès rapide à certains services grâce à des clés d’accès. La navigation accessible n’est **pas visible**.
+    release: |
+      **2.1.8**
+
+        - `.access-keys` ajouté pour une meilleure accessibilité
+        - `#content` ajouté au contenu principal de la page
+        - `#main-navigation` ajouté à la navigation globale de la page
+  service-navigation:
+    title: Navigation de service
+    help: |
+      La navigation de service est placée en haut à droite de l’en-tête, à côté du choix de la langue, et comporte des liens d’importance majeure (p. ex. Contact, Emplois, Médias). Il convient idéalement de fournir trois, mais jamais plus de cinq liens dans la navigation de service.
+
+      Sur les smartphones, la navigation de service est placée dans le pied de page.
+    release: |
+      **2.1.2:**
+
+        - `h2.sr-only` ajouté pour plus de clarté pour les lecteurs d’écran
+  site-search:
+    title: Recherche sur le site
+    help: |
+      La fonction de recherche globale permet à l’utilisateur d’effectuer des recherches sur le site entier. Lorsque l’on clique sur le champ de recherche, l’élément est agrandi afin d’offrir à l’utilisateur plus d’espace pour saisir son texte de recherche.
+
+      Sur les smartphones, la fonction de recherche est accessible via une icône dans l’en-tête.
+    release: |
+      **2.1.2:**
+        - h2.sr-only ajouté pour plus de clarté pour les lecteurs d’écran
+        - étiquette ajouté avant la saisie pour les lecteurs d’écran
+  language-selector:
+    title: Choix de la langue
+    help: |
+      Grâce au choix de la langue, on peut changer la langue du site Internet actuel. Il affiche droite de l’en-tête toutes les langues disponibles avec les abréviations à deux caractères selon la norme ISO 639-2/3 (p. ex. français = FR, allemand = DE, etc.).
+
+      Règles pour la navigation dans les diverses langues:
+
+        * Les langues DE, FR et IT sont obligatoires. Elles sont affichées sur toutes les pages. Cela également lorsque le contenu est uniquement disponible dans une de ces langues.
+        * Les langues RM et EN ne sont affichées que si des contenus sont disponibles dans ces langues.
+        * La langue active est marquée avec un fond gris clair.
+        * Les langues inactives apparaissent dans une police gris clair.
+        * Les sigles sont placés côte à côte dans l’en-tête sur tous les périphériques de sortie.
+        * Il est interdit de placer le choix de la langue dans un menu déroulant.
+        * Les pages qui ne sont pas traduites peuvent être affichées comme étant disponibles dans une autre langue.
+
+      Ces règles s’appliquent également aux smartphones.
+
+      Sur les smartphones, le choix de la langue est intégré dans une zone située au-dessus de l’en-tête. Dès que l’on fait défiler la page vers le bas, cette zone est masquée. Lorsque l’on fait défiler la page tout en haut, la zone avec le choix de la langue réapparaît.
+    release: |
+      **3.0.0**
+        - attributs `lang`, `title` et `aria-label` ajoutés pour l’accessibilité
+        - état des langues (activé, désactivé) déplacé vers le titre de lien et le label aria-label
+
+      **2.5.0**
+        - `<span class="sr-only">disabled</span>` ajouté pour l’accessibilité désactivée
+
+      **2.1.8**
+        - `<span class="sr-only">selected</span>` ajouté pour l’accessibilité activée
+
+      **2.1.2:**
+        - `h2.sr-only` ajouté pour plus de clarté pour les lecteurs d’écran
+
+      **2.1.0:**
+        - `.nav-lang` et `.nav-service` emballés dans `<section class="nav-services clearfix"></section>`
+  topics:
+    title: Thèmes A-Z
+    help: |
+      Les «Thèmes A-Z» représentent un accès alternatif aux contenus du site Internet. Les sous-thèmes du site Internet peuvent être sélectionnés parmi un catalogue trié par ordre alphabétique.
+
+      Les «Thèmes A-Z» sont placés dans la zone de droite de l’en-tête. Lorsque l’on clique dessus, un flyout s’ouvre, contenant une navigation avec des onglets de A à Z. Les thèmes peuvent être regroupés dans d’autres onglets, p. ex. par unités organisationnelles.
+
+      Sur les smartphones, la navigation A-Z est appelée, ensemble avec la recherche, via une icône dans l’en-tête. La subdivision d’une rubrique «Thèmes A-Z» dans des zones accessibles via une navigation par onglets est déconseillée.
+
+    release: |
+      **2.1.2:**
+
+      - `h2.sr-only` ajouté pour plus de clarté pour les lecteurs d’écran
+  treecrumb:
+    title: Arborescence de l’administration fédérale
+    help: |
+      L'arborescence de l'administration fédérale (treecrumb) classe le site Internet actuel dans le contexte de tous les sites Internet de l’administration fédérale. Elle sert par ailleurs à une délimitation efficace entre départements. Elle commence par «Le Conseil fédéral».
+
+      Lorsqu’elle est fermée, elle représente sous forme de chemin (fil d’Ariane) le classement du site Internet au sein de l’organisation de l’administration fédérale. Un clic sur l’un des niveaux hiérarchiques permet d’ouvrir un menu qui répertorie un certain nombre de liens connexes au niveau hiérarchique sélectionné.
+
+      Sur les smartphones, elle n’existe pas.
+    release: |
+      **2.5.0:**
+
+        - balisage de la liste déroulante modifié. Merci de vous référer à l’exemple ci-dessous
+
+      **2.1.2:**
+
+        - `h2.sr-only` ajouté pour plus de clarté pour les lecteurs d’écran
+content-navigation:
+  title: Navigation de contenu
+  pagination:
+    title: Pagination
+    help: A l’aide de la fonction «Pagination», l’utilisateur peut parcourir un grand nombre d’éléments qui sont classés par pages. L’élément apparaît en haut et en bas de la liste d’éléments.
+    release: |
+      **2.1.8**
+
+      - ` <span class="sr-only">page actuelle</span>` et `aria-disabled="true"` ajoutés pour l’accessibilité
+      - `title` ajouté au lien vide (lien ayant seulement une icône)
+      - `.clearfix` et `.pull-left` ajouté à l’intérieur de `.pagination-container
+  anchor-links:
+    title: Liens d’ancre
+    help: Un lien d’ancre est un label (marqueur de saut) permettant de se diriger directement vers une position à l’intérieur de la page actuelle.
+  top-links:
+    title: Liens vers le haut de page
+    help: |
+      Le lien vers le haut de page (top-link) est la contrepartie du lien d’ancre: il ramène les utilisateurs de n’importe quelle position de la page vers le haut de la page.
+  endofpage-links:
+    title: Liens de fin de page
+    help: Le lien situé en fin de page est un top-link spécial. Chaque page (à l’exception de la page d’accueil et des pages de niveau 1) se termine par un tel lien de fin de page. Il comporte un lien vers le haut de la page actuelle ainsi que la date de la dernière mise à jour des contenus de cette page.
+  process-navigation:
+    title: Navigation de processus
+    help: |
+      La navigation de processus est utilisée en relation avec des formulaires répartis sur plusieurs pages. L’étape de processus active est marquée en rouge. Les étapes précédentes sont cliquables et ramènent à l’étape de processus respective.
+
+      **Attention:**
+
+      le présent exemple décrit seulement le design graphique; la navigation de processus doit être programmée dans tous les cas conformément au processus sous-jacent.
+
+  tab-navigation:
+    title: Navigation par onglets
+    help: |
+      La navigation par onglets est utilisée lorsque des contenus connexes doivent être regroupés sur une page. A titre d’exception, la couleur de la police est gris foncé (au lieu de bleu). L’onglet actif est mis en évidence par la ligne rouge et le fond blanc.
+
+      Les désignations des onglets sont seulement des exemples. Elles dépendent du contenu réel de la page.
+
+footer:
+  title: Pied de page (footer)
+  site-map:
+    title: Sitemap (plan du site) et partenaires
+    help: |
+      Dans le pied de page on place des liens qui sont ainsi accessibles depuis toutes les pages. Ces liens peuvent mener, en tant que plan du site, vers des pages du site Internet actuel, mais aussi faire référence à des contenus externes, p. ex. des sites partenaires. Selon les besoins, le pied de page peut être divisé en différents domaines.
+
+      ### Mise en œuvre pour les smartphones
+
+      Sur les smartphones, certaines fonctions de l’en-tête, p. ex. la navigation de service et le logo fédéral complet, sont déplacés vers le pied de page.
+    release: |
+      **2.5.0:**
+
+      - colonnes de bas de page enveloppés dans un `div.row` 
+
+      **2.1.0:**
+
+      - liens placés dans une liste `ul.list-unstyled`
+      - `.col-sm-3` remplacé par `.col-sm-4.col-md-3` pour plus de lisibilité sur les écrans de petite taille et wrapper `.row` inutile supprimé
+  social-media:
+    title: Médias sociaux
+    help: Les canaux de médias sociaux (Facebook, Twitter, YouTube) du site Internet sont positionnés dans une zone séparée à l’intérieur du pied de page.
+    release: |
+      **2.1.0:**
+
+      - classe `.links-social` ajoutée à l’élément `<nav/>` contenant les liens sociaux
+  footbar:
+    title: Ligne de pied de page
+    help: |
+      Dans la ligne de pied de page, située en-dessous du pied de page, on trouve une note concernant le copyright alignée à gauche et des liens «Informations juridiques» et «Impressum» alignés à droite. Ces indications sont obligatoires pour des raisons juridiques. 
+
+      La ligne de pied de page est un **élément de marque**: son utilisation est obligatoire et son apparence ne peut être modifiée.
+

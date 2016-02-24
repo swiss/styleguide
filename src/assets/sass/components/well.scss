@@ -1,0 +1,42 @@
+/* ==========================================================
+ * well.scss
+ * Well class used for Info-box and other elements
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-07 10:22:35
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.bordered-well {
+  border: 1px solid $silver;
+  @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+    padding: 15px;
+    background: $smoke;
+    img {
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.well {
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  margin: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  background: $smoke !important;
+  &.well-freeboard {
+    padding: 0;
+    border: 1px solid $light-grey;
+  }
+  &.well-white {
+    background: $white !important;
+  }
+  h2:first-child {
+    margin-top: 0;
+  }
+}

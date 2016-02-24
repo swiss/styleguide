@@ -3,6 +3,21 @@ CHANGELOG
 
 This changelog references the relevant changes and bug fixes.
 
+* 3.0.0 (2016-02-24)
+ * New documentation translated in german and french
+ * #407 Fix icon of emergency component on IE11
+ * #400 Fix an issue with Process navigation when first/last item was active
+ * #421 Do not hide print icon on small screens
+ * Fix an issue which was misplacing the controls of carousels
+ * Focus component overall accessibility has been improved, now with a play/pause button
+ * #138 Change various font sizes to relative units
+ * Introduced high-contrast outline around focused element while browsing with the keyboard
+ * #208 Remove custom styling of checkboxes/radio buttons for better accessibility (required markup has changed)
+ * Language switcher gets more acccessible with extra attributes to describe languages
+ * Move "Admin Icons" code points to [PUA Area](https://en.wikipedia.org/wiki/Private_Use_Areas)
+ * #246 Remove deprecated social sharing buttons
+ * #219 Fix accessibility on tables
+
 * 2.5.4 (2015-08-31)
  * #376 Fix controls spacing in slideshow element
  * #385 Change Deutschland to Germany in language select

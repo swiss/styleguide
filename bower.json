@@ -1,35 +1,36 @@
 {
   "name": "swiss-styleguide",
-  "version": "2.6.0",
+  "description": "Swiss Confederation Web Guidelines",
+  "version": "3.0.0",
   "homepage": "http://swiss.github.io/styleguide",
-  "authors": "Antistatique.net",
-  "description": "Swiss Admin Styleguide",
-  "license": "MIT",
-  "main": [
-    "./styleguide/index.html",
-    "./build/css/*.css",
-    "./build/js/vendors.min.js",
-    "./build/js/main.js",
-    "./build/fonts/*.eot",
-    "./build/fonts/*.svg",
-    "./build/fonts/*.ttf",
-    "./build/fonts/*.woff"
+  "authors": [
+    "Liip.ch",
+    "Antistatique.net"
   ],
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "/styleguide-img",
+    "/src/assets/fabricator",
+    "/src/assets/files",
+    "/src/data",
+    "/src/example-pages",
+    "/src/locales",
+    "/src/materials",
+    "/src/materials-data",
+    "/src/views",
+    "/src/index.html"
   ],
-  "dependencies": {},
   "devDependencies": {
     "jquery": "1.10.2",
     "bootstrap-sass-official": "~3.3.3",
-    "bootstrapaccessibilityplugin": "https://github.com/antistatique/bootstrap-accessibility-plugin.git#dev",
+    "bootstrapaccessibilityplugin": "https://github.com/liip/bootstrap-accessibility-plugin.git#dev",
     "jquery.tablesorter": "~2.18.4",
     "yamm3": "1.0.*",
     "chosen_v1.1.0": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip",
     "typeahead.js": "~0.10.2",
-    "jquery.socialshareprivacy": "~1.4.5",
     "jquery-drilldown": "~0.1.4",
     "respond": "~1.4.2",
     "html5shiv": "~3.7.2",

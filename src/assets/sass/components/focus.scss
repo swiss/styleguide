@@ -1,0 +1,187 @@
+/* ==========================================================
+ * focus.scss
+ * Focus style
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-15 10:44:38
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+@media only screen and (min-width: $screen-sm-min) {
+
+  .nav-tabs.nav-tabs-focus {
+    display: flex;
+    position: relative;
+    border-top: 1px solid $silver;
+    border-right: 1px solid $silver;
+    border-left: 1px solid $silver;
+    margin-top: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    > li {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      border: none;
+      border-left: 1px solid $silver;
+      border-bottom: none !important;
+      position: relative;
+
+      .oldie &,
+      .ie9 & {
+        width: 1%;
+        a {height: 69px;}
+      }
+
+      &:first-child,
+      &:first-child:not(.active):hover a {
+        border-left: none;
+      }
+
+      a {
+        flex-grow: 1;
+        background: $smoke;
+        display: block;
+        position: relative;
+        border: none;
+        box-sizing: border-box !important;
+        padding-bottom: 10px;
+        font-size: 1.07142857rem;
+        line-height: 1.1em;
+        text-align: center;
+        border-radius: 0;
+        color: $night-rider;
+        overflow: hidden;
+
+        &:after {
+          content: '';
+          height: 1px;
+          width: 100%;
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background: $silver;
+        }
+      }
+
+      > a:hover,
+      > a:focus,
+      &.active > a,
+      &.active > a:hover,
+      &.active > a:focus {
+        &::before {
+          top: auto;
+          bottom: 0;
+          z-index: 1;
+        }
+      }
+
+      &.active a,
+      &.active:hover a {
+        padding-bottom: 10px !important;
+      }
+
+      a:hover,
+      &.active a {
+        border: none;
+        color: $black;
+      }
+
+      &.active a,
+      &.active a:hover {
+        border: none !important;
+        background: $gainsboro;
+        color: $black;
+      }
+
+      &:hover a {
+        padding-top: 10px !important; // override nav-tabs behaviour
+      }
+    }
+  }
+
+  .tab-content.tab-focus {
+    padding: 0;
+    border-bottom: none;
+    border-top: 1px solid $silver;
+
+    h2 {
+      font-weight: 700;
+    }
+
+    div[class*="col"] {
+      margin-bottom: 0;
+
+      &:last-child {
+        padding-left: 0;
+      }
+    }
+  }
+
+} // End of media queries
+
+.tab-focus.carousel {
+  margin-bottom: 55px !important;
+
+  .item {
+    padding: 0 !important;
+  }
+
+  .col-sm-5 {
+    padding: 0 30px !important;
+  }
+
+  .carousel-indicators {
+    top: auto !important;
+    bottom: -35px !important;
+
+    li {
+      margin: 0 10px;
+    }
+  }
+
+  .carousel-control {
+    top: auto !important;
+    bottom: -40px !important;
+  }
+}
+
+.tab-content.tab-focus {
+  @media only screen and (max-width: $screen-sm) {
+    div[class*="col"]:last-child {
+      padding: 20px 30px;
+    }
+  }
+}
+
+.tab-focus-control {
+  min-width: 24px;
+  margin: 10px;
+  padding: 0.2em 0.5em;
+
+  position: absolute;
+  z-index: 1;
+
+  .icon {
+    vertical-align: middle;
+  }
+
+  @media only screen and (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.nav-justified > li > a,
+.nav-tabs.nav-justified > li > a {
+  @media only screen and (max-width: $screen-sm) {
+    margin-bottom: 1px;
+  }
+}

@@ -1,0 +1,58 @@
+/* ==========================================================
+ * list-group.scss
+ * List group widget
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-07 11:13:50
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.list-group {
+  h2 {
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+}
+
+.list-group-header {
+  min-height: 30px;
+  border-bottom: 2px solid $silver;
+  margin-bottom: 10px;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  .pull-right {
+    padding-top: 3px;
+  }
+
+  &:after {
+    content: ' ';
+    clear: both;
+    display: block;
+  }
+}
+
+.list-group-item, .list-group-item:last-child {
+  border: none;
+  border-bottom: 1px solid $silver;
+  border-radius: 0px;
+  padding: 10px 0;
+  margin-bottom: 0;
+
+  a,
+  p {
+    font-size: 1rem;
+  }
+
+  &:after {
+    content: '\00a0';
+    display: block;
+    height: 0px;
+    overflow: hidden;
+    clear: both;
+  }
+}

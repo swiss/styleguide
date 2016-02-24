@@ -1,0 +1,36 @@
+/* ==========================================================
+ * modal.scss
+ * Modal style
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-15 10:26:37
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.close {
+  color: $cerulean;
+  font-size: 0.8125rem;
+  opacity: 1;
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+  &:hover {
+    opacity: 1;
+    color: $cerulean;
+  }
+}
+
+.modal-content {
+  border: none;
+  border-radius: 0;
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
+.modal-header .close {
+  margin-top: 10px;
+}

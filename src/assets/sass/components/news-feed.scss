@@ -1,0 +1,29 @@
+/* ==========================================================
+ * news-feed.scss
+ * News Feed component
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-20 16:17:03
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.news-feed {
+  .scroll-y {
+    max-height: 330px !important; // MUST be of this size max.
+    overflow-y: scroll;
+  }
+  .list-group-header {
+    margin-bottom: 0;
+  }
+  .list-group-item {
+    padding: 5px 0;
+    @media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      @include make-sm-column(3);
+    }
+  }
+  .list-group-item:last-child {
+    border-bottom: none;
+  }
+}

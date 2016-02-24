@@ -1,0 +1,155 @@
+/* ==========================================================
+ * footer.scss
+ * Footer elements
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-13 15:54:19
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+footer {
+  border-top: 1px solid $light-grey;
+  background: $smoke;
+  margin-top: 20px;
+  @media only screen and (max-width: $screen-xs-max) {
+    @include gradient-light;
+  }
+  select {
+    min-width: 200px;
+  }
+  h3 {
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @media only screen and (max-width: $screen-xs-max) {
+      &:not(:first-child) {
+        @include gradient-light;
+      }
+      & + p {
+        padding-top: 1em;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    .border-bottom {
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 1em;
+      border-bottom: 1px solid $light-grey;
+    }
+  }
+}
+
+address {
+  // The table-cell and width force the address to get the
+  // height of it's floated elements.
+  display: table-cell;
+  width: 10000px;
+
+  border-top: 1px solid $white;
+  margin-bottom: 0;
+  padding: 10px 15px;
+  @media only screen and (max-width: $screen-xs-max) {
+    padding: 0;
+    border-color: $light-grey;
+    ul {
+      li {margin: 0;}
+      a {
+        display: inline-block;
+        border-left: 1px solid $light-grey;
+        padding: 10px;
+        background: fade-out($gainsboro, 0.7);
+      }
+    }
+  }
+}
+
+.site-map {
+  @media only screen and (max-width: $screen-xs-max) {display: none;}
+  position: relative;
+  background: $smoke;
+  background: -moz-linear-gradient(top, $smoke 0%, $white 6%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$smoke), color-stop(6%,$white));
+  background: -webkit-linear-gradient(top, $smoke 0%,$white 6%);
+  background: -o-linear-gradient(top, $smoke 0%,$white 6%);
+  background: -ms-linear-gradient(top, $smoke 0%,$white 6%);
+  background: linear-gradient(to bottom, $smoke 0%,$white 6%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#fcfcfc',GradientType=0 );
+  border-bottom: 1px solid $silver;
+  border-top: 1px solid $white;
+  padding-bottom: 30px;
+  .site-map-toggle {
+    display: none;
+  }
+  @media only screen and (max-width: $screen-sm-max) {
+    .container-fluid:not(.in) {
+      display: none;
+    }
+    .in {
+      padding-top: 20px;
+    }
+    .site-map-toggle {
+      position: absolute;
+      display: inline-block;
+      right: 15px;
+      top: 0;
+      z-index: 200;
+    }
+  }
+  & + div {
+    padding-bottom: 10px;
+  }
+  a {
+    font-size: 13px;
+    display: inline-block;
+    padding: 3px 0;
+  }
+}
+
+.footer-service {
+  display: none;
+  @media only screen and (max-width: $screen-xs-max) {
+    display: block;
+    ul {
+      padding: 0;
+      border-bottom: 1px solid $silver;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    li {
+      display: block;
+      margin-left: 0;
+      border-top: 1px solid $silver;
+    }
+    a {
+      display: block;
+      padding: 9px 15px;
+    }
+  }
+}
+
+
+footer {
+  img {
+    max-width: 204px;
+    margin: 15px 0;
+  }
+  .footer-line {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+    background: $white;
+  }
+}
+
+.links-social {
+  @extend .footer-service;
+  display: block;
+  @media only screen and (max-width: $screen-xs-max) {
+
+  }
+}

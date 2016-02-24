@@ -1,0 +1,46 @@
+---
+title: navigation.hierarchical-navigation.page-navigation-list.title
+help: navigation.hierarchical-navigation.page-navigation-list.help
+release: navigation.hierarchical-navigation.page-navigation-list.release
+label: fix
+---
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- these `.drilldown` container classes are used only if you want the drilldown behaviour (if you have sub-lists) -->
+    <div class="col-sm-4 drilldown">
+      <div class="drilldown-container">
+
+        <nav class="nav-page-list" role="navigation" id="secondary-navigation">
+          <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
+          <a href="#" class="icon icon--before icon--less"><span class="sr-only">Back to </span>Comestible Goods</a>
+          <ul>
+            <li class="list-emphasis">
+              <span>Drinks</span>
+              <ul>
+                <!-- add the .list-sub class if the list has some animated sub-lists -->
+                <li class="list-sub"><a href="#">Mineral water</a>
+                  <!-- sub-list element -->
+                  <nav class="drilldown-sub" aria-expanded="false">
+                    <a href="#" class="icon icon--before icon--less drilldown-back"><span class="sr-only">Back to </span>Mineral Water</a>
+                    <ul>
+                      <li><a href="#">Test</a></li>
+                      <li><a href="#">Test2</a></li>
+                      <li><a href="#">Test3</a></li>
+                    </ul>
+                  </nav>
+                </li>
+                <li class="active" aria-selected="true">Wine<span class="sr-only"> active</span></li>
+                <li><a href="#">Beer</a></li>
+                <li><a href="#">Spirits</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+
+  </div>
+</div>

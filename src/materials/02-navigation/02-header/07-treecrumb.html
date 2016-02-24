@@ -1,0 +1,55 @@
+---
+title: navigation.header.treecrumb.title
+help: navigation.header.treecrumb.help
+release: navigation.header.treecrumb.release
+label: cd
+---
+
+<header>
+  <div class="clearfix">
+    <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
+    <nav class="navbar treecrumb pull-left" role="navigation">
+      <h2 class="sr-only">Orientation in the website</h2>
+      <ul class="nav navbar-nav">
+        <!-- Treecrumb dropdown element -->
+        <li class="dropdown">
+          <!-- Dropdown label -->
+          <a id="admin-dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span>The federal Council</a>
+          <!-- Dropdown list element -->
+          <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
+            <!-- Dropdown title, can ben place anywhere in the list -->
+            <li class="dropdown-header">
+              <a href="#">The federal Council</a>
+              <ul>
+                <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
+                <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
+                <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
+                <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
+                <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
+                <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
+                <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" id="service-dropdown" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Departement: EDI</a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="service-dropdown">
+            <li class="dropdown-header">
+              <a href="#">Departement: EDI</a>
+              <ul>
+                <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
+                <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
+                <li><a href="#">Integrationsbüros</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  {{> general.logo}}
+</header>
+<nav class="nav-main"></nav>

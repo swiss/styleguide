@@ -1,0 +1,18 @@
+# You should change those values accordingly in src/index.html
+# to make the language detection work as expected.
+de:
+  code: de
+  name: Deutsch
+  disabled: false
+fr:
+  code: fr
+  name: Français
+  disabled: false
+it:
+  code: it
+  name: Italiano
+  disabled: true
+en:
+  code: en
+  name: English
+  disabled: false

@@ -1,0 +1,117 @@
+---
+title: navigation.header.topics.title
+help: navigation.header.topics.help
+release: navigation.header.topics.release
+label: cd
+---
+
+<header>
+  {{> general.logo}}
+
+  <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
+  <nav class="navbar yamm yamm--select" role="navigation">
+    <h2 class="sr-only">By Topics</h2>
+    <ul>
+      <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
+      <li class="dropdown pull-right">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themes A-Z <span class="icon icon--bottom"></span></a>
+        <ul class="dropdown-menu">
+          <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+          <li>
+            <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+            <div class="yamm-content container-fluid">
+
+              <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+              <div class="row">
+                <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+              </div>
+
+              <!-- The tab navigation -->
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#eda" data-toggle="tab">EDA</a></li>
+                <li><a href="#deza" data-toggle="tab">DEZA</a></li>
+              </ul>
+
+              <!-- The tab content -->
+              <div class="tab-content">
+
+                <div class="tab-pane active" id="eda">
+
+                  <!-- The inside-tab navigation -->
+                  <ul class="nav nav-tabs nav-tabs-alphabet">
+                    <li class="active"><a href="#eda-tab-a" data-toggle="tab">A</a></li>
+                    <li><a href="#eda-tab-b" data-toggle="tab">B</a></li>
+                    <li><a href="#eda-tab-c" data-toggle="tab">C</a></li>
+                    <li><a href="#eda-tab-d" data-toggle="tab">D</a></li>
+                    <li><a href="#eda-tab-e" data-toggle="tab">E</a></li>
+                    <li><a href="#eda-tab-f" data-toggle="tab">F</a></li>
+                    <li><a href="#eda-tab-g" data-toggle="tab">G</a></li>
+                    <li><a href="#eda-tab-h" data-toggle="tab">H</a></li>
+                    <li><a href="#eda-tab-i" data-toggle="tab">I</a></li>
+                    <li><a href="#eda-tab-j" data-toggle="tab">J</a></li>
+                    <li><a href="#eda-tab-k" data-toggle="tab">K</a></li>
+                    <li><a href="#eda-tab-l" data-toggle="tab">L</a></li>
+                    <li><a href="#eda-tab-m" data-toggle="tab">M</a></li>
+                    <li><a href="#eda-tab-n" data-toggle="tab">N</a></li>
+                    <li><a href="#eda-tab-o" data-toggle="tab">O</a></li>
+                    <li><a href="#eda-tab-p" data-toggle="tab">P</a></li>
+                    <li><a href="#eda-tab-q" data-toggle="tab">Q</a></li>
+                    <li><a href="#eda-tab-r" data-toggle="tab">R</a></li>
+                    <li><a href="#eda-tab-s" data-toggle="tab">S</a></li>
+                    <li><a href="#eda-tab-t" data-toggle="tab">T</a></li>
+                    <li><a href="#eda-tab-u" data-toggle="tab">U</a></li>
+                    <li><a href="#eda-tab-v" data-toggle="tab">V</a></li>
+                    <li><a href="#eda-tab-w" data-toggle="tab">W</a></li>
+                    <li><a href="#eda-tab-x" data-toggle="tab">X</a></li>
+                    <li><a href="#eda-tab-y" data-toggle="tab">Y</a></li>
+                    <li><a href="#eda-tab-z" data-toggle="tab">Z</a></li>
+                  </ul>
+
+                  <!-- The inside-tab content -->
+                  <div class="tab-content">
+                    <!-- All `tab-pane` can contain any kind of content like table, list, article... -->
+                    <div class="tab-pane active" id="eda-tab-a">a. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-b">b. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-c">c. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-d">d. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-e">e. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-f">f. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-g">g. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-h">h. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-i">i. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-j">j. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-k">k. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-l">l. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-m">m. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-n">n. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-o">o. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-p">p. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-q">q. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-r">r. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-s">s. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-t">t. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-u">u. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-v">v. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-w">w. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-x">x. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-y">y. Some content...</div>
+                    <div class="tab-pane" id="eda-tab-z">z. Some content...</div>
+                  </div>
+                </div>
+
+                <div class="tab-pane" id="deza">
+                  <p>Same as previous</p>
+                </div>
+
+              </div><!-- Main tab content end -->
+
+            </div><!-- `yamm-content` end -->
+          </li><!-- Dropdown `li` end -->
+        </ul><!-- Dropdown `ul` end -->
+      </li><!-- Navbar item end -->
+    </ul><!-- Navbar list end -->
+  </nav><!-- Navbar end -->
+
+</header>
+<nav class="nav-main"></nav>
+

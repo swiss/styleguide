@@ -1,0 +1,113 @@
+/* ==========================================================
+ * icons.scss
+ * Icons elements styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+ .icon {
+  &.icon--before:before {
+    font-family: $admin-icons;
+    display: inline-block; // to enable the possibility of no text-decoration whtn in a link
+  }
+  &.icon--after:after {
+    font-family: $admin-icons;
+    display: inline-block; // to enable the possibility of no text-decoration whtn in a link
+  }
+}
+
+span.icon {
+  font-family: $admin-icons;
+  position: relative;
+}
+
+$icon-list: (
+  exclam :                  '\e900',
+  arrow-right :             '\e902',
+  google :                  '\e903',
+  bottom :                  '\e904',
+  left :                    '\e905',
+  disc :                    '\e906',
+  screen :                  '\e907',
+  notebook :                '\e908',
+  smartphone-portrait :     '\e909',
+  smartphone-landscape :    '\e90a',
+  tablet-portrait :         '\e90b',
+  tablet-landscape :        '\e90c',
+  right :                   '\e90d',
+  top :                     '\e90e',
+  less :                    '\e90f',
+  greater :                 '\e910',
+  eye :                     '\e911',
+  pdf :                     '\e912',
+  trash :                   '\e913',
+  cart :                    '\e914',
+  star :                    '\e915',
+  list :                    '\e916',
+  message :                 '\e917',
+  print :                   '\e918',
+  rss :                     '\e919',
+  search :                  '\e91a',
+  word :                    '\e91b',
+  excel :                   '\e91c',
+  power :                   '\e91d',
+  calendar :                '\e91e',
+  doc :                     '\e91f',
+  pause :                   '\e920',
+  facebook :                '\e921',
+  step-backward :           '\e922',
+  step-forward :            '\e923',
+  list-alt :                '\e924',
+  backward :                '\e925',
+  forward :                 '\e926',
+  external :                '\e927',
+  menu :                    '\e928',
+  corner :                  '\e929',
+  tools :                   '\e92a',
+  play :                    '\e92b',
+  settings :                '\e92c',
+  twitter :                 '\e92d',
+  fast-backward :           '\e932',
+  fast-forward :            '\e92e',
+  root :                    '\e92f',
+  square :                  '\e930',
+  close :                   '\e931',
+  arrow-bottom :            '\e933',
+  arrow-left :              '\e934',
+  arrow-top :               '\e935'
+);
+
+@function get-font-icon($icon) {
+  @if not map-has-key($icon-list, $icon) {
+    @warn "Key `#{$icon}` not found in $icon-list map.";
+  }
+  @return map-get($icon-list, #{$icon});
+}
+
+@each $key, $value in $icon-list {
+  span.icon.icon--#{$key}:after {content: $value;}
+  .icon--before.icon--#{$key}:before {
+    content: $value;
+    padding-right: 5px;
+    position: relative;
+    top: 1px;
+  }
+  .icon--after.icon--#{$key}:after {
+    content: $value;
+    padding-left: 3px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.icon--before.pull-right.icon--print:before, a.pull-right.icon--print[data-toggle=collapse]:before {
+  padding-right: 0;
+}
+
+a.icon:hover {
+  text-decoration: underline; // fix to override normal bootstrap behaviour
+}

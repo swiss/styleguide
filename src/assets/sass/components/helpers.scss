@@ -1,0 +1,77 @@
+/* ==========================================================
+ * helpers.scss
+ * Different helpers classes that add various tweaks to other modules
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-01 15:30:10
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+// Right separator
+.separator {
+  @include separator($light-grey);
+}
+
+// Left separator
+.separator-left {
+  @include separator($light-grey, left);
+}
+
+// Separator with both borders
+.separator-both {
+  @include separator($light-grey, both);
+}
+
+.bordered {
+  @media only screen and (min-width: $screen-md-min) {
+    border: 1px solid $silver;
+  }
+}
+
+.spacer {
+  height: 40px;
+}
+
+.text-inline {display: inline;}
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.nopadding-right {
+  @media only screen and (min-width: $screen-sm-min) {
+    padding-right: 0 !important;
+  }
+}
+
+.nopadding-left {
+  @media only screen and (min-width: $screen-sm-min) {
+    padding-left: 0 !important;
+  }
+}
+
+.table-row {
+  display: table-row;
+  height: 20px;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+// Workaround for inline visible-xs (was display:block by default)
+@media screen and (max-width: $screen-xs-max) {
+    .visible-xs-inline {
+        display: inline-block !important;
+    }
+}
+
+@media screen and (min-width: $screen-sm-min) {
+    .visible-xs-inline {
+        display: none !important;
+    }
+}

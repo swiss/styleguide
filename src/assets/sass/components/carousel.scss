@@ -1,0 +1,80 @@
+/* ==========================================================
+ * carousel.scss
+ * Carousel component
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-15 13:12:44
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.carousel {
+  border: 1px solid $silver;
+
+  .item {
+    padding: 10px;
+  }
+}
+
+.carousel-control {
+  height: 40px;
+
+  bottom: auto;
+  z-index: 1;
+
+  color: $coal;
+  font-size: $carousel-control-font-size;
+  line-height: 40px;
+  text-shadow: none;
+
+  opacity: 1;
+
+  &.right,
+  &.left {
+    width: 40px;
+    background-image: none !important;
+    background: none;
+    filter: none; // fix for IE
+
+    color: $coal;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+    &.disabled {
+      &,
+      &:hover,
+      &:focus {
+        cursor: default;
+        color: $gainsboro;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      color: $venetian-red;
+    }
+  }
+
+  &.left {
+    left: 10px;
+  }
+
+  &.right {
+    right: 10px;
+  }
+}
+
+.carousel-indicators {
+  margin-top: 12px;
+  bottom: auto;
+
+  li {
+    border: none;
+    background: $gainsboro;
+  }
+
+  .active {
+    background: $venetian-red;
+  }
+}

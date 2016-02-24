@@ -1,0 +1,88 @@
+/* ==========================================================
+ * links.scss
+ * Links element styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-30 09:38:36
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+a {
+ color: $cerulean;
+ line-height: 1.5;
+
+ &:hover {
+   color: darken($cerulean, 5%);
+   text-decoration: underline;
+ }
+ &:active, &:visited {text-decoration: none;}
+ &:visited {color: $cadillac;}
+ p & {
+   line-height: 1;
+   text-decoration: underline;
+ }
+ p &:hover {
+   text-decoration: underline;
+ }
+
+ small & ~ span{
+  display: block;
+  margin-top: -5px;
+ }
+
+ &.icon {
+  &,
+  &:before, &:after,
+  &:hover:before, &:hover:after {
+    text-decoration: none;
+  }
+ }
+}
+
+// Apply a more accessible/visible focus state on interactive elements
+// This is shown *only* when user interact with the keyboard
+// See outline.js
+*:not([class*="col-"]):focus,
+a:focus,
+.form-control:focus,
+input[type=checkbox]:focus,
+input[type=radio]:focus,
+input[type=file]:focus,
+button:focus,
+.btn:focus,
+.btn.active:focus,
+.carousel-control:focus,
+.dropdown-toggle:focus,
+.chosen-container-active .chosen-single {
+  outline: $focus-outline;
+  outline-offset: 1px;
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+  .phone-number {
+    .dl-horizontal & {
+      margin-left: 0;
+    }
+    a {
+      display: block;
+      margin-bottom: 1em;
+      padding: 10px 20px;
+      width: 100%;
+      border: 1px solid $coal;
+      border-radius: 3px;
+      background: $gray-lighter;
+      color: $coal;
+      text-align: center;
+      text-decoration: none;
+      span {
+        display: inline;
+      }
+    }
+  }
+  .dl-horizontal dt {
+    float: left;
+    clear: left;
+  }
+}

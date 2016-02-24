@@ -1,0 +1,71 @@
+/* ==========================================================
+ * select.scss
+ * Custom select styles added after the chosen-theme
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-04-28 17:26:57
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+select.form-control,
+.form-inline select.form-control {
+  width: auto;
+  max-width: 100%;
+}
+
+.navbar.yamm--select {
+  @media only screen and (max-width: $screen-xs-max) {
+    display: none;
+  }
+}
+
+.yamm--select {
+  height: 0px;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: -20px;
+  float: right;
+  @media only screen and (max-width: $screen-sm-max) {
+    margin-top: -15px;
+  }
+  &.pull-right .dropdown-menu {right: 0;}
+  .dropdown-toggle {
+    color: $coal;
+    padding: 0 10px;
+    display: inline-block;
+    border: 1px solid $empress;
+    border-radius: 4px;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    text-decoration: none;
+    width: 200px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+    background: $white;
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+      color: $venetian-red;
+    }
+    span {
+      border-left: 1px solid $empress;
+      display: inline-block;
+      color: $black;
+      margin: 0;
+      float: right;
+      padding-left: 10px;
+    }
+  }
+  .dropdown.open .dropdown-toggle {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    color: $venetian-red;
+    position: relative;
+    z-index: 1000;
+  }
+  .dropdown-menu {
+    top: 22px;
+  }
+}

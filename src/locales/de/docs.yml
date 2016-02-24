@@ -1,0 +1,455 @@
+title: Richtlinie für das Webdesign Bund
+index:
+  title: Startseite
+  content: |
+    # Das Erscheinungsbild der Bundesverwaltung im Web
+
+    Die Richtlinien für das Webdesign Bund (Webrichtlinien) definieren den gestalterischen Rahmen für das Erscheinungsbild der Websites von Bundesrat und Bundesverwaltung. Sie sind Teil des CD Bund, und sie sind für alle öffentlichen Websites der Bundesverwaltung verbindlich.
+
+    ## Ausnahmen
+
+    Ausnahmen vom Webdesign Bund sind für Kampagnen- und Partner-Websites möglich. Sie müssen von der Konferenz der Generalsekretäre der Departemente (GSK) genehmigt werden. Entsprechende Anträge sind bei der <a href="http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de">Fachstelle CD Bund</a>  der Bundeskanzlei einzureichen.
+
+    ## Benutzerfreundliche und barrierefreie Websites
+
+    Diese Webrichtlinien ermöglichen die Entwicklung moderner, benutzerfreundlicher und barrierefreier Webauftritte. Sie definieren die obligatorischen Markenelemente sowie die verbindlichen Navigations- und Inhaltsmodule. Sie führen weiterhin eine Reihe von Elementen ein, die direkt verwendet werden können.
+
+    ## Barriereifreiheit (Accessibility)
+
+    Die Bundesverwaltung ist gesetzlich verpflichtet, die Online-Informationen barrierefrei anzubieten. Die Vorgaben, Massnahmen und Hinweise für die Erstellung barrierefreier Websites sind im Kapitel "Barrierefreiheit"</a> beschrieben.
+
+    ## Responsive Design
+
+    Die Anzeige ist für Webbrowser sowohl auf Desktop-Computern wie auch auf Laptops, Tablets und Smartphones optimiert.
+
+    ## Zielgruppen
+
+    Die Webrichtlinien richten sich an bundesinterne Projektleitende und externe Dienstleister. Projektleitenden bieten sie einen Überblick über die Gestaltungsvorgaben. Entwicklerteams können die Seitentypen und Elemente direkt verwenden. Sie sind in standardkonformem HTML-Code umgesetzt und können zusammen mit den CSS- und JavaScript-Dateien verwendet werden.
+
+    ## Obligatorische und empfohlene Elemente
+
+    Die beschriebenen Elemente und Module können drei Gruppen zugeordnet werden:
+
+    ### 1. Markenelemente <span class="label label-admin">CD</span>
+
+    Die Markenelemente identifizieren die Website eindeutig als Website des Bundes. Sie sind daher zwingen zu verwenden. Sie sind im CD Bund geregelt und dürfen in keiner Weise modifiziert werden. Änderungen dieser Elemente müssen von der GSK genehmigt werden. Es handelt sich um folgende Elemente:
+
+      - Kennzeichnung der Website bestehend aus Bundeslogo und der Bezeichnung der Organisationseinheit
+      - Rote Linie, die den Header abgrenzt
+      - Fusszeile mit Copyright-Vermerk, Links auf Impressum und Rechtliches
+      - Schrift "Frutiger"
+      - Farbpalette
+
+    Die Markenelement sind in den Detailbeschreibungen mit dem folgenden Icon gekennzeichnet: <span class="label label-admin">CD</span>
+
+    ### 2. Verbindliche Elemente <span class="label label-admin">FIX</span>
+
+    Verbindliche Elemente müssen nicht zwingend eingesetzt werden. Wenn sie jedoch verwendet werden, sind sie in ihrer Position und Gestaltung fix. Sie dürfen daher nicht modifiziert werden. Änderungen an diesen verbindlichen Elementen benötigen zwingend eine Genehmigung der Konferenz der Informationsdienste (KID). Es handelt sich um folgende Elemente:
+
+      - Alle sonstigen Header-Elemente (Treecrumb, Service- Navigation, Suche, Themen A-Z)
+      - Globalnavigation
+      - Subnavigation in der linken Spalte
+      - Breadcrumb
+      - Social Media Links im Footer
+      - Partner-Links im Footer
+      - Sitemap im Footer
+      - Social Sharing Funktion
+      - Druck-Funktion
+      - "Zurück zur Übersicht"-Link
+      - Typografische Regeln
+
+    Verbindliche Elemente sind in den Detailbeschreibungen mit dem folgenden Icon gekennzeichnet: <span class="label label-admin">FIX</span>
+
+    ### 3. Flexible Elemente <span class="label label-admin">FLEX</span>
+
+    Die Beschreibung aller weiteren Elemente sind Vorschläge. Sie können an die konkreten Bedürfnisse angepasst werden. Sie können frei erweitert und modifiziert werden. Das generelle Erscheinungsbild (Look & Feel) muss aber erhalten bleiben. Erweiterungen und Anpassungen an diesen Elementen können dem Webforum zur Aufnahme in die Webrichtlinien vorgeschlagen werden.
+
+      - Facetten Navigation
+      - Bildergalerie
+      - Kontaktbox
+      - usw.
+
+    Flexible Elemente sind in den Detailbeschreibungen mit dem folgenden Icon gekennzeichnet: <span class="label label-admin">FLEX</span>
+
+    Darüber hinaus steht es jedem Projekt frei, im Rahmen des durch die Marken- und verbindlichen Elemente aufgespannten Rahmens eigene Elemente zu entwickeln. Diese neuen Elemente können dem Webforum zur Aufnahme in die Web-Richtlinien vorgeschlagen werden.
+
+    ## Überarbeitung und Weiterentwicklung
+
+    Die Entwicklung der Richtlinien, die Issues und Releases sind auf Github dokumentiert: <a href="http://github.com/swiss/styleguide">Richtlinien für das Webdesign Bund</a>. Fehlermeldungen und Anregungen sind dort einzugeben. Dafür ist ein Konto bei Github nötig. Anfragen dazu bitte per Mail an <a href="mailto:webforum@bk.admin.ch">Webforum Bund</a>.
+
+    Das Webforum Bund überprüft die Webrichtlinien periodisch auf Aktualität und Konformität mit den Entwicklungen im Web.
+
+    Bei Bedarf und in Absprache mit der KID, dem Informatiksteuerungsorgan ISB, den Leistungserbringern und der Fachstelle CD Bund leitet das Webforum Bund einen Releasewechsel ein.
+
+    Voraussetzung ist jeweils, dass die Finanzierung gesichert ist.
+
+    Änderungen der Markenelemente müssen von der GSK genehmigt werden, sonstige Änderungen der Webrichtlinien von der KID.
+
+accessibility:
+  title: Barrierefreiheit
+  intro: |
+
+    Laut dem <a href="https://www.admin.ch/opc/de/classified-compilation/20002658/index.html#a14">Behindertengleichstellungsgesetz (BehiG)Art. 14</a> müssen Dienstleistungen der Bundesverwaltung im Internet Sehbehinderten ohne erschwerende Bedingungen zugänglich sein. Erfüllt ist diese Vorgabe, wenn eine Website die Konformitätsbedingungen gemäss WCAG 2.0 entspricht und die Konformitätsstufe AA erreicht.
+
+    Weiterführende Informationen:
+
+      - <a href="https://www.admin.ch/opc/de/classified-compilation/20002658/index.html">Behindertengleichstellungsgesetz (BehiG)</a>
+      - <a href="https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html">P028 - Richtlinien des Bundes für die Gestaltung von barrierefreien Internetangeboten</a>
+      - <a href="http://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a>
+      - <a href="http://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a>
+
+    ## Gute Praxis
+
+    Die folgenden Beispiele zeigen, wie Webredaktorinnen und -redaktoren die Zugänglichkeit ihrer Websites mit einfachen Mitteln verbessern können.
+
+
+  title-tag: |
+    ### Seitentitel
+
+    Im "title" des HTML-Dokuments soll zuerst das Seitenspezfische, dann das Allgemeine beschrieben werden. Die Elemente sind mittels Komma zu trennen.
+
+  multi-language: |
+    ### Mehrsprachige Inhalte auf einer Seite
+
+    Manchmal gibt es auf derselben Seite Inhalte in verschiedenen Sprachen. Screenreader müssen mit dem "lang"-Attribut auf den Sprachwechsel aufmerksam gemacht werden.
+
+  outro: |
+
+    ### Icons
+
+    Font Icons können von Screenreader oft nicht gelesen werden. Daher ist ein zusätzlicher sichtbarer oder unsichtbarer Text (`<span class="sr-only">icon description</span>`) notwendig.
+    Die Icons selbst können dann als aria-hidden="true" definiert werden.
+
+    ### Accesskeys – Accessibility-Navigation
+
+    Accesskeys vereinfachen die Benutzung einer Webseite Mittels Screenreader oder über die Tastatur. Die Accessibility-Navigation muss direkt nach dem Body-Tag definiert werden. Die Accesskey sind unsichtbar, ausser bei Erhalt des Fokus. Ein Beispiel findet sich unter Navigationsmodule - Kopfbereich - Barrierefreie Navigation.
+
+    ### Anforderung zur Gestaltung von barrierefreien Inhalten
+
+    Weitere Beispiele guter Praxis für die Gestaltung von barrierefreien Inhalten sind in der «Accessibility-Checkliste für AEM» aufgeführt.
+
+    ## Nicht barrierefreie Elemente
+
+    Die Elemente Slideshow und Karussell sind nicht vollständig barrierefrei zugänglich. Falls sie dennoch eingesetzt werden, sind sie für Screenreader mit dem Befehl aria-hidden="true" auszublenden. Die Inhalte sind in diesem Fall in einer für Screenreader nutzbaren Form anzubieten.
+
+    Dies kann erreicht werden, indem der Inhalt einer Slideshow oder eines Karussells als herkömmliche HTML-Liste nur für Screenreader sichtbar (`<div class="sr-only">`) wiederholt wird. Alternativ kann ein nur für Screenreader sichtbarer Link auf eine Seite mit den barrierefrei dargestellten Inhalten ergänzt werden.
+
+    ## Hilfsmittel
+
+    Nachfolgend eine Auswahl von Hilfsmittel zur Gestaltung und Prüfung der Barrierefreiheit von Webseiten:
+
+      ### Accessibility-Checkliste für AEM
+
+      Leitfaden für die Erstellung von barrierefreien Inhalten mit Adobe Experience Manager AEM
+
+      ### HeadingMap (Firefox Add-on)
+
+      HeadingsMap eignet sich hervorragend, um die Struktur einer Webseite sichtbar zu machen. Das Add-on zeigt die Überschriftenstruktur der aktuell geöffneten Internetseite in einem Extrabereich des Browserfensters an.
+
+      ### Juicy Studio Accessibility Toolbar (Firefox Add-on)
+
+      Diese Toolbar prüft eine Reihe von Anforderung der Barrierefreiheit, darunter auch die Auszeichnung von ARIA-Elementen und das Markup von Tabellen.
+
+      ### Web Developer Toolbar (Firefox Add-on)
+
+      Diese Toolbar eignet sich für die Deaktivierung von JS, Hervorhebung von bestimmten HTML-Elementen oder zur Überprüfung von Bildern.
+
+      ### Color Contrast Analyzer
+
+      <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyzer</a> ist ein Werkzeug, das dabei hilft, den Kontrast zwischen Vorder- und Hintergrundfarbe zu analysieren.
+
+    Die Web Accessibility Initiative (WAI) des World Wide Web Consortiums (W3C) bietet eine <a href=" https://www.w3.org/WAI/ER/tools/index.html">ausführliche Liste</a> von Tools zur Accessibility-Evaluation an.
+
+    ## Weitere Informationen und Kontakt
+
+    Geschäftsstelle E-Accessibility Bund (2015-2017)
+    <a href="mailto:markus.riesch@gs-edi.admin.ch">Markus Riesch</a> Tel. +41584625463
+
+basic-grid:
+  title: Grundraster und Seitentypen
+  content: |
+    ## Grundraster
+
+    Die Webseiten bestehen aus drei Bereichen: dem Header, dem vierspaltig aufgebauten Inhaltsbereich und dem Footer.
+
+    <figure>
+      <img src="/styleguide-img/grid.png" alt="Page grid example">
+      <figcaption> Das vierspaltige Raster wird von den verschiedenen Seitentypen unterschiedlich belegt.</figcaption>
+    </figure>
+
+    ## Seitentypen
+
+    Grundsätzlich gibt es zwei Seitentypen: Startseite (Homepage) und Inhaltsseite. Ausserdem gibt es einige Mischformen und Spezialseiten (siehe dazu "Beispielseiten").
+
+    ## Startseite
+
+    Die Startseite besteht aus dem Header, der Navigation, dem Teaser-Bereich und dem Footer. Der Teaser-Bereich ist in vier Spalten unterteilt. Es gibt eine Vielzahl von Teasern für verschiedene Anwendungen. Diese sind in der Rubrik "Inhaltsmodule" aufgelistet und detailliert beschrieben. Diese Teaser können den Teaserbereich flexibel belegen. So kann z.B. der Brennpunkt-Teaser drei Spalten einnehmen und ein Personen-Teaser mit dem Portrait des zuständigen Bundesrates nur eine Spalte.
+
+    ## Inhaltsseite
+
+    Eine Inhaltsseite hat ebenfalls einen Header und einen Footer. Statt des Teaser-Bereichs hat die Seite einen vierspaltigen Inhaltsbereich. Die linke Spalte wird von der Subnavigation genutzt, die mittleren beiden Spalten sind für den eigentlichen Inhalt vorgesehen. Die rechte Spalte wird als Kontextspalte verwendet.
+
+    ### Linke Navigation
+
+    Die Subnavigation in der linken Spalte des Inhaltsbereichs ist eine so genannte verdrängende Navigation, die immer die Optionen für die aktuelle Seite anzeigt. Sie besteht aus drei Bereichen: dem Navigationskopf mit dem Titel der aktuellen Seite, einem Zurück-Link auf die darüberliegende Ebene und Links auf die Unterseiten. Das Verhalten wird auf der Elementseite <a href="/de/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Seitennavigation Liste (Linke Subnavigation)</a> beschrieben.
+
+
+    ### Inhaltsbereich
+
+    Im Inhaltsbereich werden Seitentitel und Zwischentitel, Fliesstext, Bilder, Infoboxen und weiterführende Informationen platziert. Die weiterführenden Informationen werden immer als unterstes Element im Inhaltsbereich platziert und gehören nicht in der Kontextspalte. In Usability-Test wurde festgestellt, dass Anwender Informationen in der Kontext-Spalte wenig beachten.
+
+    ### Kontextspalte
+
+    Die Kontextspalte ist reserviert für die folgenden Elemente: wo immer es sinnvoll ist, wird zuoberst ein Direktkontakt platziert. Wenn es ein Warenkorb-Element gibt, wird es direkt unterhalb des Kontakt-Teasers eingefügt. Es dürfen auch andere Teaser, wie z.B. eine RSS-Feed-Box oder ein temporärer Teaser (z.B. für eine Konferenz) platziert werden. Es dürfen aber auf keinen Fall mehr als drei Elemente platziert werden. Ist die Platzierung der erwähnten Elemente nicht sinnvoll, bleibt die Spalte leer.
+
+    In der Kontextspalte dürfen keine weiterführenden Informationen oder sonstige essentielle Inhaltsbestandteile, abgesehen von den oben erwähnten, platziert werden.
+
+cd-elements:
+  title: Markenelemente
+  content: |
+    ## Zweck
+       Die konsistente Anwendung der Markenelemente sorgt für ein markentypisches "Look and Feel" der Websites des Bundes. Sie stellt sicher, dass eine Website auf den ersten Blick als Website des Bundes identifiziert wird. Weiter vermittelt sie dem Anwender die wesentlichen Werte, die der täglichen Arbeit der Bundesverwaltung zu Grunde liegen: Qualität, Effizienz und Transparenz.
+
+    Der Verwendung der folgenden zentralen Markenelemente ist zwingend. Sie sind im CD Bund geregelt und dürfen in keiner Weise modifiziert werden:
+
+    - die Kennzeichnung, bestehend aus dem Bundeslogo, der Bezeichnung der Organisationseinheit und der grauen Trennlinie zwischen diesen beiden Elementen;
+    - die rote Linie, welche den Header abschliesst;
+    - die verwendeten Farben: Rot für Auszeichnungen, Blau für Links und eine Palette von Grautönen;
+    - der durchgängige Einsatz der Schrift "Frutiger";
+    - eine einheitliche Fusszeile (mit Copyright, Impressum und Rechtliches)
+
+    ## Klare Kennzeichnung der Webseite
+
+    Der Absender einer Website wird immer mit dem vollständigen Bundeslogo (Wappen mit viersprachiger Wortmarke) und der Bezeichnung der Organisationseinheit inklusive Kürzel oder Kurzform gekennzeichnet. Diese zwei Bestandteile sind durch eine vertikale Linie voneinander getrennt. Die Kennzeichnung ist immer oben links im Header positioniert.
+
+    <figure>
+      <img src="/styleguide-img/kennzeichnung.png" alt="Page grid example">
+      <figcaption> Die Kennzeichnung besteht aus dem vollständigen Bundeslogo und der Bezeichnung der Organisationseinheit, sowie einer Trennlinie.</figcaption>
+    </figure>
+
+    ## Umsetzung für Smartphones
+
+    Für Anwendungen, bei denen der Platz im Header eingeschränkt ist, kann das Wappen allein ohne die Wortmarke verwendet werden. Die Bezeichnung der Organisationseinheit kann als Kürzel (z.B. EDA) oder Kurzform (z.B. MeteoSchweiz) verwendet werden. Organisationseinheiten, für die es keine Kürzel oder Kurzformen gibt, werden ausgeschrieben. Das kann dazu führen, dass die Bezeichnung mehrzeilig und der Header-Bereich dadurch höher wird.
+
+    <figure>
+      <img src="/styleguide-img/mobile_header.png" alt="Page grid example">
+      <figcaption>Für die Kennzeichnung im Header auf Smartphones kann auch das Kürzel verwendet werden. Wenn die Organisationseinheit ausgeschrieben werden muss, kann die Bezeichnung mehrzeilig werden.</figcaption>
+    </figure>
+
+    Dort, wo im Header die reduzierte Form der Kennzeichnung verwendet wird, muss im Footer das vollständige Bundeslogo mit Wappen und viersprachiger Wortmarke wiederholt werden.
+
+    Die vollständige Bezeichnung der Organisationseinheit wird bei mobilen Geräten ausserdem in einem Bereich oberhalb des Headers eingeblendet. Dieser Bereich wird beim ersten Scrollen ausgeblendet.
+
+    <figure>
+       <img src="/styleguide-img/schublade.png" alt="Beispiel einer vollständigen Bezeichnung">
+       <figcaption>Die vollständige Bezeichnung der Organisationseinheit bei Smartphones.</figurecaption>
+    </figure>
+
+    ## Trennlinie unterhalb Header
+
+    Die rote Trennlinie schliesst den Header nach unten ab. Sie kann einen ausgewählten Bereich in der Globalnavigation auszeichnen.
+
+    ![Die rote Trennlinie wird zur Markierung eines aktiven Bereichs in der Globalnavigation verwendet.](/styleguide-img/rotelinie.png)
+
+    ## Typographie
+
+    Für das Internet wird durchgehend die Schriftart "Frutiger" verwendet. Im Intranet wird die Schriftart "Arial" verwendet.
+
+    ## Signalfarben
+
+    Interaktive Elemente werden entweder durch ihre Position (z.B. in der Navigation) ausgezeichnet oder durch die Farbe Blau markiert. Ausgewählte Elemente sind rot.
+
+    ## Fussleiste
+
+    Die einheitliche Fussleiste schliesst die Seiten ab. Sie beinhaltet einen Copyright-Vermerk und Links auf "Rechtliches" und "Impressum".
+
+    ## Favicon
+
+    Vergessen Sie das Favicon nicht, bevor Sie die Website live schalten. Die Ressourcen finden Sie im Code-Packet.
+
+    ```html
+    <link rel="shortcut icon" href="build/img/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="build/img/ico/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="build/img/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="build/img/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="build/img/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="build/img/ico/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="build/img/ico/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="build/img/ico/apple-touch-icon-76x76.png">
+    <link rel="icon" type="image/png" href="build/img/ico/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="build/img/ico/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="build/img/ico/favicon-:3172x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="build/img/ico/mstile-144x144.png">
+    <meta name="msapplication-config" content="build/img/ico/browserconfig.xml">
+    ```
+devices:
+  title: Ausgabe auf verschiedenen Endgeräten
+  content: |
+    ## Responsive Design
+       Die Webrichtlinien Bund erlauben die optimierte Ausgabe aller Inhalte einer Website auf verschiedenen Endgeräten wie Desktop Computer, Laptops, Tablets und Smartphones. Das Layout der einzelnen Webseiten und der einzelnen Elemente passt sich der Auflösung des Ausgabegeräts an.
+
+    ## Desktop Computer, Laptop und Tablet
+
+    Auf Desktop Computern, Laptops und Tablets, die im Querformat gehalten werden, wird das vierspaltige Original-Layout beibehalten. Sobald ein Tablet im Hochformat gehalten wird, wird der Inhalt der rechten Spalte (Kontextspalte) unterhalb des Inhalts angezeigt.
+
+    <figure>
+      <img src="/styleguide-img/responsive.png" alt="Grafik zur Anordnung des Inhalts je nach Endgerät">
+      <figcaption> Auf den verschiedenen Endgeräten werden die Inhalte unterschiedlich angeordnet.</figcaption>
+    </figure>
+
+    ## Mobile Geräte/Smartphones
+
+    Wird die Seite auf einem Smartphone ausgegeben, wird nur noch die Inhaltsspalte dargestellt. Die Navigation in der linken Spalte und die Kontextspalte verschwinden. Der Anwender kann stattdessen über Links im Footer und ein spezielles Menu für Mobile navigieren.
+
+    Usability-Tests haben ergeben, dass viele Anwender auf dem Smartphone das Navigationsmenu im Header ignorieren und über die Links im Footer navigieren. Es ist deshalb wichtig, die Navigation im Footer abzubilden.
+
+
+guidelines:
+  title: Anwendung der Webrichtlinien Bund
+  content: |
+    ## Aufbau
+
+    Innerhalb der Richtlinien für das Webdesign Bund kann über die Reiter im Hauptmenu zu den einzelnen Kapiteln navigiert werden.
+
+    Auf der Startseite sind die Richtlinien für das Webdesign Bund zusammengefasst.
+
+    Unter "Richtlnien für das Webdesign Bund" wird der Aufbau, die Browserkompatibilität und die Installation beschrieben.
+
+    Unter den Reitern "Grundraster", "Navigationsmodule" und "Inhaltsmodule" sind die detaillierten Beschreibungen der einzelnen Elemente zu finden.
+
+    Unter dem Menupunkt "Beispielseiten" werden verschiedene Typen Webseiten vorgestellt. Diese werden in einem neuen Reiter geöffnet. Sie können dort skaliert und so die Darstellung in verschiedenen Auflösungen überprüft werden.
+
+    ## Angaben zu den Elementen
+
+    Auf den einzelnen Seiten ist das Element als erstes in einem skalierbaren Rahmen dargestellt. Mit dem Vergrössern und Verkleinern des Rahmens kann die Darstellung des Elements auf verschiedenen Ausgabegeräten überprüft werden (Responsiveness). Unterhalb der Darstellung des Elements sind eine kurze Beschreibung sowie der Code für die Umsetzung durch das Entwicklerteam aufgeführt.
+
+    Der Code kann kopiert und weiterverwendet werden.
+
+    Ebenfalls angegeben sind die Releasenotes. Diese informieren Entwickler über Änderungen am Code.
+
+    Unter der Rubrik "Beispielseiten" werden verschiedene Seitentypen präsentiert. Diese sind responsive und barrierefrei.
+
+    ## Unterstützte Webbrowser
+
+    Die Version 3.0 ist für folgende Browser-Versionen optimiert:
+
+    ### Desktop:
+
+    - Internet Explorer 9 und höher
+    - Safari 8 und höher
+    - Firefox 40 und höher
+    - Chrome 45 und höher
+
+    ### Mobile:
+
+    - Safari und Chrome ab iOS 7 und höher
+    - Chrome und/oder "default browser" und Firefox ab Android 5 und höher
+
+    ## Installation
+
+    Die Installationsangaben für die Verwendung der Richtlinien in einem Projekt finden sich auf <a href="https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet">Github</a>
+
+
+header-footer:
+  title: Header und Footer
+  content: |
+
+    Header und Footer erscheinen auf allen Seiten und haben eine fixe Gestaltung. Auf mobilen Geräten wird deren Darstellung angepasst.
+
+    ## Header
+
+    Der Header ist das prägende Element einer Website. Er besteht aus der Treecrumb-Navigation der Bundesverwaltung, der Service-Navigation inkl. der Sprachwahl, der Kennzeichnung (Bundeslogo und Bezeichnung der Organisationseinheit), der Suche und der A-Z-Navigation. Er wird immer durch eine rote Linie abgeschlossen.
+
+    Diese Elemente sind entweder Markenelemente oder verbindliche Elemente. Sie dürfen nicht verändert werden.
+
+    <figure>
+      <img src="/styleguide-img/header.png" alt="Page grid example">
+      <figcaption> Der Header mit den prägenden Elementen</figcaption>
+    </figure>
+
+    Der **Treecrumb** stellt die hierarchische Verortung der Website in der Bundesverwaltung dar. Er bietet dem Anwender die Möglichkeit, Websites übergeordneter Organisationseinheiten direkt aufzurufen. Auf mobilen Geräten fällt der Treecrumb weg.
+
+    In der **Service Navigation** werden Links von übergeordneter Bedeutung (z.B. Kontakt, Jobs, Medien) positioniert. Es sollen idealerweise drei, auf keinen Fall aber mehr als fünf Links in der Service-Navigation angeboten werden. Ein Minimum ist der Kontakt und die Sprach-Navigation. Auf mobilen Geräten werden die Links der Service-Navigation in den Footer verschoben.
+
+    Rechts neben der Service-Navigation steht die **Sprachwahl**. Die angebotenen Sprachen werden als Kürzel nach ISO-Norm ISO 639-2/3 aufgeführt (z.B. Deutsch = DE, Französisch = FR, Rätoromanisch = RM usw.). Auf mobilen Geräten wird die Sprach-Navigation in einem Bereich oberhalb des Headers eingebunden.
+
+    Die Informationen auf den Websites der Bundesverwaltung müssen in den Amtssprachen deutsch, französisch und italienisch angeboten werden. Es ist wichtig, dass die Nutzerinnen und Nutzer sofort sehen, in welchen Amtssprachen der Inhalt zugänglich ist. Demzufolge erscheinen diese Sprachkürzel auf jeder Seite im Header - linksbündig neben der Servicebox - nebeneinander. Falls Inhalte nur in einer oder zwei der Amtssprachen verfügbar sind, ist das Kürzel der dritten Amtssprache nicht aktiv. Beim mouse-over erscheint eine Anzeige, die darüber informiert, dass der Inhalt in der entsprechenden Sprache nicht verfügbar ist.
+
+    Die Sprachkürzel für RM und EN werden nur angezeigt, falls es Inhalte in den entsprechenden Sprachen gibt.
+
+    Websites in mehr als fünf Sprachen können die **zusätzlichen** Sprachen in einem Dropdown-Menü anzeigen. Die Landessprachen sind immer in der Kurzform nebeneinander als Link anzuzeigen.
+
+    Die **Kennzeichnung** aus Bundeslogo (Wappen und Wortmarke) und Bezeichnung der Organisationseinheit ist das wichtigste Markenelement. Bei organisationsübergreifenden Sites und bei Themenportalen wird die Bezeichnung der Organisationseinheit durch den Titel der Website ersetzt. Auf mobilen Geräten kann die Wortmarke des Bundeslogos im Header weggelassen und die Bezeichnung der Organisationseinheit abgekürzt werden. Wenn die Bezeichnung abgekürzt ist, wird sie vollständig in einem Bereich oberhalb des Headers angezeigt.
+
+    Die **Suchfunktion** ist als Textfeld auf der rechten Seite des Headers gegenüber der Kennzeichnung positioniert. Wenn der Anwender in das Textfeld klickt, vergrössert sich das Textfeld.
+
+    Auf mobilen Geräten kann die Suchfunktion über ein Icon im Header aufgerufen werden.
+
+    Unterhalb der Suchfunktion ist die **A-Z-Navigation** positioniert. Sie ist ein alternativer Zugang zu den Inhalten der Website, die aus einem alphabetisch geordneten Katalog aufgerufen werden können. Auf mobilen Geräten wird die A-Z-Navigation zusammen mit der Suchfunktion angeboten.
+
+    Der Header wird immer mit einer roten Linie abgeschlossen. Wird unterhalb des Headers eine Globalnavigation verwendet, kann diese Linie durch eine farbliche Markierung einen ausgewählten Bereich anzeigen.
+
+    ## Hauptnavigation
+
+    Die meisten Websites haben eine Hauptnavigation, die als Reiter in einem Bereich unterhalb der roten Linie positioniert ist. Die Global- Navigation stellt die oberste Ebene der Informationsarchitektur dar. Die wichtigsten Themen können hier direkt aufgerufen werden. Sie sollten dem Anwender damit einen Überblick über den Inhalt und den Zweck der Website geben.
+
+    Die Begriffe der Global-Navigation werden von den Webrichtlinien nicht definiert. Sie sind abhängig vom spezifischen Kommunikations-Bedürfnis des jeweiligen Departementes bzw. Amtes.
+
+    ### Ausnahmen
+
+    Für folgende Rubriken sind Bezeichnung und Reihenfolge in der Hauptnavigation vorgegeben, sofern sie überhaupt verwendet werden:
+
+    "Aktuell" (1.), "Dienstleistungen und Publikationen" (2.) und "Über uns" (immer an letzter Stelle).
+
+    Websites mit einem geringen Umfang können auf die Global-Navigation verzichten und sich auf die Navigation in der linken Spalte des Inhaltsbereichs beschränken.
+
+    ## Footer
+
+    Im **Footer** werden wichtige Links platziert, die somit auf allen Seiten gleich zugänglich sind. Diese können auf Seiten in der aktuellen Webseite aber auch auf externe Inhalte (wie z.B. die Präsenz in Social Media) verweisen. Der Footer lässt sich nach Bedarf in verschiedene Bereiche unterteilen.
+
+    In der Fusszeile unterhalb des Footers, wird ein Hinweis auf das Copyright und Links auf "Rechtliches" und "Impressum" aufgeführt. Die Fusszeile ist ein Markenelement. Die Verwendung ist zwingend.
+
+    <figure>
+      <img src="/styleguide-img/footer.png" alt="Beispiel für einen Footer">
+      <figcaption> Der Footer mit den verschiedenen Bereichen </figcaption>
+    </figure>
+
+    Auf mobilen Geräten werden viele Funktionen aus dem Header (wie z.B. Navigation, Service-Navigation und das vollständiges Bundeslogo) in den Footer verschoben.
+
+sample-pages:
+  title: Beispielseiten
+  content: |
+
+    In den Richtlinien für das Webdesign Bund werden verschiedene Beispielseiten vorgestellt, die auf den beiden Seitentypen "Startseite" und Inhaltsseite aufbauen. Sie zeigen beispielhaft, wie die verschiedenen, vorgestellten Elemente auf Webseiten kombiniert werden können. Die Seiten können als Grundlage für ein Projekt verwendet und für die jeweiligen Kommunikationsbedürfnisse angepasst, erweitert und modifiziert werden.
+
+    ## Startseite mit Hauptnavigation
+
+    Diese Startseite eignet sich für Websites mit einer Vielzahl von Informationen ("grosse Websites", wie z.B.  www.eda.admin.ch oder www.vbs.admin.ch). Durch die Verwendung der Globalnavigation können dabei die ersten beiden Navigationsebenen übersprungen werden.
+
+    Websites mit einem geringeren Informationsumfang verwenden die Startseite ohne Globalnavigation (z.B. Seiten von Schweizer Botschaften). Hier steigt der Anwender direkt über die linke Sub-Navigation in die Inhalte ein.
+
+    ## Detailseite
+
+    Die Detailseite ist eine klassische Inhaltsseite mit einem Artikel in der mittleren Spalte.
+
+    ## Publikationen
+
+    Eine Publikationen-Seite ist eine spezielle ungebundene Detailseite auf der eine Publikation vorgestellt wird und vom Anwender gekauft werden kann. In der rechten Spalte ist ein Warenkorb eingebunden.
+
+    ## Suchresultate
+
+    Dieser Seitentyp bricht mit dem grundsätzlichen Aufbau einer Inhaltsseite. Die linke Navigationsspalte fällt weg. Die Suchresultate nutzen die rechten drei Spalten des Grundrasters.
+
+    ## Formular
+
+    Auf der Beispielseite für Formulare wird gezeigt wie ein Formular mit einer Prozessnavigation in eine Seite integriert wird.
+
+translations:
+  title: Übersetzungen
+  content: |
+    Einige Komponenten der Richtlinien verwenden Bezeichnungen oder Labels, die üblicherweise auf allen Websites, die diese Komponenten verwenden, gleich lauten. Zum Beispiel wird das Suchfeld immer mit "Suche" bezeichnet.
+
+    Um den Bau mehrsprachiger Websites zu vereinfachen, wird ein Übersetzungsfile zur Verfügung gestellt. Es enthält eine Kollektion von Standardlabels in den vier Landessprachen sowie Englisch.
+
+  download-link: Übersetzungsfile herunterladen (XLS)

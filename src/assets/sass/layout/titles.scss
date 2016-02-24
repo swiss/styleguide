@@ -1,0 +1,42 @@
+/* ==========================================================
+ * titles.scss
+ * Global titles styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+h1 {
+  font-weight: 100;
+}
+
+h4 {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+    line-height: 1;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+// Responsive behaviour
+@media only screen and (max-width: $screen-md-max) {
+  h1 {font-size: 2.3rem;}
+}
+@media only screen and (max-width: $screen-sm-max) {
+  h1 {font-size: 2rem;}
+  h2 {font-size: 1.5rem;}
+  h3 {font-size: 1.3rem;}
+}
+
+
+.page-title {
+  margin: .4em 1.6em 0 0;
+}

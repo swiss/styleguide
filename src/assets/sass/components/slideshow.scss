@@ -1,0 +1,82 @@
+/* ==========================================================
+ * slideshow.scss
+ * Slideshow component
+ *
+ * Author: Toni, toni@antistatique.net
+ * Date:   2015-02-09 10:52:08
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.carousel-slideshow {
+  border: 0;
+  overflow: hidden;
+  margin-bottom: 25px;
+
+  .carousel-inner {
+    overflow: visible;
+  }
+
+  .item {
+    padding: 0;
+  }
+
+  .carousel-controls {
+    > div {
+      display: inline-block;
+    }
+    small {
+      display: inline-block;
+      vertical-align: top;
+      margin: 25px 0 0 0;
+      color: $coal;
+    }
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 0 12px 0 15px;
+
+      color: $coal;
+      font-size: $carousel-control-font-size;
+
+      &.right {
+        border-left: 1px solid $gainsboro;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+        color: $venetian-red;
+      }
+
+      &.disabled {
+        cursor: default;
+        color: $gainsboro;
+      }
+    }
+  }
+
+  .carousel-caption {
+    position: static;
+    padding-top: 11px;
+    padding-bottom: 0;
+    max-width: 300px;
+    min-height: 150px;
+
+    @media only screen and (min-width: $screen-md-min) {
+      float: left;
+      max-width: 360px;
+      min-height: 125px;
+    }
+
+    text-align: left;
+    text-shadow: none;
+    color: $black;
+    font-size: 0.78571429rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

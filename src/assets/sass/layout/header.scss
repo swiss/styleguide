@@ -1,0 +1,70 @@
+/* ==========================================================
+ * header.scss
+ * Header elements styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+header {
+  background: $white; /* Old browsers */
+  background: -moz-linear-gradient(top, $smoke 0%, $white 7%, $white 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$smoke), color-stop(7%,$white), color-stop(100%,$white)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $smoke 0%,$white 7%,$white 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $smoke 0%,$white 7%,$white 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $smoke 0%,$white 7%,$white 100%); /* IE10+ */
+  background: linear-gradient(to bottom, $smoke 0%,$white 7%,$white 100%); /* W3C */
+  @media only screen and (min-width: $screen-sm-min) {
+    padding: 10px 15px 30px 15px;
+  }
+  position: relative;
+  &:after {
+    content: "\e905";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.header-separator {
+  height: 5px;
+  width: 100%;
+  background: $venetian-red;
+}
+
+
+.access-keys {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  li {display: inline;}
+  li a, li a:visited {
+    display: block;
+    position: absolute;
+    left: -3000px;
+    top: -2000px;
+    width: 0px;
+    height: 0px;
+    z-index: 200;
+  }
+  li a:focus {
+    position: absolute;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: block;
+    font-size: 1.3em;
+    height: auto;
+    width: auto;
+    top: 0;
+    left: 0;
+    line-height: 1.2em;
+    padding: 5px 8px;
+    z-index: 10000000;
+    text-decoration: none;
+  }
+}

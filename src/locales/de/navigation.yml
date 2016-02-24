@@ -1,0 +1,290 @@
+title: Navigations-module
+hierarchical-navigation:
+  title: Hierarchische Navigation
+  global-navigation:
+    title: Globalnavigation
+    help: |
+      Die Globalnavigation zeigt die Haupteinstiegspunkte einer Website als Reiter an. Sie ist durch eine rote Linie von dem darüber liegenden Header getrennt. Die in den Reitern verwendeten Begriffe sollten sorgsam gewählt werden, denn sie geben dem Benutzer einen ersten Eindruck über den Sinn und Zweck der Website.
+
+      Verhalten:
+      Durch Klicken auf einen der Reiter öffnet sich ein Mega-Flyout mit einem Menü der Unterseiten.
+
+      Es gibt verschiedene Flyout-Typen: z. B. Teaser- oder Listen-Flyout. Das Menü zeigt abhängig vom Typ des Flyouts die Unterseiten der zweiten Navigationsebene (Teaser-Flyout) oder auch diejenigen des zweiten und dritten Navigationsebene (Listen-Flyout) an.
+      Im Teaser-Flyout kann direkt eine Seite des zweiten Navigationsebene und im Listen-Flyout direkt eine Seite des dritten Navigationsebene angewählt werden. Man kann also Navigationsknoten überspringen, für die es keine Inhalte gibt.
+      Es ist möglich, weitere Flyout-Typen zu entwickeln und einzusetzen. Das EDA hat zum Beispiel ein Flyout für die Länderauswahl realisiert.
+
+      Das Flyout kann durch Klicken der "Schliessen"-Funktionen (oben rechts), durch Klicken auf den Tab mit dem schwarzen Dreieck (an der unteren Kante), durch Klicken auf den Hintergrund oder durch nochmaliges Klicken auf denselben Reiter wieder geschlossen werden.
+
+      Nur auf der Homepage sind alle Reiter geschlossen. Wenn man unterhalb eines Reiters weiter navigiert, bleibt dieser ausgewählt.
+
+      Mit `<div class="overlay"></div>` am Ende des `body`-Tags wird das graue Overlay angezeigt.
+    release: |
+      **2.1.2:**
+        - changed `.active` class to `.current` for current page highlight in the menu
+        - added `h2.sr-only` for more screen reader clarity
+        - added h2 and label to search field on mobile
+
+      **2.1.0:**
+        - added the `.nav-mobile` section to the beginning of the `.list-group` element
+
+      **2.0.0:**
+        - added `<span class="sr-only">current page</span>` for current active link
+        - added `id="main-navigation"`for accessibility nav
+        - added `aria-hidden="true"` to close button
+  breadcrumb:
+    title: Breadcrumb
+    help: |
+      Der Breadcrumb ist eine Linkzeile unterhalb des Headers, der dem Anwender den Pfad, also die Position der aktuell aufgerufenen Webseite in der Informationsarchitektur anzeigt. Wenn keine Globalnavigation vorhanden ist, folgt die Breadcrumb-Navigation nach der roten Linie, die den Kopfbereich abschliesst.
+
+      Dank dem Breadcrumb sieht der Anwender auf einen Blick, wo in der Site er sich befindet.
+
+      Bei einem Klick auf einen Navigationspunkt im Pfad öffnet sich die entsprechende Seite. Beim Klick auf Links der ersten oder zweiten Ebene der Navigation (Seiten, die keine eigenen Inhalte haben) wird eine Übersichtsseite ohne Navigationsspalte geöffnet.
+
+      Auf Smartphones wird am Seitenende jeweils ein Link auf die Startseite und auf die darüberliegende Ebene angeboten; einen kompletten Breadcrumb gibt es nicht.
+  back-to-overview:
+    title: Zurück zur Übersicht
+    help: |
+      Die "Zurück zur Übersicht"-Navigation verlinkt Seiten, die nicht in der Navigation erscheinen, zu ihrer "Mutterseite". Ein Beispiel dafür sind die Detail-Seiten der Publikationen.
+
+      Die "Zurück zur Übersicht"-Navigation erscheint immer noch vor dem Seitentitel an oberster Stelle der Inhaltsspalte und am Ende der Seite vor der Seitenende-Navigation.
+  page-navigation-list:
+    title: Seitennavigation Liste (Linke Subnavigation)
+    help: |
+      Die Sub-Navigation in der linken Spalte des Inhaltsbereichs ist eine so genannte verdrängende Navigation. Sie zeigt immer nur die aktuell angewählte Seite und deren Navigationsoptionen an:
+
+      * Navigationskopf: die Bezeichnung der aktiven Seite ist dabei farblich markiert und typografisch hervorgehoben.
+      * Zurück-Link: oberhalb dieser Bezeichnung steht ein Link, der auf die darüberliegende Navigationsebene führt
+      * Unterseiten: Unterhalb des Navigationskopfes sind alle tiefer liegenden Navigationsebenen als Link aufgeführt
+      * Schwesterseiten: Seiten, die sich auf dem gleichen hierarchischen Niveau befinden, werden hier nicht angezeigt. Sie werden über die Hauptnavigation oder den “zurück”-Link angesteuert. Nur auf der untersten Navigationsebene werden Schwesterseiten angezeigt, sofern es solche überhaupt gibt.
+
+      ### Verhalten
+
+      Wird der Link auf eine Unterseite angeklickt, wird eine neue Seite geladen. Auf dieser Seite wird nun die gewählte Seite als Navigationskopf angezeigt. Der "zurück"-Link führt zu der darüberliegenden Navigationsebene, die Seite also, auf der der Anwender gerade war. Unterhalb des Navigationskopfes sind die Links auf die tieferen Navigationsebenen aufgeführt.
+      Soll eine Seite (Schwester-Seite) ausgewählt werden, die auf der gleichen Navigationsebene liegt wie die aktive Seite, so geschieht dies mittels "zurück"-Link oder über die Global-Navigation.
+      Wird eine Seite der untersten Navigationsebene angeklickt (d.h. die angeklickte Seite hat keine Unterseiten), wird die Navigation nicht ausgewechselt. Die aktuelle Seite wird dann mit einer roten Linie ausgezeichnet und die Seiten auf dem gleichen Level bleiben angezeigt.
+
+      ![example](../styleguide-img/navigation_supermarkt.png)
+
+      Solange eine Seite Unterseiten hat, wird beim Navigieren (Drill-Down) der Navigationskopf ausgetauscht. (1. Schritt). Sobald man auf der untersten Ebene des Navigationsbaumes angekommen ist und die Seiten keine Unterseiten mehr haben, wird nur noch die Auszeichnung angepasst (2. Schritt).
+
+      ### Umsetzung für Smartphones
+
+      Auf Smartphones wird die Servicenavigation am Seitenende oberhalb des Footers angezeigt. 
+
+      ![Left nav on mobile](../styleguide-img/mobile_navi_3.png)
+
+      Auf einem Smartphone erscheint die Unternavigation zwischen Header und Inhalt.
+    release: |
+      **2.5.2:**
+
+        - fix error with active state of `.list-emphasis`, **please always wrap the text of this list element with a `span` or a `a`**.
+
+      **2.5.0:**
+
+        - allow nested `<ul/>` lists in `.nav-page-list` elements
+
+      **2.3.0:**
+
+        - added `aria-selected="true"` for current link
+        - removed first button in the list (looked like a back link)
+        - changed label of back button in drilldown sub from "Back" to title
+          of section
+
+      **2.1.0:**
+
+        - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
+        - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
+  faceted-page-navigation:
+    title: Seitennavigation Facette
+    help: |
+      Die Facetten-Navigation erlaubt das Filtern von Elementen (z.B. eines Produktkatalogs) anhand von vorgegebenen Kriterien, den sogenannten Facetten. Die Facetten sind nach Facettentypen gruppiert. Eine Facette, die Unterfacetten enthält, ist mit einem Dreieck ausgezeichnet.
+
+      ### Verhalten:
+
+      Nach dem Laden einer Seite mit Facetten-Navigation ist immer die Liste mit den Facetten des obersten Facetten-Typs geöffnet. Der Anwender kann beliebig viele andere Facetten- Typen öffnen oder schliessen.
+
+      Der Anwender kann zu jedem Facettentyp nur eine Facette auswählen, die anderen Facetten werden ausgeblendet. Der entsprechende Facetten-Typ kann dann nicht mehr geschlossen werden.
+
+      Wenn eine Facette Unterfacetten hat, so werden diese Unterfacetten angezeigt, nachdem die Facette ausgewählt wurde. Der Anwender kann dann seine Auswahl mit Hilfe der Unterfacetten noch weiter einschränken. Eine einmal gemachte Auswahl kann mit einem Löschen-Knopf wieder aufgehoben werden.
+
+      Die Inhalte der Seite werden der aktuellen Auswahl der Facetten-Navigation angepasst und permanent aktualisiert.
+
+      ### Umsetzung für Smartphones
+
+      Bei Smartphones wird die Navigation über einen Filter-Link aufgerufen und verhält sich wie die Facetten-Navigation für Desktop. Im Unterschied zur Desktop-Version werden die Inhalte der Seite erst aktualisiert, wenn der Anwender die Facetten-Navigation wieder schliesst.
+    release: |
+      **2.0.0:**
+
+      - added `aria-selected="true"` for current link
+header:
+  title: Kopfbereich
+  logo:
+    title: Logo mit Link auf die Startseite
+    help: Das Bundeslogo mit Wappen und viersprachiger Wortmarke, sowie die Bezeichnung der Organisationseinheit (Departement, Amt, Direktion oder Vertretung) bilden die Kennzeichnung einer Website. Die gesamte Kennzeichnung ist mit einem Link hinterlegt, der den Anwender von jeder Seite der Website zurück auf die Startseite bringt.
+    release: |
+      **3.0.0**
+
+      - Add a container with `clearfix` class around logo component
+  accessibility-navigation:
+    title: Barrierefreie Navigation
+    help: Die barrierefreie Navigation wird direkt nach dem <body>-Tag platziert. Sie wird benötigt, um den Usern mittels Access-Keys rasch Zugang zu bestimmten Services oder zu geben. Die barrierefreie Navigation ist **nicht sichtbar**.
+    release: |
+      **2.1.8**
+
+        - added `.access-keys` for better accessibility
+        - added `#content` to main page content
+        - added `#main-navigation` to main page navigation
+  service-navigation:
+    title: Servicenavigation
+    help: |
+      Die Service-Navigation ist oben rechts im Header neben der Sprachwahl platziert und beinhaltet Links, die von übergeordneter Bedeutung sind (z.B. Kontakt, Jobs, Medien und Kontakt). Es sollten idealerweise drei aber auf keinen Fall mehr als fünf Links in der Service-Navigation angeboten werden.
+
+      Auf Smartphones wird die Service-Navigation in den Footer verschoben.
+    release: |
+      **2.1.2:**
+
+        - added `h2.sr-only` for more screen reader clarity
+  site-search:
+    title: Site search
+    help: |
+      The global search function allows the user to search the entire website. When the search box is clicked on, the element is enlarged to give the user more space to enter the search text.
+
+      On smartphones, the search function can be accessed via an icon in the Header.
+    release: |
+      **2.1.2:**
+        - added h2.sr-only for more screen reader clarity
+        - added label before input for screen readers
+  language-selector:
+    title: Sprachwahl
+    help: |
+      Mittels Sprachwahl kann die Sprache der aktuellen Website gewechselt werden. Sie zeigt alle verfügbaren Sprachen mit zweistelligen Abkürzungen nach ISO 639-2/3 (z.B. Deutsch = DE, Französisch = FR usw.) oben rechts im Header an.
+
+      Regeln für die Sprachnavigation:
+
+        * Die Sprachen DE, FR und IT sind obligatorisch. Sie werden auf allen Seiten angezeigt. Dies auch dann, wenn ein Inhalt in nur einer dieser Sprachen vorhanden ist.
+        * Die Sprache RM und EN werden nur angezeigt, wenn es Inhalte in diesen Sprachen gibt.
+        * Die aktive Sprache wird mit einem hellgrauen Hintergrund gekennzeichnet.
+        * Inaktive Sprachen erscheinen in hellgrauer Schrift
+        * Die Kürzel werden auf allen Ausgabegeräten im Header nebeneinander platziert.
+        * Die Platzierung der Sprachwahl in einem Dropdown-Menu ist untersagt.
+        * Seiten, die nicht übersetzt sind, können als in einer andern Sprache verfügbar angezeigt werden.
+
+      Diese Regeln gelten auch für Smartphones.
+
+      Auf Smartphones wird die Sprachwahl in einem Bereich oberhalb des Headers eingebunden. Sobald nach unten gescrollt wird, wird dieser Bereich ausgeblendet. Wird ganz nach oben gescrollt, erscheint der Bereich mit der Sprachwahl wieder.
+    release: |
+      **3.0.0**
+        - added `lang`, `title` and `aria-label` attributes for accessibility
+        - moved language states (active, disabled) to the link title and aria-label
+
+      **2.5.0**
+        - added `<span class="sr-only">disabled</span>` for disabled accessibility
+
+      **2.1.8**
+        - added `<span class="sr-only">selected</span>` for active accessibility
+
+      **2.1.2:**
+        - added `h2.sr-only` for more screen reader clarity
+
+      **2.1.0:**
+        - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
+  topics:
+    title: Themen A-Z
+    help: |
+      Das Themen A-Z stellt ein alternativer Zugang zu den Inhalten der Website dar. Die Unterthemen der Website können aus einem alphabetisch geordneten Katalog ausgewählt werden.
+
+      Das Themen A-Z ist im rechten Bereich des Headers platziert. Bei einem Klick darauf öffnet sich ein Flyout, das eine A-Z-Tab- Navigation enthält. Die Themen können in weiteren Tabs, z.B. nach Organisationseinheiten, gruppiert werden.
+
+      Auf Smartphones wird die A-Z-Navigation zusammen mit der Suche über ein Icon im Header aufgerufen.
+      Die Unterteilung eines Themen A-Z in Bereiche, die über eine Reiternavigation erschlossen werden, ist unerwünscht.
+
+    release: |
+      **2.1.2:**
+
+      - added `h2.sr-only` for more screen reader clarity
+  treecrumb:
+    title: Treecrumb Bundesverwaltung
+    help: |
+      Die Treecrumb-Navigation ordnet die aktuelle Website in den Kontext aller Websites der Bundesverwaltung ein. Zudem dient sie der effizienten departementsübergreifenden  Erschliessung. Die Treecrumb-Navigation beginnt mit „Der Bundesrat".
+
+      Im geschlossenen Zustand stellt sie die Einordnung der Site in die Organisation der Bundesverwaltung als Pfad dar. Durch Klicken auf eine der Hierarchiestufen öffnet sich ein Menü, welches eine Linksammlung im Kontext der gewählten Hierarchiestufe auflistet.
+
+      Auf Smartphones fällt die Treecrumb-Navigation weg.
+    release: |
+      **2.5.0:**
+
+        - modified markup of dropdown list. Please refer to how it is in the example below
+
+      **2.1.2:**
+
+        - added `h2.sr-only` for more screen reader clarity
+content-navigation:
+  title: Inhaltsnavigation
+  pagination:
+    title: Paging
+    help: Mit der Paging-Funktion kann der Anwender durch eine grosse Anzahl Elemente blättern , die in Seiten (Pages) angeordnet sind. Das Element erscheint oberhalb und unterhalb der Elementliste.
+    release: |
+      **2.1.8**
+
+      - added ` <span class="sr-only">current page</span>` and `aria-disabled="true"` for accessibility
+      - added `title`to empty link (link only with icon)
+      - added `.clearfix`and `.pull-left` inside of `.pagination-container
+  anchor-links:
+    title: Anker-Links
+    help: Ein Anker-Link ist eine Sprungmarke, mit dem eine Position innerhalb der aktuellen Seite direkt angesteuert werden kann.
+  top-links:
+    title: Top-Links
+    help: |
+      Der Top-Link ist das Gegenstück zum Anker-Link: Er bringt den Anwender von jeder Position in der aktuellen Seite wieder zurück zum Seitenanfang.
+  endofpage-links:
+    title: Seitenende-Links
+    help: Der Link am Seitenende ist ein spezieller Top-Link. Jede Seite (mit Ausnahme der Startseite und der Seiten auf Level 1) schliesst mit einem solchen Seitenende-Link ab. Er enthält einen Link zum Anfang der aktuellen Seite und das Datum der letzten Aktualisierung der Inhalte dieser Seite.
+  process-navigation:
+    title: Prozessnavigation
+    help: |
+      Die Prozessnavigation wird im Zusammenhang mit Formularen eingesetzt, welche über mehrere Seiten verteilt sind. Der aktive Prozessschritt wird in rot markiert. Die vorhergehenden Schritte sind klickbar und führen zurück zum entsprechenden Prozessschritt.
+
+      **Achtung:**
+
+      Das vorliegende Beispiel beschreibt nur das graphische Design; die Prozessnavigation muss in jedem Fall gemäss dem zugrundeliegenden Prozess programmiert werden.
+
+  tab-navigation:
+    title: Reiter-Navigation
+    help: |
+      Die Reiter-Navigation wird angewendet, wenn auf einer Seite zusammenhängende Inhalte gruppiert werden sollen. Im Sinn einer Ausnahme ist die Schriftfabe dunkelgrau (statt blau). Der aktive Reiter ist durch die rote Linie und den weissen Hintergrund gekennzeichnet.
+
+      Die Bezeichnungen der Reiter sind als Beispiel zu lesen. Sie richten sich nach dem effektiven Inhalt der Seite.
+
+footer:
+  title: Seitenfuss (Footer)
+  site-map:
+    title: Sitemap und Partner
+    help: |
+      Im Seitenfuss werden Links platziert, die somit auf allen Seiten gleich zugänglich sind. Diese können auf Seiten in der aktuellen Webseite als Sitemap verlinken oder aber auch auf externe Inhalte, wie z.B. Partnersites verweisen. Der Footer lässt sich nach Bedarf in verschiedene Bereiche unterteilen.
+
+      ### Umsetzung für Smartphones
+
+      Auf Smartphones werden einige Funktionen aus dem Header, wie z.B. Service-Navigation und das vollständige Bundeslogo in den Footer verschoben.
+    release: |
+      **2.5.0:**
+
+      - wrapped footer columns in a `div.row`
+
+      **2.1.0:**
+
+      - placed links in a `ul.list-unstyled` list
+      - changed `.col-sm-3` in `.col-sm-4.col-md-3` for more readability on small size and removed useless `.row` wrapper
+  social-media:
+    title: Social Media
+    help: Die Social Media Kanäle (Facebook, Twitter, YouTube) der Website werden im Footer in einem eigenen Bereich positioniert.
+    release: |
+      **2.1.0:**
+
+      - added the `.links-social` class to the `<nav/>` element containing the social links
+  footbar:
+    title: Fusszeile
+    help: |
+      In der Fusszeile unterhalb des Footer, wird nach links ausgerichtet ein Hinweis auf das Copyright und nach rechts ausgerichtet Links auf "Rechtliches" und "Impressum" aufgeführt. Diese Angaben sind aus rechtlichen Gründen zwingend erforderlich.
+
+      Die Fusszeile ist ein **Markenelement**: die Verwendung ist obligatorisch, das Erscheinungsbild darf nicht verändert werden.
+

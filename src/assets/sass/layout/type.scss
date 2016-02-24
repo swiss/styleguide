@@ -1,0 +1,99 @@
+/* ==========================================================
+ * type.scss
+ * Global typographic styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+html {
+  font-size: $font-size-base-rel;
+
+  @media only screen and (max-width: $screen-sm-max) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-size: inherit;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.lead {
+  @extend strong;
+  line-height: $line-height-base;
+  font-size: $font-size-base;
+}
+
+ abbr {
+  border-bottom: 1px #aaa dotted;
+  letter-spacing: .07em;
+  &[title] {
+    border-bottom: 1px dotted;
+  }
+ }
+
+ b {
+  @extend strong;
+ }
+
+ pre, code {
+  color: #800;
+ }
+
+ cite, i, dfn, q {
+  @extend em;
+ }
+
+ q {
+  font-style: italic;
+  q { font-style: normal; }
+ }
+
+ ins {
+  background: #ff9;
+  color: $black;
+  text-decoration: none;
+ }
+
+ mark {
+  @extend strong;
+  background: #FE57A1;
+  padding: 0;
+ }
+
+samp {
+  @extend strong;
+  color: $gray;
+}
+
+var {
+  @extend em;
+  color: gray;
+}
+
+.text-dimmed {
+  color: $empress;
+}
+
+blockquote {
+  margin: 1.5em 0 0 1.6em;
+  color: $empress;
+  &::before {
+    content: "\00ab";
+  }
+  &::after {
+    content: "\00bb";
+  }
+}

@@ -1,0 +1,20 @@
+title: Beispielseiten
+detail:
+  title: Detailseite
+forms:
+  title: Formular
+home-without-nav:
+  title: Startseite mit Hauptnavigation
+homepage-global-nav:
+  title: Startseite ohne Hauptnavigation
+preview-without-nav:
+  title: Übersichtsseite ohne Hauptnavigation
+preview:
+  title: Übersichtsseite
+publications:
+  title: Publikationen
+results:
+  title: Suchergebnisse
+subpage:
+  title: Unterseite
+

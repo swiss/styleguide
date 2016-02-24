@@ -1,0 +1,188 @@
+/* ==========================================================
+ * forms.scss
+ * Global form elements styles
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-04-29 09:44:02
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+legend {
+  font-size: 1.1em;
+  border-bottom: 1px solid $empress;
+}
+
+.hidden-legend {
+  display: inline-block;
+  position: absolute;
+  top: -6000px;
+  left: -6000px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-group {
+  @include clearfix;
+
+  .control-label {
+    padding-top: 4px;
+  }
+}
+
+.form-control {
+  border-color: $empress;
+  padding: 0.4em 0.3076em;
+  line-height: 1.2;
+  height: auto;
+  &[type=file] {
+    border: none;
+    box-shadow: none;
+  }
+}
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  &.form-control {
+    line-height: 1.2;
+  }
+}
+
+
+label {
+  font-weight: normal;
+}
+
+.help-block {
+  font-size: 0.9em;
+  color: $coal;
+}
+
+.has-warning {
+  background: $state-warning-bg;
+  padding: 6px 0;
+  .control-label {
+    color: $coal;
+  }
+  .help-block {
+    color: $venetian-red;
+  }
+}
+
+.has-success {
+  background: $state-success-bg;
+  padding: 6px 0;
+  .control-label {
+    color: $coal;
+  }
+  .form-control {
+    border-color: $coal;
+    @extend .form-control;
+  }
+}
+
+.has-error {
+  background: $state-danger-bg;
+  padding: 6px 0;
+  .control-label {
+    color: $coal;
+  }
+  .form-control {
+    border-color: $coal;
+    @extend .form-control;
+  }
+}
+
+.form-inline {
+  margin-top: 1em;
+  padding-bottom: 1.3em;
+  border-bottom: 2px solid $silver;
+  .control-label {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  label {
+    margin-right: 1.6em;
+  }
+  input[type="number"] {
+    width: 50px;
+  }
+  .form-control {
+    @media only screen and (min-width: $screen-sm-min) {
+      width: 150px;
+    }
+  }
+}
+
+// Override Bootstrap behavior
+.radio-inline,
+.checkbox-inline {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.form-horizontal{
+  .radio-inline,
+  .checkbox-inline {
+    margin-top: -10px;
+  }
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-right: 10px; // space out consecutive inline controls
+  margin-left: 0;
+}
+
+// ie placeholders
+.placeholdr {
+  color: $input-color-placeholder !important;
+}
+
+// hide Chrome native calendar popup
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+input[type="date"]::-webkit-input-placeholder {
+  visibility: hidden !important;
+}
+
+// Pickaday styles
+/**
+ * This theme is an example to show how you can create your own.
+ */
+
+.admin-theme .pika-table th {
+  color: $empress;
+}
+
+.admin-theme .pika-week {
+  color: #999;
+}
+
+.admin-theme .is-today .pika-button {
+  background-color: $mocassin;
+  color: $coal;
+}
+
+.admin-theme .is-selected .pika-button {
+  color: #fff;
+  background: $fire-engine-red;
+  box-shadow: inset 0 0 1px rgba($night-rider, 0.8);
+}
+
+.admin-theme .is-disabled .pika-button {
+  color: #999;
+  opacity: .3;
+}
+
+.admin-theme .pika-button:hover {
+  color: #fff !important;
+  background: $venetian-red !important;
+}

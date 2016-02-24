@@ -1,0 +1,32 @@
+.collapse {
+  @include clearfix;
+}
+
+.collapsing, .collapse.in {
+  margin-left: 1.2em;
+}
+
+.collapse-box {
+  padding: 0.8em;
+  background: $smoke;
+}
+
+a[data-toggle="collapse"] {
+  @extend .icon;
+  @extend .icon--before;
+  @extend .icon--root;
+  display: block;
+  &.collapsed {
+    @extend .icon--greater;
+  }
+}
+
+.drilldown a[data-toggle="collapse"] {
+  padding: 0 10px 10px 10px;
+}
+
+.drilldown-container.collapse.in,
+.drilldown-container.collapsing {
+  margin-left: 0;
+  margin-bottom: 0;
+}

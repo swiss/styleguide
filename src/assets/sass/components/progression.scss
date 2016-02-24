@@ -1,0 +1,125 @@
+/* ==========================================================
+ * progression.scss
+ * Progession navigation styles
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-13 09:14:02
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.nav-process {
+  width: 100%;
+  height: 30px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  li a {
+    display: block;
+    height: 6px;
+    width: 24.2%;
+    float: left;
+    background: $light-grey;
+    margin: 0 0.5%;
+    color: $black;
+    text-align: center;
+    font-size: 0.92857143rem;
+    line-height: 35px;
+    position: relative;
+  }
+
+  li.active a,
+  li a:hover,
+  li a:active,
+  li a:focus {
+    background: $venetian-red;
+    font-weight: 700;
+  }
+
+  li.disabled a:hover,
+  li.disabled a:active,
+  li.disabled a:focus {
+    background: $light-grey;
+    cursor: not-allowed;
+    text-decoration: none;
+  }
+
+  li:first-child a {
+    margin-left: 0 !important;
+  }
+
+  li:last-child a {
+    margin-right: 0 !important;
+  }
+
+  li a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-left: 3px solid $white;
+    border-bottom: 3px solid transparent;
+  }
+
+  li:first-child a:before {
+    display: none;
+  }
+
+  li a:after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-left: 3px solid $light-grey;
+    border-bottom: 3px solid transparent;
+  }
+
+  li.active a:after,
+  li a:hover:after,
+  li a:active:after,
+  li a:focus:after {
+    border-left-color: $venetian-red;
+  }
+
+  li.disabled a:hover:after,
+  li.disabled a:active:after,
+  li.disabled a:focus:after {
+    border-left-color: $light-grey;
+  }
+
+  li:last-child a:after {
+    display: none;
+  }
+
+  li.active a {
+    margin-top: -2px;
+    margin-left: .4%;
+    margin-right: .6%;
+    height: 10px;
+    padding-top: 2px;
+  }
+
+  li.active a:after {
+    border-width: 5px;
+    right: -5px;
+  }
+
+  li.active a:before {
+    border-width: 5px;
+  }
+}

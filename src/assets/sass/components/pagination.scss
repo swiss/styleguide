@@ -1,0 +1,71 @@
+/* ==========================================================
+ * pagination.scss
+ * Navigation handling pagination on contents
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-01 11:22:48
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.pagination-container {
+  border-bottom: 1px solid $light-grey;
+  padding: 10px 0;
+}
+.pagination-end {
+  border-bottom: none;
+}
+.pagination {
+  border-radius: 0;
+  display: block;
+  margin: 0;
+  background: none;
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  ul {
+    margin-right: 10px;
+  }
+  > li {
+    margin-left: 0;
+    padding: 0 8px;
+    float: left;
+    @media only screen and (max-width: $screen-xs-max) {padding: 0 4px;}
+    > a {
+      border: none;
+      background: none;
+      padding: 2px 3px;
+      font-size: 1rem;
+      line-height: 1;
+      &:hover {
+        background: none;
+        color: darken($cerulean, 5%);
+        text-decoration: underline;
+      }
+    }
+  }
+  > .active {
+    > a {
+      background: $gainsboro;
+      color: $coal;
+      &:hover {
+        background: $gainsboro;
+        color: inherit;
+      }
+    }
+  }
+  @media only screen and (max-width: $screen-sm) {
+    padding-top: 10px;
+    &.pull-right {
+      float: none !important;
+    }
+  }
+  @media only screen and (max-width: $screen-xs-max) {
+    li:first-child, li:last-child {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+/* ==========================================================
+ * admin-variables.scss
+ * Variables set for our project
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-30 09:38:36
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+//=============================================================================
+// COLORS
+//=============================================================================
+
+$venetian-red:                               #DC0018;
+$red:                                        #F7001D;
+$mocassin:                                   #fffab2;
+$cerulean:                                   #006699;
+$pattens-blue:                               #D8E8EF;
+$malibu:                                     #66afe9;
+$solitude:                                   #e7edef;
+$clear-day:                                  #f2f7f9;
+
+$black:                                      #000000;
+$night-rider:                                #333333; // gray 80%;
+$coal:                                       #454545; // gray 73%;
+$empress:                                    #757575; // gray 54%;
+$silver:                                     #CCCCCC; // gray 20%;
+$light-grey:                                 #D5D5D5; // gray 16%;
+$gainsboro:                                  #E5E5E5; // gray 10%;
+$smoke:                                      #F5F5F5; // gray 4%;
+$white:                                      #FFFFFF;
+
+$sherpa-blue:                                #03344D;
+$fire-engine-red:                            #bb1122;
+$cadillac:                                   #884488;
+
+$menu-gradient:                              linear-gradient(top, #e8e8e8 0%, #f7f7f7 61%, #f7f7f7 89%, #f5f5f5 91%, #ececec 95%, #d7d7d7 100%);
+$menu-border-dark:                           #b8b8b8;
+$menu-border-light:                          $white;
+
+
+// TYPOGRAPHY
+//=============================================================================
+
+//** Fonts variables
+$frutiger:    'Frutiger Neue', Helvetica, Arial, sans-serif;
+$admin-icons:         'Admin Icons';
+
+
+// MISC
+//=============================================================================
+$focus-outline: 3px solid $coal;

@@ -1,0 +1,21 @@
+<article class="component" id="{{replace '(\.)' '-' @key}}">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#{{replace '(\.)' '-' @key}}" class="component-anchor">{{t data.title}}</a></h2>
+
+    {{#if data.label}}
+      <span class="component-label label label-admin">{{toUpperCase data.label}}</span>
+    {{/if}}
+
+    <ul class="component-nav list-inline">
+      {{#if data.translation}}
+        <li><a href="/{{ data 'locale' }}/docs/08-translations.html" target="_blank" class="btn btn-sm btn-link icon icon--after icon--external">{{t 'styleguide.translations'}}</a></li>
+      {{/if}}
+
+      {{#if data.release}}
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-{{replace '(\.)' '-' @key}}" aria-expanded="false">Release notes</button></li>
+      {{/if}}
+    </ul>
+  </div>{{> f-item-content this}}
+
+</article>

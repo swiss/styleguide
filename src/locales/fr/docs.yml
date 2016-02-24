@@ -1,0 +1,449 @@
+title: Design web de la Confédération
+index:
+  title: Page d’accueil
+  content: |
+    # L’apparence de l’administration fédérale sur Internet
+
+    Les lignes directrices pour le design web de la Confédération (lignes directrices web) définissent le cadre créatif pour l’apparence de sites Internet du Conseil fédéral et de l’administration fédérale. Elles font partie de l’identité visuelle de la Confédération et sont obligatoires pour tous les sites Internet publics de l’administration fédérale. 
+
+    ## Exceptions
+
+    Des exceptions du design web de la Confédération sont possibles pour les sites Internet de campagne et partenaires. Elles doivent être approuvées par la Conférence des secrétaires généraux des départements (CSG). Les demandes correspondantes doivent être soumises au <a href="http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de">Service Identité visuelle de la Confédération</a> de la Chancellerie fédérale. 
+
+    ## Sites Internet conviviaux et accessibles
+
+    Les présentes lignes directrices web permettent le développement de sites Internet modernes, conviviaux et accessibles. Elles définissent les éléments de marque obligatoires ainsi que les modules de navigation et de contenu obligatoires. Elles introduisent par ailleurs une série d’éléments qui peuvent être utilisés directement.
+
+    ## Accessibilité
+
+    L’administration fédérale est tenue par la loi d’offrir les informations en ligne d’une manière accessible à tous. Les prescriptions, mesures et remarques pour la création de sites Internet accessibles sont décrites dans le chapitre «Accessibilité»</a>.
+
+    ## Design adaptatif
+
+    L’affichage est optimisé aussi bien pour les navigateurs web sur les ordinateurs de bureau que sur les ordinateurs portables, tablettes et smartphones.
+
+    ## Groupes cibles
+
+    Les lignes directrices web sont destinées aux chefs de projet internes au gouvernement fédéral ainsi qu’aux fournisseurs de services externes. Elles offrent aux chefs de projet un aperçu des prescriptions en termes de conception. Les équipes de développement peuvent utiliser les types de pages et les éléments directement. Ils sont conçus en code HTML conforme aux normes et peuvent être utilisés avec les fichiers CSS et JavaScript.
+
+    ## Eléments obligatoires et recommandés
+
+    Les éléments et modules décrits peuvent être assignés à trois groupes:
+
+    ### 1. Eléments de marque <span class="label label-admin">CD</span>
+
+    Les éléments de marque identifient clairement le site Internet comme étant un site Internet de la Confédération. Ils sont donc à utiliser obligatoirement. Ils sont déterminés dans l’identité visuelle de la Confédération et ne peuvent être modifiés en aucun cas. Tous changements de ces éléments doivent être approuvés par la CSG. Il s’agit des éléments suivants:
+
+      - désignation du site Internet, composé du logo fédéral et du nom de l’unité organisationnelle
+      - ligne rouge délimitant l’en-tête
+      - ligne de pied de page avec note de copyright, liens «Informations juridiques» et «Impressum»
+      - police «Frutiger»
+      - palette de couleurs
+
+    Les éléments de marque sont identifiés dans les descriptions détaillées grâce à l’icône suivante: <span class="label label-admin">CD</span>
+
+    ### 2. Eléments obligatoires <span class="label label-admin">FIX</span>
+
+    Les éléments obligatoires ne doivent pas nécessairement être utilisés. Toutefois, s’ils sont utilisés, leur position et leur design sont fixes. Ils ne peuvent donc pas être modifiés. Toutes modifications apportées à ces éléments obligatoires nécessitent obligatoirement l’approbation de la Conférence des services d’information de la Confédération (CSIC). Il s’agit des éléments suivants:
+
+      - tous les autres éléments de l’en-tête (treecrumb, navigation de service, recherche, Thèmes A-Z)
+      - navigation globale
+      - sous-navigation dans la colonne de gauche
+      - fil d’Ariane
+      - liens médias sociaux dans le pied de page
+      - liens partenaires dans le pied de page
+      - plan du site (sitemap) dans le pied de page
+      - fonction de partage social
+      - fonction d’impression
+      - lien «Retour à l’aperçu»
+      - règles typographiques
+
+    Les éléments obligatoires sont identifiés dans les descriptions détaillées grâce à l’icône suivante: <span class="label label-admin">FIX</span>
+
+    ### 3. Eléments flexibles <span class="label label-admin">FLEX</span>
+
+    Les descriptions de tous les autres éléments sont des suggestions. Ils peuvent être adaptés aux besoins spécifiques. Ils peuvent être étendus et modifiés librement. Cependant, l’apparence générale (Look & Feel) doit être conservée. Les extensions et adaptations de ces éléments peuvent être proposées au Webforum pour intégration dans les lignes directrices web.
+
+      - Navigation à facettes
+      - Galerie d’images
+      - Encadré de contact
+      - etc.
+
+    Les éléments flexibles sont identifiés dans les descriptions détaillées grâce à l’icône suivante: <span class="label label-admin">FLEX</span>
+
+    En outre, chaque projet est libre de développer ses propres éléments dans le cadre des éléments de marque et obligatoires définis. Ces éléments nouveaux peuvent être proposés au Webforum pour intégration dans les lignes directrices web.
+
+    ## Révision et développement
+
+    Le développement des lignes directrices, les thèmes et les communiqués sont documentés sur Github: <a href="http://github.com/swiss/styleguide">Lignes directrices pour le design web de la Confédération</a>. Il convient d’y saisir les signalements d’erreurs et suggestions. Cela nécessite un compte sur Github. Les demandes à ce sujet doivent être adressées par e-mail au <a href="mailto:webforum@bk.admin.ch">Webforum de la Confédération</a>.
+
+    Le Webforum de la Confédération vérifie périodiquement les lignes directrices web en vue de leur actualité et conformité avec les évolutions du web.
+
+    Si nécessaire, et en consultation avec la CSIC, l’Unité de pilotage informatique de la Confédération (UPIC), les fournisseurs de services et le Service Identité visuelle de la Confédération, le Webforum initie la sortie d’une nouvelle version à condition que le financement respectif en soit assuré.
+
+    Tous changements des éléments de marque doivent être approuvés par la CSG et tous autres changements des lignes directrices web par la CSIC.
+
+accessibility:
+  title: Accessibilité
+  intro: |
+
+    Selon la <a href="https://www.admin.ch/opc/de/classified-compilation/20002658/index.html#a14">Loi sur l’égalité pour les handicapés (LHand) art. 14</a>, l’accès aux prestations sur Internet de l’administration fédérale ne doit pas être rendu difficile aux handicapés de la vue. Cette exigence est respectée lorsqu’un site Internet satisfait aux conditions de conformité des WCAG 2.0 et qu’il atteint le niveau de conformité AA.
+
+    Informations complémentaires:
+
+      - <a href="https://www.admin.ch/opc/fr/classified-compilation/20002658/index.html">Loi sur l’égalité pour les handicapés (LHand)</a>
+      - <a href="https://www.isb.admin.ch/isb/fr/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html">P028 - Directives de la Confédération pour l’aménagement de sites Internet facilement accessibles</a>
+      - <a href="http://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a>
+      - <a href="http://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a>
+
+    ## Bonnes pratiques
+
+    Les exemples suivants montrent comment les rédactrices et rédacteur web peuvent améliorer l’accessibilité de leurs sites web par des moyens simples.
+
+
+  title-tag: |
+    ### Titre de page
+
+    Dans le «title» du document HTML il convient de décrire d’abord les aspects spécifiques de la page, puis les généralités. Les éléments doivent être séparés par des virgules. Exemple: accessibilité pour les handicapés, lignes directrices pour le design de la Confédération suisse
+
+  multi-language: |
+    ### Contenus multilingues sur une page
+
+    Parfois, une même page comporte des contenus dans différentes langues. Les lecteurs d’écran doivent être avertis du changement de langue par le biais de l’attribut «lang». Exemple:
+
+  outro: |
+
+    ### Icônes
+
+    Souvent, les icônes de police ne peuvent pas être lues par les lecteurs d’écran. C’est pourquoi un texte visible ou invisible supplémentaire (`<span class="sr-only">description d’icône</span>`) est nécessaire. Les icônes elles-mêmes peuvent alors être définies comme aria-hidden="true".
+
+    ### Clés d’accès – Navigation accessible
+
+    Les clés d’accès pour la navigation accessible simplifient l’utilisation d’un site Internet par le biais d’un lecteur d’écran ou clavier. La navigation accessible doit être définie juste après la balise body. Les clés d’accès sont invisibles, sauf si elles sont mises en évidence. Un exemple peut être trouvé sous Modules de navigation – Zone d’en-tête – Navigation accessible.
+
+    ###  Exigences envers la conception de contenus accessibles
+
+    D’autres exemples de bonnes pratiques pour la conception de contenus accessibles sont répertoriés dans la «Liste de contrôle de l’accessibilité pour AEM».
+
+    ## Eléments non accessibles pour tous
+
+    Les éléments Diaporama et Carrousel ne sont pas totalement accessibles pour tous. S’ils sont utilisés malgré tout, ils doivent être masqués pour les lecteurs d’écran à l’aide de la commande aria-hidden="true". Dans ce cas, les contenus doivent être proposés sous une forme utilisable par les lecteurs d’écran.
+
+    On peut obtenir cela en répétant le contenu d’un diaporama ou d’un carrousel sous la forme d’une liste HTML classique, uniquement visible (`<div class="sr-only">`) pour les lecteurs d’écran. Alternativement, on peut ajouter un lien, uniquement visible pour les lecteurs d’écran, vers une page avec le contenu présenté de manière accessible.
+
+    ## Outils d’aide
+
+    Voici une sélection d’outils d’aide pour concevoir et tester l’accessibilité des pages Internet:
+
+      ### Liste de contrôle de l’accessibilité pour AEM
+
+      Lignes directrices pour la création de contenu accessible avec Adobe Experience Manager AEM
+
+      ### HeadingsMap (module complémentaire Firefox)
+
+      HeadingsMap est idéal pour rendre la structure d’une page Internet visible. Ce module complémentaire affiche la structure des titres du site Internet actuellement ouvert dans une zone supplémentaire de la fenêtre du navigateur. 
+
+      ### Juicy Studio Accessibility Toolbar (module complémentaire Firefox)
+
+      Cette barre d’outils examiné un certain nombre d’exigences en matière d’accessibilité, y compris le marquage des éléments ARIA et le balisage des tableaux.
+
+      ### Web Developer Toolbar (module complémentaire Firefox)
+
+      Cette barre d’outils est adaptée pour la désactivation de JS, la mise en évidence de certains éléments HTML ou la vérification des images.
+
+      ### Color Contrast Analyzer
+
+      <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyzer</a> est un outil qui permet d’analyser le contraste entre la couleur du premier plan et celle de l’arrière-plan.
+
+    La Web Accessibility Initiative (WAI) du World Wide Web Consortiums (W3C) propose une <a href=" https://www.w3.org/WAI/ER/tools/index.html">liste complète</a> d’outils d’évaluation de l’accessibilité.
+
+    ## Informations supplémentaires et contact
+
+    Service E-Accessibility de la Confédération (2015-2017) <a href="mailto:markus.riesch@gs-edi.admin.ch">Markus Riesch</a> Tél. +41584625463
+
+basic-grid:
+  title: Grille de base et types de pages
+  content: |
+    ## Grille de base
+
+    Les pages Internet se composent de trois zones: l’en-tête, la zone de contenu en quatre colonnes et le pied de page.
+
+    <figure><img src="/styleguide-img/grid.png" alt="Exemple de grille de page"><figcaption> La grille à quatre colonnes est utilisée de différentes manières par les divers types de pages.</figcaption>
+    </figure>
+
+    ## Types de pages
+
+    Il existe essentiellement deux types de pages: la page d’accueil et la page de contenu. En outre, il existe quelques formes mixtes et spéciales (voir «Pages d’exemple»).
+
+    ## Page d’accueil
+
+    La page d’accueil se compose de l’en-tête, de la navigation, de la zone de s et du pied de page. La zone de teasers est divisée en quatre colonnes. Il existe un grand nombre teasers pour diverses applications. Ils sont énumérés et décrits en détail dans la rubrique «Modules de contenu». Ces teasers peuvent occuper la zone de teasers de manière flexible. Ainsi, le teaser «à la une» peut p. ex. s’étendre sur trois colonnes et le «teaser de personne» avec le portrait du Conseiller fédéral compétent seulement une colonne.
+
+    ## Page de contenu
+
+    Une page de contenu possède également un en-tête et un pied de page. Au lieu de la zone de teasers, cette page comporte une zone de contenu en quatre colonnes. La colonne de gauche est utilisée par la sous-navigation, les deux colonnes du milieu sont prévues pour le contenu réel. La colonne de droite est utilisée comme colonne de contexte.
+
+    ### Navigation de gauche
+
+    La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement» qui indique toujours les options de la page actuelle. Elle se compose de trois zones: l’en-tête de navigation avec le titre de la page actuelle, un lien «Retour» vers le niveau de navigation supérieur et des liens vers les sous-pages. Le comportement est décrit sur la page d’élément <a href="/fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Liste de navigation latérale (sous-navigation de gauche)</a>.
+
+
+    ### Zone de contenu 
+
+    Dans la zone de contenu, on place les titres de page et les intertitres, ainsi que le corps du texte, les images, les encadrés d’information et les informations supplémentaires. Les informations supplémentaires sont toujours placées tout en bas de la zone de contenu et n’ont pas leur place dans la colonne de contexte. Le test d’utilisabilité a permis de constater que les utilisateurs ne font pas tellement attention aux informations placées dans la colonne de contexte.
+
+    ### Colonne de contexte
+
+    La colonne de contexte est réservé aux éléments suivants: partout où cela est utile, un contact direct est indiqué tout en haut. S’il existe un élément de panier, celui-ci est inséré directement en-dessous du teaser de contact. On peut également insérer d’autres teasers, p. ex. un encadré de flux RSS ou un teaser temporaire (p. ex. pour une conférence). Mais il ne faut jamais insérer plus de trois éléments. Si le placement des éléments mentionnés semble inutile, la colonne reste vide.
+
+    En dehors des éléments susmentionnés, aucune information supplémentaire et aucun autre composant de contenu essentiel ne doivent être placés dans la colonne de contexte.
+
+cd-elements:
+  title: Eléments de marque
+  content: |
+    ## But
+       L’application cohérente des éléments de marque permet d’assurer pour tous les sites Internet de la Confédération un «look and feel» typique de la marque. Elle garantit qu’un site Internet de la Confédération puisse être reconnu comme tel au premier coup d’œil. De plus, elle transmet à l’utilisateur les valeurs essentielles qui constituent la base du travail quotidien de l’administration fédérale: qualité, efficacité et transparence.
+
+    L’utilisation des éléments de marque clés suivants est obligatoire. Ils sont déterminés dans l’identité visuelle (CD, corporate design) de la Confédération et ne peuvent être modifiés en aucun cas:
+
+    - la désignation, composé du logo fédéral, du nom de l’unité organisationnelle et de la ligne grise entre ces deux éléments;
+    - la ligne rouge délimitant l’en-tête;
+    - les couleurs utilisées: le rouge pour les mises en évidence, le bleu pour les liens et une palette de tons gris;
+    - l’utilisation permanente de la police «Frutiger»;
+    - un pied de page uniforme (avec Copyright, Impressum et Informations juridiques)
+
+    ## Désignation claire du site Internet
+
+    L’expéditeur d’un site Internet est toujours désigné par le logo fédéral complet (blason et marque verbale en quatre langues), le nom de l’unité organisationnelle, y compris le sigle ou la forme courte. Ces deux composants sont séparés par une ligne verticale. La désignation est toujours placée en haut à gauche dans l’en-tête.
+
+    <figure>
+        <img src="/styleguide-img/kennzeichnung.png" alt="Exemple de grille de page">
+        <figcaption> La désignation est composé du logo fédéral complet et du nom de l’unité organisationnelle ainsi que d’une ligne de séparation.</figcaption>
+    </figure>
+
+    ## Mise en œuvre pour les smartphones
+
+    Pour les applications dont l’espace est limité dans l’en-tête, le blason peut être utilisé seul, sans la marque verbale. Le nom de l’unité organisationnelle peut être utilisé sous forme de sigle (p. ex. DFAE) ou dans sa forme courte (p. ex. MétéoSuisse). Les noms des unités organisationnelles n’ayant pas de sigle ou de forme courte sont écrits entièrement. Cela peut avoir comme effet que la désignation s’étend sur plusieurs lignes et que la zone d’en-tête devient plus haute.
+
+    <figure>
+        <img src="/styleguide-img/mobile_header.png" alt="Exemple de grille de page">
+        <figcaption>Pour la désignation dans l’en-tête sur les smartphones, on peut également utiliser le sigle. S’il faut écrire le nom de l’unité organisationnelle en entier, la désignation peut s’étendre sur plusieurs lignes.</figcaption>
+    </figure>
+
+    Partout où la forme réduite de la désignation est utilisée dans l’en-tête, le logo fédéral complet avec blason et marque verbale en quatre langues doit être répété dans le pied de page. 
+    
+    Sur les appareils mobiles, le nom complet de l’unité organisationnelle est également affiché dans une zone au-dessus de l’en-tête. Cette zone est masquée dès le premier défilement de la page.
+
+    <figure>
+        <img src="/styleguide-img/schublade.png" alt="Exemple d’un nom complet">
+        <figcaption>Le nom complet de l’unité d’organisation sur les smartphones.</figurecaption>
+     </figure>
+
+    ## Ligne de séparation en-dessous de l’en-tête
+
+    La ligne de séparation rouge délimite l’en-tête vers le bas. Elle peut mettre en évidence une zone sélectionnée dans la navigation globale.
+
+    ![La ligne de séparation rouge est utilisée pour marquer une zone active dans la navigation globale.](/styleguide-img/rotelinie.png)
+
+    ## Typographie
+
+    Pour l’Internet, la police «Frutiger» est utilisée partout. Pour l’Intranet, il convient d’utiliser la police «Arial».
+
+    ## Couleurs de signalisation
+
+    Les éléments interactifs sont soit mis en évidence par leur position (p. ex. dans la navigation) ou par la couleur bleue. Les éléments sélectionnés sont rouges.
+
+    ## Ligne de pied de page
+
+    La ligne de pied de page uniforme termine les pages. Elle comporte une note de copyright et les liens «Informations juridiques» et «Impressum».
+
+    ## Favicon
+
+    N’oubliez pas le favicon avant de mettre le site en ligne. Vous trouverez les ressources dans le package de code.
+
+    ```html
+    <link rel="shortcut icon" href="build/img/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="build/img/ico/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="build/img/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="build/img/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="build/img/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="build/img/ico/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="build/img/ico/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="build/img/ico/apple-touch-icon-76x76.png">
+    <link rel="icon" type="image/png" href="build/img/ico/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="build/img/ico/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="build/img/ico/favicon-:3172x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="build/img/ico/mstile-144x144.png">
+    <meta name="msapplication-config" content="build/img/ico/browserconfig.xml">
+    ```
+devices:
+  title: Rendu sur différents appareils
+  content: |
+    ## Design adaptatif
+       Les lignes directrices web de la Confédération permettent un rendu optimisé de l’ensemble des contenus d’un site Internet sur différents appareils tels que les ordinateurs de bureau, ordinateurs portables, tablettes et smartphones. La mise en page des sites Internet et des éléments individuels s’adapte à la résolution du périphérique de sortie.
+
+    ## Ordinateur de bureau, ordinateur portable et tablette
+
+    Sur les ordinateurs de bureau, ordinateurs portables et tablettes qui sont tenus horizontalement, la mise en page originale en quatre colonnes est maintenue. Dès qu’une tablette est tenue verticalement, le contenu de la colonne de droite (colonne de contexte) est affiché en-dessous du contenu.
+
+    <figure>
+        <img src="/styleguide-img/responsive.png" alt="Illustration de l’agencement des contenus en fonction du périphérique de sortie">
+        <figcaption> Les contenus sont agencés différemment selon les divers périphériques de sortie.</figcaption>
+    </figure>
+
+    ## Appareils mobiles/smartphones
+
+    Si la page est affichée sur un smartphone, seule la colonne de contenu est affichée. La navigation dans la colonne de gauche et la colonne de contexte disparaissent. Au lieu de cela, l’utilisateur peut naviguer via des liens contenus dans le pied de page et un menu spécial destiné aux mobiles.
+
+    Des tests d’utilisabilité ont montré que sur les smartphones, de nombreux utilisateurs ignorent le menu de navigation dans l’en-tête et naviguent via les liens contenus dans le pied de page. C’est pourquoi il est important de représenter la navigation dans le pied de page.
+
+
+guidelines:
+  title: Application des lignes directrices web de la Confédération
+  content: |
+    ## Structure
+
+    A l’intérieur des Lignes directrices pour le design web de la Confédération, vous pouvez naviguer vers les différents chapitres via les onglets du menu principal.
+
+    La page d’accueil présente un résumé des Lignes directrices pour le design web de la Confédération.
+
+    La structure, la compatibilité avec les navigateurs et l’installation sont décrites sous «Lignes directrices pour le design web de la Confédération».
+
+    Sous les onglets «Grille de base», «Modules de navigation» et «Modules de contenu», vous trouverez les descriptions détaillées des divers éléments.
+
+    Le menu «Pages d’exemple», présente différents types de pages Internet. Celles-ci sont ouvertes dans un nouvel onglet. Elles peuvent y être mises à l’échelle en vue de vérifier l’affichage dans différentes résolutions.
+
+    ## Informations sur les éléments
+
+    Sur les différentes pages, l’élément est affiché dans un cadre adaptatif. En agrandissant et en rétrécissant le cadre, on peut tester l’affichage de l’élément sur différents périphériques de sortie (design web adaptatif). En-dessus de l’affichage de l’élément, vous trouverez une brève description ainsi que le code pour la mise en œuvre par l’équipe de développement.
+
+    Le code peut être copié et réutilisé.
+
+    Les notes de mises à jour sont également indiquées. Celles-ci informent les développeurs à propos des changements de code.
+
+    La rubrique «Pages d’exemple» présente différents types de pages. Celles-ci sont adaptatives et accessibles.
+
+    ## Navigateurs web pris en charge
+
+    La version 3.0 est optimisée pour les versions de navigateur suivantes:
+
+    ### Ordinateur de bureau:
+
+    - Internet Explorer 9 et supérieur
+    - Safari 8 et supérieur 
+    - Firefox 40 et supérieur 
+    - Chrome 45 et supérieur
+
+    ### Mobile:
+
+    - Safari et Chrome à partir d’iOS 7 et supérieur
+    - Chrome et ou «default browser» et Firefox à partir d’Android 5 et supérieur
+
+    ## Installation
+
+    Les informations d’installation pour l’utilisation des lignes directrices dans le cadre d’un projet peuvent être consultées sur <a href="https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet">Github</a>
+
+
+header-footer:
+  title: En-tête et pied de page
+  content: |
+
+    L’en-tête et le pied de page figurent sur toutes les pages et leur conception est fixe. Sur les appareils mobiles, leur affichage est ajusté. 
+
+    ## En-tête
+
+    L’en-tête est l’élément déterminant d’un site Internet. Il se compose de l’arborescence de navigation (treecrumb) de l’administration fédérale, de la navigation de service, y compris choix de la langue, de la désignation (logo fédéral et nom de l’unité organisationnelle), de la recherche et de la navigation A-Z. Il se termine toujours par une ligne rouge.
+
+    Ces éléments sont soit des éléments de marque, soit des éléments obligatoires. Ils ne doivent pas être modifiés.
+
+    <figure>
+      <img src="/styleguide-img/header.png" alt="Exemple de grille de page">
+      <figcaption> L’en-tête avec les éléments distinctifs</figcaption>
+    </figure>
+
+    L’arborescence de navigation (**treecrumb**) représente le classement hiérarchique du site Internet au sein de l’administration fédérale. Il permet à l’utilisateur d’accéder directement à des sites Internet d’unités organisationnelles subordonnées. Sur les appareils mobiles il n’y a pas de treecrumb.
+
+    Dans la **navigation de service**, on trouvera des liens d’importance majeure (p. ex. contact, emplois, médias). Idéalement, il convient de fournir trois, mais jamais plus de cinq liens dans la navigation de service. Le contact constitue le minimum. Sur les appareils mobiles, la navigation de service est placée dans le pied de page.
+
+    A droite à côté de la navigation de service, on trouve le **choix de la langue**. Les langues proposées sont indiquées par des codes selon la norme ISO 639-2/3 (p. ex. français = FR, allemand = DE, rhéto-roman = RM, etc.). Sur les appareils mobiles, le choix de la langue est intégré dans une zone située au-dessus de l’en-tête.
+
+    Les informations des sites Internet de l’administration fédérale doivent être disponibles dans les langues officielles que sont l’allemand, le français et l’italien. Il est important que les utilisatrices et utilisateurs puissent voir immédiatement dans quelles langues officielles le contenu est accessible. Par conséquent, ces sigles linguistiques apparaissent côte à côte dans l’en-tête de chaque page – alignés à gauche à côté de l’encadré de service. Si le contenu est seulement disponible dans une ou deux langue(s) officielle(s), le sigle de la troisième langue officielle n’est pas actif. Lorsque l’on passe la souris sur le lien (mouse-over), une note est affichée indiquant que le contenu n’est pas disponible dans la langue concernée.
+
+    Les sigles des langues RM et EN ne sont affichés que si des contenus sont disponibles dans ces langues.
+
+    Les sites Internet disponibles dans plus de cinq langues peuvent afficher les langues **supplémentaires** dans un menu déroulant. Les sigles des langues nationales doivent toujours être affichés comme liens placés côte à côté.
+
+    La **désignation**, composé du logo fédéral (blason et marque verbale) et du nom de l’unité organisationnelle, est l’élément de marque le plus important. Sur les sites inter-organisationnels et les portails thématiques, le nom de l’unité organisationnelle est remplacé par le titre du site Internet. Pour les appareils mobiles, la marque verbale du logo fédéral peut être omise et le nom de l’unité organisationnelle peut être abrégé. Si le nom est abrégé, il est affiché dans sa totalité dans une zone située au-dessus de l’en-tête.
+
+    La **fonction de recherche** est positionnée comme champ de texte sur le côté droit de l’en-tête, en face de la désignation. Lorsque l’utilisateur clique dans le champ de texte, le champ de texte est agrandi. 
+
+    Sur les appareils mobiles, la recherche peut être appelée via une icône dans l’en-tête.
+
+    En-dessous de la fonction de recherche on trouve la **navigation A-Z**. Elle représente un accès alternatif aux contenus du site Internet auxquels on peut accéder via un catalogue alphabétique. Sur les appareils mobiles, la navigation A-Z est proposée ensemble avec la fonction de recherche.
+
+    L’en-tête est toujours délimité par une ligne rouge. Lorsqu’une navigation globale est utilisée en-dessous de l’en-tête, cette ligne peut indiquer une zone sélectionnée grâce à un marquage en couleur.
+
+    ## Navigation globale
+
+    La plupart des sites Internet possèdent une navigation globale (navigation principale) qui est positionnée sous forme d’onglets dans une zone en-dessous de la ligne rouge. La navigation globale représente le niveau le plus élevé de l’architecture d’information. Ici, les principaux thèmes sont accessibles directement. Ils fournissent un aperçu du contenu et de l’objectif du site Internet à l’utilisateur.
+
+    Les termes de la navigation globale ne sont pas définis par les lignes directrices web. Ils dépendent des besoins de communication spécifiques de chaque département ou office.
+
+    ### Exceptions
+
+    Pour les rubriques suivantes, la désignation et l’ordre dans la navigation globale sont prédéfinis, à condition qu’elles soient utilisées:
+
+    «Actualités» (1.), «Services et publication» (2.) et «A propos de nous» (toujours en dernière position).
+
+    Les sites Internet peu volumineux peuvent se passer de la navigation globale et se limiter à la navigation dans la colonne de gauche de la zone de contenu.
+
+    ## Pied de page
+
+    Dans le **pied de page** on place des liens importants qui sont ainsi accessibles depuis toutes les pages. Ces liens peuvent mener vers des pages du site Internet actuel, mais aussi faire référence à des contenus externes (p. ex. la présence sur des médias sociaux). Selon les besoins, le pied de page peut être divisé en différents domaines.
+
+    Dans la ligne de pied de page, située en-dessous du pied de page, on trouve une note concernant le copyright et des liens vers les «Informations juridiques» et l’«Impressum». La ligne de pied de page est un élément de marque. Son utilisation est obligatoire.
+
+    <figure>
+      <img src="/styleguide-img/footer.png" alt="Exemple d’un pied de page">
+      <figcaption> Le pied de page avec les différentes zones </figcaption>
+    </figure>
+
+    Sur les appareils mobiles, de nombreuses fonctions de l’en-tête (p. ex. la navigation, la navigation de service et le logo fédéral complet) sont déplacés vers le pied de page.
+
+sample-pages:
+  title: Pages d’exemple
+  content: |
+
+    Diverses pages d’exemple, construites sur la base des deux types de pages «page d’accueil» et «page de contenu», sont présentées dans les Lignes directrices pour le design web de la Confédération. Elles montrent, à titre d’exemple, comment on peut combiner les différents éléments présentés sur les pages Internet. Ces pages peuvent être utilisées comme base pour un projet et adaptées, étendues et modifiées en fonction des besoins de communication respectifs.
+
+    ## Page d’accueil avec navigation globale
+
+    Cette page d’accueil est adaptée aux sites Internet contenant beaucoup d’informations (les «grands sites Internet», tels que www.eda.admin.ch ou www.vbs.admin.ch). L’utilisation de la navigation globale y permet de sauter les deux premiers niveaux de navigation.
+
+    Les sites Internet avec une moindre quantité d’informations utilisent la page d’accueil sans la navigation globale (p. ex. les sites des ambassades suisses). Ici, l’utilisateur accède directement aux contenus via la sous-navigation à gauche.
+
+    ## Page de détails
+
+    La page de détails est une page de contenu classique avec un article placé dans la colonne du milieu.
+
+    ## Publications
+
+    Une page de publications est une page de détails spéciale indépendante, sur laquelle est présentée une publication pouvant être achetée par l’utilisateur. Un panier d’achat est intégré dans la colonne de droite.
+
+    ## Résultats de recherche
+
+    Ce type de page rompt avec la structure de base d’une page de contenu. La colonne de navigation de gauche est supprimée. Les résultats de recherche utilisent les trois colonnes de la grille de base.
+
+    ## Formulaire
+
+    La page d’exemple pour les formulaires montre comment un formulaire avec une navigation de processus peut être intégré dans une page.
+
+translations:
+  title: Traductions
+  content: |
+    Certains composants des lignes directrices utilisent des désignations ou labels qui sont généralement identiques sur tous les sites Internet qui utilisent ces composants. Par exemple, le champ de recherche est toujours intitulé «Rechercher».
+
+    Afin de simplifier la création de sites Internet multilingues, un fichier de traduction est mis à disposition. Il contient un ensemble de labels standard dans les quatre langues nationales ainsi qu’en anglais.
+
+  download-link: Télécharger le fichier de traduction (XLS)

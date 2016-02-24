@@ -1,0 +1,50 @@
+/* ==========================================================
+ * emergency.scss
+ * Emergency alert styles
+ *
+ * Author: Toni Fisler, toni@antistatique.net
+ * Date:   2014-05-01 09:23:36
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+.alert--emergency {
+  background-color: $mocassin;
+  border-left: 40px solid $venetian-red;
+  border-radius: 0;
+  padding-left: 15px;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: -30px;
+    width: 40px;
+    height: auto;
+    color: $white;
+    font-family: $admin-icons;
+    content: get-font-icon('exclam');
+    font-size: 2em;
+    padding-left: 5px;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-weight: 700;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  @media only screen and (max-width: $screen-xs-max) {
+    border-left-width: 20px;
+    padding-left: 5px;
+
+    &:before {
+      left: -20px;
+      width: 20px;
+    }
+  }
+}
