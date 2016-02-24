@@ -106,12 +106,12 @@ accessibility:
   title-tag: |
     ### Seitentitel
 
-    Im "title" des HTML-Dokuments soll zuerst das Seitenspezfische, dann das Allgemeine beschrieben werden. Die Elemente sind mittels Komma zu trennen. Beispiel: Barrier-free Accessibilty, Swiss Confederation Webguidelines
+    Im "title" des HTML-Dokuments soll zuerst das Seitenspezfische, dann das Allgemeine beschrieben werden. Die Elemente sind mittels Komma zu trennen.
 
   multi-language: |
     ### Mehrsprachige Inhalte auf einer Seite
 
-    Manchmal gibt es auf derselben Seite Inhalte in verschiedenen Sprachen. Screenreader müssen mit dem "lang"-Attribut auf den Sprachwechsel aufmerksam gemacht werden. Beispiel:
+    Manchmal gibt es auf derselben Seite Inhalte in verschiedenen Sprachen. Screenreader müssen mit dem "lang"-Attribut auf den Sprachwechsel aufmerksam gemacht werden.
 
   outro: |
 

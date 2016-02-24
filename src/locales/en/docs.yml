@@ -77,6 +77,17 @@ accessibility:
 
     [The Guidelines of the Confederation (P028)](https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html)
 
+  title-tag: |
+    ### Page Title
+
+    The "title" of the HTML document should contain the specific description of the page first, followed by the broader context of the page. The elements should be seperated by a comma.
+
+  multi-language: |
+    ### Multiple Languages on the Same Page
+
+    A single page can contain multiple languages. Every change in langugage should be announced to screenreaders using the "lang" attribute.
+
+  outro: "&nbsp;"
 
 basic-grid:
   title: Basic Grid and Page Types
