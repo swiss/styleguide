@@ -1,26 +1,21 @@
 {
   "name": "swiss-styleguide",
-  "version": "2.6.0",
+  "description": "Swiss Confederation Web Guidelines",
+  "version": "3.0.0",
   "homepage": "http://swiss.github.io/styleguide",
-  "authors": "Antistatique.net",
-  "description": "Swiss Admin Styleguide",
+  "authors": [
+    "Liip.ch",
+    "Antistatique.net"
+  ],
   "license": "MIT",
   "main": [
-    "./styleguide/index.html",
-    "./build/css/*.css",
-    "./build/js/vendors.min.js",
-    "./build/js/main.js",
-    "./build/fonts/*.eot",
-    "./build/fonts/*.svg",
-    "./build/fonts/*.ttf",
-    "./build/fonts/*.woff"
+    "./build/*.*",
   ],
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components"
   ],
-  "dependencies": {},
   "devDependencies": {
     "jquery": "1.10.2",
     "bootstrap-sass-official": "~3.3.3",
