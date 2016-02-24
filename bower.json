@@ -14,7 +14,17 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "/styleguide-img",
+    "/src/assets/fabricator",
+    "/src/assets/files",
+    "/src/data",
+    "/src/example-pages",
+    "/src/locales",
+    "/src/materials",
+    "/src/materials-data",
+    "/src/views",
+    "/src/index.html"
   ],
   "devDependencies": {
     "jquery": "1.10.2",
