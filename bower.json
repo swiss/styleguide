@@ -9,7 +9,7 @@
   ],
   "license": "MIT",
   "main": [
-    "./build/*.*",
+    "./build/*.*"
   ],
   "ignore": [
     "**/.*",
