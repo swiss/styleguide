@@ -10,6 +10,8 @@
  ========================================================== */
 
 (function($, data) {
+  'use strict';
+
   var $searchFields = $('.form-search .search-field');
   if (data) {
     // Init the Bloodhound suggestion engine
@@ -55,6 +57,7 @@
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   $(window).load(function () {
     carouselInit(jQuery);
@@ -69,7 +72,6 @@
   $('#carousel-total').text(slideshow_total);
 
   $('.carousel-slideshow').on('slid.bs.carousel', function () {
-
     var carouselData = $(this).data('bs.carousel');
     var currentIndex = carouselData.getItemIndex(carouselData.$element.find('.item.active'));
     var total = carouselData.$items.length;
@@ -82,7 +84,9 @@
 
 }) (jQuery);
 
-function carouselInit ($) {
+function carouselInit($) {
+  'use strict';
+
   var $carousel = $('.carousel:not(.carousel-slideshow)');
 
   $('.carousel .item:first-child').addClass('first');
@@ -98,11 +102,10 @@ function carouselInit ($) {
   if($carousel) {
     $carousel.each(function () {
       var biggestHeight = 0,
-          titleHeight = $(this).find('h3:first-child').height(),
-          imgHeight = $(this).find('.carousel-img').height();
+          titleHeight = $(this).find('.item.active h3:first-child').height(),
+          imgHeight = $(this).find('.item.active .carousel-img').height();
 
-      $(this).find('.carousel-indicators').css('top', titleHeight + imgHeight + 40);
-      $(this).find('.carousel-control').css('top', titleHeight + imgHeight + 50);
+      $(this).find('.carousel-indicators, .carousel-control').css('top', titleHeight + imgHeight + 50);
 
       $(this).find('.item').each(function () {
         if ($(this).height() >= biggestHeight) {
@@ -115,6 +118,8 @@ function carouselInit ($) {
 }
 
 function disableControl(element) {
+  'use strict';
+
   if (element.find('.first').hasClass('active')) {
     element.find('.left').addClass('disabled').attr('aria-disabled', 'true');
   } else {
@@ -126,6 +131,7 @@ function disableControl(element) {
     element.find('.right').removeClass('disabled').attr('aria-disabled', 'false');
   }
 }
+
 /* ==========================================================
  * collapse.js
  * Add class when nav collapse is open
@@ -138,6 +144,7 @@ function disableControl(element) {
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   // Normal Collapse
   $('.collapse:not(tbody)').on('show.bs.collapse', function () {
@@ -183,6 +190,7 @@ function disableControl(element) {
   });
 
 }) (jQuery);
+
 /* ==========================================================
  * drilldown.js
  * Drilldown plugin scripts. For page-list-nav element
@@ -194,23 +202,25 @@ function disableControl(element) {
  * Licensed under MIT
  ========================================================== */
 
- (function($) {
+(function($) {
+  'use strict';
 
-  var options = {
-    event: 'click', // * View note below
-    selector: 'a',  // * View note below
-    speed: 100,
-    cssClass: {
-      container: 'drilldown-container',
-      root: 'nav-page-list',
-      sub: 'drilldown-sub',
-      back: 'drilldown-back'
-    }
-  };
+var options = {
+  event: 'click', // * View note below
+  selector: 'a',  // * View note below
+  speed: 100,
+  cssClass: {
+    container: 'drilldown-container',
+    root: 'nav-page-list',
+    sub: 'drilldown-sub',
+    back: 'drilldown-back'
+  }
+};
 
-  $('.drilldown').drilldown(options);
+$('.drilldown').drilldown(options);
 
- }) (jQuery);
+}) (jQuery);
+
 /* ==========================================================
  * global-nav.js
  * Global Navigation syripts
@@ -222,31 +232,71 @@ function disableControl(element) {
  * Licensed under MIT
  ========================================================== */
 
- (function($) {
+(function($) {
+    'use strict';
 
-  // Handle scroll to position nav as fixed
+// Handle scroll to position nav as fixed
 
-  var top = 36;
+var top = 36;
 
-  $(window).scroll(function (event) {
+$(window).scroll(function () {
 
-    var y = $(this).scrollTop();
+  var y = $(this).scrollTop();
 
-    if (y >= top) {
-      if (!$('.nav-mobile').hasClass('fixed')) {
-        $('.nav-mobile').addClass('fixed')
-          .after('<div class="nav-mobile-spacer" id="spacer" style="height:36px;"></div>');
-      }
+  if (y >= top) {
+    if (!$('.nav-mobile').hasClass('fixed')) {
+      $('.nav-mobile').addClass('fixed')
+        .after('<div class="nav-mobile-spacer" id="spacer" style="height:36px;"></div>');
     }
-    else {
-      if ($('.nav-mobile').hasClass('fixed')) {
-        $('.nav-mobile').removeClass('fixed');
-        $('#spacer').remove();
-      }
+  }
+  else {
+    if ($('.nav-mobile').hasClass('fixed')) {
+      $('.nav-mobile').removeClass('fixed');
+      $('#spacer').remove();
     }
+  }
 
+});
+}) (jQuery);
+
+// OUTLINE.JS
+// https://github.com/lindsayevans/outline.js
+//
+// Based on http://www.paciellogroup.com/blog/2012/04/how-to-remove-css-outlines-in-an-accessible-manner/
+//
+// Hide outline on mouse interactions
+// Show it on keyboard interactions
+(function(doc){
+
+  'use strict';
+
+  var styleElement = doc.createElement('STYLE'),
+      domEvents = 'addEventListener' in doc,
+      addListener = function(type, callback){
+        // Basic cross-browser event handling
+        if (domEvents) {
+          doc.addEventListener(type, callback);
+        } else {
+          doc.attachEvent('on' + type, callback);
+        }
+      },
+      setCSS = function(cssText){
+        !!styleElement.styleSheet ? styleElement.styleSheet.cssText = cssText : styleElement.innerHTML = cssText;
+      };
+
+  doc.getElementsByTagName('HEAD')[0].appendChild(styleElement);
+
+  // Using mousedown instead of mouseover, so that previously focused elements don't lose focus ring on mouse move
+  addListener('mousedown', function(){
+    setCSS(':focus{outline:0!important}::-moz-focus-inner{border:0!important}');
   });
- }) (jQuery);
+
+  addListener('keydown', function(){
+    setCSS('');
+  });
+
+})(document);
+
 /* ==========================================================
  * print.js
  * Add print preview windows
@@ -258,101 +308,102 @@ function disableControl(element) {
  * Licensed under MIT
  ========================================================== */
 
- (function($) {
+(function($) {
+  'use strict';
 
-  // Initialization
-  $.fn.printPreview = function() {
-    return this;
-  };
+// Initialization
+$.fn.printPreview = function() {
+  return this;
+};
 
-  $.printPreview = {
+$.printPreview = {
 
-    printPreview: function(element) {
-      var $body = $('body'),
-          $container = $('.container-main'),
-          footnoteLinks = "",
-          linksIndex = 0;
+  printPreview: function(element) {
+    var $body = $('body'),
+        $container = $('.container-main'),
+        footnoteLinks = "",
+        linksIndex = 0;
 
-      $body.find('.nav-mobile, .drilldown, .nav-main, .header-separator, .nav-service, .nav-lang, .form-search, .yamm--select, header > div:first-child, footer, .alert, .icon--print, .social-sharing, form, .nav-process, .carousel-indicators, .carousel-control, .breadcrumb, .pagination-container').remove();
+    $body.find('.nav-mobile, .drilldown, .nav-main, .header-separator, .nav-service, .nav-lang, .form-search, .yamm--select, header > div:first-child, footer, .alert, .icon--print, .social-sharing, form, .nav-process, .carousel-indicators, .carousel-control, .breadcrumb, .pagination-container').remove();
 
-      // if an element is passed, we want it to be the only thing to print out
-      if (element) {
-        element = $('[data-print=' + element + ']').clone(); // clone to fix issue with IE render
-        var header = $('header').clone(); // clone to fix issue with IE render
-            title = element.attr('data-title') ? '<h1>' + element.attr('data-title') + '</h1>' : '';
-        $container.addClass('print-element').html('').append(header, title, element);
-      }
-
-      $body.addClass('print-preview');
-
-      $container.prepend('<div class="row" id="print-settings">'+
-        '<div class="col-sm-12">'+
-          '<nav class="pagination-container clearfix">'+
-            '<span class="pull-left">'+
-              '<input type="checkbox" id="footnote-links">&nbsp;&nbsp;'+
-              '<label for="footnote-links">Links as footnotes</label>'+
-            '</span>'+
-            '<ul class="pull-right pagination">'+
-              '<li>'+
-                '<button id="print-button" title="print" class="btn"><span class="icon icon--print"></span></button>'+
-                '&nbsp;&nbsp;'+
-                '<button id="close-button" title="close" class="btn btn-secondary"><span class="icon icon--close"></span></button>'+
-              '</li>'+
-            '</ul>'+
-          '</nav>'+
-        '</div>'+
-      '</div>');
-
-      $('#print-button').click(function () {
-        $.printPreview.printProcess();
-      });
-
-      $('#close-button').click(function () {
-        $.printPreview.printClose();
-      });
-
-
-      $('a').not('.access-keys a').each(function () {
-        var target = $(this).attr('href');
-        target = String(target);
-
-        if (target != "undefined" && target.indexOf("http") === 0) {
-          linksIndex ++;
-          footnoteLinks += '<li>'+target+'</li>';
-          $('<sup class="link-ref">('+linksIndex+')</sup>').insertAfter(this);
-        }
-      });
-
-
-      $('#footnote-links').change(function(){
-        if (this.checked) {
-          $container.append('<div id="footnote-links-wrapper" class="row footnote-links-wrapper">'+
-            '<div class="col-sm-12">'+
-            '<h3>Page Links</h3><hr>'+
-            '<ol>'+
-              footnoteLinks+
-            '</ol>'+
-            '</div>'+
-          '</div>');
-          $body.addClass('print-footnotes');
-        } else {
-          $('#footnote-links-wrapper').remove();
-          $body.removeClass('print-footnotes');
-        }
-      });
-    },
-
-    printProcess: function() {
-      window.print();
-    },
-
-    printClose: function() {
-      window.location.reload();
+    // if an element is passed, we want it to be the only thing to print out
+    if (element) {
+      element = $('[data-print=' + element + ']').clone(); // clone to fix issue with IE render
+      var header = $('header').clone(), // clone to fix issue with IE render
+          title = element.attr('data-title') ? '<h1>' + element.attr('data-title') + '</h1>' : '';
+      $container.addClass('print-element').html('').append(header, title, element);
     }
 
-  };
+    $body.addClass('print-preview');
 
- }) (jQuery);
+    $container.prepend('<div class="row" id="print-settings">'+
+      '<div class="col-sm-12">'+
+        '<nav class="pagination-container clearfix">'+
+          '<span class="pull-left">'+
+            '<input type="checkbox" id="footnote-links">&nbsp;&nbsp;'+
+            '<label for="footnote-links">Links as footnotes</label>'+
+          '</span>'+
+          '<ul class="pull-right">'+
+            '<li>'+
+              '<button id="print-button" title="print" class="btn"><span class="icon icon--print"></span></button>'+
+              '&nbsp;&nbsp;'+
+              '<button id="close-button" title="close" class="btn btn-secondary"><span class="icon icon--close"></span></button>'+
+            '</li>'+
+          '</ul>'+
+        '</nav>'+
+      '</div>'+
+    '</div>');
+
+    $('#print-button').click(function () {
+      $.printPreview.printProcess();
+    });
+
+    $('#close-button').click(function () {
+      $.printPreview.printClose();
+    });
+
+
+    $('a').not('.access-keys a').each(function () {
+      var target = $(this).attr('href');
+      target = String(target);
+
+      if (target !== "undefined" && target.indexOf("http") === 0) {
+        linksIndex ++;
+        footnoteLinks += '<li>'+target+'</li>';
+        $('<sup class="link-ref">('+linksIndex+')</sup>').insertAfter(this);
+      }
+    });
+
+
+    $('#footnote-links').change(function(){
+      if (this.checked) {
+        $container.append('<div id="footnote-links-wrapper" class="row footnote-links-wrapper">'+
+          '<div class="col-sm-12">'+
+          '<h3>Page Links</h3><hr>'+
+          '<ol>'+
+            footnoteLinks+
+          '</ol>'+
+          '</div>'+
+        '</div>');
+        $body.addClass('print-footnotes');
+      } else {
+        $('#footnote-links-wrapper').remove();
+        $body.removeClass('print-footnotes');
+      }
+    });
+  },
+
+  printProcess: function() {
+    window.print();
+  },
+
+  printClose: function() {
+    window.location.reload();
+  }
+
+};
+
+}) (jQuery);
 
 /* ==========================================================
  * rich-menu.js
@@ -366,14 +417,13 @@ function disableControl(element) {
  =========================================================== */
 
 (function($) {
+  'use strict';
 
   // Keep jQuery object in variables
   var $yamm = $('.yamm'),
       $yammClose = $('.yamm-close, .yamm-close-bottom'),
-      $body = $('body'),
       $dropdown = $('.yamm .dropdown'),
-      $dropdownToggle = $('.yamm .dropdown-toggle'),
-      $dropdownMenu = $('.dropdown-menu');
+      $dropdownToggle = $('.yamm .dropdown-toggle');
 
   // Toggle dropdown and fix z-index errors
   $yamm.each(function () {
@@ -439,6 +489,7 @@ function disableControl(element) {
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   $(document).ready(function(){
     $('select').chosen({
@@ -447,6 +498,7 @@ function disableControl(element) {
   });
 
 }) (jQuery);
+
 /* ==========================================================
  * shame.js
  * DOM rewritting on mobile, issue #160
@@ -459,6 +511,7 @@ function disableControl(element) {
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   $(document).ready(function () {
     var id;
@@ -468,8 +521,8 @@ function disableControl(element) {
     collapsify();
 
     $(window).resize(function() {
-        clearTimeout(id);
-        id = setTimeout(resizeLauncher, 500);
+      clearTimeout(id);
+      id = setTimeout(resizeLauncher, 500);
     });
 
     function resizeLauncher() {
@@ -478,39 +531,47 @@ function disableControl(element) {
     }
 
     function carouselify() {
-      var $tabFocus = $(".tab-focus"),
+      var $tabFocus = $('.tab-focus'),
           focusIndex = 0;
+
       if($tabFocus && $(window).width() <= 767 && !isCarouselified ) {
         isCarouselified = true;
+
         $tabFocus.each(function () {
           var $that = $(this),
               itemIndex = -1;
+
           focusIndex += 1;
+
           $that.attr('id', 'tab-focus-'+focusIndex);
-          $that.next(".nav-tabs").hide().removeClass('nav-tabs-focus').addClass('focus');
-          $that.addClass('carousel slide').removeClass('tab-content tab-border');
-          $that.wrapInner( "<div class='carousel-inner'></div>");
-          $that.prepend( "<ol class=\"carousel-indicators\"></ol>" );
+          $that.next('.nav-tabs').hide();
+          // Prevent those mobile-only carousels from riding automatically by setting interval to 0
+          $that.addClass('carousel slide').removeClass('tab-content tab-border').attr('data-interval', 0);
+          $that.wrapInner('<div class="carousel-inner"></div>');
+          $that.prepend('<ol class="carousel-indicators"></ol>');
 
           $that.find('.tab-pane').each(function () {
             itemIndex += 1;
             $(this).removeClass('tab-pane in active').addClass('item');
-            $that.find('.carousel-indicators').append("<li data-target=\"#tab-focus-"+focusIndex+"\" data-slide-to=\""+itemIndex+"\" class=\"\"></li>");
+            $that.find('.carousel-indicators').append('<li data-target="#tab-focus-' + focusIndex + '" data-slide-to="' + itemIndex + '"></li>');
           });
           $that.find('.item:first').addClass('active');
           $that.find('.carousel-indicators li:first-child').addClass('active');
 
-          $that.append( "<a class=\"left carousel-control icon icon--before icon--less\" href=\"#tab-focus-"+focusIndex+"\" data-slide=\"prev\"></a><a class=\"right carousel-control icon icon--before icon--greater\" href=\"#tab-focus-"+focusIndex+"\" data-slide=\"next\"></a>" );
+          $that.append('<a class="left carousel-control icon icon--before icon--less" href="#tab-focus-' + focusIndex + '" data-slide="prev"></a><a class="right carousel-control icon icon--before icon--greater" href="#tab-focus-' + focusIndex + '" data-slide="next"></a>');
         });
-      } else if($tabFocus && $(window).width() > 767 && isCarouselified) {
+      }
+      else if($tabFocus && $(window).width() > 767 && isCarouselified) {
         isCarouselified = false;
+
         $tabFocus.each(function () {
           var $that = $(this);
+
           focusIndex -= 1;
           $that.attr('id', '');
-          $that.next(".focus").addClass('nav-tabs-focus').removeClass('focus').css('display', 'flex'); // we can't use .show() because it should be a flex wrapper
+          $that.next('.nav-tabs-focus').css('display', 'flex'); // we can't use .show() because it should be a flex wrapper
           $that.removeClass('carousel slide').addClass('tab-content tab-border');
-          $that.find( "ol.carousel-indicators" ).remove();
+          $that.find('ol.carousel-indicators').remove();
 
           $that.find('.item').each(function () {
             $(this).addClass('tab-pane').removeClass('item');
@@ -518,7 +579,7 @@ function disableControl(element) {
           });
           $that.find('.tab-pane:first-child').addClass('active in');
 
-          if ( $that.find('.tab-pane').parent().hasClass( "carousel-inner" ) ) {
+          if ( $that.find('.tab-pane').parent().hasClass('carousel-inner') ) {
             $that.find('.tab-pane').unwrap();
           }
 
@@ -528,37 +589,44 @@ function disableControl(element) {
     }
 
     function collapsify() {
-      var $navTab = $(".nav-tabs:not(.focus)"),
-          $collapsify = $(".collapsify"),
+      var $navTab = $('.nav-tabs:not(.focus)'),
+          $collapsify = $('.collapsify'),
           linkIndex = 0;
+
       if($navTab && $(window).width() <= 767 && !isCollapsified ) {
         isCollapsified = true;
+
         $navTab.not('.tab-focus').each(function (){
           var $that = $(this);
-          $that.removeClass("nav-tabs").addClass('collapsify');
+
+          $that.removeClass('nav-tabs').addClass('collapsify');
           $that.next('.tab-content').hide();
+
           $that.find('a').each(function (){
             var $target = $(this).attr('href');
             linkIndex += 1;
             $(this).unwrap();
-            $( '<div class="collapse" id="collapse-'+linkIndex+'">'+$($target).html()+'</div>' ).insertAfter(this);
+            $('<div class="collapse" id="collapse-' + linkIndex + '">' + $($target).html() + '</div>').insertAfter(this);
             $(this).attr('data-toggle', 'collapse');
-            $(this).attr('data-target', '#collapse-'+linkIndex );
+            $(this).attr('data-target', '#collapse-' + linkIndex);
             $(this).addClass('collapse-closed');
             $(this).click(function(){
-                $(this).toggleClass('collapse-closed');
+              $(this).toggleClass('collapse-closed');
             });
           });
           //$that.find('a:first-child').removeClass('collapse-closed').next('.collapse').addClass('in');
         });
-      } else if($collapsify && $(window).width() > 767 && isCollapsified) {
+      }
+      else if($collapsify && $(window).width() > 767 && isCollapsified) {
         isCollapsified = false;
+
         $collapsify.each(function (){
           var $that = $(this);
-          $that.addClass("nav-tabs").removeClass('collapsify');
+
+          $that.addClass('nav-tabs').removeClass('collapsify');
           $that.next('.tab-content').show();
+
           $that.find('a').each(function (){
-            var $target = $(this).attr('href');
             linkIndex -= 1;
             $(this).wrap('<li></li>');
             $(this).parent().next('.collapse').remove();
@@ -566,6 +634,7 @@ function disableControl(element) {
             $(this).attr('data-target', '');
             $(this).removeClass('collapse-closed');
           });
+
           $that.find('li a').each(function () {
             var $tabTarget = $(this).attr('href');
             if($($tabTarget).hasClass('active')){
@@ -578,102 +647,6 @@ function disableControl(element) {
   });
 
 }) (jQuery);
-/* ==========================================================
- * social.js
- * Social Sharing Privacy
- *
- * Author: Toni Fisler, toni@antistatique.net
- * Date:   2014-05-19 16:47:40
- *
- * Copyright 2014 Federal Chancellery of Switzerland
- * Licensed under MIT
- =========================================================== */
-
- /*doc
- ---
- title: Social Sharing
- name: b-social-sharing
- category: Content Modules - Functions
- ---
-
- <span class="label label-admin">FIX</span>
-
- With the social sharing function, contents can be shared on social networks. In order to protect the privacy of the users, the function contains an activation mechanism. The user first has to activate the service before being able to share contents via his or her social network.
-
- At the moment, Facebook, Twitter, and Google Plus are supported. Just add the correct [Open Graph](http://ogp.me/) meta tags to get the preview images and descriptions.
-
- <br>
- <div class="alert alert-warning">
-   **2.1.1:**
-
-   - added the `.social-sharing` class to the `#social-sharing` element
-   **2.1.7**
-
-   - <span class="label label-danger">DEPRECATED</span> The `<div class="social-sharing" id="social-sharing"></div>` is now deprecated. Please update with the new way to display social links.
- </div>
-
- ```html_example
- <div class="social-sharing">
-   <a href="#" aria-label="Facebook"
-     onclick="
-       window.open(
-         'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-         'facebook-share-dialog',
-         'width=626,height=436');
-       return false;">
-      <img src="img/FB-f-Logo__blue_29.png" width="16px" height="16px" alt="Share on Facebook">
-   </a>
-   <a href="#" aria-label="Twitter"
-     onclick="
-       window.open(
-         'http://twitter.com/share?text=You text here.&url='+encodeURIComponent(location.href),
-         'facebook-share-dialog',
-         'width=626,height=436');
-       return false;">
-     <img src="img/Twitter_logo_blue.png" width="16px" height="16px" alt="Share on Twitter">
-   </a>
-   <a href="#"
-      onclick="
-        window.open(
-          'https://plus.google.com/share?url=encodeURIComponent(location.href)',
-          '',
-          'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
-        return false;">
-      <img src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/></a>
- </div>
- ```
- */
-
- // DEPRECATED, to remove in 3.0.0
- $(function() {
-
-   var setme = {
-     facebook : {
-       'dummy_alt'         : 'Facebook "Like"-Dummy',
-       'txt_info'          : 'Two clicks for more privacy: The Facebook Like button will be enabled once you click here. Activating the button already sends data to Facebook.',
-       'txt_off'           : 'not connected to Facebook',
-       'txt_on'            : 'connected to Facebook'
-     },
-     twitter : {
-       'txt_info'          : 'Two clicks for more privacy: The Tweet this button will be enabled once you click here. Activating the button already sends data to Twitter.',
-       'txt_off'           : 'not connected to Twitter',
-       'txt_on'            : 'connected to Twitter'
-     },
-     gplus : {
-       'txt_info'          : 'Two clicks for more privacy: The Google+ button will be enabled once you click here. Activating the button already sends data to Google.',
-       'txt_off'           : 'not connected to Google+',
-       'txt_on'            : 'connected to Google+'
-     }
-   };
-
-  if($('#social-sharing').length > 0){
-    $('#social-sharing').socialSharePrivacy({
-      css_path: '',
-      services: setme
-    });
-  }
-
-});
 
 /* ==========================================================
  * subnavigation.js
@@ -688,20 +661,24 @@ function disableControl(element) {
  ========================================================== */
 
 (function($) {
+  'use strict';
 
   subNavInit(jQuery);
   $(window).resize(function () {
     subNavInit(jQuery);
   });
 
-  $('a[href=#collapseSubNav]').on('click', function(e) {
+  $('a[href=#collapseSubNav]').on('click', function() {
     $(this).attr('aria-expanded', ($(this).attr('aria-expanded') === 'true' ? 'false' : 'true') );
   });
 
 }) (jQuery);
 
 function subNavInit($) {
-  $drilldown = $('.drilldown[class*=col-]');
+  'use strict';
+
+  var $drilldown = $('.drilldown[class*=col-]');
+
   if ($(window).width() <= 767 && !$drilldown.hasClass('collapse-enabled')) {
     $drilldown
       .addClass('collapse-enabled')
@@ -719,6 +696,7 @@ function subNavInit($) {
       });
   }
 }
+
 /* ==========================================================
  * tablesorter.js
  * Control tablesort from markup
@@ -732,48 +710,117 @@ function subNavInit($) {
 
 
 (function($) {
+  'use strict';
 
   $('.table-sort').tablesorter();
 
 }) (jQuery);
+
  /* ==========================================================
   * tabs.js
   * JS for the tabs and tab-focus elements
-  *
-  * Author: Toni Fisler, toni@antistatique.net
-  * Date:   2014-09-09 09:58:14
   *
   * Copyright 2014 Federal Chancellery of Switzerland
   * Licensed under MIT
   ========================================================== */
 
 (function($) {
+  'use strict';
 
-  // Autoplay for tabs-focus elements
-  var interval = 3000;
-  var tabCarousel = setInterval(nextSlide, interval);
+  /**
+   * @constructor
+   * @param {Object} domNode
+   */
+  function TabFocus(element) {
+    this.$wrapper = $(element).parent();
+    this.domNodes = '.tab-focus, .nav-tabs-focus';
+    this.delay = 3000;
+    this.playing = null;
+    this.interval = null;
 
-  $(document).on({
-    mouseenter: function () {
-      clearInterval(tabCarousel);
-    },
-    mouseleave: function () {
-      tabCarousel = setInterval( nextSlide, interval);
-    }
-  }, ".tab-content.tab-focus, .nav-tabs.nav-tabs-focus");
+    this.$wrapper
+      .on('click', '.nav-tabs-focus', function() {
+        this.pause(null, true);
+      }.bind(this))
+      .on('click', '.tab-focus-control', function() {
+        if (this.playing) {
+          this.pause(null, true);
+        } else {
+          this.play(null, true);
+        }
+      }.bind(this));
 
-  function nextSlide() {
-    if ($('.nav-tabs-focus.nav-tabs > li').length) {
-      var tabs = $('.nav-tabs-focus.nav-tabs > li'),
-          active = tabs.filter('.active'),
-          next = active.next('li'),
-          toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
-
-      toClick.tab('show');
-    }
+    this.play(null, true);
   }
 
-}) (jQuery);
+  TabFocus.prototype = {
+    addListeners: function() {
+      this.$wrapper
+        .on('mouseenter.tabfocus focus.tabfocus', this.domNodes, this.pause.bind(this))
+        .on('mouseleave.tabfocus blur.tabfocus', this.domNodes, this.play.bind(this));
+    },
+
+    removeListeners: function() {
+      this.$wrapper
+        .off('mouseenter.tabfocus focus.tabfocus', this.domNodes)
+        .off('mouseleave.tabfocus blur.tabfocus', this.domNodes);
+    },
+
+    play: function(event, startListening) {
+      if (this.interval) {
+        clearInterval(this.interval);
+      }
+      this.interval = setInterval(this.slide.bind(this), this.delay);
+
+      if (startListening) {
+        this.playing = true;
+        this.addListeners();
+        this.$wrapper.find('.tab-focus-control .icon').removeClass('icon--play').addClass('icon--pause');
+      }
+    },
+
+    pause: function(event, stopListening) {
+      clearInterval(this.interval);
+
+      if (stopListening) {
+        this.playing = false;
+        this.removeListeners();
+        this.$wrapper.find('.tab-focus-control .icon').removeClass('icon--pause').addClass('icon--play');
+      }
+    },
+
+    slide: function() {
+      var $nav = this.$wrapper.find('.nav-tabs-focus');
+
+      // If the nav is hidden, it means the focus has been changed for a carousel (mobile)
+      // We don’t want to slide automatically anymore
+      if ($nav.is(':hidden')) {
+        return this.pause(null, true);
+      }
+
+      if ($nav.find('> li').length) {
+        var tabs = this.$wrapper.find('.nav-tabs-focus > li'),
+            activeTab = tabs.filter('.active'),
+            nextTab = activeTab.next('li'),
+            newTab = nextTab.length ? nextTab.find('a') : tabs.eq(0).find('a');
+
+        newTab.tab('show');
+      }
+    }
+  };
+
+  $.fn.tabFocus = function() {
+    return this.each(function() {
+      if (!$.data(this, 'TabFocus')) {
+        $.data(this, 'TabFocus', new TabFocus(this));
+      }
+    });
+  };
+
+  $('.tab-focus').tabFocus();
+
+})(jQuery);
+
 /* ==========================================================
  * treecrumb.js
  * Change icon class to change the caret direction
@@ -786,13 +833,11 @@ function subNavInit($) {
  ========================================================== */
 
 (function($) {
+  'use strict';
 
-  var $treecrumb = $('.treecrumb'),
-      $dropdownToggle = $('.dropdown-toggle');
-
-  $treecrumb.each(function () {
+  $('.treecrumb').each(function() {
     var $that = $(this);
-    $that.on('hide.bs.dropdown', function(e) {
+    $that.on('hide.bs.dropdown', function() {
       $that.find('.dropdown-toggle span').removeClass('icon--bottom');
       $that.find('.dropdown-toggle span').addClass('icon--right');
     });

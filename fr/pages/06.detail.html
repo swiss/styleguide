@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Details, Example Pages, Swiss Confederation Web Guidelines</title>
+
+  <link rel="stylesheet" href="../../css/vendors.css">
+  <link rel="stylesheet" href="../../css/admin.css">
+  <link rel="stylesheet" href="../../css/print.css">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="../../img/ico/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="../../img/ico/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../img/ico/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../img/ico/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../img/ico/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../img/ico/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../img/ico/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../img/ico/apple-touch-icon-76x76.png">
+  <link rel="icon" type="image/png" href="../../img/ico/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="../../img/ico/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../img/ico/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../../img/ico/mstile-144x144.png">
+  <meta name="msapplication-config" content="../../img/ico/browserconfig.xml">
+
+  <script>
+  // You have to store all your data inside `searchData` and define it globaly
+  var searchData = ["Aargau", "Appenzell A. Rh.", "Appenzell I. Rh.",
+  "Basel-Landschaft", "Basel-Stadt", "Bern", "Fribourg", "Genève",
+  "Glarus", "Graubünden", "Jura", "Lucerne", "Neuchâtel", "Nidwalden",
+  "Obwalden", "Schaffhausen", "Schwyz", "Solothurn", "St. Gallen",
+  "Thurgau", "Ticino", "Uri", "Valais", "Vaud", "Zug", "Zurich"
+  ];
+  </script>
+</head>
+<body>
+
+          <ul class="access-keys">
+      <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
+      <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
+      <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
+      <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
+              <li><a href="#secondary-navigation" accesskey="6">Secondary navigation</a></li><!-- Link to secondary navigation -->
+            <!-- Other smart links can be added for main website functionalities -->
+    </ul>
+  
+
+  <div class="container container-main">
+
+          <header>
+        <div class="clearfix">
+          <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
+          <nav class="navbar treecrumb pull-left" role="navigation">
+            <h2 class="sr-only">Orientation in the website</h2>
+            <ul class="nav navbar-nav">
+
+              <!-- Treecrumb dropdown element -->
+              <li class="dropdown">
+                <!-- Dropdown label -->
+                <a id="admin-dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span>The federal Council</a>
+                <!-- Dropdown list element -->
+                <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
+                  <!-- Dropdown title, can ben place anywhere in the list -->
+                  <li class="dropdown-header">
+                    <a href="#">The federal Council</a>
+                    <ul>
+                      <li><a href="#">BK: Schweizerische Bundeskanzlei</a></li>
+                      <li><a href="#">EDA: Eidgenössisches Departement für auswärtige Angelegenheiten</a></li>
+                      <li><a href="#">EDI: Eidgenössisches Department des Innern</a></li>
+                      <li><a href="#"><strong>EJPD: Eidgenössisches Justiz- und Polizeidepartment</strong></a></li>
+                      <li><a href="#">VBS: Eidgenössisches Department für Verteidigung, Bevölkerungsschutz und Sport</a></li>
+                      <li><a href="#">EVD: Eidgenössisches Volkswirtschaftsdepartement</a></li>
+                      <li><a href="#">UVEK: Eidgenössisches Department für Umwelt, Verkehr, Energie und Kommunikation</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" id="service-dropdown" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span> Departement: EDI</a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="service-dropdown">
+                  <li class="dropdown-header">
+                    <a href="#">Departement: EDI</a>
+                    <ul>
+                      <li><a href="#">DEZA: Direktion für Entwicklung und Zusammenarbeit</a></li>
+                      <li><a href="#">Schweizer Beitrag an die erweiterte EU</a></li>
+                      <li><a href="#">Integrationsbüros</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </nav>
+
+          <section class="nav-services clearfix">
+            <h2 class="sr-only">Language selection</h2>
+            <nav class="nav-lang">
+              <ul>
+                <li><a href="#" lang="de" title="Deutsch" aria-label="Deutsch">DE</a></li>
+                <li><a href="#" lang="fr" title="Français" aria-label="Français">FR</a></li>
+                <li><a href="#" lang="it" title="Italiano" aria-label="Italiano">IT</a></li>
+                <li><a href="#" lang="rm" title="Rumantsch" aria-label="Rumantsch">RM</a></li>
+                <li><a href="#" lang="en" title="English selected" aria-label="English selected" class="active">EN</a></a></li>
+              </ul>
+            </nav>
+            <nav class="nav-service" role="navigation">
+              <h2 class="sr-only">Services navigation</h2>
+              <ul>
+                <li><a href="#">Emergencies</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+
+        <div class="clearfix">
+          <a href="#" class="brand hidden-xs" title="back to home">
+            <img src="../../img/logo-CH.svg" onerror="this.onerror=null; this.src='../../img/logo-CH.png'" alt="back to home" />
+            <h1>Department of the Environment, Transport, Energy and Communications</h1>
+          </a>
+
+
+          <form class="form-horizontal form-search pull-right" role="form">
+            <h2 class="sr-only">Search</h2>
+            <label for="search-field" class="sr-only">Search:</label>
+            <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+          </form>
+        </div>
+
+        <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
+        <nav class="navbar yamm yamm--select" role="navigation">
+          <h2 class="sr-only">By Topics</h2>
+          <ul>
+            <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
+            <li class="dropdown pull-right">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themen A-Z <span class="icon icon--bottom"></span></a>
+              <ul class="dropdown-menu">
+                <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+                <li>
+                  <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                  <div class="yamm-content container-fluid">
+
+                    <!-- The `yamm-close` should always be inside the `yamm-content` to close the mega-menu -->
+                    <div class="row">
+                      <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right">Close</a></div>
+                    </div>
+
+                  </div><!-- `yamm-content` end -->
+                </li><!-- Dropdown `li` end -->
+              </ul><!-- Dropdown `ul` end -->
+            </li><!-- Navbar item end -->
+          </ul><!-- Navbar list end -->
+        </nav><!-- Navbar end -->
+
+      </header>
+    
+          <nav class="nav-main yamm navbar" id="main-navigation">
+        <h2 class="sr-only">Navigation</h2>
+        <section class="nav-mobile">
+          <div class="table-row">
+            <div class="nav-mobile-header">
+              <div class="table-row">
+                <span class="nav-mobile-logo">
+                  <img src="../../img/swiss.svg" onerror="this.onerror=null; this.src='../../img/swiss.png'" alt="Confederatio Helvetica" />
+                </span>
+                <h1><a href="#">Main Title</a></h1>
+              </div>
+            </div>
+            <div class="table-cell dropdown">
+              <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--menu"></span></a>
+              <div class="drilldown dropdown-menu" role="menu">
+                <div class="drilldown-container">
+                  <nav class="nav-page-list">
+                    <ul>
+                      <li><a href="#">Aktuell</a></li>
+                      <li><a href="#">Aussenpolitik</a></li>
+                      <li class="list-sub"><a href="#">Länder- & Reise-informationen</a>
+                        <!-- sub-list element -->
+                        <nav class="drilldown-sub" aria-expanded="false">
+                          <a href="#" class="icon icon--before icon--less drilldown-back" aria-hidden="true">Mineral Water</a>
+                          <ul>
+                            <li class="list-emphasis"><a href="#">Mineral Water</a></li>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test2</a></li>
+                            <li><a href="#">Test3</a></li>
+                          </ul>
+                        </nav>
+                      </li>
+                      <li><a href="#">Leben im Ausland</a></li>
+                      <li><a href="#">Einreise & Aufenthalt in der Schweiz</a></li>
+                      <li><a href="#">Publikationen & Service</a></li>
+                      <li><a href="#">Über uns</a></li>
+                    </ul>
+                    <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="table-cell dropdown">
+              <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
+              <div class="dropdown-menu" role="menu">
+                <form class="form" role="form">
+                  <h2 class="sr-only">Search</h2>
+                  <label for="search-field" class="sr-only">Search:</label>
+                  <input class="form-control" type="text" placeholder="Search">
+                  <span class="icon icon--search"></span>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- The tab navigation -->
+        <ul class="nav navbar-nav">
+          <li class="dropdown current yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aktuell <span class="sr-only">current page</span></a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+              <li>
+                <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                <div class="yamm-content container-fluid">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h3>Content of megamenu 0</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>Image exemple for megamenu</h3>
+                      <img src="http://placehold.it/800x300" alt="Image description">
+                    </div>
+                  </div>
+                </div><!-- `yamm-content` end -->
+              </li><!-- Dropdown `li` end -->
+            </ul><!-- Dropdown `ul` end -->
+          </li>
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aussenpolitik</a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+              <li>
+                <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                <div class="yamm-content container-fluid">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h3>Content of megamenu 1</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>Image exemple for megamenu</h3>
+                      <img src="http://placehold.it/800x300" alt="Image description">
+                    </div>
+                  </div>
+                </div><!-- `yamm-content` end -->
+              </li><!-- Dropdown `li` end -->
+            </ul><!-- Dropdown `ul` end -->
+          </li>
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Länder- & Reise-informationen</a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+              <li>
+                <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                <div class="yamm-content container-fluid">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h3>Content of megamenu 2</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>Image exemple for megamenu</h3>
+                      <img src="http://placehold.it/800x300" alt="Image description">
+                    </div>
+                  </div>
+                </div><!-- `yamm-content` end -->
+              </li><!-- Dropdown `li` end -->
+            </ul><!-- Dropdown `ul` end -->
+          </li>
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Leben im Ausland</a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+              <li>
+                <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                <div class="yamm-content container-fluid">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h3>Content of megamenu 3</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>Image exemple for megamenu</h3>
+                      <img src="http://placehold.it/800x300" alt="Image description">
+                    </div>
+                  </div>
+                </div><!-- `yamm-content` end -->
+              </li><!-- Dropdown `li` end -->
+            </ul><!-- Dropdown `ul` end -->
+          </li>
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Einreise & Aufenthalt in der Schweiz</a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+              <li>
+                <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                <div class="yamm-content container-fluid">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h3>Content of megamenu 4</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>Image exemple for megamenu</h3>
+                      <img src="http://placehold.it/800x300" alt="Image description">
+                    </div>
+                  </div>
+                </div><!-- `yamm-content` end -->
+              </li><!-- Dropdown `li` end -->
+            </ul><!-- Dropdown `ul` end -->
+          </li>
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Publikationen & Service</a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+              <li>
+                <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                <div class="yamm-content container-fluid">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h3>Content of megamenu 5</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>Image exemple for megamenu</h3>
+                      <img src="http://placehold.it/800x300" alt="Image description">
+                    </div>
+                  </div>
+                </div><!-- `yamm-content` end -->
+              </li><!-- Dropdown `li` end -->
+            </ul><!-- Dropdown `ul` end -->
+          </li>
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Über uns</a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+              <li>
+                <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                <div class="yamm-content container-fluid">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h3>Content of megamenu 6</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                    </div>
+                    <div class="col-md-8">
+                      <h3>Image exemple for megamenu</h3>
+                      <img src="http://placehold.it/800x300" alt="Image description">
+                    </div>
+                  </div>
+                </div><!-- `yamm-content` end -->
+              </li><!-- Dropdown `li` end -->
+            </ul><!-- Dropdown `ul` end -->
+          </li>
+        </ul>
+      </nav>
+    
+
+          <div class="container-fluid hidden-xs">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 id="br1" class="hidden">Breadcrumbs</h2>
+            <ol class="breadcrumb" role="navigation" aria-labelledby="br1">
+              <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
+              <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
+              <li><a href="#">Country Selection</a><span class="icon icon--greater"></span></li>
+              <li><a href="#">Democratic Republic of the Congo</a><span class="icon icon--greater"></span></li>
+              <li><a href="#">Some text to create a line break</a><span class="icon icon--greater"></span></li>
+              <li><a href="#">Bilateral Relations</a><span class="icon icon--greater"></span></li>
+              <li class="active" aria-selected="true">Title of the active page</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    
+    <div class="container-fluid">
+      <div class="row">
+                  <div class="col-sm-4 col-md-3 drilldown">
+            <a href="#collapseSubNav" data-toggle="collapse" class="collapsed visible-xs">Sub-Navigation</a>
+            <div class="drilldown-container">
+              <nav class="nav-page-list" role="navigation" id="secondary-navigation">
+                <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
+                <a href="#" class="icon icon--before icon--less"><span class="sr-only">Back to </span>Comestible Goods</a>
+                <ul>
+                  <!-- the .list-emphasis class is optionnal -->
+                  <li class="list-emphasis">
+                    <span>Drinks</span>
+                    <ul>
+                      <!-- add the .list-sub class if the list has some animated sub-lists -->
+                      <li class="list-sub"><a href="#">Mineral water</a>
+                        <!-- sub-list element -->
+                        <nav class="drilldown-sub" aria-expanded="false">
+                          <a href="#" class="icon icon--before icon--less drilldown-back"><span class="sr-only">Back to </span>Mineral Water</a>
+                          <ul>
+                            <li><a href="#">Test</a></li>
+                            <li><a href="#">Test2</a></li>
+                            <li><a href="#">Test3</a></li>
+                          </ul>
+                        </nav>
+                      </li>
+                      <li class="active" aria-selected="true"><span>Wine<span class="sr-only"> active</span></span></li>
+                      <li><a href="#">Beer</a></li>
+                      <li><a href="#">Spirits</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+
+            </div>
+          </div>
+                <div class="col-sm-8 col-md-9" id="content">
+          <div class="row">
+              <div class="col-md-8">
+      <div class="visible-xs visible-sm">
+        <p><a href="#context-sidebar" class="icon icon--before icon--root hidden-print">Context sidebar</a></p>
+      </div>
+      <a href="#" onclick="$.printPreview.printPreview()" class="hidden-xs icon icon--before icon--print pull-right" title="print"></a>
+      <h1 class="text-inline">This is the page title, and it can be really quite long.</h1>
+      <figure>
+        <img src="http://placehold.it/588x368" alt="image description">
+        <figcaption>Caption content that can go for quite a long time</figcaption>
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. <a href="#">Donec pede justo</a>, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a.
+      </p>
+      <br>
+      <a href="#" class="icon icon--after icon--external">External link</a><br>
+      <br>
+      <table class="table table-bordered text-right table-striped">
+        <caption>Game animals shot in Switzerland</caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th>2000</th>
+            <th>2010</th>
+            <th>2011</th>
+            <th>2012</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-left">Boars</th>
+            <td>4'160</td>
+            <td>7'647</td>
+            <td>4'726</td>
+            <td>10'650</td>
+          </tr>
+          <tr>
+            <th class="text-left">Chamois</th>
+            <td>16'625</td>
+            <td>13'427</td>
+            <td>13'413</td>
+            <td>13'350</td>
+          </tr>
+          <tr>
+            <th class="text-left">Fox</th>
+            <td>42'221</td>
+            <td>31'044</td>
+            <td>27'094</td>
+            <td>35'616</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td>63'006</td>
+            <td>52'118</td>
+            <td>45'233</td>
+            <td>59'616</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="list-group">
+
+        <div class="list-group-header">
+          <h2 class="pull-left">Themes</h2>
+          <a href="#" class="pull-right icon icon--before icon--list">all</a>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <p>
+              <img src="http://placehold.it/282x176" alt="Image description">
+            </p>
+            <h3><a href="#">Title in H3</a></h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum.
+            </p>
+            <br>
+            <a href="#" class="icon icon--after icon--external">An external link</a>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              <img src="http://placehold.it/282x176" alt="Image description">
+            </p>
+            <h3><a href="#">Title in H3</a></h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Piso, familiaris noster, et alia multa et hoc loco Stoicos irridebat: Quid enim? Nihilo beatiorem esse <a href="#">Metellum</a> quam Regulum. Erit enim mecum, si tecum erit. Ne amores quidem sanctos a sapiente alienos esse arbitrantur.
+            </p>
+            <br>
+            <a href="#" class="icon icon--after icon--external">An external link</a>
+          </div>
+        </div>
+      </div>
+
+      <h3>Argentine flag</h3>
+      <figure class="pull-left">
+        <img src="http://placehold.it/150x90" alt="image description">
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis istud possit, inquit, negare? Non enim quaero quid verum, sed quid cuique dicendum sit. Itaque haec cum illis est dissensio, cum Peripateticis nulla sane.
+      </p>
+
+      <h2>Informations</h2>
+      <br>
+
+      <!-- Contextual information -->
+      <a name="context-sidebar" class="hidden-print"></a>
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#documents" data-toggle="tab">Documents</a></li>
+        <li><a href="#links" data-toggle="tab">Links</a></li>
+        <li><a href="#news" data-toggle="tab">News</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content tab-border">
+        <div class="tab-pane active" id="documents">
+          <h3 class="visible-print-block">Documents</h3>
+          <article>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a href="#" class="icon icon--before icon--pdf">link with icon lorem <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></a></p>
+          </article>
+          <hr>
+          <article>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p><a href="#" class="icon icon--before icon--pdf">link with icon lorem <span class="text-dimmed">(PDF, 43 pages, 2Mb, English)</span></a></p>
+          </article>
+        </div>
+        <div class="tab-pane" id="links">
+          <h3 class="visible-print-block">Links</h3>
+          <p><a href="#" class="icon icon--after icon--external">external link</a></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eum amet architecto corporis aut cumque ratione dolores odit et libero impedit ipsa. Enim, deleniti, quae ipsa nostrum doloremque nihil repellendus.</p>
+          <hr>
+          <p><a href="#" class="icon icon--after icon--external">external link</a></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, eum amet architecto corporis aut cumque ratione dolores odit et libero impedit ipsa. Enim, deleniti, quae ipsa nostrum doloremque nihil repellendus.</p>
+        </div>
+        <div class="tab-pane" id="news">
+          <h3 class="visible-print-block">News</h3>
+          <!-- Add .clearfix class to prevent errors with floated elements -->
+          <article class="clearfix">
+            <h4><a href="#">Title Lorem ipsum</a></h4>
+            <figure class="pull-left">
+              <img src="http://placehold.it/180x113" alt="image description">
+            </figure>
+            <p><small>13.05.2014 - Lorem</small><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nam est alias voluptas minus libero quo aliquid consectetur ipsum sapiente dicta temporibus repellat odio nisi at laudantium error tempore illum!</p>
+          </article>
+          <hr>
+          <article class="clearfix">
+            <h4><a href="#">Title Lorem ipsum</a></h4>
+            <figure class="pull-left">
+              <img src="http://placehold.it/180x113" alt="image description">
+            </figure>
+            <p><small>13.05.2014 - Lorem</small><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nam est alias voluptas minus libero quo aliquid consectetur ipsum sapiente dicta temporibus repellat odio nisi at laudantium error tempore illum!</p>
+          </article>
+        </div>
+      </div>
+
+      <br>
+
+      <p><small><a href="#" class="icon icon--before icon--less hidden-print">Back to Overview</a></small></p>
+
+      <!-- End Page Link -->
+      <p><small class="hidden-print"><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small></p>
+
+      <div class="social-sharing">
+        <a href="#" aria-label="Facebook"
+          onclick="
+            window.open(
+              'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+              'facebook-share-dialog',
+              'width=626,height=436');
+            return false;">
+           <img src="../../img/FB-f-Logo__blue_29.png" width="16px" height="16px" alt="Share on Facebook">
+        </a>
+        <a href="#" aria-label="Twitter"
+          onclick="
+            window.open(
+              'http://twitter.com/share?text=You text here.&url='+encodeURIComponent(location.href),
+              'facebook-share-dialog',
+              'width=626,height=436');
+            return false;">
+          <img src="../../img/Twitter_logo_blue.png" width="16px" height="16px" alt="Share on Twitter">
+        </a>
+        <a href="#"
+           onclick="
+             window.open(
+               'https://plus.google.com/share?url=encodeURIComponent(location.href)',
+               '',
+               'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+             return false;">
+           <img src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/></a>
+      </div>
+  </div>
+                          <div class="col-md-4">
+
+                <!-- Contextual information -->
+                <a name="context-sidebar" class="hidden-print"></a>
+
+                <!-- Nav tabs -->
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#contact" data-toggle="tab">Contact</a></li>
+                    <li><a href="#map" data-toggle="tab">Map</a></li>
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content tab-border">
+                    <div class="tab-pane active" id="contact">
+                      <div data-print="contact-info" data-title="Contact">
+                        <address itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address">
+                          <strong itemprop="name">UNO-Mission New York</strong>
+                          <span>Permanent Mission of Switzerland to the UN</span><br>
+                          <span itemprop="street-address">633, Third Avenue, 29th floor</span><br>
+                          <span itemprop="locality">New York</span>, <span itemprop="region">NY</span><span itemprop="postal-code">10017-6706</span><br>
+                          <span itemprop="country-name">United States of America</span>
+                        </address>
+                        <dl class="dl-horizontal">
+                          <dt><abbr title="Phone">Tel.</abbr></dt>
+                          <dd><a href="tel:+41 31 322 31 53">+41 31 322 31 53</a></dd>
+                          <dt>Fax</dt>
+                          <dd>+41 31 322 31 54</dd>
+                        </dl>
+                        <p>
+                          <a href="#" class="icon icon--before icon--message">Email</a><br>
+                          <a href="#" class="icon icon--before icon--list-alt">Contact form</a>
+                        </p>
+                        <h4>Visa</h4>
+                        <p><a href="#" class="icon icon--before icon--message">Email</a></p>
+                        <h4>Opening hours</h4>
+                        <p>Monday-Friday<br>
+                        09.00-12.00 AM</p>
+                        <p>Saturday and Sunday<br>
+                        closed</p>
+                      </div>
+                      <p class="hidden-xs"><a href="#" onclick="$.printPreview.printPreview('contact-info')" class="icon icon--before icon--print">Print contact infos</a></p>
+                    </div>
+                    <div class="tab-pane" id="map">
+                      <div data-print="address-info" data-title="Address">
+                        <h3>UNO-Mission New York</h3>
+                        <p>633, Third Avenue<br>
+                        New York, NY10017-6706</p>
+                        <p><img src="http://placehold.it/158x120" alt="Map"></p>
+                        <p><a href="#" class="icon icon--after icon--external">See on the map</a></p>
+                      </div>
+                      <p class="hidden-xs"><a href="#" onclick="$.printPreview.printPreview('address-info')" class="icon icon--before icon--print">Print address infos</a></p>
+                    </div>
+                  </div>
+
+                  <br>
+                  <aside class="cart">
+                    <h4>Shopping Cart (3 items)</h4>
+                    <ul class="list-unstyled">
+                      <li class="clearfix">
+                        <span class="pull-left">Lorem ipsum product name a bit longer at <b>CHF 45.-</b></span>
+                        <a class="pull-right" href="#">
+                          <span class="icon icon--after icon--trash"><span class="sr-only">delete</span></span>
+                        </a>
+                      </li>
+                      <li class="clearfix">
+                        <span class="pull-left">Lorem ipsum <b>CHF 45.-</b></span>
+                        <a class="pull-right" href="#">
+                          <span class="icon icon--after icon--trash"><span class="sr-only">delete</span></span>
+                        </a>
+                      </li>
+                      <li class="clearfix">
+                        <span class="pull-left">Lorem ipsum <b>CHF 45.-</b></span>
+                        <a class="pull-right" href="#">
+                          <span class="icon icon--after icon--trash"><span class="sr-only">delete</span></span>
+                        </a>
+                      </li>
+                    </ul>
+                    <p>Total price <b>CHF 135.-</b></p>
+                    <p><a class="icon icon--before icon--cart" href="#">Show Shopping Cart</a></p>
+                  </aside>
+                  <br>
+                  <div class="bordered">
+                    <div class="rss well well-white">
+                      <h4 class="icon icon--before icon--rss">RSS</h4>
+                      <ul class="list-unstyled">
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Agenda</a></li>
+                        <li><a href="#">Events</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="well">
+                    <h4>Title in H4</h4>
+                    <img src="http://placehold.it/240x140" alt="image description">
+                    <p>
+                      Lorem ipsum dolor sit amet, consect.
+                    </p>
+                    <ul>
+                      <li><a href="#">Link n°1</a></li>
+                      <li><a href="#">Link n°2</a></li>
+                      <li><a href="#">Link n°3</a></li>
+                    </ul>
+                </div>
+              </div>
+                      </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+
+      <div class="container-fluid footer-service">
+        <h3>Statistik Schweiz</h3>
+        <nav>
+          <ul>
+            <li><a href="#">Emergencies</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-map">
+
+        <a href="#site-map" data-target="#site-map" data-toggle="collapse" class="site-map-toggle collapsed">Sitemap</a>
+
+        <div class="container-fluid" id="site-map">
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <h3>Einreise & Aufenthalt in der Schweiz</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Einreise in die Schweiz</a></li>
+                <li><a href="#">Visabestimmungen</a></li>
+                <li><a href="#">Aufenthalt in der Schweiz</a></li>
+                <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+                <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <h3>Einreise & Aufenthalt in der Schweiz</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Einreise in die Schweiz</a></li>
+                <li><a href="#">Visabestimmungen</a></li>
+                <li><a href="#">Aufenthalt in der Schweiz</a></li>
+                <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <h3>Einreise & Aufenthalt in der Schweiz</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Einreise in die Schweiz</a></li>
+                <li><a href="#">Visabestimmungen</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <h3>Einreise & Aufenthalt in der Schweiz</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Einreise in die Schweiz</a></li>
+                <li><a href="#">Visabestimmungen</a></li>
+                <li><a href="#">Aufenthalt in der Schweiz</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <h3>Einreise & Aufenthalt in der Schweiz</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Einreise in die Schweiz</a></li>
+                <li><a href="#">Visabestimmungen</a></li>
+                <li><a href="#">Aufenthalt in der Schweiz</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <h3>Einreise & Aufenthalt in der Schweiz</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Einreise in die Schweiz</a></li>
+                <li><a href="#">Visabestimmungen</a></li>
+                <li><a href="#">Aufenthalt in der Schweiz</a></li>
+                <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+                <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <h3>Einreise & Aufenthalt in der Schweiz</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Einreise in die Schweiz</a></li>
+                <li><a href="#">Visabestimmungen</a></li>
+                <li><a href="#">Aufenthalt in der Schweiz</a></li>
+                <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+                <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+                <li><a href="#">Informationen zur Schweiz</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <h3>Einreise & Aufenthalt in der Schweiz</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Einreise in die Schweiz</a></li>
+                <li><a href="#">Visabestimmungen</a></li>
+                <li><a href="#">Aufenthalt in der Schweiz</a></li>
+                <li><a href="#">Geschäftstätigkeit in der Schweiz</a></li>
+                <li><a href="#">Ausländische Vertretungen in der Schweiz</a></li>
+                <li><a href="#">Informationen zur Schweiz</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!-- End of Site-map -->
+
+      <div class="container-fluid">
+        <h3>Informiert bleiben</h3>
+        <nav class="links-social">
+          <ul>
+            <li><a class="icon icon--before icon--twitter" href="#">Twitter</a></li>
+            <li><a class="icon icon--before icon--facebook" href="#">Facebook</a></li>
+            <li><a class="icon icon--before icon--rss" href="#">RSS Feed</a></li>
+            <li><a class="icon icon--before icon--message" href="#">Newsletter</a></li>
+          </ul>
+        </nav>
+
+        <h3 class="border-bottom">DEZA – Weltweit vor Ort</h3>
+        <p>
+          Besuchen Sie die Websites der Schweizer Kooperationsbüros.
+        </p>
+        <p>
+          <label for="country" class="sr-only">Country:</label>
+          <select id="country" name="country">
+            <option value="Switzerland">Switzerland</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="...">...</option>
+          </select>
+        </p>
+        <hr class="footer-line visible-xs">
+        <img class="visible-xs" src="../../img/logo-CH.svg" onerror="this.onerror=null; this.src='../../img/logo-CH.png'" alt="back to home" />
+      </div>
+
+      <address>
+        <span class="hidden-xs">Bundesamt für Statistik</span>
+        <nav class="pull-right">
+          <ul>
+            <li><a href="#">Rechtliches</a></li>
+            <li><a href="#">Impressum</a></li>
+          </ul>
+        </nav>
+      </address>
+    </footer>
+
+
+  </div>
+  <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
+      <!-- The container for the modal slides -->
+      <div class="slides"></div>
+      <!-- Controls for the borderless lightbox -->
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
+      <!-- The modal dialog, which will be used to wrap the lightbox content -->
+      <div class="modal fade">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" aria-hidden="true">&times;</button>
+                      <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body next"></div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default pull-left prev">
+                          <i class="glyphicon glyphicon-chevron-left"></i>
+                          Previous
+                      </button>
+                      <button type="button" class="btn btn-primary next">
+                          Next
+                          <i class="glyphicon glyphicon-chevron-right"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script type="text/javascript" src="../../js/vendors.min.js"></script>
+  <script type="text/javascript" src="../../js/main.min.js"></script>
+</body>
+</html>
+

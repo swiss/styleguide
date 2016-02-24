@@ -1,0 +1,4194 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="fr" class="no-js ie6 oldie"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="fr" class="no-js ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="fr" class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="fr" class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9 ]><!--><html lang="fr" class="no-js no-ie"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Grille de base, Tableaux, Lignes directrices pour le design web de la Confédération</title>
+
+  <!-- Source CSS -->
+  <link rel="stylesheet" href="/css/vendors.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/css/print.css">
+
+  <!-- Styleguide CSS -->
+	<link rel="stylesheet" href="/css/fabricator.css">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/img/ico/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/ico/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/ico/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/ico/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/ico/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/ico/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/ico/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/ico/apple-touch-icon-76x76.png">
+  <link rel="icon" type="image/png" href="/img/ico/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/ico/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/img/ico/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/ico/mstile-144x144.png">
+  <meta name="msapplication-config" content="/img/ico/browserconfig.xml">
+</head>
+<body>
+  <ul class="access-keys">
+    <li><a href="index.html" accesskey="0">Page d’accueil</a></li>
+    <li><a href="#main-navigation" accesskey="1">Navigation principale</a></li>
+    <li><a href="#content" accesskey="2">Contenu</a></li>
+  </ul>
+
+		<div class="container container-main">
+      <header>
+        <div class="clearfix">
+          <section class="nav-services clearfix">
+            <h2 class="sr-only">Choix de la langue</h2>
+            <nav class="nav-lang">
+              <ul>
+                  <li>
+                    <a href="/de/tables.html" lang="de" title="Deutsch" aria-label="Deutsch " class="">DE</a>
+                  </li>
+                  <li>
+                    <a href="/fr/tables.html" lang="fr" title="Français Sélectionné" aria-label="Français Sélectionné" class="active">FR</a>
+                  </li>
+                  <li>
+                    <a href="#" lang="it" title="Italiano Désactivé" aria-label="Italiano Désactivé" class="disabled">IT</a>
+                  </li>
+                  <li>
+                    <a href="/en/tables.html" lang="en" title="English" aria-label="English " class="">EN</a>
+                  </li>
+              </ul>
+            </nav>
+            <nav class="nav-service">
+              <ul class="download-link">
+                <li>
+                  <a href="https://github.com/swiss/styleguide/releases/latest">Version 3.0.0
+      </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+      
+        <div class="clearfix">
+          <a href="/fr/" class="brand hidden-xs">
+            <img src="/img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="Logo de la Confédération suisse – vers la page d’accueil" />
+            <h1>Lignes directrices pour le design web de la Confédération</h1>
+          </a>
+        </div>
+      </header>
+			<nav class="nav-main yamm navbar" id="main-navigation">
+			  <h2 class="sr-only">Navigation</h2>
+			  <!-- The mobile navigation -->
+			  <section class="nav-mobile">
+			    <div class="table-row">
+			      <div class="nav-mobile-header">
+			        <div class="table-row">
+			          <span class="nav-mobile-logo">
+			            <img src="/img/swiss.svg" onerror="this.onerror=null; this.src='/img/swiss.png'" alt="Logo de la Confédération suisse – vers la page d’accueil" />
+			          </span>
+			          <h1><a href="/fr/">Lignes directrices pour le design web de la Confédération</a></h1>
+			        </div>
+			      </div>
+			      <div class="table-cell dropdown">
+			        <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--menu"></span></a>
+			        <div class="drilldown dropdown-menu" role="menu">
+			          <div class="drilldown-container">
+			            <nav class="nav-page-list">
+			              <ul>
+			                <li class="list-sub">
+			                  <a href="#">Design web de la Confédération</a>
+			                  <nav class="drilldown-sub">
+			                    <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
+			                    <ul>
+			                        <li><a href="/fr/docs/01-guidelines.html">Application des lignes directrices web de la Confédération</a></li>
+			                        <li><a href="/fr/docs/02-cd-elements.html">Eléments de marque</a></li>
+			                        <li><a href="/fr/docs/03-basic-grid.html">Grille de base et types de pages</a></li>
+			                        <li><a href="/fr/docs/04-sample-pages.html">Pages d’exemple</a></li>
+			                        <li><a href="/fr/docs/05-header-footer.html">En-tête et pied de page</a></li>
+			                        <li><a href="/fr/docs/06-devices.html">Rendu sur différents appareils</a></li>
+			                        <li><a href="/fr/docs/07-accessibility.html">Accessibilité</a></li>
+			                        <li><a href="/fr/docs/08-translations.html">Traductions</a></li>
+			                    </ul>
+			                  </nav>
+			                </li>
+			
+			                  <li class="list-sub">
+			                    <a href="#">Grille de base</a>
+			                    <nav class="drilldown-sub">
+			                      <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
+			                      <ul>
+			                          <li><a href="/fr/form-elements.html">Eléments de formulaire</a></li>
+			                          <li><a href="/fr/general.html">Généralités</a></li>
+			                          <li><a href="/fr/tables.html">Tableaux</a></li>
+			                          <li><a href="/fr/typography.html">Typographie</a></li>
+			                      </ul>
+			                    </nav>
+			                  </li>
+			                  <li class="list-sub">
+			                    <a href="#">Modules de navigation</a>
+			                    <nav class="drilldown-sub">
+			                      <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
+			                      <ul>
+			                          <li><a href="/fr/hierarchical-navigation.html">Navigation hiérarchique</a></li>
+			                          <li><a href="/fr/header.html">Zone d’en-tête</a></li>
+			                          <li><a href="/fr/content-navigation.html">Navigation de contenu</a></li>
+			                          <li><a href="/fr/footer.html">Pied de page (footer)</a></li>
+			                      </ul>
+			                    </nav>
+			                  </li>
+			                  <li class="list-sub">
+			                    <a href="#">Modules de contenu</a>
+			                    <nav class="drilldown-sub">
+			                      <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
+			                      <ul>
+			                          <li><a href="/fr/standard-elements.html">Eléments standard</a></li>
+			                          <li><a href="/fr/content-containers.html">Conteneurs</a></li>
+			                          <li><a href="/fr/widgets.html">Widgets</a></li>
+			                          <li><a href="/fr/functions.html">Fonctions</a></li>
+			                          <li><a href="/fr/teaser.html">Teaser</a></li>
+			                          <li><a href="/fr/multimedia.html">Multimédia</a></li>
+			                          <li><a href="/fr/search.html">Recherche</a></li>
+			                          <li><a href="/fr/ordering-checkout.html">Commande et check-out</a></li>
+			                      </ul>
+			                    </nav>
+			                  </li>
+			
+			                <li class="list-sub">
+			                  <a href="#">Pages d’exemple</a>
+			                  <nav class="drilldown-sub">
+			                    <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
+			                    <ul>
+			                        <li><a href="/fr/pages/01.homepage-global-nav.html">Page d’accueil sans navigation globale</a></li>
+			                        <li><a href="/fr/pages/02.home-without-nav.html">Page d’accueil avec navigation globale</a></li>
+			                        <li><a href="/fr/pages/03.preview.html">Page d’aperçu</a></li>
+			                        <li><a href="/fr/pages/04.preview-without-nav.html">Page d’aperçu sans navigation globale</a></li>
+			                        <li><a href="/fr/pages/05.publications.html">Publications</a></li>
+			                        <li><a href="/fr/pages/06.detail.html">Page de détails</a></li>
+			                        <li><a href="/fr/pages/07.forms.html">Formulaire</a></li>
+			                        <li><a href="/fr/pages/08.results.html">Résultats de recherche</a></li>
+			                        <li><a href="/fr/pages/09.subpage.html">Sous-page</a></li>
+			                    </ul>
+			                  </nav>
+			                </li>
+			              </ul>
+			              <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
+			            </nav>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </section>
+			
+			  <!-- The tab navigation -->
+			  <ul class="nav navbar-nav">
+			    <li class="dropdown yamm-fw">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Design web de la Confédération</a>
+			      <ul class="dropdown-menu" role="menu">
+			        <div class="yamm-content container-fluid">
+			          <div class="row">
+			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
+			          </div>
+			          <div class="row">
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/docs/01-guidelines.html">Application des lignes directrices web de la Confédération</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/docs/02-cd-elements.html">Eléments de marque</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/docs/03-basic-grid.html">Grille de base et types de pages</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/docs/04-sample-pages.html">Pages d’exemple</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			                <div class="clearfix"></div>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/docs/05-header-footer.html">En-tête et pied de page</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/docs/06-devices.html">Rendu sur différents appareils</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/docs/07-accessibility.html">Accessibilité</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/docs/08-translations.html">Traductions</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			                <div class="clearfix"></div>
+			          </div>
+			          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			        </div>
+			      </ul>
+			    </li>
+			
+			      <li class="dropdown yamm-fw">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grille de base</a>
+			        <ul class="dropdown-menu" role="menu">
+			          <div class="yamm-content container-fluid">
+			            <div class="row">
+			              <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
+			            </div>
+			            <div class="row">
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/form-elements.html">Eléments de formulaire</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/form-elements.html#01-form-elements-01-fieldsets">Regroupement d’éléments de formulaire</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/form-elements.html#01-form-elements-02-forms">Champs de saisie</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/form-elements.html#01-form-elements-03-selects">Listes de sélection</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/form-elements.html#01-form-elements-04-checkboxes">Cases à cocher</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/form-elements.html#01-form-elements-05-radios">Boutons radio</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/form-elements.html#01-form-elements-06-buttons">Boutons</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/form-elements.html#01-form-elements-07-button-groups">Groupes de boutons</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/general.html">Généralités</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/general.html#02-general-01-logo">Logo</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/general.html#02-general-02-colors">Palette de couleurs</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/general.html#02-general-03-background">Arrière-plan</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/general.html#02-general-04-images">Formats d’image</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/general.html#02-general-05-standard-image">Image standard</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/general.html#02-general-06-captioned-image">Image avec légende</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/general.html#02-general-07-image-format">Formats d’image</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/general.html#02-general-08-icons">Icônes</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/tables.html">Tableaux</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-01-table-standard">Tableau standard</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-02-table-cycle">Tableau imbriqué (simple)</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-03-table-cycle-pairs">Tableau imbriqué (multiple)</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-04-table-with-caption">Tableau avec titre</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-05-table-zebra">Tableau avec fonds alternés</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-06-table-zebra-cycle-single">Tableau imbriqué avec fonds alternés (simple)</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-07-table-zebra-cycle-pairs">Tableau imbriqué avec fonds alternés (multiple)</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-08-table-zebra-caption">Tableau à fonds alternés avec titre</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-09-table-highlight">Tableau avec mise en évidence</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-10-table-highlight-cycle">Tableau imbriqué avec mise en évidence (simple)</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-11-table-highlight-cycle-pairs">Tableau imbriqué avec mise en évidence (multiple)</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-12-table-highlight-caption">Tableau avec titre et mise en évidence</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-13-table-sortable">Tableau triable</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-14-table-expandable">Tableau avec masquage et affichage de lignes</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-15-table-ruled">Tableau avec lignes</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/tables.html#03-tables-16-table-unruled">Tableaux sans lignes</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/typography.html">Typographie</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/typography.html#04-typography-01-titles">Titres</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/typography.html#04-typography-02-paragraphs">Paragraphes</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/typography.html#04-typography-03-text-elements">Corps de texte</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/typography.html#04-typography-04-blockquote">Citation</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/typography.html#04-typography-05-lists">Listes</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/typography.html#04-typography-06-unstyled-lists">Liste sans numérotation ou puces</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/typography.html#04-typography-07-definition-lists">Liste de définitions</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/typography.html#04-typography-08-links">Liens</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/typography.html#04-typography-09-top-link">Lien vers le haut de page</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/typography.html#04-typography-10-end-page-link">Lien de fin de page</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                  <div class="clearfix"></div>
+			            </div>
+			            <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			          </div>
+			        </ul>
+			      </li>
+			      <li class="dropdown yamm-fw">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules de navigation</a>
+			        <ul class="dropdown-menu" role="menu">
+			          <div class="yamm-content container-fluid">
+			            <div class="row">
+			              <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
+			            </div>
+			            <div class="row">
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/hierarchical-navigation.html">Navigation hiérarchique</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/hierarchical-navigation.html#01-hierarchical-navigation-01-global-navigation">Navigation globale</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/hierarchical-navigation.html#01-hierarchical-navigation-02-breadcrumb">Fil d’Ariane</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/hierarchical-navigation.html#01-hierarchical-navigation-03-back-to-overview">Retour à l’aperçu</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Liste de navigation latérale (sous-navigation de gauche)</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/hierarchical-navigation.html#01-hierarchical-navigation-05-faceted-page-navigation">Navigation à facettes</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/header.html">Zone d’en-tête</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/header.html#02-header-01-logo">Logo avec lien vers la page d’accueil</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/header.html#02-header-02-accessibility-navigation">Navigation accessible</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/header.html#02-header-03-service-navigation">Navigation de service</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/header.html#02-header-04-site-search">Recherche sur le site</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/header.html#02-header-05-language-selector">Choix de la langue</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/header.html#02-header-06-topics">Thèmes A-Z</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/header.html#02-header-07-treecrumb">Arborescence de l’administration fédérale</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/content-navigation.html">Navigation de contenu</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/content-navigation.html#03-content-navigation-01-pagination">Pagination</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/content-navigation.html#03-content-navigation-02-anchor-links">Liens d’ancre</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/content-navigation.html#03-content-navigation-03-process-navigation">Navigation de processus</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/content-navigation.html#03-content-navigation-04-tab-navigation">Navigation par onglets</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/footer.html">Pied de page (footer)</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/footer.html#04-footer-01-site-map">Sitemap (plan du site) et partenaires</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/footer.html#04-footer-02-social-media">Médias sociaux</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/footer.html#04-footer-03-footbar">Ligne de pied de page</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                  <div class="clearfix"></div>
+			            </div>
+			            <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			          </div>
+			        </ul>
+			      </li>
+			      <li class="dropdown yamm-fw">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules de contenu</a>
+			        <ul class="dropdown-menu" role="menu">
+			          <div class="yamm-content container-fluid">
+			            <div class="row">
+			              <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
+			            </div>
+			            <div class="row">
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/standard-elements.html">Eléments standard</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/standard-elements.html#01-standard-elements-01-page-title">Titre de page</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/standard-elements.html#01-standard-elements-02-image-text">Texte et image</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/standard-elements.html#01-standard-elements-03-info-box">Encadré d’information</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/content-containers.html">Conteneurs</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/content-containers.html#02-content-containers-01-elements-list">Liste d’éléments</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/content-containers.html#02-content-containers-02-further-information">Informations complémentaires</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/content-containers.html#02-content-containers-03-collapsible-panel">Encadré rétractable</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/widgets.html">Widgets</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/widgets.html#03-widgets-01-alerts">Remarques</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/widgets.html#03-widgets-02-emergency">Bannière de crise</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/widgets.html#03-widgets-03-contact-box">Encadré de contact</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/functions.html">Fonctions</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/functions.html#04-functions-01-print">Imprimer</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/functions.html#04-functions-02-social-sharing">Partager des contenus (Social sharing)</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/functions.html#04-functions-03-downloading-files">Téléchargement de fichier</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                  <div class="clearfix"></div>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/teaser.html">Teaser</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-01-focus">A la une</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-02-news">Actualités</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-03-headline">Barre de titre pour teaser</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-04-carousel">Carrousel</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-05-slideshow">Diaporama</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-06-text-teaser">Teaser de texte</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-07-dossier-teaser">Teaser de dossier</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-08-person-teaser">Teaser de personne</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-09-publications-preview">Présentation des publications</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-10-news-feed">Flux d’actualités</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/teaser.html#05-teaser-11-rss-feed">Flux RSS</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/multimedia.html">Multimédia</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/multimedia.html#06-multimedia-01-photo-gallery">Aperçu de galerie d’images</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/multimedia.html#06-multimedia-02-photo-gallery-single">Galerie d’images – vue individuelle</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/multimedia.html#06-multimedia-03-lightbox">Visionneuse</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/search.html">Recherche</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/search.html#07-search-01-search-box">Masque de recherche</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/search.html#07-search-02-search-results">Résultats de recherche</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                <li class="col-sm-3">
+			                  <div class="yamm-content container-fluid">
+			                    <h4><a href="/fr/ordering-checkout.html">Commande et check-out</a></h4>
+			                    <ul role="menu">
+			                        <li role="presentation">
+			                          <a href="/fr/ordering-checkout.html#08-ordering-checkout-01-one-line-order-form">Formulaire de commande à une ligne</a>
+			                        </li>
+			                        <li role="presentation">
+			                          <a href="/fr/ordering-checkout.html#08-ordering-checkout-02-shopping-cart">Panier</a>
+			                        </li>
+			                    </ul>
+			                  </div>
+			                </li>
+			                  <div class="clearfix"></div>
+			            </div>
+			            <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			          </div>
+			        </ul>
+			      </li>
+			
+			    <li class="dropdown yamm-fw">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages d’exemple</a>
+			      <ul class="dropdown-menu" role="menu">
+			        <div class="yamm-content container-fluid">
+			          <div class="row">
+			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
+			          </div>
+			          <div class="row">
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/pages/01.homepage-global-nav.html">Page d’accueil sans navigation globale</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/pages/02.home-without-nav.html">Page d’accueil avec navigation globale</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/pages/03.preview.html">Page d’aperçu</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/pages/04.preview-without-nav.html">Page d’aperçu sans navigation globale</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			                <div class="clearfix"></div>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/pages/05.publications.html">Publications</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/pages/06.detail.html">Page de détails</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/pages/07.forms.html">Formulaire</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/pages/08.results.html">Résultats de recherche</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			                <div class="clearfix"></div>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="/fr/pages/09.subpage.html">Sous-page</a></h4>
+			                  <ul role="menu">
+			                  </ul>
+			                </div>
+			              </li>
+			          </div>
+			          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			        </div>
+			      </ul>
+			    </li>
+			  </ul>
+			</nav>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="content" class="container-fluid">
+
+	
+<h1>Tableaux</h1>
+
+
+<article class="component" id="03-tables-01-table-standard">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-01-table-standard" class="component-anchor">Tableau standard</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-01-table-standard" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-01-table-standard" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise `<tr></li>
+<li>retirez l’attribut <code>role=&quot;rowheader&quot;</code> de la balise <code>&lt;th&gt;</code></li>
+</ul>
+<p><strong>2.1.9</strong></p>
+<ul>
+<li><code>columnheader</code>, <code>rowheader</code> et <code>aria-describedby</code> supprimés et remplacés par des attributs <code>scope=&quot;&quot;</code>.</li>
+<li>balises <code>&lt;col&gt;</code> et <code>&lt;colgroup&gt;</code> ajoutées avant les tableaux dans certains cas</li>
+</ul>
+<p><strong>2.1.8</strong></p>
+<ul>
+<li><code>columnheader</code>, <code>rowheader</code> et <code>aria-describedby</code> ajoutés pour une meilleure accessibilité</li>
+</ul>
+
+    </div>
+  </div>
+
+  <p>Tableaux standard constitués du titre de tableau (caption), de la tête du tableau (thead), du corps du tableau (tbody) et du pied du tableau (tfoot). Ce tableau peut être complété par des fonds alternés et/ou l’emphase des lignes ou colonnes.</p>
+<p>Pour un tableau composé de cellules encadrées, on utilisera la classe «.table-bordered».</p>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered text-right">
+	<caption>Game animals shot in Switzerland</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>2000</th>
+			<th>2010</th>
+			<th>2011</th>
+			<th>2012</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-left">Boars</th>
+			<td>4'160</td>
+			<td>7'647</td>
+			<td>4'726</td>
+			<td>10'650</td>
+		</tr>
+		<tr>
+			<th class="text-left">Chamois</th>
+			<td>16'625</td>
+			<td>13'427</td>
+			<td>13'413</td>
+			<td>13'350</td>
+		</tr>
+		<tr>
+			<th class="text-left">Fox</th>
+			<td>42'221</td>
+			<td>31'044</td>
+			<td>27'094</td>
+			<td>35'616</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td>2000</td>
+			<td>2010</td>
+			<td>2011</td>
+			<td>2012</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-01-table-standard" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-01-table-standard" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered text-right&quot;&gt;
+	&lt;caption&gt;Game animals shot in Switzerland&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;2000&lt;/th&gt;
+			&lt;th&gt;2010&lt;/th&gt;
+			&lt;th&gt;2011&lt;/th&gt;
+			&lt;th&gt;2012&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Boars&lt;/th&gt;
+			&lt;td&gt;4&#x27;160&lt;/td&gt;
+			&lt;td&gt;7&#x27;647&lt;/td&gt;
+			&lt;td&gt;4&#x27;726&lt;/td&gt;
+			&lt;td&gt;10&#x27;650&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Chamois&lt;/th&gt;
+			&lt;td&gt;16&#x27;625&lt;/td&gt;
+			&lt;td&gt;13&#x27;427&lt;/td&gt;
+			&lt;td&gt;13&#x27;413&lt;/td&gt;
+			&lt;td&gt;13&#x27;350&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Fox&lt;/th&gt;
+			&lt;td&gt;42&#x27;221&lt;/td&gt;
+			&lt;td&gt;31&#x27;044&lt;/td&gt;
+			&lt;td&gt;27&#x27;094&lt;/td&gt;
+			&lt;td&gt;35&#x27;616&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;2000&lt;/td&gt;
+			&lt;td&gt;2010&lt;/td&gt;
+			&lt;td&gt;2011&lt;/td&gt;
+			&lt;td&gt;2012&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-02-table-cycle">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-02-table-cycle" class="component-anchor">Tableau imbriqué (simple)</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-02-table-cycle" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-02-table-cycle" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise <code>&lt;tr&gt;</code></li>
+</ul>
+
+    </div>
+  </div>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered text-right">
+	<caption>Inlandkonzept, in 1000</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>2007</th>
+			<th>2008</th>
+			<th>2009</th>
+			<th>2010</th>
+			<th>2011</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-left" scope="row" colspan="6">Total</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Erwerbspersonen am 1. Januar</th>
+			<td>4'515</td>
+			<td>4'618</td>
+			<td>4'735</td>
+			<td>4'775</td>
+			<td>4'834</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Arbeitsmarkteintritte</th>
+			<td>308</td>
+			<td>297</td>
+			<td>316</td>
+			<td>289</td>
+			<td>300</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Arbeitsmarktaustritte</th>
+			<td>250</td>
+			<td>289</td>
+			<td>302</td>
+			<td>273</td>
+			<td>271</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Einwanderung von Erwerbspersonen</th>
+			<td>151</td>
+			<td>171</td>
+			<td>135</td>
+			<td>149</td>
+			<td>172</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Auswanderung von Erwerbspersonen</th>
+			<td>106</td>
+			<td>108</td>
+			<td>109</td>
+			<td>106</td>
+			<td>93</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">= Erwerbspersonen am 31. Dezember</th>
+			<td>4'618</td>
+			<td>4'690</td>
+			<td>4'775</td>
+			<td>4'834</td>
+			<td>4'943</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row" colspan="6">Männer</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Erwerbspersonen am 1. Januar</th>
+			<td>2'488</td>
+			<td>2'532</td>
+			<td>2'585</td>
+			<td>2'602</td>
+			<td>2'648</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Arbeitsmarkteintritte</th>
+			<td>126</td>
+			<td>118</td>
+			<td>141</td>
+			<td>133</td>
+			<td>132</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Arbeitsmarktaustritte</th>
+			<td>108</td>
+			<td>131</td>
+			<td>138</td>
+			<td>111</td>
+			<td>121</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Einwanderung von Erwerbspersonen</th>
+			<td>95</td>
+			<td>108</td>
+			<td>85</td>
+			<td>92</td>
+			<td>110</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Auswanderung von Erwerbspersonen</th>
+			<td>69</td>
+			<td>70</td>
+			<td>70</td>
+			<td>69</td>
+			<td>60</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">= Erwerbspersonen am 31. Dezember</th>
+			<td>2532</td>
+			<td>2'556</td>
+			<td>2'602</td>
+			<td>2'648</td>
+			<td>2'708</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row" colspan="6">Frauen</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Erwerbspersonen am 1. Januar</th>
+			<td>2'027</td>
+			<td>2'086</td>
+			<td>2'150</td>
+			<td>2'173</td>
+			<td>2'186</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Arbeitsmarkteintritte</th>
+			<td>182</td>
+			<td>179</td>
+			<td>175</td>
+			<td>156</td>
+			<td>168</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Arbeitsmarktaustritte</th>
+			<td>142</td>
+			<td>157</td>
+			<td>163</td>
+			<td>162</td>
+			<td>149</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Einwanderung von Erwerbspersonen</th>
+			<td>56</td>
+			<td>64</td>
+			<td>50</td>
+			<td>56</td>
+			<td>62</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Auswanderung von Erwerbspersonen</th>
+			<td>37</td>
+			<td>38</td>
+			<td>39</td>
+			<td>37</td>
+			<td>33</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">= Erwerbspersonen am 31. Dezember</th>
+			<td>2'086</td>
+			<td>2'133</td>
+			<td>2'173</td>
+			<td>2'186</td>
+			<td>2'234</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td class="highlight right">2007</td>
+			<td class="highlight right">2008</td>
+			<td class="highlight right">2009</td>
+			<td class="highlight right">2010</td>
+			<td class="highlight right">2011</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-02-table-cycle" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-02-table-cycle" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered text-right&quot;&gt;
+	&lt;caption&gt;Inlandkonzept, in 1000&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;2007&lt;/th&gt;
+			&lt;th&gt;2008&lt;/th&gt;
+			&lt;th&gt;2009&lt;/th&gt;
+			&lt;th&gt;2010&lt;/th&gt;
+			&lt;th&gt;2011&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;6&quot;&gt;Total&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Erwerbspersonen am 1. Januar&lt;/th&gt;
+			&lt;td&gt;4&#x27;515&lt;/td&gt;
+			&lt;td&gt;4&#x27;618&lt;/td&gt;
+			&lt;td&gt;4&#x27;735&lt;/td&gt;
+			&lt;td&gt;4&#x27;775&lt;/td&gt;
+			&lt;td&gt;4&#x27;834&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Arbeitsmarkteintritte&lt;/th&gt;
+			&lt;td&gt;308&lt;/td&gt;
+			&lt;td&gt;297&lt;/td&gt;
+			&lt;td&gt;316&lt;/td&gt;
+			&lt;td&gt;289&lt;/td&gt;
+			&lt;td&gt;300&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Arbeitsmarktaustritte&lt;/th&gt;
+			&lt;td&gt;250&lt;/td&gt;
+			&lt;td&gt;289&lt;/td&gt;
+			&lt;td&gt;302&lt;/td&gt;
+			&lt;td&gt;273&lt;/td&gt;
+			&lt;td&gt;271&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Einwanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;151&lt;/td&gt;
+			&lt;td&gt;171&lt;/td&gt;
+			&lt;td&gt;135&lt;/td&gt;
+			&lt;td&gt;149&lt;/td&gt;
+			&lt;td&gt;172&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Auswanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;106&lt;/td&gt;
+			&lt;td&gt;108&lt;/td&gt;
+			&lt;td&gt;109&lt;/td&gt;
+			&lt;td&gt;106&lt;/td&gt;
+			&lt;td&gt;93&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;= Erwerbspersonen am 31. Dezember&lt;/th&gt;
+			&lt;td&gt;4&#x27;618&lt;/td&gt;
+			&lt;td&gt;4&#x27;690&lt;/td&gt;
+			&lt;td&gt;4&#x27;775&lt;/td&gt;
+			&lt;td&gt;4&#x27;834&lt;/td&gt;
+			&lt;td&gt;4&#x27;943&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;6&quot;&gt;Männer&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Erwerbspersonen am 1. Januar&lt;/th&gt;
+			&lt;td&gt;2&#x27;488&lt;/td&gt;
+			&lt;td&gt;2&#x27;532&lt;/td&gt;
+			&lt;td&gt;2&#x27;585&lt;/td&gt;
+			&lt;td&gt;2&#x27;602&lt;/td&gt;
+			&lt;td&gt;2&#x27;648&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Arbeitsmarkteintritte&lt;/th&gt;
+			&lt;td&gt;126&lt;/td&gt;
+			&lt;td&gt;118&lt;/td&gt;
+			&lt;td&gt;141&lt;/td&gt;
+			&lt;td&gt;133&lt;/td&gt;
+			&lt;td&gt;132&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Arbeitsmarktaustritte&lt;/th&gt;
+			&lt;td&gt;108&lt;/td&gt;
+			&lt;td&gt;131&lt;/td&gt;
+			&lt;td&gt;138&lt;/td&gt;
+			&lt;td&gt;111&lt;/td&gt;
+			&lt;td&gt;121&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Einwanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;95&lt;/td&gt;
+			&lt;td&gt;108&lt;/td&gt;
+			&lt;td&gt;85&lt;/td&gt;
+			&lt;td&gt;92&lt;/td&gt;
+			&lt;td&gt;110&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Auswanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;69&lt;/td&gt;
+			&lt;td&gt;70&lt;/td&gt;
+			&lt;td&gt;70&lt;/td&gt;
+			&lt;td&gt;69&lt;/td&gt;
+			&lt;td&gt;60&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;= Erwerbspersonen am 31. Dezember&lt;/th&gt;
+			&lt;td&gt;2532&lt;/td&gt;
+			&lt;td&gt;2&#x27;556&lt;/td&gt;
+			&lt;td&gt;2&#x27;602&lt;/td&gt;
+			&lt;td&gt;2&#x27;648&lt;/td&gt;
+			&lt;td&gt;2&#x27;708&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;6&quot;&gt;Frauen&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Erwerbspersonen am 1. Januar&lt;/th&gt;
+			&lt;td&gt;2&#x27;027&lt;/td&gt;
+			&lt;td&gt;2&#x27;086&lt;/td&gt;
+			&lt;td&gt;2&#x27;150&lt;/td&gt;
+			&lt;td&gt;2&#x27;173&lt;/td&gt;
+			&lt;td&gt;2&#x27;186&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Arbeitsmarkteintritte&lt;/th&gt;
+			&lt;td&gt;182&lt;/td&gt;
+			&lt;td&gt;179&lt;/td&gt;
+			&lt;td&gt;175&lt;/td&gt;
+			&lt;td&gt;156&lt;/td&gt;
+			&lt;td&gt;168&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Arbeitsmarktaustritte&lt;/th&gt;
+			&lt;td&gt;142&lt;/td&gt;
+			&lt;td&gt;157&lt;/td&gt;
+			&lt;td&gt;163&lt;/td&gt;
+			&lt;td&gt;162&lt;/td&gt;
+			&lt;td&gt;149&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Einwanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;56&lt;/td&gt;
+			&lt;td&gt;64&lt;/td&gt;
+			&lt;td&gt;50&lt;/td&gt;
+			&lt;td&gt;56&lt;/td&gt;
+			&lt;td&gt;62&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Auswanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;37&lt;/td&gt;
+			&lt;td&gt;38&lt;/td&gt;
+			&lt;td&gt;39&lt;/td&gt;
+			&lt;td&gt;37&lt;/td&gt;
+			&lt;td&gt;33&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;= Erwerbspersonen am 31. Dezember&lt;/th&gt;
+			&lt;td&gt;2&#x27;086&lt;/td&gt;
+			&lt;td&gt;2&#x27;133&lt;/td&gt;
+			&lt;td&gt;2&#x27;173&lt;/td&gt;
+			&lt;td&gt;2&#x27;186&lt;/td&gt;
+			&lt;td&gt;2&#x27;234&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2007&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2008&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2009&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2010&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2011&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-03-table-cycle-pairs">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-03-table-cycle-pairs" class="component-anchor">Tableau imbriqué (multiple)</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-03-table-cycle-pairs" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-03-table-cycle-pairs" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>summary</code> de la balise <code>&lt;table&gt;</code></li>
+</ul>
+
+    </div>
+  </div>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered text-right">
+	<caption>Tabelle mit Titelzeile (Standardtabelle)</caption>
+	<thead>
+		<tr class="pairwise">
+			<td rowspan="2"></td>
+			<th class="text-center" colspan="2" scope="colgroup">2011</th>
+			<th class="text-center" colspan="2" scope="colgroup">2012</th>
+			<th class="text-center" colspan="2" scope="colgroup">2013</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="col">GAV</th>
+			<th class="text-left" scope="col">unterstellte Arbeit-
+				<br>nehmende</th>
+			<th class="text-left" scope="col">GAV</th>
+			<th class="text-left" scope="col">unterstellte Arbeit-
+				<br>nehmende</th>
+			<th class="text-left" scope="col">GAV</th>
+			<th class="text-left" scope="col">unterstellte Arbeit-
+				<br>nehmende</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-left" scope="row">Wichtigsten GAV<sup title="lorem ipsum dolor sit amet">1)</sup></th>
+			<td>100</td>
+			<td>1'400'600</td>
+			<td>97</td>
+			<td>1'607'100</td>
+			<td>93</td>
+			<td>1'574'800</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">GAV ohne Lohnverhandlung</th>
+			<td>28</td>
+			<td>362'400</td>
+			<td>29</td>
+			<td>605'900</td>
+			<td>68</td>
+			<td>1'032'700</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">GAV mit Lohnverhandlung</th>
+			<td>72</td>
+			<td>1'038'200</td>
+			<td>68</td>
+			<td>1'001'200</td>
+			<td>25</td>
+			<td>542'100</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row" colspan="7">Lohnvereinbarungsart</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Effektivlohn-vereinbarung</th>
+			<td>9</td>
+			<td>129'500</td>
+			<td>6</td>
+			<td>79'500</td>
+			<td>6</td>
+			<td>76'500</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Effektiv- und Mindest-lohnvereinbarung<sup title="lorem ipsum dolor sit amet">2)</sup></th>
+			<td>45</td>
+			<td>365'800</td>
+			<td>47</td>
+			<td>3'688'400</td>
+			<td>40</td>
+			<td>403'700</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Mindestlohn-vereinbarung<sup title="lorem ipsum dolor sit amet">2)</sup></th>
+			<td>18</td>
+			<td>543'000</td>
+			<td>15</td>
+			<td>233'300</td>
+			<td>21</td>
+			<td>537'400</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Keine Lohn-vereinbarung</th>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>15'100</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr class="pairwise">
+			<td rowspan="2"></td>
+			<td class="text-center" colspan="2">2011</td>
+			<td class="text-center" colspan="2">2012</td>
+			<td class="text-center" colspan="2">2013</td>
+		</tr>
+		<tr>
+			<td class="text-left">GAV</td>
+			<td class="text-left">unterstellte Arbeit-
+				<br>nehmende</td>
+			<td class="text-left">GAV</td>
+			<td class="text-left">unterstellte Arbeit-
+				<br>nehmende</td>
+			<td class="text-left">GAV</td>
+			<td class="text-left">unterstellte Arbeit-
+				<br>nehmende</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-03-table-cycle-pairs" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-03-table-cycle-pairs" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered text-right&quot;&gt;
+	&lt;caption&gt;Tabelle mit Titelzeile (Standardtabelle)&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr class=&quot;pairwise&quot;&gt;
+			&lt;td rowspan=&quot;2&quot;&gt;&lt;/td&gt;
+			&lt;th class=&quot;text-center&quot; colspan=&quot;2&quot; scope=&quot;colgroup&quot;&gt;2011&lt;/th&gt;
+			&lt;th class=&quot;text-center&quot; colspan=&quot;2&quot; scope=&quot;colgroup&quot;&gt;2012&lt;/th&gt;
+			&lt;th class=&quot;text-center&quot; colspan=&quot;2&quot; scope=&quot;colgroup&quot;&gt;2013&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;GAV&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;GAV&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;GAV&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Wichtigsten GAV&lt;sup title=&quot;lorem ipsum dolor sit amet&quot;&gt;1)&lt;/sup&gt;&lt;/th&gt;
+			&lt;td&gt;100&lt;/td&gt;
+			&lt;td&gt;1&#x27;400&#x27;600&lt;/td&gt;
+			&lt;td&gt;97&lt;/td&gt;
+			&lt;td&gt;1&#x27;607&#x27;100&lt;/td&gt;
+			&lt;td&gt;93&lt;/td&gt;
+			&lt;td&gt;1&#x27;574&#x27;800&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;GAV ohne Lohnverhandlung&lt;/th&gt;
+			&lt;td&gt;28&lt;/td&gt;
+			&lt;td&gt;362&#x27;400&lt;/td&gt;
+			&lt;td&gt;29&lt;/td&gt;
+			&lt;td&gt;605&#x27;900&lt;/td&gt;
+			&lt;td&gt;68&lt;/td&gt;
+			&lt;td&gt;1&#x27;032&#x27;700&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;GAV mit Lohnverhandlung&lt;/th&gt;
+			&lt;td&gt;72&lt;/td&gt;
+			&lt;td&gt;1&#x27;038&#x27;200&lt;/td&gt;
+			&lt;td&gt;68&lt;/td&gt;
+			&lt;td&gt;1&#x27;001&#x27;200&lt;/td&gt;
+			&lt;td&gt;25&lt;/td&gt;
+			&lt;td&gt;542&#x27;100&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;7&quot;&gt;Lohnvereinbarungsart&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Effektivlohn-vereinbarung&lt;/th&gt;
+			&lt;td&gt;9&lt;/td&gt;
+			&lt;td&gt;129&#x27;500&lt;/td&gt;
+			&lt;td&gt;6&lt;/td&gt;
+			&lt;td&gt;79&#x27;500&lt;/td&gt;
+			&lt;td&gt;6&lt;/td&gt;
+			&lt;td&gt;76&#x27;500&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Effektiv- und Mindest-lohnvereinbarung&lt;sup title=&quot;lorem ipsum dolor sit amet&quot;&gt;2)&lt;/sup&gt;&lt;/th&gt;
+			&lt;td&gt;45&lt;/td&gt;
+			&lt;td&gt;365&#x27;800&lt;/td&gt;
+			&lt;td&gt;47&lt;/td&gt;
+			&lt;td&gt;3&#x27;688&#x27;400&lt;/td&gt;
+			&lt;td&gt;40&lt;/td&gt;
+			&lt;td&gt;403&#x27;700&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Mindestlohn-vereinbarung&lt;sup title=&quot;lorem ipsum dolor sit amet&quot;&gt;2)&lt;/sup&gt;&lt;/th&gt;
+			&lt;td&gt;18&lt;/td&gt;
+			&lt;td&gt;543&#x27;000&lt;/td&gt;
+			&lt;td&gt;15&lt;/td&gt;
+			&lt;td&gt;233&#x27;300&lt;/td&gt;
+			&lt;td&gt;21&lt;/td&gt;
+			&lt;td&gt;537&#x27;400&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Keine Lohn-vereinbarung&lt;/th&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;15&#x27;100&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr class=&quot;pairwise&quot;&gt;
+			&lt;td rowspan=&quot;2&quot;&gt;&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot; colspan=&quot;2&quot;&gt;2011&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot; colspan=&quot;2&quot;&gt;2012&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot; colspan=&quot;2&quot;&gt;2013&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;text-left&quot;&gt;GAV&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;GAV&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;GAV&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-04-table-with-caption">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-04-table-with-caption" class="component-anchor">Tableau avec titre</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-04-table-with-caption" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-04-table-with-caption" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>summary</code> de la balise <code>&lt;table&gt;</code></li>
+</ul>
+
+    </div>
+  </div>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered">
+	<caption>Table with caption (standard table)</caption>
+	<thead>
+		<tr>
+			<th>Artist</th>
+			<th class="active">Album</th>
+			<th class="text-right">Year</th>
+			<th class="text-right">Price in USD</th>
+			<th>Label</th>
+			<th class="text-right">Tracks</th>
+			<th class="text-right">Length</th>
+			<th>Producer</th>
+			<th>Recorded</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Jimi Hendrix</th>
+			<td class="active">Are You Experienced</td>
+			<td class="text-right">1967</td>
+			<td class="text-right">10.00</td>
+			<td>MCA</td>
+			<td class="text-right">11</td>
+			<td class="text-right">53:10</td>
+			<td>Chas Chandler</td>
+			<td>February 1967</td>
+		</tr>
+		<tr>
+			<th scope="row">Pink Floyd</th>
+			<td class="active">Wish You Were Here</td>
+			<td class="text-right">1975</td>
+			<td class="text-right">12.00</td>
+			<td>Harvest, Emi</td>
+			<td class="text-right">8</td>
+			<td class="text-right">42:59</td>
+			<td>Pink Floyd</td>
+			<td>May - October 1975</td>
+		</tr>
+		<tr>
+			<th scope="row">Beatles</th>
+			<td class="active">Abbey Road</td>
+			<td class="text-right">1969</td>
+			<td class="text-right">14.00</td>
+			<td>Apple</td>
+			<td class="text-right">12</td>
+			<td class="text-right">58:45</td>
+			<td>Hans Muster</td>
+			<td>January - July 1969</td>
+		</tr>
+		<tr>
+			<th scope="row">Bob Dylan</th>
+			<td class="active">Blonde on Blonde</td>
+			<td class="text-right">1966</td>
+			<td class="text-right">15.00</td>
+			<td>Columbia</td>
+			<td class="text-right">14</td>
+			<td class="text-right">75:21</td>
+			<td>Johnny Cash</td>
+			<td>July 1966</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>Artist</td>
+			<td class="active">Album</td>
+			<td class="text-right">Year</td>
+			<td class="text-right">Price in USD</td>
+			<td>Label</td>
+			<td class="text-right">Tracks</td>
+			<td class="text-right"> Length</td>
+			<td>Producer</td>
+			<td>Recorded</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-04-table-with-caption" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-04-table-with-caption" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered&quot;&gt;
+	&lt;caption&gt;Table with caption (standard table)&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Artist&lt;/th&gt;
+			&lt;th class=&quot;active&quot;&gt;Album&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Year&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Price in USD&lt;/th&gt;
+			&lt;th&gt;Label&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Tracks&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Length&lt;/th&gt;
+			&lt;th&gt;Producer&lt;/th&gt;
+			&lt;th&gt;Recorded&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Jimi Hendrix&lt;/th&gt;
+			&lt;td class=&quot;active&quot;&gt;Are You Experienced&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1967&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;10.00&lt;/td&gt;
+			&lt;td&gt;MCA&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;11&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;53:10&lt;/td&gt;
+			&lt;td&gt;Chas Chandler&lt;/td&gt;
+			&lt;td&gt;February 1967&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Pink Floyd&lt;/th&gt;
+			&lt;td class=&quot;active&quot;&gt;Wish You Were Here&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1975&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;12.00&lt;/td&gt;
+			&lt;td&gt;Harvest, Emi&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;8&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;42:59&lt;/td&gt;
+			&lt;td&gt;Pink Floyd&lt;/td&gt;
+			&lt;td&gt;May - October 1975&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Beatles&lt;/th&gt;
+			&lt;td class=&quot;active&quot;&gt;Abbey Road&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1969&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;14.00&lt;/td&gt;
+			&lt;td&gt;Apple&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;12&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;58:45&lt;/td&gt;
+			&lt;td&gt;Hans Muster&lt;/td&gt;
+			&lt;td&gt;January - July 1969&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Bob Dylan&lt;/th&gt;
+			&lt;td class=&quot;active&quot;&gt;Blonde on Blonde&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1966&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;15.00&lt;/td&gt;
+			&lt;td&gt;Columbia&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;14&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;75:21&lt;/td&gt;
+			&lt;td&gt;Johnny Cash&lt;/td&gt;
+			&lt;td&gt;July 1966&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Artist&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;Album&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;Year&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;Price in USD&lt;/td&gt;
+			&lt;td&gt;Label&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;Tracks&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt; Length&lt;/td&gt;
+			&lt;td&gt;Producer&lt;/td&gt;
+			&lt;td&gt;Recorded&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-05-table-zebra">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-05-table-zebra" class="component-anchor">Tableau avec fonds alternés</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-05-table-zebra" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-05-table-zebra" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise `<tr></li>
+<li>retirez l’attribut <code>role=&quot;rowheader&quot;</code> de la balise <code>&lt;th&gt;</code></li>
+</ul>
+<p><strong>2.1.9</strong></p>
+<ul>
+<li><code>columnheader</code>, <code>rowheader</code> et <code>aria-describedby</code> supprimés et remplacés par des attributs <code>scope=&quot;&quot;</code>.</li>
+</ul>
+
+    </div>
+  </div>
+
+  <p>Les fonds alternés sont affichés si on ajoute la classe class=’table_zebra’ à la balise du tableau.</p>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered table-striped text-right">
+	<caption>Game animals shot in Switzerland</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>2000</th>
+			<th>2010</th>
+			<th>2011</th>
+			<th>2012</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-left">Boars</th>
+			<td>4'160</td>
+			<td>7'647</td>
+			<td>4'726</td>
+			<td>10'650</td>
+		</tr>
+		<tr>
+			<th class="text-left">Chamois</th>
+			<td>16'625</td>
+			<td>13'427</td>
+			<td>13'413</td>
+			<td>13'350</td>
+		</tr>
+		<tr>
+			<th class="text-left">Fox</th>
+			<td>42'221</td>
+			<td>31'044</td>
+			<td>27'094</td>
+			<td>35'616</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td>2000</td>
+			<td>2010</td>
+			<td>2011</td>
+			<td>2012</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-05-table-zebra" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-05-table-zebra" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered table-striped text-right&quot;&gt;
+	&lt;caption&gt;Game animals shot in Switzerland&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;2000&lt;/th&gt;
+			&lt;th&gt;2010&lt;/th&gt;
+			&lt;th&gt;2011&lt;/th&gt;
+			&lt;th&gt;2012&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Boars&lt;/th&gt;
+			&lt;td&gt;4&#x27;160&lt;/td&gt;
+			&lt;td&gt;7&#x27;647&lt;/td&gt;
+			&lt;td&gt;4&#x27;726&lt;/td&gt;
+			&lt;td&gt;10&#x27;650&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Chamois&lt;/th&gt;
+			&lt;td&gt;16&#x27;625&lt;/td&gt;
+			&lt;td&gt;13&#x27;427&lt;/td&gt;
+			&lt;td&gt;13&#x27;413&lt;/td&gt;
+			&lt;td&gt;13&#x27;350&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Fox&lt;/th&gt;
+			&lt;td&gt;42&#x27;221&lt;/td&gt;
+			&lt;td&gt;31&#x27;044&lt;/td&gt;
+			&lt;td&gt;27&#x27;094&lt;/td&gt;
+			&lt;td&gt;35&#x27;616&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;2000&lt;/td&gt;
+			&lt;td&gt;2010&lt;/td&gt;
+			&lt;td&gt;2011&lt;/td&gt;
+			&lt;td&gt;2012&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-06-table-zebra-cycle-single">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-06-table-zebra-cycle-single" class="component-anchor">Tableau imbriqué avec fonds alternés (simple)</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-06-table-zebra-cycle-single" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-06-table-zebra-cycle-single" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>summary</code> de la balise <code>&lt;table&gt;</code></li>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise <code>&lt;tr&gt;</code></li>
+</ul>
+
+    </div>
+  </div>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered table-striped text-right">
+	<caption>Inlandkonzept, in 1000</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>2007</th>
+			<th>2008</th>
+			<th>2009</th>
+			<th>2010</th>
+			<th>2011</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-left" scope="row" colspan="6">Total</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Erwerbspersonen am 1. Januar</th>
+			<td>4'515</td>
+			<td>4'618</td>
+			<td>4'735</td>
+			<td>4'775</td>
+			<td>4'834</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Arbeitsmarkteintritte</th>
+			<td>308</td>
+			<td>297</td>
+			<td>316</td>
+			<td>289</td>
+			<td>300</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Arbeitsmarktaustritte</th>
+			<td>250</td>
+			<td>289</td>
+			<td>302</td>
+			<td>273</td>
+			<td>271</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Einwanderung von Erwerbspersonen</th>
+			<td>151</td>
+			<td>171</td>
+			<td>135</td>
+			<td>149</td>
+			<td>172</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Auswanderung von Erwerbspersonen</th>
+			<td>106</td>
+			<td>108</td>
+			<td>109</td>
+			<td>106</td>
+			<td>93</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">= Erwerbspersonen am 31. Dezember</th>
+			<td>4'618</td>
+			<td>4'690</td>
+			<td>4'775</td>
+			<td>4'834</td>
+			<td>4'943</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row" colspan="6">Männer</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Erwerbspersonen am 1. Januar</th>
+			<td>2'488</td>
+			<td>2'532</td>
+			<td>2'585</td>
+			<td>2'602</td>
+			<td>2'648</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Arbeitsmarkteintritte</th>
+			<td>126</td>
+			<td>118</td>
+			<td>141</td>
+			<td>133</td>
+			<td>132</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Arbeitsmarktaustritte</th>
+			<td>108</td>
+			<td>131</td>
+			<td>138</td>
+			<td>111</td>
+			<td>121</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Einwanderung von Erwerbspersonen</th>
+			<td>95</td>
+			<td>108</td>
+			<td>85</td>
+			<td>92</td>
+			<td>110</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Auswanderung von Erwerbspersonen</th>
+			<td>69</td>
+			<td>70</td>
+			<td>70</td>
+			<td>69</td>
+			<td>60</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">= Erwerbspersonen am 31. Dezember</th>
+			<td>2532</td>
+			<td>2'556</td>
+			<td>2'602</td>
+			<td>2'648</td>
+			<td>2'708</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row" colspan="6">Frauen</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Erwerbspersonen am 1. Januar</th>
+			<td>2'027</td>
+			<td>2'086</td>
+			<td>2'150</td>
+			<td>2'173</td>
+			<td>2'186</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Arbeitsmarkteintritte</th>
+			<td>182</td>
+			<td>179</td>
+			<td>175</td>
+			<td>156</td>
+			<td>168</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Arbeitsmarktaustritte</th>
+			<td>142</td>
+			<td>157</td>
+			<td>163</td>
+			<td>162</td>
+			<td>149</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Einwanderung von Erwerbspersonen</th>
+			<td>56</td>
+			<td>64</td>
+			<td>50</td>
+			<td>56</td>
+			<td>62</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Auswanderung von Erwerbspersonen</th>
+			<td>37</td>
+			<td>38</td>
+			<td>39</td>
+			<td>37</td>
+			<td>33</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">= Erwerbspersonen am 31. Dezember</th>
+			<td>2'086</td>
+			<td>2'133</td>
+			<td>2'173</td>
+			<td>2'186</td>
+			<td>2'234</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td class="highlight right">2007</td>
+			<td class="highlight right">2008</td>
+			<td class="highlight right">2009</td>
+			<td class="highlight right">2010</td>
+			<td class="highlight right">2011</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-06-table-zebra-cycle-single" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-06-table-zebra-cycle-single" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered table-striped text-right&quot;&gt;
+	&lt;caption&gt;Inlandkonzept, in 1000&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;2007&lt;/th&gt;
+			&lt;th&gt;2008&lt;/th&gt;
+			&lt;th&gt;2009&lt;/th&gt;
+			&lt;th&gt;2010&lt;/th&gt;
+			&lt;th&gt;2011&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;6&quot;&gt;Total&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Erwerbspersonen am 1. Januar&lt;/th&gt;
+			&lt;td&gt;4&#x27;515&lt;/td&gt;
+			&lt;td&gt;4&#x27;618&lt;/td&gt;
+			&lt;td&gt;4&#x27;735&lt;/td&gt;
+			&lt;td&gt;4&#x27;775&lt;/td&gt;
+			&lt;td&gt;4&#x27;834&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Arbeitsmarkteintritte&lt;/th&gt;
+			&lt;td&gt;308&lt;/td&gt;
+			&lt;td&gt;297&lt;/td&gt;
+			&lt;td&gt;316&lt;/td&gt;
+			&lt;td&gt;289&lt;/td&gt;
+			&lt;td&gt;300&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Arbeitsmarktaustritte&lt;/th&gt;
+			&lt;td&gt;250&lt;/td&gt;
+			&lt;td&gt;289&lt;/td&gt;
+			&lt;td&gt;302&lt;/td&gt;
+			&lt;td&gt;273&lt;/td&gt;
+			&lt;td&gt;271&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Einwanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;151&lt;/td&gt;
+			&lt;td&gt;171&lt;/td&gt;
+			&lt;td&gt;135&lt;/td&gt;
+			&lt;td&gt;149&lt;/td&gt;
+			&lt;td&gt;172&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Auswanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;106&lt;/td&gt;
+			&lt;td&gt;108&lt;/td&gt;
+			&lt;td&gt;109&lt;/td&gt;
+			&lt;td&gt;106&lt;/td&gt;
+			&lt;td&gt;93&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;= Erwerbspersonen am 31. Dezember&lt;/th&gt;
+			&lt;td&gt;4&#x27;618&lt;/td&gt;
+			&lt;td&gt;4&#x27;690&lt;/td&gt;
+			&lt;td&gt;4&#x27;775&lt;/td&gt;
+			&lt;td&gt;4&#x27;834&lt;/td&gt;
+			&lt;td&gt;4&#x27;943&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;6&quot;&gt;Männer&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Erwerbspersonen am 1. Januar&lt;/th&gt;
+			&lt;td&gt;2&#x27;488&lt;/td&gt;
+			&lt;td&gt;2&#x27;532&lt;/td&gt;
+			&lt;td&gt;2&#x27;585&lt;/td&gt;
+			&lt;td&gt;2&#x27;602&lt;/td&gt;
+			&lt;td&gt;2&#x27;648&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Arbeitsmarkteintritte&lt;/th&gt;
+			&lt;td&gt;126&lt;/td&gt;
+			&lt;td&gt;118&lt;/td&gt;
+			&lt;td&gt;141&lt;/td&gt;
+			&lt;td&gt;133&lt;/td&gt;
+			&lt;td&gt;132&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Arbeitsmarktaustritte&lt;/th&gt;
+			&lt;td&gt;108&lt;/td&gt;
+			&lt;td&gt;131&lt;/td&gt;
+			&lt;td&gt;138&lt;/td&gt;
+			&lt;td&gt;111&lt;/td&gt;
+			&lt;td&gt;121&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Einwanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;95&lt;/td&gt;
+			&lt;td&gt;108&lt;/td&gt;
+			&lt;td&gt;85&lt;/td&gt;
+			&lt;td&gt;92&lt;/td&gt;
+			&lt;td&gt;110&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Auswanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;69&lt;/td&gt;
+			&lt;td&gt;70&lt;/td&gt;
+			&lt;td&gt;70&lt;/td&gt;
+			&lt;td&gt;69&lt;/td&gt;
+			&lt;td&gt;60&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;= Erwerbspersonen am 31. Dezember&lt;/th&gt;
+			&lt;td&gt;2532&lt;/td&gt;
+			&lt;td&gt;2&#x27;556&lt;/td&gt;
+			&lt;td&gt;2&#x27;602&lt;/td&gt;
+			&lt;td&gt;2&#x27;648&lt;/td&gt;
+			&lt;td&gt;2&#x27;708&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;6&quot;&gt;Frauen&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Erwerbspersonen am 1. Januar&lt;/th&gt;
+			&lt;td&gt;2&#x27;027&lt;/td&gt;
+			&lt;td&gt;2&#x27;086&lt;/td&gt;
+			&lt;td&gt;2&#x27;150&lt;/td&gt;
+			&lt;td&gt;2&#x27;173&lt;/td&gt;
+			&lt;td&gt;2&#x27;186&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Arbeitsmarkteintritte&lt;/th&gt;
+			&lt;td&gt;182&lt;/td&gt;
+			&lt;td&gt;179&lt;/td&gt;
+			&lt;td&gt;175&lt;/td&gt;
+			&lt;td&gt;156&lt;/td&gt;
+			&lt;td&gt;168&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Arbeitsmarktaustritte&lt;/th&gt;
+			&lt;td&gt;142&lt;/td&gt;
+			&lt;td&gt;157&lt;/td&gt;
+			&lt;td&gt;163&lt;/td&gt;
+			&lt;td&gt;162&lt;/td&gt;
+			&lt;td&gt;149&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Einwanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;56&lt;/td&gt;
+			&lt;td&gt;64&lt;/td&gt;
+			&lt;td&gt;50&lt;/td&gt;
+			&lt;td&gt;56&lt;/td&gt;
+			&lt;td&gt;62&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Auswanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;37&lt;/td&gt;
+			&lt;td&gt;38&lt;/td&gt;
+			&lt;td&gt;39&lt;/td&gt;
+			&lt;td&gt;37&lt;/td&gt;
+			&lt;td&gt;33&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;= Erwerbspersonen am 31. Dezember&lt;/th&gt;
+			&lt;td&gt;2&#x27;086&lt;/td&gt;
+			&lt;td&gt;2&#x27;133&lt;/td&gt;
+			&lt;td&gt;2&#x27;173&lt;/td&gt;
+			&lt;td&gt;2&#x27;186&lt;/td&gt;
+			&lt;td&gt;2&#x27;234&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2007&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2008&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2009&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2010&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2011&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-07-table-zebra-cycle-pairs">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-07-table-zebra-cycle-pairs" class="component-anchor">Tableau imbriqué avec fonds alternés (multiple)</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-07-table-zebra-cycle-pairs" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-07-table-zebra-cycle-pairs" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>summary</code> de la balise <code>&lt;table&gt;</code></li>
+</ul>
+
+    </div>
+  </div>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered table-striped text-right">
+	<caption>Tabelle mit Titelzeile (Standardtabelle)</caption>
+	<thead>
+		<tr class="pairwise">
+			<td rowspan="2"></td>
+			<th colspan="2" scope="colgroup" class="text-center">2011</th>
+			<th colspan="2" scope="colgroup" class="text-center">2012</th>
+			<th colspan="2" scope="colgroup" class="text-center">2013</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="col">GAV</th>
+			<th class="text-left" scope="col">unterstellte Arbeit-
+				<br>nehmende</th>
+			<th class="text-left" scope="col">GAV</th>
+			<th class="text-left" scope="col">unterstellte Arbeit-
+				<br>nehmende</th>
+			<th class="text-left" scope="col">GAV</th>
+			<th class="text-left" scope="col">unterstellte Arbeit-
+				<br>nehmende</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-left" scope="row">Wichtigsten GAV<sup title="lorem ipsum dolor sit amet">1)</sup></th>
+			<td>100</td>
+			<td>1'400'600</td>
+			<td>97</td>
+			<td>1'607'100</td>
+			<td>93</td>
+			<td>1'574'800</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">GAV ohne Lohnverhandlung</th>
+			<td>28</td>
+			<td>362'400</td>
+			<td>29</td>
+			<td>605'900</td>
+			<td>68</td>
+			<td>1'032'700</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">GAV mit Lohnverhandlung</th>
+			<td>72</td>
+			<td>1'038'200</td>
+			<td>68</td>
+			<td>1'001'200</td>
+			<td>25</td>
+			<td>542'100</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row" colspan="7">Lohnvereinbarungsart</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Effektivlohn-vereinbarung</th>
+			<td>9</td>
+			<td>129'500</td>
+			<td>6</td>
+			<td>79'500</td>
+			<td>6</td>
+			<td>76'500</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Effektiv- und Mindest-lohnvereinbarung<sup title="lorem ipsum dolor sit amet">2)</sup></th>
+			<td>45</td>
+			<td>365'800</td>
+			<td>47</td>
+			<td>3'688'400</td>
+			<td>40</td>
+			<td>403'700</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Mindestlohn-vereinbarung<sup title="lorem ipsum dolor sit amet">2)</sup></th>
+			<td>18</td>
+			<td>543'000</td>
+			<td>15</td>
+			<td>233'300</td>
+			<td>21</td>
+			<td>537'400</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Keine Lohn-vereinbarung</th>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>1</td>
+			<td>15'100</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr class="pairwise">
+			<td rowspan="2"></td>
+			<td class="text-center" colspan="2">2011</td>
+			<td class="text-center" colspan="2">2012</td>
+			<td class="text-center" colspan="2">2013</td>
+		</tr>
+		<tr>
+			<td class="text-left">GAV</td>
+			<td class="text-left">unterstellte Arbeit-
+				<br>nehmende</td>
+			<td class="text-left">GAV</td>
+			<td class="text-left">unterstellte Arbeit-
+				<br>nehmende</td>
+			<td class="text-left">GAV</td>
+			<td class="text-left">unterstellte Arbeit-
+				<br>nehmende</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-07-table-zebra-cycle-pairs" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-07-table-zebra-cycle-pairs" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered table-striped text-right&quot;&gt;
+	&lt;caption&gt;Tabelle mit Titelzeile (Standardtabelle)&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr class=&quot;pairwise&quot;&gt;
+			&lt;td rowspan=&quot;2&quot;&gt;&lt;/td&gt;
+			&lt;th colspan=&quot;2&quot; scope=&quot;colgroup&quot; class=&quot;text-center&quot;&gt;2011&lt;/th&gt;
+			&lt;th colspan=&quot;2&quot; scope=&quot;colgroup&quot; class=&quot;text-center&quot;&gt;2012&lt;/th&gt;
+			&lt;th colspan=&quot;2&quot; scope=&quot;colgroup&quot; class=&quot;text-center&quot;&gt;2013&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;GAV&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;GAV&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;GAV&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Wichtigsten GAV&lt;sup title=&quot;lorem ipsum dolor sit amet&quot;&gt;1)&lt;/sup&gt;&lt;/th&gt;
+			&lt;td&gt;100&lt;/td&gt;
+			&lt;td&gt;1&#x27;400&#x27;600&lt;/td&gt;
+			&lt;td&gt;97&lt;/td&gt;
+			&lt;td&gt;1&#x27;607&#x27;100&lt;/td&gt;
+			&lt;td&gt;93&lt;/td&gt;
+			&lt;td&gt;1&#x27;574&#x27;800&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;GAV ohne Lohnverhandlung&lt;/th&gt;
+			&lt;td&gt;28&lt;/td&gt;
+			&lt;td&gt;362&#x27;400&lt;/td&gt;
+			&lt;td&gt;29&lt;/td&gt;
+			&lt;td&gt;605&#x27;900&lt;/td&gt;
+			&lt;td&gt;68&lt;/td&gt;
+			&lt;td&gt;1&#x27;032&#x27;700&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;GAV mit Lohnverhandlung&lt;/th&gt;
+			&lt;td&gt;72&lt;/td&gt;
+			&lt;td&gt;1&#x27;038&#x27;200&lt;/td&gt;
+			&lt;td&gt;68&lt;/td&gt;
+			&lt;td&gt;1&#x27;001&#x27;200&lt;/td&gt;
+			&lt;td&gt;25&lt;/td&gt;
+			&lt;td&gt;542&#x27;100&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;7&quot;&gt;Lohnvereinbarungsart&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Effektivlohn-vereinbarung&lt;/th&gt;
+			&lt;td&gt;9&lt;/td&gt;
+			&lt;td&gt;129&#x27;500&lt;/td&gt;
+			&lt;td&gt;6&lt;/td&gt;
+			&lt;td&gt;79&#x27;500&lt;/td&gt;
+			&lt;td&gt;6&lt;/td&gt;
+			&lt;td&gt;76&#x27;500&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Effektiv- und Mindest-lohnvereinbarung&lt;sup title=&quot;lorem ipsum dolor sit amet&quot;&gt;2)&lt;/sup&gt;&lt;/th&gt;
+			&lt;td&gt;45&lt;/td&gt;
+			&lt;td&gt;365&#x27;800&lt;/td&gt;
+			&lt;td&gt;47&lt;/td&gt;
+			&lt;td&gt;3&#x27;688&#x27;400&lt;/td&gt;
+			&lt;td&gt;40&lt;/td&gt;
+			&lt;td&gt;403&#x27;700&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Mindestlohn-vereinbarung&lt;sup title=&quot;lorem ipsum dolor sit amet&quot;&gt;2)&lt;/sup&gt;&lt;/th&gt;
+			&lt;td&gt;18&lt;/td&gt;
+			&lt;td&gt;543&#x27;000&lt;/td&gt;
+			&lt;td&gt;15&lt;/td&gt;
+			&lt;td&gt;233&#x27;300&lt;/td&gt;
+			&lt;td&gt;21&lt;/td&gt;
+			&lt;td&gt;537&#x27;400&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Keine Lohn-vereinbarung&lt;/th&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;15&#x27;100&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr class=&quot;pairwise&quot;&gt;
+			&lt;td rowspan=&quot;2&quot;&gt;&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot; colspan=&quot;2&quot;&gt;2011&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot; colspan=&quot;2&quot;&gt;2012&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot; colspan=&quot;2&quot;&gt;2013&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td class=&quot;text-left&quot;&gt;GAV&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;GAV&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;GAV&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-08-table-zebra-caption">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-08-table-zebra-caption" class="component-anchor">Tableau à fonds alternés avec titre</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-08-table-zebra-caption" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-08-table-zebra-caption" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>summary</code> de la balise <code>&lt;table&gt;</code></li>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise <code>&lt;tr&gt;</code></li>
+</ul>
+
+    </div>
+  </div>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered table-striped">
+	<caption>Table with caption (standard table)</caption>
+	<thead>
+		<tr>
+			<th>Artist</th>
+			<th>Album</th>
+			<th class="text-right">Year</th>
+			<th class="text-right">Price in USD</th>
+			<th>Label</th>
+			<th class="text-right">Tracks</th>
+			<th class="text-right">Length</th>
+			<th>Producer</th>
+			<th>Recorded</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Jimi Hendrix</th>
+			<td>Are You Experienced</td>
+			<td class="text-right">1967</td>
+			<td class="text-right">10.00</td>
+			<td>MCA</td>
+			<td class="text-right">11</td>
+			<td class="text-right">53:10</td>
+			<td>Chas Chandler</td>
+			<td>February 1967</td>
+		</tr>
+		<tr>
+			<th scope="row">Pink Floyd</th>
+			<td>Wish You Were Here</td>
+			<td class="text-right">1975</td>
+			<td class="text-right">12.00</td>
+			<td>Harvest, Emi</td>
+			<td class="text-right">8</td>
+			<td class="text-right">42:59</td>
+			<td>Pink Floyd</td>
+			<td>May - October 1975</td>
+		</tr>
+		<tr>
+			<th scope="row">Beatles</th>
+			<td>Abbey Road</td>
+			<td class="text-right">1969</td>
+			<td class="text-right">14.00</td>
+			<td>Apple</td>
+			<td class="text-right">12</td>
+			<td class="text-right">58:45</td>
+			<td>Hans Muster</td>
+			<td>January - July 1969</td>
+		</tr>
+		<tr>
+			<th scope="row">Bob Dylan</th>
+			<td>Blonde on Blonde</td>
+			<td class="text-right">1966</td>
+			<td class="text-right">15.00</td>
+			<td>Columbia</td>
+			<td class="text-right">14</td>
+			<td class="text-right">75:21</td>
+			<td>Johnny Cash</td>
+			<td>July 1966</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>Artist</td>
+			<td>Album</td>
+			<td class="text-right">Year</td>
+			<td class="text-right">Price in USD</td>
+			<td>Label</td>
+			<td class="text-right">Tracks</td>
+			<td class="text-right"> Length</td>
+			<td>Producer</td>
+			<td>Recorded</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-08-table-zebra-caption" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-08-table-zebra-caption" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered table-striped&quot;&gt;
+	&lt;caption&gt;Table with caption (standard table)&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Artist&lt;/th&gt;
+			&lt;th&gt;Album&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Year&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Price in USD&lt;/th&gt;
+			&lt;th&gt;Label&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Tracks&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Length&lt;/th&gt;
+			&lt;th&gt;Producer&lt;/th&gt;
+			&lt;th&gt;Recorded&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Jimi Hendrix&lt;/th&gt;
+			&lt;td&gt;Are You Experienced&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1967&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;10.00&lt;/td&gt;
+			&lt;td&gt;MCA&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;11&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;53:10&lt;/td&gt;
+			&lt;td&gt;Chas Chandler&lt;/td&gt;
+			&lt;td&gt;February 1967&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Pink Floyd&lt;/th&gt;
+			&lt;td&gt;Wish You Were Here&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1975&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;12.00&lt;/td&gt;
+			&lt;td&gt;Harvest, Emi&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;8&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;42:59&lt;/td&gt;
+			&lt;td&gt;Pink Floyd&lt;/td&gt;
+			&lt;td&gt;May - October 1975&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Beatles&lt;/th&gt;
+			&lt;td&gt;Abbey Road&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1969&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;14.00&lt;/td&gt;
+			&lt;td&gt;Apple&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;12&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;58:45&lt;/td&gt;
+			&lt;td&gt;Hans Muster&lt;/td&gt;
+			&lt;td&gt;January - July 1969&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Bob Dylan&lt;/th&gt;
+			&lt;td&gt;Blonde on Blonde&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1966&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;15.00&lt;/td&gt;
+			&lt;td&gt;Columbia&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;14&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;75:21&lt;/td&gt;
+			&lt;td&gt;Johnny Cash&lt;/td&gt;
+			&lt;td&gt;July 1966&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Artist&lt;/td&gt;
+			&lt;td&gt;Album&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;Year&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;Price in USD&lt;/td&gt;
+			&lt;td&gt;Label&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;Tracks&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt; Length&lt;/td&gt;
+			&lt;td&gt;Producer&lt;/td&gt;
+			&lt;td&gt;Recorded&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-09-table-highlight">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-09-table-highlight" class="component-anchor">Tableau avec mise en évidence</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-09-table-highlight" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-09-table-highlight" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise `<tr></li>
+<li>retirez l’attribut <code>role=&quot;rowheader&quot;</code> de la balise <code>&lt;th&gt;</code></li>
+</ul>
+<p><strong>2.1.9</strong></p>
+<ul>
+<li><code>columnheader</code>, <code>rowheader</code> et <code>aria-describedby</code> supprimés et remplacés par des attributs <code>scope=&quot;&quot;</code>.</li>
+</ul>
+
+    </div>
+  </div>
+
+  <p>Ce tableau est dérivé du tableau standard, mais il possède en plus l’activation des fonds alternés et l’emphase appliquée sur des cellules du tableau (class=’selected’).</p>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered text-right">
+	<caption>Game animals shot in Switzerland</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>2000</th>
+			<th>2010</th>
+			<th class="active">2011</th>
+			<th>2012</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-left">Boars</th>
+			<td>4'160</td>
+			<td>7'647</td>
+			<td class="active">4'726</td>
+			<td>10'650</td>
+		</tr>
+		<tr>
+			<th class="text-left">Chamois</th>
+			<td>16'625</td>
+			<td>13'427</td>
+			<td class="active">13'413</td>
+			<td>13'350</td>
+		</tr>
+		<tr class="active">
+			<th class="text-left">Fox</th>
+			<td>42'221</td>
+			<td>31'044</td>
+			<td class="active">27'094</td>
+			<td>35'616</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td>2000</td>
+			<td>2010</td>
+			<td class="active">2011</td>
+			<td>2012</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-09-table-highlight" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-09-table-highlight" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered text-right&quot;&gt;
+	&lt;caption&gt;Game animals shot in Switzerland&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;2000&lt;/th&gt;
+			&lt;th&gt;2010&lt;/th&gt;
+			&lt;th class=&quot;active&quot;&gt;2011&lt;/th&gt;
+			&lt;th&gt;2012&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Boars&lt;/th&gt;
+			&lt;td&gt;4&#x27;160&lt;/td&gt;
+			&lt;td&gt;7&#x27;647&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;4&#x27;726&lt;/td&gt;
+			&lt;td&gt;10&#x27;650&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Chamois&lt;/th&gt;
+			&lt;td&gt;16&#x27;625&lt;/td&gt;
+			&lt;td&gt;13&#x27;427&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;13&#x27;413&lt;/td&gt;
+			&lt;td&gt;13&#x27;350&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=&quot;active&quot;&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Fox&lt;/th&gt;
+			&lt;td&gt;42&#x27;221&lt;/td&gt;
+			&lt;td&gt;31&#x27;044&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;27&#x27;094&lt;/td&gt;
+			&lt;td&gt;35&#x27;616&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;2000&lt;/td&gt;
+			&lt;td&gt;2010&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;2011&lt;/td&gt;
+			&lt;td&gt;2012&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-10-table-highlight-cycle">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-10-table-highlight-cycle" class="component-anchor">Tableau imbriqué avec mise en évidence (simple)</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-10-table-highlight-cycle" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-10-table-highlight-cycle" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>summary</code> de la balise <code>&lt;table&gt;</code></li>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise <code>&lt;tr&gt;</code></li>
+</ul>
+
+    </div>
+  </div>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered text-right">
+	<caption>Inlandkonzept, in 1000</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>2007</th>
+			<th>2008</th>
+			<th>2009</th>
+			<th>2010</th>
+			<th>2011</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-left" scope="row" colspan="6">Total</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Erwerbspersonen am 1. Januar</th>
+			<td>4'515</td>
+			<td>4'618</td>
+			<td>4'735</td>
+			<td>4'775</td>
+			<td>4'834</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Arbeitsmarkteintritte</th>
+			<td>308</td>
+			<td>297</td>
+			<td>316</td>
+			<td>289</td>
+			<td>300</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Arbeitsmarktaustritte</th>
+			<td>250</td>
+			<td>289</td>
+			<td>302</td>
+			<td>273</td>
+			<td>271</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Einwanderung von Erwerbspersonen</th>
+			<td>151</td>
+			<td>171</td>
+			<td>135</td>
+			<td>149</td>
+			<td>172</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Auswanderung von Erwerbspersonen</th>
+			<td>106</td>
+			<td>108</td>
+			<td>109</td>
+			<td>106</td>
+			<td>93</td>
+		</tr>
+		<tr class="active">
+			<th class="text-left" scope="row">= Erwerbspersonen am 31. Dezember</th>
+			<td>4'618</td>
+			<td>4'690</td>
+			<td>4'775</td>
+			<td>4'834</td>
+			<td>4'943</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row" colspan="6">Männer</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Erwerbspersonen am 1. Januar</th>
+			<td>2'488</td>
+			<td>2'532</td>
+			<td>2'585</td>
+			<td>2'602</td>
+			<td>2'648</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Arbeitsmarkteintritte</th>
+			<td>126</td>
+			<td>118</td>
+			<td>141</td>
+			<td>133</td>
+			<td>132</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Arbeitsmarktaustritte</th>
+			<td>108</td>
+			<td>131</td>
+			<td>138</td>
+			<td>111</td>
+			<td>121</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Einwanderung von Erwerbspersonen</th>
+			<td>95</td>
+			<td>108</td>
+			<td>85</td>
+			<td>92</td>
+			<td>110</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Auswanderung von Erwerbspersonen</th>
+			<td>69</td>
+			<td>70</td>
+			<td>70</td>
+			<td>69</td>
+			<td>60</td>
+		</tr>
+		<tr class="active">
+			<th class="text-left" scope="row">= Erwerbspersonen am 31. Dezember</th>
+			<td>2532</td>
+			<td>2'556</td>
+			<td>2'602</td>
+			<td>2'648</td>
+			<td>2'708</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row" colspan="6">Frauen</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Erwerbspersonen am 1. Januar</th>
+			<td>2'027</td>
+			<td>2'086</td>
+			<td>2'150</td>
+			<td>2'173</td>
+			<td>2'186</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Arbeitsmarkteintritte</th>
+			<td>182</td>
+			<td>179</td>
+			<td>175</td>
+			<td>156</td>
+			<td>168</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Arbeitsmarktaustritte</th>
+			<td>142</td>
+			<td>157</td>
+			<td>163</td>
+			<td>162</td>
+			<td>149</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">+ Einwanderung von Erwerbspersonen</th>
+			<td>56</td>
+			<td>64</td>
+			<td>50</td>
+			<td>56</td>
+			<td>62</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">- Auswanderung von Erwerbspersonen</th>
+			<td>37</td>
+			<td>38</td>
+			<td>39</td>
+			<td>37</td>
+			<td>33</td>
+		</tr>
+		<tr class="active">
+			<th class="text-left" scope="row">= Erwerbspersonen am 31. Dezember</th>
+			<td>2'086</td>
+			<td>2'133</td>
+			<td>2'173</td>
+			<td>2'186</td>
+			<td>2'234</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td class="highlight right">2007</td>
+			<td class="highlight right">2008</td>
+			<td class="highlight right">2009</td>
+			<td class="highlight right">2010</td>
+			<td class="highlight right">2011</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-10-table-highlight-cycle" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-10-table-highlight-cycle" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered text-right&quot;&gt;
+	&lt;caption&gt;Inlandkonzept, in 1000&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;2007&lt;/th&gt;
+			&lt;th&gt;2008&lt;/th&gt;
+			&lt;th&gt;2009&lt;/th&gt;
+			&lt;th&gt;2010&lt;/th&gt;
+			&lt;th&gt;2011&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;6&quot;&gt;Total&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Erwerbspersonen am 1. Januar&lt;/th&gt;
+			&lt;td&gt;4&#x27;515&lt;/td&gt;
+			&lt;td&gt;4&#x27;618&lt;/td&gt;
+			&lt;td&gt;4&#x27;735&lt;/td&gt;
+			&lt;td&gt;4&#x27;775&lt;/td&gt;
+			&lt;td&gt;4&#x27;834&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Arbeitsmarkteintritte&lt;/th&gt;
+			&lt;td&gt;308&lt;/td&gt;
+			&lt;td&gt;297&lt;/td&gt;
+			&lt;td&gt;316&lt;/td&gt;
+			&lt;td&gt;289&lt;/td&gt;
+			&lt;td&gt;300&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Arbeitsmarktaustritte&lt;/th&gt;
+			&lt;td&gt;250&lt;/td&gt;
+			&lt;td&gt;289&lt;/td&gt;
+			&lt;td&gt;302&lt;/td&gt;
+			&lt;td&gt;273&lt;/td&gt;
+			&lt;td&gt;271&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Einwanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;151&lt;/td&gt;
+			&lt;td&gt;171&lt;/td&gt;
+			&lt;td&gt;135&lt;/td&gt;
+			&lt;td&gt;149&lt;/td&gt;
+			&lt;td&gt;172&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Auswanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;106&lt;/td&gt;
+			&lt;td&gt;108&lt;/td&gt;
+			&lt;td&gt;109&lt;/td&gt;
+			&lt;td&gt;106&lt;/td&gt;
+			&lt;td&gt;93&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=&quot;active&quot;&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;= Erwerbspersonen am 31. Dezember&lt;/th&gt;
+			&lt;td&gt;4&#x27;618&lt;/td&gt;
+			&lt;td&gt;4&#x27;690&lt;/td&gt;
+			&lt;td&gt;4&#x27;775&lt;/td&gt;
+			&lt;td&gt;4&#x27;834&lt;/td&gt;
+			&lt;td&gt;4&#x27;943&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;6&quot;&gt;Männer&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Erwerbspersonen am 1. Januar&lt;/th&gt;
+			&lt;td&gt;2&#x27;488&lt;/td&gt;
+			&lt;td&gt;2&#x27;532&lt;/td&gt;
+			&lt;td&gt;2&#x27;585&lt;/td&gt;
+			&lt;td&gt;2&#x27;602&lt;/td&gt;
+			&lt;td&gt;2&#x27;648&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Arbeitsmarkteintritte&lt;/th&gt;
+			&lt;td&gt;126&lt;/td&gt;
+			&lt;td&gt;118&lt;/td&gt;
+			&lt;td&gt;141&lt;/td&gt;
+			&lt;td&gt;133&lt;/td&gt;
+			&lt;td&gt;132&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Arbeitsmarktaustritte&lt;/th&gt;
+			&lt;td&gt;108&lt;/td&gt;
+			&lt;td&gt;131&lt;/td&gt;
+			&lt;td&gt;138&lt;/td&gt;
+			&lt;td&gt;111&lt;/td&gt;
+			&lt;td&gt;121&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Einwanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;95&lt;/td&gt;
+			&lt;td&gt;108&lt;/td&gt;
+			&lt;td&gt;85&lt;/td&gt;
+			&lt;td&gt;92&lt;/td&gt;
+			&lt;td&gt;110&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Auswanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;69&lt;/td&gt;
+			&lt;td&gt;70&lt;/td&gt;
+			&lt;td&gt;70&lt;/td&gt;
+			&lt;td&gt;69&lt;/td&gt;
+			&lt;td&gt;60&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=&quot;active&quot;&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;= Erwerbspersonen am 31. Dezember&lt;/th&gt;
+			&lt;td&gt;2532&lt;/td&gt;
+			&lt;td&gt;2&#x27;556&lt;/td&gt;
+			&lt;td&gt;2&#x27;602&lt;/td&gt;
+			&lt;td&gt;2&#x27;648&lt;/td&gt;
+			&lt;td&gt;2&#x27;708&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;6&quot;&gt;Frauen&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Erwerbspersonen am 1. Januar&lt;/th&gt;
+			&lt;td&gt;2&#x27;027&lt;/td&gt;
+			&lt;td&gt;2&#x27;086&lt;/td&gt;
+			&lt;td&gt;2&#x27;150&lt;/td&gt;
+			&lt;td&gt;2&#x27;173&lt;/td&gt;
+			&lt;td&gt;2&#x27;186&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Arbeitsmarkteintritte&lt;/th&gt;
+			&lt;td&gt;182&lt;/td&gt;
+			&lt;td&gt;179&lt;/td&gt;
+			&lt;td&gt;175&lt;/td&gt;
+			&lt;td&gt;156&lt;/td&gt;
+			&lt;td&gt;168&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Arbeitsmarktaustritte&lt;/th&gt;
+			&lt;td&gt;142&lt;/td&gt;
+			&lt;td&gt;157&lt;/td&gt;
+			&lt;td&gt;163&lt;/td&gt;
+			&lt;td&gt;162&lt;/td&gt;
+			&lt;td&gt;149&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;+ Einwanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;56&lt;/td&gt;
+			&lt;td&gt;64&lt;/td&gt;
+			&lt;td&gt;50&lt;/td&gt;
+			&lt;td&gt;56&lt;/td&gt;
+			&lt;td&gt;62&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;- Auswanderung von Erwerbspersonen&lt;/th&gt;
+			&lt;td&gt;37&lt;/td&gt;
+			&lt;td&gt;38&lt;/td&gt;
+			&lt;td&gt;39&lt;/td&gt;
+			&lt;td&gt;37&lt;/td&gt;
+			&lt;td&gt;33&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=&quot;active&quot;&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;= Erwerbspersonen am 31. Dezember&lt;/th&gt;
+			&lt;td&gt;2&#x27;086&lt;/td&gt;
+			&lt;td&gt;2&#x27;133&lt;/td&gt;
+			&lt;td&gt;2&#x27;173&lt;/td&gt;
+			&lt;td&gt;2&#x27;186&lt;/td&gt;
+			&lt;td&gt;2&#x27;234&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2007&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2008&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2009&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2010&lt;/td&gt;
+			&lt;td class=&quot;highlight right&quot;&gt;2011&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-11-table-highlight-cycle-pairs">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-11-table-highlight-cycle-pairs" class="component-anchor">Tableau imbriqué avec mise en évidence (multiple)</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-11-table-highlight-cycle-pairs" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-11-table-highlight-cycle-pairs" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>summary</code> de la balise <code>&lt;table&gt;</code></li>
+</ul>
+
+    </div>
+  </div>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered text-right">
+	<caption>Tabelle mit Titelzeile (Standardtabelle)</caption>
+	<thead>
+		<tr class="pairwise">
+			<th></th>
+			<th colspan="2" scope="colgroup" class="text-center">2011</th>
+			<th colspan="2" scope="colgroup" class="text-center">2012</th>
+			<th colspan="2" scope="colgroup" class="text-center active">2013</th>
+		</tr>
+		<tr>
+			<th></th>
+			<th class="text-left" scope="col">GAV</th>
+			<th class="text-left" scope="col">unterstellte Arbeit-
+				<br>nehmende</th>
+			<th class="text-left" scope="col">GAV</th>
+			<th class="text-left" scope="col">unterstellte Arbeit-
+				<br>nehmende</th>
+			<th class="text-left active" scope="col">GAV</th>
+			<th class="text-left active" scope="col">unterstellte Arbeit-
+				<br>nehmende</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-left" scope="row">Wichtigsten GAV<sup title="lorem ipsum dolor sit amet">1)</sup></th>
+			<td>100</td>
+			<td>1'400'600</td>
+			<td>97</td>
+			<td>1'607'100</td>
+			<td class="active">93</td>
+			<td class="active">1'574'800</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">GAV ohne Lohnverhandlung</th>
+			<td>28</td>
+			<td>362'400</td>
+			<td>29</td>
+			<td>605'900</td>
+			<td class="active">68</td>
+			<td class="active">1'032'700</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">GAV mit Lohnverhandlung</th>
+			<td>72</td>
+			<td>1'038'200</td>
+			<td>68</td>
+			<td>1'001'200</td>
+			<td class="active">25</td>
+			<td class="active">542'100</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row" colspan="7">Lohnvereinbarungsart</th>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Effektivlohn-vereinbarung</th>
+			<td>9</td>
+			<td>129'500</td>
+			<td>6</td>
+			<td>79'500</td>
+			<td class="active">6</td>
+			<td class="active">76'500</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Effektiv- und Mindest-lohnvereinbarung<sup title="lorem ipsum dolor sit amet">2)</sup></th>
+			<td>45</td>
+			<td>365'800</td>
+			<td>47</td>
+			<td>3'688'400</td>
+			<td class="active">40</td>
+			<td class="active">403'700</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Mindestlohn-vereinbarung<sup title="lorem ipsum dolor sit amet">2)</sup></th>
+			<td>18</td>
+			<td>543'000</td>
+			<td>15</td>
+			<td>233'300</td>
+			<td class="active">21</td>
+			<td class="active">537'400</td>
+		</tr>
+		<tr>
+			<th class="text-left" scope="row">Keine Lohn-vereinbarung</th>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+			<td class="active">1</td>
+			<td class="active">15'100</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr class="pairwise">
+			<td></td>
+			<td class="text-center" colspan="2">2011</td>
+			<td class="text-center" colspan="2">2012</td>
+			<td class="text-center active" colspan="2">2013</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="text-left">GAV</td>
+			<td class="text-left">unterstellte Arbeit-
+				<br>nehmende</td>
+			<td class="text-left">GAV</td>
+			<td class="text-left">unterstellte Arbeit-
+				<br>nehmende</td>
+			<td class="text-left active">GAV</td>
+			<td class="text-left active">unterstellte Arbeit-
+				<br>nehmende</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-11-table-highlight-cycle-pairs" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-11-table-highlight-cycle-pairs" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered text-right&quot;&gt;
+	&lt;caption&gt;Tabelle mit Titelzeile (Standardtabelle)&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr class=&quot;pairwise&quot;&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th colspan=&quot;2&quot; scope=&quot;colgroup&quot; class=&quot;text-center&quot;&gt;2011&lt;/th&gt;
+			&lt;th colspan=&quot;2&quot; scope=&quot;colgroup&quot; class=&quot;text-center&quot;&gt;2012&lt;/th&gt;
+			&lt;th colspan=&quot;2&quot; scope=&quot;colgroup&quot; class=&quot;text-center active&quot;&gt;2013&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;GAV&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;GAV&lt;/th&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;col&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/th&gt;
+			&lt;th class=&quot;text-left active&quot; scope=&quot;col&quot;&gt;GAV&lt;/th&gt;
+			&lt;th class=&quot;text-left active&quot; scope=&quot;col&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Wichtigsten GAV&lt;sup title=&quot;lorem ipsum dolor sit amet&quot;&gt;1)&lt;/sup&gt;&lt;/th&gt;
+			&lt;td&gt;100&lt;/td&gt;
+			&lt;td&gt;1&#x27;400&#x27;600&lt;/td&gt;
+			&lt;td&gt;97&lt;/td&gt;
+			&lt;td&gt;1&#x27;607&#x27;100&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;93&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;1&#x27;574&#x27;800&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;GAV ohne Lohnverhandlung&lt;/th&gt;
+			&lt;td&gt;28&lt;/td&gt;
+			&lt;td&gt;362&#x27;400&lt;/td&gt;
+			&lt;td&gt;29&lt;/td&gt;
+			&lt;td&gt;605&#x27;900&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;68&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;1&#x27;032&#x27;700&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;GAV mit Lohnverhandlung&lt;/th&gt;
+			&lt;td&gt;72&lt;/td&gt;
+			&lt;td&gt;1&#x27;038&#x27;200&lt;/td&gt;
+			&lt;td&gt;68&lt;/td&gt;
+			&lt;td&gt;1&#x27;001&#x27;200&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;25&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;542&#x27;100&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot; colspan=&quot;7&quot;&gt;Lohnvereinbarungsart&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Effektivlohn-vereinbarung&lt;/th&gt;
+			&lt;td&gt;9&lt;/td&gt;
+			&lt;td&gt;129&#x27;500&lt;/td&gt;
+			&lt;td&gt;6&lt;/td&gt;
+			&lt;td&gt;79&#x27;500&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;6&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;76&#x27;500&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Effektiv- und Mindest-lohnvereinbarung&lt;sup title=&quot;lorem ipsum dolor sit amet&quot;&gt;2)&lt;/sup&gt;&lt;/th&gt;
+			&lt;td&gt;45&lt;/td&gt;
+			&lt;td&gt;365&#x27;800&lt;/td&gt;
+			&lt;td&gt;47&lt;/td&gt;
+			&lt;td&gt;3&#x27;688&#x27;400&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;40&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;403&#x27;700&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Mindestlohn-vereinbarung&lt;sup title=&quot;lorem ipsum dolor sit amet&quot;&gt;2)&lt;/sup&gt;&lt;/th&gt;
+			&lt;td&gt;18&lt;/td&gt;
+			&lt;td&gt;543&#x27;000&lt;/td&gt;
+			&lt;td&gt;15&lt;/td&gt;
+			&lt;td&gt;233&#x27;300&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;21&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;537&#x27;400&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot; scope=&quot;row&quot;&gt;Keine Lohn-vereinbarung&lt;/th&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;1&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;15&#x27;100&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr class=&quot;pairwise&quot;&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot; colspan=&quot;2&quot;&gt;2011&lt;/td&gt;
+			&lt;td class=&quot;text-center&quot; colspan=&quot;2&quot;&gt;2012&lt;/td&gt;
+			&lt;td class=&quot;text-center active&quot; colspan=&quot;2&quot;&gt;2013&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;GAV&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;GAV&lt;/td&gt;
+			&lt;td class=&quot;text-left&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/td&gt;
+			&lt;td class=&quot;text-left active&quot;&gt;GAV&lt;/td&gt;
+			&lt;td class=&quot;text-left active&quot;&gt;unterstellte Arbeit-
+				&lt;br&gt;nehmende&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-12-table-highlight-caption">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-12-table-highlight-caption" class="component-anchor">Tableau avec titre et mise en évidence</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-12-table-highlight-caption" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-12-table-highlight-caption" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>summary</code> de la balise <code>&lt;table&gt;</code></li>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise <code>&lt;tr&gt;</code></li>
+</ul>
+
+    </div>
+  </div>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered">
+	<caption>Table with caption (standard table)</caption>
+	<thead>
+		<tr>
+			<th>Artist</th>
+			<th class="active">Album</th>
+			<th class="text-right">Year</th>
+			<th class="text-right">Price in USD</th>
+			<th>Label</th>
+			<th class="text-right">Tracks</th>
+			<th class="text-right">Length</th>
+			<th>Producer</th>
+			<th>Recorded</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Jimi Hendrix</th>
+			<td class="active">Are You Experienced</td>
+			<td class="text-right">1967</td>
+			<td class="text-right">10.00</td>
+			<td>MCA</td>
+			<td class="text-right">11</td>
+			<td class="text-right">53:10</td>
+			<td>Chas Chandler</td>
+			<td>February 1967</td>
+		</tr>
+		<tr>
+			<th scope="row">Pink Floyd</th>
+			<td class="active">Wish You Were Here</td>
+			<td class="text-right">1975</td>
+			<td class="text-right">12.00</td>
+			<td>Harvest, Emi</td>
+			<td class="text-right">8</td>
+			<td class="text-right">42:59</td>
+			<td>Pink Floyd</td>
+			<td>May - October 1975</td>
+		</tr>
+		<tr>
+			<th scope="row">Beatles</th>
+			<td class="active">Abbey Road</td>
+			<td class="text-right">1969</td>
+			<td class="text-right">14.00</td>
+			<td>Apple</td>
+			<td class="text-right">12</td>
+			<td class="text-right">58:45</td>
+			<td>Hans Muster</td>
+			<td>January - July 1969</td>
+		</tr>
+		<tr>
+			<th scope="row">Bob Dylan</th>
+			<td class="active">Blonde on Blonde</td>
+			<td class="text-right">1966</td>
+			<td class="text-right">15.00</td>
+			<td>Columbia</td>
+			<td class="text-right">14</td>
+			<td class="text-right">75:21</td>
+			<td>Johnny Cash</td>
+			<td>July 1966</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>Artist</td>
+			<td class="active">Album</td>
+			<td class="text-right">Year</td>
+			<td class="text-right">Price in USD</td>
+			<td>Label</td>
+			<td class="text-right">Tracks</td>
+			<td class="text-right"> Length</td>
+			<td>Producer</td>
+			<td>Recorded</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-12-table-highlight-caption" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-12-table-highlight-caption" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered&quot;&gt;
+	&lt;caption&gt;Table with caption (standard table)&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Artist&lt;/th&gt;
+			&lt;th class=&quot;active&quot;&gt;Album&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Year&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Price in USD&lt;/th&gt;
+			&lt;th&gt;Label&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Tracks&lt;/th&gt;
+			&lt;th class=&quot;text-right&quot;&gt;Length&lt;/th&gt;
+			&lt;th&gt;Producer&lt;/th&gt;
+			&lt;th&gt;Recorded&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Jimi Hendrix&lt;/th&gt;
+			&lt;td class=&quot;active&quot;&gt;Are You Experienced&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1967&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;10.00&lt;/td&gt;
+			&lt;td&gt;MCA&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;11&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;53:10&lt;/td&gt;
+			&lt;td&gt;Chas Chandler&lt;/td&gt;
+			&lt;td&gt;February 1967&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Pink Floyd&lt;/th&gt;
+			&lt;td class=&quot;active&quot;&gt;Wish You Were Here&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1975&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;12.00&lt;/td&gt;
+			&lt;td&gt;Harvest, Emi&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;8&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;42:59&lt;/td&gt;
+			&lt;td&gt;Pink Floyd&lt;/td&gt;
+			&lt;td&gt;May - October 1975&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Beatles&lt;/th&gt;
+			&lt;td class=&quot;active&quot;&gt;Abbey Road&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1969&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;14.00&lt;/td&gt;
+			&lt;td&gt;Apple&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;12&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;58:45&lt;/td&gt;
+			&lt;td&gt;Hans Muster&lt;/td&gt;
+			&lt;td&gt;January - July 1969&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th scope=&quot;row&quot;&gt;Bob Dylan&lt;/th&gt;
+			&lt;td class=&quot;active&quot;&gt;Blonde on Blonde&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;1966&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;15.00&lt;/td&gt;
+			&lt;td&gt;Columbia&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;14&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;75:21&lt;/td&gt;
+			&lt;td&gt;Johnny Cash&lt;/td&gt;
+			&lt;td&gt;July 1966&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Artist&lt;/td&gt;
+			&lt;td class=&quot;active&quot;&gt;Album&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;Year&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;Price in USD&lt;/td&gt;
+			&lt;td&gt;Label&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt;Tracks&lt;/td&gt;
+			&lt;td class=&quot;text-right&quot;&gt; Length&lt;/td&gt;
+			&lt;td&gt;Producer&lt;/td&gt;
+			&lt;td&gt;Recorded&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-13-table-sortable">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-13-table-sortable" class="component-anchor">Tableau triable</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-13-table-sortable" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-13-table-sortable" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise <code>&lt;tr&gt;</code></li>
+<li>retirez l’attribut <code>role=&quot;rowheader&quot;</code> de la balise <code>&lt;th&gt;</code></li>
+</ul>
+
+    </div>
+  </div>
+
+  <p>Le tableau triable met automatiquement en évidence la colonne triée. (classe <code>table-sort</code>)</p>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered table-sort text-right">
+	<caption>Game animals shot in Switzerland</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>2000</th>
+			<th>2010</th>
+			<th>2011</th>
+			<th>2012</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="text-left">Boars</th>
+			<td>4'160</td>
+			<td>7'647</td>
+			<td>4'726</td>
+			<td>10'650</td>
+		</tr>
+		<tr>
+			<th class="text-left">Chamois</th>
+			<td>16'625</td>
+			<td>13'427</td>
+			<td>13'413</td>
+			<td>13'350</td>
+		</tr>
+		<tr>
+			<th class="text-left">Fox</th>
+			<td>42'221</td>
+			<td>31'044</td>
+			<td>27'094</td>
+			<td>35'616</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td>2000</td>
+			<td>2010</td>
+			<td>2011</td>
+			<td>2012</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-13-table-sortable" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-13-table-sortable" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered table-sort text-right&quot;&gt;
+	&lt;caption&gt;Game animals shot in Switzerland&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;2000&lt;/th&gt;
+			&lt;th&gt;2010&lt;/th&gt;
+			&lt;th&gt;2011&lt;/th&gt;
+			&lt;th&gt;2012&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Boars&lt;/th&gt;
+			&lt;td&gt;4&#x27;160&lt;/td&gt;
+			&lt;td&gt;7&#x27;647&lt;/td&gt;
+			&lt;td&gt;4&#x27;726&lt;/td&gt;
+			&lt;td&gt;10&#x27;650&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Chamois&lt;/th&gt;
+			&lt;td&gt;16&#x27;625&lt;/td&gt;
+			&lt;td&gt;13&#x27;427&lt;/td&gt;
+			&lt;td&gt;13&#x27;413&lt;/td&gt;
+			&lt;td&gt;13&#x27;350&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Fox&lt;/th&gt;
+			&lt;td&gt;42&#x27;221&lt;/td&gt;
+			&lt;td&gt;31&#x27;044&lt;/td&gt;
+			&lt;td&gt;27&#x27;094&lt;/td&gt;
+			&lt;td&gt;35&#x27;616&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;2000&lt;/td&gt;
+			&lt;td&gt;2010&lt;/td&gt;
+			&lt;td&gt;2011&lt;/td&gt;
+			&lt;td&gt;2012&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-14-table-expandable">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-14-table-expandable" class="component-anchor">Tableau avec masquage et affichage de lignes</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-14-table-expandable" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-14-table-expandable" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise `<tr></li>
+<li>retirez l’attribut <code>role=&quot;rowheader&quot;</code> de la balise <code>&lt;th&gt;</code></li>
+</ul>
+<p><strong>2.5.0</strong></p>
+<ul>
+<li>emballer le texte <code>&lt;a&gt;</code> dans une balise <code>&lt;th&gt;</code> s’il s’agit d’un lien «collapse»</li>
+</ul>
+<p><strong>2.1.9</strong></p>
+<ul>
+<li><code>columnheader</code>, <code>rowheader</code> et <code>aria-describedby</code> supprimés et remplacés par des attributs <code>scope=&quot;&quot;</code>.</li>
+</ul>
+<p><strong>2.1.8</strong></p>
+<ul>
+<li>emballer le texte <code>&lt;a&gt;</code> dans une balise <code>&lt;th&gt;</code> s’il s’agit d’un lien «collapse»</li>
+</ul>
+
+    </div>
+  </div>
+
+  <p>Certaines lignes du tableau peuvent être dépliées pour afficher des détails concernant un enregistrement.</p>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-bordered text-right">
+	<caption>Game animals shot in Switzerland</caption>
+	<thead>
+		<tr>
+			<th></th>
+			<th>2000</th>
+			<th>2010</th>
+			<th>2011</th>
+			<th>2012</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th><a href="#animals" class="text-left icon icon--before collapsed" data-toggle="collapse">Animals</a></th>
+			<td>63'006</td>
+			<td>52'118</td>
+			<td>45'233</td>
+			<td>59'616</td>
+		</tr>
+	</tbody>
+	<tbody id="animals" class="collapse">
+		<tr>
+			<th class="text-left">Boars</th>
+			<td>4'160</td>
+			<td>7'647</td>
+			<td>4'726</td>
+			<td>10'650</td>
+		</tr>
+		<tr>
+			<th class="text-left">Chamois</th>
+			<td>16'625</td>
+			<td>13'427</td>
+			<td>13'413</td>
+			<td>13'350</td>
+		</tr>
+		<tr>
+			<th class="text-left">Fox</th>
+			<td>42'221</td>
+			<td>31'044</td>
+			<td>27'094</td>
+			<td>35'616</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td></td>
+			<td>2000</td>
+			<td>2010</td>
+			<td>2011</td>
+			<td>2012</td>
+		</tr>
+	</tfoot>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-14-table-expandable" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-14-table-expandable" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-bordered text-right&quot;&gt;
+	&lt;caption&gt;Game animals shot in Switzerland&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;/th&gt;
+			&lt;th&gt;2000&lt;/th&gt;
+			&lt;th&gt;2010&lt;/th&gt;
+			&lt;th&gt;2011&lt;/th&gt;
+			&lt;th&gt;2012&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th&gt;&lt;a href=&quot;#animals&quot; class=&quot;text-left icon icon--before collapsed&quot; data-toggle=&quot;collapse&quot;&gt;Animals&lt;/a&gt;&lt;/th&gt;
+			&lt;td&gt;63&#x27;006&lt;/td&gt;
+			&lt;td&gt;52&#x27;118&lt;/td&gt;
+			&lt;td&gt;45&#x27;233&lt;/td&gt;
+			&lt;td&gt;59&#x27;616&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tbody id=&quot;animals&quot; class=&quot;collapse&quot;&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Boars&lt;/th&gt;
+			&lt;td&gt;4&#x27;160&lt;/td&gt;
+			&lt;td&gt;7&#x27;647&lt;/td&gt;
+			&lt;td&gt;4&#x27;726&lt;/td&gt;
+			&lt;td&gt;10&#x27;650&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Chamois&lt;/th&gt;
+			&lt;td&gt;16&#x27;625&lt;/td&gt;
+			&lt;td&gt;13&#x27;427&lt;/td&gt;
+			&lt;td&gt;13&#x27;413&lt;/td&gt;
+			&lt;td&gt;13&#x27;350&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;text-left&quot;&gt;Fox&lt;/th&gt;
+			&lt;td&gt;42&#x27;221&lt;/td&gt;
+			&lt;td&gt;31&#x27;044&lt;/td&gt;
+			&lt;td&gt;27&#x27;094&lt;/td&gt;
+			&lt;td&gt;35&#x27;616&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;2000&lt;/td&gt;
+			&lt;td&gt;2010&lt;/td&gt;
+			&lt;td&gt;2011&lt;/td&gt;
+			&lt;td&gt;2012&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-15-table-ruled">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-15-table-ruled" class="component-anchor">Tableau avec lignes</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-15-table-ruled" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-15-table-ruled" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise <code>&lt;tr&gt;</code></li>
+</ul>
+<p><strong>2.1.9</strong></p>
+<ul>
+<li><code>columnheader</code>, <code>rowheader</code> et <code>aria-describedby</code> supprimés et remplacés par des attributs <code>scope=&quot;&quot;</code>.</li>
+</ul>
+
+    </div>
+  </div>
+
+  <p>Les tableaux avec lignes conviennent particulièrement bien à la représentation de rapports simples 1:1. On obtient les lignes du tableau en ajoutant la classe class=’table_simple’ à la balise du tableau.</p>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <table class="table table-simple">
+	<caption>Contact</caption>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>E-mail</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Hans Muster</td>
+			<td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+		</tr>
+		<tr>
+			<td>Hans Muster</td>
+			<td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+		</tr>
+		<tr>
+			<td>Hans Muster</td>
+			<td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+		</tr>
+	</tbody>
+</table>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-15-table-ruled" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-15-table-ruled" role="note">
+    <pre><code class="language-markup">&lt;table class=&quot;table table-simple&quot;&gt;
+	&lt;caption&gt;Contact&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Name&lt;/th&gt;
+			&lt;th&gt;E-mail&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Hans Muster&lt;/td&gt;
+			&lt;td&gt;&lt;a href=&quot;mailto:hans.muster@mail.com&quot;&gt;hans.muster@mail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Hans Muster&lt;/td&gt;
+			&lt;td&gt;&lt;a href=&quot;mailto:hans.muster@mail.com&quot;&gt;hans.muster@mail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Hans Muster&lt;/td&gt;
+			&lt;td&gt;&lt;a href=&quot;mailto:hans.muster@mail.com&quot;&gt;hans.muster@mail.com&lt;/a&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="03-tables-16-table-unruled">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#03-tables-16-table-unruled" class="component-anchor">Tableaux sans lignes</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-03-tables-16-table-unruled" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-03-tables-16-table-unruled" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.0.0</strong></p>
+<ul>
+<li>retirez l’attribut <code>role=&quot;columnheader&quot;</code> de la balise <code>&lt;tr&gt;</code></li>
+</ul>
+<p><strong>2.1.9</strong></p>
+<ul>
+<li><code>columnheader</code>, <code>rowheader</code> et <code>aria-describedby</code> supprimés et remplacés par des attributs <code>scope=&quot;&quot;</code>.</li>
+</ul>
+
+    </div>
+  </div>
+
+  <p>Les tableaux sans lignes conviennent pour la représentation de propriétés, p. ex. d’une publication. Un tableau simple sans lignes sera marqué par la classe class=’table_naked’.</p>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-5">
+
+			<table class="table table-naked">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>E-mail</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Hans Muster</td>
+						<td><a href="mailto:hans.muster@mail.com">hans.muster@mail.com</a></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+</div>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-03-tables-16-table-unruled" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-03-tables-16-table-unruled" role="note">
+    <pre><code class="language-markup">&lt;div class=&quot;container-fluid&quot;&gt;
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;col-sm-5&quot;&gt;
+
+			&lt;table class=&quot;table table-naked&quot;&gt;
+				&lt;thead&gt;
+					&lt;tr&gt;
+						&lt;th&gt;Name&lt;/th&gt;
+						&lt;th&gt;E-mail&lt;/th&gt;
+					&lt;/tr&gt;
+				&lt;/thead&gt;
+				&lt;tbody&gt;
+					&lt;tr&gt;
+						&lt;td&gt;Hans Muster&lt;/td&gt;
+						&lt;td&gt;&lt;a href=&quot;mailto:hans.muster@mail.com&quot;&gt;hans.muster@mail.com&lt;/a&gt;&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/tbody&gt;
+			&lt;/table&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container-fluid footer-service">
+          <h3>©2015 Chancellerie fédérale</h3>
+          <nav>
+            <ul>
+              <li>
+                <a href="https://github.com/swiss/styleguide/releases/latest">Version 3.0.0
+      </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      
+        <div class="container-fluid">
+          <hr class="footer-line visible-xs">
+          <img class="visible-xs" src="/img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="back to home">
+        </div>
+      
+        <address>
+          <span class="hidden-xs">©2015 Chancellerie fédérale</span>
+          <nav class="pull-right">
+            <ul>
+              <li><a href="http://www.disclaimer.admin.ch/terms_and_conditions.html">Informations juridiques</a></li>
+            </ul>
+          </nav>
+        </address>
+      </footer>
+		</div>
+
+  <!-- Source Scripts -->
+  <script src="/js/vendors.min.js"></script>
+  <script src="/js/main.min.js"></script>
+
+  <!-- Styleguide Scripts -->
+	<script src="/js/fabricator.min.js"></script>
+
+</body>
+</html>
