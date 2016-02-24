@@ -1,5 +1,4 @@
-Swiss Admin web guidelines
-==========================
+# Swiss Confederation Web Guidelines
 
 - [About Accessibility](Accessibility.md)
 - [How to use the styleguide in your project?](HOWTO.md)
@@ -7,11 +6,8 @@ Swiss Admin web guidelines
 
 ## Summary
 
-- [The Swiss Federal Administration on the Internet](#the-swiss-federal-administration-on-the-internet)
+- [Installation](#installation)
 - [Contribution](#contribution)
-- [Grid System](#grid-system)
-- [Print Classes](#print-classes)
-- [Styleguide Theme](#styleguide-theme)
 - [FAQ](#faq)
 - [Known Issues](#known-issues)
 
@@ -23,25 +19,21 @@ The Confederation Web Guidelines are aimed at both internal Federal project mana
 
 The design specifications described for use on the Internet or in intranets can also be used for other digital channels, such as for the creation of apps.
 
+## Installation
 
-The latest release of the styleguide is available here: http://swiss.github.io/styleguide/
+*Recommended:* Install with NPM ([more details](HOWTO.md)):
 
-If you want to collaborate on the repo, go to this URL: https://github.com/swiss/styleguide
+```
+$ npm install swiss-styleguide --save-dev
+```
 
+Install with Bower:
 
-## The Swiss Federal Administration on the Internet
+```
+$ bower install swiss-styleguide
+```
 
-### Styleguide
-
-The styleguide is located in the `/styleguide` directory. You can open `/styleguide/index.html` directly in your browser. (If you can't find it, you have to build all the assets).
-
-#### Installation
-
-There are several ways to get started:
-
-  - **Install with bower `bower install swiss-styleguide`**
-  - Use the provided build. Download the [latest release](https://github.com/swiss/styleguide/releases/latest) and include all the built assets in your project.
-  - Clone the repo `git clone https://github.com/swiss/styleguide.git`
+Use the provided build. Download the [latest release](https://github.com/swiss/styleguide/releases/latest) as an archive.
 
 
 ## Contribution
@@ -49,15 +41,13 @@ There are several ways to get started:
 If you want to contribute, fix a bug or suggest a new feature, please first [create a new issue](https://github.com/swiss/styleguide/issues/new), so we can discuss it. Then, please make a Pull Request to the `dev` branch. This is important, as we use the [Git Flow](https://github.com/swiss/styleguide/issues/new) workflow. We thank you in advance for your collaboration!
 
 
-### Installation on OSX/Unix/Windows
+### Project setup on OSX/Unix/Windows
 
-> We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [Fabricator](http://fbrctr.github.io/).
+We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [Fabricator](http://fbrctr.github.io/). Those depends on [Node.js](http://nodejs.org), be sure it’s installed before going further.
 
-Make sure you have [Node.js](http://nodejs.org) installed.
+Install all the required dependencies, build the styleguide and start the server:
 
-Install all the dependencies you need:
-
-```shell
+```
 $ npm start
 ```
 
@@ -65,23 +55,25 @@ $ npm start
 
 ### Build the styleguide
 
-First run gulp:
+Run the default Gulp task:
 
-```shell
+```
 $ gulp
 ```
 
-Run gulp during development process: (with `watch` tasks and browser-sync)
+Run Gulp during development process (with `watch` tasks and browser-sync):
 
-```shell
+```
 $ gulp serve
 ```
 
-## Grid System
+## FAQ
+
+### Grid System
 
 The grid system works exactly the same way as [Bootstrap](http://getbootstrap.com/css/#grid), no changes were made. Please refer to their documentation for more details.
 
-## Print classes
+### Print classes
 
 You can add print specific classes by using the ones [Bootstrap](http://getbootstrap.com/css/#responsive-utilities-print) made. 
 
@@ -89,34 +81,12 @@ Classes available: `.visible-print-block`, `.visible-print-inline`, `.visible-pr
 
 Please refer to their documentation for more details.
 
-## FAQ
-
-### Why are there a lot of `!important` in the CSS?
-
-The theme is used only to present all the styles. It's not part of the styleguide. All the `!important`s were added to avoid conflict with other styles, for a better presentation.
-
-### When I try to build with `$ gulp` I have the following error: `Syntax error: Invalid US-ASCII character "\xC3"`
-
-The workaround is to force UTF8 by running:
-
-```shell
-$ LC_ALL="en_US.UTF-8" gulp
-```
-
-Or you can edit your .zshrc file with the following configuration:
-
-````
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-````
-
 ## Known issues
 
 ### `@font-face` + Cache-Control/Pragma: 
 There is a known issue with Internet Explorer when loading the page over HTTPS with Cache-Control or Pragma headers set. Disable cache control on fonts to fix it (refer to [issue #359](https://github.com/swiss/styleguide/issues/359) for more information):
 
-```bash
+```
 <FilesMatch "\.(eot|otf|woff|ttf)$">
    Header unset Cache-Control
    Header unset Pragma
