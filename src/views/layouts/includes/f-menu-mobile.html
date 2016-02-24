@@ -4,7 +4,7 @@
     <a href="#" class="icon icon--before icon--less drilldown-back">{{t 'styleguide.back'}}</a>
     <ul>
       {{#each items}}
-        <li><a href="/{{data 'locale'}}/{{#if ../path}}{{@../key}}/{{/if}}{{prefixless @key}}.html">{{t @../key @key 'title'}}</a></li>
+        <li><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/{{#if ../path}}{{@../key}}/{{/if}}{{prefixless @key}}.html">{{t @../key @key 'title'}}</a></li>
       {{/each}}
     </ul>
   </nav>

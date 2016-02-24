@@ -173,7 +173,7 @@ basic-grid:
     Die Webseiten bestehen aus drei Bereichen: dem Header, dem vierspaltig aufgebauten Inhaltsbereich und dem Footer.
 
     <figure>
-      <img src="/styleguide-img/grid.png" alt="Page grid example">
+      <img src="../../styleguide-img/grid.png" alt="Page grid example">
       <figcaption> Das vierspaltige Raster wird von den verschiedenen Seitentypen unterschiedlich belegt.</figcaption>
     </figure>
 
@@ -223,7 +223,7 @@ cd-elements:
     Der Absender einer Website wird immer mit dem vollständigen Bundeslogo (Wappen mit viersprachiger Wortmarke) und der Bezeichnung der Organisationseinheit inklusive Kürzel oder Kurzform gekennzeichnet. Diese zwei Bestandteile sind durch eine vertikale Linie voneinander getrennt. Die Kennzeichnung ist immer oben links im Header positioniert.
 
     <figure>
-      <img src="/styleguide-img/kennzeichnung.png" alt="Page grid example">
+      <img src="../../styleguide-img/kennzeichnung.png" alt="Page grid example">
       <figcaption> Die Kennzeichnung besteht aus dem vollständigen Bundeslogo und der Bezeichnung der Organisationseinheit, sowie einer Trennlinie.</figcaption>
     </figure>
 
@@ -232,7 +232,7 @@ cd-elements:
     Für Anwendungen, bei denen der Platz im Header eingeschränkt ist, kann das Wappen allein ohne die Wortmarke verwendet werden. Die Bezeichnung der Organisationseinheit kann als Kürzel (z.B. EDA) oder Kurzform (z.B. MeteoSchweiz) verwendet werden. Organisationseinheiten, für die es keine Kürzel oder Kurzformen gibt, werden ausgeschrieben. Das kann dazu führen, dass die Bezeichnung mehrzeilig und der Header-Bereich dadurch höher wird.
 
     <figure>
-      <img src="/styleguide-img/mobile_header.png" alt="Page grid example">
+      <img src="../../styleguide-img/mobile_header.png" alt="Page grid example">
       <figcaption>Für die Kennzeichnung im Header auf Smartphones kann auch das Kürzel verwendet werden. Wenn die Organisationseinheit ausgeschrieben werden muss, kann die Bezeichnung mehrzeilig werden.</figcaption>
     </figure>
 
@@ -241,7 +241,7 @@ cd-elements:
     Die vollständige Bezeichnung der Organisationseinheit wird bei mobilen Geräten ausserdem in einem Bereich oberhalb des Headers eingeblendet. Dieser Bereich wird beim ersten Scrollen ausgeblendet.
 
     <figure>
-       <img src="/styleguide-img/schublade.png" alt="Beispiel einer vollständigen Bezeichnung">
+       <img src="../../styleguide-img/schublade.png" alt="Beispiel einer vollständigen Bezeichnung">
        <figcaption>Die vollständige Bezeichnung der Organisationseinheit bei Smartphones.</figurecaption>
     </figure>
 
@@ -249,7 +249,7 @@ cd-elements:
 
     Die rote Trennlinie schliesst den Header nach unten ab. Sie kann einen ausgewählten Bereich in der Globalnavigation auszeichnen.
 
-    ![Die rote Trennlinie wird zur Markierung eines aktiven Bereichs in der Globalnavigation verwendet.](/styleguide-img/rotelinie.png)
+    ![Die rote Trennlinie wird zur Markierung eines aktiven Bereichs in der Globalnavigation verwendet.](../../styleguide-img/rotelinie.png)
 
     ## Typographie
 
@@ -294,7 +294,7 @@ devices:
     Auf Desktop Computern, Laptops und Tablets, die im Querformat gehalten werden, wird das vierspaltige Original-Layout beibehalten. Sobald ein Tablet im Hochformat gehalten wird, wird der Inhalt der rechten Spalte (Kontextspalte) unterhalb des Inhalts angezeigt.
 
     <figure>
-      <img src="/styleguide-img/responsive.png" alt="Grafik zur Anordnung des Inhalts je nach Endgerät">
+      <img src="../../styleguide-img/responsive.png" alt="Grafik zur Anordnung des Inhalts je nach Endgerät">
       <figcaption> Auf den verschiedenen Endgeräten werden die Inhalte unterschiedlich angeordnet.</figcaption>
     </figure>
 
@@ -364,7 +364,7 @@ header-footer:
     Diese Elemente sind entweder Markenelemente oder verbindliche Elemente. Sie dürfen nicht verändert werden.
 
     <figure>
-      <img src="/styleguide-img/header.png" alt="Page grid example">
+      <img src="../../styleguide-img/header.png" alt="Page grid example">
       <figcaption> Der Header mit den prägenden Elementen</figcaption>
     </figure>
 
@@ -411,7 +411,7 @@ header-footer:
     In der Fusszeile unterhalb des Footers, wird ein Hinweis auf das Copyright und Links auf "Rechtliches" und "Impressum" aufgeführt. Die Fusszeile ist ein Markenelement. Die Verwendung ist zwingend.
 
     <figure>
-      <img src="/styleguide-img/footer.png" alt="Beispiel für einen Footer">
+      <img src="../../styleguide-img/footer.png" alt="Beispiel für einen Footer">
       <figcaption> Der Footer mit den verschiedenen Bereichen </figcaption>
     </figure>
 

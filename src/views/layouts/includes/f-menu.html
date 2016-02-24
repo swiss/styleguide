@@ -6,9 +6,9 @@
       <div class="nav-mobile-header">
         <div class="table-row">
           <span class="nav-mobile-logo">
-            <img src="/img/swiss.svg" onerror="this.onerror=null; this.src='/img/swiss.png'" alt="{{t 'styleguide.logo'}}" />
+            <img src="{{#if baseurl}}{{baseurl}}/{{/if}}../img/swiss.svg" onerror="this.onerror=null; this.src='{{#if baseurl}}{{baseurl}}/{{/if}}../img/swiss.png'" alt="{{t 'styleguide.logo'}}" />
           </span>
-          <h1><a href="/{{data 'locale'}}/">{{t 'styleguide.title'}}</a></h1>
+          <h1><a href="{{#if baseurl}}{{baseurl}}/{{/if}}../{{data 'locale'}}/">{{t 'styleguide.title'}}</a></h1>
         </div>
       </div>
       <div class="table-cell dropdown">
@@ -23,7 +23,7 @@
                     <a href="#" class="icon icon--before icon--less drilldown-back">{{t 'styleguide.back'}}</a>
                     <ul>
                       {{#each views.docs.items}}
-                        <li><a href="/{{data 'locale'}}/docs/{{@key}}.html">{{t 'docs' @key 'title'}}</a></li>
+                        <li><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/docs/{{@key}}.html">{{t 'docs' @key 'title'}}</a></li>
                       {{/each}}
                     </ul>
                   </nav>
@@ -39,7 +39,7 @@
                     <a href="#" class="icon icon--before icon--less drilldown-back">{{t 'styleguide.back'}}</a>
                     <ul>
                       {{#each views.pages.items}}
-                        <li><a href="/{{data 'locale'}}/pages/{{@key}}.html">{{t 'pages' @key 'title'}}</a></li>
+                        <li><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/pages/{{@key}}.html">{{t 'pages' @key 'title'}}</a></li>
                       {{/each}}
                     </ul>
                   </nav>
@@ -66,11 +66,11 @@
             {{#each views.docs.items}}
               <li class="col-sm-3">
                 <div class="yamm-content container-fluid">
-                  <h4><a href="/{{data 'locale'}}/docs/{{@key}}.html">{{t 'docs' @key 'title'}}</a></h4>
+                  <h4><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/docs/{{@key}}.html">{{t 'docs' @key 'title'}}</a></h4>
                   <ul role="menu">
                     {{#each items}}
                       <li role="presentation">
-                        <a href="/{{data 'locale'}}/docs/{{@../key}}.html#{{@key}}">{{t 'docs' @key 'title'}}</a>
+                        <a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/docs/{{@../key}}.html#{{@key}}">{{t 'docs' @key 'title'}}</a>
                       </li>
                     {{/each}}
                   </ul>
@@ -101,11 +101,11 @@
             {{#each views.pages.items}}
               <li class="col-sm-3">
                 <div class="yamm-content container-fluid">
-                  <h4><a href="/{{data 'locale'}}/pages/{{@key}}.html">{{t 'pages' @key 'title'}}</a></h4>
+                  <h4><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/pages/{{@key}}.html">{{t 'pages' @key 'title'}}</a></h4>
                   <ul role="menu">
                     {{#each items}}
                       <li role="presentation">
-                        <a href="/{{data 'locale'}}/pages/{{@../key}}.html#{{@key}}">{{t 'pages' @key 'title'}}</a>
+                        <a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/pages/{{@../key}}.html#{{@key}}">{{t 'pages' @key 'title'}}</a>
                       </li>
                     {{/each}}
                   </ul>

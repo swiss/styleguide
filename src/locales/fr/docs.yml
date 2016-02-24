@@ -4,11 +4,11 @@ index:
   content: |
     # L’apparence de l’administration fédérale sur Internet
 
-    Les lignes directrices pour le design web de la Confédération (lignes directrices web) définissent le cadre créatif pour l’apparence de sites Internet du Conseil fédéral et de l’administration fédérale. Elles font partie de l’identité visuelle de la Confédération et sont obligatoires pour tous les sites Internet publics de l’administration fédérale. 
+    Les lignes directrices pour le design web de la Confédération (lignes directrices web) définissent le cadre créatif pour l’apparence de sites Internet du Conseil fédéral et de l’administration fédérale. Elles font partie de l’identité visuelle de la Confédération et sont obligatoires pour tous les sites Internet publics de l’administration fédérale.
 
     ## Exceptions
 
-    Des exceptions du design web de la Confédération sont possibles pour les sites Internet de campagne et partenaires. Elles doivent être approuvées par la Conférence des secrétaires généraux des départements (CSG). Les demandes correspondantes doivent être soumises au <a href="http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de">Service Identité visuelle de la Confédération</a> de la Chancellerie fédérale. 
+    Des exceptions du design web de la Confédération sont possibles pour les sites Internet de campagne et partenaires. Elles doivent être approuvées par la Conférence des secrétaires généraux des départements (CSG). Les demandes correspondantes doivent être soumises au <a href="http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de">Service Identité visuelle de la Confédération</a> de la Chancellerie fédérale.
 
     ## Sites Internet conviviaux et accessibles
 
@@ -141,7 +141,7 @@ accessibility:
 
       ### HeadingsMap (module complémentaire Firefox)
 
-      HeadingsMap est idéal pour rendre la structure d’une page Internet visible. Ce module complémentaire affiche la structure des titres du site Internet actuellement ouvert dans une zone supplémentaire de la fenêtre du navigateur. 
+      HeadingsMap est idéal pour rendre la structure d’une page Internet visible. Ce module complémentaire affiche la structure des titres du site Internet actuellement ouvert dans une zone supplémentaire de la fenêtre du navigateur.
 
       ### Juicy Studio Accessibility Toolbar (module complémentaire Firefox)
 
@@ -168,7 +168,7 @@ basic-grid:
 
     Les pages Internet se composent de trois zones: l’en-tête, la zone de contenu en quatre colonnes et le pied de page.
 
-    <figure><img src="/styleguide-img/grid.png" alt="Exemple de grille de page"><figcaption> La grille à quatre colonnes est utilisée de différentes manières par les divers types de pages.</figcaption>
+    <figure><img src="../../styleguide-img/grid.png" alt="Exemple de grille de page"><figcaption> La grille à quatre colonnes est utilisée de différentes manières par les divers types de pages.</figcaption>
     </figure>
 
     ## Types de pages
@@ -188,7 +188,7 @@ basic-grid:
     La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement» qui indique toujours les options de la page actuelle. Elle se compose de trois zones: l’en-tête de navigation avec le titre de la page actuelle, un lien «Retour» vers le niveau de navigation supérieur et des liens vers les sous-pages. Le comportement est décrit sur la page d’élément <a href="/fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Liste de navigation latérale (sous-navigation de gauche)</a>.
 
 
-    ### Zone de contenu 
+    ### Zone de contenu
 
     Dans la zone de contenu, on place les titres de page et les intertitres, ainsi que le corps du texte, les images, les encadrés d’information et les informations supplémentaires. Les informations supplémentaires sont toujours placées tout en bas de la zone de contenu et n’ont pas leur place dans la colonne de contexte. Le test d’utilisabilité a permis de constater que les utilisateurs ne font pas tellement attention aux informations placées dans la colonne de contexte.
 
@@ -217,7 +217,7 @@ cd-elements:
     L’expéditeur d’un site Internet est toujours désigné par le logo fédéral complet (blason et marque verbale en quatre langues), le nom de l’unité organisationnelle, y compris le sigle ou la forme courte. Ces deux composants sont séparés par une ligne verticale. La désignation est toujours placée en haut à gauche dans l’en-tête.
 
     <figure>
-        <img src="/styleguide-img/kennzeichnung.png" alt="Exemple de grille de page">
+        <img src="../../styleguide-img/kennzeichnung.png" alt="Exemple de grille de page">
         <figcaption> La désignation est composé du logo fédéral complet et du nom de l’unité organisationnelle ainsi que d’une ligne de séparation.</figcaption>
     </figure>
 
@@ -226,16 +226,16 @@ cd-elements:
     Pour les applications dont l’espace est limité dans l’en-tête, le blason peut être utilisé seul, sans la marque verbale. Le nom de l’unité organisationnelle peut être utilisé sous forme de sigle (p. ex. DFAE) ou dans sa forme courte (p. ex. MétéoSuisse). Les noms des unités organisationnelles n’ayant pas de sigle ou de forme courte sont écrits entièrement. Cela peut avoir comme effet que la désignation s’étend sur plusieurs lignes et que la zone d’en-tête devient plus haute.
 
     <figure>
-        <img src="/styleguide-img/mobile_header.png" alt="Exemple de grille de page">
+        <img src="../../styleguide-img/mobile_header.png" alt="Exemple de grille de page">
         <figcaption>Pour la désignation dans l’en-tête sur les smartphones, on peut également utiliser le sigle. S’il faut écrire le nom de l’unité organisationnelle en entier, la désignation peut s’étendre sur plusieurs lignes.</figcaption>
     </figure>
 
-    Partout où la forme réduite de la désignation est utilisée dans l’en-tête, le logo fédéral complet avec blason et marque verbale en quatre langues doit être répété dans le pied de page. 
-    
+    Partout où la forme réduite de la désignation est utilisée dans l’en-tête, le logo fédéral complet avec blason et marque verbale en quatre langues doit être répété dans le pied de page.
+
     Sur les appareils mobiles, le nom complet de l’unité organisationnelle est également affiché dans une zone au-dessus de l’en-tête. Cette zone est masquée dès le premier défilement de la page.
 
     <figure>
-        <img src="/styleguide-img/schublade.png" alt="Exemple d’un nom complet">
+        <img src="../../styleguide-img/schublade.png" alt="Exemple d’un nom complet">
         <figcaption>Le nom complet de l’unité d’organisation sur les smartphones.</figurecaption>
      </figure>
 
@@ -243,7 +243,7 @@ cd-elements:
 
     La ligne de séparation rouge délimite l’en-tête vers le bas. Elle peut mettre en évidence une zone sélectionnée dans la navigation globale.
 
-    ![La ligne de séparation rouge est utilisée pour marquer une zone active dans la navigation globale.](/styleguide-img/rotelinie.png)
+    ![La ligne de séparation rouge est utilisée pour marquer une zone active dans la navigation globale.](../../styleguide-img/rotelinie.png)
 
     ## Typographie
 
@@ -288,7 +288,7 @@ devices:
     Sur les ordinateurs de bureau, ordinateurs portables et tablettes qui sont tenus horizontalement, la mise en page originale en quatre colonnes est maintenue. Dès qu’une tablette est tenue verticalement, le contenu de la colonne de droite (colonne de contexte) est affiché en-dessous du contenu.
 
     <figure>
-        <img src="/styleguide-img/responsive.png" alt="Illustration de l’agencement des contenus en fonction du périphérique de sortie">
+        <img src="../../styleguide-img/responsive.png" alt="Illustration de l’agencement des contenus en fonction du périphérique de sortie">
         <figcaption> Les contenus sont agencés différemment selon les divers périphériques de sortie.</figcaption>
     </figure>
 
@@ -331,8 +331,8 @@ guidelines:
     ### Ordinateur de bureau:
 
     - Internet Explorer 9 et supérieur
-    - Safari 8 et supérieur 
-    - Firefox 40 et supérieur 
+    - Safari 8 et supérieur
+    - Firefox 40 et supérieur
     - Chrome 45 et supérieur
 
     ### Mobile:
@@ -349,7 +349,7 @@ header-footer:
   title: En-tête et pied de page
   content: |
 
-    L’en-tête et le pied de page figurent sur toutes les pages et leur conception est fixe. Sur les appareils mobiles, leur affichage est ajusté. 
+    L’en-tête et le pied de page figurent sur toutes les pages et leur conception est fixe. Sur les appareils mobiles, leur affichage est ajusté.
 
     ## En-tête
 
@@ -358,7 +358,7 @@ header-footer:
     Ces éléments sont soit des éléments de marque, soit des éléments obligatoires. Ils ne doivent pas être modifiés.
 
     <figure>
-      <img src="/styleguide-img/header.png" alt="Exemple de grille de page">
+      <img src="../../styleguide-img/header.png" alt="Exemple de grille de page">
       <figcaption> L’en-tête avec les éléments distinctifs</figcaption>
     </figure>
 
@@ -376,7 +376,7 @@ header-footer:
 
     La **désignation**, composé du logo fédéral (blason et marque verbale) et du nom de l’unité organisationnelle, est l’élément de marque le plus important. Sur les sites inter-organisationnels et les portails thématiques, le nom de l’unité organisationnelle est remplacé par le titre du site Internet. Pour les appareils mobiles, la marque verbale du logo fédéral peut être omise et le nom de l’unité organisationnelle peut être abrégé. Si le nom est abrégé, il est affiché dans sa totalité dans une zone située au-dessus de l’en-tête.
 
-    La **fonction de recherche** est positionnée comme champ de texte sur le côté droit de l’en-tête, en face de la désignation. Lorsque l’utilisateur clique dans le champ de texte, le champ de texte est agrandi. 
+    La **fonction de recherche** est positionnée comme champ de texte sur le côté droit de l’en-tête, en face de la désignation. Lorsque l’utilisateur clique dans le champ de texte, le champ de texte est agrandi.
 
     Sur les appareils mobiles, la recherche peut être appelée via une icône dans l’en-tête.
 
@@ -405,7 +405,7 @@ header-footer:
     Dans la ligne de pied de page, située en-dessous du pied de page, on trouve une note concernant le copyright et des liens vers les «Informations juridiques» et l’«Impressum». La ligne de pied de page est un élément de marque. Son utilisation est obligatoire.
 
     <figure>
-      <img src="/styleguide-img/footer.png" alt="Exemple d’un pied de page">
+      <img src="../../styleguide-img/footer.png" alt="Exemple d’un pied de page">
       <figcaption> Le pied de page avec les différentes zones </figcaption>
     </figure>
 
