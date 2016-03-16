@@ -31,7 +31,7 @@
     "yamm3": "1.0.*",
     "chosen_v1.1.0": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip",
     "typeahead.js": "~0.10.2",
-    "jquery-drilldown": "~0.1.4",
+    "jquery-drilldown": "~1.1.1",
     "respond": "~1.4.2",
     "html5shiv": "~3.7.2",
     "placeholdr": "*",

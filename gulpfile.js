@@ -78,7 +78,7 @@ gulp.task('vendors', function() {
   gulp.src([
       'bower_components/jquery/jquery.js',
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
-      'bower_components/chosen_v1.1.0/chosen.jquery.min.js',
+      'bower_components/chosen_v1.1.0/chosen.jquery.js',
       'bower_components/typeahead.js/dist/typeahead.bundle.js',
       'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
       'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
@@ -94,13 +94,15 @@ gulp.task('vendors', function() {
       'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
       'bower_components/bootstrapaccessibilityplugin/plugins/js/bootstrap-accessibility.js',
       'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
-      'bower_components/jquery-drilldown/jquery.drilldown.min.js',
+      'bower_components/jquery-drilldown/dist/jquery.drilldown.js',
       'bower_components/placeholdr/placeholdr.js',
       'bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
       'bower_components/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
       'node_modules/moment/moment.js',
       'node_modules/pikaday/pikaday.js'
     ])
+    .pipe($.concat('vendors.js'))
+    .pipe(gulp.dest(config.framework.dest + '/js'))
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
     .pipe(gulp.dest(config.framework.dest + '/js'));
