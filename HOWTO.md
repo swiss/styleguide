@@ -22,4 +22,4 @@ Now you basically need to import all the CSS & JavaScript files placed in the `b
 
 ## Report issues
 
-You should **never** alter anything in the project folder. If you find any bugs, [https://github.com/swiss/styleguide/issues](create an issue on the official repository). Make sure that the issue doesn't already exist before posting.
+You should **never** alter anything in the project folder. If you find any bugs, [create an issue on the official repository] (https://github.com/swiss/styleguide/issues). Make sure that the issue doesn't already exist before posting.
