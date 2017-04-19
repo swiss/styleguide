@@ -1,14 +1,3 @@
-/* ==========================================================
- * gulpfile.js
- * List of Gulp.js task to build and run the project
- *
- * Author: Yann Gouffon, yann@antistatique.net
- * Date:   2014-04-29 17:53:14
- *
- * Copyright 2014 Federal Chancellery of Switzerland
- * Licensed under MIT
- ========================================================== */
-
 'use strict';
 
 /**
@@ -37,14 +26,14 @@ var config = {
   dev: $.util.env.dev,
   src: {
     styles: {
-      fabricator: 'src/assets/fabricator/styles/fabricator.scss',
+      fabricator: 'src/assets/fabricator/styles/fabricator.scss'
     },
     javascript: {
       fabricator: [
         'node_modules/prismjs/prism.js',
         'src/assets/fabricator/scripts/*.js'
-      ],
-    },
+      ]
+    }
   },
   styleguide: {
     dest: 'styleguide'
@@ -221,11 +210,10 @@ gulp.task('assemble', function(done) {
     // Get all translation files for the current locale
     var translations = globby.sync('src/locales/' + locale.code + '/*.yml');
 
-    // Build a dictionnary using the filename as the main key
+    // Build a dictionary using the filename as the main key
     translations.forEach(function(file) {
       var id = path.basename(file, path.extname(file));
-      var content = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
-      dictionary[id] = content;
+      dictionary[id] = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
     });
 
     // Assemble the style guide
@@ -362,7 +350,7 @@ gulp.task('clean', function(cb) {
 gulp.task('serve', ['assemble-everything'], function () {
   browserSync({
     server: {
-      baseDir: config.styleguide.dest,
+      baseDir: config.styleguide.dest
     },
     notify: false,
     open: false
@@ -415,5 +403,18 @@ gulp.task('deploy', function () {
  * Default task build the style guide
  */
 gulp.task('default', ['clean'], function(cb) {
-  runSequence('vendors', 'styles', 'print', 'scripts', 'twig', 'build-images', 'build-fonts', 'styles:fabricator', 'scripts:fabricator', 'assemble', 'copy', cb);
+  runSequence(
+    'vendors',
+    'styles',
+    'print',
+    'scripts',
+    'twig',
+    'build-images',
+    'build-fonts',
+    'styles:fabricator',
+    'scripts:fabricator',
+    'assemble',
+    'copy',
+    cb
+  );
 });
