@@ -7,3 +7,7 @@ bower_components/*
 styleguide/*
 
 src/views/pages/*
+
+# IDEs and editors
+/.idea
+*.iml
