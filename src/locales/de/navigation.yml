@@ -127,7 +127,7 @@ header:
       - Add a container with `clearfix` class around logo component
   accessibility-navigation:
     title: Barrierefreie Navigation
-    help: Die barrierefreie Navigation wird direkt nach dem <body>-Tag platziert. Sie wird benötigt, um den Usern mittels Access-Keys rasch Zugang zu bestimmten Services oder zu geben. Die barrierefreie Navigation ist **nicht sichtbar**.
+    help: Die barrierefreie Navigation wird direkt nach dem `body`-Tag platziert. Sie wird benötigt, um den Usern mittels Access-Keys rasch Zugang zu bestimmten Services oder zu geben. Die barrierefreie Navigation ist **nicht sichtbar**.
     release: |
       **2.1.8**
 
