@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     runSequence = require('run-sequence'),
     argv = require('yargs').argv,
-    del = require('del'),
+    rimraf = require('rimraf'),
     assemble = require('fabricator-assemble'),
     yaml = require('js-yaml'),
     fs = require('fs'),
@@ -174,7 +174,7 @@ gulp.task('build-fonts', function() {
  * Compile TWIG example pages
  */
 gulp.task('clean-twig', function(cb) {
-  del(['src/views/pages'], cb);
+  rimraf('src/views/pages', cb);
 });
 
 gulp.task('twig', ['clean-twig'], function() {
@@ -340,7 +340,7 @@ gulp.task('scripts:fabricator', function() {
  * Clean output directories
  */
 gulp.task('clean', function(cb) {
-  del([config.styleguide.dest], cb);
+  rimraf(config.styleguide.dest, cb);
 });
 
 
