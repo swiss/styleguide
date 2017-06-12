@@ -59,7 +59,7 @@ gulp.task('vendors', function() {
       'node_modules/pikaday/css/pikaday.css'
     ])
     .pipe($.concat('vendors.css'))
-    .pipe($.minifyCss())
+    .pipe($.cleanCss())
     .pipe(gulp.dest(config.framework.dest + '/css'));
 
   // JS VENDORS
@@ -119,7 +119,7 @@ gulp.task('styles', function() {
       browsers: config.autoprefixer
     }))
     .pipe($.if(argv.dev, $.sourcemaps.write()))
-    .pipe($.if(!argv.dev, $.minifyCss()))
+    .pipe($.if(!argv.dev, $.cleanCss()))
     .pipe(gulp.dest(config.framework.dest + '/css'));
 });
 
@@ -131,7 +131,7 @@ gulp.task('print', function() {
       browsers: config.autoprefixer
     }))
     .pipe($.if(argv.dev, $.sourcemaps.write()))
-    .pipe($.if(!argv.dev, $.minifyCss()))
+    .pipe($.if(!argv.dev, $.cleanCss()))
     .pipe(gulp.dest(config.framework.dest + '/css'));
 });
 
@@ -321,7 +321,7 @@ gulp.task('styles:fabricator', function() {
     .pipe($.autoprefixer({
       browsers: config.autoprefixer
     }))
-    .pipe($.if(!config.dev, $.minifyCss()))
+    .pipe($.if(!config.dev, $.cleanCss()))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest(config.styleguide.dest + '/css'))
     .pipe($.if(config.dev, reload({stream:true})));
