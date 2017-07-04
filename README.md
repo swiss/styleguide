@@ -48,6 +48,7 @@ We use [Gulp.js](http://gulpjs.com) to run tasks and build our styleguide with [
 Install all the required dependencies, build the styleguide and start the server:
 
 ```
+$ npm install && bower install
 $ npm start
 ```
 

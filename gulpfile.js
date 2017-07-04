@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     runSequence = require('run-sequence'),
     argv = require('yargs').argv,
-    del = require('del'),
+    rimraf = require('rimraf'),
     assemble = require('fabricator-assemble'),
     yaml = require('js-yaml'),
     fs = require('fs'),
@@ -59,7 +59,7 @@ gulp.task('vendors', function() {
       'node_modules/pikaday/css/pikaday.css'
     ])
     .pipe($.concat('vendors.css'))
-    .pipe($.minifyCss())
+    .pipe($.cleanCss())
     .pipe(gulp.dest(config.framework.dest + '/css'));
 
   // JS VENDORS
@@ -119,7 +119,7 @@ gulp.task('styles', function() {
       browsers: config.autoprefixer
     }))
     .pipe($.if(argv.dev, $.sourcemaps.write()))
-    .pipe($.if(!argv.dev, $.minifyCss()))
+    .pipe($.if(!argv.dev, $.cleanCss()))
     .pipe(gulp.dest(config.framework.dest + '/css'));
 });
 
@@ -131,7 +131,7 @@ gulp.task('print', function() {
       browsers: config.autoprefixer
     }))
     .pipe($.if(argv.dev, $.sourcemaps.write()))
-    .pipe($.if(!argv.dev, $.minifyCss()))
+    .pipe($.if(!argv.dev, $.cleanCss()))
     .pipe(gulp.dest(config.framework.dest + '/css'));
 });
 
@@ -174,7 +174,7 @@ gulp.task('build-fonts', function() {
  * Compile TWIG example pages
  */
 gulp.task('clean-twig', function(cb) {
-  del(['src/views/pages'], cb);
+  rimraf('src/views/pages', cb);
 });
 
 gulp.task('twig', ['clean-twig'], function() {
@@ -321,7 +321,7 @@ gulp.task('styles:fabricator', function() {
     .pipe($.autoprefixer({
       browsers: config.autoprefixer
     }))
-    .pipe($.if(!config.dev, $.minifyCss()))
+    .pipe($.if(!config.dev, $.cleanCss()))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest(config.styleguide.dest + '/css'))
     .pipe($.if(config.dev, reload({stream:true})));
@@ -340,7 +340,7 @@ gulp.task('scripts:fabricator', function() {
  * Clean output directories
  */
 gulp.task('clean', function(cb) {
-  del([config.styleguide.dest], cb);
+  rimraf(config.styleguide.dest, cb);
 });
 
 
