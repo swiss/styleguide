@@ -1,6 +1,6 @@
 # Accessibility
 
-## What is accessibility?
+## What is accessibility?
 
 **Web accessibility means that people with disabilities can use the Web.**
 More specifically, Web accessibility means that people with disabilities can
