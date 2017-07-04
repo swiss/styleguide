@@ -55,7 +55,7 @@
 /* Remove X button in IE10 */
 .search-field::-ms-clear { display: none; }
 
-.tt-dropdown-menu {
+.tt-menu {
   background: $white;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   border-radius: 0;
@@ -68,13 +68,16 @@
 .tt-suggestion {
   font-size: 13px;
   line-height: 16px;
-  padding: 3px 10px 1px 10px;
+  padding: 6px 10px;
   margin: 0;
-  a {color: $coal;}
+  a {
+    color: $coal;
+  }
 }
 
-.tt-suggestion.tt-cursor, .tt-is-under-cursor {
+.tt-suggestion:hover, .tt-suggestion.tt-cursor, .tt-is-under-cursor {
   background-color: $smoke;
+  cursor: pointer;
 }
 
 .search-box {
