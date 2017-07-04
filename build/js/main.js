@@ -189,6 +189,12 @@ function disableControl(element) {
       });
   });
 
+  // Ensure every first collapse toggle for accordions is accessible
+  // (cf. https://github.com/paypal/bootstrap-accessibility-plugin/issues/98):
+  $('[aria-multiselectable="true"]').each(function() {
+    console.log($(this).find('[data-toggle="collapse"][data-parent]').first().attr({tabindex: 0}));
+  });
+
 }) (jQuery);
 
 /* ==========================================================
