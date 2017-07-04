@@ -1,41 +1,24 @@
 {
   "name": "swiss-styleguide",
-  "description": "Swiss Confederation Web Guidelines",
   "version": "3.0.0",
   "homepage": "http://swiss.github.io/styleguide",
-  "authors": [
-    "Liip.ch",
-    "Antistatique.net"
-  ],
+  "authors": "Antistatique.net",
+  "description": "Swiss Admin web guidelines",
   "license": "MIT",
+  "main": [
+    "./styleguide/index.html",
+    "./build/css/*.css",
+    "./build/js/vendors.min.js",
+    "./build/js/main.js",
+    "./build/fonts/*.eot",
+    "./build/fonts/*.svg",
+    "./build/fonts/*.ttf",
+    "./build/fonts/*.woff"
+  ],
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
-    "/styleguide-img",
-    "/src/assets/fabricator",
-    "/src/assets/files",
-    "/src/data",
-    "/src/example-pages",
-    "/src/locales",
-    "/src/materials",
-    "/src/materials-data",
-    "/src/views",
-    "/src/index.html"
+    "node_modules"
   ],
-  "devDependencies": {
-    "jquery": "1.10.2",
-    "bootstrap-sass-official": "~3.3.3",
-    "bootstrapaccessibilityplugin": "https://github.com/liip/bootstrap-accessibility-plugin.git#dev",
-    "jquery.tablesorter": "~2.18.4",
-    "yamm3": "1.0.*",
-    "chosen_v1.1.0": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip",
-    "typeahead.js": "~0.10.2",
-    "jquery-drilldown": "~0.1.4",
-    "respond": "~1.4.2",
-    "html5shiv": "~3.7.2",
-    "placeholdr": "*",
-    "blueimp-bootstrap-image-gallery": "~3.1.1",
-    "blueimp-gallery": "~2.15.2"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

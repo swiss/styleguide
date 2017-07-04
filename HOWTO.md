@@ -1,6 +1,6 @@
 # How to use in your project
 
-The styleguide is a NPM/Bower package that can be simply included in your dependencies and from which you can fetch the built styles and scripts. This way, you can ensure a better maintanability and update when needed without any hassle.
+The styleguide is a NPM package that can be simply included in your dependencies and from which you can fetch the built styles and scripts. This way, you can ensure a better maintanability and update when needed without any hassle.
 
 ## Install
 

@@ -52,10 +52,10 @@ gulp.task('vendors', function() {
 
   // CSS VENDORS
   gulp.src([
-      'bower_components/yamm3/yamm/yamm.css',
-      'bower_components/bootstrapaccessibilityplugin/plugins/css/bootstrap-accessibility.css',
-      'bower_components/blueimp-gallery/css/blueimp-gallery.min.css',
-      'bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
+      'node_modules/Yamm/yamm/yamm.css',
+      'node_modules/bootstrap-accessibility-plugin/plugins/css/bootstrap-accessibility.css',
+      'node_modules/blueimp-gallery/css/blueimp-gallery.min.css',
+      'node_modules/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
       'node_modules/pikaday/css/pikaday.css'
     ])
     .pipe($.concat('vendors.css'))
@@ -65,28 +65,27 @@ gulp.task('vendors', function() {
   // JS VENDORS
   // (with jQuery and Bootstrap dependencies first)
   gulp.src([
-      'bower_components/jquery/jquery.js',
-      'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
-      'bower_components/chosen_v1.1.0/chosen.jquery.min.js',
-      'bower_components/typeahead.js/dist/typeahead.bundle.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js',
-      'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
-      'bower_components/bootstrapaccessibilityplugin/plugins/js/bootstrap-accessibility.js',
-      'bower_components/jquery.tablesorter/js/jquery.tablesorter.js',
-      'bower_components/jquery-drilldown/jquery.drilldown.min.js',
-      'bower_components/placeholdr/placeholdr.js',
-      'bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
-      'bower_components/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/drmonty-chosen/js/chosen.jquery.min.js',
+      'node_modules/typeahead.js/dist/typeahead.bundle.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/button.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
+      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+      'node_modules/bootstrap-accessibility-plugin/plugins/js/bootstrap-accessibility.js',
+      'node_modules/tablesorter/js/jquery.tablesorter.js',
+      'node_modules/jquery-drilldown/dist/jquery.drilldown.min.js',
+      'node_modules/Placeholdr/placeholdr.js',
+      'node_modules/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
+      'node_modules/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
       'node_modules/moment/moment.js',
       'node_modules/pikaday/pikaday.js'
     ])
@@ -97,7 +96,7 @@ gulp.task('vendors', function() {
   // FONTS SOURCES
   // Important to add the bootstrap fonts to avoid issues with the fonts include path
   gulp.src([
-      'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+      'node_modules/bootstrap-sass/assets/fonts/bootstrap/*',
       'assets/fonts/*'
     ])
     .pipe(gulp.dest(config.framework.dest + '/fonts'));

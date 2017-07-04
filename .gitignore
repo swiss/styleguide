@@ -1,11 +1,9 @@
 **/.DS_STORE
 node_modules/*
-bower_components/*
 
 .sass-cache
 
 styleguide/*
-
 src/views/pages/*
 
 # IDEs and editors
