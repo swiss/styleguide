@@ -12,7 +12,7 @@
 .news-feed {
   .scroll-y {
     max-height: 330px !important; // MUST be of this size max.
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   .list-group-header {
     margin-bottom: 0;
