@@ -668,7 +668,7 @@ $.printPreview = {
     subNavInit(jQuery);
   });
 
-  $('a[href=#collapseSubNav]').on('click', function() {
+  $('a[href="#collapseSubNav"]').on('click', function() {
     $(this).attr('aria-expanded', ($(this).attr('aria-expanded') === 'true' ? 'false' : 'true') );
   });
 

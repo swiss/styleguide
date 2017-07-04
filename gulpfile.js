@@ -81,7 +81,7 @@ gulp.task('vendors', function() {
       'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
       'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
       'node_modules/bootstrap-accessibility-plugin/plugins/js/bootstrap-accessibility.js',
-      'node_modules/tablesorter/js/jquery.tablesorter.js',
+      'node_modules/tablesorter/dist/js/jquery.tablesorter.js',
       'node_modules/jquery-drilldown/dist/jquery.drilldown.min.js',
       'node_modules/Placeholdr/placeholdr.js',
       'node_modules/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
