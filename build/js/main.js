@@ -684,14 +684,15 @@ function subNavInit($) {
   'use strict';
 
   var $drilldown = $('.drilldown[class*=col-]');
+  var width = Math.max(window.innerWidth, $(window).width());
 
-  if ($(window).width() <= 767 && !$drilldown.hasClass('collapse-enabled')) {
+  if (width <= 767 && !$drilldown.hasClass('collapse-enabled')) {
     $drilldown
       .addClass('collapse-enabled')
       .find('.drilldown-container')
       .addClass('collapse')
       .attr('id', 'collapseSubNav');
-  } else if ($(window).width() > 767 && $drilldown.hasClass('collapse-enabled')) {
+  } else if (width > 767 && $drilldown.hasClass('collapse-enabled')) {
     $drilldown
       .removeClass('collapse-enabled')
       .find('.drilldown-container')
