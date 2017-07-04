@@ -4,20 +4,20 @@
  * Load required plugins
  */
 var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')(),
-    browserSync = require('browser-sync'),
-    reload = browserSync.reload,
-    runSequence = require('run-sequence'),
-    argv = require('yargs').argv,
-    rimraf = require('rimraf'),
-    assemble = require('fabricator-assemble'),
-    yaml = require('js-yaml'),
-    fs = require('fs'),
-    globby = require('globby'),
-    path = require('path'),
-    markdown = require('markdown-it')({
-      html: true
-    });
+  $ = require('gulp-load-plugins')(),
+  browserSync = require('browser-sync'),
+  reload = browserSync.reload,
+  runSequence = require('run-sequence'),
+  argv = require('yargs').argv,
+  rimraf = require('rimraf'),
+  assemble = require('fabricator-assemble'),
+  yaml = require('js-yaml'),
+  fs = require('fs'),
+  globby = require('globby'),
+  path = require('path'),
+  markdown = require('markdown-it')({
+    html: true
+  });
 
 /**
  * Configuration
@@ -52,12 +52,12 @@ gulp.task('vendors', function() {
 
   // CSS VENDORS
   gulp.src([
-      'node_modules/Yamm/yamm/yamm.css',
-      'node_modules/bootstrap-accessibility-plugin/plugins/css/bootstrap-accessibility.css',
-      'node_modules/blueimp-gallery/css/blueimp-gallery.min.css',
-      'node_modules/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
-      'node_modules/pikaday/css/pikaday.css'
-    ])
+    'node_modules/Yamm/yamm/yamm.css',
+    'node_modules/bootstrap-accessibility-plugin/plugins/css/bootstrap-accessibility.css',
+    'node_modules/blueimp-gallery/css/blueimp-gallery.min.css',
+    'node_modules/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
+    'node_modules/pikaday/css/pikaday.css'
+  ])
     .pipe($.concat('vendors.css'))
     .pipe($.cleanCss())
     .pipe(gulp.dest(config.framework.dest + '/css'));
@@ -65,30 +65,32 @@ gulp.task('vendors', function() {
   // JS VENDORS
   // (with jQuery and Bootstrap dependencies first)
   gulp.src([
-      'node_modules/jquery/dist/jquery.js',
-      'node_modules/drmonty-chosen/js/chosen.jquery.min.js',
-      'node_modules/typeahead.js/dist/typeahead.bundle.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/button.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
-      'node_modules/bootstrap-accessibility-plugin/plugins/js/bootstrap-accessibility.js',
-      'node_modules/tablesorter/dist/js/jquery.tablesorter.js',
-      'node_modules/jquery-drilldown/dist/jquery.drilldown.min.js',
-      'node_modules/Placeholdr/placeholdr.js',
-      'node_modules/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
-      'node_modules/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
-      'node_modules/moment/moment.js',
-      'node_modules/pikaday/pikaday.js'
-    ])
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/drmonty-chosen/js/chosen.jquery.js',
+    'node_modules/typeahead.js/dist/typeahead.bundle.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/button.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+    'node_modules/bootstrap-accessibility-plugin/plugins/js/bootstrap-accessibility.js',
+    'node_modules/tablesorter/dist/js/jquery.tablesorter.js',
+    'node_modules/jquery-drilldown/dist/jquery.drilldown.js',
+    'node_modules/Placeholdr/placeholdr.js',
+    'node_modules/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
+    'node_modules/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
+    'node_modules/moment/moment.js',
+    'node_modules/pikaday/pikaday.js'
+  ])
+    .pipe($.concat('vendors.js'))
+    .pipe(gulp.dest(config.framework.dest + '/js'))
     .pipe($.concat('vendors.min.js'))
     .pipe($.uglify())
     .pipe(gulp.dest(config.framework.dest + '/js'));
@@ -96,9 +98,9 @@ gulp.task('vendors', function() {
   // FONTS SOURCES
   // Important to add the bootstrap fonts to avoid issues with the fonts include path
   gulp.src([
-      'node_modules/bootstrap-sass/assets/fonts/bootstrap/*',
-      'assets/fonts/*'
-    ])
+    'node_modules/bootstrap-sass/assets/fonts/bootstrap/*',
+    'assets/fonts/*'
+  ])
     .pipe(gulp.dest(config.framework.dest + '/fonts'));
 });
 
@@ -200,11 +202,11 @@ gulp.task('assemble', function(done) {
     if (locale.disabled) continue;
 
     var dest = config.styleguide.dest + '/' + locale.code,
-        data = {
-          locale: locale.code,
-          version: fs.readFileSync('VERSION', 'utf-8')
-        },
-        dictionary = {};
+      data = {
+        locale: locale.code,
+        version: fs.readFileSync('VERSION', 'utf-8')
+      },
+      dictionary = {};
 
     // Get all translation files for the current locale
     var translations = globby.sync('src/locales/' + locale.code + '/*.yml');
@@ -264,7 +266,7 @@ gulp.task('assemble', function(done) {
         },
         renderFile: function(path, file) {
           var fileName = 'src/materials-data/' + path + file,
-              exists = fs.existsSync(fileName);
+            exists = fs.existsSync(fileName);
 
           if (!exists) return '[File "' + fileName + '" doesn’t exist.]';
 
@@ -382,7 +384,7 @@ gulp.task('serve', ['assemble-everything'], function () {
 gulp.task('deploy', function () {
   if (argv.github) {
     return gulp.src(config.styleguide.dest + '/**/*')
-     .pipe($.ghPages());
+      .pipe($.ghPages());
   }
   else {
     return gulp.src(config.styleguide.dest + '/**/*')
