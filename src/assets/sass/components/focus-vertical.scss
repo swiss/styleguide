@@ -1,0 +1,871 @@
+/* ==========================================================
+ * focus.scss
+ * Focus style
+ *
+ * Author: Yann, yann@antistatique.net
+ * Date:   2014-05-15 10:44:38
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.tab-content {
+}
+
+nav.nav-vertical {
+
+
+}
+
+.mod-teaserfocus {
+
+  position: relative;
+
+  .tab-content {
+    width: 75%;
+    display: inline-block
+  }
+
+  .nav-tabs {
+    display: flex;
+    width: 25%;
+    flex-direction:column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+
+    flex-wrap: wrap;
+
+    border: 10px solid green;
+
+    .active {
+      border-right: 2px red;
+    }
+
+    li a {
+      display: block;
+      height: 20%;
+    }
+
+  }
+
+}
+
+.focus.focus-vertical {
+
+  .tab-content {
+    float:left;
+    width: 75%;
+  }
+
+  .nav.nav-tabs {
+    width: 25%;
+  }
+
+  .nav.nav-tabs li {
+    display: block;
+  }
+
+}
+
+
+// admin.ch:
+
+@media all {
+  .mod-iframe iframe {
+    width: 100%;
+  }
+  .mod-iframe iframe.brennpunkteteaser-height {
+    height: 23em;
+    margin-bottom: -0.5em;
+  }
+  .mod-teaserfocus .mod-iframe {
+    margin: 0 15px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .mod-iframe iframe.brennpunkteteaser-height {
+    height: 17.95em;
+  }
+}
+@media all and (max-width: 767px) {
+  .mod-iframe iframe.brennpunkteteaser-height {
+    height: 33.6em;
+  }
+}
+
+@media all {
+  .mod-link a {
+    text-decoration: none;
+  }
+}
+
+@media all {
+  .mod-linklist .list-unstyled li {
+    padding-bottom: 0.6em;
+  }
+  .mod-linklist .list-unstyled li:last-child {
+    padding-bottom: 0;
+  }
+  .mod-linklist .list-unstyled li {
+    font-size: 1.1em;
+  }
+  .mod-linklist .pagination-container {
+    text-align: left;
+  }
+  .mod-linklist .pager_bottom .pagination-container {
+    border-top: 1px solid #D5D5D5;
+  }
+  footer .site-map .mod-linklist .list-unstyled li {
+    padding-bottom: 0;
+  }
+  footer .site-map .mod-linklist .list-unstyled li {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  .mod-leftnavigation .nav-page-list li {
+    /* temporary fix, can be removed later if webguidelines have implemented it */
+  }
+  .mod-leftnavigation .nav-page-list li.active {
+    padding: 10px;
+  }
+}
+
+@media all {
+  .mod-mainnavigation .container-fluid.loading {
+    position: relative;
+    min-height: 200px;
+  }
+  .mod-mainnavigation .container-fluid.loading:before {
+    background-color: #fff;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    opacity: 0.5;
+  }
+  .mod-mainnavigation .container-fluid.loading:after {
+    position: absolute;
+    content: "\f021";
+    font: normal normal normal 18px/1 FontAwesome;
+    color: #454545;
+    top: 50%;
+    left: 50%;
+    margin-left: -14px;
+    margin-top: -14px;
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+    z-index: 11;
+  }
+  .mod-mainnavigation .nav-main.yamm .nav > li > a:not([data-toggle]):after {
+    content: "";
+  }
+  .dynmainnav {
+    z-index: 8500;
+    min-height: 50px;
+    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  .mod-mainnavigation .nav-mobile .table-cell > a {
+    display: table-cell;
+  }
+}
+
+@media all {
+  .mod-nsbabonnement {
+    margin-bottom: 1.5em;
+  }
+  .mod-nsbabonnement section {
+    margin-top: 1.5em;
+    padding: .8em;
+    border: 1px solid #ccc;
+  }
+  .mod-nsbabonnement fieldset {
+    position: relative;
+  }
+  .mod-nsbabonnement fieldset .form-group.has-warning {
+    padding: 6px 10px 6px 10px;
+  }
+  .mod-nsbabonnement fieldset .form-group .control-label {
+    text-align: left;
+  }
+  .mod-nsbabonnement fieldset .form-group .error.help-block {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * CLEARFIX
+ * see: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+@media all {
+  html.js .mod-nsbnewslist .mod-dynamic.loading:after {
+    top: 85px;
+  }
+  .mod-nsbnewslist h3 {
+    margin: 0;
+  }
+  .mod-nsbnewslist p {
+    margin: 2px 0 5px 0;
+  }
+  .mod-nsbnewslist #newsFilter {
+    margin-top: 1.5em;
+  }
+  .mod-nsbnewslist .news-feed .list-group-item:last-child {
+    border-bottom: 1px solid #ccc;
+  }
+  .mod-nsbnewslist .chosen-container-single .chosen-search input[type="text"] {
+    background-image: none !important;
+  }
+  .mod-nsbnewslist .search-result {
+    padding-top: 5px;
+  }
+  .mod-nsbnewslist .form-group {
+    min-height: 2em;
+  }
+  .mod-nsbnewslist select,
+  .mod-nsbnewslist input {
+    width: 24.6em;
+  }
+  .mod-nsbnewslist input[type=text],
+  .mod-nsbnewslist input[type=date] {
+    float: right;
+    height: auto;
+    padding: 0.4em 0.3076em;
+    font-size: 14px;
+    line-height: 1.2em;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #757575;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  }
+  .mod-nsbnewslist .chosen-container {
+    float: right;
+    line-height: 1.2em;
+  }
+  .mod-nsbnewslist .chosen-container .chosen-results {
+    width: calc(24.6em - 2px) !important;
+  }
+  .mod-nsbnewslist .chosen-container .chosen-results li a {
+    white-space: normal;
+  }
+  .mod-nsbnewslist .nsb-advanced-search {
+    font-size: .9em;
+  }
+  .skin-layout-template-contentpagewide .main-content > .mod-nsbnewslist .form-group {
+    max-width: 70%;
+  }
+  .skin-layout-template-contentpagefull .main-content > .mod-nsbnewslist .form-group {
+    max-width: 60%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mod-nsbnewslist .news-feed:before,
+  .mod-nsbnewslist .news-feed:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  .mod-nsbnewslist .news-feed:after {
+    clear: both;
+  }
+  .mod-nsbnewslist .news-feed .list-group-item {
+    width: 33%;
+  }
+  .main-content .mod-nsbnewslist .news-feed:before,
+  .main-content .mod-nsbnewslist .news-feed:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  .main-content .mod-nsbnewslist .news-feed:after {
+    clear: both;
+  }
+  .main-content .mod-nsbnewslist .news-feed .list-group-item {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .mod-nsbnewslist .form-group {
+    margin-bottom: 0;
+    margin-top: 1em;
+  }
+  .mod-nsbnewslist select {
+    float: right;
+    height: 2.4em;
+  }
+}
+@media screen and (max-width: 491px) {
+  .mod-nsbnewslist .btn-primary {
+    float: left;
+  }
+  .mod-nsbnewslist select,
+  .mod-nsbnewslist input {
+    width: 100%;
+  }
+  .mod-nsbnewslist select {
+    float: none;
+  }
+  .mod-nsbnewslist input[type=date] {
+    float: right;
+  }
+}
+
+/**
+ * CLEARFIX
+ * see: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+@media all {
+  .mod-nsbsinglemessage:before,
+  .mod-nsbsinglemessage:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  .mod-nsbsinglemessage:after {
+    clear: both;
+  }
+  .mod-nsbsinglemessage h3 {
+    margin: 0;
+  }
+  .mod-nsbsinglemessage p {
+    margin: 1.3em 0 5px 0;
+  }
+}
+@media (min-width: 768px) {
+  .mod-nsbsinglemessage .news-feed .list-group-item {
+    float: none;
+    width: auto;
+  }
+}
+
+/**
+ * CLEARFIX
+ * see: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+@media all {
+  .mod-one-line-form .error-validation {
+    width: 100%;
+    margin-bottom: 10px;
+    color: red;
+    float: left;
+  }
+}
+@media (max-width: 767px) {
+  .mod-one-line-form .btn[type=submit] {
+    float: right;
+    margin-top: 15px;
+  }
+}
+
+@media all {
+  .mod-search .search-result h4 {
+    font-weight: normal;
+  }
+  .mod-search .tab-content .form-inline {
+    border-bottom: 1px solid #CCC;
+  }
+  .mod-search .form-inline .form-group {
+    margin: 5px 0;
+  }
+  .mod-search .form-inline label {
+    margin-right: 0.4em;
+  }
+  .mod-search .form-inline .labelto {
+    margin-left: 1.6em;
+  }
+  .mod-search .pager_top {
+    padding: 10px 0 20px 0;
+  }
+  .mod-search .pager_top .pagination-container {
+    padding-bottom: 18px;
+  }
+  .mod-search .pg-bottom .pagination-container {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .mod-search #errorMessage ul {
+    list-style-type: none;
+    padding: 0;
+    color: #dc0018;
+  }
+  .mod-search #errorMessage ul li {
+    margin: 0;
+  }
+  .mod-search .nojs {
+    color: #dc0018;
+  }
+  .mod-search #searchResults {
+    display: none;
+  }
+  .mod-search.loading .search-box .form-group {
+    position: relative;
+  }
+  .mod-search.loading .search-box .form-group:after {
+    position: absolute;
+    content: "\f021";
+    font: normal normal normal 18px/1 FontAwesome;
+    font-size: inherit;
+    color: #454545;
+    top: .6em;
+    right: .4em;
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+    z-index: 11;
+  }
+  .mod-search .dynamic-content.loading {
+    position: relative;
+    min-height: 200px;
+  }
+  .mod-search .dynamic-content.loading:before {
+    background-color: #fff;
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    opacity: 0.5;
+  }
+  .mod-search .dynamic-content.loading:after {
+    position: absolute;
+    content: "\f021";
+    font: normal normal normal 18px/1 FontAwesome;
+    color: #454545;
+    top: 50%;
+    left: 50%;
+    margin-left: -14px;
+    margin-top: -14px;
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+    z-index: 11;
+  }
+  html.js .mod-search .nojs {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .mod-search .form-inline {
+    margin-top: 0;
+  }
+  .mod-search .form-inline .form-group {
+    padding: 5px 0;
+    margin: 0;
+  }
+  .mod-search .form-inline .labelto {
+    margin-left: 0;
+    margin-top: 1.6em;
+  }
+  .mod-search.loading .search-box .form-group:after {
+    top: auto;
+    bottom: 1.1em;
+  }
+}
+
+@media all {
+  .mod-separator {
+    margin-bottom: 11px;
+  }
+}
+
+@media all {
+  .mod-singlepageapplication iframe {
+    width: 100%;
+  }
+  .mod-singlepageapplication iframe.brennpunkteteaser-height {
+    height: 23em;
+    margin-bottom: -0.5em;
+  }
+  .mod-singlepageapplication .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  .mod-singlepageapplication .hint-message {
+    font-weight: bold;
+  }
+  .mod-teaserfocus .mod-singlepageapplication {
+    margin: 0 15px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .mod-singlepageapplication iframe.brennpunkteteaser-height {
+    height: 17.95em;
+  }
+}
+@media all and (max-width: 767px) {
+  .mod-singlepageapplication iframe.brennpunkteteaser-height {
+    height: 33.6em;
+  }
+}
+
+/**
+ * CLEARFIX
+ * see: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+@media all {
+  .mod-sitemap {
+    margin-top: 1.5em;
+  }
+  .mod-sitemap > .row {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .mod-sitemap > .row > .col-sm-6,
+  .mod-sitemap > .row > .col-sm-4,
+  .mod-sitemap > .row > .col-sm-3 {
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #cccccc;
+    display: table-cell;
+    float: none;
+  }
+  .mod-sitemap > .row > .col-sm-6:first-child,
+  .mod-sitemap > .row > .col-sm-4:first-child,
+  .mod-sitemap > .row > .col-sm-3:first-child {
+    border-left: none;
+  }
+  .mod-sitemap > .row > .col-sm-6:last-child,
+  .mod-sitemap > .row > .col-sm-4:last-child,
+  .mod-sitemap > .row > .col-sm-3:last-child {
+    border-right: none;
+  }
+  .mod-sitemap a {
+    font-size: 1em;
+  }
+  .mod-sitemap h3 {
+    margin-top: 0;
+  }
+  .mod-sitemap h3 a {
+    line-height: 1.3;
+    color: #006699;
+    word-wrap: break-word;
+  }
+  .mod-sitemap ul,
+  .mod-sitemap li {
+    background: none;
+    float: none;
+    border: none;
+    margin-top: 0.8em;
+    min-height: 0;
+    max-width: none;
+    font-size: 1em;
+  }
+  .mod-sitemap ul a,
+  .mod-sitemap li a {
+    font-size: 1em;
+    line-height: 1.2;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    color: #006699;
+    word-wrap: break-word;
+  }
+  .mod-sitemap ul ul,
+  .mod-sitemap li ul {
+    padding: 0 0 0 1.2em;
+  }
+  .mod-sitemap ul ul li,
+  .mod-sitemap li ul li {
+    line-height: 1em;
+  }
+  .mod-sitemap ul ul a,
+  .mod-sitemap li ul a {
+    font-size: 0.928em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mod-sitemap {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .mod-sitemap > .row > .col-sm-6,
+  .mod-sitemap > .row > .col-sm-4,
+  .mod-sitemap > .row > .col-sm-3 {
+    border: none;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media all {
+  .mod-table {
+    overflow-x: auto;
+    /** Bugfix Webguidelines ver. 2.5.0: table with stripes, background-color was set
+			for odd instead of for even so no stripes were displayed **/
+  }
+  .mod-table .table {
+    /*CNGIMPL-2750*/
+  }
+  .mod-table .table img {
+    max-width: 183px;
+  }
+  .mod-table .table[data-cols="1"] img {
+    max-width: 553px;
+  }
+  .mod-table .table[data-cols="2"] img {
+    max-width: 276.5px;
+  }
+  .mod-table .table .tablesorter-header-inner,
+  .mod-table .table .table-sort thead th {
+    white-space: nowrap;
+  }
+  .mod-table .table tbody tbody tr td:first-child,
+  .mod-table .table tbody tbody tr th:first-child {
+    background: transparent;
+  }
+  .mod-table .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: transparent;
+  }
+  .mod-table .table-striped > tbody > tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+  }
+  .mod-table .table-simple {
+    border: 0 !important;
+  }
+  .mod-table .table-simple tbody tr td,
+  .mod-table .table-simple tbody tr th,
+  .mod-table .table-simple thead tr td,
+  .mod-table .table-simple thead tr th {
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+  .mod-table .table-naked {
+    border: 0 !important;
+  }
+  .mod-table .jsontable .sorter-false:after {
+    content: "";
+  }
+  .mod-table .table-legend,
+  .mod-table .table-sources {
+    display: block;
+    margin-top: 3.06em;
+  }
+  .mod-table table + small.table-legend,
+  .mod-table table + small.table-sources {
+    margin-top: 1em;
+  }
+}
+
+@media all {
+  .mod-tabs .content .mod-nsbsinglemessage .newsteaser-grouped article {
+    padding-top: 2em;
+  }
+  .mod-tabs .content .mod-nsbsinglemessage .newsteaser p.sidehead {
+    position: relative;
+    top: auto;
+  }
+  .mod-tabs .content .mod-nsbsinglemessage .newsteaser p.sidehead span.category {
+    display: none;
+  }
+  .skin-layout-editmode .mod-tabs {
+    margin-bottom: 1em;
+  }
+  .skin-layout-editmode .mod-tabs .tab-content .tab-pane {
+    display: block !important;
+    left: -9999px;
+    position: absolute;
+    width: 100%;
+  }
+  .skin-layout-editmode .mod-tabs .tab-content .tab-pane.active {
+    position: relative;
+    left: auto;
+    width: auto;
+  }
+}
+
+@media all {
+  .mod-teaser .layoutLeft h2,
+  .mod-teaser .layoutLeft h3,
+  .mod-teaser .layoutLeft h4,
+  .mod-teaser .layoutLeft h5,
+  .mod-teaser .layoutLeft h6 {
+    margin-top: 0;
+  }
+  .mod-teaser .layoutLeft figure.pull-left {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .mod-teaser .layoutLeft .teaserDate {
+    margin-top: 0;
+  }
+  .mod-teaser .text-left .teaserDate {
+    margin-top: 0;
+  }
+  .mod-teaser figure + .teaserDate,
+  .mod-teaser a + .teaserDate {
+    margin-top: 22px;
+  }
+  .mod-teaser .teaserDate {
+    margin-bottom: 0;
+  }
+  .mod-teaser .teaserDate + h2,
+  .mod-teaser .teaserDate + h3,
+  .mod-teaser .teaserDate + h4,
+  .mod-teaser .teaserDate + h5,
+  .mod-teaser .teaserDate + h6 {
+    margin-top: 0;
+  }
+}
+
+@media all {
+  .col-md-12 > .mod-teaserfocus,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus {
+    clear: both;
+    overflow: hidden;
+    display: block;
+    border: 1px solid #ccc;
+  }
+  .col-md-12 > .mod-teaserfocus .nav-tabs,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs {
+    display: block;
+  }
+  .col-md-12 > .mod-teaserfocus .equalheight-ready .nav-tabs.tabs-2 li,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .equalheight-ready .nav-tabs.tabs-2 li {
+    height: 50%;
+  }
+  .col-md-12 > .mod-teaserfocus .equalheight-ready .nav-tabs.tabs-3 li,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .equalheight-ready .nav-tabs.tabs-3 li {
+    height: 33.3333%;
+  }
+  .col-md-12 > .mod-teaserfocus .equalheight-ready .nav-tabs.tabs-4 li,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .equalheight-ready .nav-tabs.tabs-4 li {
+    height: 25%;
+  }
+  .col-md-12 > .mod-teaserfocus .equalheight-ready .nav-tabs.tabs-5 li,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .equalheight-ready .nav-tabs.tabs-5 li {
+    height: 20%;
+  }
+  .col-md-12 > .mod-teaserfocus .tab-content.tab-border.tab-focus.tabs-1,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .tab-content.tab-border.tab-focus.tabs-1 {
+    border-right: none;
+  }
+  .col-md-12 > .mod-teaserfocus .tab-content.tab-border.tab-focus,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .tab-content.tab-border.tab-focus {
+    width: 75%;
+    float: left;
+    border: none;
+    border-right: 1px solid #CCC;
+  }
+  .col-md-12 > .mod-teaserfocus .nav-tabs,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs {
+    float: left;
+    width: 25%;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    background: #F5F5F5;
+  }
+  .col-md-12 > .mod-teaserfocus .nav-tabs li,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li {
+    float: none;
+    display: table;
+    width: 100%;
+    border-left: none;
+    border-bottom: 1px solid #CCC !important;
+    margin-bottom: 0;
+  }
+  .col-md-12 > .mod-teaserfocus .nav-tabs li:first-child,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li:first-child {
+    border-top: none;
+  }
+  .col-md-12 > .mod-teaserfocus .nav-tabs li:last-child,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li:last-child {
+    margin-bottom: 0;
+    border-bottom: none !important;
+  }
+  .col-md-12 > .mod-teaserfocus .nav-tabs li:last-child a,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li:last-child a {
+    border-color: transparent;
+  }
+  .col-md-12 > .mod-teaserfocus .nav-tabs li a,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li a {
+    height: 100%;
+    vertical-align: middle;
+    display: table-cell;
+    border-bottom: none;
+  }
+  .col-md-12 > .mod-teaserfocus .nav-tabs li a:focus,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li a:focus,
+  .col-md-12 > .mod-teaserfocus .nav-tabs li a:hover,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li a:hover {
+    border-color: #dc0018;
+  }
+  .col-md-12 > .mod-teaserfocus .nav-tabs li.active > a,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li.active > a,
+  .col-md-12 > .mod-teaserfocus .nav-tabs li.active > a:focus,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li.active > a:focus,
+  .col-md-12 > .mod-teaserfocus .nav-tabs li.active > a:hover,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li.active > a:hover,
+  .col-md-12 > .mod-teaserfocus .nav-tabs li > a:focus,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li > a:focus,
+  .col-md-12 > .mod-teaserfocus .nav-tabs li > a:hover,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li > a:hover {
+    padding-right: 12px;
+    border-right: 3px solid #dc0018 !important;
+    border-bottom: none;
+  }
+  .col-md-12 > .mod-teaserfocus .nav-tabs li.active > a:before,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li.active > a:before,
+  .col-md-12 > .mod-teaserfocus .nav-tabs li.active > a:focus:before,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li.active > a:focus:before,
+  .col-md-12 > .mod-teaserfocus .nav-tabs li.active > a:hover:before,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li.active > a:hover:before,
+  .col-md-12 > .mod-teaserfocus .nav-tabs li > a:focus:before,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li > a:focus:before,
+  .col-md-12 > .mod-teaserfocus .nav-tabs li > a:hover:before,
+  .col-md-12 > .par > .teaserfocus > .mod-teaserfocus .nav-tabs li > a:hover:before {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .mod-teaserfocus .tab-content.tab-focus.tabs-1 {
+    border-bottom: 1px solid #ccc;
+  }
+}
