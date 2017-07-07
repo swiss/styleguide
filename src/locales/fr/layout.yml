@@ -10,9 +10,9 @@ form-elements:
       Les champs de saisie permettent l’entrée de contenu (p. ex. le nom).
 
       Pour entrer une date, une solution HTLM5 est proposée. Dans les navigateurs qui ne sont pas compatibles HTML5, la date doit être saisie manuellement.
-      
+
       **Accessibilité
-      
+
         Afin d’assurer l’accessibilité, les formulaires et encadrés de saisie doivent être marqués avec des étiquettes. Un identifiant d’étiquette ne doit être utilisé qu’une seule fois par page. Il convient de désigner les champs de manière compréhensible, de préférence on respectera la WAI.
 
         Un feedback peut être donné aux utilisateurs grâce aux classes `.has-error`, `.has-warning` ou `.has-success`.
@@ -33,13 +33,17 @@ form-elements:
     help: |
       Une liste déroulante permet d’effectuer une sélection à partir d’une liste prédéfinie. Cette liste apparaît dans un menu après avoir cliqué sur l’élément. Après avoir effectué une sélection, le résultat est affiché.
       S’il existe plus de dix options, un champ de recherche est proposé en début de liste.
-
-      L’attribut `multiple` sur `<select>` permet aux utilisateurs de sélectionner plus d’une option.
-
     release: |
       **2.1.2:**
 
       - étiquette BeforeSelect ajoutée pour les lecteurs d’écran
+  selects-multiple:
+    title: Listes de sélection multiple
+    help: |
+      Les listes de sélection multiple se comporte de la même manière que les liste de sélection simple. Mais il est possible de sélectionner plus d'une option.
+    release: |
+      **3.1:**
+      - Ajoutez les listes de sélection multiple
   checkboxes:
     title: Cases à cocher
     help: Les cases à cocher sont utilisées lorsqu’un ou plusieurs éléments doivent être sélectionnés dans une liste prédéfinie.
@@ -201,7 +205,7 @@ tables:
       **3.0.0**
 
         - retirez l’attribut `role="columnheader"` de la balise `<tr>
-        - retirez l’attribut `role="rowheader"` de la balise `<th>` 
+        - retirez l’attribut `role="rowheader"` de la balise `<th>`
 
       **2.1.9**
 
@@ -241,7 +245,7 @@ tables:
       **3.0.0**
 
         - retirez l’attribut `role="columnheader"` de la balise `<tr>
-        - retirez l’attribut `role="rowheader"` de la balise `<th>` 
+        - retirez l’attribut `role="rowheader"` de la balise `<th>`
 
       **2.5.0**
 
@@ -284,11 +288,11 @@ typography:
     help: |
       Les titres servent à structurer le contenu d’une page. Plus la hiérarchie est élevée (p. ex. H1), plus le titre est important et il sera pondéré en conséquence par les moteurs de recherche (p. ex. Google). En général, il convient de ne pas utiliser trop de niveaux hiérarchiques, car la clarté pourrait en pâtir. Les hiérarchies de titres H1 à H4 se démarquent les unes des autres en termes de design (les hiérarchies H5 et H6 ont seulement été définies pour la forme).
       Les titres peuvent également être munis de liens. Ils seront alors affichés en bleu.
-      
-      **Accessibilité** 
-      
+
+      **Accessibilité**
+
       Les personnes possédant une vue normale reconnaissent les titres et la structure d’une page à l’aide de la taille et de l’emphase de la police. Tel n’est pas le cas chez les personnes malvoyantes. Elles (ou les lecteurs d’écran) reçoivent ces informations des balises h1 à h6 correspondantes. Il convient donc de les utiliser pour la pondération et non pour une mise en évidence d’ordre graphique.
-     
+
   paragraphs:
     title: Paragraphes
     help: |
@@ -320,7 +324,7 @@ typography:
   links:
     title: Liens
     help: |
-      Par défaut, les liens sont bleus et le texte n’est pas souligné. Lorsque la souris passe sur un lien (mouseover), il devient souligné. Les liens sur lesquels on a déjà cliqué deviennent violets.  
+      Par défaut, les liens sont bleus et le texte n’est pas souligné. Lorsque la souris passe sur un lien (mouseover), il devient souligné. Les liens sur lesquels on a déjà cliqué deviennent violets.
 
       On dévie de cette règle dans deux cas:
       dans le cas d’un lien situé dans le corps de texte, le texte muni du lien est souligné. Les liens situés dans un élément de navigation (p. ex. dans la navigation globale) ne sont pas bleu, mais gris. L’apparence et le comportement de ces liens spéciaux sont décrits séparément aux endroits appropriés dans les présentes lignes directrices pour le design web.
