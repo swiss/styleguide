@@ -26,6 +26,14 @@
       <img src="{{#if baseurl}}{{baseurl}}/{{/if}}../img/logo-CH.svg" onerror="this.onerror=null; this.src='{{#if baseurl}}{{baseurl}}/{{/if}}../img/logo-CH.png'" alt="{{t 'styleguide.logo'}}" />
       <h1>{{t 'styleguide.title'}}</h1>
     </a>
-    <input id="global-search-input" class="styleguides-search">
+    <div class="global-search">
+      <label for="webguidelines-search">Search:</label>
+      <input id="webguidelines-search" class="search-input" />
+      <div class="search-results">
+        <ul class="search-results-list">
+          <li><a>gugus</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </header>

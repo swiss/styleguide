@@ -1,33 +1,80 @@
 (function($) {
   'use strict';
 
-  function Search(searchLinks, searchInput) {
+  function Search(searchLinks) {
     this.searchLinks = searchLinks;
-    this.searchInput = searchInput;
+  }
+
+  Search.prototype.search = function(filter) {
+    var results = [];
+    this.searchLinks.each(function() {
+      var title = $(this).html();
+      if (title.toLowerCase().indexOf(filter) >= 0) {
+        results.push(new SearchResult(title, $(this).attr('href')));
+      }
+    });
+    return results;
+  };
+
+  function SearchUI(search, htmlElement) {
+    this.searchInput = $('.search-input', $(htmlElement));
+    this.searchResults = $('.search-results', $(htmlElement));
+    this.search = search;
     this.init();
   }
 
-  Search.prototype.init = function () {
+  SearchUI.prototype.init = function () {
     console.log(this.searchInput);
-    console.log(this.searchLinks);
     var that = this;
-    $(this.searchInput).on('change', function(event) {
-      var filter = $(this).val().toLowerCase();
-      that.searchLinks.each(function() {
-        var title = $(this).html().toLowerCase();
-        if (title.indexOf(filter) >= 0) {
-          console.log(title, $(this).attr('href'));
-        }
-      });
+    this.searchInput.keyup(function() {
+      that.onFilterChange(this);
     });
   };
 
-  Search.prototype.update = function() {
+  SearchUI.prototype.onFilterChange = function(input) {
+    var filter = $(input).val();
+    if (filter.length > 1) {
+      this.displayResults(search.search(filter));
+    } else {
+      this.displayMessage('input-required');
+    }
+  };
+
+  SearchUI.prototype.displayResults = function(results) {
+    if (!results.length) {
+      this.displayMessage('nothing-found');
+      return;
+    }
+    this.searchResults.empty();
+    var list = $('<ul></ul>');
+    for (var i in results) {
+      var result = results[i];
+      var item = $('<li></li>')
+        .append($('<a></a>', {
+          html: result.title,
+          href: result.link
+        }));
+      list.append(item);
+    }
+    var group = $('.dropdown-toggle', $('#this').closest('.dropdown')).html();
+    this.searchResults.append(list);
 
   };
 
-  console.log('ok');
+  SearchUI.prototype.displayMessage = function(messageId) {
+    this.searchResults.empty();
+    this.searchResults.html(window.translations['global-search'][messageId]);
+  };
 
-  new Search($('a'), $('.styleguides-search'));
+  function SearchResult(title, link) {
+    this.title = title;
+    this.link = link;
+  }
+
+  var search = new Search($('.nav .dropdown-menu li > a'));
+  new SearchUI(search, $('.global-search'));
+
+
+
 
 })(jQuery);
