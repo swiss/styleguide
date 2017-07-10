@@ -40,23 +40,21 @@ form-elements:
   selects-multiple:
     title: Listes de sélection multiple
     help: |
-      Les listes de sélection multiple se comporte de la même manière que les liste de sélection simple. Mais il est possible de sélectionner plus d'une option.
+      Les listes de sélection multiple se comportent de la même manière que les listes de sélection simple. Mais il est possible de sélectionner plus d'une option.
     release: |
       **3.1:**
-      - Ajoutez les listes de sélection multiple
+      - Ajout des listes de sélection multiple
   checkboxes:
     title: Cases à cocher
     help: Les cases à cocher sont utilisées lorsqu’un ou plusieurs éléments doivent être sélectionnés dans une liste prédéfinie.
     release: |
       **3.0.0**
-
       - Le style personnalisé de cet élément a été supprimé en faveur du style par défaut du navigateur pour une meilleure accessibilité. Pour garder le style précédent et les variantes, les cases à cocher doivent maintenant être situées à l’intérieur de l’étiquette.
   radios:
     title: Boutons radio
     help: Les boutons radio permettent aux utilisateurs de faire un choix unique dans une liste prédéfinie. Les boutons radio peuvent être regroupés. Un seul élément peut être choisi à l’intérieur d’un groupe.
     release: |
       **3.0.0**
-
       - Le style personnalisé de cet élément a été supprimé en faveur du style par défaut du navigateur pour une meilleure accessibilité. Pour garder le style précédent et les variantes, les boutons radio doivent maintenant être situés à l’intérieur de l’étiquette.
   buttons:
     title: Boutons
