@@ -1,0 +1,50 @@
+/* ==========================================================
+ * select-multiple.scss
+ * Custom select multiple styles added after the chosen-theme
+ *
+ * Author: Adrian Pauli, apauli@puzzle.ch
+ * Date:   2017-07-07 09:39:23
+ *
+ * Copyright 2017 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ ========================================================== */
+
+.chosen-container.chosen-container-multi {
+
+  width: 100% !important;
+
+  .chosen-choices {
+    border-radius: 4px !important;
+  }
+
+  .chosen-drop {
+    border-radius: 0 0 4px 4px !important;
+  }
+
+  .search-field {
+    height: 27px;
+  }
+
+}
+
+.chosen-container-active.chosen-container-multi {
+
+  .chosen-choices {
+    border-color: $coal;
+    outline: 3px solid $coal;
+    outline-offset: 1px;
+  }
+
+  .chosen-results {
+    margin-top: -1px;
+  }
+
+}
+
+.chosen-with-drop.chosen-container-multi {
+
+  .chosen-choices {
+    border-radius: 4px 4px 0 0 !important;
+  }
+
+}

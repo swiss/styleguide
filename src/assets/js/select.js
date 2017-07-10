@@ -14,7 +14,8 @@
 
   $(document).ready(function(){
     $('select').chosen({
-      disable_search_threshold: 10
+      disable_search_threshold: 10,
+      width: 'auto'
     });
   });
 
