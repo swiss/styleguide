@@ -12,3 +12,8 @@ hr {
         width:auto!important;
     }
 }
+
+// Hides click to call button of Skype for Business
+span.baec5a81-e4d6-4674-97f3-e9220f0136c1 > a {
+  display: none !important;
+}
