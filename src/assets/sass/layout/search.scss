@@ -3,6 +3,10 @@
   float:right;
   position:relative;
 
+  .search-input {
+    margin-left: 5px;
+  }
+
   .search-results:before,
   .search-results:after {
     z-index: 99999;
@@ -35,7 +39,7 @@
   }
 
   .search-results {
-    //display: none;
+    display: none;
     padding: 24px 16px 24px 24px;
     background-color: $white;
     border: 1px solid $light-grey;
@@ -46,19 +50,33 @@
     margin-top: 13px;
     min-width: 290px;
 
-    ul {
-      list-style: none;
+    .search-results-list {
       overflow-y: auto;
       overflow-x: auto;
-      margin: 0;
-      padding: 0;
       max-height: calc(100vh - 150px);
 
-      li {
-        margin: 20px 20px 20px 0;
+      h3 {
+        padding: 5px 0;
+        margin: 5px 5px 5px 0;
+        border-bottom: 1px solid $light-grey;
       }
 
+      ul {
+        list-style: none;
+        margin: 0 5px 15px 0;
+        padding: 0;
+
+        li {
+          margin: 5px 0;
+          font-size: 14px;
+
+          a {
+            cursor: pointer;
+          }
+        }
+      }
     }
+
   }
 
 
