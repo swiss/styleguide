@@ -39,7 +39,7 @@
   }
 
   .search-results:hover,
-  .search-input:focus:not([value=""]) + .search-results{
+  .search-input.has-input:focus + .search-results{
     display: block;
   }
 
@@ -81,7 +81,6 @@
         }
       }
     }
-
   }
 }
 

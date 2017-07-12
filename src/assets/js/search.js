@@ -1,10 +1,27 @@
 (function($) {
   'use strict';
 
+  /**
+   * Contains the search logic.
+   *
+   * @param searchLinks All elements which shall be included in the search.
+   * @constructor
+   */
   function Search(searchLinks) {
     this.searchLinks = searchLinks;
   }
 
+  /**
+   * Searches the defined html elements and returns the result.
+   *
+   * Result format:
+   * {
+   *  "{group-name}": SearchResult[]
+   * }
+   *
+   * @param filter The search term
+   * @returns {{}}
+   */
   Search.prototype.search = function(filter) {
     var results = {};
     this.searchLinks.each(function() {
@@ -21,11 +38,24 @@
     return results;
   };
 
+  /**
+   * Does all UI stuff.
+   *
+   * @param search The search object to be used.
+   * @param htmlElement The html element where to put the results to.
+   * @constructor
+   */
   function SearchUI(search, htmlElement) {
     this.searchResults = $('.search-results-list', $(htmlElement));
     this.search = search;
+    this.minAmountOfChars = 2;
   }
 
+  /**
+   * Start listening for search terms on the given input element.
+   *
+   * @param htmlElement The input element
+   */
   SearchUI.prototype.listen = function (htmlElement) {
     var that = this;
     $(htmlElement).keyup(function() {
@@ -33,15 +63,30 @@
     });
   };
 
+  /**
+   * Event handler for filter changes.
+   *
+   * @param input The input element on which the event occurred.
+   */
   SearchUI.prototype.onFilterChange = function(input) {
     var filter = $(input).val();
-    if (filter.length > 1) {
+    if (filter.length > 0) {
+      $(input).addClass('has-input');
+    } else {
+      $(input).removeClass('has-input');
+    }
+    if (filter.length >= this.minAmountOfChars) {
       this.displayResults(search.search(filter));
     } else {
       this.displayMessage('input-required');
     }
   };
 
+  /**
+   * Displays the given results.
+   *
+   * @param results The results
+   */
   SearchUI.prototype.displayResults = function(results) {
     if (!Object.keys(results).length) {
       this.displayMessage('nothing-found');
@@ -64,14 +109,25 @@
       this.searchResults.append(title);
       this.searchResults.append(list);
     }
-
   };
 
+  /**
+   * Displays a message
+   *
+   * @param messageId The translation id of the message in the context styleguide.global-search
+   */
   SearchUI.prototype.displayMessage = function(messageId) {
     this.searchResults.empty();
     this.searchResults.html(window.translations['global-search'][messageId]);
   };
 
+  /**
+   * Holds a search result.
+   *
+   * @param title The results title
+   * @param link The results link
+   * @constructor
+   */
   function SearchResult(title, link) {
     this.title = title;
     this.link = link;
