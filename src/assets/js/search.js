@@ -22,15 +22,13 @@
   };
 
   function SearchUI(search, htmlElement) {
-    this.searchInput = $('.search-input', $(htmlElement));
     this.searchResults = $('.search-results-list', $(htmlElement));
     this.search = search;
-    this.init();
   }
 
-  SearchUI.prototype.init = function () {
+  SearchUI.prototype.listen = function (htmlElement) {
     var that = this;
-    this.searchInput.keyup(function() {
+    $(htmlElement).keyup(function() {
       that.onFilterChange(this);
     });
   };
@@ -80,9 +78,9 @@
   }
 
   var search = new Search($('.nav .dropdown-menu li > a'));
-  new SearchUI(search, $('.global-search'));
-
-
-
+  var standardUI = new SearchUI(search, $('.global-search-standard'));
+  standardUI.listen($('.global-search-standard .search-input'));
+  var mobileUI = new SearchUI(search, $('.global-search-mobile'));
+  mobileUI.listen($('.global-search-mobile .search-input'))
 
 })(jQuery);

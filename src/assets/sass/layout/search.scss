@@ -1,5 +1,10 @@
 .global-search {
 
+  display: none;
+  @media only screen and (min-width: $screen-sm-min) {
+    display: block;
+  }
+
   float:right;
   position:relative;
 
@@ -53,7 +58,7 @@
     .search-results-list {
       overflow-y: auto;
       overflow-x: auto;
-      max-height: calc(100vh - 150px);
+      max-height: calc(100vh - 200px);
 
       h3 {
         padding: 5px 0;
@@ -78,6 +83,34 @@
     }
 
   }
+}
 
+.global-search.global-search-mobile {
 
+  float: none;
+  padding: 5px;
+  display: block;
+
+  .search-results-list {
+    max-height: none;
+  }
+
+  .search-results {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 0 10px;
+  }
+
+  .search-results:before,
+  .search-results:after {
+    display: none;
+    content: '';
+  }
+
+  .search-input {
+    width: 100%;
+    margin-left: 0;
+    padding: 5px;
+  }
 }
