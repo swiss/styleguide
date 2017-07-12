@@ -27,10 +27,16 @@
       <h1>{{t 'styleguide.title'}}</h1>
     </a>
     <div class="global-search global-search-standard">
-      <label for="webguidelines-search">{{t 'styleguide.global-search.title'}}:</label>
-      <input id="webguidelines-search" class="search-input" />
+      <form class="form-inline">
+        <fieldset>
+          <div class="form-group">
+            <label class="control-label" for="webguidelines-search">{{t 'styleguide.global-search.title'}}</label>
+            <input id="webguidelines-search" class="search-input form-control" />
+          </div>
+        </fieldset>
+      </form>
       <div class="search-results">
-        <div class="search-results-list">{{t 'styleguide.global-search.input-required'}}</div>
+        <div class="search-results-list"></div>
       </div>
     </div>
   </div>

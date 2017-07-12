@@ -48,9 +48,15 @@
               <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
             </nav>
             <div class="global-search global-search-mobile">
-              <input placeholder="{{t 'styleguide.global-search.title'}}" class="search-input" />
+              <form class="form-inline">
+                <fieldset>
+                  <div class="form-group">
+                    <input class="search-input form-control" placeholder="{{t 'styleguide.global-search.title'}}"/>
+                  </div>
+                </fieldset>
+              </form>
               <div class="search-results">
-                <div class="search-results-list">{{t 'styleguide.global-search.input-required'}}</div>
+                <div class="search-results-list"></div>
               </div>
             </div>
           </div>

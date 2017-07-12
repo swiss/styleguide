@@ -46,6 +46,7 @@
    * @constructor
    */
   function SearchUI(search, htmlElement) {
+    this.htmlElement = $(htmlElement);
     this.searchResults = $('.search-results-list', $(htmlElement));
     this.search = search;
     this.minAmountOfChars = 2;
@@ -58,9 +59,16 @@
    */
   SearchUI.prototype.listen = function (htmlElement) {
     var that = this;
-    $(htmlElement).keyup(function() {
-      that.onFilterChange(this);
-    });
+    $(htmlElement)
+      .keyup(function() {
+        that.onFilterChange(this);
+      })
+      .focusin(function() {
+        that.onFocusIn();
+      })
+      .focusout(function() {
+        that.onFocusOut();
+      });
   };
 
   /**
@@ -71,15 +79,29 @@
   SearchUI.prototype.onFilterChange = function(input) {
     var filter = $(input).val();
     if (filter.length > 0) {
-      $(input).addClass('has-input');
+      this.htmlElement.addClass('has-input');
     } else {
-      $(input).removeClass('has-input');
+      this.htmlElement.removeClass('has-input');
     }
     if (filter.length >= this.minAmountOfChars) {
       this.displayResults(search.search(filter));
     } else {
       this.displayMessage('input-required');
     }
+  };
+
+  /**
+   * Handles focus in of search input.
+   */
+  SearchUI.prototype.onFocusIn = function() {
+    this.htmlElement.addClass('focused');
+  };
+
+  /**
+   * Handles focus out of search input.
+   */
+  SearchUI.prototype.onFocusOut = function() {
+    this.htmlElement.removeClass('focused');
   };
 
   /**
