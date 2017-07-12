@@ -16,9 +16,6 @@
     .nav-tabs.nav-tabs-focus {
       display: flex;
       position: relative;
-      border-top: 1px solid $silver;
-      border-right: 1px solid $silver;
-      border-left: 1px solid $silver;
       margin-top: 0;
 
       &:after {
@@ -42,10 +39,6 @@
           a {height: 69px;}
         }
 
-        &:first-child,
-        &:first-child:not(.active):hover a {
-          border-left: none;
-        }
 
         a {
           flex-grow: 1;
@@ -113,7 +106,6 @@
     .tab-content.tab-focus {
       padding: 0;
       border-bottom: none;
-      border-top: 1px solid $silver;
 
       h2 {
         font-weight: 700;
