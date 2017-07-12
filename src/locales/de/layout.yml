@@ -33,13 +33,17 @@ form-elements:
     help: |
       Mit einer Dropdown List kann aus einer vorgegebenen Liste eine Auswahl getroffen werden. Diese Liste erscheint in einem Menü nach Klick auf das Element. Nachdem eine Auswahl getroffen wurde, wird das Ergebnis angezeigt.
       Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angeboten.
-
-      Das Attribut `multiple` bei `<select>` erlaubt es den Usern, mehr als eine Option auszuwählen.
-
     release: |
       **2.1.2:**
 
       - added a label before select for screen readers
+  selects-multiple:
+    title: Mehrfach-Auswahllisten
+    help: |
+      Mehrfach-Auswahllisten verhalten sich gleich wie einfache Auswahllisten. Allerdings kann mehr als eine Option ausgewählt werden.
+    release: |
+      **3.1:**
+      - proper support for multi selects added
   checkboxes:
     title: Checkboxen
     help: Checkbox werden verwendet, wenn aus einer vorgegebenen Liste ein oder mehrere Elemente ausgewählt werden sollen.

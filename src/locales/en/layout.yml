@@ -31,14 +31,18 @@ form-elements:
     title: Selects
     help: |
       A drop down list box allows the user to select an item from a predefined list. This list appears in a menu after the element has been clicked on. After the selection has been made, the result is displayed.
-
       With more than 10 options in the select, a search field is setup at the top of the dropdown list.
-
-      You can also add the `multiple` attribute to `<select>` and allow the user to select more than one option at a time, displaying them as tags in the input field.
     release: |
       **2.1.2:**
 
       - added a label before select for screen readers
+  selects-multiple:
+      title: Multi Selects
+      help: |
+        Multi Selects behave the same as simple selects. But it is possible to select more than one option.
+      release: |
+        **3.1:**
+        - proper support for multi selects added
   checkboxes:
     title: Checkboxes
     help: Checkboxes are used when one or more elements are to be selected from a predefined list of items.
