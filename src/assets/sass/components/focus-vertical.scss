@@ -9,28 +9,126 @@
  * Licensed under MIT
  ========================================================== */
 
-.focus.focus-vertical {
+.focus:not(.focus-vertical) {
+  .tab-content.tab-border {
+    border: 1px solid $smoke;
+  }
 
-  border: 1px solid $light-grey;
-  position: relative;
-  display: flex;
-  flex-direction: row;
+  .nav.nav-tabs {
+    li:nth-child(1) {
+      border-left: 0;
+    }
+  }
+
+}
+
+.focus.focus-vertical.fixed {
 
   .tab-content {
-    word-break: break-all;
-    padding-right: 10px;
+
+    .row,
+    .overflow {
+      //display: flex;
+    //  max-height: 100%;
+    }
+
   }
 
   .nav.nav-tabs {
     display: flex;
+
+    li {
+      flex-grow: 1;
+    }
+
+  }
+
+  .tab-pane {
+    .row {
+    //display: flex;
+
+      .overflow {
+        //display: flex;
+        //flex-direction: column;
+      }
+/*
+      .overflow > *:last-child {
+        position: relative;
+        padding-top: 11px;
+      }
+
+      .overflow > *:last-child:before {
+        content:'';
+        width:100%;
+        height:30px;
+        position:absolute;
+        top: -30px;
+        background: linear-gradient(rgba(0,0,0,0) 0, white);
+        box-shadow: 2px black;
+        border: 2px solid black;
+        box
+      }
+
+      .overflow > *:nth-last-child(2) {
+        flex-shrink: 1;
+        overflow: hidden;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .overflow > *:nth-last-child(2):after {
+        content: '';
+        width: 100%;
+        height: 30px;
+
+        //background: transparent;
+      }
+*/
+    }
+  }
+
+/*
+  p, h4 {
+    //display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+*/
+}
+
+.focus.focus-vertical {
+
+  border: 1px solid $light-grey;
+  display: flex;
+
+  .tab-content {
+    display: flex;
+    word-break: break-all;
+    width: 75%;
+    padding-right: 15px;
+
+
+  }
+
+
+
+  .nav.nav-tabs {
+    display: block;
+    width: 25%;
     flex-direction: column;
   }
 
   .nav.nav-tabs li {
     display: flex;
-    flex-grow: 1;
-    flex-direction: column;
     justify-content: center;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
   }
 
 }
