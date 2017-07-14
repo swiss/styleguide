@@ -1,0 +1,89 @@
+---
+title: content.teaser.twitter-timeline.title
+help: content.teaser.twitter-timeline.help
+translation: true
+label: flex
+---
+<div class="row">
+  <div class="col-md-3 col-sm-4">
+    <div class="mod mod-twitterstream">
+      <div class="list-group">
+        <div class="list-group-header">
+          <h2 class="pull-left">
+            Tweets TwitterDev
+          </h2>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="mod mod-twitterstream">
+
+  <div id="test">
+    <a class="twitter-timeline" href="https://twitter.com/TwitterDev" >Tweets by TwitterDev</a>
+
+
+  </div>
+  <div id="timeline"></div>
+</div>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+
+<script>
+  (function() {
+    window.twttr.ready(function () {
+      twttr.widgets.load(document.getElementById('test'))
+
+      twttr.widgets.createTimeline(
+        {
+          sourceType: 'profile',
+          screenName: 'twitterdev'
+        },
+        document.getElementById('timeline'),
+        {
+          width: '450',
+          height: '700',
+          related: 'twitterdev,twitterapi'
+        }).then(function (el) {
+        console.log('Embedded a timeline.')
+      });
+    });
+
+    twttr.ready(
+      function (twttr) {
+      // bind events here
+        twttr.events.bind(
+          'loaded',
+          function (event) {
+            $('iframe[id^=twitter-widget-').each(function () {
+              var head = $(this).contents().find('head');
+              if (head.length) {
+                head.append(' < style type="text/css">.timeline-TweetList-tweet { background-color: red !important;} .SandboxRoot.env-narrow{ font-size: inherit!important;}</ style>');
+              }
+            });
+          });
+      }
+    );
+
+
+  }());
+</script>

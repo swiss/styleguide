@@ -87,7 +87,8 @@ gulp.task('vendors', function() {
     'node_modules/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
     'node_modules/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
     'node_modules/moment/moment.js',
-    'node_modules/pikaday/pikaday.js'
+    'node_modules/pikaday/pikaday.js',
+    'node_modules/twitter-timeline/index.js'
   ])
     .pipe($.concat('vendors.js'))
     .pipe(gulp.dest(config.framework.dest + '/js'))

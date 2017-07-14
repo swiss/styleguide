@@ -1,0 +1,254 @@
+a.twitter-timeline {
+  /* Buttonish */
+  display: inline-block;
+  padding: 6px 12px 6px 30px;
+  margin: 10px 0;
+  border: #ccc solid 1px;
+  border-radius: 3px;
+  background: #f8f8f8 url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNzIgNzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDcyIDcyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IHg9IjAiIGZpbGw9Im5vbmUiIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiIvPg0KPHBhdGggZmlsbD0iIzU1YWNlZSIgZD0iTTY4LjgxMiwxNS4xNDFjLTIuMzQ4LDEuMDM5LTQuODY5LDEuNzQzLTcuNTE5LDIuMDZjMi43MDMtMS42Miw0Ljc3OC00LjE4Nyw1Ljc1Ni03LjI0NGMtMi41MjksMS41LTUuMzMsMi41OTItOC4zMTMsMy4xNzYNCglDNTYuMzQ5LDEwLjU5MSw1Mi45NDgsOSw0OS4xODIsOWMtNy4yMjksMC0xMy4wOTIsNS44NjEtMTMuMDkyLDEzLjA5M2MwLDEuMDI2LDAuMTE4LDIuMDIxLDAuMzM4LDIuOTgxDQoJYy0xMC44ODUtMC41NDgtMjAuNTI4LTUuNzU3LTI2Ljk4Ny0xMy42NzljLTEuMTI2LDEuOTM2LTEuNzcxLDQuMTg0LTEuNzcxLDYuNTgxYzAsNC41NDIsMi4zMTIsOC41NTEsNS44MjQsMTAuODk4DQoJYy0yLjE0Ni0wLjA2OS00LjE2NS0wLjY1Ny01LjkzLTEuNjM4Yy0wLjAwMiwwLjA1NS0wLjAwMiwwLjExLTAuMDAyLDAuMTYyYzAsNi4zNDUsNC41MTMsMTEuNjM4LDEwLjUwNCwxMi44NA0KCWMtMS4xMDEsMC4yOTgtMi4yNTYsMC40NTctMy40NDksMC40NTdjLTAuODQ2LDAtMS42NjctMC4wNzgtMi40NjUtMC4yMzFjMS42NjcsNS4yLDYuNDk5LDguOTg2LDEyLjIzLDkuMDkNCgljLTQuNDgyLDMuNTEyLTEwLjEyOSw1LjYwNi0xNi4yNiw1LjYwNmMtMS4wNTUsMC0yLjA5Ni0wLjA2MS0zLjEyMi0wLjE4NGM1Ljc5NCwzLjcxNywxMi42NzYsNS44ODIsMjAuMDY3LDUuODgyDQoJYzI0LjA4MywwLDM3LjI1MS0xOS45NDksMzcuMjUxLTM3LjI0OWMwLTAuNTY2LTAuMDE0LTEuMTM0LTAuMDM5LTEuNjk0QzY0LjgzOCwyMC4wNjgsNjcuMDU4LDE3Ljc2NSw2OC44MTIsMTUuMTQxeiIvPg0KPC9zdmc+DQo=") 8px 8px no-repeat;
+  background-size: 1em 1em;
+
+  /* Text */
+  font: normal 12px/18px Helvetica, Arial, sans-serif;
+  color: #333;
+  white-space: nowrap;
+}
+
+a.twitter-timeline:hover,
+a.twitter-timeline:focus {
+  background-color: #dedede;
+}
+
+/* Color Highlight for keyboard navigation */
+
+a.twitter-timeline:focus {
+  outline: none;
+  border-color: #0089cb;
+}
+
+
+
+
+.mod-twitterstream .twitter-timeline {
+  padding-left: 0;
+  font-size: .9em;
+  list-style: none;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet {
+  min-height: 54px;
+  margin-left: 0;
+  padding: 9px 4px 5px 58px;
+  border-bottom: 1px solid #e1e8ed;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author {
+  display: inline-block;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author .profile .avatar {
+  border-radius: 5px;
+  height: 48px;
+  margin: 3px 10px 0 -58px;
+  position: absolute;
+  width: 48px;
+  -moz-force-broken-image-icon: 1;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author .profile .full-name {
+  color: black;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author .profile .full-name:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author .profile .full-name:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author .profile .full-name:active {
+  text-decoration: underline;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author .profile .full-name .name {
+  color: #292f33;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author .profile .nickname {
+  direction: ltr;
+  font-size: .9em;
+  color: #909090;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author .profile .nickname:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author .profile .nickname:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .author .profile .nickname:active {
+  cursor: default;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .time:before {
+  content: "Â·";
+  margin-left: 5px;
+  font-size: .9em;
+  color: #909090;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .time:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .time:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .time:active {
+  cursor: default;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .time .url.permalink {
+  font-size: 1.1em;
+  color: #909090;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .time .url.permalink:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .time .url.permalink:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .time .url.permalink:active {
+  color: #666;
+  text-decoration: underline;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .tweet-header .time .url.permalink abbr[title] {
+  border-bottom: none;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .e-entry-content .e-entry-title {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .e-entry-content .e-entry-title:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .e-entry-content .e-entry-title:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .e-entry-content .e-entry-title:active {
+  cursor: default;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .e-entry-content .e-entry-title a {
+  color: #08c;
+  text-decoration: none;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .e-entry-content .e-entry-title a:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .e-entry-content .e-entry-title a:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .e-entry-content .e-entry-title a:active {
+  text-decoration: underline;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .e-entry-content .e-entry-title a s {
+  color: #75c2f0;
+  text-decoration: none;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by {
+  font-size: .9em;
+  color: #909090;
+  cursor: default;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by .icon-retweet:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by .icon-retweet:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by .icon-retweet:active {
+  background-position: -81px 0;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by a {
+  color: #909090;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by a:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by a:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by a:active {
+  text-decoration: underline;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer {
+  display: table;
+  width: 100%;
+  padding-top: 3px;
+  font-size: .9em;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions {
+  display: table-cell;
+  text-align: right;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li {
+  display: inline-block;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li a,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li button {
+  margin-left: 8px;
+  color: #909090;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li a:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li button:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li a:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li button:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li a:active,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li button:active {
+  color: #666;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action .icon-favorite {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  margin-bottom: -1px;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:hover,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:focus,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:active,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:active,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:active {
+  color: #666;
+  text-decoration: underline;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:hover .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:hover .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:hover .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:focus .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:focus .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:focus .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:active .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:active .icon-reply,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:active .icon-reply {
+  background: url("assets/img/twitter_sprite.png") no-repeat -16px 0;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:hover .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:hover .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:hover .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:focus .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:focus .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:focus .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:active .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:active .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:active .icon-retweet {
+  background: url("assets/img/twitter_sprite.png") no-repeat -97px 0;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:hover .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:hover .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:hover .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:focus .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:focus .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:focus .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action:active .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action:active .icon-favorite,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action:active .icon-favorite {
+  background: url("assets/img/twitter_sprite.png") no-repeat -49px 0;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .reply-action .icon-reply {
+  background: url("assets/img/twitter_sprite.png") no-repeat 0 0;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweeted-by .icon-retweet,
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .retweet-action .icon-retweet {
+  background: url("assets/img/twitter_sprite.png") no-repeat -81px 0;
+}
+.mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .favorite-action .icon-favorite {
+  background: url("assets/img/twitter_sprite.png") no-repeat -33px 0;
+}
+@media (max-width: 767px) {
+  .mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer {
+    margin-left: -3px;
+  }
+  .mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions {
+    padding-left: 0;
+    text-align: left;
+  }
+  .mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li:first-child {
+    margin-left: 0;
+  }
+  .mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li .reply-action,
+  .mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li .retweet-action,
+  .mod-twitterstream .twitter-timeline .timeline-TweetList-tweet .footer .tweet-actions li .favorite-action {
+    margin-left: 0;
+  }
+}
