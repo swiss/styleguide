@@ -30,14 +30,12 @@
       templates: {
         empty: function() {
           return [
-            '<ul>',
-              '<li><h3>',
-                title,
-              '</h3></li>',
-              '<li>',
-                window.translations['global-search']['nothing-found'],
-              '</li>',
-            '</ul>'
+            '<li><h3>',
+              title,
+            '</h3></li>',
+            '<li>',
+              window.translations['global-search']['nothing-found'],
+            '</li>',
           ].join('');
         },
         header: function() {
@@ -55,35 +53,45 @@
     });
   })
 
-  $('.global-search .search-input').typeahead({
-    highlight: true,
-    menu: $('.search-results .search-results-list'),
-    classNames: {
-      suggestion: '',
-      cursor: 'active'
-    }
-  }, datasets)
-  .on('typeahead:selected', function (event, selection) {
-		event.preventDefault();
-    $(this).typeahead('val', '')
-      .closest('.global-search').removeClass('has-input');
-		window.location.replace(selection.link);
-	})
-  .on('typeahead:open', function() {
-    $(this).closest('.global-search').addClass('focused');
-  })
-  .on('typeahead:close', function () {
-    $(this).closest('.global-search').removeClass('focused');
-  })
-  .on('keyup', function (event) {
-    var $this = $(this);
-    if (event.keyCode === 27) { // ESC
-      $this.val('');
-    } else if ($this.val()) {
-        $(this).closest('.global-search').addClass('has-input');
-    } else {
-      $(this).closest('.global-search').removeClass('has-input');
-		}
-	});
+  function initTypeahead(element) {
+    $('.search-input', element).typeahead({
+      highlight: true,
+      menu: $('.search-results .search-results-list', element),
+      classNames: {
+        suggestion: ''
+      }
+    }, datasets)
+    .on('typeahead:selected', function (event, selection) {
+  		event.preventDefault();
+      $(this).typeahead('val', '')
+        .closest('.global-search').removeClass('has-input');
+  		window.location.replace(selection.link);
+  	})
+    .on('typeahead:open', function() {
+      $(this).closest('.global-search').addClass('focused');
+    })
+    .on('typeahead:close', function () {
+      $(this).closest('.global-search').removeClass('focused');
+    })
+    .on('keyup', function (event) {
+      var $this = $(this);
+      console.log('input');
+
+      if (event.keyCode === 27) { // ESC
+        $this.val('');
+      } else if ($this.val()) {
+          $(this).closest('.global-search').addClass('has-input');
+      } else {
+        $(this).closest('.global-search').removeClass('has-input');
+  		}
+  	});
+
+    $('form', element).on('submit', function() {
+        return false;
+    });
+  }
+
+  initTypeahead($('.global-search-standard'));
+  initTypeahead($('.global-search-mobile'));
 
 })(jQuery);

@@ -14,7 +14,7 @@
   }
 
   .search-input {
-    margin-left: 5px;
+  //  margin-left: 5px;
   }
 
   .search-results:before,
@@ -84,6 +84,8 @@
   }
 }
 
+
+
 .global-search.has-input .search-results:hover,
 .global-search.focused.has-input .search-results {
   display: block;
@@ -92,8 +94,8 @@
 .global-search.global-search-mobile {
 
   float: none;
-
   display: block;
+  position: static;
 
   .form-inline,
   .form-group {
@@ -111,6 +113,7 @@
     box-shadow: none;
     padding: 0 10px;
     display: block;
+    position: relative;
   }
 
   .search-results:before,
@@ -119,9 +122,22 @@
     content: '';
   }
 
-  .search-input {
+  .twitter-typeahead {
     width: 100%;
-    margin-left: 0;
-    padding: 10px 5px;
   }
+}
+
+// typeahead fixes
+.global-search-standard.focused .icon.icon--close:after {
+  color: $black;
+}
+
+.global-search .icon.icon--search {
+  display: inline-block;
+  top: 1px;
+  left: 9px;
+}
+
+.global-search button.icon.icon--search {
+  display: none;
 }
