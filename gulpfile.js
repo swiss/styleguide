@@ -137,6 +137,18 @@ gulp.task('print', function() {
     .pipe(gulp.dest(config.framework.dest + '/css'));
 });
 
+gulp.task('twitter-inject', function() {
+  return gulp.src('src/assets/sass/twitter-inject.scss')
+    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.if(argv.dev, $.sourcemaps.init()))
+    .pipe($.autoprefixer({
+      browsers: config.autoprefixer
+    }))
+    .pipe($.if(argv.dev, $.sourcemaps.write()))
+    .pipe($.if(!argv.dev, $.cleanCss()))
+    .pipe(gulp.dest(config.framework.dest + '/css'));
+});
+
 
 /**
  * Build JS
@@ -362,7 +374,7 @@ gulp.task('serve', ['assemble-everything'], function () {
   gulp.watch(['src/**/*.{html,md,json,yml}'], ['assemble:watch']);
 
   gulp.watch(['src/assets/sass/**/*.scss', 'src/assets/fabricator/styles/**/*.scss'], function() {
-    runSequence('styles', 'print', 'assemble:watch');
+    runSequence('styles', 'print', 'twitter-inject', 'assemble:watch');
   });
   gulp.watch(['src/assets/js/*.js', 'src/assets/fabricator/scripts/**/*.js'], function() {
     runSequence('scripts', 'assemble:watch');
