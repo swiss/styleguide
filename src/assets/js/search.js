@@ -58,7 +58,8 @@
       highlight: true,
       menu: $('.search-results .search-results-list', element),
       classNames: {
-        suggestion: ''
+        suggestion: '',
+        cursor: 'active'
       }
     }, datasets)
     .on('typeahead:selected', function (event, selection) {
@@ -69,26 +70,34 @@
   	})
     .on('typeahead:open', function() {
       $(this).closest('.global-search').addClass('focused');
+      console.log($(this).typeahead('val'));
     })
     .on('typeahead:close', function () {
       $(this).closest('.global-search').removeClass('focused');
     })
     .on('keyup', function (event) {
       var $this = $(this);
-      console.log('input');
-
       if (event.keyCode === 27) { // ESC
-        $this.val('');
-      } else if ($this.val()) {
+        $(this).closest('form').trigger('reset');
+      } else if ($(this).typeahead('val')) {
           $(this).closest('.global-search').addClass('has-input');
       } else {
         $(this).closest('.global-search').removeClass('has-input');
   		}
   	});
 
-    $('form', element).on('submit', function() {
+    $('form', element)
+      .on('submit', function() {
         return false;
-    });
+      })
+      .on('reset', function() {
+        $('.search-input', this).blur().typeahead('val', '');
+        $(this).closest('.global-search').removeClass('has-input');
+      });
+
+    $('.search-reset', element).on('click', function() {
+      $(this).closest('form').trigger('reset');
+    })
   }
 
   initTypeahead($('.global-search-standard'));

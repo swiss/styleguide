@@ -16,6 +16,5 @@ disclaimer:
   text: Informations juridiques
   link: http://www.disclaimer.admin.ch/terms_and_conditions.html
 global-search:
-  title: Recherche
+  title: Chercher
   nothing-found: Rien n'a été trouvé.
-  input-required: Entrez plus de caractères, s'il vous plaît.
