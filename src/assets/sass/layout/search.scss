@@ -97,8 +97,6 @@
   }
 }
 
-
-
 .global-search.has-input .search-results:hover,
 .global-search.focused.has-input .search-results {
   display: block;
@@ -143,14 +141,4 @@
 // typeahead fixes
 .global-search-standard.focused .icon.icon--close:after {
   color: $black;
-}
-
-.global-search .icon.icon--search {
-  display: inline-block;
-  top: 1px;
-  left: 9px;
-}
-
-.global-search button.icon.icon--search {
-  display: none;
 }
