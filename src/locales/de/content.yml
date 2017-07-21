@@ -47,6 +47,22 @@ teaser:
     release: |
       **3.0.0**
       - Improved accessibility by pausing the slideshow when user interact with the component and also by adding a play/pause button.
+  focus-vertical:
+    title: Brennpunkt vertikal
+    help: |
+      Der vertikale Brennpunkte-Teaser gleicht dem normalen Teaser. Allerdings die Reiterleisten vertikal angeordnet.
+
+      Achtung:
+
+      Bitte Text- und Wortlänge beachten. Die Höhe des Teasers ist fest definiert.
+
+      *** Accessibility
+
+      Das Titelformat H3 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der <section> oder der Seite.
+
+    release: |
+      **3.1.0**
+      - Focus vertical introduced
   news:
     title: Neuigkeiten
     help: |
@@ -247,4 +263,3 @@ search:
   search-results:
     title: Suchergebnisse
     help: Suchergebnisse werden semantisch gruppiert in Reitern angezeigt. Die Kategorien (Gruppierung) ist frei wählbar (z.B. Inhaltsseiten, News und Publikationen). Innerhalb des Reiters kann der Anwender sich mit eine Paging-Funktion durch die Seiten bewegen.
-
