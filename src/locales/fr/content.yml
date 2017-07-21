@@ -50,7 +50,7 @@ teaser:
   focus-vertical:
     title: A la une vertical
     help: |
-      Le teaser «à la une» vertical est  similaire comme le teaser «à la une» normal. Cependant, le contenu et les barre d’onglets sont disposés côte à côte.
+      Le teaser «à la une» vertical est  similaire comme le teaser «à la une» normal. Cependant, les barre d’onglets sont disposés verticalement.
 
       Attention:
 
