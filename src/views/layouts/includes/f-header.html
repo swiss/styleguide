@@ -5,9 +5,9 @@
       <nav class="nav-lang">
         <ul>
           {{#each locales}}
-            <li>
-              <a href="{{#if disabled}}#{{else}}{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{code}}/{{../../permalink}}{{/if}}" lang="{{code}}" title="{{name}}{{#isCurrentLocale code}} {{t 'styleguide.selected'}}{{/isCurrentLocale}}{{#if disabled}} {{t 'styleguide.disabled'}}{{/if}}" aria-label="{{name}} {{#isCurrentLocale code}}{{t 'styleguide.selected'}}{{/isCurrentLocale}}{{#if disabled}}{{t 'styleguide.disabled'}}{{/if}}" class="{{#isCurrentLocale code}}active{{/isCurrentLocale}}{{#if disabled}}disabled{{/if}}">{{toUpperCase code}}</a>
-            </li>
+          <li>
+            <a href="{{#if disabled}}#{{else}}{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{code}}/{{../../permalink}}{{/if}}" lang="{{code}}" title="{{name}}{{#isCurrentLocale code}} {{t 'styleguide.selected'}}{{/isCurrentLocale}}{{#if disabled}} {{t 'styleguide.disabled'}}{{/if}}" aria-label="{{name}} {{#isCurrentLocale code}}{{t 'styleguide.selected'}}{{/isCurrentLocale}}{{#if disabled}}{{t 'styleguide.disabled'}}{{/if}}" class="{{#isCurrentLocale code}}active{{/isCurrentLocale}}{{#if disabled}}disabled{{/if}}">{{toUpperCase code}}</a>
+          </li>
           {{/each}}
         </ul>
       </nav>
@@ -26,5 +26,18 @@
       <img src="{{#if baseurl}}{{baseurl}}/{{/if}}../img/logo-CH.svg" onerror="this.onerror=null; this.src='{{#if baseurl}}{{baseurl}}/{{/if}}../img/logo-CH.png'" alt="{{t 'styleguide.logo'}}" />
       <h1>{{t 'styleguide.title'}}</h1>
     </a>
+    <div class="mod mod-searchfield global-search global-search-standard">
+      <!-- begin: sitesearch desktop-->
+			<form class="form-horizontal form-search pull-right" role="form">
+				<h2 class="sr-only">{{t 'styleguide.global-search.title'}}</h2>
+				<label for="webguiedelines-search-standard" class="sr-only">{{t 'styleguide.global-search.title'}}</label>
+				<input id="webguiedelines-search-standard" class="form-control search-input" type="text" placeholder="{{t 'styleguide.global-search.title'}}"/>
+        <span class="icon icon--close search-reset"></span>
+        <div class="search-results">
+          <div class="search-results-list"></div>
+        </div>
+			</form>
+			<!-- end: sitesearch desktop-->
+    </div>
   </div>
 </header>

@@ -95,6 +95,7 @@ nav {
       height: 100%;
       padding: 10px 15px;
       color: inherit;
+      display: table-cell;
       &:focus, &:hover {
         text-decoration: none;
       }

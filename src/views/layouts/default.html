@@ -36,6 +36,16 @@
   <meta name="msapplication-config" content="{{#if baseurl}}{{baseurl}}/{{/if}}../img/ico/browserconfig.xml">
 </head>
 <body>
+
+  <script>
+    // Make translated strings available for search.js
+    window.translations = {
+        'global-search': {
+            'nothing-found': "{{t 'styleguide.global-search.nothing-found'}}"
+        }
+    }
+  </script>
+
   <ul class="access-keys">
     <li><a href="index.html" accesskey="0">{{t 'styleguide.homepage'}}</a></li>
     <li><a href="#main-navigation" accesskey="1">{{t 'styleguide.main-navigation'}}</a></li>
