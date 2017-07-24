@@ -38,7 +38,7 @@ teaser:
 
       Attention:
 
-      veuillez respecter la longueur des textes et des mots. La hauteur du teaser est déterminée de manière fixe.
+      Veuillez respecter la longueur des textes et des mots. La hauteur du teaser est déterminée de manière fixe.
 
       *** Accessibilité
 
@@ -47,6 +47,21 @@ teaser:
     release: |
       **3.0.0**
       – Amélioration de l’accessibilité en mettant le diaporama en pause lorsque l’utilisateur interagit avec le composant et aussi en ajoutant un bouton de lecture/pause.
+  focus-vertical:
+    title: A la une vertical
+    help: |
+      Le teaser «à la une» vertical est  similaire comme le teaser «à la une» normal. Cependant, les barre d’onglets sont disposés verticalement.
+
+      Attention:
+
+      Veuillez respecter la longueur des textes et des mots. La hauteur du teaser est déterminée de manière fixe.
+
+      *** Accessibilité
+
+      Le format de titre H3 dans les exemples de teaser ne constitue pas une exigence générale. Le format (H1, H2, H3, etc.) dépend de l’importance du titre au sein de la structure de la page.
+    release: |
+      **3.1.0**
+      - Ajout le teaser «à la une» vertical
   news:
     title: Actualités
     help: |
@@ -63,7 +78,7 @@ teaser:
   carousel:
     title: Carrousel
     help: |
-      Un carrousel permet de présenter un thème à partir de différentes perspectives. Les divers articles basculent automatiquement. 
+      Un carrousel permet de présenter un thème à partir de différentes perspectives. Les divers articles basculent automatiquement.
 
       Le carrousel se compose de différents blocs d’informations, eux-mêmes composés d’une grande image, d’une image plus petite facultative, d’un titre d’accroche court, d’un texte et d’un lien pour en savoir plus.
 
@@ -105,7 +120,7 @@ teaser:
   person-teaser:
     title: Teaser de personne
     help: |
-      Pour mettre particulièrement en évidence un thème sur une page d’accueil, on peut utiliser au maximum un teaser de personne. Sur les pages des départements, il est par exemple utilisé pour présenter le Conseiller fédéral correspondant. 
+      Pour mettre particulièrement en évidence un thème sur une page d’accueil, on peut utiliser au maximum un teaser de personne. Sur les pages des départements, il est par exemple utilisé pour présenter le Conseiller fédéral correspondant.
 
       Le teaser de personne est composé, comme le teaser de dossier, d’une image au format 16:10, du titre du thème ainsi que d’un texte d’introduction court. Le lien du titre et de l’image mène vers la page de détails correspondante. De plus, le teaser dispose d’un arrière-plan gris.
     release: |
@@ -139,7 +154,7 @@ content-containers:
   further-information:
     title: Informations complémentaires
     help: |
-      En-dessous du contenu d’une page, des informations complémentaires peuvent être affichées. Elles ont pour but de proposer des contenus (p. ex. des publications, actualités ou liens) qui sont en rapport avec le contenu mais qui ne sont pas directement abordés dans le texte et donc pas munies d’un lien. Ces contenus sont rangés dans des onglets. 
+      En-dessous du contenu d’une page, des informations complémentaires peuvent être affichées. Elles ont pour but de proposer des contenus (p. ex. des publications, actualités ou liens) qui sont en rapport avec le contenu mais qui ne sont pas directement abordés dans le texte et donc pas munies d’un lien. Ces contenus sont rangés dans des onglets.
 
       Il s’agit ici d’une forme spécifique de la navigation horizontale par onglets. On peut utiliser jusqu’à cinq onglets. La désignation des onglets n’est pas prédéterminée. Cependant, à l’intérieur d’un site Internet, celle-ci doit être utilisée de manière uniforme (toujours identique). Par exemple «Documents», «Publications», «Services», «Principes juridiques», «Liens», «Actualités», etc.
   collapsible-panel:
@@ -247,4 +262,3 @@ search:
   search-results:
     title: Résultats de recherche
     help: Les résultats de recherche sont affichés par groupes sémantiques dans des onglets. Les catégories (pour le regroupement) peuvent être choisies librement (p. ex. pages de contenu, actualités et publications). Une fonction de pagination permet à l’utilisateur de feuilleter les pages à l’intérieur de l’onglet.
-
