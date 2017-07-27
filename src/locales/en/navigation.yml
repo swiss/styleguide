@@ -129,7 +129,10 @@ header:
       - Add a container with `clearfix` class around logo component
   accessibility-navigation:
     title: Accessibility navigation
-    help: The accessibility navigation has to be placed right after the body tag. It is used to give quick access to pages and page areas. **It is invisible**, except when the link is focused.
+    help: |
+      The accessibility navigation has to be placed right after the body tag. It is used to give quick access to pages and page areas. **It is invisible**, except when the link is focused.
+
+      Note: Depending on your browser, the accessibility links in the example are displayed after multiple tab presses only. This is due to the webguidelines page using an accessibility navigation itself.
     release: |
       **2.1.8**
 
