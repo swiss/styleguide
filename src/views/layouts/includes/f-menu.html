@@ -23,14 +23,14 @@
                     <a href="#" class="icon icon--before icon--less drilldown-back">{{t 'styleguide.back'}}</a>
                     <ul>
                       {{#each views.docs.items}}
-                        <li><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/docs/{{@key}}.html">{{t 'docs' @key 'title'}}</a></li>
+                      <li><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/docs/{{@key}}.html">{{t 'docs' @key 'title'}}</a></li>
                       {{/each}}
                     </ul>
                   </nav>
                 </li>
 
                 {{#each materials}}
-                  {{> f-menu-mobile this}}
+                {{> f-menu-mobile this}}
                 {{/each}}
 
                 <li class="list-sub">
@@ -39,7 +39,7 @@
                     <a href="#" class="icon icon--before icon--less drilldown-back">{{t 'styleguide.back'}}</a>
                     <ul>
                       {{#each views.pages.items}}
-                        <li><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/pages/{{@key}}.html">{{t 'pages' @key 'title'}}</a></li>
+                      <li><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/pages/{{@key}}.html">{{t 'pages' @key 'title'}}</a></li>
                       {{/each}}
                     </ul>
                   </nav>
@@ -47,6 +47,26 @@
               </ul>
               <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
             </nav>
+
+          </div>
+        </div>
+      </div>
+      <div class="table-cell dropdown">
+        <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="icon icon--search"></span>
+        </a>
+        <div class="dropdown-menu" role="menu">
+
+          <div class="mod mod-searchfield global-search global-search-mobile">
+            <form class="form" role="form">
+              <h2 class="sr-only">{{t 'styleguide.global-search.title'}}</h2>
+              <label for="webguiedelines-search-mobile" class="sr-only">{{t 'styleguide.global-search.title'}}</label>
+              <input id="webguiedelines-search-mobile" class="search-input form-control" type="text" placeholder="{{t 'styleguide.global-search.title'}}">
+              <span class="icon icon--search"></span>
+              <div class="search-results">
+                <div class="search-results-list"></div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -64,21 +84,21 @@
           </div>
           <div class="row">
             {{#each views.docs.items}}
-              <li class="col-sm-3">
-                <div class="yamm-content container-fluid">
-                  <h4><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/docs/{{@key}}.html">{{t 'docs' @key 'title'}}</a></h4>
-                  <ul role="menu">
-                    {{#each items}}
-                      <li role="presentation">
-                        <a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/docs/{{@../key}}.html#{{@key}}">{{t 'docs' @key 'title'}}</a>
-                      </li>
-                    {{/each}}
-                  </ul>
-                </div>
-              </li>
-              {{#modulo @index 4}}
-                <div class="clearfix"></div>
-              {{/modulo}}
+            <li class="col-sm-3">
+              <div class="yamm-content container-fluid">
+                <h4><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/docs/{{@key}}.html">{{t 'docs' @key 'title'}}</a></h4>
+                <ul role="menu">
+                  {{#each items}}
+                  <li role="presentation">
+                    <a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/docs/{{@../key}}.html#{{@key}}">{{t 'docs' @key 'title'}}</a>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </li>
+            {{#modulo @index 4}}
+            <div class="clearfix"></div>
+            {{/modulo}}
             {{/each}}
           </div>
           <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
@@ -87,7 +107,7 @@
     </li>
 
     {{#each materials}}
-      {{> f-menu-item this}}
+    {{> f-menu-item this}}
     {{/each}}
 
     <li class="dropdown yamm-fw">
@@ -99,21 +119,21 @@
           </div>
           <div class="row">
             {{#each views.pages.items}}
-              <li class="col-sm-3">
-                <div class="yamm-content container-fluid">
-                  <h4><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/pages/{{@key}}.html">{{t 'pages' @key 'title'}}</a></h4>
-                  <ul role="menu">
-                    {{#each items}}
-                      <li role="presentation">
-                        <a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/pages/{{@../key}}.html#{{@key}}">{{t 'pages' @key 'title'}}</a>
-                      </li>
-                    {{/each}}
-                  </ul>
-                </div>
-              </li>
-              {{#modulo @index 4}}
-                <div class="clearfix"></div>
-              {{/modulo}}
+            <li class="col-sm-3">
+              <div class="yamm-content container-fluid">
+                <h4><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/pages/{{@key}}.html">{{t 'pages' @key 'title'}}</a></h4>
+                <ul role="menu">
+                  {{#each items}}
+                  <li role="presentation">
+                    <a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/pages/{{@../key}}.html#{{@key}}">{{t 'pages' @key 'title'}}</a>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </li>
+            {{#modulo @index 4}}
+            <div class="clearfix"></div>
+            {{/modulo}}
             {{/each}}
           </div>
           <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>

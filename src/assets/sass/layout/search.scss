@@ -1,0 +1,144 @@
+.global-search {
+
+  display: none;
+  @media only screen and (min-width: $screen-sm-min) {
+    display: block;
+    .search-input {
+      padding: 0px 30px;
+      position: relative;
+      height: 25px;
+      width: 200px;
+      transition: width 0.4s;
+      &:focus {width: 250px;}
+    }
+  }
+
+  float:right;
+  position:relative;
+
+  .form-inline {
+    padding: 0;
+    border: none;
+  }
+
+  .search-input {
+    &:focus + .icon--close:after {color: $black;}
+    &::-ms-clear { display: none; }
+  }
+
+  .search-results:before,
+  .search-results:after {
+    z-index: 99999;
+    content: '';
+    position: absolute;
+    border-style: solid;
+    display: block;
+    width: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-results:before {
+    right: 11px;
+    top: -13px;
+    border-width: 0 13px 13px;
+    border-color: $light-grey transparent;
+  }
+
+  .search-results::after {
+    right: 12px;
+    top: -12px;
+    border-width: 0 12px 12px;
+    border-color: $white transparent;
+  }
+
+  .search-results {
+    display: none;
+    padding: 24px 16px 24px 24px;
+    background-color: $white;
+    border: 1px solid $light-grey;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 0;
+    z-index: 99999;
+    margin-top: 16px;
+    min-width: 290px;
+
+    .search-results-list {
+      overflow-y: auto;
+      overflow-x: auto;
+      max-height: calc(100vh - 200px);
+
+      ul {
+        list-style: none;
+        margin: 0 5px 15px 0;
+        padding: 0;
+
+        .active {
+          text-decoration: underline;
+        }
+
+        li {
+          margin: 5px 0;
+          font-size: 14px;
+
+          h3 {
+            padding: 5px 0;
+            margin: 5px 5px 5px 0;
+            border-bottom: 1px solid $light-grey;
+          }
+
+          a {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.global-search.has-input .search-results:hover,
+.global-search.focused.has-input .search-results {
+  display: block;
+}
+
+.global-search.global-search-mobile {
+
+  float: none;
+  display: block;
+  position: static;
+
+  .form-inline,
+  .form-group {
+    padding: 5px;
+    margin: 0;
+  }
+
+  .search-results-list {
+    max-height: none;
+  }
+
+  .search-results {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 0 10px;
+    display: block;
+    position: relative;
+  }
+
+  .search-results:before,
+  .search-results:after {
+    display: none;
+    content: '';
+  }
+
+  .twitter-typeahead {
+    width: 100%;
+  }
+}
+
+// typeahead fixes
+.global-search-standard.focused .icon.icon--close:after {
+  color: $black;
+}

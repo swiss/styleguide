@@ -60,8 +60,7 @@ a:hover {
   text-decoration: none;
 }
 
-.Icon.Icon--retweetBadge,
-.Icon.Icon--heart.TweetAction-icon.Icon--heartEdge{
+.Icon.Icon--retweetBadge {
   background: url('../img/twitter_sprite.png') no-repeat;
   height: 15px;
   width: 15px;
@@ -84,4 +83,28 @@ a:hover {
 
 .timeline-Body {
   border-top: none;
+}
+
+.timeline-ShowMoreButton {
+  display: inline-block;
+  color: $wite;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $cerulean;
+  border: 1px solid $cerulean;
+  border-radius: 3px;
+  padding: .45em .9em;
+  margin: 15px 0;
+  white-space: nowrap;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.timeline-ShowMoreButton:hover,
+.timeline-ShowMoreButton:active,
+.timeline-ShowMoreButton:focus {
+  background-color: darken($cerulean, 10%);
+  color: $white;
 }

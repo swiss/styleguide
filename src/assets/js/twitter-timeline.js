@@ -44,8 +44,56 @@
             So we need to force widget.js to recalculate the iframe height.
              */
             $(iframe).css('height', '100%');
+
+            /*
+            As we apply some custom styling which is not intendend by Twitter,
+            let's try to detect any changes by Twitter that may break it.
+            */
+            reportTwitterHtmlChanges($(iframe));
           }
         });
     });
   });
+
+  function reportTwitterHtmlChanges(iframe) {
+    reportMissingTwitterHmlElement(iframe, '.TweetAuthor-name');
+    reportMissingTwitterHmlElement(iframe, '.TweetAuthor-link');
+    reportMissingTwitterHmlElement(iframe, '.TweetAuthor-avatar');
+    reportMissingTwitterHmlElement(iframe, '.SandboxRoot.env-bp-min .TweetAuthor-avatar');
+    reportMissingTwitterHmlElement(iframe, '.TweetAuthor-avatar .Avatar');
+    reportMissingTwitterHmlElement(iframe, '.SandboxRoot.env-bp-min .TweetAuthor-avatar .Avatar');
+    reportMissingTwitterHmlElement(iframe, '.timeline-Tweet-author');
+    reportMissingTwitterHmlElement(iframe, '.TweetAuthor-name.Identity-name');
+    reportMissingTwitterHmlElement(iframe, '.TweetAuthor-screenName.Identity-screenName');
+    reportMissingTwitterHmlElement(iframe, '.timeline-Tweet-text');
+    reportMissingTwitterHmlElement(iframe, '.SandboxRoot.env-bp-min .timeline-Tweet-text');
+    reportMissingTwitterHmlElement(iframe, '.timeline-Tweet-action.timeline-ShareMenu');
+    reportMissingTwitterHmlElement(iframe, '.timeline-Tweet-brand');
+    reportMissingTwitterHmlElement(iframe, '.TweetAuthor-verifiedBadge');
+    reportMissingTwitterHmlElement(iframe, '.timeline-Tweet-metadata *');
+    reportMissingTwitterHmlElement(iframe, '.timeline-Tweet-retweetCredit', true);
+    reportMissingTwitterHmlElement(iframe, '.Icon.Icon--retweetBadge', true);
+    reportMissingTwitterHmlElement(iframe, '.Icon.Icon--heart.TweetAction-icon.Icon--heartEdge');
+    reportMissingTwitterHmlElement(iframe, '.TweetAction .Icon.Icon--heart.TweetAction-icon.Icon--heartEdge');
+    reportMissingTwitterHmlElement(iframe, '.timeline-Body');
+    reportMissingTwitterHmlElement(iframe, '.timeline-ShowMoreButtonn');
+  }
+
+  function reportMissingTwitterHmlElement(iframe, selector, isOptional) {
+    if (0 < $(iframe).contents().find(selector).length) {
+      return;
+    }
+    var message = [
+      'mod-twitterstream #',
+      $(iframe).attr('id'),
+      ': The following ',
+      isOptional ? ' optional ' : '',
+      'elements could not be found inside Twitter widget HTML: "',
+      selector,
+      '". This may be caused by a Twitter widget HTML change. ',
+      'In this case, Twitter stream may not be CI/CD compliant.'
+    ].join('');
+
+    isOptional ? console.log(message) : console.warn(message);
+  }
 })(jQuery);
