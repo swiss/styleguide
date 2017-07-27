@@ -54,8 +54,10 @@ a:hover {
 }
 
 .timeline-Tweet-metadata *,
+.timeline-Tweet-metadata *:hover,
 .timeline-Tweet-retweetCredit {
   color: $empress;
+  text-decoration: none;
 }
 
 .Icon.Icon--retweetBadge,
@@ -78,4 +80,8 @@ a:hover {
 .Icon.Icon--retweetBadge {
   background-position: -81px 0;
   margin-bottom: 2px;
+}
+
+.timeline-Body {
+  border-top: none;
 }

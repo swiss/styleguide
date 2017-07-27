@@ -17,33 +17,35 @@
     t.ready = function(f) {
       t._e.push(f);
     };
-
     return t;
   }(document, "script", "twitter-wjss"));
 
-  window.twttr.ready(function (twttr) {
+  window.twttr.ready(function (twitter) {
+    $('.mod-twitterstream .twitter-timeline').each(function () {
+      twitter.widgets.createTimeline(
+        {
+          sourceType: 'profile',
+          screenName: $(this).data('profile')
+        },
+        this,
+        {
+          borderColor: '#ccc', // $silver
+          linkColor: '#069', // $cerulean
+          chrome: 'noheader nofooter transparent',
+          tweetLimit: $(this).data('tweet-limit')
+        })
+        .then(function (iframe) {
+          var head = $(iframe).contents().find('head');
+          if (head.length) {
+            head.append('<link type="text/css" rel="stylesheet" href="../css/twitter-inject.css" />');
 
-    twttr.widgets.createTimeline(
-      {
-        sourceType: 'profile',
-        screenName: 'BR_Sprecher'
-      },
-      document.getElementById('timeline'),
-      {
-        width: '450',
-        height: '700',
-        borderColor: '#ccc', // $silver
-        linkColor: '#069', // $cerulean
-        chrome: 'noheader nofooter transparent',
-        tweetLimit: '2'
-      })
-      .then(function (iframe) {
-        var head = $(iframe).contents().find('head');
-        if (head.length) {
-          // @todo: auto-detect host
-          head.append('<link type="text/css" rel="stylesheet" href="http://localhost:3000/css/twitter-inject.css" />');
-        }
-      });
+            /*
+            Injected CSS has an impact on the iframe body's height.
+            So we need to force widget.js to recalculate the iframe height.
+             */
+            $(iframe).css('height', '100%');
+          }
+        });
+    });
   });
-
 })(jQuery);
