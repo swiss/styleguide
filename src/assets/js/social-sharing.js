@@ -11,7 +11,7 @@
 
   $('a.social-sharing-twitter').click(function() {
     window.open(
-      'http://twitter.com/share?text=You text here.&amp;url=' + encodeURIComponent(location.href),
+      'http://twitter.com/share?url=' + encodeURIComponent(location.href),
       'facebook-share-dialog',
       'width=626,height=436'
     );
