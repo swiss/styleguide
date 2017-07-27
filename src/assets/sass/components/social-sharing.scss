@@ -1,5 +1,30 @@
 .social-sharing {
+
   a {
     text-decoration: none;
   }
+
+  .social-sharing-twitter:after,
+  .social-sharing-facebook:after,
+  .social-sharing-google:after {
+    display: inline-block;
+    content: '';
+    height: 16px;
+    width: 16px;
+    background-size: 16px;
+    cursor: pointer;
+  }
+
+  .social-sharing-twitter:after {
+    background-image: url(../img/social-sharing-twitter.png);
+  }
+
+  .social-sharing-facebook:after {
+    background-image: url(../img/social-sharing-facebook.png);
+  }
+
+  .social-sharing-google:after {
+    background-image: url(../img/social-sharing-google.png);
+  }
+
 }
