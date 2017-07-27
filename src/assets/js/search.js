@@ -11,7 +11,7 @@
             title: $(this).html(),
             link: $(this).attr('href')
         });
-    })
+    });
     if (!suggestions.length) {
       return;
     }
@@ -51,7 +51,7 @@
         }
       }
     });
-  })
+  });
 
   function initTypeahead(element) {
     $('.search-input', element).typeahead({
@@ -76,7 +76,6 @@
       $(this).closest('.global-search').removeClass('focused');
     })
     .on('keyup', function (event) {
-      var $this = $(this);
       if (event.keyCode === 27) { // ESC
         $(this).closest('form').trigger('reset');
       } else if ($(this).typeahead('val')) {
@@ -97,7 +96,7 @@
 
     $('.search-reset', element).on('click', function() {
       $(this).closest('form').trigger('reset');
-    })
+    });
   }
 
   initTypeahead($('.global-search-standard'));
