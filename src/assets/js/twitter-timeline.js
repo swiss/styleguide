@@ -52,6 +52,13 @@
             reportTwitterHtmlChanges($(iframe));
           }
         });
+      twitter.widgets.createFollowButton(
+        $(this).data('profile'),
+        $(this).parent().get(0),
+        {
+          showCount: false
+        }
+      );
     });
   });
 
