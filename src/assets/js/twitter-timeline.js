@@ -76,7 +76,7 @@
     reportMissingTwitterHmlElement(iframe, '.Icon.Icon--heart.TweetAction-icon.Icon--heartEdge');
     reportMissingTwitterHmlElement(iframe, '.TweetAction .Icon.Icon--heart.TweetAction-icon.Icon--heartEdge');
     reportMissingTwitterHmlElement(iframe, '.timeline-Body');
-    reportMissingTwitterHmlElement(iframe, '.timeline-ShowMoreButtonn');
+    reportMissingTwitterHmlElement(iframe, '.timeline-ShowMoreButton');
   }
 
   function reportMissingTwitterHmlElement(iframe, selector, isOptional) {

@@ -421,6 +421,7 @@ gulp.task('default', ['clean'], function(cb) {
     'vendors',
     'styles',
     'print',
+    'twitter-inject',
     'scripts',
     'twig',
     'build-images',
