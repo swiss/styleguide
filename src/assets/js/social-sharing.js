@@ -12,7 +12,7 @@
   $('a.social-sharing-twitter').click(function() {
     window.open(
       'http://twitter.com/share?url=' + encodeURIComponent(location.href),
-      'facebook-share-dialog',
+      'twitter-share-dialog',
       'width=626,height=436'
     );
     return false;
