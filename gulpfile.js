@@ -23,7 +23,7 @@ var gulp = require('gulp'),
  * Configuration
  */
 var config = {
-  dev: $.util.env.dev || true,
+  dev: $.util.env.dev,
   styleguide: {
     src: 'src/styleguide',
     dest: 'styleguide'
