@@ -26,7 +26,6 @@
     "start": "gulp && gulp serve"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
     "browser-sync": "^2.8.2",
     "fabricator-assemble": "^1.2.0",
     "globby": "^6.1.0",
