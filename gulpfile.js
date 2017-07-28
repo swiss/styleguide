@@ -23,25 +23,16 @@ var gulp = require('gulp'),
  * Configuration
  */
 var config = {
-  dev: $.util.env.dev,
-  src: {
-    styles: {
-      fabricator: 'src/assets/fabricator/styles/fabricator.scss'
-    },
-    javascript: {
-      fabricator: [
-        'node_modules/prismjs/prism.js',
-        'src/assets/fabricator/scripts/*.js'
-      ]
-    }
-  },
+  dev: $.util.env.dev || true,
   styleguide: {
+    src: 'src/styleguide',
     dest: 'styleguide'
   },
   framework: {
+    src: 'src/framework',
     dest: 'build'
   },
-  locales: yaml.safeLoad(fs.readFileSync('src/data/locales.yml', 'utf-8')),
+  locales: yaml.safeLoad(fs.readFileSync('src/styleguide/data/locales.yml', 'utf-8')),
   autoprefixer: ['last 2 versions', 'safari 8', 'ie 9', 'ff 28']
 };
 
@@ -99,7 +90,7 @@ gulp.task('vendors', function() {
   // Important to add the bootstrap fonts to avoid issues with the fonts include path
   gulp.src([
     'node_modules/bootstrap-sass/assets/fonts/bootstrap/*',
-    'assets/fonts/*'
+    'framework/fonts/*'
   ])
     .pipe(gulp.dest(config.framework.dest + '/fonts'));
 });
@@ -113,7 +104,7 @@ gulp.task('styles', function() {
   if (!argv.dev) { console.log('[styles] Outputting minified styles.' ); }
   else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
-  return gulp.src('src/assets/sass/admin.scss')
+  return gulp.src(config.framework.src + '/sass/admin.scss')
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
@@ -125,7 +116,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('print', function() {
-  return gulp.src('src/assets/sass/print/print.scss')
+  return gulp.src(config.framework.src + '/sass/print/print.scss')
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
@@ -142,7 +133,7 @@ gulp.task('print', function() {
  * With error reporting on compiling (so that there's no crash)
  */
 gulp.task('scripts', function() {
-  return gulp.src(['src/assets/js/*.js'])
+  return gulp.src([config.framework.src + '/js/*.js'])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.concat('main.js'))
@@ -157,7 +148,7 @@ gulp.task('scripts', function() {
  * Copy images to build
  */
 gulp.task('build-images', function() {
-  return gulp.src(['src/assets/img/**'])
+  return gulp.src([config.framework.src + '/img/**'])
     .pipe(gulp.dest(config.framework.dest + '/img'));
 });
 
@@ -166,7 +157,7 @@ gulp.task('build-images', function() {
  * Copy fonts to build
  */
 gulp.task('build-fonts', function() {
-  return gulp.src(['src/assets/fonts/**'])
+  return gulp.src([config.framework.src + '/fonts/**'])
     .pipe(gulp.dest(config.framework.dest + '/fonts'));
 });
 
@@ -175,13 +166,16 @@ gulp.task('build-fonts', function() {
  * Compile TWIG example pages
  */
 gulp.task('clean-twig', function(cb) {
-  rimraf('src/views/pages', cb);
+  rimraf(config.styleguide.src + '/views/pages', cb);
 });
 
 gulp.task('twig', ['clean-twig'], function() {
-  return gulp.src(['src/example-pages/*.twig', '!src/example-pages/layout.twig'])
+  return gulp.src([
+    config.styleguide.src + '/example-pages/*.twig',
+    '!' + config.styleguide.src + '/example-pages/layout.twig'
+  ])
     .pipe($.twig())
-    .pipe(gulp.dest('src/views/pages'));
+    .pipe(gulp.dest(config.styleguide.src + '/views/pages'));
 });
 
 
@@ -209,7 +203,7 @@ gulp.task('assemble', function(done) {
       dictionary = {};
 
     // Get all translation files for the current locale
-    var translations = globby.sync('src/locales/' + locale.code + '/*.yml');
+    var translations = globby.sync(config.styleguide.src + '/locales/' + locale.code + '/*.yml');
 
     // Build a dictionary using the filename as the main key
     translations.forEach(function(file) {
@@ -219,6 +213,15 @@ gulp.task('assemble', function(done) {
 
     // Assemble the style guide
     assemble({
+      layouts: config.styleguide.src + '/views/layouts/*',
+      layoutIncludes: config.styleguide.src + '/views/layouts/includes/*',
+      views: [
+        config.styleguide.src + '/views/**/*',
+        '!' + config.styleguide.src + '/views/+(layouts)/**'
+      ],
+      materials: config.styleguide.src + '/materials/**/*',
+      data: config.styleguide.src + '/data/**/*.{json,yml}',
+      docs: config.styleguide.src + '/docs/**/*.md',
       dest: dest,
       logErrors: config.dev,
       helpers: {
@@ -265,7 +268,7 @@ gulp.task('assemble', function(done) {
           return value.toUpperCase();
         },
         renderFile: function(path, file) {
-          var fileName = 'src/materials-data/' + path + file,
+          var fileName = config.styleguide.src + '/materials-data/' + path + file,
             exists = fs.existsSync(fileName);
 
           if (!exists) return '[File "' + fileName + '" doesn’t exist.]';
@@ -299,24 +302,24 @@ gulp.task('copy:framework', function() {
 });
 
 gulp.task('copy:assets', function() {
-  return gulp.src(['styleguide-img/**/*'])
+  return gulp.src([config.styleguide.src + '/assets/img/**/*'])
     .pipe(gulp.dest(config.styleguide.dest + '/styleguide-img'));
 });
 
 gulp.task('copy:landing', function() {
-  return gulp.src(['src/index.html'])
+  return gulp.src([config.styleguide.src + '/index.html'])
     .pipe(gulp.dest(config.styleguide.dest));
 });
 
 gulp.task('copy:files', function() {
-  return gulp.src(['src/assets/files/*'])
+  return gulp.src([config.styleguide.src + '/assets/files/*'])
     .pipe(gulp.dest(config.styleguide.dest + '/files'));
 });
 
 
 // Build Fabricator style
 gulp.task('styles:fabricator', function() {
-  gulp.src(config.src.styles.fabricator)
+  gulp.src(config.styleguide.src + '/assets/fabricator/styles/fabricator.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.autoprefixer({
@@ -330,7 +333,10 @@ gulp.task('styles:fabricator', function() {
 
 // Build Fabricator scripts
 gulp.task('scripts:fabricator', function() {
-  return gulp.src(config.src.javascript.fabricator)
+  return gulp.src([
+    'node_modules/prismjs/prism.js',
+    config.styleguide.src + '/assets/fabricator/scripts/*.js'
+  ])
     .pipe($.concat('fabricator.min.js'))
     .pipe($.uglify())
     .pipe(gulp.dest(config.styleguide.dest + '/js'));
@@ -358,21 +364,21 @@ gulp.task('serve', ['assemble-everything'], function () {
   });
 
   gulp.task('assemble:watch', ['assemble-everything'], reload);
-  gulp.watch(['src/**/*.{html,md,json,yml}'], ['assemble:watch']);
+  gulp.watch([config.styleguide.src + '/**/*.{html,md,json,yml}'], ['assemble:watch']);
 
-  gulp.watch(['src/assets/sass/**/*.scss', 'src/assets/fabricator/styles/**/*.scss'], function() {
+  gulp.watch([config.framework.src + '/sass/**/*.scss', config.styleguide.src + '/assets/fabricator/styles/**/*.scss'], function() {
     runSequence('styles', 'print', 'assemble:watch');
   });
-  gulp.watch(['src/assets/js/*.js', 'src/assets/fabricator/scripts/**/*.js'], function() {
+  gulp.watch([config.framework.src + '/js/*.js', config.styleguide.src + '/assets/fabricator/scripts/**/*.js'], function() {
     runSequence('scripts', 'assemble:watch');
   });
-  gulp.watch(['src/assets/img/**/*.{jpg,png,gif,svg}'], function() {
+  gulp.watch([config.framework.src + '/img/**/*.{jpg,png,gif,svg}'], function() {
     runSequence('build-images', 'assemble:watch');
   });
-  gulp.watch(['src/assets/fonts/**/*.{eot,woff,woff2,ttf}'], function() {
+  gulp.watch([config.framework.src + '/fonts/**/*.{eot,woff,woff2,ttf}'], function() {
     runSequence('build-fonts', 'assemble:watch');
   });
-  gulp.watch(['src/example-pages/*.twig'], function() {
+  gulp.watch([config.styleguide.src + '/example-pages/*.twig'], function() {
     runSequence('twig', 'assemble:watch');
   });
 });

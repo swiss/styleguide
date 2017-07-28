@@ -5,7 +5,7 @@ build/
 .sass-cache
 
 styleguide/*
-src/views/pages/*
+src/styleguide/views/pages/*
 
 # IDEs and editors
 /.idea
