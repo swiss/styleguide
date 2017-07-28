@@ -23,7 +23,8 @@
     "url": "https://github.com/swiss/styleguide.git"
   },
   "scripts": {
-    "start": "gulp && gulp serve"
+    "start": "gulp && gulp serve",
+    "build": "gulp"
   },
   "devDependencies": {
     "browser-sync": "^2.8.2",
