@@ -1,4 +1,5 @@
 (function($) {
+  'use strict';
 
   $('a.social-sharing-facebook').click(function() {
     window.open(
