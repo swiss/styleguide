@@ -1,7 +1,7 @@
 # Swiss Confederation Web Guidelines
 
-- [About Accessibility](Accessibility.md)
-- [How to use the styleguide in your project?](HOWTO.md)
+- [About Accessibility](doc/Accessibility.md)
+- [How to use the styleguide in your project?](doc/Howto.md)
 
 
 ## Summary
@@ -21,7 +21,7 @@ The design specifications described for use on the Internet or in intranets can 
 
 ## Installation
 
-*Recommended:* Install with NPM ([more details](HOWTO.md)):
+*Recommended:* Install with NPM ([more details](doc/Howto.md)):
 
 ```
 $ npm install swiss-styleguide --save-dev
@@ -76,7 +76,7 @@ The grid system works exactly the same way as [Bootstrap](http://getbootstrap.co
 
 ### Print classes
 
-You can add print specific classes by using the ones [Bootstrap](http://getbootstrap.com/css/#responsive-utilities-print) made. 
+You can add print specific classes by using the ones [Bootstrap](http://getbootstrap.com/css/#responsive-utilities-print) made.
 
 Classes available: `.visible-print-block`, `.visible-print-inline`, `.visible-print-inline-block`, `.hidden-print`.
 
@@ -84,7 +84,7 @@ Please refer to their documentation for more details.
 
 ## Known issues
 
-### `@font-face` + Cache-Control/Pragma: 
+### `@font-face` + Cache-Control/Pragma:
 There is a known issue with Internet Explorer when loading the page over HTTPS with Cache-Control or Pragma headers set. Disable cache control on fonts to fix it (refer to [issue #359](https://github.com/swiss/styleguide/issues/359) for more information):
 
 ```
