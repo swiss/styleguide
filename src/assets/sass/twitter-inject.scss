@@ -60,19 +60,20 @@ a:hover {
   text-decoration: none;
 }
 
-.Icon.Icon--retweetBadge {
+.Icon--retweetBadge {
   background: url('../img/twitter_sprite.png') no-repeat;
   height: 15px;
   width: 15px;
   margin-right: 5px;
 }
 
-.Icon.Icon--heart.TweetAction-icon.Icon--heartEdge {
-  background-position: -33px 0;
+.timeline-Tweet:hover .Icon--heart.TweetAction-icon.Icon--heartEdge,
+.Icon--heart.TweetAction-icon.Icon--heartEdge {
+  background: url('../img/twitter_sprite.png') no-repeat -33px 0;
 }
 
-.TweetAction:focus .Icon.Icon--heart.TweetAction-icon.Icon--heartEdge,
-.TweetAction:hover .Icon.Icon--heart.TweetAction-icon.Icon--heartEdge {
+.TweetAction:focus .Icon--heart.TweetAction-icon.Icon--heartEdge,
+.TweetAction:hover .Icon--heart.TweetAction-icon.Icon--heartEdge {
   background: url('../img/twitter_sprite.png') no-repeat -49px 0 !important;
 }
 
