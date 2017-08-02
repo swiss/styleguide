@@ -39,7 +39,7 @@ var config = {
 /**
  * Build vendors dependencies
  */
-gulp.task('vendors', function() {
+gulp.task('framework:vendors', function() {
 
   // CSS VENDORS
   gulp.src([
@@ -100,7 +100,7 @@ gulp.task('vendors', function() {
  * Build styles from SCSS files
  * With error reporting on compiling (so that there's no crash)
  */
-gulp.task('styles', function() {
+gulp.task('framework:styles', function() {
   if (!argv.dev) { console.log('[styles] Outputting minified styles.' ); }
   else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
@@ -132,7 +132,7 @@ gulp.task('print', function() {
  * Build JS
  * With error reporting on compiling (so that there's no crash)
  */
-gulp.task('scripts', function() {
+gulp.task('framework:scripts', function() {
   return gulp.src([config.framework.src + '/js/*.js'])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
@@ -147,7 +147,7 @@ gulp.task('scripts', function() {
 /**
  * Copy images to build
  */
-gulp.task('build-images', function() {
+gulp.task('framework:images', function() {
   return gulp.src([config.framework.src + '/img/**'])
     .pipe(gulp.dest(config.framework.dest + '/img'));
 });
@@ -156,7 +156,7 @@ gulp.task('build-images', function() {
 /**
  * Copy fonts to build
  */
-gulp.task('build-fonts', function() {
+gulp.task('framework:fonts', function() {
   return gulp.src([config.framework.src + '/fonts/**'])
     .pipe(gulp.dest(config.framework.dest + '/fonts'));
 });
@@ -165,11 +165,11 @@ gulp.task('build-fonts', function() {
 /**
  * Compile TWIG example pages
  */
-gulp.task('clean-twig', function(cb) {
+gulp.task('styleguide:clean-twig', function(cb) {
   rimraf(config.styleguide.src + '/views/pages', cb);
 });
 
-gulp.task('twig', ['clean-twig'], function() {
+gulp.task('styleguide:twig', ['styleguide:clean-twig'], function() {
   return gulp.src([
     config.styleguide.src + '/example-pages/*.twig',
     '!' + config.styleguide.src + '/example-pages/layout.twig'
@@ -183,11 +183,11 @@ gulp.task('twig', ['clean-twig'], function() {
  * FABRICATOR
  */
 // Build the style guide
-gulp.task('assemble-everything', function(cb) {
-  runSequence('clean', 'assemble', 'copy', 'styles:fabricator', 'scripts:fabricator', cb);
+gulp.task('styleguide:build', function(cb) {
+  runSequence('styleguide:clean', 'styleguide:assemble', 'styleguide:copy', 'styleguide:styles', 'styleguide:scripts', cb);
 });
 
-gulp.task('assemble', function(done) {
+gulp.task('styleguide:assemble', function(done) {
   // Build style guide for every language
   for (var localeCode in config.locales) {
     var locale = config.locales[localeCode];
@@ -294,31 +294,36 @@ gulp.task('assemble', function(done) {
 });
 
 // Copy all the required files to the styleguide folder
-gulp.task('copy', ['copy:framework', 'copy:assets', 'copy:landing', 'copy:files']);
+gulp.task('styleguide:copy', [
+  'styleguide:copy:framework',
+  'styleguide:copy:assets',
+  'styleguide:copy:landing',
+  'styleguide:copy:files'
+]);
 
-gulp.task('copy:framework', function() {
+gulp.task('styleguide:copy:framework', function() {
   return gulp.src([config.framework.dest + '/**/*'])
     .pipe(gulp.dest(config.styleguide.dest));
 });
 
-gulp.task('copy:assets', function() {
+gulp.task('styleguide:copy:assets', function() {
   return gulp.src([config.styleguide.src + '/assets/img/**/*'])
     .pipe(gulp.dest(config.styleguide.dest + '/styleguide-img'));
 });
 
-gulp.task('copy:landing', function() {
+gulp.task('styleguide:copy:landing', function() {
   return gulp.src([config.styleguide.src + '/index.html'])
     .pipe(gulp.dest(config.styleguide.dest));
 });
 
-gulp.task('copy:files', function() {
+gulp.task('styleguide:copy:files', function() {
   return gulp.src([config.styleguide.src + '/assets/files/*'])
     .pipe(gulp.dest(config.styleguide.dest + '/files'));
 });
 
 
 // Build Fabricator style
-gulp.task('styles:fabricator', function() {
+gulp.task('styleguide:styles', function() {
   gulp.src(config.styleguide.src + '/assets/fabricator/styles/fabricator.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass().on('error', $.sass.logError))
@@ -332,7 +337,7 @@ gulp.task('styles:fabricator', function() {
 });
 
 // Build Fabricator scripts
-gulp.task('scripts:fabricator', function() {
+gulp.task('styleguide:scripts', function() {
   return gulp.src([
     'node_modules/prismjs/prism.js',
     config.styleguide.src + '/assets/fabricator/scripts/*.js'
@@ -346,7 +351,7 @@ gulp.task('scripts:fabricator', function() {
 /**
  * Clean output directories
  */
-gulp.task('clean', function(cb) {
+gulp.task('styleguide:clean', function(cb) {
   rimraf(config.styleguide.dest, cb);
 });
 
@@ -354,7 +359,7 @@ gulp.task('clean', function(cb) {
 /**
  * Serve
  */
-gulp.task('serve', ['assemble-everything'], function () {
+gulp.task('styleguide:serve', ['assemble-everything'], function () {
   browserSync({
     server: {
       baseDir: config.styleguide.dest
@@ -387,7 +392,7 @@ gulp.task('serve', ['assemble-everything'], function () {
 /**
  * Deploy to GH pages
  */
-gulp.task('deploy', function () {
+gulp.task('styleguide:deploy', function () {
   if (argv.github) {
     return gulp.src(config.styleguide.dest + '/**/*')
       .pipe($.ghPages());
@@ -405,23 +410,35 @@ gulp.task('deploy', function () {
   }
 });
 
+gulp.task('framework:build', function(cb) {
+  runSequence(
+    'framework:vendors',
+    'framework:styles',
+    'print',
+    'framework:scripts',
+    'framework:images',
+    'framework:fonts',
+    cb
+  );
+});
+
+gulp.task('styleguide:build', ['styleguide:clean'], function(cb) {
+  runSequence(
+    'styleguide:twig',
+    'styleguide:styles',
+    'styleguide:scripts',
+    'styleguide:assemble',
+    'styleguide:copy',
+    cb
+  );
+});
+
+
+gulp.task('build', function(cb) {
+  runSequence('framework:build', 'styleguide:build', cb);
+});
 
 /**
  * Default task build the style guide
  */
-gulp.task('default', ['clean'], function(cb) {
-  runSequence(
-    'vendors',
-    'styles',
-    'print',
-    'scripts',
-    'twig',
-    'build-images',
-    'build-fonts',
-    'styles:fabricator',
-    'scripts:fabricator',
-    'assemble',
-    'copy',
-    cb
-  );
-});
+gulp.task('default', ['build']);
