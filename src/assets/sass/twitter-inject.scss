@@ -1,0 +1,111 @@
+@import 'admin-variables';
+
+.TweetAuthor-name,
+.TweetAuthor-name:hover {
+  color: $coal !important;
+}
+
+.TweetAuthor-link:hover {
+  text-decoration-color: $coal !important;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: $cerulean !important;
+}
+
+.TweetAuthor-avatar,
+.SandboxRoot.env-bp-min .TweetAuthor-avatar {
+  height: 48px;
+  width: 48px;
+  margin-right: 10px;
+
+  .Avatar {
+    border-radius: 5px;
+  }
+}
+
+.timeline-Tweet-author {
+  padding-left: 58px;
+}
+
+.TweetAuthor-name.Identity-name {
+  font-size: 1.1em;
+}
+
+.TweetAuthor-screenName.Identity-screenName {
+  font-size: 0.9em;
+  color: $empress;
+}
+
+.timeline-Tweet-text,
+.SandboxRoot.env-bp-min .timeline-Tweet-text {
+  font-size: 1.1em !important;
+  line-height: 1.5;
+  padding-left: 58px;
+  margin-left: 0;
+  color: $coal;
+}
+
+.timeline-Tweet-action.timeline-ShareMenu,
+.timeline-Tweet-brand,
+.TweetAuthor-verifiedBadge {
+  display: none;
+}
+
+.timeline-Tweet-metadata *,
+.timeline-Tweet-metadata *:hover,
+.timeline-Tweet-retweetCredit {
+  color: $empress;
+  text-decoration: none;
+}
+
+.Icon--retweetBadge {
+  background: url('../img/twitter_sprite.png') no-repeat;
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+}
+
+.timeline-Tweet:hover .Icon--heart.TweetAction-icon.Icon--heartEdge,
+.Icon--heart.TweetAction-icon.Icon--heartEdge {
+  background: url('../img/twitter_sprite.png') no-repeat -33px 0;
+}
+
+.TweetAction:focus .Icon--heart.TweetAction-icon.Icon--heartEdge,
+.TweetAction:hover .Icon--heart.TweetAction-icon.Icon--heartEdge {
+  background: url('../img/twitter_sprite.png') no-repeat -49px 0 !important;
+}
+
+.Icon.Icon--retweetBadge {
+  background-position: -81px 0;
+  margin-bottom: 2px;
+}
+
+.timeline-Body {
+  border-top: none;
+}
+
+.timeline-ShowMoreButton {
+  display: inline-block;
+  color: $white;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $cerulean;
+  border: 1px solid $cerulean;
+  border-radius: 3px;
+  padding: .45em .9em;
+  margin: 15px 0;
+  white-space: nowrap;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.timeline-ShowMoreButton:hover,
+.timeline-ShowMoreButton:active,
+.timeline-ShowMoreButton:focus {
+  background-color: darken($cerulean, 10%);
+  color: $white;
+}

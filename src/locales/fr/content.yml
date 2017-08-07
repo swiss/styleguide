@@ -145,6 +145,15 @@ teaser:
       Un flux RSS est un teaser très spécialisé permettant de consulter exclusivement des flux RSS.
 
       Le titre se compose toujours d’une icône RSS et du texte «RSS». En-dessous, on trouve une liste de liens.
+  twitter-timeline:
+    title: Twitter Timeline
+    help: |
+      Une timeline Twitter affiche des tweets récents d'un utilisateur spécifique de Twitter.
+
+      Le tag HTML `data-profile` définit l'utilisateur Twitter. `data-tweet-limit` permet également de définir la quantité maximale de tweets affichés.
+  release: |
+    **3.1.0**
+    - ajout de Twitter Timeline teaser
 content-containers:
   title: Conteneurs
   elements-list:

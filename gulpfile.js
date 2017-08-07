@@ -87,7 +87,8 @@ gulp.task('vendors', function() {
     'node_modules/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
     'node_modules/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.min.js',
     'node_modules/moment/moment.js',
-    'node_modules/pikaday/pikaday.js'
+    'node_modules/pikaday/pikaday.js',
+    'node_modules/twitter-timeline/index.js'
   ])
     .pipe($.concat('vendors.js'))
     .pipe(gulp.dest(config.framework.dest + '/js'))
@@ -126,6 +127,18 @@ gulp.task('styles', function() {
 
 gulp.task('print', function() {
   return gulp.src('src/assets/sass/print/print.scss')
+    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.if(argv.dev, $.sourcemaps.init()))
+    .pipe($.autoprefixer({
+      browsers: config.autoprefixer
+    }))
+    .pipe($.if(argv.dev, $.sourcemaps.write()))
+    .pipe($.if(!argv.dev, $.cleanCss()))
+    .pipe(gulp.dest(config.framework.dest + '/css'));
+});
+
+gulp.task('twitter-inject', function() {
+  return gulp.src('src/assets/sass/twitter-inject.scss')
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.if(argv.dev, $.sourcemaps.init()))
     .pipe($.autoprefixer({
@@ -361,7 +374,7 @@ gulp.task('serve', ['assemble-everything'], function () {
   gulp.watch(['src/**/*.{html,md,json,yml}'], ['assemble:watch']);
 
   gulp.watch(['src/assets/sass/**/*.scss', 'src/assets/fabricator/styles/**/*.scss'], function() {
-    runSequence('styles', 'print', 'assemble:watch');
+    runSequence('styles', 'print', 'twitter-inject', 'assemble:watch');
   });
   gulp.watch(['src/assets/js/*.js', 'src/assets/fabricator/scripts/**/*.js'], function() {
     runSequence('scripts', 'assemble:watch');
@@ -408,6 +421,7 @@ gulp.task('default', ['clean'], function(cb) {
     'vendors',
     'styles',
     'print',
+    'twitter-inject',
     'scripts',
     'twig',
     'build-images',

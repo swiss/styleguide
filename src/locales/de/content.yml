@@ -146,6 +146,15 @@ teaser:
       Ein RSS Feed ist ein sehr spezialisierter Teaser mit dem ausschliesslich RSS-Feeds aufgerufen werden können
 
       Der Titel besteht immer aus einem RSS-Icon und dem Text "RSS". Darunter befindet sich eine Liste mit Links.
+  twitter-timeline:
+    title: Twitter Timeline
+    help: |
+      Eine Twitter-Timeline zeigt die neusten Tweets eines bestimmten Twitter-Benutzers.
+
+      Mit dem HTML-Tag `data-profile` wird der Twitter-Bentuzer definiert. Mit `data-tweet-limit` kann die Anzahl anzuzeigender Tweets optional limitiert werden.
+  release: |
+    **3.1.0**
+    - added Twitter Timeline teaser
 content-containers:
   title: Inhaltscontainer
   elements-list:
