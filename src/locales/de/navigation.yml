@@ -69,7 +69,7 @@ hierarchical-navigation:
 
       ### Umsetzung für Smartphones
 
-      Auf Smartphones wird die Servicenavigation am Seitenende oberhalb des Footers angezeigt. 
+      Auf Smartphones wird die Servicenavigation am Seitenende oberhalb des Footers angezeigt.
 
       ![Left nav on mobile](../styleguide-img/mobile_navi_3.png)
 
@@ -127,7 +127,11 @@ header:
       - Add a container with `clearfix` class around logo component
   accessibility-navigation:
     title: Barrierefreie Navigation
-    help: Die barrierefreie Navigation wird direkt nach dem `body`-Tag platziert. Sie wird benötigt, um den Usern mittels Access-Keys rasch Zugang zu bestimmten Services oder zu geben. Die barrierefreie Navigation ist **nicht sichtbar**.
+    help: |
+      Die barrierefreie Navigation wird direkt nach dem `body`-Tag platziert. Sie wird benötigt, um den Usern mittels Access-Keys rasch Zugang zu bestimmten Services oder zu geben. Die barrierefreie Navigation ist **nicht sichtbar** solange kein Link fokussiert ist.
+
+      Hinweis: Je nach Browser werden die Links im Beispiel erst nach mehrmaligem Tab-Drücken sichtbar. Dies liegt daran, dass die Webguidlines-Seite selber eine barrierefreie Navigation verwendet.
+
     release: |
       **2.1.8**
 
@@ -287,4 +291,3 @@ footer:
       In der Fusszeile unterhalb des Footer, wird nach links ausgerichtet ein Hinweis auf das Copyright und nach rechts ausgerichtet Links auf "Rechtliches" und "Impressum" aufgeführt. Diese Angaben sind aus rechtlichen Gründen zwingend erforderlich.
 
       Die Fusszeile ist ein **Markenelement**: die Verwendung ist obligatorisch, das Erscheinungsbild darf nicht verändert werden.
-

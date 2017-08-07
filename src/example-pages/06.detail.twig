@@ -179,32 +179,9 @@
       <p><small class="hidden-print"><a href="#" class="icon icon--before icon--power">Back to top</a><span class="text-dimmed">Last edition: 21.03.2014</span></small></p>
 
       <div class="social-sharing">
-        <a href="#" aria-label="Facebook"
-          onclick="
-            window.open(
-              'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-              'facebook-share-dialog',
-              'width=626,height=436');
-            return false;">
-           <img src="../../img/FB-f-Logo__blue_29.png" width="16px" height="16px" alt="Share on Facebook">
-        </a>
-        <a href="#" aria-label="Twitter"
-          onclick="
-            window.open(
-              'http://twitter.com/share?text=You text here.&url='+encodeURIComponent(location.href),
-              'facebook-share-dialog',
-              'width=626,height=436');
-            return false;">
-          <img src="../../img/Twitter_logo_blue.png" width="16px" height="16px" alt="Share on Twitter">
-        </a>
-        <a href="#"
-           onclick="
-             window.open(
-               'https://plus.google.com/share?url=encodeURIComponent(location.href)',
-               '',
-               'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
-             return false;">
-           <img src="https://www.gstatic.com/images/icons/gplus-16.png" alt="Share on Google+"/></a>
+        <a href="#" aria-label="Facebook" class="social-sharing-facebook"></a>
+        <a href="#" aria-label="Twitter" class="social-sharing-twitter"></a>
+        <a href="#" aria-label="Google+" class="social-sharing-google"></a>
       </div>
   </div>
 {% endblock %}

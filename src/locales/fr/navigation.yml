@@ -84,8 +84,8 @@ hierarchical-navigation:
 
       **2.3.0:**
 
-        - `aria-selected="true"` ajouté pour le lien actuel 
-        - premier bouton de la liste supprimée (il ressemblait à un lien retour) 
+        - `aria-selected="true"` ajouté pour le lien actuel
+        - premier bouton de la liste supprimée (il ressemblait à un lien retour)
         - label «Back» du bouton de retour remplacé par le nom de la section dans le sous-menu drill-down
 
       **2.1.0:**
@@ -125,7 +125,10 @@ header:
       - Ajoutez un conteneur avec la classe `clearfix` autour de la composante de logo
   accessibility-navigation:
     title: Navigation accessible
-    help: La navigation accessible est placée directement après la balise <body>. Elle est nécessaire pour offrir aux utilisateurs un accès rapide à certains services grâce à des clés d’accès. La navigation accessible n’est **pas visible**.
+    help: |
+      La navigation accessible est placée directement après la balise <body>. Elle est nécessaire pour offrir aux utilisateurs un accès rapide à certains services grâce à des raccourcis clavier. La navigation accessible n’est **pas visible**.
+
+      Remarque: Selon le navigateur utilisé, les liens d'accessibilité dans l'example s'affichent seulement après avoir appuyé tab plusieurs fois. Ceci est dû au fait que la page webguidelines utilise une navigation accessible elle-même.
     release: |
       **2.1.8**
 
@@ -265,7 +268,7 @@ footer:
     release: |
       **2.5.0:**
 
-      - colonnes de bas de page enveloppés dans un `div.row` 
+      - colonnes de bas de page enveloppés dans un `div.row`
 
       **2.1.0:**
 
@@ -281,7 +284,6 @@ footer:
   footbar:
     title: Ligne de pied de page
     help: |
-      Dans la ligne de pied de page, située en-dessous du pied de page, on trouve une note concernant le copyright alignée à gauche et des liens «Informations juridiques» et «Impressum» alignés à droite. Ces indications sont obligatoires pour des raisons juridiques. 
+      Dans la ligne de pied de page, située en-dessous du pied de page, on trouve une note concernant le copyright alignée à gauche et des liens «Informations juridiques» et «Impressum» alignés à droite. Ces indications sont obligatoires pour des raisons juridiques.
 
       La ligne de pied de page est un **élément de marque**: son utilisation est obligatoire et son apparence ne peut être modifiée.
-

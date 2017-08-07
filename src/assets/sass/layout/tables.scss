@@ -121,6 +121,12 @@ tfoot td.active {background: $solitude !important;}
       padding-left: 20px;
     }
   }
+
+  // Enforce MS Edge to use the correct height
+  .collapsing tr,
+  .collapse tr {
+    height: auto;
+  }
 }
 
 
