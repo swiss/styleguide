@@ -172,6 +172,9 @@ content-containers:
     title: Encadré rétractable
     help: |
       L’encadré rétractable est un élément interactif à l’intérieur duquel se cachent d’autres éléments interactifs ou d’autres contenus. Par défaut, il est fermé. Un clic permet d’ouvrir l’encadré afin de rendre les contenus visibles. Un autre clic permet de refermer l’encadré.
+    release: |
+      **3.1**
+      - correction d'accessibilité au clavier
 
 ordering-checkout:
   title: Commande et check-out

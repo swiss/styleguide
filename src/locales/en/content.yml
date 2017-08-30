@@ -164,6 +164,10 @@ content-containers:
       The collapsible panel is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.
 
       Add `.collapsed` to link for it to change the icon direction when collapsing.
+    release: |
+      **3.1**
+      - keyboard accessibility fixed
+
 ordering-checkout:
   title: Ordering and checkout
   one-line-order-form:

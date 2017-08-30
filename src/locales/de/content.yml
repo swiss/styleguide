@@ -173,6 +173,9 @@ content-containers:
     title: Klapp-Box
     help: |
       Die Klapp-Box ist ein interaktives Element, in dem sich andere interaktive Elemente oder sonstige Inhalte verbergen. Es ist standardmässig geschlossen. Durch einen Klick wird die Box geöffnet, und die Inhalte werden sichtbar. Mit einem weiteren Klick kann die Box wieder geschlossen werden.
+    release: |
+      **3.1**
+      - keyboard accessibility fixed
 
 ordering-checkout:
   title: Bestellen und Check-out
