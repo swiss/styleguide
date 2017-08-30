@@ -126,8 +126,10 @@ teaser:
     title: News feed
     help: In the news teaser, various snippets of news items are arranged chronologically. The user can use the scrollbar to scroll down the teaser and take a look at all of the news snippets that are available. Each snippet contains the date, the type of news item, and the link to the news story’s headline.
     release: |
-      **2.0.1:**
+      **3.1:**
+      - hiding scrollbar if it's not needed
 
+      **2.0.1:**
       - added the `.news-feed` class to the `.list-group` element
       - added the `.scroll-y` wrapper containing all the `.list-group-item` elements
   rss-feed:
