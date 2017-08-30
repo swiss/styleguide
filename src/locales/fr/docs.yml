@@ -8,7 +8,7 @@ index:
 
     ## Exceptions
 
-    Des exceptions du design web de la Confédération sont possibles pour les sites Internet de campagne et partenaires. Elles doivent être approuvées par la Conférence des secrétaires généraux des départements (CSG). Les demandes correspondantes doivent être soumises au <a href="http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de">Service Identité visuelle de la Confédération</a> de la Chancellerie fédérale.
+    Des exceptions du design web de la Confédération sont possibles pour les sites Internet de campagne et partenaires. Elles doivent être approuvées par la Conférence des secrétaires généraux des départements (CSG). Les demandes correspondantes doivent être soumises au [Service Identité visuelle de la Confédération](http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de) de la Chancellerie fédérale.
 
     ## Sites Internet conviviaux et accessibles
 
@@ -75,7 +75,7 @@ index:
 
     ## Révision et développement
 
-    Le développement des lignes directrices, les thèmes et les communiqués sont documentés sur Github: <a href="http://github.com/swiss/styleguide">Lignes directrices pour le design web de la Confédération</a>. Il convient d’y saisir les signalements d’erreurs et suggestions. Cela nécessite un compte sur Github. Les demandes à ce sujet doivent être adressées par e-mail au <a href="mailto:webforum@bk.admin.ch">Webforum de la Confédération</a>.
+    Le développement des lignes directrices, les thèmes et les communiqués sont documentés sur Github: [Lignes directrices pour le design web de la Confédération](http://github.com/swiss/styleguide). Il convient d’y saisir les signalements d’erreurs et suggestions. Cela nécessite un compte sur Github. Les demandes à ce sujet doivent être adressées par e-mail au [Webforum de la Confédération](mailto:webforum@bk.admin.ch).
 
     Le Webforum de la Confédération vérifie périodiquement les lignes directrices web en vue de leur actualité et conformité avec les évolutions du web.
 
@@ -87,14 +87,14 @@ accessibility:
   title: Accessibilité
   intro: |
 
-    Selon la <a href="https://www.admin.ch/opc/de/classified-compilation/20002658/index.html#a14">Loi sur l’égalité pour les handicapés (LHand) art. 14</a>, l’accès aux prestations sur Internet de l’administration fédérale ne doit pas être rendu difficile aux handicapés de la vue. Cette exigence est respectée lorsqu’un site Internet satisfait aux conditions de conformité des WCAG 2.0 et qu’il atteint le niveau de conformité AA.
+    Selon la [Loi sur l’égalité pour les handicapés (LHand) art. 14](https://www.admin.ch/opc/de/classified-compilation/20002658/index.html#a14), l’accès aux prestations sur Internet de l’administration fédérale ne doit pas être rendu difficile aux handicapés de la vue. Cette exigence est respectée lorsqu’un site Internet satisfait aux conditions de conformité des WCAG 2.0 et qu’il atteint le niveau de conformité AA.
 
     Informations complémentaires:
 
-      - <a href="https://www.admin.ch/opc/fr/classified-compilation/20002658/index.html">Loi sur l’égalité pour les handicapés (LHand)</a>
-      - <a href="https://www.isb.admin.ch/isb/fr/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html">P028 - Directives de la Confédération pour l’aménagement de sites Internet facilement accessibles</a>
-      - <a href="http://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a>
-      - <a href="http://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a>
+      - [Loi sur l’égalité pour les handicapés (LHand)](https://www.admin.ch/opc/fr/classified-compilation/20002658/index.html)
+      - [P028 - Directives de la Confédération pour l’aménagement de sites Internet facilement accessibles](https://www.isb.admin.ch/isb/fr/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html)
+      - [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/)
+      - [Accessible Rich Internet Applications (WAI-ARIA) 1.0](http://www.w3.org/TR/wai-aria/)
 
     ## Bonnes pratiques
 
@@ -153,13 +153,13 @@ accessibility:
 
       ### Color Contrast Analyzer
 
-      <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyzer</a> est un outil qui permet d’analyser le contraste entre la couleur du premier plan et celle de l’arrière-plan.
+      [Color Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/) est un outil qui permet d’analyser le contraste entre la couleur du premier plan et celle de l’arrière-plan.
 
-    La Web Accessibility Initiative (WAI) du World Wide Web Consortiums (W3C) propose une <a href=" https://www.w3.org/WAI/ER/tools/index.html">liste complète</a> d’outils d’évaluation de l’accessibilité.
+    La Web Accessibility Initiative (WAI) du World Wide Web Consortiums (W3C) propose une [liste complète](https://www.w3.org/WAI/ER/tools/index.html) d’outils d’évaluation de l’accessibilité.
 
     ## Informations supplémentaires et contact
 
-    Service E-Accessibility de la Confédération (2015-2017) <a href="mailto:markus.riesch@gs-edi.admin.ch">Markus Riesch</a> Tél. +41584625463
+    Service E-Accessibility de la Confédération (2015-2017) [Markus Riesch](mailto:markus.riesch@gs-edi.admin.ch) Tél. +41584625463
 
 basic-grid:
   title: Grille de base et types de pages
@@ -185,7 +185,7 @@ basic-grid:
 
     ### Navigation de gauche
 
-    La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement» qui indique toujours les options de la page actuelle. Elle se compose de trois zones: l’en-tête de navigation avec le titre de la page actuelle, un lien «Retour» vers le niveau de navigation supérieur et des liens vers les sous-pages. Le comportement est décrit sur la page d’élément <a href="/fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Liste de navigation latérale (sous-navigation de gauche)</a>.
+    La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement» qui indique toujours les options de la page actuelle. Elle se compose de trois zones: l’en-tête de navigation avec le titre de la page actuelle, un lien «Retour» vers le niveau de navigation supérieur et des liens vers les sous-pages. Le comportement est décrit sur la page d’élément [Liste de navigation](/fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list) latérale (sous-navigation de gauche)</a>.
 
 
     ### Zone de contenu
@@ -342,7 +342,7 @@ guidelines:
 
     ## Installation
 
-    Les informations d’installation pour l’utilisation des lignes directrices dans le cadre d’un projet peuvent être consultées sur <a href="https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet">Github</a>
+    Les informations d’installation pour l’utilisation des lignes directrices dans le cadre d’un projet peuvent être consultées sur [Github](https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet)
 
 
 header-footer:

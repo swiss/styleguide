@@ -8,7 +8,7 @@ index:
 
     ## Ausnahmen
 
-    Ausnahmen vom Webdesign Bund sind für Kampagnen- und Partner-Websites möglich. Sie müssen von der Konferenz der Generalsekretäre der Departemente (GSK) genehmigt werden. Entsprechende Anträge sind bei der <a href="http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de">Fachstelle CD Bund</a>  der Bundeskanzlei einzureichen.
+    Ausnahmen vom Webdesign Bund sind für Kampagnen- und Partner-Websites möglich. Sie müssen von der Konferenz der Generalsekretäre der Departemente (GSK) genehmigt werden. Entsprechende Anträge sind bei [Fachstelle CD Bund](http://intranet.bk.admin.ch/themen/02268/02270/index.html?lang=de) der Bundeskanzlei einzureichen.
 
     ## Benutzerfreundliche und barrierefreie Websites
 
@@ -75,7 +75,7 @@ index:
 
     ## Überarbeitung und Weiterentwicklung
 
-    Die Entwicklung der Richtlinien, die Issues und Releases sind auf Github dokumentiert: <a href="http://github.com/swiss/styleguide">Richtlinien für das Webdesign Bund</a>. Fehlermeldungen und Anregungen sind dort einzugeben. Dafür ist ein Konto bei Github nötig. Anfragen dazu bitte per Mail an <a href="mailto:webforum@bk.admin.ch">Webforum Bund</a>.
+    Die Entwicklung der Richtlinien, die Issues und Releases sind auf Github dokumentiert: [Richtlinien für das Webdesign Bund](http://github.com/swiss/styleguide). Fehlermeldungen und Anregungen sind dort einzugeben. Dafür ist ein Konto bei Github nötig. Anfragen dazu bitte per Mail an <a href="mailto:webforum@bk.admin.ch">Webforum Bund</a>.
 
     Das Webforum Bund überprüft die Webrichtlinien periodisch auf Aktualität und Konformität mit den Entwicklungen im Web.
 
@@ -89,14 +89,14 @@ accessibility:
   title: Barrierefreiheit
   intro: |
 
-    Laut dem <a href="https://www.admin.ch/opc/de/classified-compilation/20002658/index.html#a14">Behindertengleichstellungsgesetz (BehiG)Art. 14</a> müssen Dienstleistungen der Bundesverwaltung im Internet Sehbehinderten ohne erschwerende Bedingungen zugänglich sein. Erfüllt ist diese Vorgabe, wenn eine Website die Konformitätsbedingungen gemäss WCAG 2.0 entspricht und die Konformitätsstufe AA erreicht.
+    Laut dem [Behindertengleichstellungsgesetz (BehiG) Art. 14](https://www.admin.ch/opc/de/classified-compilation/20002658/index.html#a14) müssen Dienstleistungen der Bundesverwaltung im Internet Sehbehinderten ohne erschwerende Bedingungen zugänglich sein. Erfüllt ist diese Vorgabe, wenn eine Website die Konformitätsbedingungen gemäss WCAG 2.0 entspricht und die Konformitätsstufe AA erreicht.
 
     Weiterführende Informationen:
 
-      - <a href="https://www.admin.ch/opc/de/classified-compilation/20002658/index.html">Behindertengleichstellungsgesetz (BehiG)</a>
-      - <a href="https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html">P028 - Richtlinien des Bundes für die Gestaltung von barrierefreien Internetangeboten</a>
-      - <a href="http://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a>
-      - <a href="http://www.w3.org/TR/wai-aria/">Accessible Rich Internet Applications (WAI-ARIA) 1.0</a>
+      - [Behindertengleichstellungsgesetz (BehiG)](https://www.admin.ch/opc/de/classified-compilation/20002658/index.html)
+      - [P028 - Richtlinien des Bundes für die Gestaltung von barrierefreien Internetangeboten](https://www.isb.admin.ch/isb/de/home/ikt-vorgaben/prozesse-methoden/p028-richtlinien_bund_gestaltung_barrierefreie_internetangebote.html)
+      - [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/)
+      - [Accessible Rich Internet Applications (WAI-ARIA) 1.0](http://www.w3.org/TR/wai-aria/)
 
     ## Gute Praxis
 
@@ -156,14 +156,14 @@ accessibility:
 
       ### Color Contrast Analyzer
 
-      <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Color Contrast Analyzer</a> ist ein Werkzeug, das dabei hilft, den Kontrast zwischen Vorder- und Hintergrundfarbe zu analysieren.
+      [Color Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/) ist ein Werkzeug, das dabei hilft, den Kontrast zwischen Vorder- und Hintergrundfarbe zu analysieren.
 
-    Die Web Accessibility Initiative (WAI) des World Wide Web Consortiums (W3C) bietet eine <a href=" https://www.w3.org/WAI/ER/tools/index.html">ausführliche Liste</a> von Tools zur Accessibility-Evaluation an.
+    Die Web Accessibility Initiative (WAI) des World Wide Web Consortiums (W3C) bietet eine [ausführliche Liste](https://www.w3.org/WAI/ER/tools/index.html) von Tools zur Accessibility-Evaluation an.
 
     ## Weitere Informationen und Kontakt
 
     Geschäftsstelle E-Accessibility Bund (2015-2017)
-    <a href="mailto:markus.riesch@gs-edi.admin.ch">Markus Riesch</a> Tel. +41584625463
+    [Markus Riesch](mailto:markus.riesch@gs-edi.admin.ch) Tel. +41584625463
 
 basic-grid:
   title: Grundraster und Seitentypen
@@ -348,7 +348,7 @@ guidelines:
 
     ## Installation
 
-    Die Installationsangaben für die Verwendung der Richtlinien in einem Projekt finden sich auf <a href="https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet">Github</a>
+    Die Installationsangaben für die Verwendung der Richtlinien in einem Projekt finden sich auf [Github](href="https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet).
 
 
 header-footer:
