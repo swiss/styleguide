@@ -230,7 +230,7 @@ content-navigation:
     release: |
       **2.1.8**
 
-      - added ` <span class="sr-only">current page</span>` and `aria-disabled="true"` for accessibility
+      - added `<span class="sr-only">current page</span>` and `aria-disabled="true"` for accessibility
       - added `title`to empty link (link only with icon)
       - added `.clearfix`and `.pull-left` inside of `.pagination-container
   anchor-links:

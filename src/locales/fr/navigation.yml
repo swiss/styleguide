@@ -126,7 +126,7 @@ header:
   accessibility-navigation:
     title: Navigation accessible
     help: |
-      La navigation accessible est placée directement après la balise <body>. Elle est nécessaire pour offrir aux utilisateurs un accès rapide à certains services grâce à des raccourcis clavier. La navigation accessible n’est **pas visible**.
+      La navigation accessible est placée directement après la balise `<body>`. Elle est nécessaire pour offrir aux utilisateurs un accès rapide à certains services grâce à des raccourcis clavier. La navigation accessible n’est **pas visible**.
 
       Remarque: Selon le navigateur utilisé, les liens d'accessibilité dans l'example s'affichent seulement après avoir appuyé tab plusieurs fois. Ceci est dû au fait que la page webguidelines utilise une navigation accessible elle-même.
     release: |

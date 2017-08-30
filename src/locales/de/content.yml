@@ -42,7 +42,7 @@ teaser:
 
       *** Accessibility
 
-      Das Titelformat H3 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der <section> oder der Seite.
+      Das Titelformat H3 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der `<section>` oder der Seite.
 
     release: |
       **3.0.0**
@@ -58,7 +58,7 @@ teaser:
 
       *** Accessibility
 
-      Das Titelformat H3 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der <section> oder der Seite.
+      Das Titelformat H3 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der `<section>` oder der Seite.
 
     release: |
       **3.1.0**
