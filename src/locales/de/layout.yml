@@ -303,6 +303,10 @@ typography:
     title: Fliesstext
     help: |
       Die Schriftgrösse, Zeilenlänge und -abstände des Fliesstextes sind für optimale Lesbarkeit optimiert. Zitate werden kursiv gesetzt. Links im Textfluss werden mit einer Unterstreichung ausgezeichnet, sollten aber sparsam eingesetzt werden. Besser ist es, Links am Ende eines Absatzes zu platzieren.
+    releasenotes: |
+      **3.1**
+      - code of examples added
+
   blockquote:
     title: Zitat
   lists:
