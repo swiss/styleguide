@@ -201,6 +201,10 @@
     display: flex;
     width: 75%;
     padding-right: 15px;
+
+    .tab-pane {
+      width: 100%;
+    }
   }
 
   .nav.nav-tabs {
