@@ -276,3 +276,6 @@ search:
   search-results:
     title: Résultats de recherche
     help: Les résultats de recherche sont affichés par groupes sémantiques dans des onglets. Les catégories (pour le regroupement) peuvent être choisies librement (p. ex. pages de contenu, actualités et publications). Une fonction de pagination permet à l’utilisateur de feuilleter les pages à l’intérieur de l’onglet.
+    release: |
+      **3.1**
+      - texte d'accessibilité ajoutée

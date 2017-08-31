@@ -261,3 +261,6 @@ search:
   search-results:
     title: Search results
     help: Search results are shown in semantically grouped tabs. The categories (groupings) can be chosen freely (e.g. Content pages, News, and Publications). Within the individual tabs, the user can move through the pages with the paging function.
+    release: |
+      **3.1**
+      - accessibility texts added
