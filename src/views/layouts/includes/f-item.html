@@ -9,7 +9,7 @@
 
     <ul class="component-nav list-inline">
       {{#if data.translation}}
-        <li><a href="/{{ data 'locale' }}/docs/08-translations.html" target="_blank" class="btn btn-sm btn-link icon icon--after icon--external">{{t 'styleguide.translations'}}</a></li>
+        <li><a href="{{#if baseurl}}{{baseurl}}/{{/if}}../{{ data 'locale' }}/docs/08-translations.html" target="_blank" class="btn btn-sm btn-link icon icon--after icon--external">{{t 'styleguide.translations'}}</a></li>
       {{/if}}
 
       {{#if data.release}}
