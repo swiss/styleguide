@@ -153,9 +153,9 @@ teaser:
       Une timeline Twitter affiche des tweets récents d'un utilisateur spécifique de Twitter.
 
       Le tag HTML `data-profile` définit l'utilisateur Twitter. `data-tweet-limit` permet également de définir la quantité maximale de tweets affichés.
-  release: |
-    **3.1.0**
-    - ajout de Twitter Timeline teaser
+    release: |
+      **3.1.0**
+      - ajout de Twitter Timeline teaser
 content-containers:
   title: Conteneurs
   elements-list:
