@@ -36,6 +36,16 @@
   <meta name="msapplication-config" content="../img/ico/browserconfig.xml">
 </head>
 <body>
+
+  <script>
+    // Make translated strings available for search.js
+    window.translations = {
+        'global-search': {
+            'nothing-found': "Rien n&#x27;a été trouvé."
+        }
+    }
+  </script>
+
   <ul class="access-keys">
     <li><a href="index.html" accesskey="0">Page d’accueil</a></li>
     <li><a href="#main-navigation" accesskey="1">Navigation principale</a></li>
@@ -49,18 +59,18 @@
             <h2 class="sr-only">Choix de la langue</h2>
             <nav class="nav-lang">
               <ul>
-                  <li>
-                    <a href="../de/general.html" lang="de" title="Deutsch" aria-label="Deutsch " class="">DE</a>
-                  </li>
-                  <li>
-                    <a href="../fr/general.html" lang="fr" title="Français Sélectionné" aria-label="Français Sélectionné" class="active">FR</a>
-                  </li>
-                  <li>
-                    <a href="#" lang="it" title="Italiano Désactivé" aria-label="Italiano Désactivé" class="disabled">IT</a>
-                  </li>
-                  <li>
-                    <a href="../en/general.html" lang="en" title="English" aria-label="English " class="">EN</a>
-                  </li>
+                <li>
+                  <a href="../de/" lang="de" title="Deutsch" aria-label="Deutsch " class="">DE</a>
+                </li>
+                <li>
+                  <a href="../fr/" lang="fr" title="Français Sélectionné" aria-label="Français Sélectionné" class="active">FR</a>
+                </li>
+                <li>
+                  <a href="#" lang="it" title="Italiano Désactivé" aria-label="Italiano Désactivé" class="disabled">IT</a>
+                </li>
+                <li>
+                  <a href="../en/" lang="en" title="English" aria-label="English " class="">EN</a>
+                </li>
               </ul>
             </nav>
             <nav class="nav-service">
@@ -79,6 +89,19 @@
             <img src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="Logo de la Confédération suisse – vers la page d’accueil" />
             <h1>Lignes directrices pour le design web de la Confédération</h1>
           </a>
+          <div class="mod mod-searchfield global-search global-search-standard">
+            <!-- begin: sitesearch desktop-->
+      			<form class="form-horizontal form-search pull-right" role="form">
+      				<h2 class="sr-only">Chercher</h2>
+      				<label for="webguiedelines-search-standard" class="sr-only">Chercher</label>
+      				<input id="webguiedelines-search-standard" class="form-control search-input" type="text" placeholder="Chercher"/>
+              <span class="icon icon--close search-reset"></span>
+              <div class="search-results">
+                <div class="search-results-list"></div>
+              </div>
+      			</form>
+      			<!-- end: sitesearch desktop-->
+          </div>
         </div>
       </header>
 			<nav class="nav-main yamm navbar" id="main-navigation">
@@ -105,79 +128,99 @@
 			                  <nav class="drilldown-sub">
 			                    <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
 			                    <ul>
-			                        <li><a href="../fr/docs/01-guidelines.html">Application des lignes directrices web de la Confédération</a></li>
-			                        <li><a href="../fr/docs/02-cd-elements.html">Eléments de marque</a></li>
-			                        <li><a href="../fr/docs/03-basic-grid.html">Grille de base et types de pages</a></li>
-			                        <li><a href="../fr/docs/04-sample-pages.html">Pages d’exemple</a></li>
-			                        <li><a href="../fr/docs/05-header-footer.html">En-tête et pied de page</a></li>
-			                        <li><a href="../fr/docs/06-devices.html">Rendu sur différents appareils</a></li>
-			                        <li><a href="../fr/docs/07-accessibility.html">Accessibilité</a></li>
-			                        <li><a href="../fr/docs/08-translations.html">Traductions</a></li>
+			                      <li><a href="../fr/docs/01-guidelines.html">Application des lignes directrices web de la Confédération</a></li>
+			                      <li><a href="../fr/docs/02-cd-elements.html">Eléments de marque</a></li>
+			                      <li><a href="../fr/docs/03-basic-grid.html">Grille de base et types de pages</a></li>
+			                      <li><a href="../fr/docs/04-sample-pages.html">Pages d’exemple</a></li>
+			                      <li><a href="../fr/docs/05-header-footer.html">En-tête et pied de page</a></li>
+			                      <li><a href="../fr/docs/06-devices.html">Rendu sur différents appareils</a></li>
+			                      <li><a href="../fr/docs/07-accessibility.html">Accessibilité</a></li>
+			                      <li><a href="../fr/docs/08-translations.html">Traductions</a></li>
 			                    </ul>
 			                  </nav>
 			                </li>
 			
-			                  <li class="list-sub">
-			                    <a href="#">Grille de base</a>
-			                    <nav class="drilldown-sub">
-			                      <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
-			                      <ul>
-			                          <li><a href="../fr/form-elements.html">Eléments de formulaire</a></li>
-			                          <li><a href="../fr/general.html">Généralités</a></li>
-			                          <li><a href="../fr/tables.html">Tableaux</a></li>
-			                          <li><a href="../fr/typography.html">Typographie</a></li>
-			                      </ul>
-			                    </nav>
-			                  </li>
-			                  <li class="list-sub">
-			                    <a href="#">Modules de navigation</a>
-			                    <nav class="drilldown-sub">
-			                      <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
-			                      <ul>
-			                          <li><a href="../fr/hierarchical-navigation.html">Navigation hiérarchique</a></li>
-			                          <li><a href="../fr/header.html">Zone d’en-tête</a></li>
-			                          <li><a href="../fr/content-navigation.html">Navigation de contenu</a></li>
-			                          <li><a href="../fr/footer.html">Pied de page (footer)</a></li>
-			                      </ul>
-			                    </nav>
-			                  </li>
-			                  <li class="list-sub">
-			                    <a href="#">Modules de contenu</a>
-			                    <nav class="drilldown-sub">
-			                      <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
-			                      <ul>
-			                          <li><a href="../fr/standard-elements.html">Eléments standard</a></li>
-			                          <li><a href="../fr/content-containers.html">Conteneurs</a></li>
-			                          <li><a href="../fr/widgets.html">Widgets</a></li>
-			                          <li><a href="../fr/functions.html">Fonctions</a></li>
-			                          <li><a href="../fr/teaser.html">Teaser</a></li>
-			                          <li><a href="../fr/multimedia.html">Multimédia</a></li>
-			                          <li><a href="../fr/search.html">Recherche</a></li>
-			                          <li><a href="../fr/ordering-checkout.html">Commande et check-out</a></li>
-			                      </ul>
-			                    </nav>
-			                  </li>
+			                <li class="list-sub">
+			                  <a href="#">Grille de base</a>
+			                  <nav class="drilldown-sub">
+			                    <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
+			                    <ul>
+			                        <li><a href="../fr/form-elements.html">Eléments de formulaire</a></li>
+			                        <li><a href="../fr/general.html">Généralités</a></li>
+			                        <li><a href="../fr/tables.html">Tableaux</a></li>
+			                        <li><a href="../fr/typography.html">Typographie</a></li>
+			                    </ul>
+			                  </nav>
+			                </li>
+			                <li class="list-sub">
+			                  <a href="#">Modules de navigation</a>
+			                  <nav class="drilldown-sub">
+			                    <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
+			                    <ul>
+			                        <li><a href="../fr/hierarchical-navigation.html">Navigation hiérarchique</a></li>
+			                        <li><a href="../fr/header.html">Zone d’en-tête</a></li>
+			                        <li><a href="../fr/content-navigation.html">Navigation de contenu</a></li>
+			                        <li><a href="../fr/footer.html">Pied de page (footer)</a></li>
+			                    </ul>
+			                  </nav>
+			                </li>
+			                <li class="list-sub">
+			                  <a href="#">Modules de contenu</a>
+			                  <nav class="drilldown-sub">
+			                    <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
+			                    <ul>
+			                        <li><a href="../fr/standard-elements.html">Eléments standard</a></li>
+			                        <li><a href="../fr/content-containers.html">Conteneurs</a></li>
+			                        <li><a href="../fr/widgets.html">Widgets</a></li>
+			                        <li><a href="../fr/functions.html">Fonctions</a></li>
+			                        <li><a href="../fr/teaser.html">Teaser</a></li>
+			                        <li><a href="../fr/multimedia.html">Multimédia</a></li>
+			                        <li><a href="../fr/search.html">Recherche</a></li>
+			                        <li><a href="../fr/ordering-checkout.html">Commande et check-out</a></li>
+			                    </ul>
+			                  </nav>
+			                </li>
 			
 			                <li class="list-sub">
 			                  <a href="#">Pages d’exemple</a>
 			                  <nav class="drilldown-sub">
 			                    <a href="#" class="icon icon--before icon--less drilldown-back">Retour</a>
 			                    <ul>
-			                        <li><a href="../fr/pages/01.homepage-global-nav.html">Page d’accueil sans navigation globale</a></li>
-			                        <li><a href="../fr/pages/02.home-without-nav.html">Page d’accueil avec navigation globale</a></li>
-			                        <li><a href="../fr/pages/03.preview.html">Page d’aperçu</a></li>
-			                        <li><a href="../fr/pages/04.preview-without-nav.html">Page d’aperçu sans navigation globale</a></li>
-			                        <li><a href="../fr/pages/05.publications.html">Publications</a></li>
-			                        <li><a href="../fr/pages/06.detail.html">Page de détails</a></li>
-			                        <li><a href="../fr/pages/07.forms.html">Formulaire</a></li>
-			                        <li><a href="../fr/pages/08.results.html">Résultats de recherche</a></li>
-			                        <li><a href="../fr/pages/09.subpage.html">Sous-page</a></li>
+			                      <li><a href="../fr/pages/01.homepage-global-nav.html">Page d’accueil sans navigation globale</a></li>
+			                      <li><a href="../fr/pages/02.home-without-nav.html">Page d’accueil avec navigation globale</a></li>
+			                      <li><a href="../fr/pages/03.preview.html">Page d’aperçu</a></li>
+			                      <li><a href="../fr/pages/04.preview-without-nav.html">Page d’aperçu sans navigation globale</a></li>
+			                      <li><a href="../fr/pages/05.publications.html">Publications</a></li>
+			                      <li><a href="../fr/pages/06.detail.html">Page de détails</a></li>
+			                      <li><a href="../fr/pages/07.forms.html">Formulaire</a></li>
+			                      <li><a href="../fr/pages/08.results.html">Résultats de recherche</a></li>
+			                      <li><a href="../fr/pages/09.subpage.html">Sous-page</a></li>
 			                    </ul>
 			                  </nav>
 			                </li>
 			              </ul>
 			              <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
 			            </nav>
+			
+			          </div>
+			        </div>
+			      </div>
+			      <div class="table-cell dropdown">
+			        <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          <span class="icon icon--search"></span>
+			        </a>
+			        <div class="dropdown-menu" role="menu">
+			
+			          <div class="mod mod-searchfield global-search global-search-mobile">
+			            <form class="form" role="form">
+			              <h2 class="sr-only">Chercher</h2>
+			              <label for="webguiedelines-search-mobile" class="sr-only">Chercher</label>
+			              <input id="webguiedelines-search-mobile" class="search-input form-control" type="text" placeholder="Chercher">
+			              <span class="icon icon--search"></span>
+			              <div class="search-results">
+			                <div class="search-results-list"></div>
+			              </div>
+			            </form>
 			          </div>
 			        </div>
 			      </div>
@@ -194,60 +237,495 @@
 			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
 			          </div>
 			          <div class="row">
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/docs/01-guidelines.html">Application des lignes directrices web de la Confédération</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/docs/02-cd-elements.html">Eléments de marque</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/docs/03-basic-grid.html">Grille de base et types de pages</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/docs/04-sample-pages.html">Pages d’exemple</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <div class="clearfix"></div>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/docs/05-header-footer.html">En-tête et pied de page</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/docs/06-devices.html">Rendu sur différents appareils</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/docs/07-accessibility.html">Accessibilité</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/docs/08-translations.html">Traductions</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <div class="clearfix"></div>
+			          </div>
+			          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			        </div>
+			      </ul>
+			    </li>
+			
+			    <li class="dropdown yamm-fw">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grille de base</a>
+			      <ul class="dropdown-menu" role="menu">
+			        <div class="yamm-content container-fluid">
+			          <div class="row">
+			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
+			          </div>
+			          <div class="row">
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/docs/01-guidelines.html">Application des lignes directrices web de la Confédération</a></h4>
+			                  <h4><a href="../fr/form-elements.html">Eléments de formulaire</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/form-elements.html#01-form-elements-01-fieldsets">Regroupement d’éléments de formulaire</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/form-elements.html#01-form-elements-02-forms">Champs de saisie</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/form-elements.html#01-form-elements-03-selects">Listes de sélection</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/form-elements.html#01-form-elements-04-selects-multiple">Listes de sélection multiple</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/form-elements.html#01-form-elements-05-checkboxes">Cases à cocher</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/form-elements.html#01-form-elements-06-radios">Boutons radio</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/form-elements.html#01-form-elements-07-buttons">Boutons</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/form-elements.html#01-form-elements-08-button-groups">Groupes de boutons</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/docs/02-cd-elements.html">Eléments de marque</a></h4>
+			                  <h4><a href="../fr/general.html">Généralités</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/general.html#02-general-01-logo">Logo</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/general.html#02-general-02-colors">Palette de couleurs</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/general.html#02-general-03-background">Arrière-plan</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/general.html#02-general-04-images">Formats d’image</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/general.html#02-general-05-standard-image">Image standard</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/general.html#02-general-06-captioned-image">Image avec légende</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/general.html#02-general-07-image-format">Formats d’image</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/general.html#02-general-08-icons">Icônes</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/docs/03-basic-grid.html">Grille de base et types de pages</a></h4>
+			                  <h4><a href="../fr/tables.html">Tableaux</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-01-table-standard">Tableau standard</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-02-table-cycle">Tableau imbriqué (simple)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-03-table-cycle-pairs">Tableau imbriqué (multiple)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-04-table-with-caption">Tableau avec titre</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-05-table-zebra">Tableau avec fonds alternés</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-06-table-zebra-cycle-single">Tableau imbriqué avec fonds alternés (simple)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-07-table-zebra-cycle-pairs">Tableau imbriqué avec fonds alternés (multiple)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-08-table-zebra-caption">Tableau à fonds alternés avec titre</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-09-table-highlight">Tableau avec mise en évidence</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-10-table-highlight-cycle">Tableau imbriqué avec mise en évidence (simple)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-11-table-highlight-cycle-pairs">Tableau imbriqué avec mise en évidence (multiple)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-12-table-highlight-caption">Tableau avec titre et mise en évidence</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-13-table-sortable">Tableau triable</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-14-table-expandable">Tableau avec masquage et affichage de lignes</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-15-table-ruled">Tableau avec lignes</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/tables.html#03-tables-16-table-unruled">Tableaux sans lignes</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/docs/04-sample-pages.html">Pages d’exemple</a></h4>
+			                  <h4><a href="../fr/typography.html">Typographie</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/typography.html#04-typography-01-titles">Titres</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/typography.html#04-typography-02-paragraphs">Paragraphes</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/typography.html#04-typography-03-text-elements">Corps de texte</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/typography.html#04-typography-04-blockquote">Citation</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/typography.html#04-typography-05-lists">Listes</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/typography.html#04-typography-06-unstyled-lists">Liste sans numérotation ou puces</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/typography.html#04-typography-07-definition-lists">Liste de définitions</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/typography.html#04-typography-08-links">Liens</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/typography.html#04-typography-09-top-link">Lien vers le haut de page</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/typography.html#04-typography-10-end-page-link">Lien de fin de page</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			                <div class="clearfix"></div>
+			          </div>
+			          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			        </div>
+			      </ul>
+			    </li>
+			    <li class="dropdown yamm-fw">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules de navigation</a>
+			      <ul class="dropdown-menu" role="menu">
+			        <div class="yamm-content container-fluid">
+			          <div class="row">
+			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
+			          </div>
+			          <div class="row">
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../fr/hierarchical-navigation.html">Navigation hiérarchique</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/hierarchical-navigation.html#01-hierarchical-navigation-01-global-navigation">Navigation globale</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/hierarchical-navigation.html#01-hierarchical-navigation-02-breadcrumb">Fil d’Ariane</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/hierarchical-navigation.html#01-hierarchical-navigation-03-back-to-overview">Retour à l’aperçu</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Liste de navigation latérale (sous-navigation de gauche)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/hierarchical-navigation.html#01-hierarchical-navigation-05-faceted-page-navigation">Navigation à facettes</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../fr/header.html">Zone d’en-tête</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/header.html#02-header-01-logo">Logo avec lien vers la page d’accueil</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/header.html#02-header-02-accessibility-navigation">Navigation accessible</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/header.html#02-header-03-service-navigation">Navigation de service</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/header.html#02-header-04-site-search">Recherche sur le site</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/header.html#02-header-05-language-selector">Choix de la langue</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/header.html#02-header-06-topics">Thèmes A-Z</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/header.html#02-header-07-treecrumb">Arborescence de l’administration fédérale</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../fr/content-navigation.html">Navigation de contenu</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/content-navigation.html#03-content-navigation-01-pagination">Pagination</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/content-navigation.html#03-content-navigation-02-anchor-links">Liens d’ancre</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/content-navigation.html#03-content-navigation-03-process-navigation">Navigation de processus</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/content-navigation.html#03-content-navigation-04-tab-navigation">Navigation par onglets</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../fr/footer.html">Pied de page (footer)</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/footer.html#04-footer-01-site-map">Sitemap (plan du site) et partenaires</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/footer.html#04-footer-02-social-media">Médias sociaux</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/footer.html#04-footer-03-footbar">Ligne de pied de page</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			                <div class="clearfix"></div>
+			          </div>
+			          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			        </div>
+			      </ul>
+			    </li>
+			    <li class="dropdown yamm-fw">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules de contenu</a>
+			      <ul class="dropdown-menu" role="menu">
+			        <div class="yamm-content container-fluid">
+			          <div class="row">
+			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
+			          </div>
+			          <div class="row">
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../fr/standard-elements.html">Eléments standard</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/standard-elements.html#01-standard-elements-01-page-title">Titre de page</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/standard-elements.html#01-standard-elements-02-image-text">Texte et image</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/standard-elements.html#01-standard-elements-03-info-box">Encadré d’information</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../fr/content-containers.html">Conteneurs</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/content-containers.html#02-content-containers-01-elements-list">Liste d’éléments</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/content-containers.html#02-content-containers-02-further-information">Informations complémentaires</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/content-containers.html#02-content-containers-03-collapsible-panel">Encadré rétractable</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../fr/widgets.html">Widgets</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/widgets.html#03-widgets-01-alerts">Remarques</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/widgets.html#03-widgets-02-emergency">Bannière de crise</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/widgets.html#03-widgets-03-contact-box">Encadré de contact</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../fr/functions.html">Fonctions</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/functions.html#04-functions-01-print">Imprimer</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/functions.html#04-functions-02-social-sharing">Partager des contenus (Social sharing)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/functions.html#04-functions-03-downloading-files">Téléchargement de fichier</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			                <div class="clearfix"></div>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/docs/05-header-footer.html">En-tête et pied de page</a></h4>
+			                  <h4><a href="../fr/teaser.html">Teaser</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-01-focus">A la une</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-02-focus-vertical">A la une vertical</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-03-news">Actualités</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-04-headline">Barre de titre pour teaser</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-05-carousel">Carrousel</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-06-slideshow">Diaporama</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-07-text-teaser">Teaser de texte</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-08-dossier-teaser">Teaser de dossier</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-09-person-teaser">Teaser de personne</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-10-publications-preview">Présentation des publications</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-11-news-feed">Flux d’actualités</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-12-rss-feed">Flux RSS</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/teaser.html#05-teaser-12-twitter-timeline">Twitter Timeline</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/docs/06-devices.html">Rendu sur différents appareils</a></h4>
+			                  <h4><a href="../fr/multimedia.html">Multimédia</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/multimedia.html#06-multimedia-01-photo-gallery">Aperçu de galerie d’images</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/multimedia.html#06-multimedia-02-photo-gallery-single">Galerie d’images – vue individuelle</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/multimedia.html#06-multimedia-03-lightbox">Visionneuse</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/docs/07-accessibility.html">Accessibilité</a></h4>
+			                  <h4><a href="../fr/search.html">Recherche</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/search.html#07-search-01-search-box">Masque de recherche</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/search.html#07-search-02-search-results">Résultats de recherche</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/docs/08-translations.html">Traductions</a></h4>
+			                  <h4><a href="../fr/ordering-checkout.html">Commande et check-out</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../fr/ordering-checkout.html#08-ordering-checkout-01-one-line-order-form">Formulaire de commande à une ligne</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../fr/ordering-checkout.html#08-ordering-checkout-02-shopping-cart">Panier</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
@@ -258,432 +736,6 @@
 			      </ul>
 			    </li>
 			
-			      <li class="dropdown yamm-fw">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grille de base</a>
-			        <ul class="dropdown-menu" role="menu">
-			          <div class="yamm-content container-fluid">
-			            <div class="row">
-			              <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
-			            </div>
-			            <div class="row">
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/form-elements.html">Eléments de formulaire</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/form-elements.html#01-form-elements-01-fieldsets">Regroupement d’éléments de formulaire</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/form-elements.html#01-form-elements-02-forms">Champs de saisie</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/form-elements.html#01-form-elements-03-selects">Listes de sélection</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/form-elements.html#01-form-elements-04-checkboxes">Cases à cocher</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/form-elements.html#01-form-elements-05-radios">Boutons radio</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/form-elements.html#01-form-elements-06-buttons">Boutons</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/form-elements.html#01-form-elements-07-button-groups">Groupes de boutons</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/general.html">Généralités</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/general.html#02-general-01-logo">Logo</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/general.html#02-general-02-colors">Palette de couleurs</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/general.html#02-general-03-background">Arrière-plan</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/general.html#02-general-04-images">Formats d’image</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/general.html#02-general-05-standard-image">Image standard</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/general.html#02-general-06-captioned-image">Image avec légende</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/general.html#02-general-07-image-format">Formats d’image</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/general.html#02-general-08-icons">Icônes</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/tables.html">Tableaux</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-01-table-standard">Tableau standard</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-02-table-cycle">Tableau imbriqué (simple)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-03-table-cycle-pairs">Tableau imbriqué (multiple)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-04-table-with-caption">Tableau avec titre</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-05-table-zebra">Tableau avec fonds alternés</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-06-table-zebra-cycle-single">Tableau imbriqué avec fonds alternés (simple)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-07-table-zebra-cycle-pairs">Tableau imbriqué avec fonds alternés (multiple)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-08-table-zebra-caption">Tableau à fonds alternés avec titre</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-09-table-highlight">Tableau avec mise en évidence</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-10-table-highlight-cycle">Tableau imbriqué avec mise en évidence (simple)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-11-table-highlight-cycle-pairs">Tableau imbriqué avec mise en évidence (multiple)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-12-table-highlight-caption">Tableau avec titre et mise en évidence</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-13-table-sortable">Tableau triable</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-14-table-expandable">Tableau avec masquage et affichage de lignes</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-15-table-ruled">Tableau avec lignes</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/tables.html#03-tables-16-table-unruled">Tableaux sans lignes</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/typography.html">Typographie</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/typography.html#04-typography-01-titles">Titres</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/typography.html#04-typography-02-paragraphs">Paragraphes</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/typography.html#04-typography-03-text-elements">Corps de texte</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/typography.html#04-typography-04-blockquote">Citation</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/typography.html#04-typography-05-lists">Listes</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/typography.html#04-typography-06-unstyled-lists">Liste sans numérotation ou puces</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/typography.html#04-typography-07-definition-lists">Liste de définitions</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/typography.html#04-typography-08-links">Liens</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/typography.html#04-typography-09-top-link">Lien vers le haut de page</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/typography.html#04-typography-10-end-page-link">Lien de fin de page</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                  <div class="clearfix"></div>
-			            </div>
-			            <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
-			          </div>
-			        </ul>
-			      </li>
-			      <li class="dropdown yamm-fw">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules de navigation</a>
-			        <ul class="dropdown-menu" role="menu">
-			          <div class="yamm-content container-fluid">
-			            <div class="row">
-			              <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
-			            </div>
-			            <div class="row">
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/hierarchical-navigation.html">Navigation hiérarchique</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/hierarchical-navigation.html#01-hierarchical-navigation-01-global-navigation">Navigation globale</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/hierarchical-navigation.html#01-hierarchical-navigation-02-breadcrumb">Fil d’Ariane</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/hierarchical-navigation.html#01-hierarchical-navigation-03-back-to-overview">Retour à l’aperçu</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Liste de navigation latérale (sous-navigation de gauche)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/hierarchical-navigation.html#01-hierarchical-navigation-05-faceted-page-navigation">Navigation à facettes</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/header.html">Zone d’en-tête</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/header.html#02-header-01-logo">Logo avec lien vers la page d’accueil</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/header.html#02-header-02-accessibility-navigation">Navigation accessible</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/header.html#02-header-03-service-navigation">Navigation de service</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/header.html#02-header-04-site-search">Recherche sur le site</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/header.html#02-header-05-language-selector">Choix de la langue</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/header.html#02-header-06-topics">Thèmes A-Z</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/header.html#02-header-07-treecrumb">Arborescence de l’administration fédérale</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/content-navigation.html">Navigation de contenu</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/content-navigation.html#03-content-navigation-01-pagination">Pagination</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/content-navigation.html#03-content-navigation-02-anchor-links">Liens d’ancre</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/content-navigation.html#03-content-navigation-03-process-navigation">Navigation de processus</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/content-navigation.html#03-content-navigation-04-tab-navigation">Navigation par onglets</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/footer.html">Pied de page (footer)</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/footer.html#04-footer-01-site-map">Sitemap (plan du site) et partenaires</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/footer.html#04-footer-02-social-media">Médias sociaux</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/footer.html#04-footer-03-footbar">Ligne de pied de page</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                  <div class="clearfix"></div>
-			            </div>
-			            <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
-			          </div>
-			        </ul>
-			      </li>
-			      <li class="dropdown yamm-fw">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modules de contenu</a>
-			        <ul class="dropdown-menu" role="menu">
-			          <div class="yamm-content container-fluid">
-			            <div class="row">
-			              <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
-			            </div>
-			            <div class="row">
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/standard-elements.html">Eléments standard</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/standard-elements.html#01-standard-elements-01-page-title">Titre de page</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/standard-elements.html#01-standard-elements-02-image-text">Texte et image</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/standard-elements.html#01-standard-elements-03-info-box">Encadré d’information</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/content-containers.html">Conteneurs</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/content-containers.html#02-content-containers-01-elements-list">Liste d’éléments</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/content-containers.html#02-content-containers-02-further-information">Informations complémentaires</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/content-containers.html#02-content-containers-03-collapsible-panel">Encadré rétractable</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/widgets.html">Widgets</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/widgets.html#03-widgets-01-alerts">Remarques</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/widgets.html#03-widgets-02-emergency">Bannière de crise</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/widgets.html#03-widgets-03-contact-box">Encadré de contact</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/functions.html">Fonctions</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/functions.html#04-functions-01-print">Imprimer</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/functions.html#04-functions-02-social-sharing">Partager des contenus (Social sharing)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/functions.html#04-functions-03-downloading-files">Téléchargement de fichier</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                  <div class="clearfix"></div>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/teaser.html">Teaser</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-01-focus">A la une</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-02-news">Actualités</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-03-headline">Barre de titre pour teaser</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-04-carousel">Carrousel</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-05-slideshow">Diaporama</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-06-text-teaser">Teaser de texte</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-07-dossier-teaser">Teaser de dossier</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-08-person-teaser">Teaser de personne</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-09-publications-preview">Présentation des publications</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-10-news-feed">Flux d’actualités</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/teaser.html#05-teaser-11-rss-feed">Flux RSS</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/multimedia.html">Multimédia</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/multimedia.html#06-multimedia-01-photo-gallery">Aperçu de galerie d’images</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/multimedia.html#06-multimedia-02-photo-gallery-single">Galerie d’images – vue individuelle</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/multimedia.html#06-multimedia-03-lightbox">Visionneuse</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/search.html">Recherche</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/search.html#07-search-01-search-box">Masque de recherche</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/search.html#07-search-02-search-results">Résultats de recherche</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../fr/ordering-checkout.html">Commande et check-out</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../fr/ordering-checkout.html#08-ordering-checkout-01-one-line-order-form">Formulaire de commande à une ligne</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../fr/ordering-checkout.html#08-ordering-checkout-02-shopping-cart">Panier</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                  <div class="clearfix"></div>
-			            </div>
-			            <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
-			          </div>
-			        </ul>
-			      </li>
-			
 			    <li class="dropdown yamm-fw">
 			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages d’exemple</a>
 			      <ul class="dropdown-menu" role="menu">
@@ -692,71 +744,71 @@
 			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Fermer</a></div>
 			          </div>
 			          <div class="row">
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/pages/01.homepage-global-nav.html">Page d’accueil sans navigation globale</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/pages/02.home-without-nav.html">Page d’accueil avec navigation globale</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/pages/03.preview.html">Page d’aperçu</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/pages/04.preview-without-nav.html">Page d’aperçu sans navigation globale</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			                <div class="clearfix"></div>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/pages/05.publications.html">Publications</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/pages/06.detail.html">Page de détails</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/pages/07.forms.html">Formulaire</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/pages/08.results.html">Résultats de recherche</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			                <div class="clearfix"></div>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../fr/pages/09.subpage.html">Sous-page</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/pages/01.homepage-global-nav.html">Page d’accueil sans navigation globale</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/pages/02.home-without-nav.html">Page d’accueil avec navigation globale</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/pages/03.preview.html">Page d’aperçu</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/pages/04.preview-without-nav.html">Page d’aperçu sans navigation globale</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <div class="clearfix"></div>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/pages/05.publications.html">Publications</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/pages/06.detail.html">Page de détails</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/pages/07.forms.html">Formulaire</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/pages/08.results.html">Résultats de recherche</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <div class="clearfix"></div>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../fr/pages/09.subpage.html">Sous-page</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
 			          </div>
 			          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
 			        </div>
@@ -806,17 +858,17 @@
   <div class="component-example">
     <div class="clearfix">
       <a href="#" class="brand hidden-xs" title="Back to home">
-	<img src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="Back to home" />
-	<h1>Department of the Environment, Transport, Energy and Communications</h1>
+  <img src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="Back to home" />
+  <h1>Department of the Environment, Transport, Energy and Communications</h1>
 </a>
     </div>
     <button type="button" class="show-code" data-toggle="collapse" data-target="#code-02-general-01-logo" aria-expanded="false">&lt;/&gt;</button>
   </div>
 
   <div class="code-block collapse" aria-expanded="false" id="code-02-general-01-logo" role="note">
-    <pre><code class="language-markup">&lt;a href=&quot;#&quot; class=&quot;brand hidden-xs&quot; title=&quot;Back to home&quot;&gt;
-	&lt;img src=&quot;../img/logo-CH.svg&quot; onerror=&quot;this.onerror=null; this.src=&#x27;../img/logo-CH.png&#x27;&quot; alt=&quot;Back to home&quot; /&gt;
-	&lt;h1&gt;Department of the Environment, Transport, Energy and Communications&lt;/h1&gt;
+    <pre><code class="language-markup">&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;brand hidden-xs&quot; title&#x3D;&quot;Back to home&quot;&gt;
+  &lt;img src&#x3D;&quot;../img/logo-CH.svg&quot; onerror&#x3D;&quot;this.onerror&#x3D;null; this.src&#x3D;&#x27;../img/logo-CH.png&#x27;&quot; alt&#x3D;&quot;Back to home&quot; /&gt;
+  &lt;h1&gt;Department of the Environment, Transport, Energy and Communications&lt;/h1&gt;
 &lt;/a&gt;</code></pre>
   </div>
 
@@ -980,8 +1032,8 @@
   </div>
 
   <div class="code-block collapse" aria-expanded="false" id="code-02-general-03-background" role="note">
-    <pre><code class="language-markup">&lt;div class=&quot;container-main clearfix&quot;&gt;
-	&lt;div class=&quot;col-sm-12&quot;&gt;
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;container-main clearfix&quot;&gt;
+	&lt;div class&#x3D;&quot;col-sm-12&quot;&gt;
 		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolores adipisci minus nesciunt facilis. Iure, error, facilis, modi, soluta deleniti maiores corporis impedit ducimus laboriosam porro fugiat et esse blanditiis.&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -1034,7 +1086,7 @@
   </div>
 
   <div class="code-block collapse" aria-expanded="false" id="code-02-general-05-standard-image" role="note">
-    <pre><code class="language-markup">&lt;img src=&quot;http://placehold.it/588x368&quot; alt=&quot;image description&quot;&gt;</code></pre>
+    <pre><code class="language-markup">&lt;img src&#x3D;&quot;http://placehold.it/588x368&quot; alt&#x3D;&quot;image description&quot;&gt;</code></pre>
   </div>
 
 
@@ -1067,7 +1119,7 @@
 
   <div class="code-block collapse" aria-expanded="false" id="code-02-general-06-captioned-image" role="note">
     <pre><code class="language-markup">&lt;figure&gt;
-	&lt;img src=&quot;http://placehold.it/588x368&quot; alt=&quot;image description&quot;&gt;
+	&lt;img src&#x3D;&quot;http://placehold.it/588x368&quot; alt&#x3D;&quot;image description&quot;&gt;
 	&lt;figcaption&gt;Caption content&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
   </div>
@@ -1191,10 +1243,10 @@
 
   <div class="code-block collapse" aria-expanded="false" id="code-02-general-08-icons" role="note">
     <pre><code class="language-markup">&lt;!-- only-icon element --&gt;
-&lt;p&gt;&lt;span class=&quot;icon icon--pdf&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; My document&lt;/p&gt;
+&lt;p&gt;&lt;span class&#x3D;&quot;icon icon--pdf&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/span&gt; My document&lt;/p&gt;
 
 &lt;!-- inside-icon element --&gt;
-&lt;p&gt;&lt;a href=&quot;doc.pdf&quot; class=&quot;icon icon--before icon--pdf&quot; aria-hidden=&quot;true&quot;&gt;My document&lt;/a&gt;&lt;/p&gt;</code></pre>
+&lt;p&gt;&lt;a href&#x3D;&quot;doc.pdf&quot; class&#x3D;&quot;icon icon--before icon--pdf&quot; aria-hidden&#x3D;&quot;true&quot;&gt;My document&lt;/a&gt;&lt;/p&gt;</code></pre>
   </div>
 
 

@@ -36,6 +36,16 @@
   <meta name="msapplication-config" content="../img/ico/browserconfig.xml">
 </head>
 <body>
+
+  <script>
+    // Make translated strings available for search.js
+    window.translations = {
+        'global-search': {
+            'nothing-found': "Nichts gefunden."
+        }
+    }
+  </script>
+
   <ul class="access-keys">
     <li><a href="index.html" accesskey="0">Startseite</a></li>
     <li><a href="#main-navigation" accesskey="1">Hauptnavigation</a></li>
@@ -49,18 +59,18 @@
             <h2 class="sr-only">Sprachwahl</h2>
             <nav class="nav-lang">
               <ul>
-                  <li>
-                    <a href="../de/form-elements.html" lang="de" title="Deutsch Ausgewählt" aria-label="Deutsch Ausgewählt" class="active">DE</a>
-                  </li>
-                  <li>
-                    <a href="../fr/form-elements.html" lang="fr" title="Français" aria-label="Français " class="">FR</a>
-                  </li>
-                  <li>
-                    <a href="#" lang="it" title="Italiano Ausgeschaltet" aria-label="Italiano Ausgeschaltet" class="disabled">IT</a>
-                  </li>
-                  <li>
-                    <a href="../en/form-elements.html" lang="en" title="English" aria-label="English " class="">EN</a>
-                  </li>
+                <li>
+                  <a href="../de/" lang="de" title="Deutsch Ausgewählt" aria-label="Deutsch Ausgewählt" class="active">DE</a>
+                </li>
+                <li>
+                  <a href="../fr/" lang="fr" title="Français" aria-label="Français " class="">FR</a>
+                </li>
+                <li>
+                  <a href="#" lang="it" title="Italiano Ausgeschaltet" aria-label="Italiano Ausgeschaltet" class="disabled">IT</a>
+                </li>
+                <li>
+                  <a href="../en/" lang="en" title="English" aria-label="English " class="">EN</a>
+                </li>
               </ul>
             </nav>
             <nav class="nav-service">
@@ -79,6 +89,19 @@
             <img src="../img/logo-CH.svg" onerror="this.onerror=null; this.src='../img/logo-CH.png'" alt="Logo der Schweizerischen Eidgenossenschaft – zur Startseite" />
             <h1>Richtlinien für das Webdesign Bund</h1>
           </a>
+          <div class="mod mod-searchfield global-search global-search-standard">
+            <!-- begin: sitesearch desktop-->
+      			<form class="form-horizontal form-search pull-right" role="form">
+      				<h2 class="sr-only">Suche</h2>
+      				<label for="webguiedelines-search-standard" class="sr-only">Suche</label>
+      				<input id="webguiedelines-search-standard" class="form-control search-input" type="text" placeholder="Suche"/>
+              <span class="icon icon--close search-reset"></span>
+              <div class="search-results">
+                <div class="search-results-list"></div>
+              </div>
+      			</form>
+      			<!-- end: sitesearch desktop-->
+          </div>
         </div>
       </header>
 			<nav class="nav-main yamm navbar" id="main-navigation">
@@ -105,79 +128,99 @@
 			                  <nav class="drilldown-sub">
 			                    <a href="#" class="icon icon--before icon--less drilldown-back">Zurück</a>
 			                    <ul>
-			                        <li><a href="../de/docs/01-guidelines.html">Anwendung der Webrichtlinien Bund</a></li>
-			                        <li><a href="../de/docs/02-cd-elements.html">Markenelemente</a></li>
-			                        <li><a href="../de/docs/03-basic-grid.html">Grundraster und Seitentypen</a></li>
-			                        <li><a href="../de/docs/04-sample-pages.html">Beispielseiten</a></li>
-			                        <li><a href="../de/docs/05-header-footer.html">Header und Footer</a></li>
-			                        <li><a href="../de/docs/06-devices.html">Ausgabe auf verschiedenen Endgeräten</a></li>
-			                        <li><a href="../de/docs/07-accessibility.html">Barrierefreiheit</a></li>
-			                        <li><a href="../de/docs/08-translations.html">Übersetzungen</a></li>
+			                      <li><a href="../de/docs/01-guidelines.html">Anwendung der Webrichtlinien Bund</a></li>
+			                      <li><a href="../de/docs/02-cd-elements.html">Markenelemente</a></li>
+			                      <li><a href="../de/docs/03-basic-grid.html">Grundraster und Seitentypen</a></li>
+			                      <li><a href="../de/docs/04-sample-pages.html">Beispielseiten</a></li>
+			                      <li><a href="../de/docs/05-header-footer.html">Header und Footer</a></li>
+			                      <li><a href="../de/docs/06-devices.html">Ausgabe auf verschiedenen Endgeräten</a></li>
+			                      <li><a href="../de/docs/07-accessibility.html">Barrierefreiheit</a></li>
+			                      <li><a href="../de/docs/08-translations.html">Übersetzungen</a></li>
 			                    </ul>
 			                  </nav>
 			                </li>
 			
-			                  <li class="list-sub">
-			                    <a href="#">Grundraster</a>
-			                    <nav class="drilldown-sub">
-			                      <a href="#" class="icon icon--before icon--less drilldown-back">Zurück</a>
-			                      <ul>
-			                          <li><a href="../de/form-elements.html">Formular-Elemente</a></li>
-			                          <li><a href="../de/general.html">Allgemeines</a></li>
-			                          <li><a href="../de/tables.html">Tabellen</a></li>
-			                          <li><a href="../de/typography.html">Typography</a></li>
-			                      </ul>
-			                    </nav>
-			                  </li>
-			                  <li class="list-sub">
-			                    <a href="#">Navigations-module</a>
-			                    <nav class="drilldown-sub">
-			                      <a href="#" class="icon icon--before icon--less drilldown-back">Zurück</a>
-			                      <ul>
-			                          <li><a href="../de/hierarchical-navigation.html">Hierarchische Navigation</a></li>
-			                          <li><a href="../de/header.html">Kopfbereich</a></li>
-			                          <li><a href="../de/content-navigation.html">Inhaltsnavigation</a></li>
-			                          <li><a href="../de/footer.html">Seitenfuss (Footer)</a></li>
-			                      </ul>
-			                    </nav>
-			                  </li>
-			                  <li class="list-sub">
-			                    <a href="#">Inhaltsmodule</a>
-			                    <nav class="drilldown-sub">
-			                      <a href="#" class="icon icon--before icon--less drilldown-back">Zurück</a>
-			                      <ul>
-			                          <li><a href="../de/standard-elements.html">Standardelemente</a></li>
-			                          <li><a href="../de/content-containers.html">Inhaltscontainer</a></li>
-			                          <li><a href="../de/widgets.html">Widgets</a></li>
-			                          <li><a href="../de/functions.html">Funktionen</a></li>
-			                          <li><a href="../de/teaser.html">Teaser</a></li>
-			                          <li><a href="../de/multimedia.html">Multimedia</a></li>
-			                          <li><a href="../de/search.html">Suche</a></li>
-			                          <li><a href="../de/ordering-checkout.html">Bestellen und Check-out</a></li>
-			                      </ul>
-			                    </nav>
-			                  </li>
+			                <li class="list-sub">
+			                  <a href="#">Grundraster</a>
+			                  <nav class="drilldown-sub">
+			                    <a href="#" class="icon icon--before icon--less drilldown-back">Zurück</a>
+			                    <ul>
+			                        <li><a href="../de/form-elements.html">Formular-Elemente</a></li>
+			                        <li><a href="../de/general.html">Allgemeines</a></li>
+			                        <li><a href="../de/tables.html">Tabellen</a></li>
+			                        <li><a href="../de/typography.html">Typography</a></li>
+			                    </ul>
+			                  </nav>
+			                </li>
+			                <li class="list-sub">
+			                  <a href="#">Navigations-module</a>
+			                  <nav class="drilldown-sub">
+			                    <a href="#" class="icon icon--before icon--less drilldown-back">Zurück</a>
+			                    <ul>
+			                        <li><a href="../de/hierarchical-navigation.html">Hierarchische Navigation</a></li>
+			                        <li><a href="../de/header.html">Kopfbereich</a></li>
+			                        <li><a href="../de/content-navigation.html">Inhaltsnavigation</a></li>
+			                        <li><a href="../de/footer.html">Seitenfuss (Footer)</a></li>
+			                    </ul>
+			                  </nav>
+			                </li>
+			                <li class="list-sub">
+			                  <a href="#">Inhaltsmodule</a>
+			                  <nav class="drilldown-sub">
+			                    <a href="#" class="icon icon--before icon--less drilldown-back">Zurück</a>
+			                    <ul>
+			                        <li><a href="../de/standard-elements.html">Standardelemente</a></li>
+			                        <li><a href="../de/content-containers.html">Inhaltscontainer</a></li>
+			                        <li><a href="../de/widgets.html">Widgets</a></li>
+			                        <li><a href="../de/functions.html">Funktionen</a></li>
+			                        <li><a href="../de/teaser.html">Teaser</a></li>
+			                        <li><a href="../de/multimedia.html">Multimedia</a></li>
+			                        <li><a href="../de/search.html">Suche</a></li>
+			                        <li><a href="../de/ordering-checkout.html">Bestellen und Check-out</a></li>
+			                    </ul>
+			                  </nav>
+			                </li>
 			
 			                <li class="list-sub">
 			                  <a href="#">Beispielseiten</a>
 			                  <nav class="drilldown-sub">
 			                    <a href="#" class="icon icon--before icon--less drilldown-back">Zurück</a>
 			                    <ul>
-			                        <li><a href="../de/pages/01.homepage-global-nav.html">Startseite ohne Hauptnavigation</a></li>
-			                        <li><a href="../de/pages/02.home-without-nav.html">Startseite mit Hauptnavigation</a></li>
-			                        <li><a href="../de/pages/03.preview.html">Übersichtsseite</a></li>
-			                        <li><a href="../de/pages/04.preview-without-nav.html">Übersichtsseite ohne Hauptnavigation</a></li>
-			                        <li><a href="../de/pages/05.publications.html">Publikationen</a></li>
-			                        <li><a href="../de/pages/06.detail.html">Detailseite</a></li>
-			                        <li><a href="../de/pages/07.forms.html">Formular</a></li>
-			                        <li><a href="../de/pages/08.results.html">Suchergebnisse</a></li>
-			                        <li><a href="../de/pages/09.subpage.html">Unterseite</a></li>
+			                      <li><a href="../de/pages/01.homepage-global-nav.html">Startseite ohne Hauptnavigation</a></li>
+			                      <li><a href="../de/pages/02.home-without-nav.html">Startseite mit Hauptnavigation</a></li>
+			                      <li><a href="../de/pages/03.preview.html">Übersichtsseite</a></li>
+			                      <li><a href="../de/pages/04.preview-without-nav.html">Übersichtsseite ohne Hauptnavigation</a></li>
+			                      <li><a href="../de/pages/05.publications.html">Publikationen</a></li>
+			                      <li><a href="../de/pages/06.detail.html">Detailseite</a></li>
+			                      <li><a href="../de/pages/07.forms.html">Formular</a></li>
+			                      <li><a href="../de/pages/08.results.html">Suchergebnisse</a></li>
+			                      <li><a href="../de/pages/09.subpage.html">Unterseite</a></li>
 			                    </ul>
 			                  </nav>
 			                </li>
 			              </ul>
 			              <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
 			            </nav>
+			
+			          </div>
+			        </div>
+			      </div>
+			      <div class="table-cell dropdown">
+			        <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          <span class="icon icon--search"></span>
+			        </a>
+			        <div class="dropdown-menu" role="menu">
+			
+			          <div class="mod mod-searchfield global-search global-search-mobile">
+			            <form class="form" role="form">
+			              <h2 class="sr-only">Suche</h2>
+			              <label for="webguiedelines-search-mobile" class="sr-only">Suche</label>
+			              <input id="webguiedelines-search-mobile" class="search-input form-control" type="text" placeholder="Suche">
+			              <span class="icon icon--search"></span>
+			              <div class="search-results">
+			                <div class="search-results-list"></div>
+			              </div>
+			            </form>
 			          </div>
 			        </div>
 			      </div>
@@ -194,60 +237,495 @@
 			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Schliessen</a></div>
 			          </div>
 			          <div class="row">
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/docs/01-guidelines.html">Anwendung der Webrichtlinien Bund</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/docs/02-cd-elements.html">Markenelemente</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/docs/03-basic-grid.html">Grundraster und Seitentypen</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/docs/04-sample-pages.html">Beispielseiten</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <div class="clearfix"></div>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/docs/05-header-footer.html">Header und Footer</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/docs/06-devices.html">Ausgabe auf verschiedenen Endgeräten</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/docs/07-accessibility.html">Barrierefreiheit</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/docs/08-translations.html">Übersetzungen</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <div class="clearfix"></div>
+			          </div>
+			          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			        </div>
+			      </ul>
+			    </li>
+			
+			    <li class="dropdown yamm-fw">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grundraster</a>
+			      <ul class="dropdown-menu" role="menu">
+			        <div class="yamm-content container-fluid">
+			          <div class="row">
+			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Schliessen</a></div>
+			          </div>
+			          <div class="row">
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/docs/01-guidelines.html">Anwendung der Webrichtlinien Bund</a></h4>
+			                  <h4><a href="../de/form-elements.html">Formular-Elemente</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/form-elements.html#01-form-elements-01-fieldsets">Gruppierung von Formular-Elementen</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/form-elements.html#01-form-elements-02-forms">Eingabefelder</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/form-elements.html#01-form-elements-03-selects">Auswahllisten</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/form-elements.html#01-form-elements-04-selects-multiple">Mehrfach-Auswahllisten</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/form-elements.html#01-form-elements-05-checkboxes">Checkboxen</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/form-elements.html#01-form-elements-06-radios">Radio buttons</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/form-elements.html#01-form-elements-07-buttons">Schaltflächen</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/form-elements.html#01-form-elements-08-button-groups">Gruppen von Schaltflächen</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/docs/02-cd-elements.html">Markenelemente</a></h4>
+			                  <h4><a href="../de/general.html">Allgemeines</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/general.html#02-general-01-logo">Logo</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/general.html#02-general-02-colors">Farbpalette</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/general.html#02-general-03-background">Hintergrund</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/general.html#02-general-04-images">Bildformate</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/general.html#02-general-05-standard-image">Standardbild</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/general.html#02-general-06-captioned-image">Bild mit Legende</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/general.html#02-general-07-image-format">Bildformate</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/general.html#02-general-08-icons">Icons</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/docs/03-basic-grid.html">Grundraster und Seitentypen</a></h4>
+			                  <h4><a href="../de/tables.html">Tabellen</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-01-table-standard">Standardtabelle</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-02-table-cycle">Verschachtelte Tabelle (einfach)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-03-table-cycle-pairs">Verschachtelte Tabelle (mehrfach)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-04-table-with-caption">Tabelle mit Überschrift</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-05-table-zebra">Tabelle mit Zebra</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-06-table-zebra-cycle-single">Verschachtelte Tabelle mit Zebra (einfach)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-07-table-zebra-cycle-pairs">Verschachtelte Tabelle mit Zebra (mehrfach)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-08-table-zebra-caption">Zebra-Tabelle mit Überschrift</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-09-table-highlight">Tabelle mit Hervorhebung</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-10-table-highlight-cycle">Verschachtelte Tabelle mit Hervorhebung (einfach)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-11-table-highlight-cycle-pairs">Verschachtelte Tabelle mit Hervorhebung (mehrfach)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-12-table-highlight-caption">Tabelle mit Überschrift und Hervorhebung</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-13-table-sortable">Sortierbare Tabelle</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-14-table-expandable">Tabelle mit aufklappbarer Zeile</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-15-table-ruled">Linierte Tabelle</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/tables.html#03-tables-16-table-unruled">Tabelle ohne Linien</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/docs/04-sample-pages.html">Beispielseiten</a></h4>
+			                  <h4><a href="../de/typography.html">Typography</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/typography.html#04-typography-01-titles">Überschriften</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/typography.html#04-typography-02-paragraphs">Absätze</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/typography.html#04-typography-03-text-elements">Fliesstext</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/typography.html#04-typography-04-blockquote">Zitat</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/typography.html#04-typography-05-lists">Listen</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/typography.html#04-typography-06-unstyled-lists">Liste ohne Nummerierung oder Punkte</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/typography.html#04-typography-07-definition-lists">Definitionsliste</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/typography.html#04-typography-08-links">Links</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/typography.html#04-typography-09-top-link">Link zum Seitenanfang</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/typography.html#04-typography-10-end-page-link">Seitenende-Link</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			                <div class="clearfix"></div>
+			          </div>
+			          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			        </div>
+			      </ul>
+			    </li>
+			    <li class="dropdown yamm-fw">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigations-module</a>
+			      <ul class="dropdown-menu" role="menu">
+			        <div class="yamm-content container-fluid">
+			          <div class="row">
+			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Schliessen</a></div>
+			          </div>
+			          <div class="row">
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../de/hierarchical-navigation.html">Hierarchische Navigation</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/hierarchical-navigation.html#01-hierarchical-navigation-01-global-navigation">Globalnavigation</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/hierarchical-navigation.html#01-hierarchical-navigation-02-breadcrumb">Breadcrumb</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/hierarchical-navigation.html#01-hierarchical-navigation-03-back-to-overview">Zurück zur Übersicht</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Seitennavigation Liste (Linke Subnavigation)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/hierarchical-navigation.html#01-hierarchical-navigation-05-faceted-page-navigation">Seitennavigation Facette</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../de/header.html">Kopfbereich</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/header.html#02-header-01-logo">Logo mit Link auf die Startseite</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/header.html#02-header-02-accessibility-navigation">Barrierefreie Navigation</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/header.html#02-header-03-service-navigation">Servicenavigation</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/header.html#02-header-04-site-search">Site search</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/header.html#02-header-05-language-selector">Sprachwahl</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/header.html#02-header-06-topics">Themen A-Z</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/header.html#02-header-07-treecrumb">Treecrumb Bundesverwaltung</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../de/content-navigation.html">Inhaltsnavigation</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/content-navigation.html#03-content-navigation-01-pagination">Paging</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/content-navigation.html#03-content-navigation-02-anchor-links">Anker-Links</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/content-navigation.html#03-content-navigation-03-process-navigation">Prozessnavigation</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/content-navigation.html#03-content-navigation-04-tab-navigation">Reiter-Navigation</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../de/footer.html">Seitenfuss (Footer)</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/footer.html#04-footer-01-site-map">Sitemap und Partner</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/footer.html#04-footer-02-social-media">Social Media</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/footer.html#04-footer-03-footbar">Fusszeile</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			                <div class="clearfix"></div>
+			          </div>
+			          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+			        </div>
+			      </ul>
+			    </li>
+			    <li class="dropdown yamm-fw">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inhaltsmodule</a>
+			      <ul class="dropdown-menu" role="menu">
+			        <div class="yamm-content container-fluid">
+			          <div class="row">
+			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Schliessen</a></div>
+			          </div>
+			          <div class="row">
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../de/standard-elements.html">Standardelemente</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/standard-elements.html#01-standard-elements-01-page-title">Seitentitel</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/standard-elements.html#01-standard-elements-02-image-text">Text und Bild</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/standard-elements.html#01-standard-elements-03-info-box">Infobox</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../de/content-containers.html">Inhaltscontainer</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/content-containers.html#02-content-containers-01-elements-list">Elemente-Liste</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/content-containers.html#02-content-containers-02-further-information">Weiterführende Informationen</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/content-containers.html#02-content-containers-03-collapsible-panel">Klapp-Box</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../de/widgets.html">Widgets</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/widgets.html#03-widgets-01-alerts">Hinweise</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/widgets.html#03-widgets-02-emergency">Krisenbanner</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/widgets.html#03-widgets-03-contact-box">Kontaktbox</a>
+			                      </li>
+			                  </ul>
+			                </div>
+			              </li>
+			              <li class="col-sm-3">
+			                <div class="yamm-content container-fluid">
+			                  <h4><a href="../de/functions.html">Funktionen</a></h4>
+			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/functions.html#04-functions-01-print">Drucken</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/functions.html#04-functions-02-social-sharing">Inhalte teilen (Social sharing)</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/functions.html#04-functions-03-downloading-files">Datei download</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			                <div class="clearfix"></div>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/docs/05-header-footer.html">Header und Footer</a></h4>
+			                  <h4><a href="../de/teaser.html">Teaser</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-01-focus">Brennpunkt</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-02-focus-vertical">Brennpunkt vertikal</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-03-news">Neuigkeiten</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-04-headline">Titelzeile für Teaser</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-05-carousel">Karussell</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-06-slideshow">Slideshow</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-07-text-teaser">Textteaser</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-08-dossier-teaser">Dossierteaser</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-09-person-teaser">Personenteaser</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-10-publications-preview">Publikationen-Vorschau</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-11-news-feed">News Feed</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-12-rss-feed">RSS-Feed</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/teaser.html#05-teaser-12-twitter-timeline">Twitter Timeline</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/docs/06-devices.html">Ausgabe auf verschiedenen Endgeräten</a></h4>
+			                  <h4><a href="../de/multimedia.html">Multimedia</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/multimedia.html#06-multimedia-01-photo-gallery">Bildgalerie Übersicht</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/multimedia.html#06-multimedia-02-photo-gallery-single">Bildergalerie Einzelansicht</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/multimedia.html#06-multimedia-03-lightbox">Lightbox</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/docs/07-accessibility.html">Barrierefreiheit</a></h4>
+			                  <h4><a href="../de/search.html">Suche</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/search.html#07-search-01-search-box">Suchmaske</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/search.html#07-search-02-search-results">Suchergebnisse</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
 			              <li class="col-sm-3">
 			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/docs/08-translations.html">Übersetzungen</a></h4>
+			                  <h4><a href="../de/ordering-checkout.html">Bestellen und Check-out</a></h4>
 			                  <ul role="menu">
+			                      <li role="presentation">
+			                        <a href="../de/ordering-checkout.html#08-ordering-checkout-01-one-line-order-form">Einzeiliges Bestell-Formular</a>
+			                      </li>
+			                      <li role="presentation">
+			                        <a href="../de/ordering-checkout.html#08-ordering-checkout-02-shopping-cart">Einkaufswagen</a>
+			                      </li>
 			                  </ul>
 			                </div>
 			              </li>
@@ -258,432 +736,6 @@
 			      </ul>
 			    </li>
 			
-			      <li class="dropdown yamm-fw">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grundraster</a>
-			        <ul class="dropdown-menu" role="menu">
-			          <div class="yamm-content container-fluid">
-			            <div class="row">
-			              <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Schliessen</a></div>
-			            </div>
-			            <div class="row">
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/form-elements.html">Formular-Elemente</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/form-elements.html#01-form-elements-01-fieldsets">Gruppierung von Formular-Elementen</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/form-elements.html#01-form-elements-02-forms">Eingabefelder</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/form-elements.html#01-form-elements-03-selects">Auswahllisten</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/form-elements.html#01-form-elements-04-checkboxes">Checkboxen</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/form-elements.html#01-form-elements-05-radios">Radio buttons</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/form-elements.html#01-form-elements-06-buttons">Schaltflächen</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/form-elements.html#01-form-elements-07-button-groups">Gruppen von Schaltflächen</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/general.html">Allgemeines</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/general.html#02-general-01-logo">Logo</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/general.html#02-general-02-colors">Farbpalette</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/general.html#02-general-03-background">Hintergrund</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/general.html#02-general-04-images">Bildformate</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/general.html#02-general-05-standard-image">Standardbild</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/general.html#02-general-06-captioned-image">Bild mit Legende</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/general.html#02-general-07-image-format">Bildformate</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/general.html#02-general-08-icons">Icons</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/tables.html">Tabellen</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-01-table-standard">Standardtabelle</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-02-table-cycle">Verschachtelte Tabelle (einfach)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-03-table-cycle-pairs">Verschachtelte Tabelle (mehrfach)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-04-table-with-caption">Tabelle mit Überschrift</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-05-table-zebra">Tabelle mit Zebra</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-06-table-zebra-cycle-single">Verschachtelte Tabelle mit Zebra (einfach)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-07-table-zebra-cycle-pairs">Verschachtelte Tabelle mit Zebra (mehrfach)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-08-table-zebra-caption">Zebra-Tabelle mit Überschrift</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-09-table-highlight">Tabelle mit Hervorhebung</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-10-table-highlight-cycle">Verschachtelte Tabelle mit Hervorhebung (einfach)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-11-table-highlight-cycle-pairs">Verschachtelte Tabelle mit Hervorhebung (mehrfach)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-12-table-highlight-caption">Tabelle mit Überschrift und Hervorhebung</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-13-table-sortable">Sortierbare Tabelle</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-14-table-expandable">Tabelle mit aufklappbarer Zeile</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-15-table-ruled">Linierte Tabelle</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/tables.html#03-tables-16-table-unruled">Tabelle ohne Linien</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/typography.html">Typography</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/typography.html#04-typography-01-titles">Überschriften</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/typography.html#04-typography-02-paragraphs">Absätze</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/typography.html#04-typography-03-text-elements">Fliesstext</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/typography.html#04-typography-04-blockquote">Zitat</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/typography.html#04-typography-05-lists">Listen</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/typography.html#04-typography-06-unstyled-lists">Liste ohne Nummerierung oder Punkte</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/typography.html#04-typography-07-definition-lists">Definitionsliste</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/typography.html#04-typography-08-links">Links</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/typography.html#04-typography-09-top-link">Link zum Seitenanfang</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/typography.html#04-typography-10-end-page-link">Seitenende-Link</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                  <div class="clearfix"></div>
-			            </div>
-			            <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
-			          </div>
-			        </ul>
-			      </li>
-			      <li class="dropdown yamm-fw">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Navigations-module</a>
-			        <ul class="dropdown-menu" role="menu">
-			          <div class="yamm-content container-fluid">
-			            <div class="row">
-			              <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Schliessen</a></div>
-			            </div>
-			            <div class="row">
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/hierarchical-navigation.html">Hierarchische Navigation</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/hierarchical-navigation.html#01-hierarchical-navigation-01-global-navigation">Globalnavigation</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/hierarchical-navigation.html#01-hierarchical-navigation-02-breadcrumb">Breadcrumb</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/hierarchical-navigation.html#01-hierarchical-navigation-03-back-to-overview">Zurück zur Übersicht</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list">Seitennavigation Liste (Linke Subnavigation)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/hierarchical-navigation.html#01-hierarchical-navigation-05-faceted-page-navigation">Seitennavigation Facette</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/header.html">Kopfbereich</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/header.html#02-header-01-logo">Logo mit Link auf die Startseite</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/header.html#02-header-02-accessibility-navigation">Barrierefreie Navigation</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/header.html#02-header-03-service-navigation">Servicenavigation</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/header.html#02-header-04-site-search">Site search</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/header.html#02-header-05-language-selector">Sprachwahl</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/header.html#02-header-06-topics">Themen A-Z</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/header.html#02-header-07-treecrumb">Treecrumb Bundesverwaltung</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/content-navigation.html">Inhaltsnavigation</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/content-navigation.html#03-content-navigation-01-pagination">Paging</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/content-navigation.html#03-content-navigation-02-anchor-links">Anker-Links</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/content-navigation.html#03-content-navigation-03-process-navigation">Prozessnavigation</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/content-navigation.html#03-content-navigation-04-tab-navigation">Reiter-Navigation</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/footer.html">Seitenfuss (Footer)</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/footer.html#04-footer-01-site-map">Sitemap und Partner</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/footer.html#04-footer-02-social-media">Social Media</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/footer.html#04-footer-03-footbar">Fusszeile</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                  <div class="clearfix"></div>
-			            </div>
-			            <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
-			          </div>
-			        </ul>
-			      </li>
-			      <li class="dropdown yamm-fw">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inhaltsmodule</a>
-			        <ul class="dropdown-menu" role="menu">
-			          <div class="yamm-content container-fluid">
-			            <div class="row">
-			              <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Schliessen</a></div>
-			            </div>
-			            <div class="row">
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/standard-elements.html">Standardelemente</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/standard-elements.html#01-standard-elements-01-page-title">Seitentitel</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/standard-elements.html#01-standard-elements-02-image-text">Text und Bild</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/standard-elements.html#01-standard-elements-03-info-box">Infobox</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/content-containers.html">Inhaltscontainer</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/content-containers.html#02-content-containers-01-elements-list">Elemente-Liste</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/content-containers.html#02-content-containers-02-further-information">Weiterführende Informationen</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/content-containers.html#02-content-containers-03-collapsible-panel">Klapp-Box</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/widgets.html">Widgets</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/widgets.html#03-widgets-01-alerts">Hinweise</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/widgets.html#03-widgets-02-emergency">Krisenbanner</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/widgets.html#03-widgets-03-contact-box">Kontaktbox</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/functions.html">Funktionen</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/functions.html#04-functions-01-print">Drucken</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/functions.html#04-functions-02-social-sharing">Inhalte teilen (Social sharing)</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/functions.html#04-functions-03-downloading-files">Datei download</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                  <div class="clearfix"></div>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/teaser.html">Teaser</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-01-focus">Brennpunkt</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-02-news">Neuigkeiten</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-03-headline">Titelzeile für Teaser</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-04-carousel">Karussell</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-05-slideshow">Slideshow</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-06-text-teaser">Textteaser</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-07-dossier-teaser">Dossierteaser</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-08-person-teaser">Personenteaser</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-09-publications-preview">Publikationen-Vorschau</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-10-news-feed">News Feed</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/teaser.html#05-teaser-11-rss-feed">RSS-Feed</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/multimedia.html">Multimedia</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/multimedia.html#06-multimedia-01-photo-gallery">Bildgalerie Übersicht</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/multimedia.html#06-multimedia-02-photo-gallery-single">Bildergalerie Einzelansicht</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/multimedia.html#06-multimedia-03-lightbox">Lightbox</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/search.html">Suche</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/search.html#07-search-01-search-box">Suchmaske</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/search.html#07-search-02-search-results">Suchergebnisse</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                <li class="col-sm-3">
-			                  <div class="yamm-content container-fluid">
-			                    <h4><a href="../de/ordering-checkout.html">Bestellen und Check-out</a></h4>
-			                    <ul role="menu">
-			                        <li role="presentation">
-			                          <a href="../de/ordering-checkout.html#08-ordering-checkout-01-one-line-order-form">Einzeiliges Bestell-Formular</a>
-			                        </li>
-			                        <li role="presentation">
-			                          <a href="../de/ordering-checkout.html#08-ordering-checkout-02-shopping-cart">Einkaufswagen</a>
-			                        </li>
-			                    </ul>
-			                  </div>
-			                </li>
-			                  <div class="clearfix"></div>
-			            </div>
-			            <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
-			          </div>
-			        </ul>
-			      </li>
-			
 			    <li class="dropdown yamm-fw">
 			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Beispielseiten</a>
 			      <ul class="dropdown-menu" role="menu">
@@ -692,71 +744,71 @@
 			            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">Schliessen</a></div>
 			          </div>
 			          <div class="row">
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/pages/01.homepage-global-nav.html">Startseite ohne Hauptnavigation</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/pages/02.home-without-nav.html">Startseite mit Hauptnavigation</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/pages/03.preview.html">Übersichtsseite</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/pages/04.preview-without-nav.html">Übersichtsseite ohne Hauptnavigation</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			                <div class="clearfix"></div>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/pages/05.publications.html">Publikationen</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/pages/06.detail.html">Detailseite</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/pages/07.forms.html">Formular</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/pages/08.results.html">Suchergebnisse</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
-			                <div class="clearfix"></div>
-			              <li class="col-sm-3">
-			                <div class="yamm-content container-fluid">
-			                  <h4><a href="../de/pages/09.subpage.html">Unterseite</a></h4>
-			                  <ul role="menu">
-			                  </ul>
-			                </div>
-			              </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/pages/01.homepage-global-nav.html">Startseite ohne Hauptnavigation</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/pages/02.home-without-nav.html">Startseite mit Hauptnavigation</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/pages/03.preview.html">Übersichtsseite</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/pages/04.preview-without-nav.html">Übersichtsseite ohne Hauptnavigation</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <div class="clearfix"></div>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/pages/05.publications.html">Publikationen</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/pages/06.detail.html">Detailseite</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/pages/07.forms.html">Formular</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/pages/08.results.html">Suchergebnisse</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
+			            <div class="clearfix"></div>
+			            <li class="col-sm-3">
+			              <div class="yamm-content container-fluid">
+			                <h4><a href="../de/pages/09.subpage.html">Unterseite</a></h4>
+			                <ul role="menu">
+			                </ul>
+			              </div>
+			            </li>
 			          </div>
 			          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
 			        </div>
@@ -804,13 +856,13 @@
   </div>
 
   <div class="code-block collapse" aria-expanded="false" id="code-01-form-elements-01-fieldsets" role="note">
-    <pre><code class="language-markup">&lt;form action=&quot;&quot; role=&quot;form&quot;&gt;
+    <pre><code class="language-markup">&lt;form action&#x3D;&quot;&quot; role&#x3D;&quot;form&quot;&gt;
 	&lt;fieldset&gt;
 		&lt;legend&gt;Legend of fieldset&lt;/legend&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label for=&quot;inputText&quot; class=&quot;col-sm-2 control-label&quot;&gt;Name&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputText&quot; placeholder=&quot;Name&quot;&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label for&#x3D;&quot;inputText&quot; class&#x3D;&quot;col-sm-2 control-label&quot;&gt;Name&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputText&quot; placeholder&#x3D;&quot;Name&quot;&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/fieldset&gt;
@@ -871,8 +923,8 @@
 		<legend class="hidden-legend">Email</legend>
 		<div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label" id="email">Email *
-				<span class="sr-only">This field is required</span>
-			</label>
+        <span class="sr-only">This field is required</span>
+      </label>
 			<div class="col-sm-10">
 				<input type="email" class="form-control" id="inputEmail3" placeholder="Email" aria-labelledby="email" aria-required="true" required>
 			</div>
@@ -933,13 +985,15 @@
 			<div class="col-sm-10">
 				<div class="checkbox checkbox--left">
 					<label id="checkbox-label-1" for="checkboxform">
-						<input id="checkboxform" name="remember" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1"> Remember me
-					</label>
+            <input id="checkboxform" name="remember" type="checkbox" aria-labelledby="check-group-1 checkbox-label-1">
+            Remember me
+          </label>
 				</div>
 				<div class="checkbox checkbox--left">
 					<label id="checkbox-label-2" for="checkboxform2">
-						<input id="checkboxform2" name="accept" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2"> Accept terms
-					</label>
+            <input id="checkboxform2" name="accept" type="checkbox" aria-labelledby="check-group-1 checkbox-label-2">
+            Accept terms
+          </label>
 				</div>
 			</div>
 		</div>
@@ -954,15 +1008,17 @@
 				<div class="checkbox-inline">
 					<div class="checkbox checkbox--left">
 						<label id="checkbox-label-3" for="checkboxform3">
-							<input id="checkboxform3" name="remember" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3"> Remember me
-						</label>
+              <input id="checkboxform3" name="remember" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3">
+              Remember me
+            </label>
 					</div>
 				</div>
 				<div class="checkbox-inline">
 					<div class="checkbox checkbox--left">
 						<label id="checkbox-label-4" for="checkboxform4">
-							<input id="checkboxform4" name="accept" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4"> Accept terms
-						</label>
+              <input id="checkboxform4" name="accept" type="checkbox" aria-labelledby="check-group-2 checkbox-label-4">
+              Accept terms
+            </label>
 					</div>
 				</div>
 			</div>
@@ -977,13 +1033,15 @@
 			<div class="col-sm-10">
 				<div class="radio radio--left">
 					<label for="radioform" id="radio-label-1">
-						<input id="radioform" value="yes" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1"> Remember me
-					</label>
+            <input id="radioform" value="yes" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-1">
+            Remember me
+          </label>
 				</div>
 				<div class="radio radio--left">
 					<label for="radioform2" id="radio-label-2">
-						<input id="radioform2" value="no" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-2"> Don't remember me
-					</label>
+            <input id="radioform2" value="no" type="radio" name="radio-h" aria-labelledby="radio-group-1 radio-label-2">
+            Don't remember me
+          </label>
 				</div>
 			</div>
 		</div>
@@ -998,15 +1056,17 @@
 				<div class="radio-inline">
 					<div class="radio radio--left">
 						<label for="radioform3" id="radio-label-3">
-							<input id="radioform3" value="radio3" type="radio" name="radio-j" aria-labelledby="radio-group-2 radio-label-3"> Remember me
-						</label>
+              <input id="radioform3" value="radio3" type="radio" name="radio-j" aria-labelledby="radio-group-2 radio-label-3">
+              Remember me
+            </label>
 					</div>
 				</div>
 				<div class="radio-inline">
 					<div class="radio radio--left">
 						<label for="radioform4" id="radio-label-4">
-							<input id="radioform4" value="radio4" type="radio" name="radio-j" aria-labelledby="radio-group-2 radio-label-4"> Remember me
-						</label>
+              <input id="radioform4" value="radio4" type="radio" name="radio-j" aria-labelledby="radio-group-2 radio-label-4">
+              Remember me
+            </label>
 					</div>
 				</div>
 			</div>
@@ -1020,9 +1080,25 @@
 			<label class="col-sm-2 control-label" for="dropdown">Dropdown</label>
 			<div class="col-sm-10">
 				<select id="dropdown" class="form-control">
-					<option>Option 1</option>
-					<option>Option 2</option>
-				</select>
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
+			</div>
+		</div>
+	</fieldset>
+
+	<!-- Multi Select -->
+	<fieldset>
+		<legend class="hidden-legend">Dropdown</legend>
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="select-multiple">Multi Select</label>
+			<div class="col-sm-10">
+				<select id="select-multiple" class="form-control" multiple="multiple">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+        </select>
 			</div>
 		</div>
 	</fieldset>
@@ -1040,83 +1116,85 @@
   </div>
 
   <div class="code-block collapse" aria-expanded="false" id="code-01-form-elements-02-forms" role="note">
-    <pre><code class="language-markup">&lt;form class=&quot;form-horizontal&quot; role=&quot;form&quot;&gt;
+    <pre><code class="language-markup">&lt;form class&#x3D;&quot;form-horizontal&quot; role&#x3D;&quot;form&quot;&gt;
 	&lt;p&gt;Fields marked with a * are compulsory&lt;/p&gt;
 
 	&lt;!-- email input --&gt;
 	&lt;fieldset&gt;
-		&lt;legend class=&quot;hidden-legend&quot;&gt;Email&lt;/legend&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label for=&quot;inputEmail3&quot; class=&quot;col-sm-2 control-label&quot; id=&quot;email&quot;&gt;Email *
-				&lt;span class=&quot;sr-only&quot;&gt;This field is required&lt;/span&gt;
-			&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;inputEmail3&quot; placeholder=&quot;Email&quot; aria-labelledby=&quot;email&quot; aria-required=&quot;true&quot; required&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Email&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label for&#x3D;&quot;inputEmail3&quot; class&#x3D;&quot;col-sm-2 control-label&quot; id&#x3D;&quot;email&quot;&gt;Email *
+        &lt;span class&#x3D;&quot;sr-only&quot;&gt;This field is required&lt;/span&gt;
+      &lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputEmail3&quot; placeholder&#x3D;&quot;Email&quot; aria-labelledby&#x3D;&quot;email&quot; aria-required&#x3D;&quot;true&quot; required&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/fieldset&gt;
 
 	&lt;!-- password input --&gt;
 	&lt;fieldset&gt;
-		&lt;legend class=&quot;hidden-legend&quot;&gt;Password&lt;/legend&gt;
-		&lt;div class=&quot;form-group has-warning&quot;&gt;
-			&lt;label for=&quot;inputPassword3&quot; class=&quot;col-sm-2 control-label&quot; id=&quot;password&quot;&gt;Password&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;inputPassword3&quot; placeholder=&quot;Password&quot; aria-labelledby=&quot;password error-password&quot; aria-invalid=&quot;true&quot;&gt;
-				&lt;span class=&quot;help-block&quot; id=&quot;error-password&quot; role=&quot;alert&quot;&gt;Warning, this is not a correct info!&lt;/span&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Password&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group has-warning&quot;&gt;
+			&lt;label for&#x3D;&quot;inputPassword3&quot; class&#x3D;&quot;col-sm-2 control-label&quot; id&#x3D;&quot;password&quot;&gt;Password&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputPassword3&quot; placeholder&#x3D;&quot;Password&quot; aria-labelledby&#x3D;&quot;password error-password&quot; aria-invalid&#x3D;&quot;true&quot;&gt;
+				&lt;span class&#x3D;&quot;help-block&quot; id&#x3D;&quot;error-password&quot; role&#x3D;&quot;alert&quot;&gt;Warning, this is not a correct info!&lt;/span&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/fieldset&gt;
 
 	&lt;!-- URL input --&gt;
 	&lt;fieldset&gt;
-		&lt;legend class=&quot;hidden-legend&quot;&gt;Select date&lt;/legend&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label for=&quot;select-date&quot; class=&quot;col-sm-2 control-label&quot; id=&quot;date&quot;&gt;Date&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;input type=&quot;date&quot; class=&quot;form-control&quot; id=&quot;select-date&quot; aria-labelledby=&quot;Date DD/MM/YYYY&quot;&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Select date&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label for&#x3D;&quot;select-date&quot; class&#x3D;&quot;col-sm-2 control-label&quot; id&#x3D;&quot;date&quot;&gt;Date&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;input type&#x3D;&quot;date&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;select-date&quot; aria-labelledby&#x3D;&quot;Date DD/MM/YYYY&quot;&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/fieldset&gt;
 
 	&lt;!-- URL input --&gt;
 	&lt;fieldset&gt;
-		&lt;legend class=&quot;hidden-legend&quot;&gt;Website&lt;/legend&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label for=&quot;inputURL&quot; class=&quot;col-sm-2 control-label&quot; id=&quot;website&quot;&gt;Website&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;input type=&quot;url&quot; class=&quot;form-control&quot; id=&quot;inputURL&quot; placeholder=&quot;URL&quot; aria-labelledby=&quot;website url-format&quot;&gt;
-				&lt;span class=&quot;help-block&quot; id=&quot;url-format&quot;&gt;Use format &quot;http://www.example.com&quot;&lt;/span&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Website&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label for&#x3D;&quot;inputURL&quot; class&#x3D;&quot;col-sm-2 control-label&quot; id&#x3D;&quot;website&quot;&gt;Website&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;input type&#x3D;&quot;url&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputURL&quot; placeholder&#x3D;&quot;URL&quot; aria-labelledby&#x3D;&quot;website url-format&quot;&gt;
+				&lt;span class&#x3D;&quot;help-block&quot; id&#x3D;&quot;url-format&quot;&gt;Use format &quot;http://www.example.com&quot;&lt;/span&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/fieldset&gt;
 
 	&lt;!-- file input --&gt;
 	&lt;fieldset&gt;
-		&lt;legend class=&quot;hidden-legend&quot;&gt;Document&lt;/legend&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label for=&quot;file&quot; class=&quot;col-sm-2 control-label&quot; id=&quot;document&quot;&gt;Document&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;input type=&quot;file&quot; class=&quot;form-control&quot; id=&quot;file&quot; placeholder=&quot;URL&quot; aria-labelledby=&quot;document&quot;&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Document&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label for&#x3D;&quot;file&quot; class&#x3D;&quot;col-sm-2 control-label&quot; id&#x3D;&quot;document&quot;&gt;Document&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;input type&#x3D;&quot;file&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;file&quot; placeholder&#x3D;&quot;URL&quot; aria-labelledby&#x3D;&quot;document&quot;&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/fieldset&gt;
 
 	&lt;!-- Checkboxes Vertical --&gt;
 	&lt;fieldset&gt;
-		&lt;legend class=&quot;hidden-legend&quot;&gt;Terms&lt;/legend&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label class=&quot;col-sm-2 control-label&quot; id=&quot;check-group-1&quot;&gt;Terms&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;div class=&quot;checkbox checkbox--left&quot;&gt;
-					&lt;label id=&quot;checkbox-label-1&quot; for=&quot;checkboxform&quot;&gt;
-						&lt;input id=&quot;checkboxform&quot; name=&quot;remember&quot; type=&quot;checkbox&quot; aria-labelledby=&quot;check-group-1 checkbox-label-1&quot;&gt; Remember me
-					&lt;/label&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Terms&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label class&#x3D;&quot;col-sm-2 control-label&quot; id&#x3D;&quot;check-group-1&quot;&gt;Terms&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;div class&#x3D;&quot;checkbox checkbox--left&quot;&gt;
+					&lt;label id&#x3D;&quot;checkbox-label-1&quot; for&#x3D;&quot;checkboxform&quot;&gt;
+            &lt;input id&#x3D;&quot;checkboxform&quot; name&#x3D;&quot;remember&quot; type&#x3D;&quot;checkbox&quot; aria-labelledby&#x3D;&quot;check-group-1 checkbox-label-1&quot;&gt;
+            Remember me
+          &lt;/label&gt;
 				&lt;/div&gt;
-				&lt;div class=&quot;checkbox checkbox--left&quot;&gt;
-					&lt;label id=&quot;checkbox-label-2&quot; for=&quot;checkboxform2&quot;&gt;
-						&lt;input id=&quot;checkboxform2&quot; name=&quot;accept&quot; type=&quot;checkbox&quot; aria-labelledby=&quot;check-group-1 checkbox-label-2&quot;&gt; Accept terms
-					&lt;/label&gt;
+				&lt;div class&#x3D;&quot;checkbox checkbox--left&quot;&gt;
+					&lt;label id&#x3D;&quot;checkbox-label-2&quot; for&#x3D;&quot;checkboxform2&quot;&gt;
+            &lt;input id&#x3D;&quot;checkboxform2&quot; name&#x3D;&quot;accept&quot; type&#x3D;&quot;checkbox&quot; aria-labelledby&#x3D;&quot;check-group-1 checkbox-label-2&quot;&gt;
+            Accept terms
+          &lt;/label&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -1124,22 +1202,24 @@
 
 	&lt;!-- Checkboxes Horizontal --&gt;
 	&lt;fieldset&gt;
-		&lt;legend class=&quot;hidden-legend&quot;&gt;Terms&lt;/legend&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label class=&quot;col-sm-2 control-label&quot; id=&quot;check-group-2&quot;&gt;Terms&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;div class=&quot;checkbox-inline&quot;&gt;
-					&lt;div class=&quot;checkbox checkbox--left&quot;&gt;
-						&lt;label id=&quot;checkbox-label-3&quot; for=&quot;checkboxform3&quot;&gt;
-							&lt;input id=&quot;checkboxform3&quot; name=&quot;remember&quot; type=&quot;checkbox&quot; aria-labelledby=&quot;check-group-2 checkbox-label-3&quot;&gt; Remember me
-						&lt;/label&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Terms&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label class&#x3D;&quot;col-sm-2 control-label&quot; id&#x3D;&quot;check-group-2&quot;&gt;Terms&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;div class&#x3D;&quot;checkbox-inline&quot;&gt;
+					&lt;div class&#x3D;&quot;checkbox checkbox--left&quot;&gt;
+						&lt;label id&#x3D;&quot;checkbox-label-3&quot; for&#x3D;&quot;checkboxform3&quot;&gt;
+              &lt;input id&#x3D;&quot;checkboxform3&quot; name&#x3D;&quot;remember&quot; type&#x3D;&quot;checkbox&quot; aria-labelledby&#x3D;&quot;check-group-2 checkbox-label-3&quot;&gt;
+              Remember me
+            &lt;/label&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;
-				&lt;div class=&quot;checkbox-inline&quot;&gt;
-					&lt;div class=&quot;checkbox checkbox--left&quot;&gt;
-						&lt;label id=&quot;checkbox-label-4&quot; for=&quot;checkboxform4&quot;&gt;
-							&lt;input id=&quot;checkboxform4&quot; name=&quot;accept&quot; type=&quot;checkbox&quot; aria-labelledby=&quot;check-group-2 checkbox-label-4&quot;&gt; Accept terms
-						&lt;/label&gt;
+				&lt;div class&#x3D;&quot;checkbox-inline&quot;&gt;
+					&lt;div class&#x3D;&quot;checkbox checkbox--left&quot;&gt;
+						&lt;label id&#x3D;&quot;checkbox-label-4&quot; for&#x3D;&quot;checkboxform4&quot;&gt;
+              &lt;input id&#x3D;&quot;checkboxform4&quot; name&#x3D;&quot;accept&quot; type&#x3D;&quot;checkbox&quot; aria-labelledby&#x3D;&quot;check-group-2 checkbox-label-4&quot;&gt;
+              Accept terms
+            &lt;/label&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
@@ -1148,19 +1228,21 @@
 
 	&lt;!-- Radio buttons vertical --&gt;
 	&lt;fieldset&gt;
-		&lt;legend class=&quot;hidden-legend&quot;&gt;Terms&lt;/legend&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label class=&quot;col-sm-2 control-label&quot; id=&quot;radio-group-1&quot;&gt;Terms&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;div class=&quot;radio radio--left&quot;&gt;
-					&lt;label for=&quot;radioform&quot; id=&quot;radio-label-1&quot;&gt;
-						&lt;input id=&quot;radioform&quot; value=&quot;yes&quot; type=&quot;radio&quot; name=&quot;radio-h&quot; aria-labelledby=&quot;radio-group-1 radio-label-1&quot;&gt; Remember me
-					&lt;/label&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Terms&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label class&#x3D;&quot;col-sm-2 control-label&quot; id&#x3D;&quot;radio-group-1&quot;&gt;Terms&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;div class&#x3D;&quot;radio radio--left&quot;&gt;
+					&lt;label for&#x3D;&quot;radioform&quot; id&#x3D;&quot;radio-label-1&quot;&gt;
+            &lt;input id&#x3D;&quot;radioform&quot; value&#x3D;&quot;yes&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-h&quot; aria-labelledby&#x3D;&quot;radio-group-1 radio-label-1&quot;&gt;
+            Remember me
+          &lt;/label&gt;
 				&lt;/div&gt;
-				&lt;div class=&quot;radio radio--left&quot;&gt;
-					&lt;label for=&quot;radioform2&quot; id=&quot;radio-label-2&quot;&gt;
-						&lt;input id=&quot;radioform2&quot; value=&quot;no&quot; type=&quot;radio&quot; name=&quot;radio-h&quot; aria-labelledby=&quot;radio-group-1 radio-label-2&quot;&gt; Don&#x27;t remember me
-					&lt;/label&gt;
+				&lt;div class&#x3D;&quot;radio radio--left&quot;&gt;
+					&lt;label for&#x3D;&quot;radioform2&quot; id&#x3D;&quot;radio-label-2&quot;&gt;
+            &lt;input id&#x3D;&quot;radioform2&quot; value&#x3D;&quot;no&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-h&quot; aria-labelledby&#x3D;&quot;radio-group-1 radio-label-2&quot;&gt;
+            Don&#x27;t remember me
+          &lt;/label&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
@@ -1168,22 +1250,24 @@
 
 	&lt;!-- Radio buttons horizontal --&gt;
 	&lt;fieldset&gt;
-		&lt;legend class=&quot;hidden-legend&quot;&gt;Terms&lt;/legend&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label class=&quot;col-sm-2 control-label&quot; id=&quot;radio-group-2&quot;&gt;Terms&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;div class=&quot;radio-inline&quot;&gt;
-					&lt;div class=&quot;radio radio--left&quot;&gt;
-						&lt;label for=&quot;radioform3&quot; id=&quot;radio-label-3&quot;&gt;
-							&lt;input id=&quot;radioform3&quot; value=&quot;radio3&quot; type=&quot;radio&quot; name=&quot;radio-j&quot; aria-labelledby=&quot;radio-group-2 radio-label-3&quot;&gt; Remember me
-						&lt;/label&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Terms&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label class&#x3D;&quot;col-sm-2 control-label&quot; id&#x3D;&quot;radio-group-2&quot;&gt;Terms&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;div class&#x3D;&quot;radio-inline&quot;&gt;
+					&lt;div class&#x3D;&quot;radio radio--left&quot;&gt;
+						&lt;label for&#x3D;&quot;radioform3&quot; id&#x3D;&quot;radio-label-3&quot;&gt;
+              &lt;input id&#x3D;&quot;radioform3&quot; value&#x3D;&quot;radio3&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-j&quot; aria-labelledby&#x3D;&quot;radio-group-2 radio-label-3&quot;&gt;
+              Remember me
+            &lt;/label&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;
-				&lt;div class=&quot;radio-inline&quot;&gt;
-					&lt;div class=&quot;radio radio--left&quot;&gt;
-						&lt;label for=&quot;radioform4&quot; id=&quot;radio-label-4&quot;&gt;
-							&lt;input id=&quot;radioform4&quot; value=&quot;radio4&quot; type=&quot;radio&quot; name=&quot;radio-j&quot; aria-labelledby=&quot;radio-group-2 radio-label-4&quot;&gt; Remember me
-						&lt;/label&gt;
+				&lt;div class&#x3D;&quot;radio-inline&quot;&gt;
+					&lt;div class&#x3D;&quot;radio radio--left&quot;&gt;
+						&lt;label for&#x3D;&quot;radioform4&quot; id&#x3D;&quot;radio-label-4&quot;&gt;
+              &lt;input id&#x3D;&quot;radioform4&quot; value&#x3D;&quot;radio4&quot; type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio-j&quot; aria-labelledby&#x3D;&quot;radio-group-2 radio-label-4&quot;&gt;
+              Remember me
+            &lt;/label&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;
 			&lt;/div&gt;
@@ -1192,21 +1276,37 @@
 
 	&lt;!-- Dropdown --&gt;
 	&lt;fieldset&gt;
-		&lt;legend class=&quot;hidden-legend&quot;&gt;Dropdown&lt;/legend&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-			&lt;label class=&quot;col-sm-2 control-label&quot; for=&quot;dropdown&quot;&gt;Dropdown&lt;/label&gt;
-			&lt;div class=&quot;col-sm-10&quot;&gt;
-				&lt;select id=&quot;dropdown&quot; class=&quot;form-control&quot;&gt;
-					&lt;option&gt;Option 1&lt;/option&gt;
-					&lt;option&gt;Option 2&lt;/option&gt;
-				&lt;/select&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Dropdown&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label class&#x3D;&quot;col-sm-2 control-label&quot; for&#x3D;&quot;dropdown&quot;&gt;Dropdown&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;select id&#x3D;&quot;dropdown&quot; class&#x3D;&quot;form-control&quot;&gt;
+          &lt;option&gt;Option 1&lt;/option&gt;
+          &lt;option&gt;Option 2&lt;/option&gt;
+        &lt;/select&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/fieldset&gt;
 
-	&lt;div class=&quot;form-group&quot;&gt;
-		&lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
-			&lt;button type=&quot;submit&quot; role=&quot;button&quot; class=&quot;btn btn-default&quot;&gt;Sign in&lt;/button&gt;
+	&lt;!-- Multi Select --&gt;
+	&lt;fieldset&gt;
+		&lt;legend class&#x3D;&quot;hidden-legend&quot;&gt;Dropdown&lt;/legend&gt;
+		&lt;div class&#x3D;&quot;form-group&quot;&gt;
+			&lt;label class&#x3D;&quot;col-sm-2 control-label&quot; for&#x3D;&quot;select-multiple&quot;&gt;Multi Select&lt;/label&gt;
+			&lt;div class&#x3D;&quot;col-sm-10&quot;&gt;
+				&lt;select id&#x3D;&quot;select-multiple&quot; class&#x3D;&quot;form-control&quot; multiple&#x3D;&quot;multiple&quot;&gt;
+          &lt;option&gt;Option 1&lt;/option&gt;
+          &lt;option&gt;Option 2&lt;/option&gt;
+          &lt;option&gt;Option 3&lt;/option&gt;
+          &lt;option&gt;Option 4&lt;/option&gt;
+        &lt;/select&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+
+	&lt;div class&#x3D;&quot;form-group&quot;&gt;
+		&lt;div class&#x3D;&quot;col-sm-offset-2 col-sm-10&quot;&gt;
+			&lt;button type&#x3D;&quot;submit&quot; role&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-default&quot;&gt;Sign in&lt;/button&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;/fieldset&gt;
@@ -1219,14 +1319,14 @@
 // Load Pikaday on date fields
 if ($(window).width() &gt; 767) {
 
-  $(&#x27;[type=date]&#x27;).each(function(){
+  $(&#x27;[type&#x3D;date]&#x27;).each(function(){
     // We need to change to type text to be able to write in another format
     // Just uncomment the following line:
     // $(this).prop(&#x27;type&#x27;, &#x27;text&#x27;);
 
-    var picker = new Pikaday({
+    var picker &#x3D; new Pikaday({
       field: $(this)[0],
-      format: &#x27;YYYY-MM-DD&#x27;, // must be a input[type=text] to change this, see above
+      format: &#x27;YYYY-MM-DD&#x27;, // must be a input[type&#x3D;text] to change this, see above
       firstDay: 1, // sets monday as first day
       theme: &#x27;admin-theme&#x27;,
       i18n: {
@@ -1271,25 +1371,24 @@ if ($(window).width() &gt; 767) {
 
   <p>Mit einer Dropdown List kann aus einer vorgegebenen Liste eine Auswahl getroffen werden. Diese Liste erscheint in einem Menü nach Klick auf das Element. Nachdem eine Auswahl getroffen wurde, wird das Ergebnis angezeigt.
 Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angeboten.</p>
-<p>Das Attribut <code>multiple</code> bei <code>&lt;select&gt;</code> erlaubt es den Usern, mehr als eine Option auszuwählen.</p>
 
 
   <div class="component-example">
     <div class="clearfix">
       <label for="select" class="sr-only">Select:</label>
 <select id="select" class="form-control">
-	<option>Option 1</option>
-	<option>Option 2</option>
+  <option>Option 1</option>
+  <option>Option 2</option>
 </select>
     </div>
     <button type="button" class="show-code" data-toggle="collapse" data-target="#code-01-form-elements-03-selects" aria-expanded="false">&lt;/&gt;</button>
   </div>
 
   <div class="code-block collapse" aria-expanded="false" id="code-01-form-elements-03-selects" role="note">
-    <pre><code class="language-markup">&lt;label for=&quot;select&quot; class=&quot;sr-only&quot;&gt;Select:&lt;/label&gt;
-&lt;select id=&quot;select&quot; class=&quot;form-control&quot;&gt;
-	&lt;option&gt;Option 1&lt;/option&gt;
-	&lt;option&gt;Option 2&lt;/option&gt;
+    <pre><code class="language-markup">&lt;label for&#x3D;&quot;select&quot; class&#x3D;&quot;sr-only&quot;&gt;Select:&lt;/label&gt;
+&lt;select id&#x3D;&quot;select&quot; class&#x3D;&quot;form-control&quot;&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
 &lt;/select&gt;</code></pre>
   </div>
 
@@ -1299,18 +1398,67 @@ Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angebote
 </article>
 
 
-<article class="component" id="01-form-elements-04-checkboxes">
+<article class="component" id="01-form-elements-04-selects-multiple">
 
   <div class="component-header clearfix">
-  	<h2 class="component-heading"><a href="#01-form-elements-04-checkboxes" class="component-anchor">Checkboxen</a></h2>
+  	<h2 class="component-heading"><a href="#01-form-elements-04-selects-multiple" class="component-anchor">Mehrfach-Auswahllisten</a></h2>
 
       <span class="component-label label label-admin">FLEX</span>
 
     <ul class="component-nav list-inline">
 
-        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-01-form-elements-04-checkboxes" aria-expanded="false">Release notes</button></li>
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-01-form-elements-04-selects-multiple" aria-expanded="false">Release notes</button></li>
     </ul>
-  </div>  <div class="component-release-notes collapse" id="release-notes-01-form-elements-04-checkboxes" aria-expanded="false">
+  </div>  <div class="component-release-notes collapse" id="release-notes-01-form-elements-04-selects-multiple" aria-expanded="false">
+    <div class="alert alert-info">
+      <p><strong>3.1:</strong></p>
+<ul>
+<li>proper support for multi selects added</li>
+</ul>
+
+    </div>
+  </div>
+
+  <p>Mehrfach-Auswahllisten verhalten sich gleich wie einfache Auswahllisten. Allerdings kann mehr als eine Option ausgewählt werden.</p>
+
+
+  <div class="component-example">
+    <div class="clearfix">
+      <label for="select-multiple" class="sr-only">Select:</label>
+<select id="select-multiple" class="form-control" multiple="multiple">
+  <option>Option 1</option>
+  <option>Option 2</option>
+</select>
+    </div>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-01-form-elements-04-selects-multiple" aria-expanded="false">&lt;/&gt;</button>
+  </div>
+
+  <div class="code-block collapse" aria-expanded="false" id="code-01-form-elements-04-selects-multiple" role="note">
+    <pre><code class="language-markup">&lt;label for&#x3D;&quot;select-multiple&quot; class&#x3D;&quot;sr-only&quot;&gt;Select:&lt;/label&gt;
+&lt;select id&#x3D;&quot;select-multiple&quot; class&#x3D;&quot;form-control&quot; multiple&#x3D;&quot;multiple&quot;&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+  </div>
+
+
+
+
+</article>
+
+
+<article class="component" id="01-form-elements-05-checkboxes">
+
+  <div class="component-header clearfix">
+  	<h2 class="component-heading"><a href="#01-form-elements-05-checkboxes" class="component-anchor">Checkboxen</a></h2>
+
+      <span class="component-label label label-admin">FLEX</span>
+
+    <ul class="component-nav list-inline">
+
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-01-form-elements-05-checkboxes" aria-expanded="false">Release notes</button></li>
+    </ul>
+  </div>  <div class="component-release-notes collapse" id="release-notes-01-form-elements-05-checkboxes" aria-expanded="false">
     <div class="alert alert-info">
       <p><strong>3.0.0</strong></p>
 <ul>
@@ -1330,34 +1478,38 @@ Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angebote
 
 	<div class="checkbox checkbox--right">
 		<label for="checkbox">
-			<input type="checkbox" id="checkbox" value="checkbox1"> Remember me
-		</label>
+      <input type="checkbox" id="checkbox" value="checkbox1">
+      Remember me
+    </label>
 	</div>
 
 	<div class="checkbox checkbox--left">
 		<label for="checkbox2">
-			<input type="checkbox" id="checkbox2" value="checkbox2"> Remember me
-		</label>
+      <input type="checkbox" id="checkbox2" value="checkbox2">
+      Remember me
+    </label>
 	</div>
 </fieldset>
     </div>
-    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-01-form-elements-04-checkboxes" aria-expanded="false">&lt;/&gt;</button>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-01-form-elements-05-checkboxes" aria-expanded="false">&lt;/&gt;</button>
   </div>
 
-  <div class="code-block collapse" aria-expanded="false" id="code-01-form-elements-04-checkboxes" role="note">
+  <div class="code-block collapse" aria-expanded="false" id="code-01-form-elements-05-checkboxes" role="note">
     <pre><code class="language-markup">&lt;fieldset&gt;
-	&lt;legend class=&quot;sr-only&quot;&gt;(Optional) Question&lt;/legend&gt;
+	&lt;legend class&#x3D;&quot;sr-only&quot;&gt;(Optional) Question&lt;/legend&gt;
 
-	&lt;div class=&quot;checkbox checkbox--right&quot;&gt;
-		&lt;label for=&quot;checkbox&quot;&gt;
-			&lt;input type=&quot;checkbox&quot; id=&quot;checkbox&quot; value=&quot;checkbox1&quot;&gt; Remember me
-		&lt;/label&gt;
+	&lt;div class&#x3D;&quot;checkbox checkbox--right&quot;&gt;
+		&lt;label for&#x3D;&quot;checkbox&quot;&gt;
+      &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;checkbox&quot; value&#x3D;&quot;checkbox1&quot;&gt;
+      Remember me
+    &lt;/label&gt;
 	&lt;/div&gt;
 
-	&lt;div class=&quot;checkbox checkbox--left&quot;&gt;
-		&lt;label for=&quot;checkbox2&quot;&gt;
-			&lt;input type=&quot;checkbox&quot; id=&quot;checkbox2&quot; value=&quot;checkbox2&quot;&gt; Remember me
-		&lt;/label&gt;
+	&lt;div class&#x3D;&quot;checkbox checkbox--left&quot;&gt;
+		&lt;label for&#x3D;&quot;checkbox2&quot;&gt;
+      &lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;checkbox2&quot; value&#x3D;&quot;checkbox2&quot;&gt;
+      Remember me
+    &lt;/label&gt;
 	&lt;/div&gt;
 &lt;/fieldset&gt;</code></pre>
   </div>
@@ -1368,18 +1520,18 @@ Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angebote
 </article>
 
 
-<article class="component" id="01-form-elements-05-radios">
+<article class="component" id="01-form-elements-06-radios">
 
   <div class="component-header clearfix">
-  	<h2 class="component-heading"><a href="#01-form-elements-05-radios" class="component-anchor">Radio buttons</a></h2>
+  	<h2 class="component-heading"><a href="#01-form-elements-06-radios" class="component-anchor">Radio buttons</a></h2>
 
       <span class="component-label label label-admin">FLEX</span>
 
     <ul class="component-nav list-inline">
 
-        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-01-form-elements-05-radios" aria-expanded="false">Release notes</button></li>
+        <li><button class="btn btn-sm btn-link collapsed" data-toggle="collapse" data-target="#release-notes-01-form-elements-06-radios" aria-expanded="false">Release notes</button></li>
     </ul>
-  </div>  <div class="component-release-notes collapse" id="release-notes-01-form-elements-05-radios" aria-expanded="false">
+  </div>  <div class="component-release-notes collapse" id="release-notes-01-form-elements-06-radios" aria-expanded="false">
     <div class="alert alert-info">
       <p><strong>3.0.0</strong></p>
 <ul>
@@ -1399,34 +1551,38 @@ Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angebote
 
 	<div class="radio radio--left">
 		<label for="radio">
-			<input type="radio" name="radios" id="radio" value="radio1" checked> Option 1
-		</label>
+      <input type="radio" name ="radios" id="radio" value="radio1" checked>
+      Option 1
+    </label>
 	</div>
 
 	<div class="radio radio--right">
 		<label for="radio2">
-			<input type="radio" name="radios" id="radio2" value="radio2"> Option 2
-		</label>
+      <input type="radio" name ="radios" id="radio2" value="radio2">
+      Option 2
+    </label>
 	</div>
 </fieldset>
     </div>
-    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-01-form-elements-05-radios" aria-expanded="false">&lt;/&gt;</button>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-01-form-elements-06-radios" aria-expanded="false">&lt;/&gt;</button>
   </div>
 
-  <div class="code-block collapse" aria-expanded="false" id="code-01-form-elements-05-radios" role="note">
+  <div class="code-block collapse" aria-expanded="false" id="code-01-form-elements-06-radios" role="note">
     <pre><code class="language-markup">&lt;fieldset&gt;
-	&lt;legend class=&quot;sr-only&quot;&gt;(Optional) Question&lt;/legend&gt;
+	&lt;legend class&#x3D;&quot;sr-only&quot;&gt;(Optional) Question&lt;/legend&gt;
 
-	&lt;div class=&quot;radio radio--left&quot;&gt;
-		&lt;label for=&quot;radio&quot;&gt;
-			&lt;input type=&quot;radio&quot; name=&quot;radios&quot; id=&quot;radio&quot; value=&quot;radio1&quot; checked&gt; Option 1
-		&lt;/label&gt;
+	&lt;div class&#x3D;&quot;radio radio--left&quot;&gt;
+		&lt;label for&#x3D;&quot;radio&quot;&gt;
+      &lt;input type&#x3D;&quot;radio&quot; name &#x3D;&quot;radios&quot; id&#x3D;&quot;radio&quot; value&#x3D;&quot;radio1&quot; checked&gt;
+      Option 1
+    &lt;/label&gt;
 	&lt;/div&gt;
 
-	&lt;div class=&quot;radio radio--right&quot;&gt;
-		&lt;label for=&quot;radio2&quot;&gt;
-			&lt;input type=&quot;radio&quot; name=&quot;radios&quot; id=&quot;radio2&quot; value=&quot;radio2&quot;&gt; Option 2
-		&lt;/label&gt;
+	&lt;div class&#x3D;&quot;radio radio--right&quot;&gt;
+		&lt;label for&#x3D;&quot;radio2&quot;&gt;
+      &lt;input type&#x3D;&quot;radio&quot; name &#x3D;&quot;radios&quot; id&#x3D;&quot;radio2&quot; value&#x3D;&quot;radio2&quot;&gt;
+      Option 2
+    &lt;/label&gt;
 	&lt;/div&gt;
 &lt;/fieldset&gt;</code></pre>
   </div>
@@ -1437,10 +1593,10 @@ Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angebote
 </article>
 
 
-<article class="component" id="01-form-elements-06-buttons">
+<article class="component" id="01-form-elements-07-buttons">
 
   <div class="component-header clearfix">
-  	<h2 class="component-heading"><a href="#01-form-elements-06-buttons" class="component-anchor">Schaltflächen</a></h2>
+  	<h2 class="component-heading"><a href="#01-form-elements-07-buttons" class="component-anchor">Schaltflächen</a></h2>
 
       <span class="component-label label label-admin">FLEX</span>
 
@@ -1492,10 +1648,10 @@ Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angebote
 </article>
 
 
-<article class="component" id="01-form-elements-07-button-groups">
+<article class="component" id="01-form-elements-08-button-groups">
 
   <div class="component-header clearfix">
-  	<h2 class="component-heading"><a href="#01-form-elements-07-button-groups" class="component-anchor">Gruppen von Schaltflächen</a></h2>
+  	<h2 class="component-heading"><a href="#01-form-elements-08-button-groups" class="component-anchor">Gruppen von Schaltflächen</a></h2>
 
       <span class="component-label label label-admin">FIX</span>
 
@@ -1514,16 +1670,16 @@ Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angebote
 	<button type="button" class="btn">Right</button>
 </div>
     </div>
-    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-01-form-elements-07-button-groups" aria-expanded="false">&lt;/&gt;</button>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-01-form-elements-08-button-groups" aria-expanded="false">&lt;/&gt;</button>
   </div>
 
-  <div class="code-block collapse" aria-expanded="false" id="code-01-form-elements-07-button-groups" role="note">
-    <pre><code class="language-markup">&lt;div class=&quot;btn-group&quot;&gt;
-	&lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Left&lt;/button&gt;
-	&lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Middle&lt;/button&gt;
-	&lt;button type=&quot;button&quot; class=&quot;btn active&quot;&gt;Middle&lt;/button&gt;
-	&lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Middle&lt;/button&gt;
-	&lt;button type=&quot;button&quot; class=&quot;btn&quot;&gt;Right&lt;/button&gt;
+  <div class="code-block collapse" aria-expanded="false" id="code-01-form-elements-08-button-groups" role="note">
+    <pre><code class="language-markup">&lt;div class&#x3D;&quot;btn-group&quot;&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot;&gt;Left&lt;/button&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot;&gt;Middle&lt;/button&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn active&quot;&gt;Middle&lt;/button&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot;&gt;Middle&lt;/button&gt;
+	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn&quot;&gt;Right&lt;/button&gt;
 &lt;/div&gt;</code></pre>
   </div>
 
