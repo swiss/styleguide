@@ -135,8 +135,10 @@ teaser:
     title: Flux d’actualités
     help: Dans le teaser des actualités, divers éléments d’actualités sont présentés par ordre chronologique. A l’aide d’une barre de défilement, l’utilisateur peut faire défiler le contenu du teaser vers le bas et ainsi voir tous les éléments d’actualités proposés. Chaque élément comporte la date, le type d’information et le titre muni du lien menant vers l’actualité.
     release: |
-      **2.0.1:**
+      **3.1:**
+      - la barre de défilement est masquée si elle n'est pas nécessaire
 
+      **2.0.1:**
       - classe `.news-feed` ajoutée à l’élément `.list-group`
       - wrapper `.scroll-y` contenant tous les éléments `.list-group-item` ajouté
   rss-feed:
@@ -151,9 +153,9 @@ teaser:
       Une timeline Twitter affiche des tweets récents d'un utilisateur spécifique de Twitter.
 
       Le tag HTML `data-profile` définit l'utilisateur Twitter. `data-tweet-limit` permet également de définir la quantité maximale de tweets affichés.
-  release: |
-    **3.1.0**
-    - ajout de Twitter Timeline teaser
+    release: |
+      **3.1.0**
+      - ajout de Twitter Timeline teaser
 content-containers:
   title: Conteneurs
   elements-list:
@@ -170,6 +172,9 @@ content-containers:
     title: Encadré rétractable
     help: |
       L’encadré rétractable est un élément interactif à l’intérieur duquel se cachent d’autres éléments interactifs ou d’autres contenus. Par défaut, il est fermé. Un clic permet d’ouvrir l’encadré afin de rendre les contenus visibles. Un autre clic permet de refermer l’encadré.
+    release: |
+      **3.1**
+      - correction d'accessibilité au clavier
 
 ordering-checkout:
   title: Commande et check-out
@@ -271,3 +276,6 @@ search:
   search-results:
     title: Résultats de recherche
     help: Les résultats de recherche sont affichés par groupes sémantiques dans des onglets. Les catégories (pour le regroupement) peuvent être choisies librement (p. ex. pages de contenu, actualités et publications). Une fonction de pagination permet à l’utilisateur de feuilleter les pages à l’intérieur de l’onglet.
+    release: |
+      **3.1**
+      - texte d'accessibilité ajoutée

@@ -126,8 +126,10 @@ teaser:
     title: News feed
     help: In the news teaser, various snippets of news items are arranged chronologically. The user can use the scrollbar to scroll down the teaser and take a look at all of the news snippets that are available. Each snippet contains the date, the type of news item, and the link to the news story’s headline.
     release: |
-      **2.0.1:**
+      **3.1:**
+      - hiding scrollbar if it's not needed
 
+      **2.0.1:**
       - added the `.news-feed` class to the `.list-group` element
       - added the `.scroll-y` wrapper containing all the `.list-group-item` elements
   rss-feed:
@@ -162,6 +164,10 @@ content-containers:
       The collapsible panel is an interactive element in which further interactive elements or other contents are hidden. The default setting is closed. The box is opened with a click, and the contents become visible. Another click closes the box again.
 
       Add `.collapsed` to link for it to change the icon direction when collapsing.
+    release: |
+      **3.1**
+      - keyboard accessibility fixed
+
 ordering-checkout:
   title: Ordering and checkout
   one-line-order-form:
@@ -255,3 +261,6 @@ search:
   search-results:
     title: Search results
     help: Search results are shown in semantically grouped tabs. The categories (groupings) can be chosen freely (e.g. Content pages, News, and Publications). Within the individual tabs, the user can move through the pages with the paging function.
+    release: |
+      **3.1**
+      - accessibility texts added

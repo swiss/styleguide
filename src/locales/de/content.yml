@@ -136,8 +136,10 @@ teaser:
     title: News Feed
     help: Im News-Teaser werden verschiedene News-Anrisse chronologisch sortiert dargestellt. Mit einer Scrollbar kann der Anwender innerhalb des Teasers nach unten scrollen und somit alle angebotenen News-Anrisse sehen. Jeder Anriss beinhaltet das Datum, den Meldungstyp sowie den verlinkten Titel zur News.
     release: |
-      **2.0.1:**
+      **3.1:**
+      - hiding scrollbar if it's not needed
 
+      **2.0.1:**
       - added the `.news-feed` class to the `.list-group` element
       - added the `.scroll-y` wrapper containing all the `.list-group-item` elements
   rss-feed:
@@ -152,9 +154,9 @@ teaser:
       Eine Twitter-Timeline zeigt die neusten Tweets eines bestimmten Twitter-Benutzers.
 
       Mit dem HTML-Tag `data-profile` wird der Twitter-Bentuzer definiert. Mit `data-tweet-limit` kann die Anzahl anzuzeigender Tweets optional limitiert werden.
-  release: |
-    **3.1.0**
-    - added Twitter Timeline teaser
+    release: |
+      **3.1.0**
+      - added Twitter Timeline teaser
 content-containers:
   title: Inhaltscontainer
   elements-list:
@@ -171,6 +173,9 @@ content-containers:
     title: Klapp-Box
     help: |
       Die Klapp-Box ist ein interaktives Element, in dem sich andere interaktive Elemente oder sonstige Inhalte verbergen. Es ist standardmässig geschlossen. Durch einen Klick wird die Box geöffnet, und die Inhalte werden sichtbar. Mit einem weiteren Klick kann die Box wieder geschlossen werden.
+    release: |
+      **3.1**
+      - keyboard accessibility fixed
 
 ordering-checkout:
   title: Bestellen und Check-out
@@ -272,3 +277,6 @@ search:
   search-results:
     title: Suchergebnisse
     help: Suchergebnisse werden semantisch gruppiert in Reitern angezeigt. Die Kategorien (Gruppierung) ist frei wählbar (z.B. Inhaltsseiten, News und Publikationen). Innerhalb des Reiters kann der Anwender sich mit eine Paging-Funktion durch die Seiten bewegen.
+    release: |
+      **3.1**
+      - accessibility texts added

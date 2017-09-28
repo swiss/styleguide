@@ -304,6 +304,10 @@ typography:
   text-elements:
     title: Text elements
     help: The font size, line length, and line spacing for the copy body have been selected to provide an optimum reading experience. Quotations are shown in italics. Links within the running text are underlined, but should be used sparingly. It is better to place links at the end of a paragraph.
+    release: |
+      **3.1**
+      - code of examples added
+
   blockquote:
     title: Blockquote
   lists:

@@ -300,6 +300,10 @@ typography:
     title: Corps de texte
     help: |
       La taille de police, la longueur et l’espacement des lignes du corps de texte sont optimisés pour une lisibilité optimale. Les citations sont mises en italique. Les liens dans le corps de texte sont soulignés. Cependant, il convient de les utiliser avec parcimonie. Il est préférable de placer les liens à la fin d’un paragraphe.
+    release: |
+      **3.1**
+      - ajout du code des exemples
+
   blockquote:
     title: Citation
   lists:
