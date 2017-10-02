@@ -70,7 +70,6 @@
   	})
     .on('typeahead:open', function() {
       $(this).closest('.global-search').addClass('focused');
-      console.log($(this).typeahead('val'));
     })
     .on('typeahead:close', function () {
       $(this).closest('.global-search').removeClass('focused');
