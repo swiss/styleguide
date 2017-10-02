@@ -82,12 +82,6 @@
           margin: 5px 0;
           font-size: 14px;
 
-          h3 {
-            padding: 5px 0;
-            margin: 5px 5px 5px 0;
-            border-bottom: 1px solid $light-grey;
-          }
-
           a {
             cursor: pointer;
           }
@@ -141,4 +135,11 @@
 // typeahead fixes
 .global-search-standard.focused .icon.icon--close:after {
   color: $black;
+}
+
+.search-result-header {
+  font-size: 1.2em;
+  padding: 5px 0;
+  margin: 5px 5px 5px 0;
+  border-bottom: 1px solid $light-grey;
 }

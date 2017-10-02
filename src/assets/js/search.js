@@ -30,9 +30,9 @@
       templates: {
         empty: function() {
           return [
-            '<li><h3>',
+            '<li class="search-result-header"><strong>',
               title,
-            '</h3></li>',
+            '</strong></li>',
             '<li>',
               window.translations['global-search']['nothing-found'],
             '</li>',
@@ -40,9 +40,9 @@
         },
         header: function() {
           return [
-            '<li><h3>',
+            '<li class="search-result-header"><strong>',
               title,
-            '</h3></li>'
+            '</strong></li>'
           ].join('');
         },
         dataset: '<ul><ul>',
