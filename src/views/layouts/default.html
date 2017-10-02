@@ -5,11 +5,11 @@
 <!--[if IE 9 ]>    <html lang="{{data 'locale'}}" class="no-js ie9"> <![endif]-->
 <!--[if gt IE 9 ]><!--><html lang="{{data 'locale'}}" class="no-js no-ie"><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{{#if category}}{{t category}}, {{/if}}{{#if title}}{{t title}}, {{/if}}{{t 'styleguide.title'}}</title>
+  <title>{{#if category}}{{t category}}, {{/if}}{{#if title}}{{t title}}, {{/if}}{{t 'styleguide.title'}}</title>
 
   <!-- Source CSS -->
   <link rel="stylesheet" href="{{#if baseurl}}{{baseurl}}/{{/if}}../css/vendors.css">
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="{{#if baseurl}}{{baseurl}}/{{/if}}../css/print.css">
 
   <!-- Styleguide CSS -->
-	{{#if fabricator}}<link rel="stylesheet" href="{{#if baseurl}}{{baseurl}}/{{/if}}../css/fabricator.css">{{/if}}
+  {{#if fabricator}}<link rel="stylesheet" href="{{#if baseurl}}{{baseurl}}/{{/if}}../css/fabricator.css">{{/if}}
 
   <!-- Favicons -->
   <link rel="shortcut icon" href="{{#if baseurl}}{{baseurl}}/{{/if}}../img/ico/favicon.ico">
@@ -52,32 +52,32 @@
     <li><a href="#content" accesskey="2">{{t 'styleguide.content'}}</a></li>
   </ul>
 
-	{{#if fabricator}}
-		<div class="container container-main">
+  {{#if fabricator}}
+    <div class="container container-main">
       {{> f-header}}
-			{{> f-menu}}
+      {{> f-menu}}
       <div class="row">
         <div class="col-xs-12">
           <div id="content" class="container-fluid">
-	{{/if}}
+  {{/if}}
 
-	{% body %}
+  {% body %}
 
-	{{#if fabricator}}
+  {{#if fabricator}}
           </div>
         </div>
       </div>
 
       {{> f-footer}}
-		</div>
-	{{/if}}
+    </div>
+  {{/if}}
 
   <!-- Source Scripts -->
   <script src="{{#if baseurl}}{{baseurl}}/{{/if}}../js/vendors.min.js"></script>
   <script src="{{#if baseurl}}{{baseurl}}/{{/if}}../js/main.min.js"></script>
 
   <!-- Styleguide Scripts -->
-	<script src="{{#if baseurl}}{{baseurl}}/{{/if}}../js/fabricator.min.js"></script>
+  <script src="{{#if baseurl}}{{baseurl}}/{{/if}}../js/fabricator.min.js"></script>
 
 </body>
 </html>
