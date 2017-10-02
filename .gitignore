@@ -1,8 +1,9 @@
 **/.DS_STORE
-node_modules/*
+/node_modules
 
 .sass-cache
 
+/build
 styleguide/*
 src/views/pages/*
 

@@ -203,7 +203,7 @@ gulp.task('twig', ['clean-twig'], function() {
  */
 // Build the style guide
 gulp.task('assemble-everything', function(cb) {
-  runSequence('clean', 'assemble', 'copy', 'styles:fabricator', 'scripts:fabricator', cb);
+  runSequence('default', 'assemble', 'copy', 'styles:fabricator', 'scripts:fabricator', cb);
 });
 
 gulp.task('assemble', function(done) {
