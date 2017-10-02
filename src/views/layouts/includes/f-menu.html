@@ -77,14 +77,14 @@
   <ul class="nav navbar-nav">
     <li class="dropdown yamm-fw">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{t 'docs.title'}}</a>
-      <ul class="dropdown-menu" role="menu">
+      <div class="dropdown-menu" role="menu">
         <div class="yamm-content container-fluid">
           <div class="row">
             <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">{{t 'styleguide.close'}}</a></div>
           </div>
           <div class="row">
             {{#each views.docs.items}}
-            <li class="col-sm-3">
+            <div class="col-sm-3">
               <div class="yamm-content container-fluid">
                 <h4><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/docs/{{@key}}.html">{{t 'docs' @key 'title'}}</a></h4>
                 <ul role="menu">
@@ -95,7 +95,7 @@
                   {{/each}}
                 </ul>
               </div>
-            </li>
+            </div>
             {{#modulo @index 4}}
             <div class="clearfix"></div>
             {{/modulo}}
@@ -103,7 +103,7 @@
           </div>
           <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
         </div>
-      </ul>
+      </div>
     </li>
 
     {{#each materials}}
@@ -112,14 +112,14 @@
 
     <li class="dropdown yamm-fw">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{t 'pages.title'}}</a>
-      <ul class="dropdown-menu" role="menu">
+      <div class="dropdown-menu" role="menu">
         <div class="yamm-content container-fluid">
           <div class="row">
             <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">{{t 'styleguide.close'}}</a></div>
           </div>
           <div class="row">
             {{#each views.pages.items}}
-            <li class="col-sm-3">
+            <div class="col-sm-3">
               <div class="yamm-content container-fluid">
                 <h4><a href="{{#if @root.baseurl}}{{@root.baseurl}}/{{/if}}../{{data 'locale'}}/pages/{{@key}}.html">{{t 'pages' @key 'title'}}</a></h4>
                 <ul role="menu">
@@ -130,7 +130,7 @@
                   {{/each}}
                 </ul>
               </div>
-            </li>
+            </div>
             {{#modulo @index 4}}
             <div class="clearfix"></div>
             {{/modulo}}
@@ -138,7 +138,7 @@
           </div>
           <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
         </div>
-      </ul>
+      </div>
     </li>
   </ul>
 </nav>
