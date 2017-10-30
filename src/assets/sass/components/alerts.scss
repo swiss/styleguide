@@ -32,8 +32,7 @@
   &.alert-warning:before {
     font-family: $admin-icons;
     content: get-font-icon('exclam');
-    font-size: 2em;
-    top: 13px;
+    top: 15px;
     left: 23px;
   }
   &.alert-danger:before {
