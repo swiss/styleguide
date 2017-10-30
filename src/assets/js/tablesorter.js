@@ -13,6 +13,6 @@
 (function($) {
   'use strict';
 
-  $('.table-sort').tablesorter();
+  $('.table-sort').tablesorter({ sortLocaleCompare : true });
 
 }) (jQuery);
