@@ -89,7 +89,7 @@
   box-sizing: border-box;
   position: relative;
 
-  &:after {
+  &:before {
     content: 'Example';
     position: absolute;
     top: 0;
