@@ -125,6 +125,18 @@ unbedingt Reihenfolge behalten
   .visible-print-inline {display: inline !important;}
   .visible-print-block {display: block !important;}
   .visible-print-inline-block {display: inline-block !important;}
+
+  a[data-toggle="collapse"]:before,
+  a[data-toggle="collapse"][href]:after,
+  a[data-toggle="collapse"].collapsed:before {
+    content: none!important;
+  }
+
+  a[data-toggle="collapse"] + div.collapse{
+    margin-left: 1.2em!important;
+    display: block!important;
+    height: 100%!important;
+  }
 }
 
 .print-preview {
