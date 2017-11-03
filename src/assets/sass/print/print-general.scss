@@ -71,12 +71,16 @@ unbedingt Reihenfolge behalten
     color: blue !important;
     text-decoration: underline;
   }
-  a:not([name="context-sidebar"]):not([href="#"]):after{
+  a:not([name="context-sidebar"])
+  :not([href="#"])
+  :not(.brand)
+  :after{
     content:" (" attr(href) ") " !important;
     font-size:0.8em;
     font-weight:normal;
     font-family: sans-serif;
   }
+  a.brand:after{content: ''!important;}
   a[href*="tel:"]:after {content: none !important;}
   .breadcrumb li:not(:nth-last-child(3)) a:after,
   a.carousel-control:after,
