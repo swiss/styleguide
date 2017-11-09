@@ -15,7 +15,7 @@
     <div class="clearfix">
       {{{material @key @root}}}
     </div>
-    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '(\.)' '-' @key}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}">&lt;/&gt;</button>
+    <button type="button" class="show-code" data-toggle="collapse" data-target="#code-{{replace '(\.)' '-' @key}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}" title="Show Source Code">&lt;/&gt;</button>
   </div>
 
   <div class="code-block collapse{{#if data.expanded}} in{{/if}}" aria-expanded="{{#if data.expanded}}true{{else}}false{{/if}}" id="code-{{replace '(\.)' '-' @key}}" role="note">
