@@ -123,12 +123,16 @@ general:
       For an **only-icon** element, add the class to an empty `<span>`.
 
       For an **inside-icon** element, use the global `.icon` and `.icon--before` or `.icon--after` class followed by the more specific class.
-    release: |
+
       **Accessibility**
 
       If the element should be readable by a screen reader and/or is semantically important, be sure to add the appropriate `aria-` attribute. Otherwise, add an `aria-hidden="true"` attribute to hide it and avoid useless clutter of informations.
 
       You could also add a `<span class="sr-only">icon description</span>` depending on your needs.
+    release: |
+      **3.1.1**
+
+      - add `icon--info`, `icon--facebook-light`, `icon--instagram`, `icon--whatsapp`, `icon--linkedin`, `icon--linkedin-box`, `icon--xing`, `icon--xing-box`, `icon--pinterest`, `icon--youtube` icons
   form-icons:
     title: Form icons
     help: Use the global `.form-icon` class followed by the more specific class

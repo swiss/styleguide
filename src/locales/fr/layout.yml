@@ -113,12 +113,14 @@ general:
 
       Si l’élément est composé d’une seule icône, la classe est définie dans un conteneur `<span>`. Dans ce cas, la fonction de l’icône doit être expliquée dans un texte «alt». Communiqué: `<span class="" alt="vorwärts">...</span>`
 
-          release: |
-
       **Accessibilité**
 
-      Afin que l’élément d’icône puisse être lu par un lecteur d’écran et/ou s’il possède une importance du point de vue sémantique, il doit être muni de l’attribut «aria» approprié. Sinon, on ajoutera un attribut `aria-hidden="true".
+      Afin que l’élément d’icône puisse être lu par un lecteur d’écran et/ou s’il possède une importance du point de vue sémantique, il doit être muni de l’attribut «aria» approprié. Sinon, on ajoutera un attribut `aria-hidden="true"`.
       Selon les besoins, on peut également utiliser `<span class="sr-only">icon description</span>`.
+    release: |
+      **3.1.1**
+
+      - ajout des icônes `icon--info`, `icon--facebook-light`, `icon--instagram`, `icon--whatsapp`, `icon--linkedin`, `icon--linkedin-box`, `icon--xing`, `icon--xing-box`, `icon--pinterest`, `icon--youtube`
   form-icons:
     title: Icônes de forme
     help: Utilisez la classe `.form-icon` globale, suivie de la classe plus spécifique

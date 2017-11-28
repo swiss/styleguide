@@ -27,8 +27,9 @@ span.icon {
 
 $icon-list: (
   exclam :                  '\e900',
+  info :                    '\e901',
   arrow-right :             '\e902',
-  google :                  '\e903',
+  facebook-light :          '\e903',
   bottom :                  '\e904',
   left :                    '\e905',
   disc :                    '\e906',
@@ -71,14 +72,23 @@ $icon-list: (
   play :                    '\e92b',
   settings :                '\e92c',
   twitter :                 '\e92d',
-  fast-backward :           '\e932',
   fast-forward :            '\e92e',
   root :                    '\e92f',
   square :                  '\e930',
   close :                   '\e931',
+  fast-backward :           '\e932',
   arrow-bottom :            '\e933',
   arrow-left :              '\e934',
-  arrow-top :               '\e935'
+  arrow-top :               '\e935',
+  instagram :               '\e936',
+  whatsapp :                '\e937',
+  linkedin :                '\e938',
+  linkedin-box :            '\e939',
+  xing :                    '\e93a',
+  xing-box :                '\e93b',
+  pinterest :               '\e93c',
+  youtube :                 '\e93d',
+  google :                  '\e93e'
 );
 
 @function get-font-icon($icon) {

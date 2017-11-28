@@ -116,12 +116,14 @@ general:
 
       Besteht ein Element nur aus einem Icon, so wie die Klasse in einem `<span>`-Container definiert. Die Funktion des Icons muss in diesem Fall in einem alt-Text erklärt werden: `<span class="" alt="vorwärts">...</span>`
 
-          release: |
-
       **Accessibility**
 
-      Damit das Icon-Element von einem Screenreader gelesen werden kann, und/oder wenn es semantisch wichtig ist, soll es mit dem entsprechenden "aria"-Attribut versehen werden. Sonst wird ein `aria-hidden="true"-Attribute hinzugefügt.
+      Damit das Icon-Element von einem Screenreader gelesen werden kann, und/oder wenn es semantisch wichtig ist, soll es mit dem entsprechenden "aria"-Attribut versehen werden. Sonst wird ein `aria-hidden="true"`-Attribute hinzugefügt.
       Je nach Bedarf ist es auch möglich, `<span class="sr-only">icon description</span>` zu verwenden.
+    release: |
+      **3.1.1**
+
+      - add `icon--info`, `icon--facebook-light`, `icon--instagram`, `icon--whatsapp`, `icon--linkedin`, `icon--linkedin-box`, `icon--xing`, `icon--xing-box`, `icon--pinterest`, `icon--youtube` icons
   form-icons:
     title: Form icons
     help: Use the global `.form-icon` class followed by the more specific class
