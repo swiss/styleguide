@@ -42,7 +42,7 @@ teaser:
 
       *** Accessibility
 
-      Das Titelformat H3 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der `<section>` oder der Seite.
+      Das Titelformat H4 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der `<section>` oder der Seite.
 
     release: |
       **3.0.0**
@@ -153,7 +153,7 @@ teaser:
     help: |
       Eine Twitter-Timeline zeigt die neusten Tweets eines bestimmten Twitter-Benutzers.
 
-      Mit dem HTML-Tag `data-profile` wird der Twitter-Bentuzer definiert. Mit `data-tweet-limit` kann die Anzahl anzuzeigender Tweets optional limitiert werden.
+      Mit dem HTML-Tag `data-profile` wird der Twitter-Benutzer definiert. Mit `data-tweet-limit` kann die Anzahl anzuzeigender Tweets optional limitiert werden.
     release: |
       **3.1.0**
       - added Twitter Timeline teaser
