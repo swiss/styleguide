@@ -28,4 +28,22 @@
     return false;
   });
 
+  $('a.social-sharing-xing').click(function() {
+    window.open(
+      'https://www.xing.com/spi/shares/new?url=' + encodeURIComponent(location.href),
+      'xing-share-dialog',
+      'width=626,height=436'
+    );
+    return false;
+  });
+
+  $('a.social-sharing-linkedin').click(function() {
+    window.open(
+      'https://www.linkedin.com/cws/share?url=' + encodeURIComponent(location.href),
+      'linkedin-share-dialog',
+      'width=626,height=436'
+    );
+    return false;
+  });
+
 })(jQuery);

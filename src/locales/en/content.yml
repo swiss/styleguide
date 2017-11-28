@@ -245,11 +245,15 @@ functions:
     help: |
       With the social sharing function, contents can be shared on social networks. In order to protect the privacy of the users, the function contains an activation mechanism. The user first has to activate the service before being able to share contents via his or her social network.
 
-      At the moment, Facebook, Twitter, and Google Plus are supported. Just add the correct [Open Graph](http://ogp.me/) meta tags to get the preview images and descriptions.
+      At the moment, Facebook, Twitter, Google+, Xing and LinkedIn are supported. Just add the correct [Open Graph](http://ogp.me/) meta tags to get the preview images and descriptions.
     release: |
       **2.1.1:**
 
       - added the `.social-sharing` class to the `#social-sharing` element
+
+      **3.1.1:**
+
+      - added `xing` and `linkedin` icons for social sharing
   downloading-files:
     title: Downloading files
     help: Links with which a file can be downloaded are always preceded by a document icon.

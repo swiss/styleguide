@@ -260,11 +260,15 @@ functions:
     help: |
       La fonction de partage permet de diffuser des contenus via des réseaux sociaux.
 
-      Actuellement, cette fonction est compatible avec Facebook, Twitter et Google+. D’autres réseaux peuvent être ajoutés à l’aide de la balise meta concernée [Open Graph](http://ogp.me/).
+      Actuellement, cette fonction est compatible avec Facebook, Twitter, Google+, Xing et LinkedIn. D’autres réseaux peuvent être ajoutés à l’aide de la balise meta concernée [Open Graph](http://ogp.me/).
     release: |
       **2.1.1:**
 
       - classe `.social-sharing` ajoutée à l’élément `#social-sharing`
+
+      **3.1.1:**
+
+      - ajout des icones `xing` et `linkedin` pour le partage social
   downloading-files:
     title: Téléchargement de fichier
     help: Les liens permettant de télécharger un fichier sont toujours signalés par une icône «document» qui les précède.

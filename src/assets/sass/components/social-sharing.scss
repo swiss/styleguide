@@ -6,7 +6,9 @@
 
   .social-sharing-twitter:after,
   .social-sharing-facebook:after,
-  .social-sharing-google:after {
+  .social-sharing-google:after,
+  .social-sharing-xing:after,
+  .social-sharing-linkedin:after {
     display: inline-block;
     content: '';
     height: 16px;
@@ -25,6 +27,14 @@
 
   .social-sharing-google:after {
     background-image: url(../img/social-sharing-google.png);
+  }
+
+  .social-sharing-xing:after {
+    background-image: url(../img/social-sharing-xing.png);
+  }
+
+  .social-sharing-linkedin:after {
+    background-image: url(../img/social-sharing-linkedin.png);
   }
 
 }

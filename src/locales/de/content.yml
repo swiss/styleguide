@@ -261,11 +261,15 @@ functions:
     help: |
       Mit der Teilen-Funktion können Inhalte über soziale Netzwerke verbreitet werden.
 
-      Derzeit werden Facebook, Twitter und Google+ unterstützt. Weitere Netzwerke können mit dem betreffenden [Open Graph](http://ogp.me/) meta tag hinzugefügt werden.
+      Derzeit werden Facebook, Twitter, Google+, Xing und LinkedIn unterstützt. Weitere Netzwerke können mit dem betreffenden [Open Graph](http://ogp.me/) meta tag hinzugefügt werden.
     release: |
       **2.1.1:**
 
       - added the `.social-sharing` class to the `#social-sharing` element
+
+      **3.1.1:**
+
+      - added `xing` and `linkedin` icons for social sharing
   downloading-files:
     title: Datei download
     help: Links, mit denen eine Datei geladen werden kann, sind immer mit einem vorangestellten Dokument-Icon gekennzeichnet.
