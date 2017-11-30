@@ -21,6 +21,10 @@ body,
   background: url('../img/bg-striped.png') repeat;
 }
 
+body {
+  min-height: 100vh;
+}
+
 .overlay {
   content: ' ';
   display: none;
