@@ -170,7 +170,7 @@ gulp.task('scripts', function() {
  * Copy images to build
  */
 gulp.task('build-images', function() {
-  return gulp.src(['src/assets/img/**'])
+  return gulp.src(['src/assets/img/**', 'node_modules/blueimp-gallery/img/**'])
     .pipe(gulp.dest(config.framework.dest + '/img'));
 });
 
