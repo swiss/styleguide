@@ -7,10 +7,10 @@
     var links = $('.dropdown-menu li a', $(this));
     var suggestions = [];
     links.each(function() {
-        suggestions.push({
-            title: $(this).html(),
-            link: $(this).attr('href')
-        });
+      suggestions.push({
+        title: $(this).html(),
+        link: $(this).attr('href')
+      });
     });
     if (!suggestions.length) {
       return;
@@ -63,11 +63,11 @@
       }
     }, datasets)
     .on('typeahead:selected', function (event, selection) {
-  		event.preventDefault();
+      event.preventDefault();
       $(this).typeahead('val', '')
         .closest('.global-search').removeClass('has-input');
-  		window.location.replace(selection.link);
-  	})
+      window.location.replace(selection.link);
+    })
     .on('typeahead:open', function() {
       $(this).closest('.global-search').addClass('focused');
       console.log($(this).typeahead('val'));
@@ -79,11 +79,11 @@
       if (event.keyCode === 27) { // ESC
         $(this).closest('form').trigger('reset');
       } else if ($(this).typeahead('val')) {
-          $(this).closest('.global-search').addClass('has-input');
+        $(this).closest('.global-search').addClass('has-input');
       } else {
         $(this).closest('.global-search').removeClass('has-input');
-  		}
-  	});
+      }
+    });
 
     $('form', element)
       .on('submit', function() {
