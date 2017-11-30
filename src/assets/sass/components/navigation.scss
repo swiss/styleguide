@@ -27,6 +27,7 @@ nav {
       }
       &:focus {
         outline: $focus-outline;
+        z-index: 1;
       }
     }
   }
