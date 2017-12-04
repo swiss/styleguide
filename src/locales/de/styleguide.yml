@@ -17,4 +17,5 @@ disclaimer:
   link: http://www.disclaimer.admin.ch/terms_and_conditions.html
 global-search:
   title: Suche
+  reset: Zurücksetzen
   nothing-found: Nichts gefunden.
