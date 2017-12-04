@@ -73,6 +73,7 @@
     })
     .on('typeahead:close', function () {
       $(this).closest('.global-search').removeClass('focused');
+      $(this).closest('form').trigger('reset');
     })
     .on('keyup', function (event) {
       if (event.keyCode === 27) { // ESC
