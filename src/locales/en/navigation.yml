@@ -278,3 +278,7 @@ footer:
       In the footbar below the footer there is a left-justified copyright notice and right-justified links to “further legal information” and “legal notice”. These notices are mandatory for legal reasons.
 
       The footbar is a CD element. Its use is mandatory, and its representation may not be changed in any way.
+    release: |
+      **3.2.0:**
+
+      - `.footer-address` should be used instead of the `address` element inside the footer

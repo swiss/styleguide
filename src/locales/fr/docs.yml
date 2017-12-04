@@ -16,7 +16,7 @@ index:
 
     ## Accessibilité
 
-    L’administration fédérale est tenue par la loi d’offrir les informations en ligne d’une manière accessible à tous. Les prescriptions, mesures et remarques pour la création de sites Internet accessibles sont décrites dans le chapitre «Accessibilité»</a>.
+    L’administration fédérale est tenue par la loi d’offrir les informations en ligne d’une manière accessible à tous. Les prescriptions, mesures et remarques pour la création de sites Internet accessibles sont décrites dans le chapitre [«Accessibilité»](/fr/docs/07-accessibility.html).
 
     ## Design adaptatif
 
@@ -185,7 +185,7 @@ basic-grid:
 
     ### Navigation de gauche
 
-    La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement» qui indique toujours les options de la page actuelle. Elle se compose de trois zones: l’en-tête de navigation avec le titre de la page actuelle, un lien «Retour» vers le niveau de navigation supérieur et des liens vers les sous-pages. Le comportement est décrit sur la page d’élément [Liste de navigation](/fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list) latérale (sous-navigation de gauche)</a>.
+    La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement» qui indique toujours les options de la page actuelle. Elle se compose de trois zones: l’en-tête de navigation avec le titre de la page actuelle, un lien «Retour» vers le niveau de navigation supérieur et des liens vers les sous-pages. Le comportement est décrit sur la page d’élément [Liste de navigation](/fr/hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list) latérale (sous-navigation de gauche).
 
 
     ### Zone de contenu

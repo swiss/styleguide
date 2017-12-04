@@ -44,8 +44,8 @@ footer {
   }
 }
 
-address {
-  // The table-cell and width force the address to get the
+.footer-address {
+  // The table-cell and width force the footer address to get the
   // height of it's floated elements.
   display: table-cell;
   width: 10000px;

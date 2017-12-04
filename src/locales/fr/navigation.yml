@@ -287,3 +287,7 @@ footer:
       Dans la ligne de pied de page, située en-dessous du pied de page, on trouve une note concernant le copyright alignée à gauche et des liens «Informations juridiques» et «Impressum» alignés à droite. Ces indications sont obligatoires pour des raisons juridiques.
 
       La ligne de pied de page est un **élément de marque**: son utilisation est obligatoire et son apparence ne peut être modifiée.
+    release: |
+      **3.2.0:**
+
+      - `.footer-address` should be used instead of the `address` element inside the footer

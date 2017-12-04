@@ -1,7 +1,7 @@
 ---
 layout: empty
 ---
-<!DOCTYPE html>
+<!DOCTYPE html itemscope itemtype="http://schema.org/WebPage">
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
@@ -137,7 +137,7 @@ layout: empty
           </a>
 
 
-          <form class="form-horizontal form-search pull-right" role="form">
+          <form class="form-horizontal form-search pull-right">
             <h2 class="sr-only">Search</h2>
             <label for="search-field" class="sr-only">Search:</label>
             <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
@@ -218,7 +218,7 @@ layout: empty
             <div class="table-cell dropdown">
               <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
               <div class="dropdown-menu" role="menu">
-                <form class="form" role="form">
+                <form class="form">
                   <h2 class="sr-only">Search</h2>
                   <label for="search-field" class="sr-only">Search:</label>
                   <input class="form-control" type="text" placeholder="Search">
@@ -388,14 +388,14 @@ layout: empty
         <div class="row">
           <div class="col-sm-12">
             <h2 id="br1" class="hidden">Breadcrumbs</h2>
-            <ol class="breadcrumb" role="navigation" aria-labelledby="br1">
+            <ol class="breadcrumb" role="menu" aria-labelledby="br1">
               <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Country Selection</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Democratic Republic of the Congo</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Some text to create a line break</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Bilateral Relations</a><span class="icon icon--greater"></span></li>
-              <li class="active" aria-selected="true">Title of the active page</li>
+              <li class="active" aria-selected="true" role="presentation">Title of the active page</li>
             </ol>
           </div>
         </div>
@@ -408,7 +408,7 @@ layout: empty
           <div class="col-sm-4 col-md-3 drilldown">
             <a href="#collapseSubNav" data-toggle="collapse" class="collapsed visible-xs">Sub-Navigation</a>
             <div class="drilldown-container">
-              <nav class="nav-page-list" role="navigation" id="secondary-navigation">
+              <nav class="nav-page-list" id="secondary-navigation">
                 <a href="#" class="icon icon--before icon--less visible-xs">Back to parent</a>
                 <a href="#" class="icon icon--before icon--less"><span class="sr-only">Back to </span>Comestible Goods</a>
                 <ul>
@@ -683,7 +683,7 @@ layout: empty
         <img class="visible-xs" src="../../img/logo-CH.svg" onerror="this.onerror=null; this.src='../../img/logo-CH.png'" alt="back to home" />
       </div>
 
-      <address>
+      <div class="footer-address">
         <span class="hidden-xs">Bundesamt für Statistik</span>
         <nav class="pull-right">
           <ul>
@@ -691,7 +691,7 @@ layout: empty
             <li><a href="#">Impressum</a></li>
           </ul>
         </nav>
-      </address>
+      </div>
     </footer>
 
 

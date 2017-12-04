@@ -291,3 +291,7 @@ footer:
       In der Fusszeile unterhalb des Footer, wird nach links ausgerichtet ein Hinweis auf das Copyright und nach rechts ausgerichtet Links auf "Rechtliches" und "Impressum" aufgeführt. Diese Angaben sind aus rechtlichen Gründen zwingend erforderlich.
 
       Die Fusszeile ist ein **Markenelement**: die Verwendung ist obligatorisch, das Erscheinungsbild darf nicht verändert werden.
+    release: |
+      **3.2.0:**
+
+      - `.footer-address` should be used instead of the `address` element inside the footer
