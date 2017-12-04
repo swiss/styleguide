@@ -1,6 +1,12 @@
-address {
-  strong {
-    font-weight: normal;
-    display: block;
+div[data-print="contact-info"] {
+  address {
+    padding: 10px 0px;
+    strong {
+      font-weight: normal;
+      display: block;
+    }
+  }
+  p a.icon:before{
+    padding-right: 33px;
   }
 }
