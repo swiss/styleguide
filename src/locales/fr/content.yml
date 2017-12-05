@@ -47,6 +47,9 @@ teaser:
     release: |
       **3.0.0**
       – Amélioration de l’accessibilité en mettant le diaporama en pause lorsque l’utilisateur interagit avec le composant et aussi en ajoutant un bouton de lecture/pause.
+
+      **3.3.0**
+      - Ajout d'`aria-label` sur les bouttons de nagivation du carousel de remplacement en mode mobile
   focus-vertical:
     title: A la une vertical
     help: |

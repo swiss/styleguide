@@ -47,6 +47,9 @@ teaser:
     release: |
       **3.0.0**
       - Improved accessibility by pausing the slideshow when user interact with the component and also by adding a play/pause button.
+
+      **3.3.0**
+      - Add `aria-label` on nagivation buttons on carousel fallback in mobile mode
   focus-vertical:
     title: Brennpunkt vertikal
     help: |
@@ -63,6 +66,9 @@ teaser:
     release: |
       **3.1.0**
       - Focus vertical introduced
+
+      **3.3.0**
+      - Add `aria-label` on nagivation buttons on carousel fallback in mobile mode
   news:
     title: Neuigkeiten
     help: |

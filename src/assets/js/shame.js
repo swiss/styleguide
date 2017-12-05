@@ -57,7 +57,7 @@
           $that.find('.item:first').addClass('active');
           $that.find('.carousel-indicators li:first-child').addClass('active');
 
-          $that.append('<a class="left carousel-control icon icon--before icon--less" href="#tab-focus-' + focusIndex + '" data-slide="prev"></a><a class="right carousel-control icon icon--before icon--greater" href="#tab-focus-' + focusIndex + '" data-slide="next"></a>');
+          $that.append('<a class="left carousel-control icon icon--before icon--less" href="#tab-focus-' + focusIndex + '" data-slide="prev" aria-label="previous"></a><a class="right carousel-control icon icon--before icon--greater" href="#tab-focus-' + focusIndex + '" data-slide="next" aria-label="next"></a>');
         });
       }
       else if($tabFocus && $(window).width() > 767 && isCarouselified) {
