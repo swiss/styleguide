@@ -145,6 +145,9 @@ tables:
 
       Add `.table-bordered` for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.
     release: |
+      **3.3.0**
+        - use `coal` instead of `#999` for `caption`s text color
+
       **3.0.0**
 
         - remove attribute `role="columnheader"` on tag `<tr>`
