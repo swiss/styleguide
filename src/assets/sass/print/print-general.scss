@@ -71,11 +71,7 @@ unbedingt Reihenfolge behalten
     color: blue !important;
     text-decoration: underline;
   }
-  a:not([name="context-sidebar"])
-  :not([href="#"])
-  :not(.brand)
-  :after{
-    content:" (" attr(href) ") " !important;
+  a:after{
     font-size:0.8em;
     font-weight:normal;
     font-family: sans-serif;
@@ -98,7 +94,7 @@ unbedingt Reihenfolge behalten
   .carousel-inner {overflow: visible;}
   .scroll-y, .news-feed .scroll-y {
     overflow: visible !important;
-    max-height: auto !important;
+    max-height: none !important;
   }
   .tab-content>.tab-pane {
     display: block !important;
