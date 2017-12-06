@@ -45,6 +45,9 @@ teaser:
       Das Titelformat H4 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der `<section>` oder der Seite.
 
     release: |
+      **3.3.0**
+      - Improved accessibility by moving tabs before content without changing visual presentation
+
       **3.0.0**
       - Improved accessibility by pausing the slideshow when user interact with the component and also by adding a play/pause button.
   focus-vertical:
@@ -61,6 +64,9 @@ teaser:
       Das Titelformat H3 in den Teaser-Beispielen ist keine allgemeine Vorgabe. Das Format H1, H2, H3 etc. richtet sich nach der Gewichtung des Titels in der Struktur der `<section>` oder der Seite.
 
     release: |
+      **3.3.0**
+      - Improved accessibility by moving tabs before content without changing visual presentation
+
       **3.1.0**
       - Focus vertical introduced
   news:

@@ -45,6 +45,9 @@ teaser:
       Le format de titre H3 dans les exemples de teaser ne constitue pas une exigence générale. Le format (H1, H2, H3, etc.) dépend de l’importance du titre au sein de la structure de la page.
 
     release: |
+      **3.3.0**
+      - Amélioration de l’accessibilité en déplaçant les tabs avant le contenu sans changer la présentation visuelle
+
       **3.0.0**
       – Amélioration de l’accessibilité en mettant le diaporama en pause lorsque l’utilisateur interagit avec le composant et aussi en ajoutant un bouton de lecture/pause.
   focus-vertical:

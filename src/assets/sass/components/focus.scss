@@ -10,7 +10,7 @@
  ========================================================== */
 
 .focus {
-
+  display: flex;
   border: 1px solid $light-grey;
 
   @media only screen and (min-width: $screen-sm-min) {
@@ -182,6 +182,7 @@
 }
 
 .focus:not(.focus-vertical) {
+  flex-direction: column-reverse;
   .tab-content.tab-border {
     border: 1px solid $smoke;
   }
@@ -195,7 +196,7 @@
 
 .focus.focus-vertical {
   border: 1px solid $light-grey;
-  display: flex;
+  flex-direction: row-reverse;
 
   .tab-content {
     display: flex;
