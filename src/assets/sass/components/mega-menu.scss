@@ -57,9 +57,3 @@
     width: 100px;
   }
 }
-
-// fix to display links correctly in main nav dropdown on hover
-.nav-main.yamm .nav .dropdown-menu li:hover a {
-  padding-bottom: auto !important;
-  border-top: auto !important;
-}
