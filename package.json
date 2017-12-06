@@ -60,7 +60,7 @@
     "Yamm": "github:geedmo/yamm3#v1.1.0",
     "blueimp-bootstrap-image-gallery": "^3.4.2",
     "blueimp-gallery": "^2.25.2",
-    "bootstrap-accessibility-plugin": "github:liip/bootstrap-accessibility-plugin#dev",
+    "bootstrap-accessibility-plugin": "git+https://github.com/admin-ch/bootstrap-accessibility-plugin#v1.0.3",
     "bootstrap-sass": "^3.3.7",
     "drmonty-chosen": "github:mrohnstock/chosen#v1.1.0",
     "jquery": "^1.12.4",
