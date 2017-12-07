@@ -41,6 +41,9 @@ hierarchical-navigation:
       En cliquant sur un point de navigation dans le chemin, la page appropriée s’ouvre. En cliquant sur des liens du premier ou deuxième niveau de navigation (pages ne disposant pas de contenu propre), une page de résumé sans colonne de navigation est ouverte.
 
       Sur les smartphones, un lien vers la page d’accueil et vers le niveau situé au-dessus est proposé en fin de chaque page. Un fil d’Ariane complet n’y est pas disponible.
+    release: |
+      **3.3.0**
+      - amélioration de l'accessibilité
   back-to-overview:
     title: Retour à l’aperçu
     help: |

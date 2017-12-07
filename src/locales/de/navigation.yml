@@ -41,6 +41,9 @@ hierarchical-navigation:
       Bei einem Klick auf einen Navigationspunkt im Pfad öffnet sich die entsprechende Seite. Beim Klick auf Links der ersten oder zweiten Ebene der Navigation (Seiten, die keine eigenen Inhalte haben) wird eine Übersichtsseite ohne Navigationsspalte geöffnet.
 
       Auf Smartphones wird am Seitenende jeweils ein Link auf die Startseite und auf die darüberliegende Ebene angeboten; einen kompletten Breadcrumb gibt es nicht.
+    release: |
+      **3.3.0**
+      - improve accessibility
   back-to-overview:
     title: Zurück zur Übersicht
     help: |
