@@ -87,14 +87,13 @@
   width: 100%;
   overflow-y: visible;
   box-sizing: border-box;
-  position: relative;
 
   &:before {
     content: 'Example';
     position: absolute;
     top: 0;
     left: 0;
-    color: $asbestos;
+    color: $empress;
     border-right: 1px solid $softBlue;
     border-bottom: 1px solid $softBlue;
     border-bottom-right-radius: 4px;
@@ -115,7 +114,7 @@
   margin: 0;
   z-index: 50;
   border: none;
-  color: #CCCCCC;
+  color: $empress;
   background: transparent;
   font-family: $mainFont;
 
