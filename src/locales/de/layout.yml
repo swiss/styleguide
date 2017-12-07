@@ -338,6 +338,9 @@ typography:
       Bei einem Link im Textfluss wird der verlinkte Text unterstrichen. Links in einem Navigations-Element (z.B. in der Globalnavigation) sind nicht blau, sondern grau. Aussehen und Verhalten dieser speziellen Links, wird in diesen Webrichtlinien an den entsprechenden Stellen separat beschrieben.
 
       Mit den `.icon`-Klassen kann vor oder nach dem Link ein Icon hinzugefügt werden (Klasse`.icon--external` für externe Links).
+    release: |
+      **3.3.0**
+      - add `title="External link"` on external link for screen reader use
   top-link:
     title: Link zum Seitenanfang
     help: |
