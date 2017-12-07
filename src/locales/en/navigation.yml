@@ -41,6 +41,9 @@ hierarchical-navigation:
       When the user clicks on a navigation point in the path, the appropriate page opens. When the user clicks on a link on the first or second navigation level (pages which do not have content of their own), an overview page without a navigation pane is opened.
 
       On smartphones there is always a link at the end of the page to the home page and to the level above. There is no complete breadcrumb on the smartphone version.
+    release: |
+      **3.3.0**
+      - improve accessibility
   back-to-overview:
     title: Back to Overview
     help: |
