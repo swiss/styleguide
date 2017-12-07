@@ -145,21 +145,18 @@ tables:
 
       Add `.table-bordered` for borders on all sides of the table and cells. The standard table can be extended to allow zebra striping and/or column or line formatting.
     release: |
-      **3.3.0**
+      **3.2.0**
         - use `coal` instead of `#999` for `caption`s text color
 
       **3.0.0**
-
         - remove attribute `role="columnheader"` on tag `<tr>`
         - remove attribute `role="rowheader"` on tag `<th>`
 
       **2.1.9**
-
         - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
         - added the `<col>` and `<colgroup>` tags before the tables on some cases
 
       **2.1.8**
-
         - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
   table-cycle:
     title: Cycle table (single)
@@ -337,7 +334,7 @@ typography:
 
       You can  use the `.icon` classes to add some icons after or before the link. Use `.icon--external` if the link is external.
     release: |
-      **3.3.0**
+      **3.2.0**
       - add `title="External link"` on external link for screen reader use
   top-link:
     title: Top link

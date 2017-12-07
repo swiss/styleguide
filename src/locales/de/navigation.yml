@@ -42,7 +42,7 @@ hierarchical-navigation:
 
       Auf Smartphones wird am Seitenende jeweils ein Link auf die Startseite und auf die darüberliegende Ebene angeboten; einen kompletten Breadcrumb gibt es nicht.
     release: |
-      **3.3.0**
+      **3.2.0:**
       - improve accessibility
   back-to-overview:
     title: Zurück zur Übersicht
@@ -285,7 +285,7 @@ footer:
     title: Social Media
     help: Die Social Media Kanäle (Facebook, Twitter, YouTube) der Website werden im Footer in einem eigenen Bereich positioniert.
     release: |
-      **3.3.0:**
+      **3.2.0:**
       - added a heading for screen readers
 
       **2.1.0:**

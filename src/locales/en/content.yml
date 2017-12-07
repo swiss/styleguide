@@ -40,14 +40,12 @@ teaser:
 
       Please be careful about the length of the text in the tabs, the height is fixed.
     release: |
-      **3.3.0**
+      **3.2.0**
       - Improved accessibility by moving tabs before content without changing visual presentation
+      - Add `aria-label` on nagivation buttons on carousel fallback in mobile mode
 
       **3.0.0**
       - Improved accessibility by pausing the slideshow when user interact with the component and also by adding a play/pause button.
-
-      **3.3.0**
-      - Add `aria-label` on nagivation buttons on carousel fallback in mobile mode
   focus-vertical:
     title: Focus vertical
     help: |
@@ -55,14 +53,12 @@ teaser:
 
       Please be careful about the length of the text in the tabs, the height is fixed.
     release: |
-      **3.3.0**
+      **3.2.0**
       - Improved accessibility by moving tabs before content without changing visual presentation
+      - Add `aria-label` on nagivation buttons on carousel fallback in mobile mode
 
       **3.1.0**
       - Focus vertical introduced
-
-      **3.3.0**
-      - Add `aria-label` on nagivation buttons on carousel fallback in mobile mode
   news:
     title: News
     help: |
@@ -177,12 +173,11 @@ content-containers:
 
       Add `.collapsed` to link for it to change the icon direction when collapsing.
     release: |
-      **3.1**
-      - keyboard accessibility fixed
-
-      **3.3.0**
+      **3.2.0**
       - remove accordion behavior to make it keyboard accessible
 
+      **3.1**
+      - keyboard accessibility fixed
 ordering-checkout:
   title: Ordering and checkout
   one-line-order-form:
@@ -262,7 +257,7 @@ functions:
 
       At the moment, Facebook, Twitter, Google+, Xing and LinkedIn are supported. Just add the correct [Open Graph](http://ogp.me/) meta tags to get the preview images and descriptions.
     release: |
-      **3.3.0:**
+      **3.2.0:**
       - added a heading for screen readers
 
       **3.1.1:**

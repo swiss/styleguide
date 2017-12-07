@@ -136,20 +136,18 @@ tables:
 
       Für eine Tabelle mit gerahmten Zellen wird die Klasse ".table-bordered" verwendet.
     release: |
-      **3.3.0**
+      **3.2.0**
         - use `coal` instead of `#999` for `caption`s text color
-      **3.0.0**
 
+      **3.0.0**
         - remove attribute `role="columnheader"` on tag `<tr>`
         - remove attribute `role="rowheader"` on tag `<th>`
 
       **2.1.9**
-
         - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
         - added the `<col>` and `<colgroup>` tags before the tables on some cases
 
       **2.1.8**
-
         - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
   table-cycle:
     title: Verschachtelte Tabelle (einfach)
@@ -341,7 +339,7 @@ typography:
 
       Mit den `.icon`-Klassen kann vor oder nach dem Link ein Icon hinzugefügt werden (Klasse`.icon--external` für externe Links).
     release: |
-      **3.3.0**
+      **3.2.0**
       - add `title="External link"` on external link for screen reader use
   top-link:
     title: Link zum Seitenanfang

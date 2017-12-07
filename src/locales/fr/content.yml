@@ -45,14 +45,12 @@ teaser:
       Le format de titre H3 dans les exemples de teaser ne constitue pas une exigence générale. Le format (H1, H2, H3, etc.) dépend de l’importance du titre au sein de la structure de la page.
 
     release: |
-      **3.3.0**
+      **3.2.0**
       - Amélioration de l’accessibilité en déplaçant les tabs avant le contenu sans changer la présentation visuelle
+      - Ajout d'un attribut `aria-label` sur les bouttons de nagivation du carousel de remplacement en mode mobile
 
       **3.0.0**
       – Amélioration de l’accessibilité en mettant le diaporama en pause lorsque l’utilisateur interagit avec le composant et aussi en ajoutant un bouton de lecture/pause.
-
-      **3.3.0**
-      - Ajout d'`aria-label` sur les bouttons de nagivation du carousel de remplacement en mode mobile
   focus-vertical:
     title: A la une vertical
     help: |
@@ -66,6 +64,10 @@ teaser:
 
       Le format de titre H3 dans les exemples de teaser ne constitue pas une exigence générale. Le format (H1, H2, H3, etc.) dépend de l’importance du titre au sein de la structure de la page.
     release: |
+      **3.2.0**
+      - Amélioration de l’accessibilité en déplaçant les tabs avant le contenu sans changer la présentation visuelle
+      - Ajout d'un attribut `aria-label` sur les bouttons de nagivation du carousel de remplacement en mode mobile
+
       **3.1.0**
       - Ajout le teaser «à la une» vertical
   news:
@@ -179,12 +181,11 @@ content-containers:
     help: |
       L’encadré rétractable est un élément interactif à l’intérieur duquel se cachent d’autres éléments interactifs ou d’autres contenus. Par défaut, il est fermé. Un clic permet d’ouvrir l’encadré afin de rendre les contenus visibles. Un autre clic permet de refermer l’encadré.
     release: |
-      **3.1**
-      - correction d'accessibilité au clavier
-
-      **3.3.0**
+      **3.2.0**
       - retrait du comportement d'accordéon pour rendre le composant accessible au clavier
 
+      **3.1**
+      - correction d'accessibilité au clavier
 ordering-checkout:
   title: Commande et check-out
   one-line-order-form:
@@ -271,7 +272,7 @@ functions:
 
       Actuellement, cette fonction est compatible avec Facebook, Twitter, Google+, Xing et LinkedIn. D’autres réseaux peuvent être ajoutés à l’aide de la balise meta concernée [Open Graph](http://ogp.me/).
     release: |
-      **3.3.0:**
+      **3.2.0:**
       - ajout d'un titre pour les lecteurs d'écran
 
       **3.1.1:**

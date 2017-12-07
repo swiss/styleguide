@@ -42,7 +42,7 @@ hierarchical-navigation:
 
       Sur les smartphones, un lien vers la page d’accueil et vers le niveau situé au-dessus est proposé en fin de chaque page. Un fil d’Ariane complet n’y est pas disponible.
     release: |
-      **3.3.0**
+      **3.2.0:**
       - amélioration de l'accessibilité
   back-to-overview:
     title: Retour à l’aperçu
@@ -281,7 +281,7 @@ footer:
     title: Médias sociaux
     help: Les canaux de médias sociaux (Facebook, Twitter, YouTube) du site Internet sont positionnés dans une zone séparée à l’intérieur du pied de page.
     release: |
-      **3.3.0:**
+      **3.2.0:**
       - ajout d'un titre pour les lecteurs d'écran
 
       **2.1.0:**

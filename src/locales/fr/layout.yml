@@ -133,21 +133,18 @@ tables:
 
       Pour un tableau composé de cellules encadrées, on utilisera la classe «.table-bordered».
     release: |
-      **3.3.0**
+      **3.2.0**
         - utilisation de `coal` au lieu de `#999` pour la couleur de texte des `caption`
 
       **3.0.0**
-
         - retirez l’attribut `role="columnheader"` de la balise `<tr>
         - retirez l’attribut `role="rowheader"` de la balise `<th>`
 
       **2.1.9**
-
         - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
         - balises `<col>` et `<colgroup>` ajoutées avant les tableaux dans certains cas
 
       **2.1.8**
-
         - `columnheader`, `rowheader` et `aria-describedby` ajoutés pour une meilleure accessibilité
   table-cycle:
     title: Tableau imbriqué (simple)
@@ -338,7 +335,7 @@ typography:
 
       Les classes `.icon` permettent d’ajouter une icône avant ou après le lien (classe `.icon--external` pour les liens externes).
     release: |
-      **3.3.0**
+      **3.2.0**
       - ajout de l'attribut `title="External link"` sur les liens externes
   top-link:
     title: Lien vers le haut de page
