@@ -133,6 +133,9 @@ tables:
 
       Pour un tableau composé de cellules encadrées, on utilisera la classe «.table-bordered».
     release: |
+      **3.3.0**
+        - utilisation de `coal` au lieu de `#999` pour la couleur de texte des `caption`
+
       **3.0.0**
 
         - retirez l’attribut `role="columnheader"` de la balise `<tr>

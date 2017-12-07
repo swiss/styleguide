@@ -136,6 +136,8 @@ tables:
 
       Für eine Tabelle mit gerahmten Zellen wird die Klasse ".table-bordered" verwendet.
     release: |
+      **3.3.0**
+        - use `coal` instead of `#999` for `caption`s text color
       **3.0.0**
 
         - remove attribute `role="columnheader"` on tag `<tr>`

@@ -13,6 +13,7 @@ table caption {
   font-weight: 700;
   text-align: left;
   padding-bottom: 0.5em;
+  color: $empress;
 }
 
 table.table-bordered {
@@ -136,7 +137,7 @@ tfoot td.active {background: $solitude !important;}
 
 .table-simple {
   border-collapse: separate;
-  border-spacing: 10px 0px;
+  border-spacing: 10px 0;
   caption {
     padding-left: 10px;
   }
@@ -150,7 +151,7 @@ tfoot td.active {background: $solitude !important;}
 
 .table-naked {
   border-collapse: separate;
-  border-spacing: 10px 0px;
+  border-spacing: 10px 0;
   tbody tr th, tbody tr td, thead tr td, thead tr th {
     padding-left: 0;
     border: none;
