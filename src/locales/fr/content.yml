@@ -182,6 +182,9 @@ content-containers:
       **3.1**
       - correction d'accessibilité au clavier
 
+      **3.3.0**
+      - retrait du comportement d'accordéon pour rendre le composant accessible au clavier
+
 ordering-checkout:
   title: Commande et check-out
   one-line-order-form:

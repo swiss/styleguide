@@ -189,6 +189,9 @@ content-containers:
       **3.1**
       - keyboard accessibility fixed
 
+      **3.3.0**
+      - remove accordion behavior to make it keyboard accessible
+
 ordering-checkout:
   title: Bestellen und Check-out
   one-line-order-form:
