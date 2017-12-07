@@ -285,8 +285,10 @@ footer:
     title: Social Media
     help: Die Social Media Kanäle (Facebook, Twitter, YouTube) der Website werden im Footer in einem eigenen Bereich positioniert.
     release: |
-      **2.1.0:**
+      **3.3.0:**
+      - added a heading for screen readers
 
+      **2.1.0:**
       - added the `.links-social` class to the `<nav/>` element containing the social links
   footbar:
     title: Fusszeile

@@ -281,8 +281,10 @@ footer:
     title: Médias sociaux
     help: Les canaux de médias sociaux (Facebook, Twitter, YouTube) du site Internet sont positionnés dans une zone séparée à l’intérieur du pied de page.
     release: |
-      **2.1.0:**
+      **3.3.0:**
+      - ajout d'un titre pour les lecteurs d'écran
 
+      **2.1.0:**
       - classe `.links-social` ajoutée à l’élément `<nav/>` contenant les liens sociaux
   footbar:
     title: Ligne de pied de page
