@@ -40,6 +40,9 @@ teaser:
 
       Please be careful about the length of the text in the tabs, the height is fixed.
     release: |
+      **3.3.0**
+      - Improved accessibility by moving tabs before content without changing visual presentation
+
       **3.0.0**
       - Improved accessibility by pausing the slideshow when user interact with the component and also by adding a play/pause button.
 
@@ -52,6 +55,9 @@ teaser:
 
       Please be careful about the length of the text in the tabs, the height is fixed.
     release: |
+      **3.3.0**
+      - Improved accessibility by moving tabs before content without changing visual presentation
+
       **3.1.0**
       - Focus vertical introduced
 
