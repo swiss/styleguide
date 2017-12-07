@@ -337,6 +337,9 @@ typography:
       dans le cas d’un lien situé dans le corps de texte, le texte muni du lien est souligné. Les liens situés dans un élément de navigation (p. ex. dans la navigation globale) ne sont pas bleu, mais gris. L’apparence et le comportement de ces liens spéciaux sont décrits séparément aux endroits appropriés dans les présentes lignes directrices pour le design web.
 
       Les classes `.icon` permettent d’ajouter une icône avant ou après le lien (classe `.icon--external` pour les liens externes).
+    release: |
+      **3.3.0**
+      - ajout de l'attribut `title="External link"` sur les liens externes
   top-link:
     title: Lien vers le haut de page
     help: |

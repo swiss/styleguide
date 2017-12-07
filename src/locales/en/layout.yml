@@ -336,6 +336,9 @@ typography:
       If there is a link in the running text, the linked text is underlined. Links in a navigation element (e.g. in the global navigation) are gray, and not blue. There are separate descriptions of how these special links are presented and how they behave at the appropriate places in these Web Guidelines.
 
       You can  use the `.icon` classes to add some icons after or before the link. Use `.icon--external` if the link is external.
+    release: |
+      **3.3.0**
+      - add `title="External link"` on external link for screen reader use
   top-link:
     title: Top link
     help: The top link is the counterpart to the anchor link. It takes the user back to the beginning of the page from any position in the page currently in use.
