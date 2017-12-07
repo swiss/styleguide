@@ -46,6 +46,7 @@
   border-top: 1px solid $silver !important;
   border-left: 1px solid $silver;
   border-right: 1px solid $silver;
+  border-bottom: 0;
   text-align: center;
   color: $coal;
   &:hover {
@@ -55,10 +56,4 @@
   .nav-page-list & {
     width: 100px;
   }
-}
-
-// fix to display links correctly in main nav dropdown on hover
-.nav-main.yamm .nav .dropdown-menu li:hover a {
-  padding-bottom: auto !important;
-  border-top: auto !important;
 }
