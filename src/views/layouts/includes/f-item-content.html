@@ -1,5 +1,5 @@
 {{#if data.release}}
-  <div class="component-release-notes collapse" id="release-notes-{{replace '(\.)' '-' @key}}" aria-expanded="false">
+  <div class="component-release-notes collapse" id="release-notes-{{replace '(\.)' '-' @key}}" aria-expanded="false" role="note">
     <div class="alert alert-info">
       {{{t data.release markdown=true}}}
     </div>

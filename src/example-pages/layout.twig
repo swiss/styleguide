@@ -1,12 +1,9 @@
----
-layout: empty
----
-<!DOCTYPE html itemscope itemtype="http://schema.org/WebPage">
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie"><!--<![endif]-->
+<!DOCTYPE html >
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie" itemscope itemtype="http://schema.org/WebPage"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -64,7 +61,7 @@ layout: empty
       <header>
         <div class="clearfix">
           <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
-          <nav class="navbar treecrumb pull-left" role="navigation">
+          <nav class="navbar treecrumb pull-left">
             <h2 class="sr-only">Orientation in the website</h2>
             <ul class="nav navbar-nav">
 
@@ -118,7 +115,7 @@ layout: empty
                 <li><a href="#" lang="en" title="English selected" aria-label="English selected" class="active">EN</a></li>
               </ul>
             </nav>
-            <nav class="nav-service" role="navigation">
+            <nav class="nav-service">
               <h2 class="sr-only">Services navigation</h2>
               <ul>
                 <li><a href="#">Emergencies</a></li>
@@ -145,7 +142,7 @@ layout: empty
         </div>
 
         <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
-        <nav class="navbar yamm yamm--select" role="navigation">
+        <nav class="navbar yamm yamm--select">
           <h2 class="sr-only">By Topics</h2>
           <ul>
             <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
@@ -395,7 +392,7 @@ layout: empty
               <li><a href="#">Democratic Republic of the Congo</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Some text to create a line break</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Bilateral Relations</a><span class="icon icon--greater"></span></li>
-              <li class="active" aria-selected="true" role="presentation">Title of the active page</li>
+              <li class="active" role="presentation">Title of the active page</li>
             </ol>
           </div>
         </div>
@@ -428,7 +425,7 @@ layout: empty
                           </ul>
                         </nav>
                       </li>
-                      <li class="active" aria-selected="true"><span>Wine<span class="sr-only"> active</span></span></li>
+                      <li class="active"><span>Wine<span class="sr-only"> active</span></span></li>
                       <li><a href="#">Beer</a></li>
                       <li><a href="#">Spirits</a></li>
                     </ul>
@@ -467,7 +464,7 @@ layout: empty
                         </address>
                         <dl class="dl-horizontal">
                           <dt><abbr title="Phone">Tel.</abbr></dt>
-                          <dd><a href="tel:+41 31 322 31 53">+41 31 322 31 53</a></dd>
+                          <dd><a href="tel:+41313223153">+41 31 322 31 53</a></dd>
                           <dt>Fax</dt>
                           <dd>+41 31 322 31 54</dd>
                         </dl>
@@ -700,7 +697,7 @@ layout: empty
       <!-- The container for the modal slides -->
       <div class="slides"></div>
       <!-- Controls for the borderless lightbox -->
-      <h3 class="title"></h3>
+      <h3 class="title">Title</h3>
       <a class="prev">‹</a>
       <a class="next">›</a>
       <a class="close">×</a>
@@ -712,7 +709,7 @@ layout: empty
               <div class="modal-content">
                   <div class="modal-header">
                       <button type="button" class="close" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title"></h4>
+                      <h4 class="modal-title">Title</h4>
                   </div>
                   <div class="modal-body next"></div>
                   <div class="modal-footer">
@@ -729,7 +726,7 @@ layout: empty
           </div>
       </div>
   </div>
-  <script type="text/javascript" src="../../js/vendors.min.js"></script>
-  <script type="text/javascript" src="../../js/main.min.js"></script>
+  <script src="../../js/vendors.min.js"></script>
+  <script src="../../js/main.min.js"></script>
 </body>
 </html>

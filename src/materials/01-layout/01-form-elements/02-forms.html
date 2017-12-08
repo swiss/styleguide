@@ -17,7 +17,8 @@ javascript: forms.js
         <span class="sr-only">This field is required</span>
       </label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="inputEmail3" placeholder="Email" aria-labelledby="email" aria-required="true" required>
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email" aria-labelledby="email"
+               aria-required="true" required>
       </div>
     </div>
   </fieldset>
@@ -28,7 +29,8 @@ javascript: forms.js
     <div class="form-group has-warning">
       <label for="inputPassword3" class="col-sm-2 control-label" id="password">Password</label>
       <div class="col-sm-10">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" aria-labelledby="password error-password" aria-invalid="true">
+        <input type="password" class="form-control" id="inputPassword3" placeholder="Password"
+               aria-labelledby="password error-password" aria-invalid="true">
         <span class="help-block" id="error-password" role="alert">Warning, this is not a correct info!</span>
       </div>
     </div>
@@ -40,7 +42,8 @@ javascript: forms.js
     <div class="form-group">
       <label for="select-date" class="col-sm-2 control-label" id="date">Date</label>
       <div class="col-sm-10">
-        <input type="date" class="form-control" id="select-date" aria-labelledby="Date DD/MM/YYYY">
+        <input type="date" class="form-control" id="select-date" aria-labelledby="date date-format">
+        <span class="help-block" id="date-format">Use format "DD/MM/YYYY"</span>
       </div>
     </div>
   </fieldset>
@@ -63,7 +66,7 @@ javascript: forms.js
     <div class="form-group">
       <label for="file" class="col-sm-2 control-label" id="document">Document</label>
       <div class="col-sm-10">
-        <input type="file" class="form-control" id="file" placeholder="URL" aria-labelledby="document">
+        <input type="file" class="form-control" id="file" aria-labelledby="document">
       </div>
     </div>
   </fieldset>
@@ -99,7 +102,8 @@ javascript: forms.js
         <div class="checkbox-inline">
           <div class="checkbox checkbox--left">
             <label id="checkbox-label-3" for="checkboxform3">
-              <input id="checkboxform3" name="remember" type="checkbox" aria-labelledby="check-group-2 checkbox-label-3">
+              <input id="checkboxform3" name="remember" type="checkbox"
+                     aria-labelledby="check-group-2 checkbox-label-3">
               Remember me
             </label>
           </div>
@@ -116,7 +120,7 @@ javascript: forms.js
     </div>
   </fieldset>
 
- <!-- Radio buttons vertical -->
+  <!-- Radio buttons vertical -->
   <fieldset>
     <legend class="hidden-legend">Terms</legend>
     <div class="form-group">
@@ -147,7 +151,8 @@ javascript: forms.js
         <div class="radio-inline">
           <div class="radio radio--left">
             <label for="radioform3" id="radio-label-3">
-              <input id="radioform3" value="radio3" type="radio" name="radio-j" aria-labelledby="radio-group-2 radio-label-3">
+              <input id="radioform3" value="radio3" type="radio" name="radio-j"
+                     aria-labelledby="radio-group-2 radio-label-3">
               Remember me
             </label>
           </div>
@@ -155,7 +160,8 @@ javascript: forms.js
         <div class="radio-inline">
           <div class="radio radio--left">
             <label for="radioform4" id="radio-label-4">
-              <input id="radioform4" value="radio4" type="radio" name="radio-j" aria-labelledby="radio-group-2 radio-label-4">
+              <input id="radioform4" value="radio4" type="radio" name="radio-j"
+                     aria-labelledby="radio-group-2 radio-label-4">
               Remember me
             </label>
           </div>
@@ -182,9 +188,9 @@ javascript: forms.js
   <fieldset>
     <legend class="hidden-legend">Dropdown</legend>
     <div class="form-group">
-      <label class="col-sm-2 control-label" for="select-multiple">Multi Select</label>
+      <label class="col-sm-2 control-label" for="multiselect">Multi Select</label>
       <div class="col-sm-10">
-        <select id="select-multiple" class="form-control" multiple="multiple">
+        <select id="multiselect" class="form-control" multiple="multiple">
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
@@ -194,11 +200,10 @@ javascript: forms.js
     </div>
   </fieldset>
 
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" role="button" class="btn btn-default">Sign in</button>
-      </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
     </div>
-  </fieldset>
+  </div>
 
 </form>
