@@ -27,7 +27,7 @@ nav {
       }
       &:focus {
         outline: $focus-outline;
-        z-index: 1;
+        z-index: 99999; // opened tab have a z-index of 9999, the focused one needs to be above
       }
     }
   }
