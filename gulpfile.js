@@ -5,6 +5,18 @@
  */
 var gulp = require('gulp'),
   $ = require('gulp-load-plugins')(),
+  autoprefixer = require('gulp-autoprefixer'),
+  concat = require('gulp-concat'),
+  cleanCss = require('gulp-clean-css'),
+  ghPages = require('gulp-gh-pages'),
+  jshint = require('gulp-jshint'),
+  rename = require('gulp-rename'),
+  rsync = require('gulp-rsync'),
+  sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
+  twig = require('gulp-twig'),
+  uglify = require('gulp-uglify'),
+
   browserSync = require('browser-sync'),
   reload = browserSync.reload,
   runSequence = require('run-sequence'),
@@ -58,8 +70,8 @@ gulp.task('vendors', function() {
     'node_modules/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.min.css',
     'node_modules/pikaday/css/pikaday.css'
   ])
-    .pipe($.concat('vendors.css'))
-    .pipe($.cleanCss())
+    .pipe(concat('vendors.css'))
+    .pipe(cleanCss())
     .pipe(gulp.dest(config.framework.dest + '/css'));
 
   // JS VENDORS
@@ -90,10 +102,10 @@ gulp.task('vendors', function() {
     'node_modules/pikaday/pikaday.js',
     'node_modules/twitter-timeline/index.js'
   ])
-    .pipe($.concat('vendors.js'))
+    .pipe(concat('vendors.js'))
     .pipe(gulp.dest(config.framework.dest + '/js'))
-    .pipe($.concat('vendors.min.js'))
-    .pipe($.uglify())
+    .pipe(concat('vendors.min.js'))
+    .pipe(uglify())
     .pipe(gulp.dest(config.framework.dest + '/js'));
 
   // FONTS SOURCES
@@ -115,37 +127,37 @@ gulp.task('styles', function() {
   else { console.log('[styles] Processing styles for dev env. No minifying here, for sourcemaps!') }
 
   return gulp.src('src/assets/sass/admin.scss')
-    .pipe($.sass().on('error', $.sass.logError))
-    .pipe($.if(argv.dev, $.sourcemaps.init()))
-    .pipe($.autoprefixer({
+    .pipe(sass().on('error', sass.logError))
+    .pipe($.if(argv.dev, sourcemaps.init()))
+    .pipe(autoprefixer({
       browsers: config.autoprefixer
     }))
-    .pipe($.if(argv.dev, $.sourcemaps.write()))
-    .pipe($.if(!argv.dev, $.cleanCss()))
+    .pipe($.if(argv.dev, sourcemaps.write()))
+    .pipe($.if(!argv.dev, cleanCss()))
     .pipe(gulp.dest(config.framework.dest + '/css'));
 });
 
 gulp.task('print', function() {
   return gulp.src('src/assets/sass/print/print.scss')
-    .pipe($.sass().on('error', $.sass.logError))
-    .pipe($.if(argv.dev, $.sourcemaps.init()))
-    .pipe($.autoprefixer({
+    .pipe(sass().on('error', sass.logError))
+    .pipe($.if(argv.dev, sourcemaps.init()))
+    .pipe(autoprefixer({
       browsers: config.autoprefixer
     }))
-    .pipe($.if(argv.dev, $.sourcemaps.write()))
-    .pipe($.if(!argv.dev, $.cleanCss()))
+    .pipe($.if(argv.dev, sourcemaps.write()))
+    .pipe($.if(!argv.dev, cleanCss()))
     .pipe(gulp.dest(config.framework.dest + '/css'));
 });
 
 gulp.task('twitter-inject', function() {
   return gulp.src('src/assets/sass/twitter-inject.scss')
-    .pipe($.sass().on('error', $.sass.logError))
-    .pipe($.if(argv.dev, $.sourcemaps.init()))
-    .pipe($.autoprefixer({
+    .pipe(sass().on('error', sass.logError))
+    .pipe($.if(argv.dev, sourcemaps.init()))
+    .pipe(autoprefixer({
       browsers: config.autoprefixer
     }))
-    .pipe($.if(argv.dev, $.sourcemaps.write()))
-    .pipe($.if(!argv.dev, $.cleanCss()))
+    .pipe($.if(argv.dev, sourcemaps.write()))
+    .pipe($.if(!argv.dev, cleanCss()))
     .pipe(gulp.dest(config.framework.dest + '/css'));
 });
 
@@ -156,12 +168,12 @@ gulp.task('twitter-inject', function() {
  */
 gulp.task('scripts', function() {
   return gulp.src(['src/assets/js/*.js'])
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe($.concat('main.js'))
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(concat('main.js'))
     .pipe(gulp.dest(config.framework.dest + '/js'))
-    .pipe($.rename({ suffix: '.min' }))
-    .pipe($.uglify())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(uglify())
     .pipe(gulp.dest(config.framework.dest + '/js'));
 });
 
@@ -193,7 +205,7 @@ gulp.task('clean-twig', function(cb) {
 
 gulp.task('twig', ['clean-twig'], function() {
   return gulp.src(['src/example-pages/*.twig', '!src/example-pages/layout.twig'])
-    .pipe($.twig())
+    .pipe(twig())
     .pipe(gulp.dest('src/views/pages'));
 });
 
@@ -209,96 +221,98 @@ gulp.task('assemble-everything', function(cb) {
 gulp.task('assemble', function(done) {
   // Build style guide for every language
   for (var localeCode in config.locales) {
-    var locale = config.locales[localeCode];
+    if (config.locales.hasOwnProperty(localeCode)) {
+      var locale = config.locales[localeCode];
 
-    // Do not build disabled locales
-    if (locale.disabled) continue;
+      // Do not build disabled locales
+      if (locale.disabled) continue;
 
-    var dest = config.styleguide.dest + '/' + locale.code,
-      data = {
-        locale: locale.code,
-        version: fs.readFileSync('VERSION', 'utf-8')
-      },
-      dictionary = {};
+      var dest = config.styleguide.dest + '/' + locale.code,
+        data = {
+          locale: locale.code,
+          version: fs.readFileSync('VERSION', 'utf-8')
+        },
+        dictionary = {};
 
-    // Get all translation files for the current locale
-    var translations = globby.sync('src/locales/' + locale.code + '/*.yml');
+      // Get all translation files for the current locale
+      var translations = globby.sync('src/locales/' + locale.code + '/*.yml');
 
-    // Build a dictionary using the filename as the main key
-    translations.forEach(function(file) {
-      var id = path.basename(file, path.extname(file));
-      dictionary[id] = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
-    });
+      // Build a dictionary using the filename as the main key
+      translations.forEach(function (file) {
+        var id = path.basename(file, path.extname(file));
+        dictionary[id] = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
+      });
 
-    // Assemble the style guide
-    assemble({
-      dest: dest,
-      logErrors: config.dev,
-      helpers: {
-        // Register the translation helper
-        t: function() {
-          // Build an array out of fn arguments
-          var args = Array.prototype.slice.call(arguments);
-          // Remove the last entry which is an object given by Handlebars
-          var obj = args.pop();
+      // Assemble the style guide
+      assemble({
+        dest: dest,
+        logErrors: config.dev,
+        helpers: {
+          // Register the translation helper
+          t: function () {
+            // Build an array out of fn arguments
+            var args = Array.prototype.slice.call(arguments);
+            // Remove the last entry which is an object given by Handlebars
+            var obj = args.pop();
 
-          // Build a full translation key with all arguments
-          args = args.join('.');
+            // Build a full translation key with all arguments
+            args = args.join('.');
 
-          // Remove any digits coming from the component key prefix
-          args = args.replace(/(\d+[\-\.]?)/g, '');
+            // Remove any digits coming from the component key prefix
+            args = args.replace(/(\d+[\-\.]?)/g, '');
 
-          // Look for the translation in the dictionnary
-          var value = args.trim().split('.').reduce(function(dict, key){
-            if (!dict) {
-              return null;
+            // Look for the translation in the dictionnary
+            var value = args.trim().split('.').reduce(function (dict, key) {
+              if (!dict) {
+                return null;
+              }
+              return dict[key];
+            }, dictionary);
+
+            // Parse content for Markdown if required
+            if (value && obj.hash && obj.hash.markdown) {
+              var value = markdown.render(value);
             }
-            return dict[key];
-          }, dictionary);
 
-          // Parse content for Markdown if required
-          if (value && obj.hash && obj.hash.markdown) {
-            var value = markdown.render(value);
+            return value || '[Missing translation: ' + args + ']';
+          },
+          // Return true if the language given match with the current locale
+          isCurrentLocale: function (lang, options) {
+            if (lang === locale.code) {
+              return options.fn(this);
+            }
+            return options.inverse(this);
+          },
+          // Return the corresponding data value
+          data: function (value) {
+            return data[value] || '';
+          },
+          toUpperCase: function (value) {
+            return value.toUpperCase();
+          },
+          renderFile: function (path, file) {
+            var fileName = 'src/materials-data/' + path + file,
+              exists = fs.existsSync(fileName);
+
+            if (!exists) return '[File "' + fileName + '" doesn’t exist.]';
+
+            return fs.readFileSync(fileName, 'utf-8');
+          },
+          replace: function (regex, newSubstr, str) {
+            return str.replace(new RegExp(regex, 'g'), newSubstr);
+          },
+          modulo: function (index, divider, block) {
+            if ((parseInt(index, 10) + 1) % divider === 0) {
+              return block.fn(this);
+            }
+          },
+          // Remove number prefixes (01- or 01.02-)
+          prefixless: function (value) {
+            return value.replace(/(\d+[\-\.]?)+/ig, '');
           }
-
-          return value || '[Missing translation: ' + args + ']';
-        },
-        // Return true if the language given match with the current locale
-        isCurrentLocale: function(lang, options) {
-          if (lang === locale.code) {
-            return options.fn(this);
-          }
-          return options.inverse(this);
-        },
-        // Return the corresponding data value
-        data: function(value) {
-          return data[value] || '';
-        },
-        toUpperCase: function(value) {
-          return value.toUpperCase();
-        },
-        renderFile: function(path, file) {
-          var fileName = 'src/materials-data/' + path + file,
-            exists = fs.existsSync(fileName);
-
-          if (!exists) return '[File "' + fileName + '" doesn’t exist.]';
-
-          return fs.readFileSync(fileName, 'utf-8');
-        },
-        replace: function(regex, newSubstr, str) {
-          return str.replace(new RegExp(regex, 'g'), newSubstr);
-        },
-        modulo: function(index, divider, block) {
-          if ((parseInt(index,10) + 1) % divider === 0) {
-            return block.fn(this);
-          }
-        },
-        // Remove number prefixes (01- or 01.02-)
-        prefixless: function(value) {
-          return value.replace(/(\d+[\-\.]?)+/ig, '');
         }
-      }
-    })
+      })
+    }
   }
   done();
 });
@@ -330,13 +344,13 @@ gulp.task('copy:files', function() {
 // Build Fabricator style
 gulp.task('styles:fabricator', function() {
   gulp.src(config.src.styles.fabricator)
-    .pipe($.sourcemaps.init())
-    .pipe($.sass().on('error', $.sass.logError))
-    .pipe($.autoprefixer({
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
       browsers: config.autoprefixer
     }))
-    .pipe($.if(!config.dev, $.cleanCss()))
-    .pipe($.sourcemaps.write())
+    .pipe($.if(!config.dev, cleanCss()))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.styleguide.dest + '/css'))
     .pipe($.if(config.dev, reload({stream:true})));
 });
@@ -344,8 +358,8 @@ gulp.task('styles:fabricator', function() {
 // Build Fabricator scripts
 gulp.task('scripts:fabricator', function() {
   return gulp.src(config.src.javascript.fabricator)
-    .pipe($.concat('fabricator.min.js'))
-    .pipe($.uglify())
+    .pipe(concat('fabricator.min.js'))
+    .pipe(uglify())
     .pipe(gulp.dest(config.styleguide.dest + '/js'));
 });
 
@@ -397,11 +411,11 @@ gulp.task('serve', ['assemble-everything'], function () {
 gulp.task('deploy', function () {
   if (argv.github) {
     return gulp.src(config.styleguide.dest + '/**/*')
-      .pipe($.ghPages());
+      .pipe(ghPages());
   }
   else {
     return gulp.src(config.styleguide.dest + '/**/*')
-      .pipe($.rsync({
+      .pipe(rsync({
         root: 'styleguide',
         hostname: 'swg',
         destination: '/var/www/swg',
