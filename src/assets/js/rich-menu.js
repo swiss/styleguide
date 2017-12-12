@@ -29,6 +29,11 @@
     });
   });
 
+  // "tabindex = -1" is added by bootstrap-accessibility-plugin to dropdown's elements.
+  // The yamm menu uses the dropdown class, but is not a conventional dropdown, hence, the tabindex must not
+  // be present.
+  $dropdown.find('li a').removeAttr('tabindex');
+
   $dropdownToggle.on('click', function() {
     $(this).parents($dropdown).trigger('get.hidden');
   });
