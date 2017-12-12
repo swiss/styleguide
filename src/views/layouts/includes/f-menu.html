@@ -1,4 +1,4 @@
-<nav class="nav-main yamm navbar" id="main-navigation">
+<div class="nav-main yamm navbar" id="main-navigation">
   <h2 class="sr-only">{{t 'styleguide.navigation'}}</h2>
   <!-- The mobile navigation -->
   <section class="nav-mobile">
@@ -56,13 +56,17 @@
           <span class="icon icon--search"></span>
         </a>
         <div class="dropdown-menu" role="menu">
-
           <div class="mod mod-searchfield global-search global-search-mobile">
             <form class="form">
               <h2 class="sr-only">{{t 'styleguide.global-search.title'}}</h2>
-              <label for="webguiedelines-search-mobile" class="sr-only">{{t 'styleguide.global-search.title'}}</label>
-              <input id="webguiedelines-search-mobile" class="search-input form-control" type="text" placeholder="{{t 'styleguide.global-search.title'}}">
-              <span class="icon icon--search"></span>
+              <label for="webguidelines-search-mobile" class="sr-only">{{t 'styleguide.global-search.title'}}</label>
+              <input id="webguidelines-search-mobile" class="search-input form-control" type="text" placeholder="{{t 'styleguide.global-search.title'}}">
+              <button class="icon icon--close icon--after search-reset" tabindex="0" role="button">
+                <span class="sr-only">{{t 'styleguide.global-search.reset'}}</span>
+              </button>
+              <span class="icon icon--search">
+                <span class="sr-only">{{t 'styleguide.global-search.title'}}</span>
+              </span>
               <div class="search-results">
                 <div class="search-results-list"></div>
               </div>
@@ -141,4 +145,4 @@
       </div>
     </li>
   </ul>
-</nav>
+</div>

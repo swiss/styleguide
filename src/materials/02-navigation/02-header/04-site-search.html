@@ -8,12 +8,20 @@ label: cd
 ---
 
 <header>
-  <form class="form-horizontal form-search pull-right">
-    <h2 class="sr-only">Search</h2>
-    <label for="search-field" class="sr-only">Search:</label>
-    <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-  </form>
-
   {{> general.logo}}
+  <div class="mod mod-searchfield global-search global-search-standard">
+    <form class="form-horizontal form-search pull-right">
+      <h2 class="sr-only">Search</h2>
+      <label for="search-field" class="sr-only">Search:</label>
+      <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+      <button class="icon icon--close icon--after search-reset" tabindex="0" role="button">
+        <span class="sr-only">Clear</span>
+      </button>
+      <span class="icon icon--search"><span class="sr-only">Search</span></span>
+      <div class="search-results">
+        <div class="search-results-list"></div>
+      </div>
+    </form>
+  </div>
 </header>
 <nav class="nav-main"></nav>

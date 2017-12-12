@@ -112,8 +112,18 @@ nav {
       }
       .icon {
         position: absolute;
-        top: 13px;
+        top: 14px;
         left: 15px;
+
+        &.icon--after {
+          left: auto;
+          right: 15px;
+          font-size: 11px;
+          color: $white;
+          transition: color 0.3s;
+          background: none;
+          border: none;
+        }
       }
     }
   }
