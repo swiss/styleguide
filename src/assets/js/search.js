@@ -35,7 +35,7 @@
             '</li>',
             '<li>',
               window.translations['global-search']['nothing-found'],
-            '</li>',
+            '</li>'
           ].join('');
         },
         header: function() {
@@ -55,6 +55,7 @@
 
   function initTypeahead(element) {
     $('.search-input', element).typeahead({
+      hint: false,
       highlight: true,
       menu: $('.search-results .search-results-list', element),
       classNames: {
@@ -64,16 +65,14 @@
     }, datasets)
     .on('typeahead:selected', function (event, selection) {
       event.preventDefault();
-      $(this).typeahead('val', '')
-        .closest('.global-search').removeClass('has-input');
       window.location.replace(selection.link);
     })
     .on('typeahead:open', function() {
       $(this).closest('.global-search').addClass('focused');
     })
-    .on('typeahead:close', function () {
+    .on('typeahead:close', function() {
       $(this).closest('.global-search').removeClass('focused');
-      $(this).closest('form').trigger('reset');
+      //$(this).closest('form').trigger('reset');
     })
     .on('keyup', function (event) {
       if (event.keyCode === 27) { // ESC
@@ -90,16 +89,24 @@
         return false;
       })
       .on('reset', function() {
-        $('.search-input', this).blur().typeahead('val', '');
+        $('.search-input', this).typeahead('val', '');
         $(this).closest('.global-search').removeClass('has-input');
       });
 
     $('.search-reset', element).on('click', function() {
       $(this).closest('form').trigger('reset');
+      $('.search-input', element).focus();
     });
   }
 
   initTypeahead($('.global-search-standard'));
   initTypeahead($('.global-search-mobile'));
+
+  // Mobile improvements:
+  $('.nav-mobile .nav-mobile-menu').parent().on('show.bs.dropdown', function () {
+    setTimeout(function () {
+      $('.nav-mobile .search-input.tt-input').val(null).focus();
+    }, 100);
+  });
 
 })(jQuery);

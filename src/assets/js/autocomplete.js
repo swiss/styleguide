@@ -24,7 +24,7 @@
 
     // Init Typeahead on search-fields
     $searchFields.typeahead({
-      hint: true,
+      hint: false,
       highlight: true,
       minLength: 1
     },
@@ -34,13 +34,5 @@
       source: bloodhound.ttAdapter()
     });
   }
-
-  // Insert the icons
-  $searchFields.after('<span class="icon icon--close" data-form-search-clear><span class="sr-only">Clear</span></span>');
-  $('.form-search').append('<button class="icon icon--search icon--before"><span class="sr-only">Search</span></button>');
-
-  $('body').on('click', '[data-form-search-clear]', function () {
-    $('#search-field').val('').focus(); // clear search field and refocus it
-  });
 
 }) (jQuery, (typeof searchData === 'undefined' ? false : searchData));

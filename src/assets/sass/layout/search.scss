@@ -137,8 +137,12 @@
 }
 
 // typeahead fixes
-.global-search-standard.focused .icon.icon--close:after {
-  color: $black;
+.global-search-standard,
+.global-search-mobile {
+  &.focused .icon.icon--close::after,
+  & .icon.icon--close:focus::after {
+    color: $black;
+  }
 }
 
 .search-result-header {
