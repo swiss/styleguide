@@ -64,20 +64,17 @@
       }
     }, datasets)
     .on('typeahead:selected', function (event, selection) {
-      console.log('typeahead:selected', event, selection);
       event.preventDefault();
       window.location.replace(selection.link);
     })
     .on('typeahead:open', function() {
       $(this).closest('.global-search').addClass('focused');
     })
-    .on('typeahead:close', function (event) {
-      console.log('typeahead:close', event.keyCode);
+    .on('typeahead:close', function() {
       $(this).closest('.global-search').removeClass('focused');
       //$(this).closest('form').trigger('reset');
     })
     .on('keyup', function (event) {
-      console.log('keyup', event.keyCode);
       if (event.keyCode === 27) { // ESC
         $(this).closest('form').trigger('reset');
       } else if ($(this).typeahead('val')) {
@@ -92,7 +89,6 @@
         return false;
       })
       .on('reset', function() {
-        console.log('reset');
         $('.search-input', this).typeahead('val', '');
         $(this).closest('.global-search').removeClass('has-input');
       });
@@ -109,7 +105,7 @@
   // Mobile improvements:
   $('.nav-mobile .nav-mobile-menu').parent().on('show.bs.dropdown', function () {
     setTimeout(function () {
-      $('.nav-mobile .search-input').eq(1).val(null).focus(); // Remember that Typeahead duplicates search input for word hinting.
+      $('.nav-mobile .search-input.tt-input').val(null).focus();
     }, 100);
   });
 
