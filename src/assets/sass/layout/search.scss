@@ -89,6 +89,10 @@
       }
     }
   }
+
+  .search-result-header{
+    border-bottom: 1px solid $light-grey;
+  }
 }
 
 .global-search.has-input .search-results:hover,
@@ -138,8 +142,9 @@
 }
 
 .search-result-header {
-  font-size: 1.2em;
+  display: block;
+  font-size: 1.3em;
+  font-weight: 700;
   padding: 5px 0;
   margin: 5px 5px 5px 0;
-  border-bottom: 1px solid $light-grey;
 }
