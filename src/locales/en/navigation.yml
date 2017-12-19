@@ -19,18 +19,19 @@ hierarchical-navigation:
 
       Add `<div class="overlay"></div>` at the end of the `body` tag to display the gray overlay.
     release: |
-      **2.1.2:**
+      **2.1.2**
         - changed `.active` class to `.current` for current page highlight in the menu
         - added `h2.sr-only` for more screen reader clarity
         - added h2 and label to search field on mobile
 
-      **2.1.0:**
+      **2.1.0**
         - added the `.nav-mobile` section to the beginning of the `.list-group` element
 
-      **2.0.0:**
+      **2.0.0**
         - added `<span class="sr-only">current page</span>` for current active link
         - added `id="main-navigation"`for accessibility nav
         - added `aria-hidden="true"` to close button
+
   breadcrumb:
     title: Breadcrumb
     help: |
@@ -42,14 +43,16 @@ hierarchical-navigation:
 
       On smartphones there is always a link at the end of the page to the home page and to the level above. There is no complete breadcrumb on the smartphone version.
     release: |
-      **3.2.0:**
+      **3.2.0**
       - improve accessibility
+
   back-to-overview:
     title: Back to Overview
     help: |
       The “back to overview” navigation links pages that do not appear in the navigation to their “parent page”. An example of this can be found in the details page of the publications section.
 
       The “back to overview” link appears before the page title at the top of the content pane, and at the end of the page before the page-end navigation.
+
   page-navigation-list:
     title: Page Navigation List (Left Sidebar Navigation)
     help: |
@@ -80,25 +83,22 @@ hierarchical-navigation:
 
       On smartphones, the subnavigation appears between header and content.
     release: |
-      **2.5.2:**
-
+      **2.5.2**
         - fix error with active state of `.list-emphasis`, **please always wrap the text of this list element with a `span` or a `a`**.
 
-      **2.5.0:**
-
+      **2.5.0**
         - allow nested `<ul/>` lists in `.nav-page-list` elements
 
-      **2.3.0:**
-
+      **2.3.0**
         - added `aria-selected="true"` for current link
         - removed first button in the list (looked like a back link)
         - changed label of back button in drilldown sub from "Back" to title
           of section
 
-      **2.1.0:**
-
+      **2.1.0**
         - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
         - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
+
   faceted-page-navigation:
     title: Faceted Page Navigation
     help: |
@@ -118,9 +118,9 @@ hierarchical-navigation:
 
       On smartphones, the navigation is accessed via a filter link, and it behaves in the same way as the faceted navigation for desktop computers. Unlike in the desktop version, the contents of the page are only updated when the user closes the faceted navigation.
     release: |
-      **2.0.0:**
-
+      **2.0.0**
       - added `aria-selected="true"` for current link
+
 header:
   title: Header
   logo:
@@ -128,8 +128,8 @@ header:
     help: The Confederation logo with the coat of arms and the four-language wordmark as well as the name of the organizational unit (department, public office, agency, or mission, or, alternatively, the title of the website) together form the designation of the website. The complete designation contains a link which takes the user back to the home page from any page of the website.
     release: |
       **3.0.0**
-
       - Add a container with `clearfix` class around logo component
+
   accessibility-navigation:
     title: Accessibility navigation
     help: |
@@ -138,10 +138,10 @@ header:
       Note: Depending on your browser, the accessibility links in the example are displayed after multiple tab presses only. This is due to the webguidelines page using an accessibility navigation itself.
     release: |
       **2.1.8**
-
         - added `.access-keys` for better accessibility
         - added `#content` to main page content
         - added `#main-navigation` to main page navigation
+
   service-navigation:
     title: Service navigation
     help: |
@@ -149,9 +149,9 @@ header:
 
       On mobile devices the links in the service navigation are moved to the footer.
     release: |
-      **2.1.2:**
-
+      **2.1.2**
         - added `h2.sr-only` for more screen reader clarity
+
   site-search:
     title: Site search
     help: |
@@ -159,9 +159,10 @@ header:
 
       On smartphones, the search function can be accessed via an icon in the Header.
     release: |
-      **2.1.2:**
+      **2.1.2**
         - added h2.sr-only for more screen reader clarity
         - added label before input for screen readers
+
   language-selector:
     title: Language Selection via a Link List
     help: |
@@ -191,11 +192,12 @@ header:
       **2.1.8**
         - added `<span class="sr-only">selected</span>` for active accessibility
 
-      **2.1.2:**
+      **2.1.2**
         - added `h2.sr-only` for more screen reader clarity
 
-      **2.1.0:**
+      **2.1.0**
         - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
+
   topics:
     title: Topics A-Z
     help: |
@@ -205,9 +207,9 @@ header:
 
       On smartphones, the A-Z navigation is accessed via an icon together with the search function.
     release: |
-      **2.1.2:**
-
+      **2.1.2**
       - added `h2.sr-only` for more screen reader clarity
+
   treecrumb:
     title: Treecrumb Federal Administration
     help: |
@@ -217,13 +219,12 @@ header:
 
       On smartphones, the treecrumb navigation is omitted.
     release: |
-      **2.5.0:**
-
+      **2.5.0**
         - modified markup of dropdown list. Please refer to how it is in the example below
 
-      **2.1.2:**
-
+      **2.1.2**
         - added `h2.sr-only` for more screen reader clarity
+
 content-navigation:
   title: Content navigation
   pagination:
@@ -231,16 +232,18 @@ content-navigation:
     help: The paging function allows the user to browse through a large number of elements which are arranged into pages. The element appears above and below the elements list.
     release: |
       **2.1.8**
-
       - added `<span class="sr-only">current page</span>` and `aria-disabled="true"` for accessibility
       - added `title`to empty link (link only with icon)
       - added `.clearfix`and `.pull-left` inside of `.pagination-container
+
   anchor-links:
     title: Anchor links
     help: An anchor link is a jump label which allows the user to navigate to a particular position within the page currently in use.
+
   process-navigation:
     title: Process navigation
     help: Process navigation is used in connection with forms that are spread over several pages. The active process stage is marked in red. The previous steps are clickable and lead the user back to the selected process stage.
+
   tab-navigation:
     title: Tab navigation
     help: |
@@ -249,6 +252,7 @@ content-navigation:
       Please note that the contents in the tabs are only used for presentation purposes here. The actual contents are contingent on the purpose of their use (e.g. search results or “further information”).
 
       Reference in detailed specification: Chapter **2.5.4**
+
 footer:
   title: Footer
   site-map:
@@ -260,23 +264,23 @@ footer:
 
       On smartphones, some of the functions from the header, e.g. service navigation or the full form of the Confederation logo, are moved to the footer.
     release: |
-      **2.5.0:**
-
+      **2.5.0**
       - wrapped footer columns in a `div.row`
 
-      **2.1.0:**
-
+      **2.1.0**
       - placed links in a `ul.list-unstyled` list
       - changed `.col-sm-3` in `.col-sm-4.col-md-3` for more readability on small size and removed useless `.row` wrapper
+
   social-media:
     title: Social Media
     help: The website’s social media channels (e.g. Facebook, Twitter, YouTube, etc.) are listed in a separate section of the footer.
     release: |
-      **3.2.0:**
+      **3.2.0**
       - added a heading for screen readers
 
-      **2.1.0:**
+      **2.1.0**
       - added the `.links-social` class to the `<nav/>` element containing the social links
+
   footbar:
     title: Footbar
     help: |
@@ -284,6 +288,5 @@ footer:
 
       The footbar is a CD element. Its use is mandatory, and its representation may not be changed in any way.
     release: |
-      **3.2.0:**
-
+      **3.2.0**
       - `.footer-address` should be used instead of the `address` element inside the footer

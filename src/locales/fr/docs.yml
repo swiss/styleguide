@@ -100,7 +100,6 @@ accessibility:
 
     Les exemples suivants montrent comment les rédactrices et rédacteur web peuvent améliorer l’accessibilité de leurs sites web par des moyens simples.
 
-
   title-tag: |
     ### Titre de page
 
@@ -112,7 +111,6 @@ accessibility:
     Parfois, une même page comporte des contenus dans différentes langues. Les lecteurs d’écran doivent être avertis du changement de langue par le biais de l’attribut «lang». Exemple:
 
   outro: |
-
     ### Icônes
 
     Souvent, les icônes de police ne peuvent pas être lues par les lecteurs d’écran. C’est pourquoi un texte visible ou invisible supplémentaire (`<span class="sr-only">description d’icône</span>`) est nécessaire. Les icônes elles-mêmes peuvent alors être définies comme aria-hidden="true".
@@ -186,7 +184,6 @@ basic-grid:
     ### Navigation de gauche
 
     La sous-navigation dans la colonne de gauche de la zone de contenu est une «navigation de déplacement» qui indique toujours les options de la page actuelle. Elle se compose de trois zones: l’en-tête de navigation avec le titre de la page actuelle, un lien «Retour» vers le niveau de navigation supérieur et des liens vers les sous-pages. Le comportement est décrit sur la page d’élément [Liste de navigation](../hierarchical-navigation.html#01-hierarchical-navigation-04-page-navigation-list) latérale (sous-navigation de gauche).
-
 
     ### Zone de contenu
 
@@ -277,6 +274,7 @@ cd-elements:
     <meta name="msapplication-TileImage" content="build/img/ico/mstile-144x144.png">
     <meta name="msapplication-config" content="build/img/ico/browserconfig.xml">
     ```
+
 devices:
   title: Rendu sur différents appareils
   content: |
@@ -297,7 +295,6 @@ devices:
     Si la page est affichée sur un smartphone, seule la colonne de contenu est affichée. La navigation dans la colonne de gauche et la colonne de contexte disparaissent. Au lieu de cela, l’utilisateur peut naviguer via des liens contenus dans le pied de page et un menu spécial destiné aux mobiles.
 
     Des tests d’utilisabilité ont montré que sur les smartphones, de nombreux utilisateurs ignorent le menu de navigation dans l’en-tête et naviguent via les liens contenus dans le pied de page. C’est pourquoi il est important de représenter la navigation dans le pied de page.
-
 
 guidelines:
   title: Application des lignes directrices web de la Confédération
@@ -343,7 +340,6 @@ guidelines:
     ## Installation
 
     Les informations d’installation pour l’utilisation des lignes directrices dans le cadre d’un projet peuvent être consultées sur [Github](https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet)
-
 
 header-footer:
   title: En-tête et pied de page

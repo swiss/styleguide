@@ -88,7 +88,6 @@ index:
 accessibility:
   title: Barrierefreiheit
   intro: |
-
     Laut dem [Behindertengleichstellungsgesetz (BehiG) Art. 14](https://www.admin.ch/opc/de/classified-compilation/20002658/index.html#a14) müssen Dienstleistungen der Bundesverwaltung im Internet Sehbehinderten ohne erschwerende Bedingungen zugänglich sein. Erfüllt ist diese Vorgabe, wenn eine Website die Konformitätsbedingungen gemäss WCAG 2.0 entspricht und die Konformitätsstufe AA erreicht.
 
     Weiterführende Informationen:
@@ -114,7 +113,6 @@ accessibility:
     Manchmal gibt es auf derselben Seite Inhalte in verschiedenen Sprachen. Screenreader müssen mit dem "lang"-Attribut auf den Sprachwechsel aufmerksam gemacht werden.
 
   outro: |
-
     ### Icons
 
     Font Icons können von Screenreader oft nicht gelesen werden. Daher ist ein zusätzlicher sichtbarer oder unsichtbarer Text (`<span class="sr-only">icon description</span>`) notwendig.
@@ -304,7 +302,6 @@ devices:
 
     Usability-Tests haben ergeben, dass viele Anwender auf dem Smartphone das Navigationsmenu im Header ignorieren und über die Links im Footer navigieren. Es ist deshalb wichtig, die Navigation im Footer abzubilden.
 
-
 guidelines:
   title: Anwendung der Webrichtlinien Bund
   content: |
@@ -349,7 +346,6 @@ guidelines:
     ## Installation
 
     Die Installationsangaben für die Verwendung der Richtlinien in einem Projekt finden sich auf [Github](href="https://github.com/swiss/styleguide#the-swiss-federal-administration-on-the-internet).
-
 
 header-footer:
   title: Header und Footer

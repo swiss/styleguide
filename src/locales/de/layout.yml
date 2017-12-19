@@ -1,9 +1,11 @@
 title: Grundraster
 form-elements:
   title: Formular-Elemente
+
   fieldsets:
     title: Gruppierung von Formular-Elementen
     help: Mit Zwischentiteln werden Formularelemente inhaltlich gruppiert. Dazu wird das Fieldset-Tag verwendet.
+
   forms:
     title: Eingabefelder
     help: |
@@ -28,36 +30,38 @@ form-elements:
       **2.1.8**
         - added **IDs** to label and help text, `aria-labelledby` and `role` to buttons for a better accessibility
         - added `<fieldset>` and `<legend class="hidden">` around `.form-group` for a better accessibility
+
   selects:
     title: Auswahllisten
     help: |
       Mit einer Dropdown List kann aus einer vorgegebenen Liste eine Auswahl getroffen werden. Diese Liste erscheint in einem Menü nach Klick auf das Element. Nachdem eine Auswahl getroffen wurde, wird das Ergebnis angezeigt.
       Bei mehr als zehn Optionen wird an erster Stelle der Liste ein Suchfeld angeboten.
     release: |
-      **2.1.2:**
-
+      **2.1.2**
       - added a label before select for screen readers
+
   selects-multiple:
     title: Mehrfach-Auswahllisten
     help: |
       Mehrfach-Auswahllisten verhalten sich gleich wie einfache Auswahllisten. Allerdings kann mehr als eine Option ausgewählt werden.
     release: |
-      **3.1:**
+      **3.1.0**
       - proper support for multi selects added
+
   checkboxes:
     title: Checkboxen
     help: Checkbox werden verwendet, wenn aus einer vorgegebenen Liste ein oder mehrere Elemente ausgewählt werden sollen.
     release: |
       **3.0.0**
-
       - Custom styling of this element has been removed in favor of browsers’ default for better accessibility. To keep the previous style and variants, the checkbox now have to be inside the label.
+
   radios:
     title: Radio buttons
     help: Radio buttons ermöglichen es den Usern, aus einer vorgegebenen Liste eine eindeutige Auswahl zu treffen. Radio Buttons können gruppiert werden. Innerhalb einer Gruppe kann nur ein Element ausgewählt werden.
     release: |
       **3.0.0**
-
       - Custom styling of this element has been removed in favor of browsers’ default for better accessibility. To keep the previous style and variants, the radio now have to be inside the label.
+
   buttons:
     title: Schaltflächen
     help: |
@@ -66,8 +70,10 @@ form-elements:
       Der Standard-Button kann für vielfältige Aktionen eingesetzt werden. Buttons können auch in einer Buttongroup zusammengefasst werden. Wie bei Radio-Button-Groups, kann innerhalb einer solchen Gruppe, nur ein Element ausgewählt werden.
 
       Mit der Klasse `.btn` können Schaltflächen gestaltet werden. Die Klasse kann auf `<input>`, `<button>` oder `<a>` Elemente angewendet warden. Es gibt vier Designvarianten:
+
   button-groups:
     title: Gruppen von Schaltflächen
+
 general:
   title: Allgemeines
   logo:
@@ -83,12 +89,11 @@ general:
       Das Logo ist ein Markenelement: die Verwendung ist obligatorisch, das Erscheinungsbild darf nicht verändert werden.
     release: |
       **3.0.0**
-
       - Add a container with `clearfix` class around logo component
 
       **2.1.8**
-
       - added `title` to brand link for accessibility
+
   colors:
     title: Farbpalette
     help: |
@@ -100,15 +105,20 @@ general:
   background:
     title: Hintergrund
     help: Als Hintergrundfarbe wird ein helles Grau verwendet. Sie wird automatisch auf `<body>` angewendet.
+
   images:
     title: Bildformate
     help: Bilder im Querformat haben ein Seitenverhältnis von 16:10 (volles Querformat - goldener Schnitt) oder 16:5 (halbes Querformat). Hochformatige Bilder haben kein spezifisches Seitenverhältnis. Wir empfehlen jedoch ein Verhältnis von 2:3
+
   standard-image:
     title: Standardbild
+
   captioned-image:
     title: Bild mit Legende
+
   image-format:
     title: Bildformate
+
   icons:
     title: Icons
     help: |
@@ -122,11 +132,12 @@ general:
       Je nach Bedarf ist es auch möglich, `<span class="sr-only">icon description</span>` zu verwenden.
     release: |
       **3.1.1**
-
       - add `icon--info`, `icon--facebook-light`, `icon--instagram`, `icon--whatsapp`, `icon--linkedin`, `icon--linkedin-box`, `icon--xing`, `icon--xing-box`, `icon--pinterest`, `icon--youtube` icons
+
   form-icons:
     title: Form icons
     help: Use the global `.form-icon` class followed by the more specific class
+
 tables:
   title: Tabellen
   table-standard:
@@ -149,139 +160,132 @@ tables:
 
       **2.1.8**
         - added `columnheader`, `rowheader` and `aria-describedby` for better accessibility
+
   table-cycle:
     title: Verschachtelte Tabelle (einfach)
     release: |
       **3.0.0**
-
         - remove attribute `role="columnheader"` on tag `<tr>`
+
   table-cycle-pairs:
     title: Verschachtelte Tabelle (mehrfach)
     release: |
       **3.0.0**
-
         - remove attribute `summary` on tag `<table>`
+
   table-with-caption:
     title: Tabelle mit Überschrift
     help: Im `<caption>`-Tag wird eine Tabellenüberschrift definiert.
     release: |
       **3.0.0**
-
         - remove attribute `summary` on tag `<table>`
+
   table-zebra:
     title: Tabelle mit Zebra
     help: Die Zebrastreifen werden angezeigt, wenn dem Table-Tag die Klasse class='table_zebra' hinzugefügt wird.
     release: |
       **3.0.0**
-
         - remove attribute `role="columnheader"` on tag `<tr>`
         - remove attribute `role="rowheader"` on tag `<th>`
 
       **2.1.9**
-
         - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+
   table-zebra-cycle-single:
     title: Verschachtelte Tabelle mit Zebra (einfach)
     release: |
       **3.0.0**
-
         - remove attribute `summary` on tag `<table>`
         - remove attribute `role="columnheader"` on tag `<tr>`
+
   table-zebra-cycle-pairs:
     title: Verschachtelte Tabelle mit Zebra (mehrfach)
     release: |
       **3.0.0**
-
         - remove attribute `summary` on tag `<table>`
+
   table-zebra-caption:
     title: Zebra-Tabelle mit Überschrift
     release: |
       **3.0.0**
-
         - remove attribute `summary` on tag `<table>`
         - remove attribute `role="columnheader"` on tag `<tr>`
+
   table-highlight:
     title: Tabelle mit Hervorhebung
     help: |
       Diese Tabelle leitet sich von der Standardtabelle ab, hat aber zusätzlich die Zebrastreifen und die Auszeichnung von Tabellenzellen (class='selected') aktiviert.
     release: |
       **3.0.0**
-
         - remove attribute `role="columnheader"` on tag `<tr>`
         - remove attribute `role="rowheader"` on tag `<th>`
 
       **2.1.9**
-
         - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+
   table-highlight-cycle:
     title: Verschachtelte Tabelle mit Hervorhebung (einfach)
     release: |
       **3.0.0**
-
         - remove attribute `summary` on tag `<table>`
         - remove attribute `role="columnheader"` on tag `<tr>`
+
   table-highlight-cycle-pairs:
     title: Verschachtelte Tabelle mit Hervorhebung (mehrfach)
     release: |
       **3.0.0**
-
         - remove attribute `summary` on tag `<table>`
+
   table-highlight-caption:
     title: Tabelle mit Überschrift und Hervorhebung
     release: |
       **3.0.0**
-
         - remove attribute `summary` on tag `<table>`
         - remove attribute `role="columnheader"` on tag `<tr>`
+
   table-sortable:
     title: Sortierbare Tabelle
     help: Die sortierbare Tabelle zeichnet die sortierte Spalte automatisch aus. (Klasse`table-sort`)
     release: |
       **3.0.0**
-
         - remove attribute `role="columnheader"` on tag `<tr>`
         - remove attribute `role="rowheader"` on tag `<th>`
+
   table-expandable:
     title: Tabelle mit aufklappbarer Zeile
     help: Einzelne Tabellenzeilen können ausgeklappt werden, um Details zu einem Datensatz anzuzeigen.
     release: |
       **3.0.0**
-
         - remove attribute `role="columnheader"` on tag `<tr>`
         - remove attribute `role="rowheader"` on tag `<th>`
 
       **2.5.0**
-
         - wrapped text in `<a>` in `<th>` tag if it is a collapse link
 
       **2.1.9**
-
         - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
 
       **2.1.8**
-
         - wrapped text in `<a>` in `<th>` tag if it is a collapse link
+
   table-ruled:
     title: Linierte Tabelle
     help: Linierte Tabellen eignen sich besonders für die Darstellung einfacher 1:1 Beziehungen. Die Linierung der Tabelle wird dadurch erreicht, dass dem Table-Tag die Klasse class='table_simple' hinzugefügt wird.
     release: |
       **3.0.0**
-
         - remove attribute `role="columnheader"` on tag `<tr>`
 
       **2.1.9**
-
         - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
+
   table-unruled:
     title: Tabelle ohne Linien
     help: Tabellen ohne Linien eignen sich für die Darstellung von Eigenschaften z.B. von einer Publikation. Eine einfache Tabelle ohne Linien wird mit der Klasse class='table_naked' ausgezeichnet.
     release: |
       **3.0.0**
-
         - remove attribute `role="columnheader"` on tag `<tr>`
 
       **2.1.9**
-
         - removed `columnheader`, `rowheader` and `aria-describedby` and replaced by `scope=""` attributes.
 
 typography:
@@ -301,16 +305,18 @@ typography:
     help: |
       ### Lead
       Am Anfang eines längeren Textes kann ein Lead platziert werden, der die wichtigsten Aspekte des Textes zusammenfasst. Er wird in einem fetten Schriftschnitt gesetzt.
+
   text-elements:
     title: Fliesstext
     help: |
       Die Schriftgrösse, Zeilenlänge und -abstände des Fliesstextes sind für optimale Lesbarkeit optimiert. Zitate werden kursiv gesetzt. Links im Textfluss werden mit einer Unterstreichung ausgezeichnet, sollten aber sparsam eingesetzt werden. Besser ist es, Links am Ende eines Absatzes zu platzieren.
     release: |
-      **3.1**
+      **3.1.0**
       - code of examples added
 
   blockquote:
     title: Zitat
+
   lists:
     title: Listen
     help: |
@@ -341,10 +347,12 @@ typography:
     release: |
       **3.2.0**
       - add `title="External link"` on external link for screen reader use
+
   top-link:
     title: Link zum Seitenanfang
     help: |
       Der zum Seitenanfang (Top-Link) ist das Gegenstück zum Anker-Link: Er bringt den Anwender von jeder Position in der aktuellen Seite wieder zurück zum Seitenanfang.
+
   end-page-link:
     title: Seitenende-Link
     help: |

@@ -19,18 +19,19 @@ hierarchical-navigation:
 
       Mit `<div class="overlay"></div>` am Ende des `body`-Tags wird das graue Overlay angezeigt.
     release: |
-      **2.1.2:**
+      **2.1.2**
         - changed `.active` class to `.current` for current page highlight in the menu
         - added `h2.sr-only` for more screen reader clarity
         - added h2 and label to search field on mobile
 
-      **2.1.0:**
+      **2.1.0**
         - added the `.nav-mobile` section to the beginning of the `.list-group` element
 
-      **2.0.0:**
+      **2.0.0**
         - added `<span class="sr-only">current page</span>` for current active link
         - added `id="main-navigation"`for accessibility nav
         - added `aria-hidden="true"` to close button
+
   breadcrumb:
     title: Breadcrumb
     help: |
@@ -42,14 +43,16 @@ hierarchical-navigation:
 
       Auf Smartphones wird am Seitenende jeweils ein Link auf die Startseite und auf die darüberliegende Ebene angeboten; einen kompletten Breadcrumb gibt es nicht.
     release: |
-      **3.2.0:**
+      **3.2.0**
       - improve accessibility
+
   back-to-overview:
     title: Zurück zur Übersicht
     help: |
       Die "Zurück zur Übersicht"-Navigation verlinkt Seiten, die nicht in der Navigation erscheinen, zu ihrer "Mutterseite". Ein Beispiel dafür sind die Detail-Seiten der Publikationen.
 
       Die "Zurück zur Übersicht"-Navigation erscheint immer noch vor dem Seitentitel an oberster Stelle der Inhaltsspalte und am Ende der Seite vor der Seitenende-Navigation.
+
   page-navigation-list:
     title: Seitennavigation Liste (Linke Subnavigation)
     help: |
@@ -78,25 +81,22 @@ hierarchical-navigation:
 
       Auf einem Smartphone erscheint die Unternavigation zwischen Header und Inhalt.
     release: |
-      **2.5.2:**
-
+      **2.5.2**
         - fix error with active state of `.list-emphasis`, **please always wrap the text of this list element with a `span` or a `a`**.
 
-      **2.5.0:**
-
+      **2.5.0**
         - allow nested `<ul/>` lists in `.nav-page-list` elements
 
-      **2.3.0:**
-
+      **2.3.0**
         - added `aria-selected="true"` for current link
         - removed first button in the list (looked like a back link)
         - changed label of back button in drilldown sub from "Back" to title
           of section
 
-      **2.1.0:**
-
+      **2.1.0**
         - added the optional `.list-emphasis` class to the first `<li>` element. Put it if you need a bolder and darker element in the list.
         - if you want the drilldown behaviour, embed the `.nav-page-list` element in `<div class="drilldown"><div class="drilldown-container"></div></div>` and add some `<nav class="drilldown-sub"></nav>` elements in any `<li>` you want. Add the `.list-sub` class to the `<li>` element too.
+
   faceted-page-navigation:
     title: Seitennavigation Facette
     help: |
@@ -116,9 +116,9 @@ hierarchical-navigation:
 
       Bei Smartphones wird die Navigation über einen Filter-Link aufgerufen und verhält sich wie die Facetten-Navigation für Desktop. Im Unterschied zur Desktop-Version werden die Inhalte der Seite erst aktualisiert, wenn der Anwender die Facetten-Navigation wieder schliesst.
     release: |
-      **2.0.0:**
-
+      **2.0.0**
       - added `aria-selected="true"` for current link
+
 header:
   title: Kopfbereich
   logo:
@@ -126,21 +126,20 @@ header:
     help: Das Bundeslogo mit Wappen und viersprachiger Wortmarke, sowie die Bezeichnung der Organisationseinheit (Departement, Amt, Direktion oder Vertretung) bilden die Kennzeichnung einer Website. Die gesamte Kennzeichnung ist mit einem Link hinterlegt, der den Anwender von jeder Seite der Website zurück auf die Startseite bringt.
     release: |
       **3.0.0**
-
       - Add a container with `clearfix` class around logo component
+
   accessibility-navigation:
     title: Barrierefreie Navigation
     help: |
       Die barrierefreie Navigation wird direkt nach dem `body`-Tag platziert. Sie wird benötigt, um den Usern mittels Access-Keys rasch Zugang zu bestimmten Services oder zu geben. Die barrierefreie Navigation ist **nicht sichtbar** solange kein Link fokussiert ist.
 
       Hinweis: Je nach Browser werden die Links im Beispiel erst nach mehrmaligem Tab-Drücken sichtbar. Dies liegt daran, dass die Webguidlines-Seite selber eine barrierefreie Navigation verwendet.
-
     release: |
       **2.1.8**
-
         - added `.access-keys` for better accessibility
         - added `#content` to main page content
         - added `#main-navigation` to main page navigation
+
   service-navigation:
     title: Servicenavigation
     help: |
@@ -148,9 +147,9 @@ header:
 
       Auf Smartphones wird die Service-Navigation in den Footer verschoben.
     release: |
-      **2.1.2:**
-
+      **2.1.2**
         - added `h2.sr-only` for more screen reader clarity
+
   site-search:
     title: Site search
     help: |
@@ -158,9 +157,10 @@ header:
 
       On smartphones, the search function can be accessed via an icon in the Header.
     release: |
-      **2.1.2:**
+      **2.1.2**
         - added h2.sr-only for more screen reader clarity
         - added label before input for screen readers
+
   language-selector:
     title: Sprachwahl
     help: |
@@ -190,11 +190,12 @@ header:
       **2.1.8**
         - added `<span class="sr-only">selected</span>` for active accessibility
 
-      **2.1.2:**
+      **2.1.2**
         - added `h2.sr-only` for more screen reader clarity
 
-      **2.1.0:**
+      **2.1.0**
         - wrapped `.nav-lang` and `.nav-service` in `<section class="nav-services clearfix"></section>`
+
   topics:
     title: Themen A-Z
     help: |
@@ -206,9 +207,9 @@ header:
       Die Unterteilung eines Themen A-Z in Bereiche, die über eine Reiternavigation erschlossen werden, ist unerwünscht.
 
     release: |
-      **2.1.2:**
-
+      **2.1.2**
       - added `h2.sr-only` for more screen reader clarity
+
   treecrumb:
     title: Treecrumb Bundesverwaltung
     help: |
@@ -218,13 +219,12 @@ header:
 
       Auf Smartphones fällt die Treecrumb-Navigation weg.
     release: |
-      **2.5.0:**
-
+      **2.5.0**
         - modified markup of dropdown list. Please refer to how it is in the example below
 
-      **2.1.2:**
-
+      **2.1.2**
         - added `h2.sr-only` for more screen reader clarity
+
 content-navigation:
   title: Inhaltsnavigation
   pagination:
@@ -232,26 +232,29 @@ content-navigation:
     help: Mit der Paging-Funktion kann der Anwender durch eine grosse Anzahl Elemente blättern , die in Seiten (Pages) angeordnet sind. Das Element erscheint oberhalb und unterhalb der Elementliste.
     release: |
       **2.1.8**
-
       - added `<span class="sr-only">current page</span>` and `aria-disabled="true"` for accessibility
       - added `title`to empty link (link only with icon)
       - added `.clearfix`and `.pull-left` inside of `.pagination-container
+
   anchor-links:
     title: Anker-Links
     help: Ein Anker-Link ist eine Sprungmarke, mit dem eine Position innerhalb der aktuellen Seite direkt angesteuert werden kann.
+
   top-links:
     title: Top-Links
     help: |
       Der Top-Link ist das Gegenstück zum Anker-Link: Er bringt den Anwender von jeder Position in der aktuellen Seite wieder zurück zum Seitenanfang.
+
   endofpage-links:
     title: Seitenende-Links
     help: Der Link am Seitenende ist ein spezieller Top-Link. Jede Seite (mit Ausnahme der Startseite und der Seiten auf Level 1) schliesst mit einem solchen Seitenende-Link ab. Er enthält einen Link zum Anfang der aktuellen Seite und das Datum der letzten Aktualisierung der Inhalte dieser Seite.
+
   process-navigation:
     title: Prozessnavigation
     help: |
       Die Prozessnavigation wird im Zusammenhang mit Formularen eingesetzt, welche über mehrere Seiten verteilt sind. Der aktive Prozessschritt wird in rot markiert. Die vorhergehenden Schritte sind klickbar und führen zurück zum entsprechenden Prozessschritt.
 
-      **Achtung:**
+      **Achtung**
 
       Das vorliegende Beispiel beschreibt nur das graphische Design; die Prozessnavigation muss in jedem Fall gemäss dem zugrundeliegenden Prozess programmiert werden.
 
@@ -273,23 +276,23 @@ footer:
 
       Auf Smartphones werden einige Funktionen aus dem Header, wie z.B. Service-Navigation und das vollständige Bundeslogo in den Footer verschoben.
     release: |
-      **2.5.0:**
-
+      **2.5.0**
       - wrapped footer columns in a `div.row`
 
-      **2.1.0:**
-
+      **2.1.0**
       - placed links in a `ul.list-unstyled` list
       - changed `.col-sm-3` in `.col-sm-4.col-md-3` for more readability on small size and removed useless `.row` wrapper
+
   social-media:
     title: Social Media
     help: Die Social Media Kanäle (Facebook, Twitter, YouTube) der Website werden im Footer in einem eigenen Bereich positioniert.
     release: |
-      **3.2.0:**
+      **3.2.0**
       - added a heading for screen readers
 
-      **2.1.0:**
+      **2.1.0**
       - added the `.links-social` class to the `<nav/>` element containing the social links
+
   footbar:
     title: Fusszeile
     help: |
@@ -297,6 +300,5 @@ footer:
 
       Die Fusszeile ist ein **Markenelement**: die Verwendung ist obligatorisch, das Erscheinungsbild darf nicht verändert werden.
     release: |
-      **3.2.0:**
-
+      **3.2.0**
       - `.footer-address` should be used instead of the `address` element inside the footer

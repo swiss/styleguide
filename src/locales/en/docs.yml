@@ -64,6 +64,7 @@ index:
     Extensions to existing elements, as well as new elements that are not yet included in these Confederation Web Guidelines, may be proposed to the Specialist Unit for the Confederation CD. This Unit will consider the proposal for submission to the Confederation Web Forum. The Confederation Web Forum will subsequently determine whether the proposed change should be added to the Confederation Web Guidelines or not. If the former is the case, the Forum will propose the relevant amendment to the KID.
 
     If the KID agrees to the amendment, the submitting body will implement the amendment. In the course of this implementation process, the applicant will ensure that the code, together with a description of the amendment, is passed on to the Specialist Unit for the Confederation CD. The Unit will add the amendment to the Guidelines and inform the service providers of the change.
+
 accessibility:
   title: Barrier-free Accessibility
   intro: |
@@ -133,6 +134,7 @@ basic-grid:
     The context pane is reserved for the following elements: wherever it makes sense to do so, a direct contact should be placed at the very top. If there is a shopping cart element, this is placed directly under the contact box. Teasers, such as an RSS feed box or a temporary teaser (for instance for a conference) can also be placed in this section. However, in no case is it possible to have more than three elements here. If using any of the elements listed here does not make sense, then the column remains blank.
 
     No additional information and no essential content components may be placed in the context pane, with the exception of the elements mentioned above.
+
 cd-elements:
   title: CD Elements
   content: |
@@ -208,6 +210,7 @@ cd-elements:
     <meta name="msapplication-TileImage" content="build/img/ico/mstile-144x144.png">
     <meta name="msapplication-config" content="build/img/ico/browserconfig.xml">
     ```
+
 devices:
   title: Output across a Range of End Devices
   content: |
@@ -262,6 +265,7 @@ guidelines:
 
     - Safari and Chrome on iOS 7 and higher
     - Chrome and/or the “default browser” and Firefox on Android 5 and higher
+
 header-footer:
   title: Header and Footer
   content: |
@@ -315,6 +319,7 @@ header-footer:
     </figure>
 
     On mobile devices, many of the functions from the header (e.g. navigation, service navigation, and the full form of the Confederation logo) are moved to the footer.
+
 sample-pages:
   title: Sample Pages
   content: |
@@ -351,6 +356,7 @@ sample-pages:
     ## Webform Page
 
     The sample page for webforms shows how a form and its navigation process look on a page.
+
 translations:
   title: Translations
   content: |

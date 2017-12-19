@@ -7,16 +7,18 @@ widgets:
       Hinweise machen die User auf Dinge aufmerksam, die sie beachten müssen. Häufig sind sie in Bestellformularen, wenn Angaben falsch sind (E-Mail-Adresse) oder fehlen.
 
       Es gibt folgende Varianten: `.alert-success` (Bestätigung)  `.alert-info` (Information) `.alert-warning` (Warnung) `.alert-danger` (Gefahr)
-    release: |
+
       **Accessibility**
 
       You can add a `<span class="sr-only">alert type</span>` if the `role="alert"` is not enough information for the end user.
+
   emergency:
     title: Krisenbanner
     help: |
       Der Krisenbanner wird bei Ereignissen grosser Dringlichkeit auf der Startseite angezeigt. Er steht immer zuoberst auf der Startseite.
 
       Es ist wichtig, dieses Element nur bei Notfällen - also sparsam - einzusetzen.
+
   contact-box:
     title: Kontaktbox
     help: |
@@ -27,6 +29,7 @@ widgets:
       Durch Klicken auf den Link "Kontaktinformationen drucken" öffnet sich ein neues Browserfenster, welches die Kontaktdaten in einer für den Druck optimierten Darstellung anzeigt.
 
       Auf Tablets wird der Kontakt unterhalb des Seiteninhalts in einem zweispaltigen Layout angezeigt. Die Inhalte der beiden Reiter werden nebeneinander angezeigt.
+
 teaser:
   title: Teaser
   focus:
@@ -51,6 +54,7 @@ teaser:
 
       **3.0.0**
       - Improved accessibility by pausing the slideshow when user interact with the component and also by adding a play/pause button.
+
   focus-vertical:
     title: Brennpunkt vertikal
     help: |
@@ -71,12 +75,14 @@ teaser:
 
       **3.1.0**
       - Focus vertical introduced
+
   news:
     title: Neuigkeiten
     help: |
       Anstelle des Brennpunkte-Teasers kann der Teaser Neuigkeiten mit nur einem Beitrag verwendet werden. Dies ist dann sinnvoll, wenn auf der Startseite nur wenige News geschaltet werden und die Frequenz der Änderungen tief ist.
 
       Er besteht aus einem grossen Bild, einem kurzen Teaser-Text und einem weiterführenden Link. Allenfalls kann er mit einer Titelzeile versehen werden (siehe folgendes Element).
+
   headline:
     title: Titelzeile für Teaser
     help: |
@@ -100,6 +106,7 @@ teaser:
 
       **2.5.1**
         - put `<figure>` element after `<h4>` to avoid ungraceful alignment
+
   slideshow:
     title: Slideshow
     help: |
@@ -110,14 +117,15 @@ teaser:
       Die Slideshow-Komponente ist **nicht** barrierefrei. Wird sie verwendet, müssten die Inhalte auch in einer barrierefreien Form zugänglich gemacht werden.
 
     release: |
-      **2.5.3:**
-
+      **2.5.3**
       - switched order between the `<small>` and `<div>` elements inside of `.carousel-controls` container
       - removed `.pull-right` class to those same 2 elements
       - added `.pull-right` class to `.carousel-controls` element
+
   text-teaser:
     title: Textteaser
     help: Der Text Teaser ist einfaches Element das meistens in Listen verwendet wird. Er besteht aus einem verlinkten Titel und einem folgenden Textblock.
+
   dossier-teaser:
     title: Dossierteaser
     help: |
@@ -126,6 +134,7 @@ teaser:
       Er besteht aus einem Bild im 16:10-Format, dem Titel des Themas sowie einem kurzen Einleitungstext. Der Titel und das Bild verlinken auf die entsprechende Detailseite.
 
       Dossier-Teaser können mit einer Titelzeile gruppiert werden. Dabei ist zu beachten, dass die Titel-Hierarchie auf der Seite **accessibility**konform bleibt.
+
   person-teaser:
     title: Personenteaser
     help: |
@@ -133,29 +142,32 @@ teaser:
 
       Der Personen-Teaser besteht, wie der Dossier-Teaser, aus einem Bild im 16:10-Format, dem Titel des Themas sowie einem kurzen Einleitungstext. Der Titel und das Bild verlinken auf die entsprechende Detailseite. Zusätzlich ist der Teaser mit einer grauen Fläche hinterlegt.
     release: |
-      **2.1.1:**
-
+      **2.1.1**
       - wrapped the `.well` element in `<div class="bordered-well"></div>`
+
   publications-preview:
     title: Publikationen-Vorschau
     help: |
       Die Publikationen-Vorschau ist ein formal sehr flexibler Teaser. Er besteht aus einem optionalen Titel, einem optionalen Bild, einer optionalen Bildlegende und dem Text. Der Text kann das Bild rechts umfliessen. Alternativ kann dieses Inhaltselement auch in eine graue Infobox verschachtelt werden.
+
   news-feed:
     title: News Feed
     help: Im News-Teaser werden verschiedene News-Anrisse chronologisch sortiert dargestellt. Mit einer Scrollbar kann der Anwender innerhalb des Teasers nach unten scrollen und somit alle angebotenen News-Anrisse sehen. Jeder Anriss beinhaltet das Datum, den Meldungstyp sowie den verlinkten Titel zur News.
     release: |
-      **3.1:**
+      **3.1.0**
       - hiding scrollbar if it's not needed
 
-      **2.0.1:**
+      **2.0.1**
       - added the `.news-feed` class to the `.list-group` element
       - added the `.scroll-y` wrapper containing all the `.list-group-item` elements
+
   rss-feed:
     title: RSS-Feed
     help: |
       Ein RSS Feed ist ein sehr spezialisierter Teaser mit dem ausschliesslich RSS-Feeds aufgerufen werden können
 
       Der Titel besteht immer aus einem RSS-Icon und dem Text "RSS". Darunter befindet sich eine Liste mit Links.
+
   twitter-timeline:
     title: Twitter Timeline
     help: |
@@ -165,18 +177,21 @@ teaser:
     release: |
       **3.1.0**
       - added Twitter Timeline teaser
+
 content-containers:
   title: Inhaltscontainer
   elements-list:
     title: Elemente-Liste
     help: |
       Die Elemente-Liste ist vielfältig einsetzbar. Generell stellt sie eine Reihe unterschiedlicher Inhaltselement dar. Dies können verschiedenen Typs sein: Adressen Publikationen, Reden, Medienmitteilungen. Sie können mit und ohne Bild sein.
+
   further-information:
     title: Weiterführende Informationen
     help: |
       Unterhalb des Inhalts einer Seite können weiterführende Informationen angezeigt werden. Sie haben den Zweck, Inhalte (z.B. Publikationen, News oder Links), welche mit dem besprochenen Inhalt in Zusammenhang steht aber nicht direkt im Text angesprochen und daher im Inhalt verlinkt werden, anzubieten. Diese Inhalte werden mit Reitern  geordnet.
 
       Es handelt sich hierbei um eine spezifische Ausprägung der horizontalen Tab-Navigation. Es können bis zu fünf Tabs belegt werden. Die Bezeichnung der Tabs ist nicht vorgegeben. Innerhalb einer Website muss diese aber einheitlich (immer gleich) verwendet werden. Beispiele sind "Dokumente", "Publikationen", "Dienstleistungen", "Rechtliche Grundlagen", "Links", "News" etc.
+
   collapsible-panel:
     title: Klapp-Box
     help: |
@@ -185,21 +200,22 @@ content-containers:
       **3.2.0**
       - remove accordion behavior to make it keyboard accessible
 
-      **3.1**
+      **3.1.0**
       - keyboard accessibility fixed
+
 ordering-checkout:
   title: Bestellen und Check-out
   one-line-order-form:
     title: Einzeiliges Bestell-Formular
     help: |
       Dieses kompakte Formular wird verwendet, wenn ein Objekt (z.B. eine Publikation, Topologische Karte, etc.) dem Einkaufswagen hinzugefügt werden soll.
+
   shopping-cart:
     title: Einkaufswagen
     help: |
       Der Einkaufswagen wird standardmässig nicht angezeigt. Erst nachdem ein Objekt zum Einkaufswagen hinzugefügt wurde, erscheint er in der Kontextspalte. Er bleibt sichtbar bis er entweder komplett gelöscht wird oder der Einkaufsprozess abgeschlossen ist.
     release: |
       **2.5.0**
-
       - added `span.sr-only` to the delete icon
 
 standard-elements:
@@ -210,25 +226,26 @@ standard-elements:
       Auf jeder Seite mit Ausnahme der Startseite muss der Seitentitel eingesetzt werden. Dieser steht immer als erstes Element der Inhaltsseite. Nur bei ungebundenen Detailseiten (z.B. bei Publikationen) ist ihm der "Zurück zur Übersicht"-Link vorangestellt.
 
       Der Text des Seitentitels ist relevant für die Positionierung in Suchergebnissen (z.B. Google).
+
   image-text:
     title: Text und Bild
     help: |
       Dieses Element besteht aus Fliesstext, der durch einen Titel und Zwischentitel ergänzt werden kann. Ein Bild und eine Bildlegende, die rechts vom Text umflossen werden kann, können ebenfalls hinzugefügt werden. Es sind diverse Bildgrössen (hauptsächlich im goldenen Schnitt) vorgesehen.
 
       Für kleine Bilder kann die Klasse `pull-left` oder `pull-right` im HTML-Element `<figure>` genutzt werden.
+
   info-box:
     title: Infobox
     help: |
       Die Infobox ist ein "Text und Bild"-Element, das mit einer grauen Fläche hinterlegt wird. Es kann in den Textfluss integriert werden, um zusätzliche Informationen hervorzuheben.
 
-
     release: |
-
-      **3.0**
+      **3.0.0**
       - To have this grey background, add a `.well .clearfix` wrapper around your content.
-      **2.5.3:**
 
+      **2.5.3**
       - add a `.clearfix` class to the `.well` wrapper
+
 multimedia:
   title: Multimedia
   photo-gallery:
@@ -239,11 +256,12 @@ multimedia:
       Beim Klick auf ein Vorschaubild wird eine Detailansicht entweder in einer Bilder-**Lightbox** oder einer Bilder-**Einzelansicht** geöffnet.
     release: |
       **2.1.8**
-
         - added `aria-selected="true"` and `aria-disabled="true"` for accessibility
+
   photo-gallery-single:
     title: Bildergalerie Einzelansicht
     help: In der Einzelansicht kann man durch den gesamten Inhalt einer Bildergalerie blättern. Unterhalb des Bildes kann ein Text eingebunden werden.
+
   lightbox:
     title: Lightbox
     help: |
@@ -260,12 +278,13 @@ functions:
 
       Mittels einer Print-ID können für den Ausdruck spezifische Teile einer Seite adressiert werden. (`data-print="ID"` im Container und  `onclick="$.printPreview.printPreview(ID)"` im Eventhandler. Falls im Container das `data-title`-Attribut steht, wird dieses als Seitentitel gedruckt.)
     release: |
-      **2.5.4:**
+      **2.5.4**
       - place a title like `<h3 class="visible-print-block">Contact</h3>` at the top of your `.tab-pane` elements to display only when printing
 
-      **2.5.3:**
+      **2.5.3**
       - change the `onclick="window.print()"` by `onclick="$.printPreview.printPreview()"`
       - add an optional target to the printPreview function: `onclick="$.printPreview.printPreview('target id')"`
+
   social-sharing:
     title: Inhalte teilen (Social sharing)
     help: |
@@ -273,25 +292,28 @@ functions:
 
       Derzeit werden Facebook, Twitter, Google+, Xing und LinkedIn unterstützt. Weitere Netzwerke können mit dem betreffenden [Open Graph](http://ogp.me/) meta tag hinzugefügt werden.
     release: |
-      **3.2.0:**
+      **3.2.0**
       - added a heading for screen readers
 
-      **3.1.1:**
+      **3.1.1**
       - added `xing` and `linkedin` icons for social sharing
 
-      **2.1.1:**
+      **2.1.1**
       - added the `.social-sharing` class to the `#social-sharing` element
+
   downloading-files:
     title: Datei download
     help: Links, mit denen eine Datei geladen werden kann, sind immer mit einem vorangestellten Dokument-Icon gekennzeichnet.
+
 search:
   title: Suche
   search-box:
     title: Suchmaske
     help: Die Suchmaske ist ein einfaches Formular, in das der Anwender auf einer Such-Seite einen Suchbegriff eingeben kann.
+
   search-results:
     title: Suchergebnisse
     help: Suchergebnisse werden semantisch gruppiert in Reitern angezeigt. Die Kategorien (Gruppierung) ist frei wählbar (z.B. Inhaltsseiten, News und Publikationen). Innerhalb des Reiters kann der Anwender sich mit eine Paging-Funktion durch die Seiten bewegen.
     release: |
-      **3.1**
+      **3.1.0**
       - accessibility texts added

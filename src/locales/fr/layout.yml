@@ -4,6 +4,7 @@ form-elements:
   fieldsets:
     title: Regroupement d’éléments de formulaire
     help: Les intertitres permettent de regrouper des éléments de formulaire en fonction du contenu. On utilise pour cela la balise fieldset.
+
   forms:
     title: Champs de saisie
     help: |
@@ -28,34 +29,38 @@ form-elements:
       **2.1.8**
         - **Identifiants** ajoutés à l’étiquette et au texte d’aide, `aria-labelledby` et `role` ajoutés aux boutons pour une meilleure accessibilité
         - `<fieldset>` et `<legend class="hidden">` ajoutés autour de `.form-group` pour une meilleure accessibilité
+
   selects:
     title: Listes de sélection
     help: |
       Une liste déroulante permet d’effectuer une sélection à partir d’une liste prédéfinie. Cette liste apparaît dans un menu après avoir cliqué sur l’élément. Après avoir effectué une sélection, le résultat est affiché.
       S’il existe plus de dix options, un champ de recherche est proposé en début de liste.
     release: |
-      **2.1.2:**
-
+      **2.1.2**
       - étiquette BeforeSelect ajoutée pour les lecteurs d’écran
+
   selects-multiple:
     title: Listes de sélection multiple
     help: |
       Les listes de sélection multiple se comportent de la même manière que les listes de sélection simple. Mais il est possible de sélectionner plus d'une option.
     release: |
-      **3.1:**
+      **3.1.0**
       - Ajout des listes de sélection multiple
+
   checkboxes:
     title: Cases à cocher
     help: Les cases à cocher sont utilisées lorsqu’un ou plusieurs éléments doivent être sélectionnés dans une liste prédéfinie.
     release: |
       **3.0.0**
       - Le style personnalisé de cet élément a été supprimé en faveur du style par défaut du navigateur pour une meilleure accessibilité. Pour garder le style précédent et les variantes, les cases à cocher doivent maintenant être situées à l’intérieur de l’étiquette.
+
   radios:
     title: Boutons radio
     help: Les boutons radio permettent aux utilisateurs de faire un choix unique dans une liste prédéfinie. Les boutons radio peuvent être regroupés. Un seul élément peut être choisi à l’intérieur d’un groupe.
     release: |
       **3.0.0**
       - Le style personnalisé de cet élément a été supprimé en faveur du style par défaut du navigateur pour une meilleure accessibilité. Pour garder le style précédent et les variantes, les boutons radio doivent maintenant être situés à l’intérieur de l’étiquette.
+
   buttons:
     title: Boutons
     help: |
@@ -66,6 +71,7 @@ form-elements:
       La classe `.btn` permet de concevoir les boutons. La classe peut être utilisée pour les éléments `<input>`, `<button>` ou `<a>`. Il existe quatre variantes de design:
   button-groups:
     title: Groupes de boutons
+
 general:
   title: Généralités
   logo:
@@ -80,12 +86,11 @@ general:
       Le logo est un élément de marque: son utilisation est obligatoire et son apparence ne peut être modifiée.
     release: |
       **3.0.0**
-
       - Ajoutez un conteneur avec la classe `clearfix` autour de la composante de logo
 
       **2.1.8**
-
       - `title` ajouté au lien de marque pour l’accessibilité
+
   colors:
     title: Palette de couleurs
     help: |
@@ -94,18 +99,24 @@ general:
       Trois couleurs sont utilisées: le ton rouge du logo fédéral, qui est complété par un ton rouge plus clair, un ton bleu et une palette de tons gris.
 
       On retrouve le rouge dans la ligne rouge qui souligne l’en-tête et comme couleur de sélection dans la navigation et lorsque la souris passe sur un lien (mouseover). A part cela, on travaille avec différents tons gris. Ainsi, les titres et le corps du texte sont par exemple mis en œuvre dans un ton gris sombre.
+
   background:
     title: Arrière-plan
     help: Un ton gris clair est utilisé comme couleur d’arrière-plan. Il est appliqué automatiquement à `<body>`.
+
   images:
     title: Formats d’image
     help: Le rapport des côtés des images en format paysage est de 16:10 (format paysage complet – nombre d’or) ou de 16:5 (demi format paysage). Les images en format portrait ne possèdent aucun rapport spécifique des côtés. Cependant, un rapport de 2:3 est recommandé.
+
   standard-image:
     title: Image standard
+
   captioned-image:
     title: Image avec légende
+
   image-format:
     title: Formats d’image
+
   icons:
     title: Icônes
     help: |
@@ -119,11 +130,12 @@ general:
       Selon les besoins, on peut également utiliser `<span class="sr-only">icon description</span>`.
     release: |
       **3.1.1**
-
       - ajout des icônes `icon--info`, `icon--facebook-light`, `icon--instagram`, `icon--whatsapp`, `icon--linkedin`, `icon--linkedin-box`, `icon--xing`, `icon--xing-box`, `icon--pinterest`, `icon--youtube`
+
   form-icons:
     title: Icônes de forme
     help: Utilisez la classe `.form-icon` globale, suivie de la classe plus spécifique
+
 tables:
   title: Tableaux
   table-standard:
@@ -146,77 +158,76 @@ tables:
 
       **2.1.8**
         - `columnheader`, `rowheader` et `aria-describedby` ajoutés pour une meilleure accessibilité
+
   table-cycle:
     title: Tableau imbriqué (simple)
     release: |
       **3.0.0**
-
         - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+
   table-cycle-pairs:
     title: Tableau imbriqué (multiple)
     release: |
       **3.0.0**
-
         - retirez l’attribut `summary` de la balise `<table>`
+
   table-with-caption:
     title: Tableau avec titre
     help: Dans la balise `<caption>`, on définit un titre de tableau.
     release: |
       **3.0.0**
-
         - retirez l’attribut `summary` de la balise `<table>`
+
   table-zebra:
     title: Tableau avec fonds alternés
     help: Les fonds alternés sont affichés si on ajoute la classe class=’table_zebra’ à la balise du tableau.
     release: |
       **3.0.0**
-
         - retirez l’attribut `role="columnheader"` de la balise `<tr>
         - retirez l’attribut `role="rowheader"` de la balise `<th>`
 
       **2.1.9**
-
         - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
+
   table-zebra-cycle-single:
     title: Tableau imbriqué avec fonds alternés (simple)
     release: |
       **3.0.0**
-
         - retirez l’attribut `summary` de la balise `<table>`
         - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+
   table-zebra-cycle-pairs:
     title: Tableau imbriqué avec fonds alternés (multiple)
     release: |
       **3.0.0**
-
         - retirez l’attribut `summary` de la balise `<table>`
+
   table-zebra-caption:
     title: Tableau à fonds alternés avec titre
     release: |
       **3.0.0**
-
         - retirez l’attribut `summary` de la balise `<table>`
         - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+
   table-highlight:
     title: Tableau avec mise en évidence
     help: |
       Ce tableau est dérivé du tableau standard, mais il possède en plus l’activation des fonds alternés et l’emphase appliquée sur des cellules du tableau (class=’selected’).
     release: |
       **3.0.0**
-
         - retirez l’attribut `role="columnheader"` de la balise `<tr>
         - retirez l’attribut `role="rowheader"` de la balise `<th>`
 
       **2.1.9**
-
         - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
+
   table-highlight-cycle:
     title: Tableau imbriqué avec mise en évidence (simple)
     release: |
       **3.0.0**
-
         - retirez l’attribut `summary` de la balise `<table>`
         - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+
   table-highlight-cycle-pairs:
     title: Tableau imbriqué avec mise en évidence (multiple)
     release: |
@@ -227,58 +238,52 @@ tables:
     title: Tableau avec titre et mise en évidence
     release: |
       **3.0.0**
-
         - retirez l’attribut `summary` de la balise `<table>`
         - retirez l’attribut `role="columnheader"` de la balise `<tr>`
+
   table-sortable:
     title: Tableau triable
     help: Le tableau triable met automatiquement en évidence la colonne triée. (classe `table-sort`)
     release: |
       **3.0.0**
-
         - retirez l’attribut `role="columnheader"` de la balise `<tr>`
         - retirez l’attribut `role="rowheader"` de la balise `<th>`
+
   table-expandable:
     title: Tableau avec masquage et affichage de lignes
     help: Certaines lignes du tableau peuvent être dépliées pour afficher des détails concernant un enregistrement.
     release: |
       **3.0.0**
-
         - retirez l’attribut `role="columnheader"` de la balise `<tr>
         - retirez l’attribut `role="rowheader"` de la balise `<th>`
 
       **2.5.0**
-
         - emballer le texte `<a>` dans une balise `<th>` s’il s’agit d’un lien «collapse»
 
       **2.1.9**
-
         - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
 
       **2.1.8**
-
         - emballer le texte `<a>` dans une balise `<th>` s’il s’agit d’un lien «collapse»
+
   table-ruled:
     title: Tableau avec lignes
     help: Les tableaux avec lignes conviennent particulièrement bien à la représentation de rapports simples 1:1. On obtient les lignes du tableau en ajoutant la classe class=’table_simple’ à la balise du tableau.
     release: |
       **3.0.0**
-
         - retirez l’attribut `role="columnheader"` de la balise `<tr>`
 
       **2.1.9**
-
         - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
+
   table-unruled:
     title: Tableaux sans lignes
     help: Les tableaux sans lignes conviennent pour la représentation de propriétés, p. ex. d’une publication. Un tableau simple sans lignes sera marqué par la classe class=’table_naked’.
     release: |
       **3.0.0**
-
         - retirez l’attribut `role="columnheader"` de la balise `<tr>`
 
       **2.1.9**
-
         - `columnheader`, `rowheader` et `aria-describedby` supprimés et remplacés par des attributs `scope=""`.
 
 typography:
@@ -298,16 +303,18 @@ typography:
     help: |
       ### Lead
       Au début d’un texte plus long, on peut placer un lead qui résume les aspects les plus importants du texte. La police sera mise en gras.
+
   text-elements:
     title: Corps de texte
     help: |
       La taille de police, la longueur et l’espacement des lignes du corps de texte sont optimisés pour une lisibilité optimale. Les citations sont mises en italique. Les liens dans le corps de texte sont soulignés. Cependant, il convient de les utiliser avec parcimonie. Il est préférable de placer les liens à la fin d’un paragraphe.
     release: |
-      **3.1**
+      **3.1.0**
       - ajout du code des exemples
 
   blockquote:
     title: Citation
+
   lists:
     title: Listes
     help: |
@@ -337,10 +344,12 @@ typography:
     release: |
       **3.2.0**
       - ajout de l'attribut `title="External link"` sur les liens externes
+
   top-link:
     title: Lien vers le haut de page
     help: |
       Le lien vers le haut de page (top-link) est la contrepartie du lien d’ancre: il ramène les utilisateurs de n’importe quelle position de la page vers le haut de la page.
+
   end-page-link:
     title: Lien de fin de page
     help: |
