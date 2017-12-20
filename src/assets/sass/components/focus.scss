@@ -38,7 +38,9 @@
         .oldie &,
         .ie9 & {
           width: 1%;
-          a {height: 69px;}
+          a {
+            height: 69px;
+          }
         }
 
         a {
@@ -120,7 +122,8 @@
         }
       }
     }
-  } // End of media queries
+  }
+  // End of media queries
 
   .tab-focus.carousel {
     margin-bottom: 55px !important;
@@ -131,6 +134,10 @@
 
     .col-sm-5 {
       padding: 0 30px !important;
+    }
+
+    .col-sm-7 {
+      text-align: center;
     }
 
     .carousel-indicators {
