@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie"><!--<![endif]-->
+<!DOCTYPE html >
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie" itemscope itemtype="http://schema.org/WebPage"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -42,20 +42,24 @@
 </head>
 <body>
 
-      <ul class="access-keys">
+  
+    <ul class="access-keys">
       <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
       <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
       <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
       <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
-            <!-- Other smart links can be added for main website functionalities -->
+      
+      <!-- Other smart links can be added for main website functionalities -->
     </ul>
   
+
   <div class="container container-main">
 
-          <header>
+    
+      <header>
         <div class="clearfix">
           <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
-          <nav class="navbar treecrumb pull-left" role="navigation">
+          <nav class="navbar treecrumb pull-left">
             <h2 class="sr-only">Orientation in the website</h2>
             <ul class="nav navbar-nav">
 
@@ -109,7 +113,7 @@
                 <li><a href="#" lang="en" title="English selected" aria-label="English selected" class="active">EN</a></li>
               </ul>
             </nav>
-            <nav class="nav-service" role="navigation">
+            <nav class="nav-service">
               <h2 class="sr-only">Services navigation</h2>
               <ul>
                 <li><a href="#">Emergencies</a></li>
@@ -127,16 +131,24 @@
             <h1>Department of the Environment, Transport, Energy and Communications</h1>
           </a>
 
-
-          <form class="form-horizontal form-search pull-right" role="form">
-            <h2 class="sr-only">Search</h2>
-            <label for="search-field" class="sr-only">Search:</label>
-            <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-          </form>
+          <div class="mod mod-searchfield global-search global-search-standard">
+            <form class="form-horizontal form-search pull-right">
+              <h2 class="sr-only">Search</h2>
+              <label for="search-field" class="sr-only">Search:</label>
+              <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+              <button class="icon icon--close icon--after search-reset" role="button" type="button">
+                <span class="sr-only">Clear</span>
+              </button>
+              <span class="icon icon--search"><span class="sr-only">Search</span></span>
+              <div class="search-results">
+                <div class="search-results-list"></div>
+              </div>
+            </form>
+          </div>
         </div>
 
         <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
-        <nav class="navbar yamm yamm--select" role="navigation">
+        <nav class="navbar yamm yamm--select">
           <h2 class="sr-only">By Topics</h2>
           <ul>
             <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
@@ -162,7 +174,9 @@
 
       </header>
     
-          <nav class="nav-main yamm navbar" id="main-navigation">
+
+    
+      <nav class="nav-main yamm navbar" id="main-navigation">
         <h2 class="sr-only">Navigation</h2>
         <section class="nav-mobile">
           <div class="table-row">
@@ -207,15 +221,26 @@
             <div class="table-cell dropdown">
               <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
               <div class="dropdown-menu" role="menu">
-                <form class="form" role="form">
-                  <h2 class="sr-only">Search</h2>
-                  <label for="search-field" class="sr-only">Search:</label>
-                  <input class="form-control" type="text" placeholder="Search">
-                  <span class="icon icon--search"></span>
-                </form>
+                <div class="mod mod-searchfield global-search global-search-mobile">
+                  <form class="form">
+                    <h2 class="sr-only">Search</h2>
+                    <label for="search-field-mobile" class="sr-only">Search</label>
+                    <input id="search-field-mobile" class="search-input form-control" type="text" placeholder="Search">
+                    <button class="icon icon--close icon--after search-reset" role="button" type="button">
+                      <span class="sr-only">Reset</span>
+                    </button>
+                    <span class="icon icon--search">
+                      <span class="sr-only">Search</span>
+                    </span>
+                    <div class="search-results">
+                      <div class="search-results-list"></div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
+
         </section>
 
         <!-- The tab navigation -->
@@ -371,261 +396,297 @@
       </nav>
     
 
-          <div class="container-fluid hidden-xs">
+
+    
+      <div class="container-fluid hidden-xs">
         <div class="row">
           <div class="col-sm-12">
             <h2 id="br1" class="hidden">Breadcrumbs</h2>
-            <ol class="breadcrumb" role="navigation" aria-labelledby="br1">
+            <ol class="breadcrumb" role="menu" aria-labelledby="br1">
               <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Country Selection</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Democratic Republic of the Congo</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Some text to create a line break</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Bilateral Relations</a><span class="icon icon--greater"></span></li>
-              <li class="active" aria-selected="true">Title of the active page</li>
+              <li class="active" role="presentation">Title of the active page</li>
             </ol>
           </div>
         </div>
       </div>
     
+
     <div class="container-fluid">
       <div class="row">
-                <div class="col-sm-8 col-md-9" id="content">
-          <div class="row">
-                <div class="col-sm-12">
-      <a href="#" onclick="$.printPreview.printPreview()" class="hidden-xs icon icon--before icon--print pull-right" title="print"></a>
-      <h1 class="text-inline">Search</h1>
+        
+        <div class="col-sm-12" id="content">
+            
+  <a href="#" onclick="$.printPreview.printPreview()" class="hidden-xs icon icon--before icon--print pull-right"
+     title="print"></a>
+  <h1 class="text-inline">Search</h1>
 
-      <br>
+  <br>
 
-      <form action="#" class="form-inline search-box">
-        <fieldset class="clearfix">
-          <div class="form-group">
-            <label for="inputSearch" class="control-label">Search by keyword</label>
-            <input type="text" class="form-control" id="inputSearch" placeholder="Search by keyword">
-          </div>
-          <input class="btn btn-primary" aria-label="Find" type="submit" value="Find">
-        </fieldset>
+  <form action="#" class="form-inline search-box">
+    <fieldset class="clearfix">
+      <div class="form-group">
+        <label for="inputSearch" class="control-label">Search by keyword</label>
+        <input type="text" class="form-control" id="inputSearch" placeholder="Search by keyword">
+      </div>
+      <input class="btn btn-primary" aria-label="Find" type="submit" value="Find">
+    </fieldset>
+  </form>
+
+  <h2>Search Results</h2>
+  <p>39 items found for Health Insurance</p>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#contentPages" data-toggle="tab">Content pages (28)</a></li>
+    <li><a href="#newsPages" data-toggle="tab">News (16)</a></li>
+    <li><a href="#publicationsPages" data-toggle="tab">Publications (3)</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content tab-border">
+    <div class="tab-pane active" id="contentPages">
+
+      <!-- Header pagination -->
+      <nav class="pagination-container clearfix">
+        <span class="pull-left">Object - 2 of 3</span>
+        <ul class="pull-right pagination">
+          <li class="separator disabled">
+            <a href="#" title="Step backward" aria-disabled="true">
+              <span class="icon icon--step-backward"></span>
+              <span class="sr-only">Step backward</span>
+            </a>
+          </li>
+          <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+          <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
+          <li><a href="#">2</a></li>
+          <li>...</li>
+          <li><a href="#">17</a></li>
+          <li class="separator-left"><a href="#">Next</a></li>
+          <li class="separator-left">
+            <a href="#" title="Step forward">
+              <span class="icon icon--step-forward"></span>
+              <span class="sr-only">Step forward</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Results -->
+      <article class="search-result">
+        <h2 id="br2" class="hidden">Breadcrumbs</h2>
+        <ol class="breadcrumb breadcrumb--search" aria-labelledby="br2">
+          <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
+          <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
+          <li class="active">Country Selection</li>
+        </ol>
+        <div class="search-result-header">
+          <a href="#">Title of the first result</a>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, eum, dolor, alias quo aspernatur quos
+          soluta ducimus nihil aliquid maiores ipsam aut suscipit eos iste dicta ipsum aperiam distinctio illum.</p>
+      </article>
+      <article class="search-result">
+        <h2 id="br3" class="hidden">Breadcrumbs</h2>
+        <ol class="breadcrumb breadcrumb--search" aria-labelledby="br3">
+          <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
+          <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
+          <li class="active">Country Selection</li>
+        </ol>
+        <div class="search-result-header">
+          <a href="#">Title of the second result</a>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, eum, dolor, alias quo aspernatur quos
+          soluta ducimus nihil aliquid maiores ipsam aut suscipit eos iste dicta ipsum aperiam distinctio illum.</p>
+      </article>
+
+      <!-- Footer pagination -->
+      <nav class="pagination-container pagination-end">
+        <span class="pull-left">Object - 2 of 3</span>
+        <ul class="pull-right pagination">
+          <li class="separator disabled">
+            <a href="#" title="Step backward" aria-disabled="true">
+              <span class="icon icon--step-backward"></span>
+              <span class="sr-only">Step backward</span>
+            </a>
+          </li>
+          <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+          <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
+          <li><a href="#">2</a></li>
+          <li>...</li>
+          <li><a href="#">17</a></li>
+          <li class="separator-left"><a href="#">Next</a></li>
+          <li class="separator-left">
+            <a href="#" title="Step forward">
+              <span class="icon icon--step-forward"></span>
+              <span class="sr-only">Step forward</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+    <div class="tab-pane" id="newsPages">
+
+      <!-- Header pagination -->
+      <nav class="pagination-container clearfix">
+        <span class="pull-left">Object - 2 of 3</span>
+        <ul class="pull-right pagination">
+          <li class="separator disabled">
+            <a href="#" title="Step backward" aria-disabled="true">
+              <span class="icon icon--step-backward"></span>
+              <span class="sr-only">Step backward</span>
+            </a>
+          </li>
+          <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+          <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
+          <li><a href="#">2</a></li>
+          <li>...</li>
+          <li><a href="#">17</a></li>
+          <li class="separator-left"><a href="#">Next</a></li>
+          <li class="separator-left">
+            <a href="#" title="Step forward">
+              <span class="icon icon--step-forward"></span>
+              <span class="sr-only">Step forward</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <article class="search-result clearfix">
+        <div class="search-result-header">
+          <a href="#">News item</a>
+        </div>
+        <figure class="pull-left">
+          <img src="http://placehold.it/180x113" alt="image description">
+          <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in
+            bonis.
+          </figcaption>
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio
+          cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus
+          libero voluptas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio
+          cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus
+          libero voluptas.</p>
+      </article>
+      <article class="search-result clearfix">
+        <div class="search-result-header">
+          <a href="#">News item</a>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio
+          cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus
+          libero voluptas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio
+          cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus
+          libero voluptas.</p>
+      </article>
+
+      <!-- Footer pagination -->
+      <nav class="pagination-container pagination-end">
+        <span class="pull-left">Object - 2 of 3</span>
+        <ul class="pull-right pagination">
+          <li class="separator disabled">
+            <a href="#" title="Step backward" aria-disabled="true">
+              <span class="icon icon--step-backward"></span>
+              <span class="sr-only">Step backward</span>
+            </a>
+          </li>
+          <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
+          <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
+          <li><a href="#">2</a></li>
+          <li>...</li>
+          <li><a href="#">17</a></li>
+          <li class="separator-left"><a href="#">Next</a></li>
+          <li class="separator-left">
+            <a href="#" title="Step forward">
+              <span class="icon icon--step-forward"></span>
+              <span class="sr-only">Step forward</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="tab-pane" id="publicationsPages">
+
+      <form action="#" class="form-inline">
+        <label for="checkbox1" class="checkbox checkbox--left checkbox-inline">
+          <input type="checkbox" id="checkbox1" value="checkbox1" checked>
+          Documents (1)
+        </label>
+        <label for="checkbox2" class="checkbox checkbox--left checkbox-inline">
+          <input type="checkbox" id="checkbox2" value="checkbox2" checked>
+          Images (1)
+        </label>
+        <label for="checkbox3" class="checkbox checkbox--left checkbox-inline">
+          <input type="checkbox" id="checkbox3" value="checkbox3" checked>
+          Videos (1)
+        </label>
       </form>
 
-      <h2>Search Results</h2>
-      <p>39 items found for Health Insurance</p>
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs">
-        <li class="active"><a href="#contentPages" data-toggle="tab">Content pages (28)</a></li>
-        <li><a href="#newsPages" data-toggle="tab">News (16)</a></li>
-        <li><a href="#publicationsPages" data-toggle="tab">Publications (3)</a></li>
-      </ul>
-
-      <!-- Tab panes -->
-      <div class="tab-content tab-border">
-        <div class="tab-pane active" id="contentPages">
-
-          <!-- Header pagination -->
-          <nav class="pagination-container clearfix">
-            <span class="pull-left">Object - 2 of 3</span>
-            <ul class="pull-right pagination">
-              <li class="separator disabled">
-                <a href="#" title="Step backward" aria-disabled="true">
-                  <span class="icon icon--step-backward"></span>
-                  <span class="sr-only">Step backward</span>
-                </a>
-              </li>
-              <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
-              <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
-              <li><a href="#">2</a></li>
-              <li>...</li>
-              <li><a href="#">17</a></li>
-              <li class="separator-left"><a href="#">Next</a></li>
-              <li class="separator-left">
-                <a href="#" title="Step forward">
-                  <span class="icon icon--step-forward"></span>
-                  <span class="sr-only">Step forward</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Results -->
-          <article class="search-result">
-            <h2 id="br2" class="hidden">Breadcrumbs</h2>
-            <ol class="breadcrumb breadcrumb--search" aria-labelledby="br2">
-              <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
-              <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
-              <li class="active">Country Selection</li>
-            </ol>
-            <h4><a href="#">Title of the first result</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, eum, dolor, alias quo aspernatur quos soluta ducimus nihil aliquid maiores ipsam aut suscipit eos iste dicta ipsum aperiam distinctio illum.</p>
-          </article>
-          <article class="search-result">
-            <h2 id="br3" class="hidden">Breadcrumbs</h2>
-            <ol class="breadcrumb breadcrumb--search" aria-labelledby="br3">
-              <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
-              <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
-              <li class="active">Country Selection</li>
-            </ol>
-            <h4><a href="#">Title of the second result</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, eum, dolor, alias quo aspernatur quos soluta ducimus nihil aliquid maiores ipsam aut suscipit eos iste dicta ipsum aperiam distinctio illum.</p>
-          </article>
-
-          <!-- Footer pagination -->
-          <nav class="pagination-container pagination-end">
-            <span class="pull-left">Object - 2 of 3</span>
-            <ul class="pull-right pagination">
-              <li class="separator disabled">
-                <a href="#" title="Step backward" aria-disabled="true">
-                  <span class="icon icon--step-backward"></span>
-                  <span class="sr-only">Step backward</span>
-                </a>
-              </li>
-              <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
-              <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
-              <li><a href="#">2</a></li>
-              <li>...</li>
-              <li><a href="#">17</a></li>
-              <li class="separator-left"><a href="#">Next</a></li>
-              <li class="separator-left">
-                <a href="#" title="Step forward">
-                  <span class="icon icon--step-forward"></span>
-                  <span class="sr-only">Step forward</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-        </div>
-        <div class="tab-pane" id="newsPages">
-
-          <!-- Header pagination -->
-          <nav class="pagination-container clearfix">
-            <span class="pull-left">Object - 2 of 3</span>
-            <ul class="pull-right pagination">
-              <li class="separator disabled">
-                <a href="#" title="Step backward" aria-disabled="true">
-                  <span class="icon icon--step-backward"></span>
-                  <span class="sr-only">Step backward</span>
-                </a>
-              </li>
-              <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
-              <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
-              <li><a href="#">2</a></li>
-              <li>...</li>
-              <li><a href="#">17</a></li>
-              <li class="separator-left"><a href="#">Next</a></li>
-              <li class="separator-left">
-                <a href="#" title="Step forward">
-                  <span class="icon icon--step-forward"></span>
-                  <span class="sr-only">Step forward</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <article class="search-result clearfix">
-            <h4><a href="#">News item</a></h4>
-            <figure class="pull-left">
-              <img src="http://placehold.it/180x113" alt="image description">
-              <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si quicquam extra virtutem habeatur in bonis.</figcaption>
-            </figure>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
-          </article>
-          <article class="search-result clearfix">
-            <h4><a href="#">News item</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
-          </article>
-
-          <!-- Footer pagination -->
-          <nav class="pagination-container pagination-end">
-            <span class="pull-left">Object - 2 of 3</span>
-            <ul class="pull-right pagination">
-              <li class="separator disabled">
-                <a href="#" title="Step backward" aria-disabled="true">
-                  <span class="icon icon--step-backward"></span>
-                  <span class="sr-only">Step backward</span>
-                </a>
-              </li>
-              <li class="separator disabled"><a aria-disabled="true" href="#">Previous</a></li>
-              <li class="active"><a href="#">1 <span class="sr-only">current page</span></a></li>
-              <li><a href="#">2</a></li>
-              <li>...</li>
-              <li><a href="#">17</a></li>
-              <li class="separator-left"><a href="#">Next</a></li>
-              <li class="separator-left">
-                <a href="#" title="Step forward">
-                  <span class="icon icon--step-forward"></span>
-                  <span class="sr-only">Step forward</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="tab-pane" id="publicationsPages">
-
-          <form action="#" class="form-inline">
-            <div class="checkbox checkbox--left">
-              <input type="checkbox" id="checkbox1" value="checkbox1" checked>
-              <label for="checkbox1">Documents (1)</label>
-            </div>
-            <div class="checkbox checkbox--left">
-              <input type="checkbox" id="checkbox2" value="checkbox2" checked>
-              <label for="checkbox2">Images (1)</label>
-            </div>
-            <div class="checkbox checkbox--left">
-              <input type="checkbox" id="checkbox3" value="checkbox3" checked>
-              <label for="checkbox3">Videos (1)</label>
-            </div>
-          </form>
-
-          <div class="pagination-container">
-            <span>Objects <b>1</b> - <b>3</b> of 3</span>
-          </div>
-
-          <article class="search-result clearfix">
-            <h4><a href="#">Document</a></h4>
-            <figure class="pull-left">
-              <img src="http://placehold.it/78x117" alt="image description">
-            </figure>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
-            <p>
-              <a href="#" class="icon icon--before icon--pdf">
-                Strategie des Bundes in der humanitären Minenräumung 2008 - 2011 <span class="text-dimmed">(PDF, 90 Seiten, 5-0 MB, deutsch)</span>
-              </a>
-            </p>
-            <p><a href="#" class="icon icon--before icon--greater">Other languages</a></p>
-          </article>
-
-          <article class="search-result clearfix">
-            <h4><a href="#">Image</a></h4>
-            <figure class="pull-left">
-              <img src="http://placehold.it/180x113" alt="image description">
-            </figure>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
-          </article>
-
-          <article class="search-result clearfix">
-            <h4><a href="#">Video</a></h4>
-            <iframe src="//player.vimeo.com/video/38388574" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus libero voluptas.</p>
-          </article>
-
-          <div class="pagination-container pagination-end">
-            <span>Objects <b>1</b> - <b>3</b> of 3</span>
-          </div>
-
-        </div>
+      <div class="pagination-container">
+        <span>Objects <b>1</b> - <b>3</b> of 3</span>
       </div>
 
-      <br>
-
-      <small>
-      <a href="#">Zum Seitenanfang</a><br>
-        Letze Änderung 17.01.2014
-      </small>
-    </div>
-                      </div>
+      <article class="search-result clearfix">
+        <div class="search-result-header">
+          <a href="#">Document</a>
         </div>
+        <figure class="pull-left">
+          <img src="http://placehold.it/78x117" alt="image description">
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio
+          cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus
+          libero voluptas.</p>
+        <p>
+          <a href="#" class="icon icon--before icon--pdf">
+            Strategie des Bundes in der humanitären Minenräumung 2008 - 2011 <span class="text-dimmed">(PDF, 90 Seiten, 5-0 MB, deutsch)</span>
+          </a>
+        </p>
+        <p><a href="#" class="icon icon--before icon--greater">Other languages</a></p>
+      </article>
+
+      <article class="search-result clearfix">
+        <div class="search-result-header">
+          <a href="#">Image</a>
+        </div>
+        <figure class="pull-left">
+          <img src="http://placehold.it/180x113" alt="image description">
+        </figure>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio
+          cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus
+          libero voluptas.</p>
+      </article>
+
+      <article class="search-result clearfix">
+        <div class="search-result-header">
+          <a href="#">Video</a>
+        </div>
+        <iframe src="//player.vimeo.com/video/38388574" width="500" height="281" allowfullscreen
+                style="border: none"></iframe>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptate, sint animi reiciendis odio
+          cumque corrupti perspiciatis et minus sit quia doloremque. Perspiciatis, atque veritatis ad iste ducimus
+          libero voluptas.</p>
+      </article>
+
+      <div class="pagination-container pagination-end">
+        <span>Objects <b>1</b> - <b>3</b> of 3</span>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <small>
+    <a href="#">Zum Seitenanfang</a><br>
+    Letze Änderung 17.01.2014
+  </small>
+
+        </div>
+        
       </div>
     </div>
 
@@ -644,8 +705,9 @@
       </div>
 
       <div class="site-map">
+        <h2 class="sr-only">Footer</h2>
 
-        <a href="#site-map" data-target="#site-map" data-toggle="collapse" class="site-map-toggle collapsed">Sitemap</a>
+        <a role="button" tabindex="0" data-target="#site-map" data-toggle="collapse" class="site-map-toggle collapsed" aria-label="Toggle sitemap">Sitemap</a>
 
         <div class="container-fluid" id="site-map">
           <div class="row">
@@ -757,7 +819,7 @@
         <img class="visible-xs" src="../../img/logo-CH.svg" onerror="this.onerror=null; this.src='../../img/logo-CH.png'" alt="back to home" />
       </div>
 
-      <address>
+      <div class="footer-address">
         <span class="hidden-xs">Bundesamt für Statistik</span>
         <nav class="pull-right">
           <ul>
@@ -765,16 +827,15 @@
             <li><a href="#">Impressum</a></li>
           </ul>
         </nav>
-      </address>
+      </div>
     </footer>
-
 
   </div>
   <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
       <!-- The container for the modal slides -->
       <div class="slides"></div>
       <!-- Controls for the borderless lightbox -->
-      <h3 class="title"></h3>
+      <h3 class="title">Title</h3>
       <a class="prev">‹</a>
       <a class="next">›</a>
       <a class="close">×</a>
@@ -786,7 +847,7 @@
               <div class="modal-content">
                   <div class="modal-header">
                       <button type="button" class="close" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title"></h4>
+                      <h4 class="modal-title">Title</h4>
                   </div>
                   <div class="modal-body next"></div>
                   <div class="modal-footer">
@@ -803,8 +864,8 @@
           </div>
       </div>
   </div>
-  <script type="text/javascript" src="../../js/vendors.min.js"></script>
-  <script type="text/javascript" src="../../js/main.min.js"></script>
+  <script src="../../js/vendors.min.js"></script>
+  <script src="../../js/main.min.js"></script>
 </body>
 </html>
 

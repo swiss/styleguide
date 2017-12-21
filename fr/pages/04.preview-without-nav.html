@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie"><!--<![endif]-->
+<!DOCTYPE html >
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 oldie" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 oldie" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 oldie" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9" itemscope itemtype="http://schema.org/WebPage"> <![endif]-->
+<!--[if gt IE 9 ]><!--><html lang="en" class="no-js no-ie" itemscope itemtype="http://schema.org/WebPage"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -42,20 +42,24 @@
 </head>
 <body>
 
-      <ul class="access-keys">
+  
+    <ul class="access-keys">
       <li><a href="index.html" accesskey="0">Homepage</a></li><!-- Link to home page -->
       <li><a href="#main-navigation" accesskey="1">Main navigation</a></li><!-- Link to main navigation -->
       <li><a href="#content" accesskey="2">Content</a></li><!-- Link to page content -->
       <li><a href="#search-field" accesskey="5">Search</a></li><!-- Link to search field -->
-            <!-- Other smart links can be added for main website functionalities -->
+      
+      <!-- Other smart links can be added for main website functionalities -->
     </ul>
   
+
   <div class="container container-main">
 
-          <header>
+    
+      <header>
         <div class="clearfix">
           <!-- Standard Bootstrap `navbar` structure with the `treecrumb` class -->
-          <nav class="navbar treecrumb pull-left" role="navigation">
+          <nav class="navbar treecrumb pull-left">
             <h2 class="sr-only">Orientation in the website</h2>
             <ul class="nav navbar-nav">
 
@@ -109,7 +113,7 @@
                 <li><a href="#" lang="en" title="English selected" aria-label="English selected" class="active">EN</a></li>
               </ul>
             </nav>
-            <nav class="nav-service" role="navigation">
+            <nav class="nav-service">
               <h2 class="sr-only">Services navigation</h2>
               <ul>
                 <li><a href="#">Emergencies</a></li>
@@ -127,16 +131,24 @@
             <h1>Department of the Environment, Transport, Energy and Communications</h1>
           </a>
 
-
-          <form class="form-horizontal form-search pull-right" role="form">
-            <h2 class="sr-only">Search</h2>
-            <label for="search-field" class="sr-only">Search:</label>
-            <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
-          </form>
+          <div class="mod mod-searchfield global-search global-search-standard">
+            <form class="form-horizontal form-search pull-right">
+              <h2 class="sr-only">Search</h2>
+              <label for="search-field" class="sr-only">Search:</label>
+              <input id="search-field" class="form-control search-field" type="text" placeholder="Search">
+              <button class="icon icon--close icon--after search-reset" role="button" type="button">
+                <span class="sr-only">Clear</span>
+              </button>
+              <span class="icon icon--search"><span class="sr-only">Search</span></span>
+              <div class="search-results">
+                <div class="search-results-list"></div>
+              </div>
+            </form>
+          </div>
         </div>
 
         <!-- Standard Bootstrap `navbar` structure with the `yamm` mega-menu library -->
-        <nav class="navbar yamm yamm--select" role="navigation">
+        <nav class="navbar yamm yamm--select">
           <h2 class="sr-only">By Topics</h2>
           <ul>
             <!-- Init dropdown with the `pull-right` class if you want to have your Topics select on the right -->
@@ -162,7 +174,9 @@
 
       </header>
     
-          <nav class="nav-main yamm navbar" id="main-navigation">
+
+    
+      <nav class="nav-main yamm navbar" id="main-navigation">
         <h2 class="sr-only">Navigation</h2>
         <section class="nav-mobile">
           <div class="table-row">
@@ -207,15 +221,26 @@
             <div class="table-cell dropdown">
               <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
               <div class="dropdown-menu" role="menu">
-                <form class="form" role="form">
-                  <h2 class="sr-only">Search</h2>
-                  <label for="search-field" class="sr-only">Search:</label>
-                  <input class="form-control" type="text" placeholder="Search">
-                  <span class="icon icon--search"></span>
-                </form>
+                <div class="mod mod-searchfield global-search global-search-mobile">
+                  <form class="form">
+                    <h2 class="sr-only">Search</h2>
+                    <label for="search-field-mobile" class="sr-only">Search</label>
+                    <input id="search-field-mobile" class="search-input form-control" type="text" placeholder="Search">
+                    <button class="icon icon--close icon--after search-reset" role="button" type="button">
+                      <span class="sr-only">Reset</span>
+                    </button>
+                    <span class="icon icon--search">
+                      <span class="sr-only">Search</span>
+                    </span>
+                    <div class="search-results">
+                      <div class="search-results-list"></div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
+
         </section>
 
         <!-- The tab navigation -->
@@ -371,95 +396,115 @@
       </nav>
     
 
-          <div class="container-fluid hidden-xs">
+
+    
+      <div class="container-fluid hidden-xs">
         <div class="row">
           <div class="col-sm-12">
             <h2 id="br1" class="hidden">Breadcrumbs</h2>
-            <ol class="breadcrumb" role="navigation" aria-labelledby="br1">
+            <ol class="breadcrumb" role="menu" aria-labelledby="br1">
               <li><a href="#">Home page EDA</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Country & Travel Information</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Country Selection</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Democratic Republic of the Congo</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Some text to create a line break</a><span class="icon icon--greater"></span></li>
               <li><a href="#">Bilateral Relations</a><span class="icon icon--greater"></span></li>
-              <li class="active" aria-selected="true">Title of the active page</li>
+              <li class="active" role="presentation">Title of the active page</li>
             </ol>
           </div>
         </div>
       </div>
     
+
     <div class="container-fluid">
       <div class="row">
-                <div class="col-sm-12" id="content">
-          <div class="row">
-                <div class="col-sm-12">
-      <h1>Das ist der Seitentitel, der kann auch etwas länger werden.</h1>
-
-      <div class="row">
-        <div class="col-sm-6 col-md-4">
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
-          </p>
-          <h3><a href="#">Title in H3</a></h3>
-          <figure class="pull-left">
-            <img src="http://placehold.it/110x68" alt="image description">
-          </figure>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria,
-          </p>
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam,
-          </p>
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
-          </p>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
-          </p>
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt,
-          </p>
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
-          </p>
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes,
-          </p>
-        </div>
-        <div class="col-sm-6 col-md-4">
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
-          </p>
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
-          </p>
-          <h3><a href="#">Title in H3</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <h3><a href="#">Title in H3</a></h3>
-          <figure class="pull-left">
-            <img src="http://placehold.it/110x68" alt="image description">
-          </figure>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis, danda sunt omnia. Sed mehercule pergrata.
-          </p>
-        </div>
-      </div>
+        
+        <div class="col-sm-12" id="content">
+            
+  <h1>Das ist der Seitentitel, der kann auch etwas länger werden.</h1>
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis,
+        danda sunt omnia. Sed mehercule pergrata.
+      </p>
+      <h3><a href="#">Title in H3</a></h3>
+      <figure class="pull-left">
+        <img src="http://placehold.it/110x68" alt="image description">
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria,
+      </p>
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam,
+      </p>
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis,
+        danda sunt omnia. Sed mehercule pergrata.
+      </p>
     </div>
-                      </div>
+    <div class="col-sm-6 col-md-4">
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis,
+        danda sunt omnia. Sed mehercule pergrata.
+      </p>
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt,
+      </p>
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis,
+        danda sunt omnia. Sed mehercule pergrata.
+      </p>
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam, sciant omnes,
+      </p>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis,
+        danda sunt omnia. Sed mehercule pergrata.
+      </p>
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis,
+        danda sunt omnia. Sed mehercule pergrata.
+      </p>
+      <h3><a href="#">Title in H3</a></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <h3><a href="#">Title in H3</a></h3>
+      <figure class="pull-left">
+        <img src="http://placehold.it/110x68" alt="image description">
+      </figure>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Deinde qui
+        fit, ut ego nesciam, sciant omnes, quicumque Epicurei esse voluerunt? Ut in geometria, prima si dederis,
+        danda sunt omnia. Sed mehercule pergrata.
+      </p>
+    </div>
+  </div>
+
         </div>
+        
       </div>
     </div>
 
@@ -478,8 +523,9 @@
       </div>
 
       <div class="site-map">
+        <h2 class="sr-only">Footer</h2>
 
-        <a href="#site-map" data-target="#site-map" data-toggle="collapse" class="site-map-toggle collapsed">Sitemap</a>
+        <a role="button" tabindex="0" data-target="#site-map" data-toggle="collapse" class="site-map-toggle collapsed" aria-label="Toggle sitemap">Sitemap</a>
 
         <div class="container-fluid" id="site-map">
           <div class="row">
@@ -591,7 +637,7 @@
         <img class="visible-xs" src="../../img/logo-CH.svg" onerror="this.onerror=null; this.src='../../img/logo-CH.png'" alt="back to home" />
       </div>
 
-      <address>
+      <div class="footer-address">
         <span class="hidden-xs">Bundesamt für Statistik</span>
         <nav class="pull-right">
           <ul>
@@ -599,16 +645,15 @@
             <li><a href="#">Impressum</a></li>
           </ul>
         </nav>
-      </address>
+      </div>
     </footer>
-
 
   </div>
   <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
       <!-- The container for the modal slides -->
       <div class="slides"></div>
       <!-- Controls for the borderless lightbox -->
-      <h3 class="title"></h3>
+      <h3 class="title">Title</h3>
       <a class="prev">‹</a>
       <a class="next">›</a>
       <a class="close">×</a>
@@ -620,7 +665,7 @@
               <div class="modal-content">
                   <div class="modal-header">
                       <button type="button" class="close" aria-hidden="true">&times;</button>
-                      <h4 class="modal-title"></h4>
+                      <h4 class="modal-title">Title</h4>
                   </div>
                   <div class="modal-body next"></div>
                   <div class="modal-footer">
@@ -637,8 +682,8 @@
           </div>
       </div>
   </div>
-  <script type="text/javascript" src="../../js/vendors.min.js"></script>
-  <script type="text/javascript" src="../../js/main.min.js"></script>
+  <script src="../../js/vendors.min.js"></script>
+  <script src="../../js/main.min.js"></script>
 </body>
 </html>
 
