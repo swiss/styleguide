@@ -24,7 +24,7 @@
 
     // Init Typeahead on search-fields
     $searchFields.typeahead({
-      hint: true,
+      hint: false,
       highlight: true,
       minLength: 1
     },
@@ -34,14 +34,6 @@
       source: bloodhound.ttAdapter()
     });
   }
-
-  // Insert the icons
-  $searchFields.after('<span class="icon icon--close" data-form-search-clear></span>');
-  $('.form-search').append('<button class="icon icon--search icon--before"><span class="sr-only">Search</span></button>');
-
-  $('body').on('click', '[data-form-search-clear]', function () {
-    $('#search-field').val('').focus(); // clear search field and refocus it
-  });
 
 }) (jQuery, (typeof searchData === 'undefined' ? false : searchData));
 
@@ -192,7 +184,7 @@ function disableControl(element) {
   // Ensure every first collapse toggle for accordions is accessible
   // (cf. https://github.com/paypal/bootstrap-accessibility-plugin/issues/98):
   $('[aria-multiselectable="true"]').each(function() {
-    console.log($(this).find('[data-toggle="collapse"][data-parent]').first().attr({tabindex: 0}));
+    $(this).find('[data-toggle="collapse"][data-parent]').first().attr({tabindex: 0});
   });
 
 }) (jQuery);
@@ -330,7 +322,7 @@ $.printPreview = {
         footnoteLinks = "",
         linksIndex = 0;
 
-    $body.find('.nav-mobile, .drilldown, .nav-main, .header-separator, .nav-service, .nav-lang, .form-search, .yamm--select, header > div:first-child, footer, .alert, .icon--print, .social-sharing, form, .nav-process, .carousel-indicators, .carousel-control, .breadcrumb, .pagination-container').remove();
+    $body.find('.nav-mobile, .drilldown, .nav-main, .header-separator, .nav-service, .nav-lang, .form-search, .yamm--select, footer, .alert, .icon--print, .social-sharing, form, .nav-process, .carousel-indicators, .carousel-control, .breadcrumb, .pagination-container').remove();
 
     // if an element is passed, we want it to be the only thing to print out
     if (element) {
@@ -442,6 +434,11 @@ $.printPreview = {
     });
   });
 
+  // "tabindex = -1" is added by bootstrap-accessibility-plugin to dropdown's elements.
+  // The yamm menu uses the dropdown class, but is not a conventional dropdown, hence, the tabindex must not
+  // be present.
+  $dropdown.find('li a').removeAttr('tabindex');
+
   $dropdownToggle.on('click', function() {
     $(this).parents($dropdown).trigger('get.hidden');
   });
@@ -492,10 +489,10 @@ $.printPreview = {
     var links = $('.dropdown-menu li a', $(this));
     var suggestions = [];
     links.each(function() {
-        suggestions.push({
-            title: $(this).html(),
-            link: $(this).attr('href')
-        });
+      suggestions.push({
+        title: $(this).html(),
+        link: $(this).attr('href')
+      });
     });
     if (!suggestions.length) {
       return;
@@ -515,19 +512,19 @@ $.printPreview = {
       templates: {
         empty: function() {
           return [
-            '<li><h3>',
+            '<li class="search-result-header">',
               title,
-            '</h3></li>',
+            '</li>',
             '<li>',
               window.translations['global-search']['nothing-found'],
-            '</li>',
+            '</li>'
           ].join('');
         },
         header: function() {
           return [
-            '<li><h3>',
+            '<li class="search-result-header">',
               title,
-            '</h3></li>'
+            '</li>'
           ].join('');
         },
         dataset: '<ul><ul>',
@@ -540,6 +537,7 @@ $.printPreview = {
 
   function initTypeahead(element) {
     $('.search-input', element).typeahead({
+      hint: false,
       highlight: true,
       menu: $('.search-results .search-results-list', element),
       classNames: {
@@ -548,44 +546,50 @@ $.printPreview = {
       }
     }, datasets)
     .on('typeahead:selected', function (event, selection) {
-  		event.preventDefault();
-      $(this).typeahead('val', '')
-        .closest('.global-search').removeClass('has-input');
-  		window.location.replace(selection.link);
-  	})
+      event.preventDefault();
+      window.location.replace(selection.link);
+    })
     .on('typeahead:open', function() {
       $(this).closest('.global-search').addClass('focused');
-      console.log($(this).typeahead('val'));
     })
-    .on('typeahead:close', function () {
+    .on('typeahead:close', function() {
       $(this).closest('.global-search').removeClass('focused');
+      //$(this).closest('form').trigger('reset');
     })
     .on('keyup', function (event) {
       if (event.keyCode === 27) { // ESC
         $(this).closest('form').trigger('reset');
       } else if ($(this).typeahead('val')) {
-          $(this).closest('.global-search').addClass('has-input');
+        $(this).closest('.global-search').addClass('has-input');
       } else {
         $(this).closest('.global-search').removeClass('has-input');
-  		}
-  	});
+      }
+    });
 
     $('form', element)
       .on('submit', function() {
         return false;
       })
       .on('reset', function() {
-        $('.search-input', this).blur().typeahead('val', '');
+        $('.search-input', this).typeahead('val', '');
         $(this).closest('.global-search').removeClass('has-input');
       });
 
     $('.search-reset', element).on('click', function() {
       $(this).closest('form').trigger('reset');
+      $('.search-input', element).focus();
     });
   }
 
   initTypeahead($('.global-search-standard'));
   initTypeahead($('.global-search-mobile'));
+
+  // Mobile improvements:
+  $('.nav-mobile .nav-mobile-menu').parent().on('show.bs.dropdown', function () {
+    setTimeout(function () {
+      $('.nav-mobile .search-input.tt-input').val(null).focus();
+    }, 100);
+  });
 
 })(jQuery);
 
@@ -671,7 +675,7 @@ $.printPreview = {
           $that.find('.item:first').addClass('active');
           $that.find('.carousel-indicators li:first-child').addClass('active');
 
-          $that.append('<a class="left carousel-control icon icon--before icon--less" href="#tab-focus-' + focusIndex + '" data-slide="prev"></a><a class="right carousel-control icon icon--before icon--greater" href="#tab-focus-' + focusIndex + '" data-slide="next"></a>');
+          $that.append('<a class="left carousel-control icon icon--before icon--less" href="#tab-focus-' + focusIndex + '" data-slide="prev" aria-label="previous"></a><a class="right carousel-control icon icon--before icon--greater" href="#tab-focus-' + focusIndex + '" data-slide="next" aria-label="next"></a>');
         });
       }
       else if($tabFocus && $(window).width() > 767 && isCarouselified) {
