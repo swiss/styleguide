@@ -28,7 +28,7 @@
     padding-left: 24px;
     padding-right: 0;
   }
-  input {
+  input[type=checkbox] {
     @include form-button(left);
   }
 }
@@ -38,7 +38,7 @@
     padding-right: 24px;
     padding-left: 0;
   }
-  input {
+  input[type=checkbox] {
     @include form-button(right);
   }
 }
