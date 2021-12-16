@@ -1,3 +1,10 @@
+# PLEASE NOTE THAT THESE GUIDELINES ARE OUTDATED AND NOT SUPPORTED ANYMORE.
+# A NEW VERSION IS EXPECTED BY 1th OF JANUARY 2023.
+
+
+
+
+
 # Swiss Confederation Web Guidelines
 
 - [About Accessibility](Accessibility.md)
