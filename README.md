@@ -1,5 +1,5 @@
 # PLEASE NOTE THAT THESE GUIDELINES ARE OUTDATED AND NOT SUPPORTED ANYMORE.
-# The new version you'll find it here
+# You'll find the currently valid version under the following link:
 https://storybook.bund-ds.bedev.liip.ch/?path=/docs/get-started--page
 (the link may change in the future)
 
